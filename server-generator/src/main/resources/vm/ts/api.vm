@@ -1,0 +1,56 @@
+import request from '@/utils/http'
+import { ${ClassName}InfoResult,${ClassName}ListPageResult } from '@/types/${moduleName}/${businessName}'
+import { CodeMsgResult } from '@/types/axios'
+
+// ${functionName}
+export class ${ClassName}Service {
+    // 查询${functionName}列表
+    static list${BusinessName}(query: any) {
+        return request.get<${ClassName}ListPageResult>({
+            url: '/${moduleName}/${businessName}/list',
+            params: query
+        })
+    }
+
+    // 查询${functionName}详细
+    static get${BusinessName}(${pkColumn.javaField}: any) {
+        return request.get<${ClassName}InfoResult>({
+            url: '/${moduleName}/${businessName}/' + ${pkColumn.javaField},
+        })
+    }
+
+    // 新增${functionName}
+    static add${BusinessName}(data: any) {
+        return request.post<CodeMsgResult>({
+            url: '/${moduleName}/${businessName}',
+            data: data
+        })
+    }
+
+    // 修改${functionName}
+    static update${BusinessName}(data: any) {
+        return request.put<CodeMsgResult>({
+            url: '/${moduleName}/${businessName}',
+            data: data
+        })
+    }
+
+    // 删除${functionName}
+    static delete${BusinessName}(${pkColumn.javaField}: any) {
+        return request.del<CodeMsgResult>({
+            url: '/${moduleName}/${businessName}/' + ${pkColumn.javaField},
+        })
+    }
+
+    // 导出${functionName}列表
+    static exportExcel(data: any) {
+        return request.post({
+            url: '${moduleName}/${businessName}/export',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            responseType: 'blob',
+            data: data
+        })
+    }
+}

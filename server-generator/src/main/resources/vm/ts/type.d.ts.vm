@@ -1,0 +1,16 @@
+import {BaseArrayResult, BaseObjectResult, BasePageResult} from '../axios'
+
+export interface ${ClassName}Result {
+    #foreach ($column in $columns)
+        #if($column.htmlType == "checkbox")
+                $column.javaField: arrary#if($foreach.count != $columns.size()),#end
+        #else
+                $column.javaField: string#if($foreach.count != $columns.size()),#end
+        #end
+    #end
+}
+
+export type ${ClassName}ListPageResult = BasePageResult<${ClassName}Result>
+export type ${ClassName}ListResult = BaseArrayResult<${ClassName}Result>
+export type ${ClassName}InfoResult = BaseObjectResult<${ClassName}Result>
+
