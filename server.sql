@@ -1,9 +1,5 @@
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
-
--- ----------------------------
--- Table structure for gen_table
--- ----------------------------
 DROP TABLE IF EXISTS `gen_table`;
 CREATE TABLE `gen_table`  (
   `table_id` bigint NOT NULL AUTO_INCREMENT COMMENT '编号',
