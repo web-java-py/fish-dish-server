@@ -17,6 +17,7 @@
         <module>server-framework</module>
         <module>server-generator</module>
         <module>server-quartz</module>
+        <module>server-agriculture</module>
     </modules>
     <description>管理系统</description>
 
