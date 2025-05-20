@@ -12,6 +12,8 @@ server-config:
   addressEnabled: ${server-config.addressEnabled}
   # 验证码类型 math 数字计算 char 字符验证
   captchaType: ${server-config.captchaType}
+  # 文件项目根目录化
+  pathRoot: ${server-config.pathRoot}
 
 # 开发环境配置
 server:
