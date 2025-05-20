@@ -6,7 +6,7 @@ import java.util.Locale;
 
 /**
  * 通用常量信息
- * 
+ *
  *
  */
 public class Constants
@@ -176,4 +176,9 @@ public class Constants
      * 邮箱验证码有效期（分钟）
      */
     public static final Integer MAIL_EXPIRATION = 5;
+
+    /**
+     * system常量
+     */
+    public static final String USER_DIR = "user.dir";
 }
