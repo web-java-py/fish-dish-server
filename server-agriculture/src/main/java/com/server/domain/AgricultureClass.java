@@ -1,5 +1,6 @@
 package com.server.domain;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
@@ -9,6 +10,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.Map;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -77,4 +79,7 @@ public class AgricultureClass implements Serializable {
     @ApiModelProperty(value = "备注")
     private String remark;
 
+    /** 请求参数 */
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    private Map<String, Object> params;
 }
