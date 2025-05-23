@@ -1,6 +1,7 @@
 package com.server.mapper;
 
-import org.apache.ibatis.annotations.Mapper;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.server.domain.AgricultureClass;
 
-public interface AgricultureClassMapper extends Mapper {
+public interface AgricultureClassMapper extends BaseMapper<AgricultureClass> {
 }
