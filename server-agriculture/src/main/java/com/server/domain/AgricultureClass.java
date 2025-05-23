@@ -5,9 +5,9 @@ import lombok.Data;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
-
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Map;
@@ -25,58 +25,62 @@ import io.swagger.annotations.ApiModelProperty;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@TableName(value = "agriculture_class")
-@ApiModel(value = "AgricultureClass", description = "种类信息表")
-public class AgricultureClass implements Serializable {
+@TableName(value ="agriculture_class")
+@ApiModel(value = "AgricultureClass" , description="种类信息表")
+public class AgricultureClass  implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableField(value = "class_id")
-    @ApiModelProperty(value = "种类ID")
+    @TableField(value="class_id")
+    @ApiModelProperty(value="种类ID")
     private Integer classId;
 
-    @TableField(value = "class_name")
-    @ApiModelProperty(value = "种类名称")
+    @TableField(value="class_name")
+    @ApiModelProperty(value="种类名称")
     private String className;
 
-    @TableField(value = "class_type_name")
-    @ApiModelProperty(value = "种类类别名称")
+    @TableField(value="class_type_name")
+    @ApiModelProperty(value="种类类别名称")
     private String classTypeName;
 
-    @TableField(value = "class_image")
-    @ApiModelProperty(value = "种类图片")
+    @TableField(value="class_type")
+    @ApiModelProperty(value="类型（0鱼 1菜）")
+    private String classType;
+
+    @TableField(value="class_image")
+    @ApiModelProperty(value="种类图片")
     private String classImage;
 
-    @TableField(value = "class_des")
-    @ApiModelProperty(value = "宣传语")
+    @TableField(value="class_des")
+    @ApiModelProperty(value="宣传语")
     private String classDes;
 
-    @TableField(value = "status")
-    @ApiModelProperty(value = "状态（0正常 1停用）")
+    @TableField(value="status")
+    @ApiModelProperty(value="状态（0正常 1停用）")
     private String status;
 
-    @TableField(value = "order_num")
-    @ApiModelProperty(value = "排序")
+    @TableField(value="order_num")
+    @ApiModelProperty(value="排序")
     private Integer orderNum;
 
-    @TableField(value = "create_by")
-    @ApiModelProperty(value = "创建者ID")
+    @TableField(value="create_by")
+    @ApiModelProperty(value="创建者ID")
     private Integer createBy;
 
-    @TableField(value = "create_time")
-    @ApiModelProperty(value = "创建时间")
+    @TableField(value="create_time")
+    @ApiModelProperty(value="创建时间")
     private LocalDateTime createTime;
 
-    @TableField(value = "update_by")
-    @ApiModelProperty(value = "修改人ID")
+    @TableField(value="update_by")
+    @ApiModelProperty(value="修改人ID")
     private Integer updateBy;
 
-    @TableField(value = "update_time")
-    @ApiModelProperty(value = "修改时间")
+    @TableField(value="update_time")
+    @ApiModelProperty(value="修改时间")
     private LocalDateTime updateTime;
 
-    @TableField(value = "remark")
-    @ApiModelProperty(value = "备注")
+    @TableField(value="remark")
+    @ApiModelProperty(value="备注")
     private String remark;
 
     /** 请求参数 */
