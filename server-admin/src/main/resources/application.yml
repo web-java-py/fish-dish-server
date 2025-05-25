@@ -126,6 +126,9 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     # 大驼峰
     map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: none
 
 # PageHelper分页插件
 pagehelper:
