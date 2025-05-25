@@ -18,5 +18,16 @@ public interface AgricultureMaterialService extends IService<AgricultureMaterial
      */
     List<AgricultureMaterial> selectAgricultureMaterialInfoList(AgricultureMaterial agricultureMaterialInfo);
 
+    /**
+     * 新增
+     */
+    void saveAgricultureMaterial(AgricultureMaterial agricultureMaterial);
+
+    /**
+     * 删除
+     *
+     * @return
+     */
+    void deleteById(Long materialId);
 
 }

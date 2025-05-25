@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.server.domain.AgricultureMaterial;
 import com.server.mapper.AgricultureMaterialMapper;
 import com.server.service.AgricultureMaterialService;
+import com.server.utils.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +21,7 @@ public class AgricultureMaterialServiceImpl extends ServiceImpl<AgricultureMater
 
 
     @Autowired
-    private AgricultureMaterialMapper agricultureMaterialInfoMapper;
+    private AgricultureMaterialMapper agricultureMaterialMapper;
 
     /**
      * 查询
@@ -32,7 +33,28 @@ public class AgricultureMaterialServiceImpl extends ServiceImpl<AgricultureMater
         //lambda 不是对象名
         LambdaQueryWrapper<AgricultureMaterial> lambdaQueryWrapper = new QueryWrapper<AgricultureMaterial>().lambda();
         //获取模糊查询的条件
-        lambdaQueryWrapper.like(AgricultureMaterial::getMaterialName, agricultureMaterialInfo.getMaterialName());
-        return agricultureMaterialInfoMapper.selectList(lambdaQueryWrapper);
+//        lambdaQueryWrapper.like(AgricultureMaterial::getMaterialName, agricultureMaterialInfo.getMaterialName());
+        lambdaQueryWrapper.like(StringUtils.isNotEmpty(agricultureMaterialInfo.getMaterialName()),AgricultureMaterial::getMaterialName, agricultureMaterialInfo.getMaterialName());
+        return agricultureMaterialMapper.selectList(lambdaQueryWrapper);
+    }
+
+    /**
+     * 新增
+     */
+    @Override
+    public void saveAgricultureMaterial(AgricultureMaterial agricultureMaterial) {
+        agricultureMaterialMapper.insert(agricultureMaterial);
+    }
+
+    /**
+     * 删除
+     *
+     * @return
+     */
+    @Override
+    public void deleteById(Long materialId) {
+        LambdaQueryWrapper<AgricultureMaterial> lambdaQueryWrapper = new LambdaQueryWrapper<>();
+        lambdaQueryWrapper.eq(AgricultureMaterial::getMaterialId,materialId);
+        agricultureMaterialMapper.delete(lambdaQueryWrapper);
     }
 }

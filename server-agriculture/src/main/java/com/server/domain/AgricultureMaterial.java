@@ -84,6 +84,6 @@ public class AgricultureMaterial implements Serializable {
     private String delFlag;
 
     /** 请求参数 */
-    @JsonInclude(JsonInclude.Include.NON_EMPTY)
-    private Map<String, Object> params;
+//    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+//    private Map<String, Object> params;
 }
