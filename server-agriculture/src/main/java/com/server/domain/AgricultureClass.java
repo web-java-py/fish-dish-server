@@ -27,7 +27,7 @@ public class AgricultureClass extends BaseEntityPlus implements Serializable  {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value="class_id",type = IdType.AUTO)
+    @TableId(value="class_id")
     @ApiModelProperty(value="种类ID")
     private Long classId;
 

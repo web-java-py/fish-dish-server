@@ -1,7 +1,7 @@
 package com.server.domain;
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -31,7 +31,7 @@ public class AgricultureMaterial implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableField(value = "material_id")
+    @TableId(value = "material_id", type = IdType.AUTO)
     @ApiModelProperty(value = "农资ID")
     private Long materialId;
 
@@ -63,19 +63,21 @@ public class AgricultureMaterial implements Serializable {
     @ApiModelProperty(value = "排序")
     private Long orderNum;
 
-    @TableField(value = "create_by")
+    @TableField(value = "create_by",fill = FieldFill.INSERT)
     @ApiModelProperty(value = "创建者ID")
     private String createBy;
 
-    @TableField(value = "create_time")
+    @TableField(value = "create_time",fill = FieldFill.INSERT)
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @ApiModelProperty(value = "创建时间")
     private LocalDateTime createTime;
 
-    @TableField(value = "update_by")
+    @TableField(value = "update_by", fill = FieldFill.INSERT_UPDATE)
     @ApiModelProperty(value = "修改人ID")
     private String updateBy;
 
-    @TableField(value = "update_time")
+    @TableField(value = "update_time", fill = FieldFill.INSERT_UPDATE)
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @ApiModelProperty(value = "修改时间")
     private LocalDateTime updateTime;
 
@@ -84,6 +86,7 @@ public class AgricultureMaterial implements Serializable {
     private String delFlag;
 
     /** 请求参数 */
-//    @JsonInclude(JsonInclude.Include.NON_EMPTY)
-//    private Map<String, Object> params;
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    @TableField(exist = false)
+    private Map<String, Object> params;
 }
