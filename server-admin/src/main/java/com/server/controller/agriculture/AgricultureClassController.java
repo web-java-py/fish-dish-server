@@ -3,7 +3,6 @@ package com.server.controller.agriculture;
 import com.server.annotation.Log;
 import com.server.core.controller.BaseController;
 import com.server.core.domain.AjaxResult;
-import com.server.core.domain.entity.SysUser;
 import com.server.core.page.TableDataInfo;
 import com.server.domain.AgricultureClass;
 import com.server.enums.BusinessType;
@@ -12,7 +11,6 @@ import com.server.utils.poi.ExcelUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
