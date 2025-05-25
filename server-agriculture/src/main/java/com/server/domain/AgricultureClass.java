@@ -1,5 +1,6 @@
 package com.server.domain;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import lombok.Data;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
@@ -12,9 +13,9 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 
-/** 
+/**
  * @author 851543
- * @description  
+ * @description
  */
 @Data
 @Builder
@@ -26,7 +27,7 @@ public class AgricultureClass extends BaseEntityPlus implements Serializable  {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value="class_id")
+    @TableId(value="class_id",type = IdType.AUTO)
     @ApiModelProperty(value="种类ID")
     private Long classId;
 

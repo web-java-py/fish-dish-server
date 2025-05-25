@@ -41,5 +41,6 @@ public class BaseEntityPlus {
 
     /** 请求参数 */
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    @TableField(exist = false)
     private Map<String, Object> params;
 }
