@@ -22,6 +22,13 @@ public interface AgricultureJobService extends IService<AgricultureJob> {
     int addAgricultureJob(AgricultureJob agricultureJob);
 
     /**
+     * 修改作业数据
+     * @param agricultureJob
+     * @return
+     */
+    int editAgricultureJob(AgricultureJob agricultureJob);
+
+    /**
      * 删除作业数据
      * @param jobId
      * @return

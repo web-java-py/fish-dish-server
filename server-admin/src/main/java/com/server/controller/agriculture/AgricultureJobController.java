@@ -50,6 +50,18 @@ public class AgricultureJobController extends BaseController {
     }
 
     /**
+     * 修改作业数据
+     * @param agricultureJob
+     * @return
+     */
+    @Log(title = "作业管理", businessType = BusinessType.UPDATE)
+    @PutMapping
+    @ApiOperation("修改作业数据")
+    public AjaxResult edit(@RequestBody AgricultureJob agricultureJob){
+        return toAjax(agricultureJobService.editAgricultureJob(agricultureJob));
+    }
+
+    /**
      * 删除作业数据
      * @param jobId
      * @return

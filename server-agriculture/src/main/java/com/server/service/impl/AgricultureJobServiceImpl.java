@@ -44,6 +44,16 @@ public class AgricultureJobServiceImpl extends ServiceImpl<AgricultureJobMapper,
     }
 
     /**
+     * 修改作业数据
+     * @param agricultureJob
+     * @return
+     */
+    @Override
+    public int editAgricultureJob(AgricultureJob agricultureJob) {
+        return agricultureJobMapper.updateById(agricultureJob);
+    }
+
+    /**
      * 删除作业数据
      *
      * @param jobId
