@@ -11,9 +11,25 @@
 
     <artifactId>server-agriculture</artifactId>
 
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-    </properties>
+    <description>
+        鱼菜核心
+    </description>
+
+    <dependencies>
+
+        <!-- swagger3-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- 核心模块-->
+        <dependency>
+            <groupId>com.server</groupId>
+            <artifactId>server-framework</artifactId>
+        </dependency>
+
+    </dependencies>
 
 </project>
