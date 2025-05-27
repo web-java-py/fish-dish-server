@@ -1,5 +1,6 @@
 package com.server.domain;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import lombok.Data;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
@@ -28,7 +29,7 @@ public class AgricultureDeviceSensorAlert extends BaseEntityPlus implements Seri
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value="id")
+    @TableId(value="id",type = IdType.AUTO)
     @ApiModelProperty(value="预警ID")
     private Long id;
 

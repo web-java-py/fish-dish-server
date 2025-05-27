@@ -38,12 +38,8 @@ public class AgricultureMaterial extends BaseEntityPlus implements Serializable 
     @ApiModelProperty(value="农资名称")
     private String materialName;
 
-    @TableField(value="material_type_id")
-    @ApiModelProperty(value="农资类别")
-    private Long materialTypeId;
-
     @TableField(value="material_image")
-    @ApiModelProperty(value="农资类别")
+    @ApiModelProperty(value="农资图片")
     private String materialImage;
 
     @TableField(value="measure_unit")
