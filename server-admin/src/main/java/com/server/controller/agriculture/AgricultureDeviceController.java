@@ -29,7 +29,7 @@ import com.server.core.page.TableDataInfo;
  * @date 2025-05-26
  */
 @RestController
-@RequestMapping("/server/device")
+@RequestMapping("/device")
 public class AgricultureDeviceController extends BaseController
 {
     @Autowired

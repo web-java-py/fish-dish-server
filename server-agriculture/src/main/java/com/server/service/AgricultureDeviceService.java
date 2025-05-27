@@ -9,7 +9,7 @@ import com.server.domain.AgricultureDevice;
 /**
  * 设备信息Service接口
  * 
- * @author server
+ * @author bxwy
  * @date 2025-05-26
  */
 public interface AgricultureDeviceService extends IService<AgricultureDevice>
