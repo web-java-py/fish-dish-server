@@ -30,7 +30,7 @@ public class AgricultureMachineController extends BaseController {
     private AgricultureMachineService agricultureMachineService;
 
     /**
-     * 查询农机信息
+     * 查询农机信息666
      * @param agricultureMachine
      * @return
      */
