@@ -1,4 +1,4 @@
-package com.server.config;
+package com.server.properties;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;

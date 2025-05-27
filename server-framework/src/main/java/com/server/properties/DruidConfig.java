@@ -1,4 +1,4 @@
-package com.server.config;
+package com.server.properties;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
@@ -6,7 +6,7 @@ import com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatPropertie
 import com.alibaba.druid.util.Utils;
 import com.server.enums.DataSourceType;
 import com.server.utils.spring.SpringUtils;
-import com.server.config.properties.DruidProperties;
+import com.server.properties.properties.DruidProperties;
 import com.server.datasource.DynamicDataSource;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -23,7 +23,7 @@ import java.util.Map;
 
 /**
  * druid 配置多数据源
- * 
+ *
  *
  */
 @Configuration
@@ -55,10 +55,10 @@ public class DruidConfig
         setDataSource(targetDataSources, DataSourceType.SLAVE.name(), "slaveDataSource");
         return new DynamicDataSource(masterDataSource, targetDataSources);
     }
-    
+
     /**
      * 设置数据源
-     * 
+     *
      * @param targetDataSources 备选数据源集合
      * @param sourceName 数据源名称
      * @param beanName bean名称

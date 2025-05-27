@@ -1,4 +1,4 @@
-package com.server.config;
+package com.server.properties;
 
 import com.server.constant.Constants;
 import com.server.interceptor.RepeatSubmitInterceptor;

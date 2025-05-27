@@ -2,7 +2,7 @@ package com.server.utils.ip;
 
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
-import com.server.config.AdminServerConfig;
+import com.server.properties.AdminServerConfig;
 import com.server.constant.Constants;
 import com.server.utils.StringUtils;
 import com.server.utils.http.HttpUtils;
@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * 获取地址类
- * 
+ *
  *
  */
 public class AddressUtils

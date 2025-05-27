@@ -1,4 +1,4 @@
-package com.server.config.properties;
+package com.server.properties.properties;
 
 import com.server.annotation.Anonymous;
 import org.apache.commons.lang3.RegExUtils;
@@ -17,7 +17,7 @@ import java.util.regex.Pattern;
 
 /**
  * 设置Anonymous注解允许匿名访问的url
- * 
+ *
  *
  */
 @Configuration

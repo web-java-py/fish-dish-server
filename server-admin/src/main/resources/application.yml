@@ -151,3 +151,12 @@ xss:
   excludes: /system/notice
   # 匹配链接
   urlPatterns: /system/*,/monitor/*,/tool/*
+
+# AI服务
+ai:
+  ollama:
+    base-url: http://localhost:11434
+    model-name: deepseek-r1:8b
+    temperature: 0.8
+    timeout: 60
+

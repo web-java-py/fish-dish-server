@@ -1,6 +1,6 @@
 package com.server.utils.file;
 
-import com.server.config.AdminServerConfig;
+import com.server.properties.AdminServerConfig;
 import com.server.constant.Constants;
 import com.server.utils.StringUtils;
 import org.apache.poi.util.IOUtils;
@@ -58,7 +58,7 @@ public class ImageUtils
 
     /**
      * 读取文件为字节数据
-     * 
+     *
      * @param url 地址
      * @return 字节数据
      */

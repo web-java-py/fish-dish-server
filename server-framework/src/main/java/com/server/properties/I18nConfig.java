@@ -1,4 +1,4 @@
-package com.server.config;
+package com.server.properties;
 
 import com.server.constant.Constants;
 import org.springframework.context.annotation.Bean;
@@ -11,7 +11,7 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
 /**
  * 资源文件配置加载
- * 
+ *
  *
  */
 @Configuration

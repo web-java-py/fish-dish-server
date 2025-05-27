@@ -1,4 +1,4 @@
-package com.server.config;
+package com.server.properties;
 
 import java.util.ArrayList;
 import java.util.List;

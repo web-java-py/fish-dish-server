@@ -1,4 +1,4 @@
-package com.server.config;
+package com.server.properties;
 
 import com.server.utils.Threads;
 import org.apache.commons.lang3.concurrent.BasicThreadFactory;

@@ -1,4 +1,4 @@
-package com.server.config;
+package com.server.properties;
 
 import com.server.constant.Constants;
 import org.springframework.boot.context.properties.ConfigurationProperties;

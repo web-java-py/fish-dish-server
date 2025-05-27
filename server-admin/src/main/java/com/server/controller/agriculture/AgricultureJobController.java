@@ -1,10 +1,10 @@
 package com.server.controller.agriculture;
 
+import com.server.ai.AIService;
 import com.server.annotation.Log;
 import com.server.core.controller.BaseController;
 import com.server.core.domain.AjaxResult;
 import com.server.core.page.TableDataInfo;
-import com.server.domain.AgricultureClass;
 import com.server.domain.AgricultureJob;
 import com.server.enums.BusinessType;
 import com.server.service.AgricultureJobService;
