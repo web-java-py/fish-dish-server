@@ -45,7 +45,11 @@ public class AgricultureMaterial implements Serializable {
 
     @TableField(value = "material_type_id")
     @ApiModelProperty(value = "农资类别")
-    private Long materialTypeId;
+    private String materialTypeId;
+
+    @TableField(value = "material_image")
+    @ApiModelProperty(value = "农资图片")
+    private String materialImage;
 
     @TableField(value = "measure_unit")
     @ApiModelProperty(value = "计量单位")
