@@ -31,7 +31,6 @@ public class AgricultureMachineServiceImpl extends ServiceImpl<AgricultureMachin
     public List<AgricultureMachine> selectagricultureMachineList(AgricultureMachine agricultureMachine) {
         LambdaQueryWrapper<AgricultureMachine> lambdaQueryWrapper = new QueryWrapper<AgricultureMachine>().lambda();
         lambdaQueryWrapper.like(StringUtils.isNotEmpty(agricultureMachine.getMachineName()),AgricultureMachine::getMachineName,agricultureMachine.getMachineName());
-        lambdaQueryWrapper.like(StringUtils.isNotEmpty(agricultureMachine.getMachineTypeId()),AgricultureMachine::getMachineTypeId,agricultureMachine.getMachineTypeId());
         return agricultureMachineMapper.selectList(lambdaQueryWrapper);
     }
 
