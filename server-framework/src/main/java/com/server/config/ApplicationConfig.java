@@ -1,4 +1,4 @@
-package com.server.properties;
+package com.server.config;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.autoconfigure.jackson.Jackson2ObjectMapperBuilderCustomizer;

@@ -2,7 +2,7 @@ package com.server.annotation;
 
 import com.fasterxml.jackson.annotation.JacksonAnnotationsInside;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.server.properties.serializer.SensitiveJsonSerializer;
+import com.server.config.serializer.SensitiveJsonSerializer;
 import com.server.enums.DesensitizedType;
 
 import java.lang.annotation.ElementType;

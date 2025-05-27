@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 
-import com.server.properties.AdminServerConfig;
+import com.server.config.AdminServerConfig;
 import com.server.web.service.MailService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

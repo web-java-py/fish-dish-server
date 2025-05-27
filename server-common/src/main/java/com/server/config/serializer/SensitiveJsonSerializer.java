@@ -1,4 +1,4 @@
-package com.server.properties.serializer;
+package com.server.config.serializer;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.BeanProperty;

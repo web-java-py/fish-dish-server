@@ -1,6 +1,6 @@
 package com.server.utils.file;
 
-import com.server.properties.AdminServerConfig;
+import com.server.config.AdminServerConfig;
 import com.server.constant.Constants;
 import com.server.exception.file.FileNameLengthLimitExceededException;
 import com.server.exception.file.FileSizeLimitExceededException;

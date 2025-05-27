@@ -1,4 +1,4 @@
-package com.server.properties;
+package com.server.config;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.core.config.GlobalConfig;

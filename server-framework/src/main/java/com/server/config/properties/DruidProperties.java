@@ -1,4 +1,4 @@
-package com.server.properties.properties;
+package com.server.config.properties;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.springframework.beans.factory.annotation.Value;

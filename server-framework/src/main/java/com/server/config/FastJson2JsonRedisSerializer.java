@@ -1,4 +1,4 @@
-package com.server.properties;
+package com.server.config;
 
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONReader;

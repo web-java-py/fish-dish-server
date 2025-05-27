@@ -1,4 +1,4 @@
-package com.server.properties;
+package com.server.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
@@ -6,7 +6,7 @@ import com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatPropertie
 import com.alibaba.druid.util.Utils;
 import com.server.enums.DataSourceType;
 import com.server.utils.spring.SpringUtils;
-import com.server.properties.properties.DruidProperties;
+import com.server.config.properties.DruidProperties;
 import com.server.datasource.DynamicDataSource;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.ConfigurationProperties;

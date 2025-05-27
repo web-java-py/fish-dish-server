@@ -5,7 +5,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.server.properties.AdminServerConfig;
+import com.server.config.AdminServerConfig;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
@@ -22,7 +22,7 @@ import com.server.core.domain.AjaxResult;
 import com.server.utils.StringUtils;
 import com.server.utils.file.FileUploadUtils;
 import com.server.utils.file.FileUtils;
-import com.server.properties.ServerConfig;
+import com.server.config.ServerConfig;
 
 /**
  * 通用请求处理

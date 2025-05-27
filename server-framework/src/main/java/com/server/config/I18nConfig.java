@@ -1,4 +1,4 @@
-package com.server.properties;
+package com.server.config;
 
 import com.server.constant.Constants;
 import org.springframework.context.annotation.Bean;

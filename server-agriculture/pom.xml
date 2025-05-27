@@ -16,6 +16,12 @@
     </description>
 
     <dependencies>
+        <!-- spring webflux -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+
         <!-- langchain4j -->
         <dependency>
             <groupId>dev.langchain4j</groupId>

@@ -1,4 +1,4 @@
-package com.server.properties;
+package com.server.config;
 
 import com.google.code.kaptcha.text.impl.DefaultTextCreator;
 

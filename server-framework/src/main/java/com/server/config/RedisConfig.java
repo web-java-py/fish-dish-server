@@ -1,4 +1,4 @@
-package com.server.properties;
+package com.server.config;
 
 import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.cache.annotation.EnableCaching;

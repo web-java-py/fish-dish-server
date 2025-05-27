@@ -1,6 +1,6 @@
-package com.server.properties;
+package com.server.config;
 
-import com.server.properties.properties.PermitAllUrlProperties;
+import com.server.config.properties.PermitAllUrlProperties;
 import com.server.security.filter.JwtAuthenticationTokenFilter;
 import com.server.security.handle.AuthenticationEntryPointImpl;
 import com.server.security.handle.LogoutSuccessHandlerImpl;

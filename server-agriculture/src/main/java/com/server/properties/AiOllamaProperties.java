@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties(prefix = "ai.ollama")
 @Data
-public class AIOllamaProperties {
+public class AiOllamaProperties {
     private String baseUrl;
     private String modelName;
     private Double temperature;

@@ -1,6 +1,6 @@
 package com.server.utils.file;
 
-import com.server.properties.AdminServerConfig;
+import com.server.config.AdminServerConfig;
 import com.server.constant.Constants;
 import com.server.utils.StringUtils;
 import org.apache.poi.util.IOUtils;

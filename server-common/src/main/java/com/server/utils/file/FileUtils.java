@@ -1,6 +1,6 @@
 package com.server.utils.file;
 
-import com.server.properties.AdminServerConfig;
+import com.server.config.AdminServerConfig;
 import com.server.utils.DateUtils;
 import com.server.utils.StringUtils;
 import com.server.utils.uuid.IdUtils;

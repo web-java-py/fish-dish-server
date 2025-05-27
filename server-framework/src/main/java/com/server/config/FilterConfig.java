@@ -1,4 +1,4 @@
-package com.server.properties;
+package com.server.config;
 
 import com.server.filter.RepeatableFilter;
 import com.server.filter.XssFilter;

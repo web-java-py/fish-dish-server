@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import com.server.annotation.Log;
-import com.server.properties.AdminServerConfig;
+import com.server.config.AdminServerConfig;
 import com.server.core.controller.BaseController;
 import com.server.core.domain.AjaxResult;
 import com.server.core.domain.entity.SysUser;

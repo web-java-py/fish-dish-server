@@ -1,10 +1,10 @@
 package com.server.controller.agriculture;
 
-import com.server.ai.AIService;
 import com.server.annotation.Log;
 import com.server.core.controller.BaseController;
 import com.server.core.domain.AjaxResult;
 import com.server.core.page.TableDataInfo;
+import com.server.domain.AgricultureClass;
 import com.server.domain.AgricultureJob;
 import com.server.enums.BusinessType;
 import com.server.service.AgricultureJobService;
@@ -86,5 +86,18 @@ public class AgricultureJobController extends BaseController {
         List<AgricultureJob> list = agricultureJobService.selectAgricultureJobList(agricultureJob);
         ExcelUtil<AgricultureJob> util = new ExcelUtil<AgricultureJob>(AgricultureJob.class);
         util.exportExcel(response, list, "作业数据");
+    }
+
+    /**
+     * ai作业数据
+     * @param agricultureClass
+     */
+    @Log(title = "作业管理", businessType = BusinessType.AI)
+    @PostMapping("/ai")
+    @ApiOperation("ai作业数据")
+    public AjaxResult ai(@RequestBody AgricultureClass agricultureClass)
+    {
+        agricultureJobService.aiAddAgricultureJob(agricultureClass);
+        return success();
     }
 }

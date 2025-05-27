@@ -4,7 +4,7 @@ import com.server.annotation.Excel;
 import com.server.annotation.Excel.ColumnType;
 import com.server.annotation.Excel.Type;
 import com.server.annotation.Excels;
-import com.server.properties.AdminServerConfig;
+import com.server.config.AdminServerConfig;
 import com.server.core.domain.AjaxResult;
 import com.server.core.text.Convert;
 import com.server.exception.UtilException;

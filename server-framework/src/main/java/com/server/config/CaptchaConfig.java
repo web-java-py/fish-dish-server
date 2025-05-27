@@ -1,4 +1,4 @@
-package com.server.properties;
+package com.server.config;
 
 import com.google.code.kaptcha.impl.DefaultKaptcha;
 import com.google.code.kaptcha.util.Config;

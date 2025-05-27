@@ -4,7 +4,7 @@ import java.util.Arrays;
 import org.apache.commons.lang3.RegExUtils;
 import com.server.constant.GenConstants;
 import com.server.utils.StringUtils;
-import com.server.properties.GenConfig;
+import com.server.config.GenConfig;
 import com.server.domain.GenTable;
 import com.server.domain.GenTableColumn;
 

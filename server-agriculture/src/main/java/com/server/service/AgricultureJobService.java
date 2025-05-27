@@ -1,6 +1,7 @@
 package com.server.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.server.domain.AgricultureClass;
 import com.server.domain.AgricultureJob;
 
 import java.util.List;
@@ -34,4 +35,10 @@ public interface AgricultureJobService extends IService<AgricultureJob> {
      * @return
      */
     int delAgricultureJob(Long jobId);
+
+    /**
+     * ai作业数据
+     * @param agricultureClass
+     */
+    void aiAddAgricultureJob(AgricultureClass agricultureClass);
 }

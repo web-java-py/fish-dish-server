@@ -1,4 +1,4 @@
-package com.server.properties.properties;
+package com.server.config.properties;
 
 import com.server.annotation.Anonymous;
 import org.apache.commons.lang3.RegExUtils;
