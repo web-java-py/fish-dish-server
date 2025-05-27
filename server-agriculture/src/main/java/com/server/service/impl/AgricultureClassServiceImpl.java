@@ -74,6 +74,7 @@ public class AgricultureClassServiceImpl extends ServiceImpl<AgricultureClassMap
      * @param agricultureClass
      */
     private void validate(AgricultureClass agricultureClass){
+        // 创建一个 LambdaQueryWrapper 对象，用于构建查询条件
         LambdaQueryWrapper<AgricultureClass> lambda = new QueryWrapper<AgricultureClass>().lambda();
         lambda
                 .eq(AgricultureClass::getClassName, agricultureClass.getClassName());

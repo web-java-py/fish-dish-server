@@ -100,7 +100,7 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:840)
 11:40:30.069 [http-nio-8080-exec-97] ERROR c.s.w.e.GlobalExceptionHandler - [handleRuntimeException,101] - 请求地址'/server/device',发生未知异常.
-org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException:
 ### Error updating database.  Cause: java.lang.IllegalStateException: Type handler was null on parameter mapping for property 'params'. It was either not specified and/or could not be found for the javaType (java.util.Map) : jdbcType (null) combination.
 ### The error may exist in com/server/mapper/AgricultureDeviceMapper.java (best guess)
 ### The error may involve com.server.mapper.AgricultureDeviceMapper.insert
@@ -252,7 +252,7 @@ org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:840)
-Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+Caused by: org.apache.ibatis.exceptions.PersistenceException:
 ### Error updating database.  Cause: java.lang.IllegalStateException: Type handler was null on parameter mapping for property 'params'. It was either not specified and/or could not be found for the javaType (java.util.Map) : jdbcType (null) combination.
 ### The error may exist in com/server/mapper/AgricultureDeviceMapper.java (best guess)
 ### The error may involve com.server.mapper.AgricultureDeviceMapper.insert
@@ -292,7 +292,7 @@ Caused by: java.lang.IllegalStateException: Type handler was null on parameter m
 	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
 	... 150 common frames omitted
 11:41:40.296 [http-nio-8080-exec-2] ERROR c.s.w.e.GlobalExceptionHandler - [handleRuntimeException,101] - 请求地址'/server/device',发生未知异常.
-org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException:
 ### Error updating database.  Cause: java.lang.IllegalStateException: Type handler was null on parameter mapping for property 'params'. It was either not specified and/or could not be found for the javaType (java.util.Map) : jdbcType (null) combination.
 ### The error may exist in com/server/mapper/AgricultureDeviceMapper.java (best guess)
 ### The error may involve com.server.mapper.AgricultureDeviceMapper.insert
@@ -444,7 +444,7 @@ org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:840)
-Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+Caused by: org.apache.ibatis.exceptions.PersistenceException:
 ### Error updating database.  Cause: java.lang.IllegalStateException: Type handler was null on parameter mapping for property 'params'. It was either not specified and/or could not be found for the javaType (java.util.Map) : jdbcType (null) combination.
 ### The error may exist in com/server/mapper/AgricultureDeviceMapper.java (best guess)
 ### The error may involve com.server.mapper.AgricultureDeviceMapper.insert
@@ -484,7 +484,7 @@ Caused by: java.lang.IllegalStateException: Type handler was null on parameter m
 	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
 	... 150 common frames omitted
 11:54:57.544 [http-nio-8080-exec-4] ERROR c.s.w.e.GlobalExceptionHandler - [handleRuntimeException,101] - 请求地址'/server/device',发生未知异常.
-org.springframework.jdbc.BadSqlGrammarException: 
+org.springframework.jdbc.BadSqlGrammarException:
 ### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'create_by' in 'field list'
 ### The error may exist in com/server/mapper/AgricultureDeviceMapper.java (best guess)
 ### The error may involve com.server.mapper.AgricultureDeviceMapper.insert-Inline
@@ -676,7 +676,7 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'create_by' in 'fiel
 	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
 	... 144 common frames omitted
 11:55:46.303 [http-nio-8080-exec-5] ERROR c.s.w.e.GlobalExceptionHandler - [handleRuntimeException,101] - 请求地址'/server/device',发生未知异常.
-org.springframework.jdbc.BadSqlGrammarException: 
+org.springframework.jdbc.BadSqlGrammarException:
 ### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'create_by' in 'field list'
 ### The error may exist in com/server/mapper/AgricultureDeviceMapper.java (best guess)
 ### The error may involve com.server.mapper.AgricultureDeviceMapper.insert-Inline
@@ -868,7 +868,7 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'create_by' in 'fiel
 	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
 	... 144 common frames omitted
 11:59:14.954 [http-nio-8080-exec-1] ERROR c.s.w.e.GlobalExceptionHandler - [handleRuntimeException,101] - 请求地址'/server/device',发生未知异常.
-org.springframework.dao.DataIntegrityViolationException: 
+org.springframework.dao.DataIntegrityViolationException:
 ### Error updating database.  Cause: java.sql.SQLException: Field 'id' doesn't have a default value
 ### The error may exist in com/server/mapper/AgricultureDeviceMapper.java (best guess)
 ### The error may involve com.server.mapper.AgricultureDeviceMapper.insert-Inline
@@ -1060,7 +1060,7 @@ Caused by: java.sql.SQLException: Field 'id' doesn't have a default value
 	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
 	... 144 common frames omitted
 12:01:47.964 [http-nio-8080-exec-2] ERROR c.s.w.e.GlobalExceptionHandler - [handleRuntimeException,101] - 请求地址'/server/device',发生未知异常.
-org.springframework.dao.DataIntegrityViolationException: 
+org.springframework.dao.DataIntegrityViolationException:
 ### Error updating database.  Cause: java.sql.SQLException: Field 'device_type' doesn't have a default value
 ### The error may exist in com/server/mapper/AgricultureDeviceMapper.java (best guess)
 ### The error may involve com.server.mapper.AgricultureDeviceMapper.insert-Inline
@@ -1252,7 +1252,7 @@ Caused by: java.sql.SQLException: Field 'device_type' doesn't have a default val
 	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
 	... 144 common frames omitted
 12:03:07.846 [http-nio-8080-exec-4] ERROR c.s.w.e.GlobalExceptionHandler - [handleRuntimeException,101] - 请求地址'/server/device',发生未知异常.
-org.springframework.dao.DataIntegrityViolationException: 
+org.springframework.dao.DataIntegrityViolationException:
 ### Error updating database.  Cause: java.sql.SQLException: Field 'device_type' doesn't have a default value
 ### The error may exist in com/server/mapper/AgricultureDeviceMapper.java (best guess)
 ### The error may involve com.server.mapper.AgricultureDeviceMapper.insert-Inline
@@ -1444,7 +1444,7 @@ Caused by: java.sql.SQLException: Field 'device_type' doesn't have a default val
 	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
 	... 144 common frames omitted
 12:16:26.788 [http-nio-8080-exec-14] ERROR c.s.w.e.GlobalExceptionHandler - [handleRuntimeException,101] - 请求地址'/server/device/list',发生未知异常.
-org.springframework.jdbc.BadSqlGrammarException: 
+org.springframework.jdbc.BadSqlGrammarException:
 ### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'date' in 'field list'
 ### The error may exist in com/server/mapper/AgricultureDeviceMapper.java (best guess)
 ### The error may involve defaultParameterMap
@@ -1763,7 +1763,7 @@ Caused by: java.time.format.DateTimeParseException: Text '2025-05-26' could not 
 	at com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer._fromString(LocalDateTimeDeserializer.java:177)
 	... 117 common frames omitted
 20:04:31.527 [http-nio-8080-exec-21] ERROR c.s.w.e.GlobalExceptionHandler - [handleRuntimeException,101] - 请求地址'/device/alert/list',发生未知异常.
-org.springframework.jdbc.BadSqlGrammarException: 
+org.springframework.jdbc.BadSqlGrammarException:
 ### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'sensor_type' in 'field list'
 ### The error may exist in com/server/mapper/AgricultureDeviceSensorAlertMapper.java (best guess)
 ### The error may involve defaultParameterMap
