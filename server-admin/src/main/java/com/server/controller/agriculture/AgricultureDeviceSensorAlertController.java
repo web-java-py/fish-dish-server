@@ -24,7 +24,7 @@ import com.server.core.page.TableDataInfo;
 /**
  * 传感器预警信息Controller
  * 
- * @author server
+ * @author bxwy
  * @date 2025-05-26
  */
 @RestController
