@@ -43,9 +43,9 @@ public class AgricultureMachine implements Serializable{
     private String machineName;
 
 
-    @TableField(value = "machine_type_id")
-    @ApiModelProperty(value = "机械类别")
-    private String machineTypeId;
+//    @TableField(value = "machine_type_id")
+//    @ApiModelProperty(value = "机械类别")
+//    private String machineTypeId;
 
 
     @TableField(value = "measure_unit")
