@@ -1,4 +1,4 @@
-package com.server.domain;
+package com.server.domain.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class AiEntity {
+public class AiEntityVO {
+    private Long id;
     private String prompt;
 }

@@ -41,4 +41,14 @@ public interface AgricultureJobService extends IService<AgricultureJob> {
      * @param agricultureClass
      */
     void aiAddAgricultureJob(AgricultureClass agricultureClass);
+
+    /**
+     * 新增作业数据集合
+     */
+    int addAgricultureJobBatch(List<AgricultureJob> agricultureJobList);
+
+    /**
+     * 根据classId删除作业数据
+     */
+    int delAgricultureJobByClassId(Long classId);
 }
