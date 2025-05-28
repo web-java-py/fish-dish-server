@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class AgricultureJobServiceImpl extends ServiceImpl<AgricultureJobMapper, AgricultureJob> implements AgricultureJobService {
@@ -94,7 +95,12 @@ public class AgricultureJobServiceImpl extends ServiceImpl<AgricultureJobMapper,
      */
     @Override
     public int addAgricultureJobBatch(List<AgricultureJob> agricultureJobList) {
-        return this.saveBatch(agricultureJobList) ? 1 : 0;
+        int count = 0;
+        for (AgricultureJob job : agricultureJobList) {
+            agricultureJobMapper.insert(job);
+            count++;
+        }
+        return count;
     }
 
     /**

@@ -33,7 +33,6 @@ public class AiConsumer {
      * ai作业处理消费者
      * @param aiEntityVO
      */
-    @Transactional
     @RabbitListener(queues = AI_JOB_QUEUE)
     public void process(AiEntityVO aiEntityVO) {
         try {
@@ -45,6 +44,7 @@ public class AiConsumer {
             agricultureJobService.delAgricultureJobByClassId(aiEntityVO.getId());
             agricultureJobService.addAgricultureJobBatch(agricultureJobList);
         } catch (Exception e) {
+            e.printStackTrace();
             log.warning(e.getMessage());
         }
     }
