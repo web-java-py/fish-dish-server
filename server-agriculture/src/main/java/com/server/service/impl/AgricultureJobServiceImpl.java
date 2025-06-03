@@ -6,17 +6,18 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.server.constant.RabbitMQConstant;
 import com.server.domain.AgricultureClass;
 import com.server.domain.AgricultureJob;
-import com.server.domain.vo.AiEntityVO;
+import com.server.domain.vo.AiMessageVO;
 import com.server.mapper.AgricultureJobMapper;
 import com.server.service.AgricultureJobService;
+import com.server.utils.SecurityUtils;
 import com.server.utils.StringUtils;
+import com.server.web.service.SysLoginService;
 import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class AgricultureJobServiceImpl extends ServiceImpl<AgricultureJobMapper, AgricultureJob> implements AgricultureJobService {
@@ -37,6 +38,7 @@ public class AgricultureJobServiceImpl extends ServiceImpl<AgricultureJobMapper,
     public List<AgricultureJob> selectAgricultureJobList(AgricultureJob agricultureJob) {
         LambdaQueryWrapper<AgricultureJob> lambda = new QueryWrapper<AgricultureJob>().lambda();
         lambda
+                .eq(ObjectUtils.isNotEmpty(agricultureJob.getClassId()), AgricultureJob::getClassId, agricultureJob.getClassId())
                 .like(StringUtils.isNotEmpty(agricultureJob.getJobName()), AgricultureJob::getJobName, agricultureJob.getJobName());
         return agricultureJobMapper.selectList(lambda);
     }
@@ -83,11 +85,12 @@ public class AgricultureJobServiceImpl extends ServiceImpl<AgricultureJobMapper,
     public void aiAddAgricultureJob(AgricultureClass agricultureClass) {
         String prompt = String.format("你是一位经验丰富的农业专家，请提供%s%s种类生长过程中各个阶段的名称（中文）和周期。cycUnit 0表示天单位 1表示周单位",
                 agricultureClass.getClassTypeName(), agricultureClass.getClassName());
-        AiEntityVO aiEntityVO = AiEntityVO.builder()
+        AiMessageVO aiMessageVO = AiMessageVO.builder()
                 .id(agricultureClass.getClassId())
                 .prompt(prompt)
+                .createBy(SecurityUtils.getUsername())
                 .build();
-        rabbitTemplate.convertAndSend(RabbitMQConstant.AI_JOB_EXCHANGE, RabbitMQConstant.AI_JOB_KEY, aiEntityVO);
+        rabbitTemplate.convertAndSend(RabbitMQConstant.AI_JOB_EXCHANGE, RabbitMQConstant.AI_JOB_KEY, aiMessageVO);
     }
 
     /**
@@ -95,12 +98,7 @@ public class AgricultureJobServiceImpl extends ServiceImpl<AgricultureJobMapper,
      */
     @Override
     public int addAgricultureJobBatch(List<AgricultureJob> agricultureJobList) {
-        int count = 0;
-        for (AgricultureJob job : agricultureJobList) {
-            agricultureJobMapper.insert(job);
-            count++;
-        }
-        return count;
+        return this.saveBatch(agricultureJobList) ? 1 : 0;
     }
 
     /**

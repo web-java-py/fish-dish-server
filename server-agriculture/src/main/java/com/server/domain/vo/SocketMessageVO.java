@@ -9,7 +9,8 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class AiEntityVO {
-    private Long id;
-    private String prompt;
+public class SocketMessageVO {
+    private String id;
+    private String type;
+    private String content;
 }
