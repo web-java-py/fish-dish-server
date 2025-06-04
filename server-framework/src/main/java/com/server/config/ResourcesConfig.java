@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 通用配置
- *
+ * 
  *
  */
 @Configuration

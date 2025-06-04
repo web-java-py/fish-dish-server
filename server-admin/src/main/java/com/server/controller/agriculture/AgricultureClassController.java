@@ -20,7 +20,6 @@ import java.util.List;
 @RequestMapping("/agriculture/class")
 @Api(tags = "种类")
 public class AgricultureClassController extends BaseController {
-
     @Autowired
     private AgricultureClassService agricultureClassService;
 

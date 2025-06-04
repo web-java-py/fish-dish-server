@@ -5,7 +5,6 @@ import com.server.core.controller.BaseController;
 import com.server.core.domain.AjaxResult;
 import com.server.core.page.TableDataInfo;
 import com.server.domain.AgricultureMachine;
-import com.server.domain.AgricultureMaterial;
 import com.server.enums.BusinessType;
 import com.server.service.AgricultureMachineService;
 import com.server.utils.poi.ExcelUtil;
@@ -18,9 +17,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
- * @Author: zbb
- * @Date: 2025/5/26 16:23
- */
+* @Author: zbb
+* @Date: 2025/5/26 16:23
+*/
 @RestController
 @RequestMapping("/agriculture/machine")
 @Api(tags = "农机信息")

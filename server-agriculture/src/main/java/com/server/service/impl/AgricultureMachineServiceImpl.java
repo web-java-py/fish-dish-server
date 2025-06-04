@@ -13,9 +13,9 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * @Author: zbb
- * @Date: 2025/5/26 16:29
- */
+* @Author: zbb
+* @Date: 2025/5/26 16:29
+*/
 @Service
 public class AgricultureMachineServiceImpl extends ServiceImpl<AgricultureMachineMapper, AgricultureMachine> implements AgricultureMachineService{
 
