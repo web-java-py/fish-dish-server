@@ -18,9 +18,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
-* @Author: zbb
-* @Date: 2025/5/26 16:23
-*/
+ * @Author: zbb
+ * @Date: 2025/5/26 16:23
+ */
 @RestController
 @RequestMapping("/agriculture/machine")
 @Api(tags = "农机信息")

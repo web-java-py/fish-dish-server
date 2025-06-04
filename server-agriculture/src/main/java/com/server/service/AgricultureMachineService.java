@@ -8,9 +8,9 @@ import com.server.domain.AgricultureMaterial;
 import java.util.List;
 
 /**
-* @Author: zbb
-* @Date: 2025/5/26 16:25
-*/public interface AgricultureMachineService extends IService<AgricultureMachine> {
+ * @Author: zbb
+ * @Date: 2025/5/26 16:25
+ */public interface AgricultureMachineService extends IService<AgricultureMachine> {
 
     /**
      * 农机信息

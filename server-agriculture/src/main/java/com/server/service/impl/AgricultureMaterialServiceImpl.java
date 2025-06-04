@@ -38,7 +38,6 @@ public class AgricultureMaterialServiceImpl extends ServiceImpl<AgricultureMater
         LambdaQueryWrapper<AgricultureMaterial> lambdaQueryWrapper = new QueryWrapper<AgricultureMaterial>().lambda();
         //获取模糊查询的条件
         lambdaQueryWrapper.like(StringUtils.isNotEmpty(agricultureMaterialInfo.getMaterialName()),AgricultureMaterial::getMaterialName, agricultureMaterialInfo.getMaterialName());
-        lambdaQueryWrapper.like(StringUtils.isNotEmpty(agricultureMaterialInfo.getMaterialTypeId()),AgricultureMaterial::getMaterialTypeId,agricultureMaterialInfo.getMaterialTypeId());
         return agricultureMaterialMapper.selectList(lambdaQueryWrapper);
     }
 
