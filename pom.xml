@@ -6,7 +6,7 @@
 
     <groupId>com.server</groupId>
     <artifactId>server</artifactId>
-    <version>0.0.0</version>
+    <version>0.1.0</version>
 
     <name>server</name>
     <url>http://javapython.com/</url>
@@ -22,7 +22,7 @@
     <description>管理系统</description>
 
     <properties>
-        <server.version>0.0.0</server.version>
+        <server.version>0.1.0</server.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
