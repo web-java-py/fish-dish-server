@@ -9,7 +9,6 @@ import com.server.utils.DateUtils;
 import com.server.utils.StringUtils;
 import com.server.utils.uuid.Seq;
 import org.apache.commons.io.FilenameUtils;
-import org.apache.commons.io.file.PathUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;

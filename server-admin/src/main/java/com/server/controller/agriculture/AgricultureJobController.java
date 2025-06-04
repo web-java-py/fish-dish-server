@@ -87,4 +87,17 @@ public class AgricultureJobController extends BaseController {
         ExcelUtil<AgricultureJob> util = new ExcelUtil<AgricultureJob>(AgricultureJob.class);
         util.exportExcel(response, list, "作业数据");
     }
+
+    /**
+     * ai作业数据
+     * @param agricultureClass
+     */
+    @Log(title = "作业管理", businessType = BusinessType.AI)
+    @PostMapping("/ai")
+    @ApiOperation("ai作业数据")
+    public AjaxResult ai(@RequestBody AgricultureClass agricultureClass)
+    {
+        agricultureJobService.aiAddAgricultureJob(agricultureClass);
+        return success();
+    }
 }

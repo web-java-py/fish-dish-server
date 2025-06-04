@@ -98,6 +98,12 @@ spring:
         smtp:
           ssl:
             enable: true
+  # RabbitMQ配置
+  rabbitmq:
+    host: ${rabbitmq.host}
+    port: ${rabbitmq.port}
+    username: ${rabbitmq.username}
+    password: ${rabbitmq.password}
 
 # token配置
 token:
@@ -128,7 +134,7 @@ mybatis-plus:
     map-underscore-to-camel-case: true
   global-config:
     db-config:
-      id-type: none
+      id-type: auto
 
 # PageHelper分页插件
 pagehelper:
@@ -151,3 +157,12 @@ xss:
   excludes: /system/notice
   # 匹配链接
   urlPatterns: /system/*,/monitor/*,/tool/*
+
+# AI服务
+ai:
+  ollama:
+    base-url: ${ollama.base-url}
+    model-name: ${ollama.model-name}
+    temperature: ${ollama.temperature}
+    timeout: ${ollama.timeout}
+

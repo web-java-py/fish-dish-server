@@ -3,7 +3,8 @@ package com.server.controller.agriculture;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
 
-import com.server.domain.AgricultureCropBatchDTO;
+import com.server.core.page.TableDataInfo;
+import com.server.domain.dto.AgricultureCropBatchDTO;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,11 +22,10 @@ import com.server.enums.BusinessType;
 import com.server.domain.AgricultureCropBatch;
 import com.server.service.AgricultureCropBatchService;
 import com.server.utils.poi.ExcelUtil;
-import com.server.core.page.TableDataInfo;
 
 /**
  * 分区Controller
- * 
+ *
  * @author server
  * @date 2025-05-28
  */
@@ -41,15 +41,14 @@ public class AgricultureCropBatchController extends BaseController
      */
     @PreAuthorize("@ss.hasPermi('agriculture:batch:list')")
     @GetMapping("/list")
-//    public TableDataInfo list(AgricultureCropBatch agricultureCropBatch)
-//    {
-//        startPage();
-//        List<AgricultureCropBatch> list = agricultureCropBatchService.selectAgricultureCropBatchList(agricultureCropBatch);
-//        return getDataTable(list);
+//    public List<AgricultureCropBatchDTO> getCropBatchWithClassImages() {
+//        return agricultureCropBatchService.getCropBatchWithClassImages();
 //    }
-    public List<AgricultureCropBatchDTO> getCropBatchWithClassImages() {
-        return agricultureCropBatchService.getCropBatchWithClassImages();
+    public TableDataInfo list(AgricultureCropBatchDTO agricultureCropBatchDTO){
+        startPage();
+        return getDataTable(agricultureCropBatchService.getCropBatchWithClassImages(agricultureCropBatchDTO));
     }
+
 
     /**
      * 导出分区列表
@@ -101,9 +100,9 @@ public class AgricultureCropBatchController extends BaseController
      */
     @PreAuthorize("@ss.hasPermi('agriculture:batch:remove')")
     @Log(title = "分区", businessType = BusinessType.DELETE)
-	@DeleteMapping("/{batchIds}")
-    public AjaxResult remove(@PathVariable Long[] batchIds)
+	@DeleteMapping("/{batchId}")
+    public AjaxResult remove(@PathVariable Long[] batchId)
     {
-        return toAjax(agricultureCropBatchService.deleteAgricultureCropBatchByBatchIds(batchIds));
+        return toAjax(agricultureCropBatchService.deleteAgricultureCropBatchByBatchIds(batchId));
     }
 }

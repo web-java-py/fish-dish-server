@@ -1,25 +1,17 @@
 package com.server.controller.system;
 
-import java.awt.image.BufferedImage;
-import java.io.IOException;
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
 
 import com.google.code.kaptcha.Producer;
-import com.server.config.AdminServerConfig;
-import com.server.constant.CacheConstants;
 import com.server.core.domain.model.ForgetPwdBody;
 import com.server.core.redis.RedisCache;
 import com.server.core.text.Convert;
 import com.server.service.ISysConfigService;
 import com.server.utils.StringUtils;
-import com.server.utils.sign.Base64;
-import com.server.utils.uuid.IdUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.util.FastByteArrayOutputStream;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -37,7 +29,6 @@ import com.server.web.service.TokenService;
 import com.server.service.ISysMenuService;
 
 import javax.annotation.Resource;
-import javax.imageio.ImageIO;
 
 /**
  * 登录验证

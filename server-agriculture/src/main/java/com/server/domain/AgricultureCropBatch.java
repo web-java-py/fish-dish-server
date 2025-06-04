@@ -1,5 +1,6 @@
 package com.server.domain;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import lombok.Data;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
@@ -28,7 +29,7 @@ public class AgricultureCropBatch extends BaseEntityPlus implements Serializable
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value="batch_id")
+    @TableId(value = "batch_id", type = IdType.AUTO)
     @ApiModelProperty(value="分区ID")
     private Long batchId;
 
@@ -45,7 +46,7 @@ public class AgricultureCropBatch extends BaseEntityPlus implements Serializable
     private Long pastureId;
 
     @TableField(value="crop_area")
-    @ApiModelProperty(value="种植面积（亩）")
+    @ApiModelProperty(value="种植面积(亩)")
     private Double cropArea;
 
     @TableField(value="start_time")
