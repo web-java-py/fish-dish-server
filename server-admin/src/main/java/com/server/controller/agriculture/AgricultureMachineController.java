@@ -5,6 +5,7 @@ import com.server.core.controller.BaseController;
 import com.server.core.domain.AjaxResult;
 import com.server.core.page.TableDataInfo;
 import com.server.domain.AgricultureMachine;
+import com.server.domain.AgricultureMaterial;
 import com.server.enums.BusinessType;
 import com.server.service.AgricultureMachineService;
 import com.server.utils.poi.ExcelUtil;
