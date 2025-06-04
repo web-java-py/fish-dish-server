@@ -11,7 +11,7 @@ import static com.google.code.kaptcha.Constants.*;
 
 /**
  * 验证码配置
- * 
+ *
  *
  */
 @Configuration

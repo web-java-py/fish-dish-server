@@ -27,7 +27,7 @@ import java.util.List;
 
 /**
  * Mybatis支持*匹配扫描包
- * 
+ *
  *
  */
 @Configuration

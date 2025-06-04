@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.server.domain.AgricultureCropBatch;
-import com.server.domain.DTO.AgricultureCropBatchDTO;
+import com.server.domain.dto.AgricultureCropBatchDTO;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;

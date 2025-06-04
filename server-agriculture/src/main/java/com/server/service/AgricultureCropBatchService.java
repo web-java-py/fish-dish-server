@@ -4,11 +4,11 @@ import java.util.List;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.server.domain.AgricultureCropBatch;
-import com.server.domain.DTO.AgricultureCropBatchDTO;
+import com.server.domain.dto.AgricultureCropBatchDTO;
 
 /**
  * 分区Service接口
- * 
+ *
  * @author server
  * @date 2025-05-28
  */
@@ -16,7 +16,7 @@ public interface AgricultureCropBatchService extends IService<AgricultureCropBat
 {
     /**
      * 查询分区
-     * 
+     *
      * @param batchId 分区主键
      * @return 分区
      */
@@ -24,7 +24,7 @@ public interface AgricultureCropBatchService extends IService<AgricultureCropBat
 
     /**
      * 导出分区列表
-     * 
+     *
      * @param agricultureCropBatch 分区
      * @return 分区集合
      */
@@ -32,7 +32,7 @@ public interface AgricultureCropBatchService extends IService<AgricultureCropBat
 
     /**
      * 新增分区
-     * 
+     *
      * @param agricultureCropBatch 分区
      * @return 结果
      */
@@ -40,7 +40,7 @@ public interface AgricultureCropBatchService extends IService<AgricultureCropBat
 
     /**
      * 修改分区
-     * 
+     *
      * @param agricultureCropBatch 分区
      * @return 结果
      */
@@ -48,7 +48,7 @@ public interface AgricultureCropBatchService extends IService<AgricultureCropBat
 
     /**
      * 批量删除分区
-     * 
+     *
      * @param batchId 需要删除的分区主键集合
      * @return 结果
      */
@@ -56,7 +56,7 @@ public interface AgricultureCropBatchService extends IService<AgricultureCropBat
 
     /**
      * 删除分区信息
-     * 
+     *
      * @param batchId 分区主键
      * @return 结果
      */
