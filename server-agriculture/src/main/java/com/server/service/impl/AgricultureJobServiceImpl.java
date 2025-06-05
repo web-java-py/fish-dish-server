@@ -90,7 +90,7 @@ public class AgricultureJobServiceImpl extends ServiceImpl<AgricultureJobMapper,
                 .prompt(prompt)
                 .createBy(SecurityUtils.getUsername())
                 .build();
-        rabbitTemplate.convertAndSend(RabbitMQConstant.AI_JOB_EXCHANGE, RabbitMQConstant.AI_JOB_KEY, aiMessageVO);
+        rabbitTemplate.convertAndSend(RabbitMQConstant.AI_EXCHANGE, RabbitMQConstant.AI_JOB_KEY, aiMessageVO);
     }
 
     /**

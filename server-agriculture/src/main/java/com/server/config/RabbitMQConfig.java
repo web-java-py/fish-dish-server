@@ -10,6 +10,9 @@ import org.springframework.context.annotation.Configuration;
 
 import static com.server.constant.RabbitMQConstant.*;
 
+/**
+ * http://localhost:15672
+ */
 @Configuration
 public class RabbitMQConfig {
 
@@ -19,13 +22,23 @@ public class RabbitMQConfig {
     }
 
     @Bean
-    public DirectExchange AiJobExchange() {
-        return new DirectExchange(AI_JOB_EXCHANGE, true, false);
+    public Queue AiReportQueue() {
+        return new Queue(AI_REPORT_QUEUE, true);
+    }
+
+    @Bean
+    public DirectExchange AiExchange() {
+        return new DirectExchange(AI_EXCHANGE, true, false);
     }
 
     @Bean
     public Binding bindingAiJobBinding() {
-        return BindingBuilder.bind(AiJobQueue()).to(AiJobExchange()).with(AI_JOB_KEY);
+        return BindingBuilder.bind(AiJobQueue()).to(AiExchange()).with(AI_JOB_KEY);
+    }
+
+    @Bean
+    public Binding bindingAiReportBinding() {
+        return BindingBuilder.bind(AiReportQueue()).to(AiExchange()).with(AI_REPORT_KEY);
     }
 
     @Bean
