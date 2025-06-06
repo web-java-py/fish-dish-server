@@ -5,7 +5,10 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.server.ai.AiResponseFormat;
 import com.server.constant.AgricultureConstants;
+import com.server.constant.CacheConstants;
+import com.server.constant.Constants;
 import com.server.constant.RabbitMQConstant;
+import com.server.core.redis.RedisCache;
 import com.server.domain.AgricultureClass;
 import com.server.domain.vo.AiMessageVO;
 import com.server.enums.ClassType;
@@ -24,6 +27,7 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 @Service
 public class AgricultureClassServiceImpl extends ServiceImpl<AgricultureClassMapper, AgricultureClass> implements AgricultureClassService {
@@ -33,6 +37,9 @@ public class AgricultureClassServiceImpl extends ServiceImpl<AgricultureClassMap
 
     @Autowired
     private RabbitTemplate rabbitTemplate;
+
+    @Autowired
+    private RedisCache redisCache;
 
     /**
      * 查询种类数据
@@ -91,6 +98,10 @@ public class AgricultureClassServiceImpl extends ServiceImpl<AgricultureClassMap
      */
     @Override
     public void aiAddAgricultureClassReport(AgricultureClass agricultureClass) {
+        String key = CacheConstants.AI_REPORT_NOT_REPEAT_SUBMIT + agricultureClass.getClassId();
+        if (StringUtils.isNotEmpty((String) redisCache.getCacheObject(key))){
+            throw new ServiceException(Constants.AI_NOT_REPEAT_SUBMIT_MESSAGE);
+        }
         InputStream inputStream;
         ClassType classType = ClassType.findByCode(agricultureClass.getClassType());
         if (classType == ClassType.FISH) {
@@ -108,6 +119,7 @@ public class AgricultureClassServiceImpl extends ServiceImpl<AgricultureClassMap
                 .classType(classType)
                 .build();
         rabbitTemplate.convertAndSend(RabbitMQConstant.AI_EXCHANGE, RabbitMQConstant.AI_REPORT_KEY, aiMessageVO);
+        redisCache.setCacheObject(key, agricultureClass.getClassName(), Constants.AI_NOT_REPEAT_SUBMIT_EXPIRATION, TimeUnit.MINUTES);
     }
 
     /**

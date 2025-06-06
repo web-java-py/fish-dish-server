@@ -181,4 +181,14 @@ public class Constants
      * system常量
      */
     public static final String USER_DIR = "user.dir";
+
+    /**
+     * ai防止重复提交有效期（分钟）
+     */
+    public static final Integer AI_NOT_REPEAT_SUBMIT_EXPIRATION = 15;
+
+    /**
+     * ai防止重复提交提示
+     */
+    public static final String AI_NOT_REPEAT_SUBMIT_MESSAGE = "AI助手正在处理啦，请不要重复提交！";
 }

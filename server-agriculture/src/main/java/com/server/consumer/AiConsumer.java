@@ -7,6 +7,7 @@ import com.server.ai.AiResponseFormat;
 import com.server.ai.AiService;
 
 import com.server.constant.SocketConstant;
+import com.server.core.redis.RedisCache;
 import com.server.domain.AgricultureClassAiReport;
 import com.server.domain.AgricultureJob;
 import com.server.domain.dto.AiJobDTO;
@@ -27,6 +28,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static com.server.constant.RabbitMQConstant.*;
+import static com.server.constant.CacheConstants.*;
 
 @Log
 @Component
@@ -43,6 +45,9 @@ public class AiConsumer {
 
     @Autowired
     private AgricultureClassAiReportService agricultureClassAiReportService;
+
+    @Autowired
+    private RedisCache redisCache;
 
     /**
      * ai作业处理消费者
@@ -70,6 +75,7 @@ public class AiConsumer {
                     .content("您的AI助手已经完成种类作业流程的处理啦！")
                     .build();
             mqSocketServer.sendToAllClient(JSON.toJSONString(socketResponse));
+            redisCache.deleteObject(AI_JOB_NOT_REPEAT_SUBMIT + aiMessageVO.getId());
         } catch (Exception e) {
             log.warning(e.getMessage());
         }
@@ -141,6 +147,7 @@ public class AiConsumer {
                     .content("您的AI助手已经完成种类智能报告的处理啦！")
                     .build();
             mqSocketServer.sendToAllClient(JSON.toJSONString(socketResponse));
+            redisCache.deleteObject(AI_JOB_NOT_REPEAT_SUBMIT + aiMessageVO.getId());
         } catch (Exception e) {
             log.warning(e.getMessage());
         }
