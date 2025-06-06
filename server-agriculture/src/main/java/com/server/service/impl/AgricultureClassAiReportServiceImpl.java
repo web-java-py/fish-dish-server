@@ -26,7 +26,9 @@ public class AgricultureClassAiReportServiceImpl extends ServiceImpl<Agriculture
     public AgricultureClassAiReport getAgricultureClassAiReportInfo(AgricultureClassAiReport agricultureClassAiReport) {
         LambdaQueryWrapper<AgricultureClassAiReport> lambda = new QueryWrapper<AgricultureClassAiReport>().lambda();
         lambda
-                .eq(ObjectUtils.isNotEmpty(agricultureClassAiReport.getClassId()), AgricultureClassAiReport::getClassId, agricultureClassAiReport.getClassId());
+                .eq(ObjectUtils.isNotEmpty(agricultureClassAiReport.getClassId()), AgricultureClassAiReport::getClassId, agricultureClassAiReport.getClassId())
+                .orderByDesc(AgricultureClassAiReport::getCreateTime)
+                .last("limit 1");
         return agricultureClassAiReportMapper.selectOne(lambda);
     }
 }
