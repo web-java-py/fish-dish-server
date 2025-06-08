@@ -41,9 +41,6 @@ public class AgricultureCropBatchController extends BaseController
      */
     @PreAuthorize("@ss.hasPermi('agriculture:batch:list')")
     @GetMapping("/list")
-//    public List<AgricultureCropBatchDTO> getCropBatchWithClassImages() {
-//        return agricultureCropBatchService.getCropBatchWithClassImages();
-//    }
     public TableDataInfo list(AgricultureCropBatchDTO agricultureCropBatchDTO){
         startPage();
         return getDataTable(agricultureCropBatchService.getCropBatchWithClassImages(agricultureCropBatchDTO));

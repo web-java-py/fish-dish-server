@@ -1,6 +1,8 @@
 package com.server.domain.dto;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
@@ -22,7 +24,9 @@ public class AgricultureCropBatchDTO {
     private LocalDateTime startTime;
     private double cropArea;       // 从 agriculture_crop_batch 表获取
     private String contractAddr;       // 从 agriculture_crop_batch 表获取
+    @TableField(value = "create_time",fill = FieldFill.INSERT)
     private LocalDate createTime;           // 从 agriculture_crop_batch 表获取
     private String classImage;         // 从 agriculture_class 表获取
     private String className;
+    private String nickName;
 }

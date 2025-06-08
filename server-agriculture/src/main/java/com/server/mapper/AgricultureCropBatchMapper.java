@@ -26,9 +26,10 @@ public interface AgricultureCropBatchMapper  extends BaseMapper<AgricultureCropB
      * @param queryWrapper 查询条件Wrapper，用于动态拼接SQL
      * @return 符合条件的作物批次DTO列表
      */
-    @Select("SELECT b.*, c.class_image " +
+    @Select("SELECT b.*, c.class_image,c.class_name,u.nick_name " +
             "FROM agriculture_crop_batch b " +
             "LEFT JOIN agriculture_class c ON b.germplasm_id = c.class_id OR b.batch_name = c.class_name " +
+            "LEFT JOIN sys_user u on u.user_id=b.responsible_person_id " +
             "${ew.customSqlSegment}")
     /**
      * ew 是传入的查询包装器（Wrapper），它可以根据传入的条件动态构建 SQL 片段
