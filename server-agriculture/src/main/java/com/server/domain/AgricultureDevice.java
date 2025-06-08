@@ -47,6 +47,11 @@ public class AgricultureDevice extends BaseEntityPlus implements Serializable
     private String deviceName;
 
     /** 设备类型（传感器、控制器、网关等） */
+    @TableField(value="device_image")
+    @ApiModelProperty(value="设备图片URL）")
+    private String deviceImage;
+
+    /** 设备类型（传感器、控制器、网关等） */
     @TableField(value="device_type")
     @ApiModelProperty(value="设备类型（传感器、控制器、网关等）")
     private String deviceType;
