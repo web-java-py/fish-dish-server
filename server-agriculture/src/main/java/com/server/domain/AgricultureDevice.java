@@ -66,16 +66,6 @@ public class AgricultureDevice extends BaseEntityPlus implements Serializable
     @ApiModelProperty(value="最后在线时间")
     private Date lastOnlineTime;
 
-    /** 阈值最小值 */
-    @TableField(value="threshold_min")
-    @ApiModelProperty(value="阈值最小值")
-    private BigDecimal thresholdMin;
-
-    /** 阈值最大值 */
-    @TableField(value="threshold_max")
-    @ApiModelProperty(value="阈值最大值")
-    private BigDecimal thresholdMax;
-
     /** 大棚id，空为没有绑定大棚 */
     @TableField(value="pasture_id")
     @ApiModelProperty(value="大棚id，空为没有绑定大棚")
