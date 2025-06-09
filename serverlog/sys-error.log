@@ -5269,3 +5269,4 @@ Caused by: java.sql.SQLException: Field 'device_type' doesn't have a default val
 16:55:27.346 [http-nio-8080-exec-16] ERROR c.a.d.f.s.StatFilter - [internalAfterStatementExecute,518] - slow sql 9563 millis. SELECT  id,device_id,device_type,param_type,threshold_min,threshold_max,is_enabled,create_by,create_time,update_by,update_time,remark  FROM agriculture_threshold_config 
  
  WHERE (device_id = ?) [3]
+18:45:29.262 [http-nio-8080-exec-66] ERROR c.a.d.f.s.StatFilter - [internalAfterStatementExecute,518] - slow sql 1136 millis. SELECT id,device_name,device_image,device_type,status,alarm_status,last_online_time,pasture_id,batch_id,address,sensor_command,create_by,create_time,update_by,update_time,remark FROM agriculture_device WHERE id=?  ["5"]

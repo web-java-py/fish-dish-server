@@ -39,6 +39,19 @@ public class AgricultureCropBatchServiceImpl extends ServiceImpl<AgricultureCrop
     }
 
     /**
+     * 根据大棚ID查询分区列表
+     *
+     * @param pastureId 大棚ID
+     * @return 分区列表
+     */
+    @Override
+    public List<AgricultureCropBatchDTO> selectBatchByPastureId(Long pastureId) {
+        LambdaQueryWrapper<AgricultureCropBatch> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(AgricultureCropBatch::getPastureId, pastureId);
+        return agricultureCropBatchMapper.selectCropBatchWithClassImages(queryWrapper);
+    }
+
+    /**
      * 导出分区列表
      *
      * @param agricultureCropBatch 分区

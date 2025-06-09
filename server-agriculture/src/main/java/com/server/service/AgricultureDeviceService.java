@@ -5,6 +5,7 @@ import java.util.List;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.server.domain.AgricultureClass;
 import com.server.domain.AgricultureDevice;
+import com.server.domain.vo.AgricultureDeviceVO;
 
 /**
  * 设备信息Service接口
@@ -25,6 +26,14 @@ public interface AgricultureDeviceService extends IService<AgricultureDevice>
     /**
      * 查询设备信息列表
      * 
+     * @param agricultureDevice 设备信息
+     * @return 设备信息VO集合
+     */
+    public List<AgricultureDeviceVO> selectAgricultureDeviceListVO(AgricultureDevice agricultureDevice);
+
+    /**
+     * 查询设备信息列表
+     *
      * @param agricultureDevice 设备信息
      * @return 设备信息集合
      */
