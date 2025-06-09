@@ -52,11 +52,11 @@ public class AgricultureDeviceServiceImpl extends ServiceImpl<AgricultureDeviceM
      * 查询设备信息列表
      *
      * @param agricultureDevice 设备信息
-     * @return VO设备信息
+     * @return VO设备信息列表
      */
     @Override
     public List<AgricultureDeviceVO> selectAgricultureDeviceListVO(AgricultureDevice agricultureDevice) {
-        List<AgricultureDevice> deviceList = list(); // 你可以加条件
+        List<AgricultureDevice> deviceList = list();
         List<AgricultureDeviceVO> voList = new ArrayList<>();
         for (AgricultureDevice device : deviceList) {
             AgricultureDeviceVO vo = new AgricultureDeviceVO();
