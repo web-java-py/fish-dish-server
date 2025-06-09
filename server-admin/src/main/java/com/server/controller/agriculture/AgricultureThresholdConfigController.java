@@ -38,7 +38,7 @@ public class AgricultureThresholdConfigController extends BaseController
     /**
      * 查询阈值配置列表
      */
-    @PreAuthorize("@ss.hasPermi('server:config:list')")
+    @PreAuthorize("@ss.hasPermi('agriculture:config:list')")
     @GetMapping("/list")
     public TableDataInfo list(AgricultureThresholdConfig agricultureThresholdConfig)
     {
@@ -48,9 +48,19 @@ public class AgricultureThresholdConfigController extends BaseController
     }
 
     /**
+     * 根据设备ID查询阈值配置列表
+     */
+    @PreAuthorize("@ss.hasPermi('agriculture:config:list')")
+    @GetMapping("/listByDeviceId/{deviceId}")
+    public AjaxResult listByDeviceId(@PathVariable Long deviceId) {
+        List<AgricultureThresholdConfig> list = agricultureThresholdConfigService.selectByDeviceId(deviceId);
+        return AjaxResult.success(list);
+    }
+
+    /**
      * 导出阈值配置列表
      */
-    @PreAuthorize("@ss.hasPermi('server:config:export')")
+    @PreAuthorize("@ss.hasPermi('agriculture:config:export')")
     @Log(title = "阈值配置", businessType = BusinessType.EXPORT)
     @PostMapping("/export")
     public void export(HttpServletResponse response, AgricultureThresholdConfig agricultureThresholdConfig)
@@ -63,7 +73,7 @@ public class AgricultureThresholdConfigController extends BaseController
     /**
      * 获取阈值配置详细信息
      */
-    @PreAuthorize("@ss.hasPermi('server:config:query')")
+    @PreAuthorize("@ss.hasPermi('agriculture:config:query')")
     @GetMapping(value = "/{id}")
     public AjaxResult getInfo(@PathVariable("id") Long id)
     {
@@ -73,7 +83,7 @@ public class AgricultureThresholdConfigController extends BaseController
     /**
      * 新增阈值配置
      */
-    @PreAuthorize("@ss.hasPermi('server:config:add')")
+    @PreAuthorize("@ss.hasPermi('agriculture:config:add')")
     @Log(title = "阈值配置", businessType = BusinessType.INSERT)
     @PostMapping
     public AjaxResult add(@RequestBody AgricultureThresholdConfig agricultureThresholdConfig)
@@ -84,7 +94,7 @@ public class AgricultureThresholdConfigController extends BaseController
     /**
      * 修改阈值配置
      */
-    @PreAuthorize("@ss.hasPermi('server:config:edit')")
+    @PreAuthorize("@ss.hasPermi('agriculture:config:edit')")
     @Log(title = "阈值配置", businessType = BusinessType.UPDATE)
     @PutMapping
     public AjaxResult edit(@RequestBody AgricultureThresholdConfig agricultureThresholdConfig)
@@ -95,7 +105,7 @@ public class AgricultureThresholdConfigController extends BaseController
     /**
      * 删除阈值配置
      */
-    @PreAuthorize("@ss.hasPermi('server:config:remove')")
+    @PreAuthorize("@ss.hasPermi('agriculture:config:remove')")
     @Log(title = "阈值配置", businessType = BusinessType.DELETE)
 	@DeleteMapping("/{ids}")
     public AjaxResult remove(@PathVariable Long[] ids)

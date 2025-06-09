@@ -23,6 +23,14 @@ public interface AgricultureThresholdConfigService extends IService<AgricultureT
     public AgricultureThresholdConfig selectAgricultureThresholdConfigById(Long id);
 
     /**
+     * 查询阈值配置
+     *
+     * @param deviceId 设备id
+     * @return 该设备阈值配置集合
+     */
+    public List<AgricultureThresholdConfig> selectByDeviceId(Long deviceId);
+
+    /**
      * 查询阈值配置列表
      * 
      * @param agricultureThresholdConfig 阈值配置

@@ -52,6 +52,16 @@ public class AgricultureThresholdConfigServiceImpl extends ServiceImpl<Agricultu
     }
 
     /**
+     * 查询阈值配置列表
+     *
+     * @param deviceId 设备Id
+     * @return 该设备阈值配置
+     */
+    @Override
+    public List<AgricultureThresholdConfig> selectByDeviceId(Long deviceId) {
+        return lambdaQuery().eq(AgricultureThresholdConfig::getDeviceId, deviceId).list();
+    }
+    /**
      * 新增阈值配置
      * 
      * @param agricultureThresholdConfig 阈值配置

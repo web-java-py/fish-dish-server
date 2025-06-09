@@ -43,6 +43,10 @@ public class AgricultureThresholdConfig extends BaseEntityPlus implements Serial
     @ApiModelProperty(value="参数类型（如：风速、温度、PH值等）")
     private String paramType;
 
+    @TableField(value="unit")
+    @ApiModelProperty(value="单位")
+    private String unit;
+
     @TableField(value="threshold_min")
     @ApiModelProperty(value="阈值最小值")
     private Double thresholdMin;
