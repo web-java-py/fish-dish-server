@@ -23,6 +23,14 @@ public interface AgricultureCropBatchService extends IService<AgricultureCropBat
     public AgricultureCropBatch selectAgricultureCropBatchByBatchId(Long batchId);
 
     /**
+     * 根据大棚ID查询分区列表
+     *
+     * @param pastureId 大棚ID
+     * @return 分区列表
+     */
+    List<AgricultureCropBatchDTO> selectBatchByPastureId(Long pastureId);
+
+    /**
      * 导出分区列表
      *
      * @param agricultureCropBatch 分区

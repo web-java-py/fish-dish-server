@@ -2,6 +2,8 @@ package com.server.controller.agriculture;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
+
+import com.server.domain.vo.AgricultureDeviceVO;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -43,7 +45,7 @@ public class AgricultureDeviceController extends BaseController
     public TableDataInfo list(AgricultureDevice agricultureDevice)
     {
         startPage();
-        List<AgricultureDevice> list = agricultureDeviceService.selectAgricultureDeviceList(agricultureDevice);
+        List<AgricultureDeviceVO> list = agricultureDeviceService.selectAgricultureDeviceListVO(agricultureDevice);
         return getDataTable(list);
     }
 

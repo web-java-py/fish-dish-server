@@ -49,6 +49,14 @@ public class AgricultureCropBatchController extends BaseController
         return getDataTable(agricultureCropBatchService.getCropBatchWithClassImages(agricultureCropBatchDTO));
     }
 
+    /**
+     * 根据大棚ID查询分区列表
+     */
+    @PreAuthorize("@ss.hasPermi('agriculture:batch:list')")
+    @GetMapping("/listByPasture/{pastureId}")
+    public AjaxResult listByPasture(@PathVariable("pastureId") Long pastureId) {
+        return success(agricultureCropBatchService.selectBatchByPastureId(pastureId));
+    }
 
     /**
      * 导出分区列表
