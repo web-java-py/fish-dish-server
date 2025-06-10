@@ -9,10 +9,6 @@ import lombok.Data;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-/**
- * @Author: zbb
- * @Date: 2025/5/28 15:40
- */
 @Data
 public class AgricultureCropBatchDTO {
     private String batchName;

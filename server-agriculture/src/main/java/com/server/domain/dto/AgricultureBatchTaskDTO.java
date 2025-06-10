@@ -13,11 +13,6 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.Map;
 
-/**
- * @Author: zbb
- * @Date: 2025/5/28 21:46
- *批次任务对象
- */
 @Data
 @Component
 public class AgricultureBatchTaskDTO{
