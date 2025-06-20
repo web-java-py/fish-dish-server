@@ -4,7 +4,6 @@ import java.util.List;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.server.domain.AgricultureCropBatch;
-import com.server.domain.dto.AgricultureCropBatchDTO;
 
 /**
  * 分区Service接口
