@@ -10,6 +10,7 @@ import com.server.service.AgricultureClassService;
 import com.server.utils.poi.ExcelUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -85,5 +86,18 @@ public class AgricultureClassController extends BaseController {
         List<AgricultureClass> list = agricultureClassService.selectAgricultureClassList(agricultureClass);
         ExcelUtil<AgricultureClass> util = new ExcelUtil<AgricultureClass>(AgricultureClass.class);
         util.exportExcel(response, list, "种类数据");
+    }
+
+    /**
+     * 种类智能报告
+     * @param agricultureClass
+     */
+    @Log(title = "种类智能报告", businessType = BusinessType.AI)
+    @PostMapping("/ai")
+    @ApiOperation("种类智能报告")
+    public AjaxResult ai(@RequestBody AgricultureClass agricultureClass)
+    {
+        agricultureClassService.aiAddAgricultureClassReport(agricultureClass);
+        return success();
     }
 }

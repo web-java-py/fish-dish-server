@@ -35,4 +35,10 @@ public interface AgricultureClassService extends IService<AgricultureClass> {
      * @return
      */
     int delAgricultureClass(Long classId);
+
+    /**
+     * 种类智能报告
+     * @param agricultureClass
+     */
+    void aiAddAgricultureClassReport(AgricultureClass agricultureClass);
 }

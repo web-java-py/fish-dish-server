@@ -134,7 +134,7 @@ mybatis-plus:
     map-underscore-to-camel-case: true
   global-config:
     db-config:
-      id-type: auto
+      id-type: none
 
 # PageHelper分页插件
 pagehelper:

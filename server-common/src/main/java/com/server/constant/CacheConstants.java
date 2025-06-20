@@ -2,7 +2,7 @@ package com.server.constant;
 
 /**
  * 缓存的key 常量
- * 
+ *
  *
  */
 public class CacheConstants
@@ -46,4 +46,14 @@ public class CacheConstants
      * 邮箱验证码 redis key
      */
     public static final String MAIL_CODE_KEY = "mail_codes:";
+
+    /**
+     * AI作业流程防止重复提交 redis key
+     */
+    public static final String AI_JOB_NOT_REPEAT_SUBMIT = "ai_job_not_repeat_submit:";
+
+    /**
+     * AI智能报告程防止重复提交 redis key
+     */
+    public static final String AI_REPORT_NOT_REPEAT_SUBMIT = "ai_report_not_repeat_submit:";
 }
