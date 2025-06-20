@@ -94,9 +94,6 @@ public class AgricultureDeviceServiceImpl extends ServiceImpl<AgricultureDeviceM
     @Override
     public int insertAgricultureDevice(AgricultureDevice agricultureDevice)
     {
-        if (agricultureDevice.getDeviceType() == null) {
-            agricultureDevice.setDeviceType("传感器");  // 设置默认值
-        }
         return agricultureDeviceMapper.insert(agricultureDevice);
     }
 
