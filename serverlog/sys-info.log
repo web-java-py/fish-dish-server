@@ -2160,3 +2160,14 @@ java.net.SocketException: Connection reset
 02:58:07.736 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,32] - ====关闭后台任务任务线程池====
 02:58:07.740 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
 02:58:07.746 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+13:56:41.055 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.4.Final
+13:56:41.079 [main] INFO  c.s.ServerApplication - [logStarting,55] - Starting ServerApplication using Java 17.0.12 on zhubb with PID 16284 (D:\YCGSHou\fish-dish-server\server-admin\target\classes started by 18319 in D:\YCGSHou\fish-dish-server)
+13:56:41.080 [main] INFO  c.s.ServerApplication - [logStartupProfileInfo,640] - The following 2 profiles are active: "dev", "druid"
+13:56:44.889 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+13:56:44.892 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+13:56:44.893 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.102]
+13:56:44.988 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+13:56:46.485 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+13:56:48.942 [main] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+13:56:48.952 [main] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+13:56:49.078 [main] INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
