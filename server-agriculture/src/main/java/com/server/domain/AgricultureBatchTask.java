@@ -18,6 +18,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import com.server.annotation.Excel;
 import com.server.core.domain.BaseEntity;
+import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  * 分区批次任务对象 agriculture_batch_task
@@ -81,15 +82,15 @@ public class AgricultureBatchTask extends BaseEntity implements Serializable {
     @TableField(value = "actual_start")
     @ApiModelProperty(value = "实际开始日期")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @Excel(name = "实际开始日期", width = 30, dateFormat = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime actualStart;
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private Date actualStart;
 
     /** 实际结束日期 */
     @TableField(value = "actual_finish")
     @ApiModelProperty(value = "实际结束日期")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @Excel(name = "实际结束日期", width = 30, dateFormat = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime actualFinish;
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private Date actualFinish;
 
     /** 任务详情 */
     @TableField(value = "task_detail")
