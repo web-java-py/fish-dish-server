@@ -52,9 +52,9 @@ public class AgricultureDevice extends BaseEntityPlus implements Serializable
     private String deviceImage;
 
     /** 设备类型（传感器、控制器、网关等） */
-    @TableField(value="device_type")
+    @TableField(value="device_type_id")
     @ApiModelProperty(value="设备类型（传感器、控制器、网关等）")
-    private String deviceType;
+    private String deviceTypeId;
 
     /** 设备状态（0-离线，1-在线） */
     @TableField(value="status")
@@ -82,12 +82,17 @@ public class AgricultureDevice extends BaseEntityPlus implements Serializable
     private String batchId;
 
     /** 区块地址 */
-    @TableField(value="address")
+    @TableField(value="block_address")
     @ApiModelProperty(value="区块地址")
-    private String address;
+    private String blockAddress;
 
     /** 传感器指令 */
     @TableField(value="sensor_command")
     @ApiModelProperty(value="传感器指令")
     private String sensorCommand;
+
+    /** 传感器设备地址 */
+    @TableField(value="sensor_address")
+    @ApiModelProperty(value="传感器设备地址")
+    private String sensorAddress;
 }
