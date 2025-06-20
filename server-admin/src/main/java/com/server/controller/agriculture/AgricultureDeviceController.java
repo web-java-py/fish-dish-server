@@ -40,7 +40,7 @@ public class AgricultureDeviceController extends BaseController
     /**
      * 查询设备信息列表
      */
-    @PreAuthorize("@ss.hasPermi('server:device:list')")
+    @PreAuthorize("@ss.hasPermi('agriculture:device:list')")
     @GetMapping("/list")
     public TableDataInfo list(AgricultureDevice agricultureDevice)
     {
@@ -52,7 +52,7 @@ public class AgricultureDeviceController extends BaseController
     /**
      * 导出设备信息列表
      */
-    @PreAuthorize("@ss.hasPermi('server:device:export')")
+    @PreAuthorize("@ss.hasPermi('agriculture:device:export')")
     @Log(title = "设备信息", businessType = BusinessType.EXPORT)
     @PostMapping("/export")
     public void export(HttpServletResponse response, AgricultureDevice agricultureDevice)
@@ -65,7 +65,7 @@ public class AgricultureDeviceController extends BaseController
     /**
      * 获取设备信息详细信息
      */
-    @PreAuthorize("@ss.hasPermi('server:device:query')")
+    @PreAuthorize("@ss.hasPermi('agriculture:device:query')")
     @GetMapping(value = "/{id}")
     public AjaxResult getInfo(@PathVariable("id") String id)
     {
@@ -75,7 +75,7 @@ public class AgricultureDeviceController extends BaseController
     /**
      * 新增设备信息
      */
-    @PreAuthorize("@ss.hasPermi('server:device:add')")
+    @PreAuthorize("@ss.hasPermi('agriculture:device:add')")
     @Log(title = "设备信息", businessType = BusinessType.INSERT)
     @PostMapping
     public AjaxResult add(@RequestBody AgricultureDevice agricultureDevice)
@@ -86,7 +86,7 @@ public class AgricultureDeviceController extends BaseController
     /**
      * 修改设备信息
      */
-    @PreAuthorize("@ss.hasPermi('server:device:edit')")
+    @PreAuthorize("@ss.hasPermi('agriculture:device:edit')")
     @Log(title = "设备信息", businessType = BusinessType.UPDATE)
     @PutMapping
     public AjaxResult edit(@RequestBody AgricultureDevice agricultureDevice)
@@ -97,7 +97,7 @@ public class AgricultureDeviceController extends BaseController
     /**
      * 删除设备信息
      */
-    @PreAuthorize("@ss.hasPermi('server:device:remove')")
+    @PreAuthorize("@ss.hasPermi('agriculture:device:remove')")
     @Log(title = "设备信息", businessType = BusinessType.DELETE)
 	@DeleteMapping("/{ids}")
     public AjaxResult remove(@PathVariable String[] ids)

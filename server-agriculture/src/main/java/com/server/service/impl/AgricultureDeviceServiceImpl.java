@@ -8,12 +8,10 @@ import java.util.List;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.server.domain.AgricultureCropBatch;
 import com.server.domain.AgricultureDevice;
+import com.server.domain.AgricultureDeviceType;
 import com.server.domain.AgriculturePasture;
 import com.server.domain.vo.AgricultureDeviceVO;
-import com.server.mapper.AgricultureClassMapper;
-import com.server.mapper.AgricultureCropBatchMapper;
-import com.server.mapper.AgricultureDeviceMapper;
-import com.server.mapper.AgriculturePastureMapper;
+import com.server.mapper.*;
 import com.server.service.AgricultureDeviceService;
 import com.server.utils.DateUtils;
 import org.springframework.beans.BeanUtils;
@@ -35,7 +33,8 @@ public class AgricultureDeviceServiceImpl extends ServiceImpl<AgricultureDeviceM
     private AgriculturePastureMapper agriculturePastureMapper;
     @Autowired
     private AgricultureCropBatchMapper agricultureCropBatchMapper;
-
+    @Autowired
+    private AgricultureDeviceTypeMapper agricultureDeviceTypeMapper;
     /**
      * 查询设备信息
      *
@@ -70,6 +69,11 @@ public class AgricultureDeviceServiceImpl extends ServiceImpl<AgricultureDeviceM
             if (device.getBatchId() != null) {
                 AgricultureCropBatch batch = agricultureCropBatchMapper.selectById(device.getBatchId());
                 vo.setBatchName(batch != null ? batch.getBatchName() : null);
+            }
+            // 查设备类型
+            if (device.getBatchId() != null) {
+                AgricultureDeviceType type = agricultureDeviceTypeMapper.selectById(device.getDeviceTypeId());
+                vo.setDeviceTypeName(type != null ? type.getTypeName() : null);
             }
             voList.add(vo);
         }

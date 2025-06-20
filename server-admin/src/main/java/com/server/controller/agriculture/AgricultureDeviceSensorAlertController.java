@@ -37,7 +37,7 @@ public class AgricultureDeviceSensorAlertController extends BaseController
     /**
      * 查询传感器预警信息列表
      */
-    @PreAuthorize("@ss.hasPermi('server:alert:list')")
+    @PreAuthorize("@ss.hasPermi('agriculture:alert:list')")
     @GetMapping("/list")
     public TableDataInfo list(AgricultureDeviceSensorAlert agricultureDeviceSensorAlert)
     {
@@ -49,7 +49,7 @@ public class AgricultureDeviceSensorAlertController extends BaseController
     /**
      * 导出传感器预警信息列表
      */
-    @PreAuthorize("@ss.hasPermi('server:alert:export')")
+    @PreAuthorize("@ss.hasPermi('agriculture:alert:export')")
     @Log(title = "传感器预警信息", businessType = BusinessType.EXPORT)
     @PostMapping("/export")
     public void export(HttpServletResponse response, AgricultureDeviceSensorAlert agricultureDeviceSensorAlert)
@@ -62,7 +62,7 @@ public class AgricultureDeviceSensorAlertController extends BaseController
     /**
      * 获取传感器预警信息详细信息
      */
-    @PreAuthorize("@ss.hasPermi('server:alert:query')")
+    @PreAuthorize("@ss.hasPermi('agriculture:alert:query')")
     @GetMapping(value = "/{id}")
     public AjaxResult getInfo(@PathVariable("id") Long id)
     {
@@ -72,7 +72,7 @@ public class AgricultureDeviceSensorAlertController extends BaseController
     /**
      * 新增传感器预警信息
      */
-    @PreAuthorize("@ss.hasPermi('server:alert:add')")
+    @PreAuthorize("@ss.hasPermi('agriculture:alert:add')")
     @Log(title = "传感器预警信息", businessType = BusinessType.INSERT)
     @PostMapping
     public AjaxResult add(@RequestBody AgricultureDeviceSensorAlert agricultureDeviceSensorAlert)
@@ -83,7 +83,7 @@ public class AgricultureDeviceSensorAlertController extends BaseController
     /**
      * 修改传感器预警信息
      */
-    @PreAuthorize("@ss.hasPermi('server:alert:edit')")
+    @PreAuthorize("@ss.hasPermi('agriculture:alert:edit')")
     @Log(title = "传感器预警信息", businessType = BusinessType.UPDATE)
     @PutMapping
     public AjaxResult edit(@RequestBody AgricultureDeviceSensorAlert agricultureDeviceSensorAlert)
@@ -94,7 +94,7 @@ public class AgricultureDeviceSensorAlertController extends BaseController
     /**
      * 删除传感器预警信息
      */
-    @PreAuthorize("@ss.hasPermi('server:alert:remove')")
+    @PreAuthorize("@ss.hasPermi('agriculture:alert:remove')")
     @Log(title = "传感器预警信息", businessType = BusinessType.DELETE)
 	@DeleteMapping("/{ids}")
     public AjaxResult remove(@PathVariable Long[] ids)
