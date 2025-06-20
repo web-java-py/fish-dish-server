@@ -166,3 +166,17 @@ ai:
     temperature: ${ollama.temperature}
     timeout: ${ollama.timeout}
 
+# MQTT 配置 (使用RabbitMQ的MQTT插件)
+mqtt:
+  server-uri: ${mqtt.server-uri}
+  client-id: ${mqtt.client-id}
+  username: ${mqtt.username}  # RabbitMQ默认用户名
+  password: ${mqtt.password}  # RabbitMQ默认密码
+  default-topic: ${mqtt.default-topic}
+  completion-timeout: ${mqtt.completion-timeout}
+
+# 串口配置
+serial:
+  port-name: ${serial.port-name}
+  baud-rate: ${serial.baud-rate}
+
