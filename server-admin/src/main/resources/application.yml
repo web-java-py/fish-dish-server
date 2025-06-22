@@ -160,11 +160,16 @@ xss:
 
 # AI服务
 ai:
+  # ollama
   ollama:
     base-url: ${ollama.base-url}
     model-name: ${ollama.model-name}
     temperature: ${ollama.temperature}
     timeout: ${ollama.timeout}
+  # 本地AI
+  local:
+    vl-url: ${local.vl-url}
+    timeout: ${local.timeout}
 
 # MQTT 配置 (使用RabbitMQ的MQTT插件)
 mqtt:
@@ -179,4 +184,5 @@ mqtt:
 serial:
   port-name: ${serial.port-name}
   baud-rate: ${serial.baud-rate}
+
 
