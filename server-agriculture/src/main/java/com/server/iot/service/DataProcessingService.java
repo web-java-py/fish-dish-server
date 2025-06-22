@@ -45,7 +45,7 @@ public class DataProcessingService {
             String dataString = new String(data);
             Map<String, Object> parsedData = parseData(dataString);
             String type = (String) parsedData.get("type");
-
+            mqttGateway.sendToMqtt("测试测试MQTT", "/fish-dish/water");
             if ("water".equals(type)) {
                 AgricultureWaterQualityData waterData = createWaterQualityData(parsedData);
                 waterQualityDataService.save(waterData);
