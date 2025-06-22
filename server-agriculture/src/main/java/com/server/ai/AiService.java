@@ -14,6 +14,7 @@ import dev.langchain4j.model.ollama.OllamaStreamingChatModel;
 import lombok.extern.java.Log;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.http.client.methods.CloseableHttpResponse;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 import reactor.core.publisher.Flux;
@@ -33,6 +34,7 @@ import static dev.langchain4j.data.message.UserMessage.userMessage;
 @Component
 public class AiService {
 
+    @Autowired
     private AiLocalProperties aiLocalProperties;
 
     private OllamaChatModel ollamaChatModel;
@@ -99,10 +101,11 @@ public class AiService {
         paramMap.put("prompt_text", prompt);
         CloseableHttpResponse response = HttpUtils.doPostStream(aiLocalProperties.getVlUrl() + "/chat", paramMap, file);
         return Flux.create(sink -> {
-            try (BufferedReader reader = new BufferedReader(new InputStreamReader(response.getEntity().getContent(), StandardCharsets.UTF_8))) {
+            try (InputStream inputStream = response.getEntity().getContent();
+                 BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8))) {
                 String line;
                 while ((line = reader.readLine()) != null) {
-                    sink.next(line);
+                    if (!line.equals("")) sink.next(line);
                 }
                 sink.complete();
             } catch (Exception e) {
