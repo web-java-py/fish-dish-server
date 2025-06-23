@@ -1,11 +1,112 @@
-11:21:16.651 [main] ERROR o.s.b.SpringApplication - [reportFailure,824] - Application run failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'captchaController': Unsatisfied dependency expressed through field 'configService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sysConfigServiceImpl': Invocation of init method failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to localhost/<unresolved>:6379
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:713)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:693)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:408)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+13:18:55.075 [pool-3-thread-1] ERROR c.s.i.s.DataProcessingService - [processAndStore,95] - 气象数据发布到MQTT失败: Dispatcher has no subscribers for channel 'application.mqttOutboundChannel'.; nested exception is org.springframework.integration.MessageDispatchingException: Dispatcher has no subscribers, failedMessage=GenericMessage [payload={"createBy":"system","createTime":"2025-06-23 13:18:54","updateBy":"system","updateTime":"2025-06-23 13:18:54","remark":null,"id":465,"deviceId":1,"pastureId":"1","batchId":"137","windSpeed":0.0,"windDirection":"南风","temperature":0.0,"humidity":0.0,"lightIntensity":0.0,"rainfall":0.0,"airPressure":0.0,"collectTime":"2025-06-23T13:18:54.7860683"}, headers={replyChannel=nullChannel, id=22f28f6b-5dfd-e3e3-698d-d4e8216b8d03, mqtt_topic=/fish-dish/weather, timestamp=1750655935073}]
+org.springframework.messaging.MessageDeliveryException: Dispatcher has no subscribers for channel 'application.mqttOutboundChannel'.; nested exception is org.springframework.integration.MessageDispatchingException: Dispatcher has no subscribers, failedMessage=GenericMessage [payload={"createBy":"system","createTime":"2025-06-23 13:18:54","updateBy":"system","updateTime":"2025-06-23 13:18:54","remark":null,"id":465,"deviceId":1,"pastureId":"1","batchId":"137","windSpeed":0.0,"windDirection":"南风","temperature":0.0,"humidity":0.0,"lightIntensity":0.0,"rainfall":0.0,"airPressure":0.0,"collectTime":"2025-06-23T13:18:54.7860683"}, headers={replyChannel=nullChannel, id=22f28f6b-5dfd-e3e3-698d-d4e8216b8d03, mqtt_topic=/fish-dish/weather, timestamp=1750655935073}]
+	at org.springframework.integration.channel.AbstractSubscribableChannel.doSend(AbstractSubscribableChannel.java:76)
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:317)
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:272)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:187)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:166)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:47)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.send(AbstractMessageSendingTemplate.java:109)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.convertAndSend(AbstractMessageSendingTemplate.java:151)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.convertAndSend(AbstractMessageSendingTemplate.java:143)
+	at org.springframework.integration.gateway.MessagingGatewaySupport.send(MessagingGatewaySupport.java:429)
+	at org.springframework.integration.gateway.GatewayProxyFactoryBean.sendOrSendAndReceive(GatewayProxyFactoryBean.java:656)
+	at org.springframework.integration.gateway.GatewayProxyFactoryBean.invokeGatewayMethod(GatewayProxyFactoryBean.java:588)
+	at org.springframework.integration.gateway.GatewayProxyFactoryBean.doInvoke(GatewayProxyFactoryBean.java:555)
+	at org.springframework.integration.gateway.GatewayProxyFactoryBean.invoke(GatewayProxyFactoryBean.java:544)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+	at jdk.proxy2/jdk.proxy2.$Proxy258.sendToMqtt(Unknown Source)
+	at com.server.iot.service.DataProcessingService.processAndStore(DataProcessingService.java:92)
+	at com.server.iot.service.SensorCommunicationService.sensorRequest(SensorCommunicationService.java:169)
+	at com.server.iot.service.SensorCommunicationService.lambda$0(SensorCommunicationService.java:108)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.springframework.integration.MessageDispatchingException: Dispatcher has no subscribers
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.doDispatch(UnicastingDispatcher.java:139)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.dispatch(UnicastingDispatcher.java:106)
+	at org.springframework.integration.channel.AbstractSubscribableChannel.doSend(AbstractSubscribableChannel.java:72)
+	... 24 common frames omitted
+13:18:55.193 [pool-3-thread-3] ERROR c.s.i.s.DataProcessingService - [processAndStore,95] - 气象数据发布到MQTT失败: Dispatcher has no subscribers for channel 'application.mqttOutboundChannel'.; nested exception is org.springframework.integration.MessageDispatchingException: Dispatcher has no subscribers, failedMessage=GenericMessage [payload={"createBy":"system","createTime":"2025-06-23 13:18:55","updateBy":"system","updateTime":"2025-06-23 13:18:55","remark":null,"id":466,"deviceId":7,"pastureId":"1","batchId":"137","windSpeed":0.0,"windDirection":"","temperature":27.2,"humidity":48.9,"lightIntensity":335.0,"rainfall":0.0,"airPressure":0.0,"collectTime":"2025-06-23T13:18:55.1792908"}, headers={replyChannel=nullChannel, id=0cbb2bec-fe64-4dba-d844-16b84db9c342, mqtt_topic=/fish-dish/weather, timestamp=1750655935193}]
+org.springframework.messaging.MessageDeliveryException: Dispatcher has no subscribers for channel 'application.mqttOutboundChannel'.; nested exception is org.springframework.integration.MessageDispatchingException: Dispatcher has no subscribers, failedMessage=GenericMessage [payload={"createBy":"system","createTime":"2025-06-23 13:18:55","updateBy":"system","updateTime":"2025-06-23 13:18:55","remark":null,"id":466,"deviceId":7,"pastureId":"1","batchId":"137","windSpeed":0.0,"windDirection":"","temperature":27.2,"humidity":48.9,"lightIntensity":335.0,"rainfall":0.0,"airPressure":0.0,"collectTime":"2025-06-23T13:18:55.1792908"}, headers={replyChannel=nullChannel, id=0cbb2bec-fe64-4dba-d844-16b84db9c342, mqtt_topic=/fish-dish/weather, timestamp=1750655935193}]
+	at org.springframework.integration.channel.AbstractSubscribableChannel.doSend(AbstractSubscribableChannel.java:76)
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:317)
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:272)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:187)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:166)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:47)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.send(AbstractMessageSendingTemplate.java:109)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.convertAndSend(AbstractMessageSendingTemplate.java:151)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.convertAndSend(AbstractMessageSendingTemplate.java:143)
+	at org.springframework.integration.gateway.MessagingGatewaySupport.send(MessagingGatewaySupport.java:429)
+	at org.springframework.integration.gateway.GatewayProxyFactoryBean.sendOrSendAndReceive(GatewayProxyFactoryBean.java:656)
+	at org.springframework.integration.gateway.GatewayProxyFactoryBean.invokeGatewayMethod(GatewayProxyFactoryBean.java:588)
+	at org.springframework.integration.gateway.GatewayProxyFactoryBean.doInvoke(GatewayProxyFactoryBean.java:555)
+	at org.springframework.integration.gateway.GatewayProxyFactoryBean.invoke(GatewayProxyFactoryBean.java:544)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+	at jdk.proxy2/jdk.proxy2.$Proxy258.sendToMqtt(Unknown Source)
+	at com.server.iot.service.DataProcessingService.processAndStore(DataProcessingService.java:92)
+	at com.server.iot.service.SensorCommunicationService.sensorRequest(SensorCommunicationService.java:169)
+	at com.server.iot.service.SensorCommunicationService.lambda$0(SensorCommunicationService.java:108)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.springframework.integration.MessageDispatchingException: Dispatcher has no subscribers
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.doDispatch(UnicastingDispatcher.java:139)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.dispatch(UnicastingDispatcher.java:106)
+	at org.springframework.integration.channel.AbstractSubscribableChannel.doSend(AbstractSubscribableChannel.java:72)
+	... 24 common frames omitted
+13:18:55.312 [pool-3-thread-2] ERROR c.s.i.s.DataProcessingService - [processAndStore,95] - 气象数据发布到MQTT失败: Dispatcher has no subscribers for channel 'application.mqttOutboundChannel'.; nested exception is org.springframework.integration.MessageDispatchingException: Dispatcher has no subscribers, failedMessage=GenericMessage [payload={"createBy":"system","createTime":"2025-06-23 13:18:55","updateBy":"system","updateTime":"2025-06-23 13:18:55","remark":null,"id":467,"deviceId":6,"pastureId":"1","batchId":"137","windSpeed":0.0,"windDirection":"","temperature":0.0,"humidity":0.0,"lightIntensity":0.0,"rainfall":0.0,"airPressure":0.0,"collectTime":"2025-06-23T13:18:55.2988858"}, headers={replyChannel=nullChannel, id=2226ca45-4bef-acd0-5675-19e3c9cfbb4f, mqtt_topic=/fish-dish/weather, timestamp=1750655935312}]
+org.springframework.messaging.MessageDeliveryException: Dispatcher has no subscribers for channel 'application.mqttOutboundChannel'.; nested exception is org.springframework.integration.MessageDispatchingException: Dispatcher has no subscribers, failedMessage=GenericMessage [payload={"createBy":"system","createTime":"2025-06-23 13:18:55","updateBy":"system","updateTime":"2025-06-23 13:18:55","remark":null,"id":467,"deviceId":6,"pastureId":"1","batchId":"137","windSpeed":0.0,"windDirection":"","temperature":0.0,"humidity":0.0,"lightIntensity":0.0,"rainfall":0.0,"airPressure":0.0,"collectTime":"2025-06-23T13:18:55.2988858"}, headers={replyChannel=nullChannel, id=2226ca45-4bef-acd0-5675-19e3c9cfbb4f, mqtt_topic=/fish-dish/weather, timestamp=1750655935312}]
+	at org.springframework.integration.channel.AbstractSubscribableChannel.doSend(AbstractSubscribableChannel.java:76)
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:317)
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:272)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:187)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:166)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:47)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.send(AbstractMessageSendingTemplate.java:109)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.convertAndSend(AbstractMessageSendingTemplate.java:151)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.convertAndSend(AbstractMessageSendingTemplate.java:143)
+	at org.springframework.integration.gateway.MessagingGatewaySupport.send(MessagingGatewaySupport.java:429)
+	at org.springframework.integration.gateway.GatewayProxyFactoryBean.sendOrSendAndReceive(GatewayProxyFactoryBean.java:656)
+	at org.springframework.integration.gateway.GatewayProxyFactoryBean.invokeGatewayMethod(GatewayProxyFactoryBean.java:588)
+	at org.springframework.integration.gateway.GatewayProxyFactoryBean.doInvoke(GatewayProxyFactoryBean.java:555)
+	at org.springframework.integration.gateway.GatewayProxyFactoryBean.invoke(GatewayProxyFactoryBean.java:544)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+	at jdk.proxy2/jdk.proxy2.$Proxy258.sendToMqtt(Unknown Source)
+	at com.server.iot.service.DataProcessingService.processAndStore(DataProcessingService.java:92)
+	at com.server.iot.service.SensorCommunicationService.sensorRequest(SensorCommunicationService.java:169)
+	at com.server.iot.service.SensorCommunicationService.lambda$0(SensorCommunicationService.java:108)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.springframework.integration.MessageDispatchingException: Dispatcher has no subscribers
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.doDispatch(UnicastingDispatcher.java:139)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.dispatch(UnicastingDispatcher.java:106)
+	at org.springframework.integration.channel.AbstractSubscribableChannel.doSend(AbstractSubscribableChannel.java:72)
+	... 24 common frames omitted
+13:37:01.445 [main] ERROR o.s.b.SpringApplication - [reportFailure,824] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sensorCommunicationController' defined in file [D:\ZLXN\fish-dish-server\server-agriculture\target\classes\com\server\iot\controller\SensorCommunicationController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.server.iot.controller.SensorCommunicationController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.server.iot.service.SerialPortService cannot be resolved
+	SerialPortService cannot be resolved to a type
+	SerialPortService cannot be resolved to a type
+	SerialPortService cannot be resolved to a type
+	SerialPortService cannot be resolved to a type
+	SerialPortService cannot be resolved to a type
+	SerialPortService cannot be resolved to a type
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
@@ -21,81 +122,33 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
 	at com.server.ServerApplication.main(ServerApplication.java:15)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sysConfigServiceImpl': Invocation of init method failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to localhost/<unresolved>:6379
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:160)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:209)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:710)
-	... 20 common frames omitted
-Caused by: org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to localhost/<unresolved>:6379
-	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1689)
-	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1597)
-	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1383)
-	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1366)
-	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:1093)
-	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:421)
-	at org.springframework.data.redis.core.RedisConnectionUtils.fetchConnection(RedisConnectionUtils.java:193)
-	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:144)
-	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:105)
-	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:211)
-	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:191)
-	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:97)
-	at org.springframework.data.redis.core.DefaultValueOperations.set(DefaultValueOperations.java:305)
-	at com.server.core.redis.RedisCache.setCacheObject(RedisCache.java:33)
-	at com.server.service.impl.SysConfigServiceImpl.loadingConfigCache(SysConfigServiceImpl.java:181)
-	at com.server.service.impl.SysConfigServiceImpl.init(SysConfigServiceImpl.java:41)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157)
-	... 32 common frames omitted
-Caused by: org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to localhost/<unresolved>:6379
-	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.getConnection(LettucePoolingConnectionProvider.java:109)
-	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1595)
-	... 53 common frames omitted
-Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to localhost/<unresolved>:6379
-	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
-	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
-	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:330)
-	at io.lettuce.core.RedisClient.connect(RedisClient.java:216)
-	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115)
-	at java.base/java.util.Optional.orElseGet(Optional.java:364)
-	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115)
-	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.lambda$null$0(LettucePoolingConnectionProvider.java:97)
-	at io.lettuce.core.support.ConnectionPoolSupport$RedisPooledObjectFactory.create(ConnectionPoolSupport.java:211)
-	at io.lettuce.core.support.ConnectionPoolSupport$RedisPooledObjectFactory.create(ConnectionPoolSupport.java:201)
-	at org.apache.commons.pool2.BasePooledObjectFactory.makeObject(BasePooledObjectFactory.java:70)
-	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:571)
-	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:298)
-	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:223)
-	at io.lettuce.core.support.ConnectionPoolSupport$1.borrowObject(ConnectionPoolSupport.java:122)
-	at io.lettuce.core.support.ConnectionPoolSupport$1.borrowObject(ConnectionPoolSupport.java:117)
-	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.getConnection(LettucePoolingConnectionProvider.java:103)
-	... 54 common frames omitted
-Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: getsockopt: localhost/127.0.0.1:6379
-Caused by: java.net.ConnectException: Connection refused: getsockopt
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
-	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
-	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
-	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:710)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.server.iot.controller.SensorCommunicationController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.server.iot.service.SerialPortService cannot be resolved
+	SerialPortService cannot be resolved to a type
+	SerialPortService cannot be resolved to a type
+	SerialPortService cannot be resolved to a type
+	SerialPortService cannot be resolved to a type
+	SerialPortService cannot be resolved to a type
+	SerialPortService cannot be resolved to a type
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:226)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326)
+	... 17 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The import com.server.iot.service.SerialPortService cannot be resolved
+	SerialPortService cannot be resolved to a type
+	SerialPortService cannot be resolved to a type
+	SerialPortService cannot be resolved to a type
+	SerialPortService cannot be resolved to a type
+	SerialPortService cannot be resolved to a type
+	SerialPortService cannot be resolved to a type
+
+	at com.server.iot.controller.SensorCommunicationController.<init>(SensorCommunicationController.java:4)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:213)
+	... 19 common frames omitted

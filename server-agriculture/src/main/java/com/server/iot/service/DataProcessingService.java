@@ -35,12 +35,6 @@ public class DataProcessingService {
 
 
     public void processAndStore(byte[] data) {
-        // TODO: 1. 解析数据
-        // 你需要根据你的设备的数据协议来解析这段byte[]数据。
-        // 这里我假设一个简单的JSON格式，例如:
-        // { "type": "water", "deviceId": 1, "ph": 7.5, ... } or
-        // { "type": "weather", "deviceId": 2, "temperature": 25.5, ... }
-        // 你需要替换成你真正的解析逻辑。
         try {
             String dataString = new String(data);
             Map<String, Object> parsedData = parseData(dataString);
@@ -49,46 +43,90 @@ public class DataProcessingService {
             if ("water".equals(type)) {
                 AgricultureWaterQualityData waterData = createWaterQualityData(parsedData);
                 waterQualityDataService.save(waterData);
-                log.info("Saved water quality data: {}", waterData);
+                log.info("成功保存水质数据: {}", waterData);
                 // 发布到MQTT
                  mqttGateway.sendToMqtt(objectMapper.writeValueAsString(waterData), "/fish-dish/water");
 
             } else if ("weather".equals(type)) {
                 AgricultureWeatherData weatherData = createWeatherData(parsedData);
                 weatherDataService.save(weatherData);
-                log.info("Saved weather data: {}", weatherData);
+                log.info("成功保存气象数据: {}", weatherData);
                 // 发布到MQTT
                  mqttGateway.sendToMqtt(objectMapper.writeValueAsString(weatherData), "/fish-dish/weather");
             } else {
-                log.warn("Unknown data type received: {}", type);
+                log.warn("收到未知数据类型: {}", type);
             }
 
         } catch (Exception e) {
-            log.error("Failed to process and store data", e);
+            log.error("处理并存储数据失败", e);
+        }
+    }
+
+    /**
+     * 处理Map类型的数据（从传感器通信服务调用）
+     * @param parsedData 已解析的数据Map
+     */
+    public void processAndStore(Map<String, Object> parsedData) {
+        try {
+            String type = (String) parsedData.get("type");
+            
+            if ("water".equals(type)) {
+                AgricultureWaterQualityData waterData = createWaterQualityData(parsedData);
+                waterQualityDataService.save(waterData);
+                log.info("成功保存水质数据: {}", waterData);
+                // 发布到MQTT
+                try {
+                    mqttGateway.sendToMqtt(objectMapper.writeValueAsString(waterData), "/fish-dish/water");
+                    log.info("水质数据成功发布到MQTT");
+                } catch (Exception e) {
+                    log.error("水质数据发布到MQTT失败: {}", e.getMessage(), e);
+                }
+
+            } else if ("weather".equals(type)) {
+                AgricultureWeatherData weatherData = createWeatherData(parsedData);
+                weatherDataService.save(weatherData);
+                log.info("成功保存气象数据: {}", weatherData);
+                // 发布到MQTT
+                try {
+                    log.info("气象数据发布到MQTT");
+                    mqttGateway.sendToMqtt(objectMapper.writeValueAsString(weatherData), "/fish-dish/weather");
+                    log.info("气象数据成功发布到MQTT");
+                } catch (Exception e) {
+                    log.error("气象数据发布到MQTT失败: {}", e.getMessage(), e);
+                }
+            } else {
+                log.warn("收到未知数据类型: {}", type);
+            }
+
+        } catch (Exception e) {
+            log.error("处理并存储已解析的数据失败", e);
         }
     }
 
     /**
      * 解析传入的字符串数据。
-     * !!! 这个方法是一个示例，你需要根据你的实际数据格式来实现它 !!!
      * @param dataString 从串口读取的原始数据字符串
      * @return 一个包含解析后数据的Map
      */
     private Map<String, Object> parseData(String dataString) throws Exception {
-        // 假设是JSON格式
         return objectMapper.readValue(dataString, HashMap.class);
     }
 
     private AgricultureWaterQualityData createWaterQualityData(Map<String, Object> data) {
         AgricultureWaterQualityData waterData = new AgricultureWaterQualityData();
-        // 你需要从map中提取数据并设置到对象中
-        // 注意：这里的key需要和你解析出的map的key一致
         waterData.setDeviceId(Long.valueOf(Objects.toString(data.get("deviceId"))));
-        waterData.setPhValue(new java.math.BigDecimal(Objects.toString(data.get("ph_value"))).doubleValue());
-        waterData.setDissolvedOxygen(new java.math.BigDecimal(Objects.toString(data.get("dissolved_oxygen"))).doubleValue());
-        waterData.setAmmoniaNitrogen(new java.math.BigDecimal(Objects.toString(data.get("ammonia_nitrogen"))).doubleValue());
-        waterData.setWaterTemperature(new java.math.BigDecimal(Objects.toString(data.get("water_temperature"))).doubleValue());
-        waterData.setConductivity(new java.math.BigDecimal(Objects.toString(data.get("conductivity"))).doubleValue());
+        
+        // 设置 大棚id 和 分区id
+        String pastureId = (String) data.get("pastureId");
+        String batchId = (String) data.get("batchId");
+        waterData.setPastureId(pastureId);
+        waterData.setBatchId(batchId);
+        
+        waterData.setPhValue(getDoubleValue(data.get("ph_value"), 0.0));
+        waterData.setDissolvedOxygen(getDoubleValue(data.get("dissolved_oxygen"), 0.0));
+        waterData.setAmmoniaNitrogen(getDoubleValue(data.get("ammonia_nitrogen"), 0.0));
+        waterData.setWaterTemperature(getDoubleValue(data.get("water_temperature"), 0.0));
+        waterData.setConductivity(getDoubleValue(data.get("conductivity"), 0.0));
         waterData.setCollectTime(LocalDateTime.now());
         return waterData;
     }
@@ -96,14 +134,49 @@ public class DataProcessingService {
     private AgricultureWeatherData createWeatherData(Map<String, Object> data) {
         AgricultureWeatherData weatherData = new AgricultureWeatherData();
         weatherData.setDeviceId(Long.valueOf(Objects.toString(data.get("deviceId"))));
-        weatherData.setTemperature(new java.math.BigDecimal(Objects.toString(data.get("temperature"))).doubleValue());
-        weatherData.setHumidity(new java.math.BigDecimal(Objects.toString(data.get("humidity"))).doubleValue());
-        weatherData.setWindSpeed(new java.math.BigDecimal(Objects.toString(data.get("wind_speed"))).doubleValue());
-        weatherData.setWindDirection((String) data.get("wind_direction"));
-        weatherData.setLightIntensity(new java.math.BigDecimal(Objects.toString(data.get("light_intensity"))).doubleValue());
-        weatherData.setRainfall(new java.math.BigDecimal(Objects.toString(data.get("rainfall"))).doubleValue());
-        weatherData.setAirPressure(new java.math.BigDecimal(Objects.toString(data.get("air_pressure"))).doubleValue());
+        
+        // 设置 pastureId 和 batchId
+        String pastureId = (String) data.get("pastureId");
+        String batchId = (String) data.get("batchId");
+        weatherData.setPastureId(pastureId);
+        weatherData.setBatchId(batchId);
+        
+        // 安全地设置数值字段，如果为null则使用默认值0.0
+        weatherData.setTemperature(getDoubleValue(data.get("temperature"), 0.0));
+        weatherData.setHumidity(getDoubleValue(data.get("humidity"), 0.0));
+        weatherData.setWindSpeed(getDoubleValue(data.get("wind_speed"), 0.0));
+        weatherData.setLightIntensity(getDoubleValue(data.get("light_intensity"), 0.0));
+        weatherData.setRainfall(getDoubleValue(data.get("rainfall"), 0.0));
+        weatherData.setAirPressure(getDoubleValue(data.get("air_pressure"), 0.0));
+        
+        // 风向是字符串类型，直接设置
+        String windDirection = (String) data.get("wind_direction");
+        weatherData.setWindDirection(windDirection != null ? windDirection : "");
+        
         weatherData.setCollectTime(LocalDateTime.now());
         return weatherData;
+    }
+    
+    /**
+     * 安全地获取Double值，如果为null或无法转换则返回默认值
+     */
+    private Double getDoubleValue(Object value, Double defaultValue) {
+        if (value == null) {
+            return defaultValue;
+        }
+        try {
+            if (value instanceof Number) {
+                return ((Number) value).doubleValue();
+            } else {
+                String strValue = Objects.toString(value);
+                if ("null".equals(strValue) || strValue.trim().isEmpty()) {
+                    return defaultValue;
+                }
+                return new java.math.BigDecimal(strValue).doubleValue();
+            }
+        } catch (Exception e) {
+            log.warn("无法转换值 {} 为Double类型，使用默认值 {}", value, defaultValue);
+            return defaultValue;
+        }
     }
 } 
