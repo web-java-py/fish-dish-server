@@ -152,3 +152,558 @@ Caused by: java.lang.Error: Unresolved compilation problems:
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
 	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:213)
 	... 19 common frames omitted
+14:14:46.379 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - [report,40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field redisTemplate in com.server.service.impl.AgricultureDeviceStatusServiceImpl required a bean of type 'org.springframework.data.redis.core.RedisTemplate' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.data.redis.core.RedisTemplate' in your configuration.
+
+14:15:08.840 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - [report,40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field redisTemplate in com.server.service.impl.AgricultureDeviceStatusServiceImpl required a bean of type 'org.springframework.data.redis.core.RedisTemplate' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.data.redis.core.RedisTemplate' in your configuration.
+
+14:16:32.535 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - [report,40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field redisTemplate in com.server.service.impl.AgricultureDeviceStatusServiceImpl required a bean of type 'org.springframework.data.redis.core.RedisTemplate' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.data.redis.core.RedisTemplate' in your configuration.
+
+14:17:03.145 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - [report,40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field redisTemplate in com.server.service.impl.AgricultureDeviceStatusServiceImpl required a bean of type 'org.springframework.data.redis.core.RedisTemplate' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.data.redis.core.RedisTemplate' in your configuration.
+
+14:19:23.125 [pool-2-thread-1] ERROR c.s.i.s.SensorCommunicationService - [sensorRequest,237] - 轮询传感器 风向传感器 (ID: 1) 时发生未知错误: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error updating database.  Cause: com.server.exception.ServiceException: 获取用户账户异常
+### The error may exist in com/server/mapper/AgricultureDeviceMapper.java (best guess)
+### The error may involve com.server.mapper.AgricultureDeviceMapper.updateById
+### The error occurred while executing an update
+### Cause: com.server.exception.ServiceException: 获取用户账户异常
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error updating database.  Cause: com.server.exception.ServiceException: 获取用户账户异常
+### The error may exist in com/server/mapper/AgricultureDeviceMapper.java (best guess)
+### The error may involve com.server.mapper.AgricultureDeviceMapper.updateById
+### The error occurred while executing an update
+### Cause: com.server.exception.ServiceException: 获取用户账户异常
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:97)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:439)
+	at jdk.proxy2/jdk.proxy2.$Proxy133.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:288)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:65)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy167.updateById(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.IService.updateById(IService.java:148)
+	at com.server.service.impl.AgricultureDeviceServiceImpl.updateAgricultureDevice(AgricultureDeviceServiceImpl.java:114)
+	at com.server.service.impl.AgricultureDeviceServiceImpl$$FastClassBySpringCGLIB$$8b27425.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386)
+	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703)
+	at com.server.service.impl.AgricultureDeviceServiceImpl$$EnhancerBySpringCGLIB$$479558be.updateAgricultureDevice(<generated>)
+	at com.server.service.impl.AgricultureDeviceStatusServiceImpl.updateDeviceOnline(AgricultureDeviceStatusServiceImpl.java:52)
+	at com.server.iot.service.SensorCommunicationService.sensorRequest(SensorCommunicationService.java:204)
+	at com.server.iot.service.SensorCommunicationService.lambda$startSensorTask$0(SensorCommunicationService.java:147)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error updating database.  Cause: com.server.exception.ServiceException: 获取用户账户异常
+### The error may exist in com/server/mapper/AgricultureDeviceMapper.java (best guess)
+### The error may involve com.server.mapper.AgricultureDeviceMapper.updateById
+### The error occurred while executing an update
+### Cause: com.server.exception.ServiceException: 获取用户账户异常
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:199)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	... 22 common frames omitted
+Caused by: com.server.exception.ServiceException: 获取用户账户异常
+	at com.server.utils.SecurityUtils.getUsername(SecurityUtils.java:66)
+	at com.server.handler.MyMetaObjectHandler.updateFill(MyMetaObjectHandler.java:46)
+	at com.baomidou.mybatisplus.core.MybatisParameterHandler.lambda$updateFill$1(MybatisParameterHandler.java:154)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at com.baomidou.mybatisplus.core.MybatisParameterHandler.updateFill(MybatisParameterHandler.java:152)
+	at com.baomidou.mybatisplus.core.MybatisParameterHandler.process(MybatisParameterHandler.java:115)
+	at com.baomidou.mybatisplus.core.MybatisParameterHandler.processParameter(MybatisParameterHandler.java:81)
+	at com.baomidou.mybatisplus.core.MybatisParameterHandler.<init>(MybatisParameterHandler.java:64)
+	at com.baomidou.mybatisplus.core.MybatisXMLLanguageDriver.createParameterHandler(MybatisXMLLanguageDriver.java:45)
+	at org.apache.ibatis.session.Configuration.newParameterHandler(Configuration.java:700)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.<init>(BaseStatementHandler.java:70)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.<init>(PreparedStatementHandler.java:42)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.<init>(RoutingStatementHandler.java:47)
+	at org.apache.ibatis.session.Configuration.newStatementHandler(Configuration.java:714)
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.doUpdate(MybatisSimpleExecutor.java:54)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.update(MybatisCachingExecutor.java:85)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at jdk.proxy2/jdk.proxy2.$Proxy299.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	... 27 common frames omitted
+14:19:23.328 [pool-2-thread-3] ERROR c.s.i.s.SensorCommunicationService - [sensorRequest,237] - 轮询传感器 百叶箱多气象传感器 (ID: 7) 时发生未知错误: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error updating database.  Cause: com.server.exception.ServiceException: 获取用户账户异常
+### The error may exist in com/server/mapper/AgricultureDeviceMapper.java (best guess)
+### The error may involve com.server.mapper.AgricultureDeviceMapper.updateById
+### The error occurred while executing an update
+### Cause: com.server.exception.ServiceException: 获取用户账户异常
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error updating database.  Cause: com.server.exception.ServiceException: 获取用户账户异常
+### The error may exist in com/server/mapper/AgricultureDeviceMapper.java (best guess)
+### The error may involve com.server.mapper.AgricultureDeviceMapper.updateById
+### The error occurred while executing an update
+### Cause: com.server.exception.ServiceException: 获取用户账户异常
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:97)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:439)
+	at jdk.proxy2/jdk.proxy2.$Proxy133.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:288)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:65)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy167.updateById(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.IService.updateById(IService.java:148)
+	at com.server.service.impl.AgricultureDeviceServiceImpl.updateAgricultureDevice(AgricultureDeviceServiceImpl.java:114)
+	at com.server.service.impl.AgricultureDeviceServiceImpl$$FastClassBySpringCGLIB$$8b27425.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386)
+	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703)
+	at com.server.service.impl.AgricultureDeviceServiceImpl$$EnhancerBySpringCGLIB$$479558be.updateAgricultureDevice(<generated>)
+	at com.server.service.impl.AgricultureDeviceStatusServiceImpl.updateDeviceOnline(AgricultureDeviceStatusServiceImpl.java:52)
+	at com.server.iot.service.SensorCommunicationService.sensorRequest(SensorCommunicationService.java:204)
+	at com.server.iot.service.SensorCommunicationService.lambda$startSensorTask$0(SensorCommunicationService.java:147)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error updating database.  Cause: com.server.exception.ServiceException: 获取用户账户异常
+### The error may exist in com/server/mapper/AgricultureDeviceMapper.java (best guess)
+### The error may involve com.server.mapper.AgricultureDeviceMapper.updateById
+### The error occurred while executing an update
+### Cause: com.server.exception.ServiceException: 获取用户账户异常
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:199)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	... 22 common frames omitted
+Caused by: com.server.exception.ServiceException: 获取用户账户异常
+	at com.server.utils.SecurityUtils.getUsername(SecurityUtils.java:66)
+	at com.server.handler.MyMetaObjectHandler.updateFill(MyMetaObjectHandler.java:46)
+	at com.baomidou.mybatisplus.core.MybatisParameterHandler.lambda$updateFill$1(MybatisParameterHandler.java:154)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at com.baomidou.mybatisplus.core.MybatisParameterHandler.updateFill(MybatisParameterHandler.java:152)
+	at com.baomidou.mybatisplus.core.MybatisParameterHandler.process(MybatisParameterHandler.java:115)
+	at com.baomidou.mybatisplus.core.MybatisParameterHandler.processParameter(MybatisParameterHandler.java:81)
+	at com.baomidou.mybatisplus.core.MybatisParameterHandler.<init>(MybatisParameterHandler.java:64)
+	at com.baomidou.mybatisplus.core.MybatisXMLLanguageDriver.createParameterHandler(MybatisXMLLanguageDriver.java:45)
+	at org.apache.ibatis.session.Configuration.newParameterHandler(Configuration.java:700)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.<init>(BaseStatementHandler.java:70)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.<init>(PreparedStatementHandler.java:42)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.<init>(RoutingStatementHandler.java:47)
+	at org.apache.ibatis.session.Configuration.newStatementHandler(Configuration.java:714)
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.doUpdate(MybatisSimpleExecutor.java:54)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.update(MybatisCachingExecutor.java:85)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at jdk.proxy2/jdk.proxy2.$Proxy299.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	... 27 common frames omitted
+14:19:23.532 [pool-2-thread-2] ERROR c.s.i.s.SensorCommunicationService - [sensorRequest,237] - 轮询传感器 风速传感器 (ID: 6) 时发生未知错误: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error updating database.  Cause: com.server.exception.ServiceException: 获取用户账户异常
+### The error may exist in com/server/mapper/AgricultureDeviceMapper.java (best guess)
+### The error may involve com.server.mapper.AgricultureDeviceMapper.updateById
+### The error occurred while executing an update
+### Cause: com.server.exception.ServiceException: 获取用户账户异常
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error updating database.  Cause: com.server.exception.ServiceException: 获取用户账户异常
+### The error may exist in com/server/mapper/AgricultureDeviceMapper.java (best guess)
+### The error may involve com.server.mapper.AgricultureDeviceMapper.updateById
+### The error occurred while executing an update
+### Cause: com.server.exception.ServiceException: 获取用户账户异常
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:97)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:439)
+	at jdk.proxy2/jdk.proxy2.$Proxy133.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:288)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:65)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy167.updateById(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.IService.updateById(IService.java:148)
+	at com.server.service.impl.AgricultureDeviceServiceImpl.updateAgricultureDevice(AgricultureDeviceServiceImpl.java:114)
+	at com.server.service.impl.AgricultureDeviceServiceImpl$$FastClassBySpringCGLIB$$8b27425.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386)
+	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703)
+	at com.server.service.impl.AgricultureDeviceServiceImpl$$EnhancerBySpringCGLIB$$479558be.updateAgricultureDevice(<generated>)
+	at com.server.service.impl.AgricultureDeviceStatusServiceImpl.updateDeviceOnline(AgricultureDeviceStatusServiceImpl.java:52)
+	at com.server.iot.service.SensorCommunicationService.sensorRequest(SensorCommunicationService.java:204)
+	at com.server.iot.service.SensorCommunicationService.lambda$startSensorTask$0(SensorCommunicationService.java:147)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error updating database.  Cause: com.server.exception.ServiceException: 获取用户账户异常
+### The error may exist in com/server/mapper/AgricultureDeviceMapper.java (best guess)
+### The error may involve com.server.mapper.AgricultureDeviceMapper.updateById
+### The error occurred while executing an update
+### Cause: com.server.exception.ServiceException: 获取用户账户异常
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:199)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	... 22 common frames omitted
+Caused by: com.server.exception.ServiceException: 获取用户账户异常
+	at com.server.utils.SecurityUtils.getUsername(SecurityUtils.java:66)
+	at com.server.handler.MyMetaObjectHandler.updateFill(MyMetaObjectHandler.java:46)
+	at com.baomidou.mybatisplus.core.MybatisParameterHandler.lambda$updateFill$1(MybatisParameterHandler.java:154)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at com.baomidou.mybatisplus.core.MybatisParameterHandler.updateFill(MybatisParameterHandler.java:152)
+	at com.baomidou.mybatisplus.core.MybatisParameterHandler.process(MybatisParameterHandler.java:115)
+	at com.baomidou.mybatisplus.core.MybatisParameterHandler.processParameter(MybatisParameterHandler.java:81)
+	at com.baomidou.mybatisplus.core.MybatisParameterHandler.<init>(MybatisParameterHandler.java:64)
+	at com.baomidou.mybatisplus.core.MybatisXMLLanguageDriver.createParameterHandler(MybatisXMLLanguageDriver.java:45)
+	at org.apache.ibatis.session.Configuration.newParameterHandler(Configuration.java:700)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.<init>(BaseStatementHandler.java:70)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.<init>(PreparedStatementHandler.java:42)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.<init>(RoutingStatementHandler.java:47)
+	at org.apache.ibatis.session.Configuration.newStatementHandler(Configuration.java:714)
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.doUpdate(MybatisSimpleExecutor.java:54)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.update(MybatisCachingExecutor.java:85)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at jdk.proxy2/jdk.proxy2.$Proxy299.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	... 27 common frames omitted
+16:25:28.887 [main] ERROR c.s.i.s.SerialPortService - [connect,48] - 打开串口失败: COM3。请检查串口名称和权限。
+16:25:30.666 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:25:30.867 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:25:30.867 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:25:31.068 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:25:31.068 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:25:31.268 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:25:35.869 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:25:36.070 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:25:36.070 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:25:36.271 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:25:36.271 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:25:36.472 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:25:41.071 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:25:41.272 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:25:41.272 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:25:41.473 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:25:41.473 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:25:41.673 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:25:46.273 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:25:46.473 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:25:46.473 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:25:46.674 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:25:46.674 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:25:46.874 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:25:51.474 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:25:51.675 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:25:51.675 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:25:51.877 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:25:51.877 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:25:52.078 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:25:56.676 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:25:56.878 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:25:56.879 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:25:57.079 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:25:57.079 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:25:57.280 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:26:01.878 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:26:02.079 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:26:02.080 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:26:02.281 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:26:02.281 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:26:02.481 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:26:07.080 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:26:07.280 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:26:07.281 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:26:07.482 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:26:07.482 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:26:07.683 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:26:12.281 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:26:12.481 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:26:12.482 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:26:12.683 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:26:12.683 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:26:12.884 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:26:17.482 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:26:17.683 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:26:17.684 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:26:17.885 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:26:17.885 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:26:18.087 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:26:22.684 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:26:22.898 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:26:22.898 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:26:23.102 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:26:23.102 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:26:23.303 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:26:27.901 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:26:28.104 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:26:28.104 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:26:28.306 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:26:28.306 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:26:28.508 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:26:33.109 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:26:33.310 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:26:33.313 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:26:33.513 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:26:33.515 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:26:33.717 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:26:38.311 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:26:38.511 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:26:38.514 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:26:38.714 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:26:38.719 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:26:38.920 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:26:43.512 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:26:43.713 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:26:43.715 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:26:43.916 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:26:43.921 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:26:44.123 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:29:11.594 [main] ERROR c.s.i.s.SerialPortService - [connect,48] - 打开串口失败: COM3。请检查串口名称和权限。
+16:29:13.590 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:29:13.792 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:29:13.792 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:29:13.993 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:29:13.993 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:29:14.193 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:29:18.793 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:29:18.994 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:29:18.994 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:29:19.195 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:29:19.195 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:29:19.396 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:29:23.995 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:29:24.195 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:29:24.196 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:29:24.396 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:29:24.396 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:29:24.598 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:29:29.196 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:29:29.397 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:29:29.397 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:29:29.598 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:29:29.599 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:29:29.800 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:29:34.398 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:29:34.599 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:29:34.599 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:29:34.801 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:29:34.801 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:29:35.003 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:30:48.933 [main] ERROR c.s.i.s.SerialPortService - [connect,48] - 打开串口失败: COM3。请检查串口名称和权限。
+16:30:50.954 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:30:51.155 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:30:51.155 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:30:51.356 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:30:51.356 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:30:51.557 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:30:56.156 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:30:56.357 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:30:56.357 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:30:56.558 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:30:56.558 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:30:56.758 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:31:01.360 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:31:01.561 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:31:01.561 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:31:01.763 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:31:01.763 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:31:01.965 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:31:06.562 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:31:06.763 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:31:06.764 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:31:06.965 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:31:06.965 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:31:07.167 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:31:11.765 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:31:11.966 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:31:11.966 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:31:12.168 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:31:12.168 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:31:12.369 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:31:16.968 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:31:17.169 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:31:17.169 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:31:17.371 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:31:17.371 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:31:17.572 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:31:22.169 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:31:22.371 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:31:22.372 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:31:22.573 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:31:22.573 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:31:22.773 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:40:37.592 [main] ERROR c.s.i.s.SerialPortService - [connect,48] - 打开串口失败: COM3。请检查串口名称和权限。
+16:40:39.377 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:40:39.579 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:40:39.579 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:40:39.780 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:40:39.780 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:40:39.981 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:40:44.580 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:40:44.782 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:40:44.782 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:40:44.983 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:40:44.983 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:40:45.186 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:40:49.782 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:40:49.983 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:40:49.986 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:40:50.186 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:40:50.186 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:40:50.388 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:40:54.984 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:40:55.185 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:40:55.187 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:40:55.387 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:40:55.388 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:40:55.589 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:41:00.185 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:41:00.386 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:41:00.388 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:41:00.589 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:41:00.590 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:41:00.790 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:41:05.386 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:41:05.587 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:41:05.590 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:41:05.792 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:41:05.792 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:41:05.993 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:41:10.587 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:41:10.788 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:41:10.792 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:41:10.994 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:41:10.994 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:41:11.195 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:41:15.789 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:41:15.990 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:41:15.995 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:41:16.196 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:41:16.196 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:41:16.397 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:41:20.991 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:41:21.192 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:41:21.197 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:41:21.398 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:41:21.398 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:41:21.598 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:41:26.194 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:41:26.394 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:41:26.398 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:41:26.599 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:41:26.600 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:41:26.800 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:41:31.395 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:41:31.596 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:41:31.599 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:41:31.801 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:41:31.801 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:41:32.004 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:41:36.598 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:41:36.798 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:41:36.801 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:41:37.003 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:41:37.005 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:41:37.205 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:41:41.799 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:41:42.000 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:41:42.003 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:41:42.203 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:41:42.206 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+16:41:42.408 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+16:44:48.819 [main] ERROR c.s.i.s.SerialPortService - [connect,49] - 打开串口失败: COM3。请检查串口名称和权限。
+16:44:50.602 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,82] - 串口未打开
+16:44:50.803 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,103] - 串口未打开
+16:44:50.803 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,82] - 串口未打开
+16:44:51.005 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,103] - 串口未打开
+16:44:51.005 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,82] - 串口未打开
+16:44:51.206 [pool-2-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,103] - 串口未打开
+17:10:56.256 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,86] - 串口未打开
+17:11:01.661 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,107] - 串口未打开
+17:11:06.907 [pool-2-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,107] - 串口未打开
+17:11:28.352 [pool-2-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,86] - 串口未打开
