@@ -1,5 +1,7 @@
 package com.server.ai;
 
+import com.alibaba.fastjson2.JSON;
+import com.server.domain.dto.IdentifyDTO;
 import com.server.exception.ServiceException;
 import com.server.properties.AiLocalProperties;
 import com.server.properties.AiOllamaProperties;
@@ -13,11 +15,9 @@ import dev.langchain4j.model.chat.response.StreamingChatResponseHandler;
 import dev.langchain4j.model.ollama.OllamaChatModel;
 import dev.langchain4j.model.ollama.OllamaStreamingChatModel;
 import lombok.extern.java.Log;
-import org.apache.commons.lang3.ObjectUtils;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.web.multipart.MultipartFile;
 import reactor.core.publisher.Flux;
 
 import java.io.BufferedReader;
@@ -88,13 +88,14 @@ public class AiService {
         });
     }
 
-    public String identify(String prompt, String file) {
+    public IdentifyDTO identify(String prompt, String file) {
         if (StringUtils.isEmpty(file)) {
             throw new ServiceException("请上传识别图像！");
         }
         Map paramMap = new HashMap<String, Object>();
         paramMap.put("prompt_text", prompt);
-        return HttpUtils.doPost4Json(aiLocalProperties.getVlUrl() + "/identify", paramMap, file);
+        String response = HttpUtils.doPost4Json(aiLocalProperties.getVlUrl() + "/identify", paramMap, file);
+        return JSON.parseObject(response, IdentifyDTO.class);
     }
 
     public Flux<String> chatVl(String prompt, String file) {
