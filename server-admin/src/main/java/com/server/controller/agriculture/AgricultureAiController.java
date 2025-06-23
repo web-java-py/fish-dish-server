@@ -35,7 +35,8 @@ public class AgricultureAiController {
     @PostMapping(value = "/identify")
     @ApiOperation("智能分析")
     public AjaxResult identify(@RequestBody ChatStreamDTO chatStreamDTO){
-        aiService.identify(chatStreamDTO.getPrompt(), chatStreamDTO.getFile());
+        String identify = aiService.identify(chatStreamDTO.getPrompt(), chatStreamDTO.getFile());
+        System.out.println(identify);
         return AjaxResult.success();
     }
 }
