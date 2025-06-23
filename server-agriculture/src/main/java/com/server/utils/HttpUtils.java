@@ -1,13 +1,11 @@
 package com.server.utils;
 
-import com.alibaba.fastjson2.JSONObject;
 import com.server.properties.AiLocalProperties;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.ContentType;
-import org.apache.http.entity.StringEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -15,9 +13,10 @@ import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.ObjectUtils;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.Base64;
 import java.util.Map;
 
 /**
@@ -37,7 +36,7 @@ public class HttpUtils {
      * @return
      * @throws IOException
      */
-    public static CloseableHttpResponse doPostStream(String url, Map<String, String> paramMap, MultipartFile file) {
+    public static CloseableHttpResponse doPostStream(String url, Map<String, String> paramMap, String file) {
         // 创建Httpclient对象
         CloseableHttpClient httpClient = HttpClients.createDefault();
         try {
@@ -55,7 +54,7 @@ public class HttpUtils {
 
             if (!ObjectUtils.isEmpty(file)) {
                 // 添加文件
-                builder.addBinaryBody("prompt_image", file.getInputStream(),
+                builder.addBinaryBody("prompt_image", StringBase64ToBytes(file),
                         ContentType.create("application/octet-stream"), "prompt_image");
             }
 
@@ -80,7 +79,7 @@ public class HttpUtils {
      * @return
      * @throws IOException
      */
-    public static String doPost4Json(String url, Map<String, String> paramMap, MultipartFile file) {
+    public static String doPost4Json(String url, Map<String, String> paramMap, String file) {
         // 创建Httpclient对象
         CloseableHttpClient httpClient = HttpClients.createDefault();
         CloseableHttpResponse response = null;
@@ -101,7 +100,7 @@ public class HttpUtils {
 
             if (!ObjectUtils.isEmpty(file)) {
                 // 添加文件
-                builder.addBinaryBody("prompt_image", file.getInputStream(),
+                builder.addBinaryBody("prompt_image", StringBase64ToBytes(file),
                         ContentType.create("application/octet-stream"), "prompt_image");
             }
 
@@ -124,5 +123,23 @@ public class HttpUtils {
             }
         }
         return resultString;
+    }
+
+
+    public static byte[] StringBase64ToBytes(String base64Str){
+        try {
+            base64Str = base64Str.split("base64,")[1];
+            byte[] bytes = Base64.getDecoder().decode(base64Str);
+            byte[] result = Arrays.copyOf(bytes, bytes.length);
+            for (int i = 0; i < result.length; ++i) {
+                if (result[i] < 0) {
+                    result[i] += 256;
+                }
+            }
+            return result;
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            throw e;
+        }
     }
 }

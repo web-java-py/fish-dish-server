@@ -4,6 +4,7 @@ import com.server.exception.ServiceException;
 import com.server.properties.AiLocalProperties;
 import com.server.properties.AiOllamaProperties;
 import com.server.utils.HttpUtils;
+import com.server.utils.StringUtils;
 import dev.langchain4j.model.chat.StreamingChatLanguageModel;
 import dev.langchain4j.model.chat.request.ChatRequest;
 import dev.langchain4j.model.chat.request.ResponseFormat;
@@ -87,8 +88,8 @@ public class AiService {
         });
     }
 
-    public String identify(String prompt, MultipartFile file) {
-        if (ObjectUtils.isEmpty(file) || file.isEmpty()){
+    public String identify(String prompt, String file) {
+        if (StringUtils.isEmpty(file)) {
             throw new ServiceException("请上传识别图像！");
         }
         Map paramMap = new HashMap<String, Object>();
@@ -96,11 +97,11 @@ public class AiService {
         return HttpUtils.doPost4Json(aiLocalProperties.getVlUrl() + "/identify", paramMap, file);
     }
 
-    public Flux<String> chatVl(String prompt, MultipartFile file) {
+    public Flux<String> chatVl(String prompt, String file) {
         Map paramMap = new HashMap<String, Object>();
         paramMap.put("prompt_text", prompt);
-        CloseableHttpResponse response = HttpUtils.doPostStream(aiLocalProperties.getVlUrl() + "/chat", paramMap, file);
         return Flux.create(sink -> {
+            CloseableHttpResponse response = HttpUtils.doPostStream(aiLocalProperties.getVlUrl() + "/chat", paramMap, file);
             try (InputStream inputStream = response.getEntity().getContent();
                  BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8))) {
                 String line;
