@@ -104,16 +104,23 @@ public class SensorCommunicationService {
      */
     private void startSensorCommunication() {
         try {
-            // 从数据库查询所有传感器设备（设备类型ID为1、2、6）
+            // 查询所有传感器设备
             List<AgricultureDevice> sensors = getSensorDevices();
-            
+
             for (AgricultureDevice sensor : sensors) {
-                // 检查设备是否配置了通信指令，无指令则不启动任务
-                if (sensor.getSensorCommand() != null && !"null".equals(sensor.getSensorCommand())) {
-                    startSensorTask(sensor);
-                } else {
-                    log.warn("传感器 {} (ID: {}) 没有配置指令，跳过任务启动。", sensor.getDeviceName(), sensor.getId());
+                // 跳过未开启的设备
+                if (!"1".equals(sensor.getControlStatus())) {
+                    log.info("传感器 {} (ID: {}) 用户已关闭，跳过采集任务。", sensor.getDeviceName(), sensor.getId());
+                    continue;
                 }
+                // 跳过未配置指令的设备
+                String command = sensor.getSensorCommand();
+                if (command == null || "null".equals(command)) {
+                    log.warn("传感器 {} (ID: {}) 没有配置指令，跳过任务启动。", sensor.getDeviceName(), sensor.getId());
+                    continue;
+                }
+                // 启动任务
+                startSensorTask(sensor);
             }
         } catch (Exception e) {
             log.error("启动传感器通信流程失败", e);
