@@ -109,10 +109,10 @@ public class SensorCommunicationService {
 
             for (AgricultureDevice sensor : sensors) {
                 // 跳过未开启的设备
-                if (!"1".equals(sensor.getControlStatus())) {
-                    log.info("传感器 {} (ID: {}) 用户已关闭，跳过采集任务。", sensor.getDeviceName(), sensor.getId());
-                    continue;
-                }
+//                if (!"1".equals(sensor.getControlStatus())) {
+//                    log.info("传感器 {} (ID: {}) 用户已关闭，跳过采集任务。", sensor.getDeviceName(), sensor.getId());
+//                    continue;
+//                }
                 // 跳过未配置指令的设备
                 String command = sensor.getSensorCommand();
                 if (command == null || "null".equals(command)) {

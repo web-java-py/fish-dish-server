@@ -30,14 +30,15 @@ public class AgricultureDeviceStatusServiceImpl implements AgricultureDeviceStat
         // 查询设备详情
         AgricultureDevice device = agricultureDeviceService.selectAgricultureDeviceById(String.valueOf(id));
         if (device != null) {
-            // 只有设备原本为离线时才更新
+            AgricultureDevice deviceToUpdate = new AgricultureDevice();
+            deviceToUpdate.setId(id);
+            deviceToUpdate.setStatus("1");
+            deviceToUpdate.setLastOnlineTime(new Date());
+            agricultureDeviceService.updateAgricultureDevice(deviceToUpdate);
+
+            //只有状态变化时才打印上线日志
             if (!"1".equals(device.getStatus())) {
                 log.info("设备 {} ({}) 上线, 当前时间: {}", device.getId(), device.getDeviceName(), new Date());
-                AgricultureDevice deviceToUpdate = new AgricultureDevice();
-                deviceToUpdate.setId(id);
-                deviceToUpdate.setStatus("1");
-                deviceToUpdate.setLastOnlineTime(new java.util.Date());
-                agricultureDeviceService.updateAgricultureDevice(deviceToUpdate);
             }
         }
     }
@@ -47,7 +48,10 @@ public class AgricultureDeviceStatusServiceImpl implements AgricultureDeviceStat
     public void updateDeviceOffline(String deviceId) {
         AgricultureDevice deviceToUpdate = new AgricultureDevice();
         deviceToUpdate.setId(Long.parseLong(deviceId));
+        // 设置物理在线状态为离线
         deviceToUpdate.setStatus("0");
+        // 设置用户控制状态为关闭
+        deviceToUpdate.setControlStatus("0");
         agricultureDeviceService.updateAgricultureDevice(deviceToUpdate);
     }
 
