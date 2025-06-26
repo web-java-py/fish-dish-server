@@ -46,17 +46,17 @@ public class RabbitMQConfig {
 
     @Bean
     public Queue FbApQueue() {
-        return new Queue(FB_AP_QUEUE,true);
+        return new Queue(FB_QUEUE,true);
     }
 
     @Bean
-    public DirectExchange FbApChange(){
-        return new DirectExchange(FB_EXCHANGE,true,false);
+    public FanoutExchange FbApChange(){
+        return new FanoutExchange(FB_EXCHANGE,true,false);
     }
 
     @Bean
-    public Binding bindingFbApBinding(){
-        return BindingBuilder.bind(FbApQueue()).to(FbApChange()).with(FB_AP_KEY);
+    public Binding  bindingFbApBinding(){
+        return BindingBuilder.bind(FbApQueue()).to(FbApChange());
     }
 
     @Bean

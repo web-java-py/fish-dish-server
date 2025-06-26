@@ -1,6 +1,5 @@
 package com.server.service.impl;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -11,12 +10,19 @@ import com.server.domain.AgricultureDevice;
 import com.server.domain.AgricultureDeviceType;
 import com.server.domain.AgriculturePasture;
 import com.server.domain.vo.AgricultureDeviceVO;
+import com.server.fisco.bcos.AgricultureDeviceFB;
 import com.server.mapper.*;
 import com.server.service.AgricultureDeviceService;
-import com.server.utils.DateUtils;
+import com.server.utils.SecurityUtils;
+import org.fisco.bcos.sdk.client.Client;
+import org.fisco.bcos.sdk.transaction.model.exception.ContractException;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import static com.server.constant.RabbitMQConstant.*;
+
 
 /**
  * 设备信息Service业务层处理
@@ -25,8 +31,7 @@ import org.springframework.stereotype.Service;
  * @date 2025-05-26
  */
 @Service
-public class AgricultureDeviceServiceImpl extends ServiceImpl<AgricultureDeviceMapper, AgricultureDevice> implements AgricultureDeviceService
-{
+public class AgricultureDeviceServiceImpl extends ServiceImpl<AgricultureDeviceMapper, AgricultureDevice> implements AgricultureDeviceService {
     @Autowired
     private AgricultureDeviceMapper agricultureDeviceMapper;
     @Autowired
@@ -35,6 +40,11 @@ public class AgricultureDeviceServiceImpl extends ServiceImpl<AgricultureDeviceM
     private AgricultureCropBatchMapper agricultureCropBatchMapper;
     @Autowired
     private AgricultureDeviceTypeMapper agricultureDeviceTypeMapper;
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
+    @Autowired
+    private Client client;
+
     /**
      * 查询设备信息
      *
@@ -42,8 +52,7 @@ public class AgricultureDeviceServiceImpl extends ServiceImpl<AgricultureDeviceM
      * @return 设备信息
      */
     @Override
-    public AgricultureDevice selectAgricultureDeviceById(String id)
-    {
+    public AgricultureDevice selectAgricultureDeviceById(String id) {
         return getById(id);
     }
 
@@ -79,6 +88,7 @@ public class AgricultureDeviceServiceImpl extends ServiceImpl<AgricultureDeviceM
         }
         return voList;
     }
+
     /**
      * 查询设备信息列表
      *
@@ -89,6 +99,7 @@ public class AgricultureDeviceServiceImpl extends ServiceImpl<AgricultureDeviceM
     public List<AgricultureDevice> selectAgricultureDeviceList(AgricultureDevice agricultureDevice) {
         return list();
     }
+
     /**
      * 新增设备信息
      *
@@ -96,9 +107,23 @@ public class AgricultureDeviceServiceImpl extends ServiceImpl<AgricultureDeviceM
      * @return 结果
      */
     @Override
-    public int insertAgricultureDevice(AgricultureDevice agricultureDevice)
-    {
-        return agricultureDeviceMapper.insert(agricultureDevice);
+    public int insertAgricultureDevice(AgricultureDevice agricultureDevice) {
+        try {
+            /* 部署合约 拿到合约地址 */
+            AgricultureDeviceFB agricultureDeviceFB = AgricultureDeviceFB.deploy(client, client.getCryptoSuite().getCryptoKeyPair());
+            /* 调用合约 响应交易信息 */
+            agricultureDeviceFB.createDevice(
+                    agricultureDevice.getPastureId(),
+                    agricultureDevice.getBatchId(),
+                    agricultureDevice.getDeviceTypeId(),
+                    agricultureDevice.getDeviceName()
+            );
+            agricultureDevice.setBlockAddress(agricultureDeviceFB.getContractAddress());
+            return agricultureDeviceMapper.insert(agricultureDevice);
+        } catch (ContractException e) {
+            log.error(e.getMessage());
+        }
+        return 0;
     }
 
     /**
@@ -108,10 +133,11 @@ public class AgricultureDeviceServiceImpl extends ServiceImpl<AgricultureDeviceM
      * @return 结果
      */
     @Override
-    public int updateAgricultureDevice(AgricultureDevice agricultureDevice)
-    {
-        agricultureDevice.setUpdateTime(LocalDateTime.now());
-        return updateById(agricultureDevice) ? 1 : 0; // updateById 返回 boolean
+    public int updateAgricultureDevice(AgricultureDevice agricultureDevice) {
+        int update = agricultureDeviceMapper.updateById(agricultureDevice);
+        agricultureDevice.setUpdateBy(SecurityUtils.getUsername());
+        rabbitTemplate.convertAndSend(FB_EXCHANGE, "*", agricultureDevice);
+        return update;
     }
 
     /**
@@ -121,8 +147,7 @@ public class AgricultureDeviceServiceImpl extends ServiceImpl<AgricultureDeviceM
      * @return 结果
      */
     @Override
-    public int deleteAgricultureDeviceByIds(String[] ids)
-    {
+    public int deleteAgricultureDeviceByIds(String[] ids) {
         return removeByIds(Arrays.asList(ids)) ? ids.length : 0; // removeByIds 返回 boolean
     }
 
@@ -133,8 +158,7 @@ public class AgricultureDeviceServiceImpl extends ServiceImpl<AgricultureDeviceM
      * @return 结果
      */
     @Override
-    public int deleteAgricultureDeviceById(String id)
-    {
+    public int deleteAgricultureDeviceById(String id) {
         return removeById(id) ? 1 : 0; // removeById 返回 boolean
     }
 }

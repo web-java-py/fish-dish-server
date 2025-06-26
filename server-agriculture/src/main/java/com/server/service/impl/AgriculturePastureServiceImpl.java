@@ -1,12 +1,24 @@
 package com.server.service.impl;
 
+import java.math.BigInteger;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.server.constant.AgricultureConstants;
+import com.server.core.domain.AjaxResult;
+import com.server.domain.AgricultureClass;
+import com.server.exception.ServiceException;
+import com.server.fisco.bcos.AgriculturePastureFB;
 import com.server.mapper.AgriculturePastureMapper;
 import com.server.utils.SecurityUtils;
+import org.apache.commons.lang3.ObjectUtils;
+import org.fisco.bcos.sdk.client.Client;
+import org.fisco.bcos.sdk.crypto.keypair.CryptoKeyPair;
+import org.fisco.bcos.sdk.transaction.model.exception.ContractException;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,6 +40,9 @@ public class AgriculturePastureServiceImpl extends ServiceImpl<AgriculturePastur
 
     @Autowired
     private RabbitTemplate rabbitTemplate;
+
+    @Autowired
+    private Client client;
 
     /**
      * 查询大棚
@@ -59,13 +74,25 @@ public class AgriculturePastureServiceImpl extends ServiceImpl<AgriculturePastur
      */
     @Override
     public int insertAgriculturePasture(AgriculturePasture agriculturePasture) {
-        agriculturePasture.setCreateTime(LocalDateTime.now());
-        agriculturePasture.setCreateBy(SecurityUtils.getUsername());
-        agriculturePasture.setUpdateBy(SecurityUtils.getUsername());
-        int insert = agriculturePastureMapper.insert(agriculturePasture);
-        /* 异步上链区块操作 操作在mapper之前 需要拿到大棚响应回来的id */
-        rabbitTemplate.convertAndSend(FB_EXCHANGE, FB_AP_KEY, agriculturePasture);
-        return insert;
+        validate(agriculturePasture);
+        try {
+            /* 部署合约 拿到合约地址 */
+            AgriculturePastureFB agriculturePastureFB = AgriculturePastureFB.deploy(client, client.getCryptoSuite().getCryptoKeyPair());
+            /* 调用合约 响应交易信息 */
+            agriculturePastureFB.createPasture(
+                    agriculturePasture.getName(),
+                    agriculturePasture.getAddress(),
+                    agriculturePasture.getArea(),
+                    BigInteger.valueOf(agriculturePasture.getBigBreedingQuantity()),
+                    BigInteger.valueOf(0),
+                    agriculturePasture.getDescription()
+            );
+            agriculturePasture.setContractAddr(agriculturePastureFB.getContractAddress());
+            return agriculturePastureMapper.insert(agriculturePasture);
+        } catch (ContractException e) {
+            log.error(e.getMessage());
+        }
+        return 0;
     }
 
     /**
@@ -76,9 +103,10 @@ public class AgriculturePastureServiceImpl extends ServiceImpl<AgriculturePastur
      */
     @Override
     public int updateAgriculturePasture(AgriculturePasture agriculturePasture) {
-        agriculturePasture.setUpdateTime(LocalDateTime.now());
+        validate(agriculturePasture);
         int update = agriculturePastureMapper.updateById(agriculturePasture);
-        rabbitTemplate.convertAndSend(FB_EXCHANGE, FB_AP_KEY, agriculturePasture);
+        agriculturePasture.setUpdateBy(SecurityUtils.getUsername());
+        rabbitTemplate.convertAndSend(FB_EXCHANGE, "*", agriculturePasture);
         return update;
     }
 
@@ -102,5 +130,21 @@ public class AgriculturePastureServiceImpl extends ServiceImpl<AgriculturePastur
     @Override
     public int deleteAgriculturePastureById(Long id) {
         return removeById(id) ? 1 : 0;
+    }
+
+    /**
+     * 校验
+     *
+     * @param agriculturePasture
+     */
+    private void validate(AgriculturePasture agriculturePasture) {
+        // 创建一个 LambdaQueryWrapper 对象，用于构建查询条件
+        LambdaQueryWrapper<AgriculturePasture> lambda = new QueryWrapper<AgriculturePasture>().lambda();
+        lambda
+                .eq(AgriculturePasture::getName, agriculturePasture.getName());
+        AgriculturePasture info = agriculturePastureMapper.selectOne(lambda);
+        if (!ObjectUtils.isEmpty(info) && info.getId() != agriculturePasture.getId()) {
+            throw new ServiceException(AgricultureConstants.Pasture_NAME_EXIST);
+        }
     }
 }
