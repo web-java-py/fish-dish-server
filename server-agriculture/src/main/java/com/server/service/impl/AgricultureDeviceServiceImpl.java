@@ -4,21 +4,28 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.server.constant.AgricultureConstants;
+import com.server.core.text.Convert;
 import com.server.domain.AgricultureCropBatch;
 import com.server.domain.AgricultureDevice;
 import com.server.domain.AgricultureDeviceType;
 import com.server.domain.AgriculturePasture;
 import com.server.domain.vo.AgricultureDeviceVO;
+import com.server.exception.ServiceException;
 import com.server.fisco.bcos.AgricultureDeviceFB;
 import com.server.mapper.*;
 import com.server.service.AgricultureDeviceService;
 import com.server.utils.SecurityUtils;
+import org.apache.commons.lang3.ObjectUtils;
 import org.fisco.bcos.sdk.client.Client;
 import org.fisco.bcos.sdk.transaction.model.exception.ContractException;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import static com.server.constant.RabbitMQConstant.*;
@@ -42,8 +49,10 @@ public class AgricultureDeviceServiceImpl extends ServiceImpl<AgricultureDeviceM
     private AgricultureDeviceTypeMapper agricultureDeviceTypeMapper;
     @Autowired
     private RabbitTemplate rabbitTemplate;
-    @Autowired
+    @Autowired(required = false)
     private Client client;
+    @Value("${fisco.enabled}")
+    private String fiscoEnabled;
 
     /**
      * 查询设备信息
@@ -108,22 +117,23 @@ public class AgricultureDeviceServiceImpl extends ServiceImpl<AgricultureDeviceM
      */
     @Override
     public int insertAgricultureDevice(AgricultureDevice agricultureDevice) {
-        try {
-            /* 部署合约 拿到合约地址 */
-            AgricultureDeviceFB agricultureDeviceFB = AgricultureDeviceFB.deploy(client, client.getCryptoSuite().getCryptoKeyPair());
-            /* 调用合约 响应交易信息 */
-            agricultureDeviceFB.createDevice(
-                    agricultureDevice.getPastureId(),
-                    agricultureDevice.getBatchId(),
-                    agricultureDevice.getDeviceTypeId(),
-                    agricultureDevice.getDeviceName()
-            );
-            agricultureDevice.setBlockAddress(agricultureDeviceFB.getContractAddress());
-            return agricultureDeviceMapper.insert(agricultureDevice);
-        } catch (ContractException e) {
-            log.error(e.getMessage());
+        if (Convert.toBool(fiscoEnabled)){
+            try {
+                /* 部署合约 拿到合约地址 */
+                AgricultureDeviceFB agricultureDeviceFB = AgricultureDeviceFB.deploy(client, client.getCryptoSuite().getCryptoKeyPair());
+                /* 调用合约 响应交易信息 */
+                agricultureDeviceFB.createDevice(
+                        agricultureDevice.getPastureId(),
+                        agricultureDevice.getBatchId(),
+                        agricultureDevice.getDeviceTypeId(),
+                        agricultureDevice.getDeviceName()
+                );
+                agricultureDevice.setBlockAddress(agricultureDeviceFB.getContractAddress());
+            } catch (ContractException e) {
+                log.error(e.getMessage());
+            }
         }
-        return 0;
+        return agricultureDeviceMapper.insert(agricultureDevice);
     }
 
     /**

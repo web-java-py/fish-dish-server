@@ -10,6 +10,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.server.constant.AgricultureConstants;
 import com.server.core.domain.AjaxResult;
+import com.server.core.text.Convert;
 import com.server.domain.AgricultureClass;
 import com.server.exception.ServiceException;
 import com.server.fisco.bcos.AgriculturePastureFB;
@@ -21,6 +22,7 @@ import org.fisco.bcos.sdk.crypto.keypair.CryptoKeyPair;
 import org.fisco.bcos.sdk.transaction.model.exception.ContractException;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import com.server.domain.AgriculturePasture;
 import com.server.service.AgriculturePastureService;
@@ -41,8 +43,11 @@ public class AgriculturePastureServiceImpl extends ServiceImpl<AgriculturePastur
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
-    @Autowired
+    @Autowired(required = false)
     private Client client;
+
+    @Value("${fisco.enabled}")
+    private String fiscoEnabled;
 
     /**
      * 查询大棚
@@ -75,24 +80,25 @@ public class AgriculturePastureServiceImpl extends ServiceImpl<AgriculturePastur
     @Override
     public int insertAgriculturePasture(AgriculturePasture agriculturePasture) {
         validate(agriculturePasture);
-        try {
-            /* 部署合约 拿到合约地址 */
-            AgriculturePastureFB agriculturePastureFB = AgriculturePastureFB.deploy(client, client.getCryptoSuite().getCryptoKeyPair());
-            /* 调用合约 响应交易信息 */
-            agriculturePastureFB.createPasture(
-                    agriculturePasture.getName(),
-                    agriculturePasture.getAddress(),
-                    agriculturePasture.getArea(),
-                    BigInteger.valueOf(agriculturePasture.getBigBreedingQuantity()),
-                    BigInteger.valueOf(0),
-                    agriculturePasture.getDescription()
-            );
-            agriculturePasture.setContractAddr(agriculturePastureFB.getContractAddress());
-            return agriculturePastureMapper.insert(agriculturePasture);
-        } catch (ContractException e) {
-            log.error(e.getMessage());
+        if (Convert.toBool(fiscoEnabled)){
+            try {
+                /* 部署合约 拿到合约地址 */
+                AgriculturePastureFB agriculturePastureFB = AgriculturePastureFB.deploy(client, client.getCryptoSuite().getCryptoKeyPair());
+                /* 调用合约 响应交易信息 */
+                agriculturePastureFB.createPasture(
+                        agriculturePasture.getName(),
+                        agriculturePasture.getAddress(),
+                        agriculturePasture.getArea(),
+                        BigInteger.valueOf(agriculturePasture.getBigBreedingQuantity()),
+                        BigInteger.valueOf(0),
+                        agriculturePasture.getDescription()
+                );
+                agriculturePasture.setContractAddr(agriculturePastureFB.getContractAddress());
+            } catch (ContractException e) {
+                log.error(e.getMessage());
+            }
         }
-        return 0;
+        return agriculturePastureMapper.insert(agriculturePasture);
     }
 
     /**
