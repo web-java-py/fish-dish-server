@@ -6,6 +6,7 @@ import org.fisco.bcos.sdk.client.Client;
 import org.fisco.bcos.sdk.config.ConfigOption;
 import org.fisco.bcos.sdk.config.exceptions.ConfigException;
 import org.fisco.bcos.sdk.config.model.ConfigProperty;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 import org.yaml.snakeyaml.Yaml;
@@ -16,6 +17,7 @@ import java.io.InputStream;
 
 @Component
 @Slf4j
+@ConditionalOnProperty(name = "fisco.enabled", havingValue = "true")
 public class FiscoBcos {
 
     @PostConstruct
