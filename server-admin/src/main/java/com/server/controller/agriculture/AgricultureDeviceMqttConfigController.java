@@ -46,6 +46,13 @@ public class AgricultureDeviceMqttConfigController extends BaseController
         return getDataTable(list);
     }
 
+    @GetMapping("/byDeviceId/{deviceId}")
+    public AjaxResult getByDeviceId(@PathVariable("deviceId") Long deviceId) {
+        AgricultureDeviceMqttConfig config = agricultureDeviceMqttConfigService.getByDeviceId(deviceId);
+        return AjaxResult.success(config);
+    }
+
+
     /**
      * 导出设备MQTT配置列表
      */

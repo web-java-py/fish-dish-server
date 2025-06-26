@@ -22,6 +22,9 @@ public interface AgricultureDeviceMqttConfigService extends IService<Agriculture
      */
     public AgricultureDeviceMqttConfig selectAgricultureDeviceMqttConfigById(String id);
 
+    // 根据设备id查询mqtt配置
+    public AgricultureDeviceMqttConfig getByDeviceId(Long deviceId);
+
     /**
      * 查询设备MQTT配置列表
      * 

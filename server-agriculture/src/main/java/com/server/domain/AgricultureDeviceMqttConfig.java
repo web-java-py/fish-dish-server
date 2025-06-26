@@ -1,5 +1,6 @@
 package com.server.domain;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import lombok.Data;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
@@ -13,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /** 
- * @author 851543
+ * @author bcwy
  * @description  
  */
 @Data
@@ -26,7 +27,7 @@ public class AgricultureDeviceMqttConfig extends BaseEntityPlus implements Seria
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value="id")
+    @TableId(value="id",type = IdType.AUTO)
     @ApiModelProperty(value="主键ID")
     private Long id;
 
