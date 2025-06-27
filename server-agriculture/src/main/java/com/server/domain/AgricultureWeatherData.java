@@ -1,13 +1,12 @@
 package com.server.domain;
 
-import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.*;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import io.swagger.annotations.ApiModel;
@@ -71,9 +70,5 @@ public class AgricultureWeatherData extends BaseEntityPlus implements Serializab
     @TableField(value="air_pressure")
     @ApiModelProperty(value="气压(hPa)")
     private Double airPressure;
-
-    @TableField(value="collect_time")
-    @ApiModelProperty(value="采集时间")
-    private LocalDateTime collectTime;
 
 }

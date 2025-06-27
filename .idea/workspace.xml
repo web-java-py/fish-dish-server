@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="去掉.idea配置">
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureWeatherData.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureWeatherData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/service/DataProcessingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/service/DataProcessingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureDeviceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureDeviceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureWeatherDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureWeatherDataServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-framework/src/main/java/com/server/handler/MyMetaObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-framework/src/main/java/com/server/handler/MyMetaObjectHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,10 +41,10 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="E:\idea\Java_Maven\apache-maven-3.5.4\repo" />
-        <option name="mavenHome" value="$PROJECT_DIR$/../../../Java_Maven/apache-maven-3.5.4" />
-        <option name="useMavenConfig" value="true" />
-        <option name="userSettingsFile" value="E:\idea\Java_Maven\apache-maven-3.5.4\conf\settings.xml" />
+        <option name="customMavenHome" value="D:\maven\apache-maven-3.9.9" />
+        <option name="localRepository" value="D:\maven\apache-maven-3.9.9\Repository" />
+        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
+        <option name="userSettingsFile" value="D:\maven\apache-maven-3.9.9\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -47,38 +52,39 @@
     <option name="version" value="2" />
   </component>
   <component name="ProjectId" id="2z4udUhg2iMJ66cZymyeur89p2B" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15429688" />
-    <property name="project.structure.side.proportion" value="0.41319442" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "Spring Boot.ServerApplication.executor": "Run",
+    "git-widget-placeholder": "bxwy",
+    "last_opened_file_path": "D:/ZLXN/fish-dish-web",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "项目",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "MavenSettings"
+  }
+}]]></component>
   <component name="RunManager">
     <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="server-admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.server.ServerApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.server.ServerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -139,7 +145,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="去掉.idea配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="去掉.idea配置" />
+    <MESSAGE value="修复本地" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复本地" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

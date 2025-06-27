@@ -52,7 +52,6 @@ public class DataProcessingService {
             String dataString = new String(data);
             Map<String, Object> parsedData = parseData(dataString);
             String type = (String) parsedData.get("type");
-            // mqttGateway.sendToMqtt("测试测试MQTT", "/fish-dish/water"); // 这行看起来是测试代码，可以考虑移除
             if ("water".equals(type)) {
                 AgricultureWaterQualityData waterData = createWaterQualityData(parsedData);
                 waterQualityDataService.save(waterData); // 保存到数据库
@@ -186,8 +185,6 @@ public class DataProcessingService {
         // 风向是字符串类型，进行null检查
         String windDirection = (String) data.get("wind_direction");
         weatherData.setWindDirection(windDirection != null ? windDirection : ""); // 如果为null，则设置为空字符串
-        
-        weatherData.setCollectTime(LocalDateTime.now()); // 设置数据采集时间为当前服务器时间
         return weatherData;
     }
     

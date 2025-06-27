@@ -145,7 +145,17 @@ public class AgricultureDeviceServiceImpl extends ServiceImpl<AgricultureDeviceM
     @Override
     public int updateAgricultureDevice(AgricultureDevice agricultureDevice) {
         int update = agricultureDeviceMapper.updateById(agricultureDevice);
-        agricultureDevice.setUpdateBy(SecurityUtils.getUsername());
+        String username;
+        try {
+            username = SecurityUtils.getUsername();
+            if (org.apache.commons.lang3.StringUtils.isEmpty(username)) {
+                username = "system";
+            }
+        } catch (Exception e) {
+            username = "system";
+        }
+        agricultureDevice.setUpdateBy(username);
+
         rabbitTemplate.convertAndSend(FB_EXCHANGE, "*", agricultureDevice);
         return update;
     }
