@@ -3,12 +3,11 @@ package com.server.handler;
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import com.server.utils.SecurityUtils;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.ObjectUtils;
 import org.apache.ibatis.reflection.MetaObject;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
-
-import static com.server.utils.SecurityUtils.getLoginUser;
 
 @Slf4j
 @Component
