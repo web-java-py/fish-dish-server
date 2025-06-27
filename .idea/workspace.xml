@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ea382c4a-4c0f-476a-93ca-e3ac4c9fd553" name="Changes" comment="去掉md" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="851543" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="SOFT" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\idea\Java_Maven\apache-maven-3.5.4\repo" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../Java_Maven/apache-maven-3.5.4" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="E:\idea\Java_Maven\apache-maven-3.5.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2xIxDZXms0QJOt7rimo6kOxB9Zc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/fisco/bcos" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15429688" />
+    <property name="project.structure.side.proportion" value="0.41319442" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\idea\project\Java\fish-dish-server\server-agriculture\src\main\java\com\server\fisco\bcos" />
+      <recent name="E:\idea\project\Java\fish-dish-server\server-admin\src\main\resources\fisco\conf" />
+      <recent name="E:\idea\project\Java\fish-dish-server\server-agriculture\src\main\java\com\server\fisco" />
+      <recent name="E:\idea\project\Java\fish-dish-server\server-admin\src\main\resources\fisco\cofig" />
+      <recent name="E:\idea\project\Java\fish-dish-server\server-agriculture\src\main\java\com\server\domain\dto" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\idea\project\Java\fish-dish-server\server-admin\src\main\resources\fisco" />
+      <recent name="E:\idea\project\Java\fish-dish-server\server-admin\src\main\resources" />
+      <recent name="E:\idea\project\Java\fish-dish-server\server-admin\src\main\resources\templates" />
+      <recent name="E:\idea\project\Java\fish-dish-server\server-admin\src\main\resources\templates\ai" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ServerApplication">
+    <configuration name="Agriculture" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server-admin" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Agriculture" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Agriculture.BcosSDKTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server-admin" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Agriculture" />
+      <option name="METHOD_NAME" value="BcosSDKTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Agriculture.testAIService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server-admin" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Agriculture" />
+      <option name="METHOD_NAME" value="testAIService" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Agriculture.testFiscoBcosService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server-admin" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Agriculture" />
+      <option name="METHOD_NAME" value="testFiscoBcosService" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="fish-dish-server" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="server-admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.server.ServerApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.Agriculture" />
+      <item itemvalue="JUnit.Agriculture.testAIService" />
+      <item itemvalue="JUnit.Agriculture.BcosSDKTest" />
+      <item itemvalue="JUnit.Agriculture.testFiscoBcosService" />
+      <item itemvalue="Spring Boot.ServerApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.Agriculture.testFiscoBcosService" />
+        <item itemvalue="JUnit.Agriculture.BcosSDKTest" />
+        <item itemvalue="JUnit.Agriculture.testAIService" />
+        <item itemvalue="JUnit.Agriculture" />
+        <item itemvalue="JUnit.Agriculture.testAIService" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ea382c4a-4c0f-476a-93ca-e3ac4c9fd553" name="Changes" comment="" />
+      <created>1747639270934</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747639270934</updated>
+      <workItem from="1747639272522" duration="86000" />
+      <workItem from="1747639373247" duration="1146000" />
+      <workItem from="1747729861138" duration="39000" />
+      <workItem from="1747730009531" duration="7244000" />
+      <workItem from="1747881312669" duration="1823000" />
+      <workItem from="1747966685822" duration="4833000" />
+      <workItem from="1747981875463" duration="2686000" />
+      <workItem from="1747984606200" duration="6772000" />
+      <workItem from="1747991629958" duration="8771000" />
+      <workItem from="1748151559521" duration="16956000" />
+      <workItem from="1748224268351" duration="7581000" />
+      <workItem from="1748249638518" duration="331000" />
+      <workItem from="1748249986642" duration="1902000" />
+      <workItem from="1748251923036" duration="7442000" />
+      <workItem from="1748311493840" duration="32731000" />
+      <workItem from="1748399457540" duration="17546000" />
+      <workItem from="1748944784722" duration="8599000" />
+      <workItem from="1748954365779" duration="4555000" />
+      <workItem from="1749017166066" duration="813000" />
+      <workItem from="1749018006712" duration="608000" />
+      <workItem from="1749018637923" duration="5627000" />
+      <workItem from="1749024651152" duration="926000" />
+      <workItem from="1749025602952" duration="333000" />
+      <workItem from="1749030552083" duration="429000" />
+      <workItem from="1749031007295" duration="9212000" />
+      <workItem from="1749063944781" duration="29250000" />
+      <workItem from="1749189925966" duration="5282000" />
+      <workItem from="1749296736277" duration="1313000" />
+      <workItem from="1749379547711" duration="3510000" />
+      <workItem from="1749529108251" duration="1225000" />
+      <workItem from="1749530415275" duration="1517000" />
+      <workItem from="1749565009392" duration="1817000" />
+      <workItem from="1749626602645" duration="2331000" />
+      <workItem from="1749811176832" duration="1834000" />
+      <workItem from="1749888154023" duration="975000" />
+      <workItem from="1749972980196" duration="1003000" />
+      <workItem from="1750215199702" duration="639000" />
+      <workItem from="1750319618813" duration="492000" />
+      <workItem from="1750394072895" duration="10004000" />
+      <workItem from="1750569449243" duration="24130000" />
+      <workItem from="1750667003824" duration="10145000" />
+      <workItem from="1750680196554" duration="4076000" />
+      <workItem from="1750745972053" duration="6514000" />
+      <workItem from="1750752902520" duration="7173000" />
+      <workItem from="1750769197211" duration="915000" />
+      <workItem from="1750840424538" duration="21901000" />
+      <workItem from="1750919687479" duration="19970000" />
+      <workItem from="1750959754234" duration="2717000" />
+    </task>
+    <task id="LOCAL-00006" summary="去掉热重载 添加并配置依赖 新增种类实体类">
+      <created>1747983947122</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1747983947122</updated>
+    </task>
+    <task id="LOCAL-00007" summary="AgricultureClass">
+      <created>1747986558027</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1747986558027</updated>
+    </task>
+    <task id="LOCAL-00008" summary="添加注解归类">
+      <created>1747987845277</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1747987845277</updated>
+    </task>
+    <task id="LOCAL-00009" summary="种类查询接口">
+      <created>1747990638556</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1747990638556</updated>
+    </task>
+    <task id="LOCAL-00010" summary="补充种类类型">
+      <created>1747992162410</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1747992162410</updated>
+    </task>
+    <task id="LOCAL-00011" summary="更新mybatis plus自动填充">
+      <created>1748001012757</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1748001012757</updated>
+    </task>
+    <task id="LOCAL-00012" summary="种类管理接口完成">
+      <created>1748165497199</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1748165497199</updated>
+    </task>
+    <task id="LOCAL-00013" summary="种类管理接口完成">
+      <created>1748165533774</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1748165533774</updated>
+    </task>
+    <task id="LOCAL-00014" summary="优化配置">
+      <created>1748182745318</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1748182745318</updated>
+    </task>
+    <task id="LOCAL-00015" summary="作业接口完成">
+      <created>1748227865499</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1748227865499</updated>
+    </task>
+    <task id="LOCAL-00016" summary="补充作业编辑接口">
+      <created>1748234125518</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1748234125518</updated>
+    </task>
+    <task id="LOCAL-00017" summary="spring 升级 2.7.3">
+      <created>1748316955223</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1748316955223</updated>
+    </task>
+    <task id="LOCAL-00018" summary="处理bug">
+      <created>1748319794960</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1748319794960</updated>
+    </task>
+    <task id="LOCAL-00019" summary="处理bug">
+      <created>1748320133417</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1748320133417</updated>
+    </task>
+    <task id="LOCAL-00020" summary="处理bug">
+      <created>1748320243973</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1748320243973</updated>
+    </task>
+    <task id="LOCAL-00021" summary="处理bug">
+      <created>1748320529633</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1748320529633</updated>
+    </task>
+    <task id="LOCAL-00022" summary="更新springboot-test  ai相关配置">
+      <created>1748329071050</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1748329071050</updated>
+    </task>
+    <task id="LOCAL-00023" summary="添加ai种类接口 回退springboot版本 2.5.15">
+      <created>1748336946623</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1748336946623</updated>
+    </task>
+    <task id="LOCAL-00024" summary="RabbitMQ上架 实现ai处理作业 推送至队列 队列处理">
+      <created>1748413196363</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1748413196363</updated>
+    </task>
+    <task id="LOCAL-00025" summary="ai处理作业完成">
+      <created>1748424294917</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1748424294917</updated>
+    </task>
+    <task id="LOCAL-00026" summary="ai处理作业完成">
+      <created>1748428514541</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1748428514541</updated>
+    </task>
+    <task id="LOCAL-00027" summary="ai处理作业完成 新增WebSocket RabbitMQ">
+      <created>1748958327960</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1748958327960</updated>
+    </task>
+    <task id="LOCAL-00028" summary="ai处理作业完成 新增WebSocket RabbitMQ">
+      <created>1749017738284</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1749017738284</updated>
+    </task>
+    <task id="LOCAL-00029" summary="ai处理作业完成 新增WebSocket RabbitMQ">
+      <created>1749017953776</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1749017953776</updated>
+    </task>
+    <task id="LOCAL-00030" summary="代码合并">
+      <created>1749019578958</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1749019578958</updated>
+    </task>
+    <task id="LOCAL-00031" summary="鱼菜共生服务端 0.1.0版本发布">
+      <created>1749019767450</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1749019767450</updated>
+    </task>
+    <task id="LOCAL-00032" summary="鱼菜共生服务端 0.1.0版本发布">
+      <created>1749021546916</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1749021546916</updated>
+    </task>
+    <task id="LOCAL-00033" summary="更新配置文件">
+      <created>1749025368777</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1749025368777</updated>
+    </task>
+    <task id="LOCAL-00034" summary="更新大棚">
+      <created>1749025677409</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1749025677409</updated>
+    </task>
+    <task id="LOCAL-00035" summary="更新资源图片">
+      <created>1749031612096</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1749031612096</updated>
+    </task>
+    <task id="LOCAL-00036" summary="更新资源图片">
+      <created>1749031721374</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1749031721374</updated>
+    </task>
+    <task id="LOCAL-00037" summary="智能分析完成">
+      <created>1749133472876</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1749133472877</updated>
+    </task>
+    <task id="LOCAL-00038" summary="AI添加防抖提交">
+      <created>1749204281252</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1749204281252</updated>
+    </task>
+    <task id="LOCAL-00039" summary="解决selectOne limit bug">
+      <created>1749206240311</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1749206240311</updated>
+    </task>
+    <task id="LOCAL-00040" summary="解决">
+      <created>1749530570549</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1749530570549</updated>
+    </task>
+    <task id="LOCAL-00041" summary="解决">
+      <created>1749530743679</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1749530743679</updated>
+    </task>
+    <task id="LOCAL-00042" summary="解决">
+      <created>1749530855129</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1749530855129</updated>
+    </task>
+    <task id="LOCAL-00043" summary="配置ai控制器">
+      <created>1750403488027</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1750403488027</updated>
+    </task>
+    <task id="LOCAL-00044" summary="配置mqtt">
+      <created>1750406014640</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1750406014640</updated>
+    </task>
+    <task id="LOCAL-00045" summary="完成ai智能识别 chat聊天 修改合并遗留bug">
+      <created>1750593511252</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1750593511252</updated>
+    </task>
+    <task id="LOCAL-00046" summary="寻找bug">
+      <created>1750597949953</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1750597949953</updated>
+    </task>
+    <task id="LOCAL-00047" summary="完成小农机器人">
+      <created>1750676417833</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1750676417833</updated>
+    </task>
+    <task id="LOCAL-00048" summary="过滤git文件">
+      <created>1750679450233</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1750679450233</updated>
+    </task>
+    <task id="LOCAL-00049" summary="智能分析接口完善">
+      <created>1750683039589</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1750683039590</updated>
+    </task>
+    <task id="LOCAL-00050" summary="完成区块链FiscoBcos配置">
+      <created>1750845897286</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1750845897286</updated>
+    </task>
+    <task id="LOCAL-00051" summary="完成区块下操作 配置区块链开启配置 mq配置超时 mq配置新config">
+      <created>1750924517765</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1750924517766</updated>
+    </task>
+    <task id="LOCAL-00052" summary="完成mq配置区块上链操作 修改自动填充bug 完善区块链配置">
+      <created>1750932346588</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1750932346588</updated>
+    </task>
+    <task id="LOCAL-00053" summary="完成区块链配置">
+      <created>1750937157323</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1750937157323</updated>
+    </task>
+    <task id="LOCAL-00054" summary="去掉md">
+      <created>1750937623348</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1750937623348</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/bxwy" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="RabbitMQ上架 实现ai处理作业 推送至队列 队列处理" />
+    <MESSAGE value="ai处理作业完成" />
+    <MESSAGE value="ai处理作业完成 新增WebSocket RabbitMQ" />
+    <MESSAGE value="代码合并" />
+    <MESSAGE value="鱼菜共生服务端 0.1.0版本发布" />
+    <MESSAGE value="更新配置文件" />
+    <MESSAGE value="更新大棚" />
+    <MESSAGE value="更新资源图片" />
+    <MESSAGE value="智能分析完成" />
+    <MESSAGE value="AI添加防抖提交" />
+    <MESSAGE value="解决selectOne limit bug" />
+    <MESSAGE value="Merge branch 'zbb' of https://github.com/web-java-py/fish-dish-server into 851543&#10;&#10; Conflicts:&#10;&#9;.idea/dataSources.xml&#10;&#9;serverlog/sys-error.2025-05-28.log&#10;&#9;serverlog/sys-error.2025-06-04.log&#10;&#9;serverlog/sys-error.log&#10;&#9;serverlog/sys-info.2025-05-28.log&#10;&#9;serverlog/sys-info.2025-05-29.log&#10;&#9;serverlog/sys-info.2025-05-30.log&#10;&#9;serverlog/sys-info.2025-06-04.log&#10;&#9;serverlog/sys-info.log&#10;&#9;serverlog/sys-user.2025-05-28.log&#10;&#9;serverlog/sys-user.2025-06-04.log&#10;&#9;serverlog/sys-user.log" />
+    <MESSAGE value="解决" />
+    <MESSAGE value="配置ai控制器" />
+    <MESSAGE value="配置mqtt" />
+    <MESSAGE value="完成ai智能识别 chat聊天 修改合并遗留bug" />
+    <MESSAGE value="寻找bug" />
+    <MESSAGE value="完成小农机器人" />
+    <MESSAGE value="过滤git文件" />
+    <MESSAGE value="智能分析接口完善" />
+    <MESSAGE value="完成区块链FiscoBcos配置" />
+    <MESSAGE value="完成区块下操作 配置区块链开启配置 mq配置超时 mq配置新config" />
+    <MESSAGE value="完成mq配置区块上链操作 修改自动填充bug 完善区块链配置" />
+    <MESSAGE value="完成区块链配置" />
+    <MESSAGE value="去掉md" />
+    <option name="LAST_COMMIT_MESSAGE" value="去掉md" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/fish_dish_server$ServerApplication.ic" NAME="ServerApplication Coverage Results" MODIFIED="1750586508593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/fish_dish_server$Agriculture_BcosSDKTest.ic" NAME="Agriculture.BcosSDKTest Coverage Results" MODIFIED="1750751250882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
