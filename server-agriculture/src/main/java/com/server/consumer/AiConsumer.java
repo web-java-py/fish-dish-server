@@ -18,7 +18,7 @@ import com.server.service.AgricultureClassAiReportService;
 import com.server.service.AgricultureJobService;
 import com.server.utils.uuid.IdUtils;
 import com.server.ws.MqSocketServer;
-import lombok.extern.java.Log;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -30,7 +30,7 @@ import java.util.stream.Collectors;
 import static com.server.constant.RabbitMQConstant.*;
 import static com.server.constant.CacheConstants.*;
 
-@Log
+@Slf4j
 @Component
 public class AiConsumer {
 
@@ -77,7 +77,7 @@ public class AiConsumer {
             mqSocketServer.sendToAllClient(JSON.toJSONString(socketResponse));
             redisCache.deleteObject(AI_JOB_NOT_REPEAT_SUBMIT + aiMessageVO.getId());
         } catch (Exception e) {
-            log.warning(e.getMessage());
+            log.error(e.getMessage());
         }
     }
 
@@ -149,7 +149,7 @@ public class AiConsumer {
             mqSocketServer.sendToAllClient(JSON.toJSONString(socketResponse));
             redisCache.deleteObject(AI_JOB_NOT_REPEAT_SUBMIT + aiMessageVO.getId());
         } catch (Exception e) {
-            log.warning(e.getMessage());
+            log.error(e.getMessage());
         }
     }
 }

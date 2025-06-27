@@ -104,6 +104,15 @@ spring:
     port: ${rabbitmq.port}
     username: ${rabbitmq.username}
     password: ${rabbitmq.password}
+    template:
+      default-receive-timeout: ${rabbitmq.timeout}
+      retry:
+        enabled: true
+        max-attempts: 3
+      custom-connection-factory:
+        cache-mode: CHANNEL
+        publisher-confirms: true
+
 
 # token配置
 token:
@@ -184,3 +193,8 @@ mqtt:
 serial:
   port-name: ${serial.port-name}
   baud-rate: ${serial.baud-rate}
+
+# 区块链
+fisco:
+  enabled: ${fisco.enabled}
+
