@@ -1,6 +1,12 @@
 package com.server.ai;
 
+import com.alibaba.fastjson2.JSON;
+import com.server.domain.dto.IdentifyDTO;
+import com.server.exception.ServiceException;
+import com.server.properties.AiLocalProperties;
 import com.server.properties.AiOllamaProperties;
+import com.server.utils.HttpUtils;
+import com.server.utils.StringUtils;
 import dev.langchain4j.model.chat.StreamingChatLanguageModel;
 import dev.langchain4j.model.chat.request.ChatRequest;
 import dev.langchain4j.model.chat.request.ResponseFormat;
@@ -8,15 +14,29 @@ import dev.langchain4j.model.chat.response.ChatResponse;
 import dev.langchain4j.model.chat.response.StreamingChatResponseHandler;
 import dev.langchain4j.model.ollama.OllamaChatModel;
 import dev.langchain4j.model.ollama.OllamaStreamingChatModel;
+import lombok.extern.java.Log;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 
 import static dev.langchain4j.data.message.UserMessage.userMessage;
 
+@Log
 @Component
 public class AiService {
+
+    @Autowired
+    private AiLocalProperties aiLocalProperties;
 
     private OllamaChatModel ollamaChatModel;
     private StreamingChatLanguageModel streamingChatLanguageModel;
@@ -65,6 +85,41 @@ public class AiService {
                     sink.error(error);
                 }
             });
+        });
+    }
+
+    public IdentifyDTO identify(String prompt, String file) {
+        if (StringUtils.isEmpty(file)) {
+            throw new ServiceException("请上传识别图像！");
+        }
+        Map paramMap = new HashMap<String, Object>();
+        paramMap.put("prompt_text", prompt);
+        String response = HttpUtils.doPost4Json(aiLocalProperties.getVlUrl() + "/identify", paramMap, file);
+        return JSON.parseObject(response, IdentifyDTO.class);
+    }
+
+    public Flux<String> chatVl(String prompt, String file) {
+        Map paramMap = new HashMap<String, Object>();
+        paramMap.put("prompt_text", prompt);
+        return Flux.create(sink -> {
+            CloseableHttpResponse response = HttpUtils.doPostStream(aiLocalProperties.getVlUrl() + "/chat", paramMap, file);
+            try (InputStream inputStream = response.getEntity().getContent();
+                 BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8))) {
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    if (!line.equals("")) sink.next(line);
+                }
+                sink.complete();
+            } catch (Exception e) {
+                sink.error(e);
+                log.warning(e.getMessage());
+            } finally {
+                try {
+                    response.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         });
     }
 }
