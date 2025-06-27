@@ -60,8 +60,6 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
     @Override
     public int insertAgricultureWeatherData(AgricultureWeatherData agricultureWeatherData)
     {
-        agricultureWeatherData.setCreateBy("system");
-        agricultureWeatherData.setCreateTime(LocalDateTime.now());
         return agricultureWeatherDataMapper.insert(agricultureWeatherData);
     }
 
@@ -74,7 +72,6 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
     @Override
     public int updateAgricultureWeatherData(AgricultureWeatherData agricultureWeatherData)
     {
-        agricultureWeatherData.setUpdateTime(LocalDateTime.now());
         return  updateById(agricultureWeatherData) ? 1 : 0;
     }
 
