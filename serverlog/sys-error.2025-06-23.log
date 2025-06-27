@@ -1,0 +1,1 @@
+12:32:40.617 [main] ERROR c.s.i.s.SerialPortService - [connect,66] - Failed to open port: COM3. Please check port name and permissions.

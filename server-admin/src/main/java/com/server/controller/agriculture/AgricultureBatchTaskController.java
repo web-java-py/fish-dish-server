@@ -26,8 +26,6 @@ public class AgricultureBatchTaskController extends BaseController {
     @Autowired
     private AgricultureBatchTaskService agricultureBatchTaskService;
 
-
-
     /**
      * 查询批次任务列表
      */
