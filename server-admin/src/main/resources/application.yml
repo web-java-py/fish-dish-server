@@ -104,6 +104,15 @@ spring:
     port: ${rabbitmq.port}
     username: ${rabbitmq.username}
     password: ${rabbitmq.password}
+    template:
+      default-receive-timeout: ${rabbitmq.timeout}
+      retry:
+        enabled: true
+        max-attempts: 3
+      custom-connection-factory:
+        cache-mode: CHANNEL
+        publisher-confirms: true
+
 
 # token配置
 token:
@@ -165,6 +174,10 @@ ai:
     model-name: ${ollama.model-name}
     temperature: ${ollama.temperature}
     timeout: ${ollama.timeout}
+  # 本地AI
+  local:
+    vl-url: ${local.vl-url}
+    timeout: ${local.timeout}
 
 # MQTT 配置 (使用RabbitMQ的MQTT插件)
 mqtt:
@@ -179,4 +192,8 @@ mqtt:
 serial:
   port-name: ${serial.port-name}
   baud-rate: ${serial.baud-rate}
+
+# 区块链
+fisco:
+  enabled: ${fisco.enabled}
 

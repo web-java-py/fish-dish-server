@@ -1,0 +1,32 @@
+cryptoMaterial:
+  certPath: "fisco"
+  caCert: "fisco/conf/ca.crt"
+  sslCert: "fisco/conf/sdk.crt"
+  sslKey: "fisco/conf/sdk.key"
+#  enSslCert: "conf/gm/gmensdk.crt"
+#  enSslKey: "conf/gm/gmensdk.key"
+
+network:
+  peers:
+    - "192.168.31.210:20201"
+    - "192.168.31.210:20200"
+
+amop:
+#  - publicKeys: [ "conf/amop/consumer_public_key_1.pem" ]
+#    topicName: "PrivateTopic1"
+#  - password: "123456"
+#    privateKey: "conf/amop/consumer_private_key.p12"
+#    topicName: "PrivateTopic2"
+
+account:
+  keyStoreDir: "account"
+  #  accountFilePath: "conf"
+  accountFileFormat: "pem"
+#  accountAddress: "0x"
+#  password: ""
+
+
+threadPool:
+#  channelProcessorThreadSize: "16"
+#  receiptProcessorThreadSize: "16"
+#  maxBlockingQueueSize: "102400"

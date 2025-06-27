@@ -1,6 +1,6 @@
 package com.server.ws;
 
-import lombok.extern.java.Log;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import javax.websocket.*;
 import javax.websocket.server.PathParam;
@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  * RabbitMQ WebSocket服务
  */
-@Log
+@Slf4j
 @Component
 @ServerEndpoint("/ws/mq/{id}")
 public class MqSocketServer {
@@ -49,7 +49,7 @@ public class MqSocketServer {
 
     @OnError
     public void onError(Throwable t) {
-        log.warning("RabbitMQ客户端异常");
+        log.error("RabbitMQ客户端异常");
         t.printStackTrace();
     }
 }

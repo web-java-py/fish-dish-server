@@ -4,86 +4,73 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;serverlog/sys-error.log&#10;#&#9;serverlog/sys-info.log&#10;#&#9;serverlog/sys-user.log">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2025_6_27_13_31__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverlog/sys-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverlog/sys-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-info.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverlog/sys-user.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-user.log" afterDir="false" />
+    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="去掉.idea配置">
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-framework/src/main/java/com/server/handler/MyMetaObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-framework/src/main/java/com/server/handler/MyMetaObjectHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="小气大方的阿俊 &lt;130641570+851543@users.noreply.github.com&gt;" />
-      </list>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/server-admin/src/main/resources/application-dev.yml" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="customMavenHome" value="D:\Maven\apache-maven-3.6.3" />
-        <option name="localRepository" value="D:\Maven\apache-maven-3.6.3\repository" />
-        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
-        <option name="userSettingsFile" value="D:\Maven\apache-maven-3.6.3\conf\settings.xml" />
+        <option name="localRepository" value="E:\idea\Java_Maven\apache-maven-3.5.4\repo" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../Java_Maven/apache-maven-3.5.4" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="E:\idea\Java_Maven\apache-maven-3.5.4\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
-}</component>
-  <component name="ProjectId" id="2ylphYGMVR6X54mv8EO5fnYqtY8" />
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2z4udUhg2iMJ66cZymyeur89p2B" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ServerApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "zbb",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/YCGSHou/fish-dish-server",
-    "settings.editor.selected.configurable": "MavenSettings"
-  }
-}]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\YCGSHou\fish-dish-server\server-agriculture\src\main\java\com\server\service\impl" />
-      <recent name="D:\YCGSHou\fish-dish-server\server-agriculture\src\main\java\com\server\service" />
-      <recent name="D:\YCGSHou\fish-dish-server\server-agriculture\src\main\java\com\server\mapper" />
-      <recent name="D:\YCGSHou\fish-dish-server\server-admin\src\main\java\com\server\controller\agriculture" />
-      <recent name="D:\YCGSHou\fish-dish-server\server-admin\src\main\resources" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\YCGSHou\fish-dish-server\server-admin\src\main\resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.server.domain.dto" />
-      <recent name="com.server.domain" />
-    </key>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15429688" />
+    <property name="project.structure.side.proportion" value="0.41319442" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
-    <configuration name="ServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.server.ServerApplication" />
+    <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="server-admin" />
       <extension name="coverage">
         <pattern>
@@ -91,91 +78,41 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.server.ServerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ServerApplication" />
+        <item itemvalue="Spring Boot.ServerApplication" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="" />
-      <created>1750419133909</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1750419133909</updated>
-    </task>
-    <task id="LOCAL-00001" summary="收获管理 样式有待修复">
-      <option name="closed" value="true" />
-      <created>1750946152968</created>
+    <task id="LOCAL-00001" summary="去掉.idea配置">
+      <created>1751002580950</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1750946152968</updated>
+      <updated>1751002580950</updated>
     </task>
-    <task id="LOCAL-00002" summary="收获管理 样式有待修复">
-      <option name="closed" value="true" />
-      <created>1750946201805</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1750946201805</updated>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="去掉.idea配置" />
+      <created>1751002761300</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751002761300</updated>
+      <workItem from="1751002765376" duration="291000" />
+      <workItem from="1751003071297" duration="1009000" />
+      <workItem from="1751004119272" duration="31000" />
     </task>
-    <task id="LOCAL-00003" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;serverlog/sys-error.log&#10;#&#9;serverlog/sys-info.log&#10;#&#9;serverlog/sys-user.log">
-      <option name="closed" value="true" />
-      <created>1751002443933</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1751002443933</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;serverlog/sys-error.log&#10;#&#9;serverlog/sys-info.log&#10;#&#9;serverlog/sys-user.log">
-      <option name="closed" value="true" />
-      <created>1751013205845</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1751013205845</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;serverlog/sys-error.log&#10;#&#9;serverlog/sys-info.log&#10;#&#9;serverlog/sys-user.log">
-      <option name="closed" value="true" />
-      <created>1751013230737</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1751013230737</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;serverlog/sys-error.log&#10;#&#9;serverlog/sys-info.log&#10;#&#9;serverlog/sys-user.log">
-      <option name="closed" value="true" />
-      <created>1751013240959</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1751013240959</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;serverlog/sys-error.log&#10;#&#9;serverlog/sys-info.log&#10;#&#9;serverlog/sys-user.log">
-      <option name="closed" value="true" />
-      <created>1751013255718</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1751013255718</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;serverlog/sys-error.log&#10;#&#9;serverlog/sys-info.log&#10;#&#9;serverlog/sys-user.log">
-      <option name="closed" value="true" />
-      <created>1751013267085</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1751013267085</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -188,7 +125,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="zbb" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -201,9 +138,21 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="配置mqtt" />
-    <MESSAGE value="收获管理 样式有待修复" />
-    <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;serverlog/sys-error.log&#10;#&#9;serverlog/sys-info.log&#10;#&#9;serverlog/sys-user.log" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;serverlog/sys-error.log&#10;#&#9;serverlog/sys-info.log&#10;#&#9;serverlog/sys-user.log" />
+    <MESSAGE value="去掉.idea配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="去掉.idea配置" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.springframework.beans.factory.BeanDefinitionStoreException" package="org.springframework.beans.factory" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/fish_dish_server$ServerApplication.ic" NAME="ServerApplication Coverage Results" MODIFIED="1750586508593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/fish_dish_server$Agriculture_BcosSDKTest.ic" NAME="Agriculture.BcosSDKTest Coverage Results" MODIFIED="1750751250882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
