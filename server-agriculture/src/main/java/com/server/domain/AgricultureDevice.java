@@ -56,10 +56,15 @@ public class AgricultureDevice extends BaseEntityPlus implements Serializable
     @ApiModelProperty(value="设备类型（传感器、控制器、网关等）")
     private String deviceTypeId;
 
-    /** 设备状态（0-离线，1-在线） */
+    /** 设备物理在线状态（0-离线，1-在线） */
     @TableField(value="status")
     @ApiModelProperty(value="设备状态（0-离线，1-在线）")
     private String status;
+
+    /** 用户控制状态设备状态（0-离线，1-在线） */
+    @TableField(value="control_status")
+    @ApiModelProperty(value="设备状态（0-离线，1-在线）")
+    private String controlStatus;
 
     /** 告警状态（0-正常，1-告警） */
     @TableField(value="alarm_status")

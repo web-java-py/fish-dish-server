@@ -33,38 +33,20 @@ public class SerialPortService {
 
     @PostConstruct
     public void init() {
-        log.info("Initializing Serial Port Service...");
+        log.info("正在初始化串口服务...");
         connect();
     }
 
     public void connect() {
-        log.info("Attempting to connect to serial port: {} with baud rate: {}", portName, baudRate);
+        log.info("正在尝试连接串口: {}，波特率: {}", portName, baudRate);
         commPort = SerialPort.getCommPort(portName);
         commPort.setBaudRate(baudRate);
 
         if (commPort.openPort()) {
-            log.info("Successfully opened port: {}", portName);
-            commPort.addDataListener(new SerialPortDataListener() {
-                @Override
-                public int getListeningEvents() {
-                    return SerialPort.LISTENING_EVENT_DATA_AVAILABLE;
-                }
-
-                @Override
-                public void serialEvent(SerialPortEvent event) {
-                    if (event.getEventType() != SerialPort.LISTENING_EVENT_DATA_AVAILABLE) {
-                        return;
-                    }
-                    byte[] newData = new byte[commPort.bytesAvailable()];
-                    int numRead = commPort.readBytes(newData, newData.length);
-                    log.debug("Read {} bytes from serial port.", numRead);
-                    // 将读取到的数据交给数据处理服务
-                    dataProcessingService.processAndStore(newData);
-                }
-            });
+            log.info("成功打开串口: {}", portName);
         } else {
-            log.error("Failed to open port: {}. Please check port name and permissions.", portName);
-            log.info("Available ports: {}", listPorts());
+            log.error("打开串口失败: {}。请检查串口名称和权限。", portName);
+            log.info("可用串口: {}", listPorts());
         }
     }
 
@@ -72,9 +54,9 @@ public class SerialPortService {
     public void disconnect() {
         if (commPort != null && commPort.isOpen()) {
             if (commPort.closePort()) {
-                log.info("Successfully closed port: {}", portName);
+                log.info("成功关闭串口: {}", portName);
             } else {
-                log.error("Failed to close port: {}", portName);
+                log.error("关闭串口失败: {}", portName);
             }
         }
     }
@@ -83,5 +65,65 @@ public class SerialPortService {
         return Arrays.stream(SerialPort.getCommPorts())
                 .map(SerialPort::getSystemPortName)
                 .collect(Collectors.toList());
+    }
+
+    /**
+     * 向串口写入数据
+     * @param data 要写入的数据
+     * @return 写入的字节数
+     */
+    public int writeToSerial(byte[] data) {
+        if (commPort != null && commPort.isOpen()) {
+            int bytesWritten = commPort.writeBytes(data, data.length);
+            log.debug("向串口写入 {} 字节", bytesWritten);
+            return bytesWritten;
+        } else {
+            log.error("串口未打开");
+            return -1;
+        }
+    }
+
+    /**
+     * 从串口读取数据
+     * @param maxBytes 最大读取字节数
+     * @return 读取的数据
+     */
+    public byte[] readFromSerial(int maxBytes) {
+        if (commPort != null && commPort.isOpen()) {
+            byte[] data = new byte[maxBytes];
+            int bytesRead = commPort.readBytes(data, Math.min(maxBytes, commPort.bytesAvailable()));
+            if (bytesRead > 0) {
+                byte[] result = new byte[bytesRead];
+                System.arraycopy(data, 0, result, 0, bytesRead);
+                log.debug("从串口读取 {} 字节", bytesRead);
+                return result;
+            }
+        } else {
+            log.error("串口未打开");
+        }
+        return new byte[0];
+    }
+
+    /**
+     * 检查串口是否已连接
+     * @return 是否已连接
+     */
+    public boolean isConnected() {
+        return commPort != null && commPort.isOpen();
+    }
+
+    /**
+     * 获取串口状态信息
+     * @return 状态信息
+     */
+    public String getPortStatus() {
+        if (commPort == null) {
+            return "NOT_INITIALIZED";
+        }
+        if (commPort.isOpen()) {
+            return "OPEN";
+        } else {
+            return "CLOSED";
+        }
     }
 } 
