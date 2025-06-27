@@ -39,7 +39,7 @@ public class IaPartitionFood implements Serializable {
 
     @ApiModelProperty(value = "食品质量（0 不及格、1 及格 2 优秀）", example = "1", required = true)
     @NotNull(message = "食品质量为空")
-    private Integer status;
+    private Long status;
     //备注
     @ApiModelProperty(value = "备注", example = "test", required = true)
     @NotBlank(message = "备注为空")

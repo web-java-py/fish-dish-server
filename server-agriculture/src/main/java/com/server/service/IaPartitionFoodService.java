@@ -63,15 +63,10 @@ public interface IaPartitionFoodService extends IService<IaPartitionFood>
      */
     public int deleteIaPartitionFoodById(String id);
 
-
-    List<IaPartitionFood> fy(IaPartitionFoodPageDTO baseDTO);
-
-
     /**
      * 新增采摘 生成二维码展示
      */
-//    List<IaPartitionFood> XzList(IaPartitionFood iaPartitionFood);
-
+    List<IaPartitionFood> fy(IaPartitionFoodPageDTO baseDTO);
 
 
 }

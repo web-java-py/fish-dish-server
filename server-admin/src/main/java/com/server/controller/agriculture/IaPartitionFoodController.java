@@ -108,15 +108,6 @@ public class IaPartitionFoodController extends BaseController
     /**
      * 新增采摘 生成二维码展示
      */
-//    @ApiOperation("分页列表")
-//    @GetMapping(value = "/page")
-//    public TableDataInfo page(IaPartitionFood iaPartitionFood) {
-//
-//
-//        startPage();
-//        List<IaPartitionFood> list = iaPartitionFoodService.XzList(iaPartitionFood);
-//        return getDataTable(list);
-//    }
     @ApiOperation("分页列表")
     @GetMapping(value = "/page")
     public TableDataInfo page(IaPartitionFoodPageDTO baseDTO) {
@@ -124,5 +115,4 @@ public class IaPartitionFoodController extends BaseController
         List<IaPartitionFood> list = iaPartitionFoodService.fy(baseDTO);
         return getDataTable(list);
     }
-
 }
