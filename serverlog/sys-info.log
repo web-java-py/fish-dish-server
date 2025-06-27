@@ -93320,3 +93320,74 @@ java.net.SocketException: Connection reset
 23:22:35.136 [pool-2-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,102] - 成功保存气象数据: AgricultureWeatherData(id=26879, deviceId=6, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0, collectTime=2025-06-26T23:22:35.126489900)
 23:22:35.136 [pool-2-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,106] - 气象数据成功发布到MQTT主题 /fish-dish/weather
 23:22:38.348 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+17:51:28.698 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.4.Final
+17:51:28.706 [main] INFO  c.s.ServerApplication - [logStarting,55] - Starting ServerApplication using Java 17.0.14 on bxwy with PID 15528 (D:\ZLXN\fish-dish-server\server-admin\target\classes started by bxwy in D:\ZLXN\fish-dish-server)
+17:51:28.707 [main] INFO  c.s.ServerApplication - [logStartupProfileInfo,640] - The following 2 profiles are active: "dev", "druid"
+17:51:31.102 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+17:51:31.103 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+17:51:31.104 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.102]
+17:51:31.231 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+17:51:32.287 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+17:51:35.247 [main] INFO  c.s.i.c.MqttConfig - [afterPropertiesSet,40] - MQTT配置初始化完成 - serverUri: tcp://localhost:1883, clientId: fish-dish-server, defaultTopic: /fish-dish/data
+17:51:35.460 [main] INFO  c.s.i.s.SerialPortService - [init,36] - 正在初始化串口服务...
+17:51:35.460 [main] INFO  c.s.i.s.SerialPortService - [connect,41] - 正在尝试连接串口: COM3，波特率: 9600
+17:51:35.482 [main] INFO  c.s.i.s.SerialPortService - [connect,49] - 可用串口: []
+17:51:35.486 [main] INFO  c.s.i.s.SensorCommunicationService - [init,63] - 正在初始化传感器通信服务...
+17:51:35.568 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+17:51:35.580 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+17:51:35.580 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+17:51:35.581 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+17:51:35.581 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+17:51:35.582 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+17:51:35.582 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+17:51:35.582 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@1b1434ce
+17:51:36.015 [main] INFO  c.s.i.c.MqttConfig - [mqttClientFactory,60] - 配置MQTT连接: serverUri=tcp://localhost:1883, username=guest, clientId=fish-dish-server
+17:51:36.031 [main] INFO  c.s.i.c.MqttConfig - [mqttOutboundChannel,81] - 创建MQTT出站通道: mqttOutboundChannel
+17:51:36.057 [main] INFO  c.s.i.c.MqttConfig - [mqttOutbound,101] - MQTT消息处理器配置完成: clientId=fish-dish-server_outbound_1751017896053, defaultTopic=/fish-dish/data
+17:51:37.245 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+17:51:37.348 [main] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+17:51:37.358 [main] INFO  c.s.ServerApplication - [logStarted,61] - Started ServerApplication in 8.963 seconds (JVM running for 9.599)
+17:51:37.361 [main] INFO  c.s.i.s.SensorCommunicationService - [onApplicationReady,74] - 应用程序已就绪，正在启动传感器通信...
+17:51:37.395 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 风向传感器 (ID: 1) 成功启动轮询任务。
+17:51:37.395 [pool-2-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-2-thread-1 正在启动，负责轮询传感器: 风向传感器 (ID: 1)
+17:51:37.395 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 风速传感器 (ID: 6) 成功启动轮询任务。
+17:51:37.395 [pool-2-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-2-thread-2 正在启动，负责轮询传感器: 风速传感器 (ID: 6)
+17:51:37.396 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 百叶箱多气象传感器 (ID: 7) 成功启动轮询任务。
+17:51:37.396 [pool-2-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-2-thread-3 正在启动，负责轮询传感器: 百叶箱多气象传感器 (ID: 7)
+17:52:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+17:52:00.008 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+17:52:27.702 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:52:27.774 [http-nio-8080-exec-1] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+17:52:30.553 [http-nio-8080-exec-4] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+17:52:34.826 [http-nio-8080-exec-8] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：undefined建立连接
+17:52:36.639 [schedule-pool-1] INFO  sys-user - [run,56] - [127.0.0.1]内网IP[admin][Success][登录成功]
+17:52:40.359 [http-nio-8080-exec-11] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:undefined
+17:52:44.818 [http-nio-8080-exec-12] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+17:52:50.091 [schedule-pool-1] INFO  sys-user - [run,56] - [127.0.0.1]内网IP[admin][Success][登录成功]
+17:53:00.012 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+17:53:00.026 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+17:53:00.459 [http-nio-8080-exec-20] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+17:53:04.667 [http-nio-8080-exec-21] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+17:53:17.847 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+17:53:18.207 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+17:53:18.207 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+17:53:18.207 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+17:53:18.207 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,32] - ====关闭后台任务任务线程池====
+17:53:18.208 [SpringApplicationShutdownHook] INFO  c.s.i.s.SensorCommunicationService - [destroy,84] - 正在关闭传感器通信服务...
+17:53:18.208 [SpringApplicationShutdownHook] INFO  c.s.i.s.SensorCommunicationService - [stopAllSensorTasks,167] - 正在尝试停止所有 3 个传感器任务...
+17:53:18.208 [SpringApplicationShutdownHook] INFO  c.s.i.s.SensorCommunicationService - [stopAllSensorTasks,176] - 已发送停止指令给所有传感器任务。
+17:53:18.208 [pool-2-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,239] - 传感器 风速传感器 (ID: 6) 的轮询任务被主动中断，线程即将退出。
+17:53:18.208 [pool-2-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,239] - 传感器 风向传感器 (ID: 1) 的轮询任务被主动中断，线程即将退出。
+17:53:18.208 [pool-2-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,239] - 传感器 百叶箱多气象传感器 (ID: 7) 的轮询任务被主动中断，线程即将退出。
+17:53:18.208 [pool-2-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,256] - 传感器 风速传感器 (ID: 6) 的轮询任务已完全停止。
+17:53:18.208 [pool-2-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,256] - 传感器 风向传感器 (ID: 1) 的轮询任务已完全停止。
+17:53:18.208 [pool-2-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,256] - 传感器 百叶箱多气象传感器 (ID: 7) 的轮询任务已完全停止。
+17:53:18.212 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+17:53:18.216 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
