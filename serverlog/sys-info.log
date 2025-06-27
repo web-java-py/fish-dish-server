@@ -1345,3 +1345,334 @@ java.net.SocketException: Connection reset
 	at java.base/java.lang.Thread.run(Thread.java:842)
 13:30:26.116 [lettuce-eventExecutorLoop-1-22] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
 13:30:26.123 [lettuce-nioEventLoop-4-21] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+16:41:47.768 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.4.Final
+16:41:47.771 [main] INFO  c.s.ServerApplication - [logStarting,55] - Starting ServerApplication using Java 17.0.12 on zhubb with PID 16500 (D:\YCGSHou\fish-dish-server\server-admin\target\classes started by 18319 in D:\YCGSHou\fish-dish-server)
+16:41:47.771 [main] INFO  c.s.ServerApplication - [logStartupProfileInfo,640] - The following 2 profiles are active: "dev", "druid"
+16:41:50.233 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+16:41:50.234 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+16:41:50.235 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.102]
+16:41:50.313 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+16:41:51.333 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+16:41:54.007 [main] INFO  c.s.i.s.SerialPortService - [init,36] - Initializing Serial Port Service...
+16:41:54.007 [main] INFO  c.s.i.s.SerialPortService - [connect,41] - Attempting to connect to serial port: COM3 with baud rate: 9600
+16:41:54.016 [main] INFO  c.s.i.s.SerialPortService - [connect,67] - Available ports: []
+16:41:54.089 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+16:41:54.110 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+16:41:54.111 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+16:41:54.114 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+16:41:54.115 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+16:41:54.115 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+16:41:54.115 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+16:41:54.115 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@3e0eb917
+16:41:55.320 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+16:41:55.421 [main] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+16:41:55.431 [main] INFO  c.s.ServerApplication - [logStarted,61] - Started ServerApplication in 7.883 seconds (JVM running for 8.16)
+16:42:59.032 [lettuce-nioEventLoop-4-1] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:258)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+16:42:59.085 [lettuce-eventExecutorLoop-1-20] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+16:42:59.089 [lettuce-nioEventLoop-4-2] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+16:44:05.042 [lettuce-nioEventLoop-4-2] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:258)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+16:44:05.082 [lettuce-eventExecutorLoop-1-21] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+16:44:05.085 [lettuce-nioEventLoop-4-3] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+16:45:11.010 [lettuce-nioEventLoop-4-3] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:258)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+16:45:11.081 [lettuce-eventExecutorLoop-1-22] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+16:45:11.089 [lettuce-nioEventLoop-4-4] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+16:45:44.092 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+16:45:45.118 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+16:45:45.118 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+16:45:45.118 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+16:45:45.118 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,32] - ====关闭后台任务任务线程池====
+16:45:45.125 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+16:45:45.132 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+16:48:51.196 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.4.Final
+16:48:51.199 [main] INFO  c.s.ServerApplication - [logStarting,55] - Starting ServerApplication using Java 17.0.12 on zhubb with PID 33848 (D:\YCGSHou\fish-dish-server\server-admin\target\classes started by 18319 in D:\YCGSHou\fish-dish-server)
+16:48:51.199 [main] INFO  c.s.ServerApplication - [logStartupProfileInfo,640] - The following 2 profiles are active: "dev", "druid"
+16:48:53.004 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+16:48:53.005 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+16:48:53.006 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.102]
+16:48:53.086 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+16:48:54.173 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+16:48:56.710 [main] INFO  c.s.i.s.SerialPortService - [init,36] - Initializing Serial Port Service...
+16:48:56.710 [main] INFO  c.s.i.s.SerialPortService - [connect,41] - Attempting to connect to serial port: COM3 with baud rate: 9600
+16:48:56.722 [main] INFO  c.s.i.s.SerialPortService - [connect,67] - Available ports: []
+16:48:56.814 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+16:48:56.833 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+16:48:56.833 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+16:48:56.837 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+16:48:56.838 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+16:48:56.838 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+16:48:56.838 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+16:48:56.839 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@62291850
+16:48:58.065 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+16:48:58.154 [main] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+16:48:58.154 [main] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+16:48:58.155 [main] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+16:48:58.155 [main] INFO  sys-user - [shutdownAsyncManager,32] - ====关闭后台任务任务线程池====
+16:48:58.158 [main] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+16:48:58.163 [main] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+16:48:58.395 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Pausing ProtocolHandler ["http-nio-8080"]
+16:48:58.395 [main] INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+16:48:58.399 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Stopping ProtocolHandler ["http-nio-8080"]
+16:48:58.401 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Destroying ProtocolHandler ["http-nio-8080"]
+16:49:29.639 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.4.Final
+16:49:29.644 [main] INFO  c.s.ServerApplication - [logStarting,55] - Starting ServerApplication using Java 17.0.12 on zhubb with PID 62576 (D:\YCGSHou\fish-dish-server\server-admin\target\classes started by 18319 in D:\YCGSHou\fish-dish-server)
+16:49:29.645 [main] INFO  c.s.ServerApplication - [logStartupProfileInfo,640] - The following 2 profiles are active: "dev", "druid"
+16:49:31.439 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+16:49:31.441 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+16:49:31.441 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.102]
+16:49:31.526 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+16:49:32.598 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+16:49:35.109 [main] INFO  c.s.i.s.SerialPortService - [init,36] - Initializing Serial Port Service...
+16:49:35.109 [main] INFO  c.s.i.s.SerialPortService - [connect,41] - Attempting to connect to serial port: COM3 with baud rate: 9600
+16:49:35.119 [main] INFO  c.s.i.s.SerialPortService - [connect,67] - Available ports: []
+16:49:35.201 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+16:49:35.223 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+16:49:35.224 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+16:49:35.227 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+16:49:35.229 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+16:49:35.229 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+16:49:35.229 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+16:49:35.229 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@6a4ba6f4
+16:49:36.514 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+16:49:36.597 [main] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+16:49:36.597 [main] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+16:49:36.598 [main] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+16:49:36.598 [main] INFO  sys-user - [shutdownAsyncManager,32] - ====关闭后台任务任务线程池====
+16:49:36.600 [main] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+16:49:36.604 [main] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+16:49:36.840 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Pausing ProtocolHandler ["http-nio-8080"]
+16:49:36.840 [main] INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+16:49:36.844 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Stopping ProtocolHandler ["http-nio-8080"]
+16:49:36.847 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Destroying ProtocolHandler ["http-nio-8080"]
+16:49:58.038 [main] INFO  c.s.ServerApplication - [logStarting,55] - Starting ServerApplication using Java 17.0.12 on zhubb with PID 52476 (D:\YCGSHou\fish-dish-server\server-admin\target\classes started by 18319 in D:\YCGSHou\fish-dish-server)
+16:49:58.038 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.4.Final
+16:49:58.040 [main] INFO  c.s.ServerApplication - [logStartupProfileInfo,640] - The following 2 profiles are active: "dev", "druid"
+16:49:59.800 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+16:49:59.801 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+16:49:59.803 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.102]
+16:49:59.888 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+16:50:01.176 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+16:50:03.869 [main] INFO  c.s.i.s.SerialPortService - [init,36] - Initializing Serial Port Service...
+16:50:03.869 [main] INFO  c.s.i.s.SerialPortService - [connect,41] - Attempting to connect to serial port: COM3 with baud rate: 9600
+16:50:03.880 [main] INFO  c.s.i.s.SerialPortService - [connect,67] - Available ports: []
+16:50:03.965 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+16:50:03.982 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+16:50:03.983 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+16:50:03.985 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+16:50:03.986 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+16:50:03.986 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+16:50:03.987 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+16:50:03.987 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@340ef431
+16:50:05.174 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+16:50:05.261 [main] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+16:50:05.268 [main] INFO  c.s.ServerApplication - [logStarted,61] - Started ServerApplication in 7.462 seconds (JVM running for 7.742)
+16:50:51.264 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:50:51.344 [http-nio-8080-exec-1] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+16:50:55.073 [http-nio-8080-exec-10] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+16:50:58.072 [http-nio-8080-exec-5] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：undefined建立连接
+16:51:28.131 [http-nio-8080-exec-3] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：undefined的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+16:51:40.102 [schedule-pool-1] INFO  sys-user - [run,56] - [127.0.0.1]内网IP[admin][Success][登录成功]
+16:51:42.074 [http-nio-8080-exec-8] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:undefined
+16:51:44.913 [http-nio-8080-exec-24] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+16:52:14.944 [http-nio-8080-exec-19] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+16:52:30.636 [schedule-pool-1] INFO  sys-user - [run,56] - [127.0.0.1]内网IP[admin][Success][登录成功]
+16:52:35.224 [http-nio-8080-exec-21] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+16:52:37.918 [http-nio-8080-exec-22] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+16:53:07.962 [http-nio-8080-exec-31] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+16:53:38.149 [http-nio-8080-exec-41] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+16:53:58.424 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+16:53:59.105 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+16:53:59.105 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+16:53:59.106 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+16:53:59.106 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,32] - ====关闭后台任务任务线程池====
+16:53:59.109 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+16:53:59.113 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+16:54:37.894 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.4.Final
+16:54:37.899 [main] INFO  c.s.ServerApplication - [logStarting,55] - Starting ServerApplication using Java 17.0.12 on zhubb with PID 44432 (D:\YCGSHou\fish-dish-server\server-admin\target\classes started by 18319 in D:\YCGSHou\fish-dish-server)
+16:54:37.900 [main] INFO  c.s.ServerApplication - [logStartupProfileInfo,640] - The following 2 profiles are active: "dev", "druid"
+16:54:39.617 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+16:54:39.619 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+16:54:39.619 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.102]
+16:54:39.698 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+16:54:40.863 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+16:54:43.441 [main] INFO  c.s.i.s.SerialPortService - [init,36] - Initializing Serial Port Service...
+16:54:43.442 [main] INFO  c.s.i.s.SerialPortService - [connect,41] - Attempting to connect to serial port: COM3 with baud rate: 9600
+16:54:43.454 [main] INFO  c.s.i.s.SerialPortService - [connect,67] - Available ports: []
+16:54:43.569 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+16:54:43.594 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+16:54:43.594 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+16:54:43.597 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+16:54:43.599 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+16:54:43.599 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+16:54:43.599 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+16:54:43.600 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7c5c53e5
+16:54:44.797 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+16:54:44.879 [main] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+16:54:44.887 [main] INFO  c.s.ServerApplication - [logStarted,61] - Started ServerApplication in 7.219 seconds (JVM running for 7.5)
+16:54:44.986 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:54:45.029 [http-nio-8080-exec-1] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+16:54:45.029 [http-nio-8080-exec-4] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+16:54:45.037 [http-nio-8080-exec-2] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+16:54:45.053 [http-nio-8080-exec-6] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+16:54:45.191 [http-nio-8080-exec-7] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+16:54:47.175 [http-nio-8080-exec-8] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+16:54:49.284 [http-nio-8080-exec-9] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+16:54:49.284 [http-nio-8080-exec-12] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+16:54:49.284 [http-nio-8080-exec-13] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+16:54:49.284 [http-nio-8080-exec-14] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+16:54:49.284 [http-nio-8080-exec-10] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+16:54:49.284 [http-nio-8080-exec-11] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+16:54:49.844 [http-nio-8080-exec-15] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+16:54:55.559 [http-nio-8080-exec-21] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+16:54:56.075 [http-nio-8080-exec-22] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+16:55:12.699 [http-nio-8080-exec-28] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+16:55:13.066 [http-nio-8080-exec-30] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+16:55:13.073 [http-nio-8080-exec-31] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+16:55:13.658 [http-nio-8080-exec-32] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+16:55:44.140 [http-nio-8080-exec-38] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+16:56:06.656 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+16:56:07.096 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+16:56:07.096 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+16:56:07.096 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+16:56:07.096 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,32] - ====关闭后台任务任务线程池====
+16:56:07.100 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+16:56:07.104 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+16:56:09.251 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.4.Final
+16:56:09.252 [main] INFO  c.s.ServerApplication - [logStarting,55] - Starting ServerApplication using Java 17.0.12 on zhubb with PID 57172 (D:\YCGSHou\fish-dish-server\server-admin\target\classes started by 18319 in D:\YCGSHou\fish-dish-server)
+16:56:09.254 [main] INFO  c.s.ServerApplication - [logStartupProfileInfo,640] - The following 2 profiles are active: "dev", "druid"
+16:56:11.064 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+16:56:11.066 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+16:56:11.067 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.102]
+16:56:11.146 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+16:56:12.380 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+16:56:15.210 [main] INFO  c.s.i.s.SerialPortService - [init,36] - Initializing Serial Port Service...
+16:56:15.211 [main] INFO  c.s.i.s.SerialPortService - [connect,41] - Attempting to connect to serial port: COM3 with baud rate: 9600
+16:56:15.222 [main] INFO  c.s.i.s.SerialPortService - [connect,67] - Available ports: []
+16:56:15.309 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+16:56:15.327 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+16:56:15.327 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+16:56:15.328 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+16:56:15.329 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+16:56:15.329 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+16:56:15.329 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+16:56:15.330 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5eb054
+16:56:16.586 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+16:56:16.681 [main] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+16:56:16.690 [main] INFO  c.s.ServerApplication - [logStarted,61] - Started ServerApplication in 7.686 seconds (JVM running for 7.967)
+16:56:16.707 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:56:16.746 [http-nio-8080-exec-1] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+16:56:16.746 [http-nio-8080-exec-2] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+16:56:18.164 [http-nio-8080-exec-4] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+16:56:18.178 [http-nio-8080-exec-3] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+16:56:20.085 [http-nio-8080-exec-8] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+16:56:20.085 [http-nio-8080-exec-6] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+16:56:20.086 [http-nio-8080-exec-7] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+16:56:20.086 [http-nio-8080-exec-5] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+16:56:20.609 [http-nio-8080-exec-9] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+16:56:50.617 [http-nio-8080-exec-18] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+16:57:21.140 [http-nio-8080-exec-19] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+16:57:49.091 [lettuce-nioEventLoop-4-1] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:258)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+16:57:49.110 [lettuce-eventExecutorLoop-1-28] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+16:57:49.115 [lettuce-nioEventLoop-4-2] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+16:57:51.139 [http-nio-8080-exec-20] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
