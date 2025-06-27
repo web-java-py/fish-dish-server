@@ -4,14 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="去掉.idea配置">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="bug修复">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureWaterQualityData.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureWaterQualityData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureWeatherData.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureWeatherData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/config/MqttConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/config/MqttConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/controller/MqttTestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/controller/MqttTestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/controller/SensorCommunicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/controller/SensorCommunicationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/gateway/MqttGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/gateway/MqttGateway.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/service/DataProcessingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/service/DataProcessingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureDeviceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureDeviceServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureWeatherDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureWeatherDataServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-framework/src/main/java/com/server/handler/MyMetaObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-framework/src/main/java/com/server/handler/MyMetaObjectHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/service/SensorCommunicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/service/SensorCommunicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/service/SerialPortService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/service/SerialPortService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/task/AgricultureDeviceStatusCheckTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/task/AgricultureDeviceStatusCheckTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-info.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-user.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-user.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +74,7 @@
     "RequestMappingsPanelWidth1": "75",
     "Spring Boot.ServerApplication.executor": "Run",
     "git-widget-placeholder": "bxwy",
-    "last_opened_file_path": "D:/ZLXN/fish-dish-web",
+    "last_opened_file_path": "D:/ZLXN/fish-dish-iot",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "项目",
     "project.structure.proportion": "0.0",
@@ -114,7 +121,15 @@
       <workItem from="1751003071297" duration="1009000" />
       <workItem from="1751004119272" duration="31000" />
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="bug修复">
+      <option name="closed" value="true" />
+      <created>1751020840992</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1751020840992</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,7 +161,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="去掉.idea配置" />
     <MESSAGE value="修复本地" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复本地" />
+    <MESSAGE value="bug修复" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug修复" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -22590,3 +22590,34 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'collect_time' in 'f
 	... 21 common frames omitted
 18:39:34.119 [nioEventLoopGroup-4-2] ERROR o.f.b.s.n.ChannelHandler - [userEventTriggered,58] -  idle state event:READER_IDLE connect192.168.31.210:20200 long time Inactive, disconnect
 18:39:34.120 [nioEventLoopGroup-4-1] ERROR o.f.b.s.n.ChannelHandler - [userEventTriggered,58] -  idle state event:READER_IDLE connect192.168.31.210:20201 long time Inactive, disconnect
+18:52:02.460 [main] ERROR c.s.i.s.SerialPortService - [connect,48] - 打开串口失败: COM3。请检查串口名称和权限。
+18:52:04.990 [pool-10-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+18:52:05.191 [pool-10-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+18:52:05.191 [pool-10-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+18:52:05.392 [pool-10-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+18:52:05.392 [pool-10-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+18:52:05.594 [pool-10-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+18:52:10.193 [pool-10-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+18:52:10.395 [pool-10-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+18:52:10.395 [pool-10-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+18:52:10.596 [pool-10-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+18:52:10.596 [pool-10-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+18:52:10.798 [pool-10-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+18:52:15.396 [pool-10-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+18:52:15.597 [pool-10-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+18:52:15.597 [pool-10-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+18:52:15.798 [pool-10-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+18:52:15.798 [pool-10-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+18:52:15.998 [pool-10-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+18:52:20.597 [pool-10-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+18:52:20.799 [pool-10-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+18:52:20.799 [pool-10-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+18:52:20.999 [pool-10-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+18:52:20.999 [pool-10-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+18:52:21.200 [pool-10-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+18:52:25.801 [pool-10-thread-1] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+18:52:26.002 [pool-10-thread-1] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+18:52:26.002 [pool-10-thread-3] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+18:52:26.203 [pool-10-thread-3] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开
+18:52:26.203 [pool-10-thread-2] ERROR c.s.i.s.SerialPortService - [writeToSerial,81] - 串口未打开
+18:52:26.405 [pool-10-thread-2] ERROR c.s.i.s.SerialPortService - [readFromSerial,102] - 串口未打开

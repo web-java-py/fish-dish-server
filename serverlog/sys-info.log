@@ -1732,3 +1732,585 @@ java.net.SocketException: Connection reset
 18:40:37.472 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
 18:40:37.480 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=60, deviceId=6, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
 18:40:37.480 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/windspeed
+18:40:41.829 [pool-24-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+18:40:42.206 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:40:42.221 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风向传感器 (ID: 1) 的数据: {pastureId=1, wind_direction=南风, type=weather, batchId=137, deviceId=1, deviceName=风向传感器, direction_angle=180}
+18:40:42.225 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:40:42.239 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=61, deviceId=1, pastureId=1, batchId=137, windSpeed=0.0, windDirection=南风, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:40:42.240 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/winddirection
+18:40:42.463 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:40:42.481 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 百叶箱多气象传感器 (ID: 7) 的数据: {pm25=1382, pastureId=1, temperature=27.1, noise=30.0, pm10=0, humidity=52.8, light_intensity=277, type=weather, batchId=137, deviceId=7, deviceName=百叶箱多气象传感器}
+18:40:42.484 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:40:42.494 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=62, deviceId=7, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=27.1, humidity=52.8, lightIntensity=277.0, rainfall=0.0, airPressure=0.0)
+18:40:42.494 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/weather
+18:40:42.698 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:40:42.711 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风速传感器 (ID: 6) 的数据: {wind_speed=0.0, type=weather, batchId=137, deviceId=6, deviceName=风速传感器, pastureId=1}
+18:40:42.714 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:40:42.722 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=63, deviceId=6, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:40:42.722 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/windspeed
+18:40:43.794 [pool-20-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+18:40:43.989 [http-nio-8080-exec-69] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+18:40:46.875 [pool-22-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+18:40:47.445 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:40:47.454 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风向传感器 (ID: 1) 的数据: {pastureId=1, wind_direction=南风, type=weather, batchId=137, deviceId=1, deviceName=风向传感器, direction_angle=180}
+18:40:47.458 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:40:47.466 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=64, deviceId=1, pastureId=1, batchId=137, windSpeed=0.0, windDirection=南风, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:40:47.467 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/winddirection
+18:40:47.699 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:40:47.709 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 百叶箱多气象传感器 (ID: 7) 的数据: {pm25=1381, pastureId=1, temperature=27.1, noise=30.0, pm10=0, humidity=52.8, light_intensity=277, type=weather, batchId=137, deviceId=7, deviceName=百叶箱多气象传感器}
+18:40:47.712 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:40:47.721 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=65, deviceId=7, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=27.1, humidity=52.8, lightIntensity=277.0, rainfall=0.0, airPressure=0.0)
+18:40:47.721 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/weather
+18:40:47.928 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:40:47.938 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风速传感器 (ID: 6) 的数据: {wind_speed=0.0, type=weather, batchId=137, deviceId=6, deviceName=风速传感器, pastureId=1}
+18:40:47.942 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:40:47.954 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=66, deviceId=6, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:40:47.954 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/windspeed
+18:40:51.824 [pool-24-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+18:40:52.230 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+18:48:48.334 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+18:48:48.337 [main] INFO  c.s.ServerApplication - [logStarting,55] - Starting ServerApplication using Java 17.0.14 on bxwy with PID 45680 (D:\ZLXN\fish-dish-server\server-admin\target\classes started by bxwy in D:\ZLXN\fish-dish-server)
+18:48:48.337 [main] INFO  c.s.ServerApplication - [logStartupProfileInfo,686] - The following 2 profiles are active: "dev", "druid"
+18:48:50.492 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+18:48:50.493 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+18:48:50.494 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.102]
+18:48:50.660 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+18:48:51.787 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+18:48:52.981 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/ca.crt failed, trying to load from the resourcePath /D:/ZLXN/fish-dish-server/server-admin/target/classes/
+18:48:52.982 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.crt failed, trying to load from the resourcePath /D:/ZLXN/fish-dish-server/server-admin/target/classes/
+18:48:52.983 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.key failed, trying to load from the resourcePath /D:/ZLXN/fish-dish-server/server-admin/target/classes/
+18:48:53.003 [main] INFO  o.f.b.s.n.ConnectionManager - [<init>,88] -  all connections, size: 2, list: [ConnectionInfo{host='192.168.31.210', port=20201}, ConnectionInfo{host='192.168.31.210', port=20200}]
+18:48:53.003 [main] INFO  o.f.b.s.n.NetworkImp - [start,167] - 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+
+18:48:53.003 [main] INFO  o.f.b.s.n.NetworkImp - [start,174] - ====> <==== STEP1-1: Load certificates for ecdsa context success..., start connManager with ECDSA sslContext
+18:48:53.052 [main] INFO  o.f.b.s.n.ConnectionManager - [initSslContext,238] -  build ECDSA ssl context with configured certificates 
+18:48:55.521 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20201
+18:48:55.521 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20200
+18:48:55.521 [nioEventLoopGroup-4-1] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20201, ctx: 397655493
+18:48:55.521 [nioEventLoopGroup-4-2] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20200, ctx: 1135794461
+18:48:55.578 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":0,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+18:48:55.578 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":1,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+18:48:55.579 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+18:48:55.579 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+18:48:55.583 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20201, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+18:48:55.583 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20200, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+18:48:55.614 [main] INFO  o.f.b.s.c.ChannelImp - [checkConnectionsToStartPeriodTask,126] -  Connect to  nodes: 192.168.31.210:20200, 192.168.31.210:20201, 
+18:48:55.614 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,77] - create BcosSDK, start channel success, cryptoType: 0
+18:48:55.617 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,87] - create BcosSDK, start channel succ, channelProcessorThreadSize: 16, receiptProcessorThreadSize: 16
+18:48:55.624 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerBlockNumberNotifyHandler,260] - registerBlockNumberNotifyHandler
+18:48:55.625 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerTransactionNotifyHandler,282] - registerTransactionNotifyHandler
+18:48:55.648 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,98] - create BcosSDK, create groupManagerService success
+18:48:56.051 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+18:48:56.056 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+18:48:56.057 [main] INFO  o.f.b.s.amop.AmopImp - [start,188] - amop module started
+18:48:56.057 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+18:48:56.057 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,103] - create BcosSDK, create Amop success
+18:48:56.104 [main] INFO  o.f.b.s.c.Client - [build,114] - build client success for group 1, crypto type 0
+18:48:56.104 [main] INFO  o.f.bcos.sdk.BcosSDK - [getClient,178] - create client for group 1 success
+18:48:57.746 [main] INFO  c.s.i.c.MqttConfig - [afterPropertiesSet,40] - MQTT配置初始化完成 - serverUri: tcp://localhost:1883, clientId: fish-dish-server, defaultTopic: /fish-dish/data
+18:48:57.925 [main] INFO  c.s.i.s.SerialPortService - [init,36] - 正在初始化串口服务...
+18:48:57.926 [main] INFO  c.s.i.s.SerialPortService - [connect,41] - 正在尝试连接串口: COM3，波特率: 9600
+18:48:57.993 [main] INFO  c.s.i.s.SerialPortService - [connect,46] - 成功打开串口: COM3
+18:48:57.996 [main] INFO  c.s.i.s.SensorCommunicationService - [init,63] - 正在初始化传感器通信服务...
+18:48:58.080 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+18:48:58.092 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+18:48:58.093 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+18:48:58.093 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+18:48:58.094 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+18:48:58.094 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+18:48:58.094 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+18:48:58.094 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@32647dde
+18:48:58.508 [main] INFO  c.s.i.c.MqttConfig - [mqttClientFactory,60] - 配置MQTT连接: serverUri=tcp://localhost:1883, username=guest, clientId=fish-dish-server
+18:48:58.521 [main] INFO  c.s.i.c.MqttConfig - [mqttOutboundChannel,81] - 创建MQTT出站通道: mqttOutboundChannel
+18:48:58.545 [main] INFO  c.s.i.c.MqttConfig - [mqttOutbound,101] - MQTT消息处理器配置完成: clientId=fish-dish-server_outbound_1751021338542, defaultTopic=/fish-dish/data
+18:48:59.769 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+18:49:00.382 [main] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+18:49:00.393 [main] INFO  c.s.ServerApplication - [logStarted,61] - Started ServerApplication in 12.351 seconds (JVM running for 13.135)
+18:49:00.395 [main] INFO  c.s.i.s.SensorCommunicationService - [onApplicationReady,74] - 应用程序已就绪，正在启动传感器通信...
+18:49:00.430 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 风向传感器 (ID: 1) 成功启动轮询任务。
+18:49:00.430 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-10-thread-1 正在启动，负责轮询传感器: 风向传感器 (ID: 1)
+18:49:00.430 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 风速传感器 (ID: 6) 成功启动轮询任务。
+18:49:00.430 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-10-thread-2 正在启动，负责轮询传感器: 风速传感器 (ID: 6)
+18:49:00.430 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 百叶箱多气象传感器 (ID: 7) 成功启动轮询任务。
+18:49:00.432 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-10-thread-3 正在启动，负责轮询传感器: 百叶箱多气象传感器 (ID: 7)
+18:49:00.643 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:00.678 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风向传感器 (ID: 1) 的数据: {pastureId=1, wind_direction=南风, type=weather, batchId=137, deviceId=1, deviceName=风向传感器, direction_angle=180}
+18:49:00.702 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:00.818 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=67, deviceId=1, pastureId=1, batchId=137, windSpeed=0.0, windDirection=南风, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:49:01.150 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/winddirection
+18:49:01.357 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:01.370 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 百叶箱多气象传感器 (ID: 7) 的数据: {pm25=1340, pastureId=1, temperature=27.5, noise=30.0, pm10=0, humidity=55.8, light_intensity=274, type=weather, batchId=137, deviceId=7, deviceName=百叶箱多气象传感器}
+18:49:01.375 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:01.386 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=68, deviceId=7, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=27.5, humidity=55.8, lightIntensity=274.0, rainfall=0.0, airPressure=0.0)
+18:49:01.387 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/weather
+18:49:01.595 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:01.610 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风速传感器 (ID: 6) 的数据: {wind_speed=0.0, type=weather, batchId=137, deviceId=6, deviceName=风速传感器, pastureId=1}
+18:49:01.617 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:01.630 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=69, deviceId=6, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:49:01.630 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/windspeed
+18:49:06.356 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:06.369 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风向传感器 (ID: 1) 的数据: {pastureId=1, wind_direction=南风, type=weather, batchId=137, deviceId=1, deviceName=风向传感器, direction_angle=180}
+18:49:06.375 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:06.386 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=70, deviceId=1, pastureId=1, batchId=137, windSpeed=0.0, windDirection=南风, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:49:06.388 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/winddirection
+18:49:06.594 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:06.603 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 百叶箱多气象传感器 (ID: 7) 的数据: {pm25=1340, pastureId=1, temperature=27.5, noise=30.0, pm10=0, humidity=55.8, light_intensity=274, type=weather, batchId=137, deviceId=7, deviceName=百叶箱多气象传感器}
+18:49:06.608 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:06.616 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=71, deviceId=7, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=27.5, humidity=55.8, lightIntensity=274.0, rainfall=0.0, airPressure=0.0)
+18:49:06.617 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/weather
+18:49:06.838 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:06.850 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风速传感器 (ID: 6) 的数据: {wind_speed=0.0, type=weather, batchId=137, deviceId=6, deviceName=风速传感器, pastureId=1}
+18:49:06.856 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:06.866 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=72, deviceId=6, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:49:06.867 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/windspeed
+18:49:11.597 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:11.609 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风向传感器 (ID: 1) 的数据: {pastureId=1, wind_direction=南风, type=weather, batchId=137, deviceId=1, deviceName=风向传感器, direction_angle=180}
+18:49:11.614 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:11.626 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=73, deviceId=1, pastureId=1, batchId=137, windSpeed=0.0, windDirection=南风, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:49:11.626 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/winddirection
+18:49:11.832 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:11.845 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 百叶箱多气象传感器 (ID: 7) 的数据: {pm25=1339, pastureId=1, temperature=27.6, noise=30.0, pm10=0, humidity=55.8, light_intensity=274, type=weather, batchId=137, deviceId=7, deviceName=百叶箱多气象传感器}
+18:49:11.851 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:11.861 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=74, deviceId=7, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=27.6, humidity=55.8, lightIntensity=274.0, rainfall=0.0, airPressure=0.0)
+18:49:11.862 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/weather
+18:49:12.074 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:12.086 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风速传感器 (ID: 6) 的数据: {wind_speed=0.0, type=weather, batchId=137, deviceId=6, deviceName=风速传感器, pastureId=1}
+18:49:12.091 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:12.102 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=75, deviceId=6, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:49:12.103 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/windspeed
+18:49:16.833 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:16.845 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风向传感器 (ID: 1) 的数据: {pastureId=1, wind_direction=西南风, type=weather, batchId=137, deviceId=1, deviceName=风向传感器, direction_angle=225}
+18:49:16.849 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:16.859 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=76, deviceId=1, pastureId=1, batchId=137, windSpeed=0.0, windDirection=西南风, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:49:16.860 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/winddirection
+18:49:17.069 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:17.078 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 百叶箱多气象传感器 (ID: 7) 的数据: {pm25=1338, pastureId=1, temperature=27.6, noise=30.0, pm10=0, humidity=55.8, light_intensity=274, type=weather, batchId=137, deviceId=7, deviceName=百叶箱多气象传感器}
+18:49:17.084 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:17.091 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=77, deviceId=7, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=27.6, humidity=55.8, lightIntensity=274.0, rainfall=0.0, airPressure=0.0)
+18:49:17.092 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/weather
+18:49:17.307 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:17.319 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风速传感器 (ID: 6) 的数据: {wind_speed=0.0, type=weather, batchId=137, deviceId=6, deviceName=风速传感器, pastureId=1}
+18:49:17.325 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:17.335 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=78, deviceId=6, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:49:17.335 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/windspeed
+18:49:22.066 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:22.078 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风向传感器 (ID: 1) 的数据: {pastureId=1, wind_direction=南风, type=weather, batchId=137, deviceId=1, deviceName=风向传感器, direction_angle=180}
+18:49:22.083 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:22.093 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=79, deviceId=1, pastureId=1, batchId=137, windSpeed=0.0, windDirection=南风, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:49:22.094 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/winddirection
+18:49:22.298 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:22.307 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 百叶箱多气象传感器 (ID: 7) 的数据: {pm25=1338, pastureId=1, temperature=27.6, noise=30.0, pm10=0, humidity=55.9, light_intensity=274, type=weather, batchId=137, deviceId=7, deviceName=百叶箱多气象传感器}
+18:49:22.311 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:22.319 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=80, deviceId=7, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=27.6, humidity=55.9, lightIntensity=274.0, rainfall=0.0, airPressure=0.0)
+18:49:22.321 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/weather
+18:49:22.542 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:22.553 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风速传感器 (ID: 6) 的数据: {wind_speed=0.0, type=weather, batchId=137, deviceId=6, deviceName=风速传感器, pastureId=1}
+18:49:22.558 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:22.569 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=81, deviceId=6, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:49:22.569 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/windspeed
+18:49:27.299 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:27.312 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风向传感器 (ID: 1) 的数据: {pastureId=1, wind_direction=南风, type=weather, batchId=137, deviceId=1, deviceName=风向传感器, direction_angle=180}
+18:49:27.319 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:27.330 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=82, deviceId=1, pastureId=1, batchId=137, windSpeed=0.0, windDirection=南风, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:49:27.330 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/winddirection
+18:49:27.536 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:27.548 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 百叶箱多气象传感器 (ID: 7) 的数据: {pm25=1339, pastureId=1, temperature=27.6, noise=30.0, pm10=0, humidity=55.9, light_intensity=274, type=weather, batchId=137, deviceId=7, deviceName=百叶箱多气象传感器}
+18:49:27.552 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:27.563 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=83, deviceId=7, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=27.6, humidity=55.9, lightIntensity=274.0, rainfall=0.0, airPressure=0.0)
+18:49:27.563 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/weather
+18:49:27.775 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:27.787 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风速传感器 (ID: 6) 的数据: {wind_speed=0.0, type=weather, batchId=137, deviceId=6, deviceName=风速传感器, pastureId=1}
+18:49:27.791 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:27.802 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=84, deviceId=6, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:49:27.803 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/windspeed
+18:49:32.557 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:32.568 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风向传感器 (ID: 1) 的数据: {pastureId=1, wind_direction=南风, type=weather, batchId=137, deviceId=1, deviceName=风向传感器, direction_angle=180}
+18:49:32.573 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:32.583 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=85, deviceId=1, pastureId=1, batchId=137, windSpeed=0.0, windDirection=南风, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:49:32.584 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/winddirection
+18:49:32.789 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:32.802 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 百叶箱多气象传感器 (ID: 7) 的数据: {pm25=1340, pastureId=1, temperature=27.6, noise=30.0, pm10=0, humidity=55.9, light_intensity=274, type=weather, batchId=137, deviceId=7, deviceName=百叶箱多气象传感器}
+18:49:32.806 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:32.816 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=86, deviceId=7, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=27.6, humidity=55.9, lightIntensity=274.0, rainfall=0.0, airPressure=0.0)
+18:49:32.817 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/weather
+18:49:33.022 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:33.034 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风速传感器 (ID: 6) 的数据: {wind_speed=0.0, type=weather, batchId=137, deviceId=6, deviceName=风速传感器, pastureId=1}
+18:49:33.039 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:33.050 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=87, deviceId=6, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:49:33.051 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/windspeed
+18:49:37.791 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:37.803 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风向传感器 (ID: 1) 的数据: {pastureId=1, wind_direction=南风, type=weather, batchId=137, deviceId=1, deviceName=风向传感器, direction_angle=180}
+18:49:37.808 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:37.818 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=88, deviceId=1, pastureId=1, batchId=137, windSpeed=0.0, windDirection=南风, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:49:37.818 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/winddirection
+18:49:38.023 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:38.037 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 百叶箱多气象传感器 (ID: 7) 的数据: {pm25=1339, pastureId=1, temperature=27.6, noise=30.0, pm10=0, humidity=55.9, light_intensity=274, type=weather, batchId=137, deviceId=7, deviceName=百叶箱多气象传感器}
+18:49:38.041 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:38.052 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=89, deviceId=7, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=27.6, humidity=55.9, lightIntensity=274.0, rainfall=0.0, airPressure=0.0)
+18:49:38.053 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/weather
+18:49:38.258 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:38.268 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风速传感器 (ID: 6) 的数据: {wind_speed=0.0, type=weather, batchId=137, deviceId=6, deviceName=风速传感器, pastureId=1}
+18:49:38.273 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:38.282 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=90, deviceId=6, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:49:38.283 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/windspeed
+18:49:43.024 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:43.036 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风向传感器 (ID: 1) 的数据: {pastureId=1, wind_direction=南风, type=weather, batchId=137, deviceId=1, deviceName=风向传感器, direction_angle=180}
+18:49:43.040 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:43.050 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=91, deviceId=1, pastureId=1, batchId=137, windSpeed=0.0, windDirection=南风, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:49:43.050 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/winddirection
+18:49:43.258 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:43.279 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 百叶箱多气象传感器 (ID: 7) 的数据: {pm25=1340, pastureId=1, temperature=27.6, noise=30.0, pm10=0, humidity=55.8, light_intensity=274, type=weather, batchId=137, deviceId=7, deviceName=百叶箱多气象传感器}
+18:49:43.283 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:43.294 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=92, deviceId=7, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=27.6, humidity=55.8, lightIntensity=274.0, rainfall=0.0, airPressure=0.0)
+18:49:43.295 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/weather
+18:49:43.502 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:43.515 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风速传感器 (ID: 6) 的数据: {wind_speed=0.0, type=weather, batchId=137, deviceId=6, deviceName=风速传感器, pastureId=1}
+18:49:43.522 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:43.533 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=93, deviceId=6, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:49:43.534 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/windspeed
+18:49:43.961 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18:49:44.036 [http-nio-8080-exec-1] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+18:49:48.258 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:48.270 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风向传感器 (ID: 1) 的数据: {pastureId=1, wind_direction=南风, type=weather, batchId=137, deviceId=1, deviceName=风向传感器, direction_angle=180}
+18:49:48.273 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:48.287 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=94, deviceId=1, pastureId=1, batchId=137, windSpeed=0.0, windDirection=南风, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:49:48.288 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/winddirection
+18:49:48.503 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:48.515 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 百叶箱多气象传感器 (ID: 7) 的数据: {pm25=1341, pastureId=1, temperature=27.6, noise=30.0, pm10=0, humidity=55.9, light_intensity=274, type=weather, batchId=137, deviceId=7, deviceName=百叶箱多气象传感器}
+18:49:48.519 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:48.529 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=95, deviceId=7, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=27.6, humidity=55.9, lightIntensity=274.0, rainfall=0.0, airPressure=0.0)
+18:49:48.530 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/weather
+18:49:48.740 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:48.752 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风速传感器 (ID: 6) 的数据: {wind_speed=0.0, type=weather, batchId=137, deviceId=6, deviceName=风速传感器, pastureId=1}
+18:49:48.787 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:48.796 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=96, deviceId=6, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:49:48.797 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/windspeed
+18:49:53.494 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:53.506 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风向传感器 (ID: 1) 的数据: {pastureId=1, wind_direction=南风, type=weather, batchId=137, deviceId=1, deviceName=风向传感器, direction_angle=180}
+18:49:53.511 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:53.520 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=97, deviceId=1, pastureId=1, batchId=137, windSpeed=0.0, windDirection=南风, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:49:53.521 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/winddirection
+18:49:53.737 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:53.749 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 百叶箱多气象传感器 (ID: 7) 的数据: {pm25=1341, pastureId=1, temperature=27.6, noise=30.0, pm10=0, humidity=55.9, light_intensity=274, type=weather, batchId=137, deviceId=7, deviceName=百叶箱多气象传感器}
+18:49:53.755 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:53.765 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=98, deviceId=7, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=27.6, humidity=55.9, lightIntensity=274.0, rainfall=0.0, airPressure=0.0)
+18:49:53.765 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/weather
+18:49:54.002 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:54.014 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风速传感器 (ID: 6) 的数据: {wind_speed=0.0, type=weather, batchId=137, deviceId=6, deviceName=风速传感器, pastureId=1}
+18:49:54.018 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:54.029 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=99, deviceId=6, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:49:54.029 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/windspeed
+18:49:58.725 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:58.737 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风向传感器 (ID: 1) 的数据: {pastureId=1, wind_direction=南风, type=weather, batchId=137, deviceId=1, deviceName=风向传感器, direction_angle=180}
+18:49:58.742 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:58.752 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=100, deviceId=1, pastureId=1, batchId=137, windSpeed=0.0, windDirection=南风, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:49:58.753 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/winddirection
+18:49:58.974 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:58.985 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 百叶箱多气象传感器 (ID: 7) 的数据: {pm25=1341, pastureId=1, temperature=27.6, noise=30.0, pm10=0, humidity=55.9, light_intensity=274, type=weather, batchId=137, deviceId=7, deviceName=百叶箱多气象传感器}
+18:49:58.989 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:58.999 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=101, deviceId=7, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=27.6, humidity=55.9, lightIntensity=274.0, rainfall=0.0, airPressure=0.0)
+18:49:59.000 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/weather
+18:49:59.234 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:49:59.246 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风速传感器 (ID: 6) 的数据: {wind_speed=0.0, type=weather, batchId=137, deviceId=6, deviceName=风速传感器, pastureId=1}
+18:49:59.251 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:49:59.260 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=102, deviceId=6, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:49:59.261 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/windspeed
+18:50:00.006 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+18:50:00.010 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+18:50:03.962 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:50:03.975 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风向传感器 (ID: 1) 的数据: {pastureId=1, wind_direction=南风, type=weather, batchId=137, deviceId=1, deviceName=风向传感器, direction_angle=180}
+18:50:03.979 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:50:03.988 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=103, deviceId=1, pastureId=1, batchId=137, windSpeed=0.0, windDirection=南风, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:50:03.989 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/winddirection
+18:50:04.211 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:50:04.221 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 百叶箱多气象传感器 (ID: 7) 的数据: {pm25=1340, pastureId=1, temperature=27.6, noise=30.0, pm10=0, humidity=55.9, light_intensity=274, type=weather, batchId=137, deviceId=7, deviceName=百叶箱多气象传感器}
+18:50:04.225 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:50:04.232 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=104, deviceId=7, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=27.6, humidity=55.9, lightIntensity=274.0, rainfall=0.0, airPressure=0.0)
+18:50:04.232 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/weather
+18:50:04.476 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:50:04.488 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风速传感器 (ID: 6) 的数据: {wind_speed=0.0, type=weather, batchId=137, deviceId=6, deviceName=风速传感器, pastureId=1}
+18:50:04.491 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:50:04.501 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=105, deviceId=6, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:50:04.501 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/windspeed
+18:50:09.196 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:50:09.208 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风向传感器 (ID: 1) 的数据: {pastureId=1, wind_direction=南风, type=weather, batchId=137, deviceId=1, deviceName=风向传感器, direction_angle=180}
+18:50:09.213 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:50:09.223 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=106, deviceId=1, pastureId=1, batchId=137, windSpeed=0.0, windDirection=南风, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:50:09.224 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/winddirection
+18:50:09.438 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:50:09.448 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 百叶箱多气象传感器 (ID: 7) 的数据: {pm25=1340, pastureId=1, temperature=27.6, noise=30.0, pm10=0, humidity=55.9, light_intensity=274, type=weather, batchId=137, deviceId=7, deviceName=百叶箱多气象传感器}
+18:50:09.453 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:50:09.463 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=107, deviceId=7, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=27.6, humidity=55.9, lightIntensity=274.0, rainfall=0.0, airPressure=0.0)
+18:50:09.463 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/weather
+18:50:09.708 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:50:09.719 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风速传感器 (ID: 6) 的数据: {wind_speed=0.0, type=weather, batchId=137, deviceId=6, deviceName=风速传感器, pastureId=1}
+18:50:09.723 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:50:09.732 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=108, deviceId=6, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:50:09.732 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/windspeed
+18:50:14.030 [http-nio-8080-exec-11] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+18:50:14.429 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:50:14.440 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风向传感器 (ID: 1) 的数据: {pastureId=1, wind_direction=南风, type=weather, batchId=137, deviceId=1, deviceName=风向传感器, direction_angle=180}
+18:50:14.443 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:50:14.451 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=109, deviceId=1, pastureId=1, batchId=137, windSpeed=0.0, windDirection=南风, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:50:14.451 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/winddirection
+18:50:14.670 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:50:14.682 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 百叶箱多气象传感器 (ID: 7) 的数据: {pm25=1339, pastureId=1, temperature=27.7, noise=30.0, pm10=0, humidity=56.0, light_intensity=274, type=weather, batchId=137, deviceId=7, deviceName=百叶箱多气象传感器}
+18:50:14.686 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:50:14.696 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=110, deviceId=7, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=27.7, humidity=56.0, lightIntensity=274.0, rainfall=0.0, airPressure=0.0)
+18:50:14.697 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/weather
+18:50:14.938 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:50:14.947 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风速传感器 (ID: 6) 的数据: {wind_speed=0.0, type=weather, batchId=137, deviceId=6, deviceName=风速传感器, pastureId=1}
+18:50:14.952 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:50:14.961 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=111, deviceId=6, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:50:14.962 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/windspeed
+18:50:19.657 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:50:19.669 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风向传感器 (ID: 1) 的数据: {pastureId=1, wind_direction=南风, type=weather, batchId=137, deviceId=1, deviceName=风向传感器, direction_angle=180}
+18:50:19.673 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:50:19.681 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=112, deviceId=1, pastureId=1, batchId=137, windSpeed=0.0, windDirection=南风, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:50:19.682 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/winddirection
+18:50:19.903 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:50:19.913 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 百叶箱多气象传感器 (ID: 7) 的数据: {pm25=1340, pastureId=1, temperature=27.6, noise=30.0, pm10=0, humidity=56.1, light_intensity=274, type=weather, batchId=137, deviceId=7, deviceName=百叶箱多气象传感器}
+18:50:19.917 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:50:19.926 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=113, deviceId=7, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=27.6, humidity=56.1, lightIntensity=274.0, rainfall=0.0, airPressure=0.0)
+18:50:19.927 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/weather
+18:50:20.167 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:50:20.178 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风速传感器 (ID: 6) 的数据: {wind_speed=0.0, type=weather, batchId=137, deviceId=6, deviceName=风速传感器, pastureId=1}
+18:50:20.181 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:50:20.191 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=114, deviceId=6, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:50:20.191 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/windspeed
+18:50:24.887 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:50:24.900 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风向传感器 (ID: 1) 的数据: {pastureId=1, wind_direction=南风, type=weather, batchId=137, deviceId=1, deviceName=风向传感器, direction_angle=180}
+18:50:24.904 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:50:24.914 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=115, deviceId=1, pastureId=1, batchId=137, windSpeed=0.0, windDirection=南风, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:50:24.915 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/winddirection
+18:50:25.132 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:50:25.143 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 百叶箱多气象传感器 (ID: 7) 的数据: {pm25=1339, pastureId=1, temperature=27.7, noise=30.0, pm10=0, humidity=56.2, light_intensity=271, type=weather, batchId=137, deviceId=7, deviceName=百叶箱多气象传感器}
+18:50:25.148 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:50:25.156 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=116, deviceId=7, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=27.7, humidity=56.2, lightIntensity=271.0, rainfall=0.0, airPressure=0.0)
+18:50:25.157 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/weather
+18:50:25.401 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:50:25.411 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风速传感器 (ID: 6) 的数据: {wind_speed=0.0, type=weather, batchId=137, deviceId=6, deviceName=风速传感器, pastureId=1}
+18:50:25.415 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:50:25.424 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=117, deviceId=6, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:50:25.424 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/windspeed
+18:50:30.120 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:50:30.130 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风向传感器 (ID: 1) 的数据: {pastureId=1, wind_direction=南风, type=weather, batchId=137, deviceId=1, deviceName=风向传感器, direction_angle=180}
+18:50:30.134 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:50:30.146 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=118, deviceId=1, pastureId=1, batchId=137, windSpeed=0.0, windDirection=南风, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:50:30.147 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/winddirection
+18:50:30.362 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:50:30.373 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 百叶箱多气象传感器 (ID: 7) 的数据: {pm25=1340, pastureId=1, temperature=27.7, noise=30.0, pm10=0, humidity=56.4, light_intensity=271, type=weather, batchId=137, deviceId=7, deviceName=百叶箱多气象传感器}
+18:50:30.377 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:50:30.387 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=119, deviceId=7, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=27.7, humidity=56.4, lightIntensity=271.0, rainfall=0.0, airPressure=0.0)
+18:50:30.387 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/weather
+18:50:30.632 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:50:30.642 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风速传感器 (ID: 6) 的数据: {wind_speed=0.0, type=weather, batchId=137, deviceId=6, deviceName=风速传感器, pastureId=1}
+18:50:30.646 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:50:30.655 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=120, deviceId=6, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:50:30.656 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/windspeed
+18:50:35.351 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:50:35.362 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风向传感器 (ID: 1) 的数据: {pastureId=1, wind_direction=南风, type=weather, batchId=137, deviceId=1, deviceName=风向传感器, direction_angle=180}
+18:50:35.365 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:50:35.375 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=121, deviceId=1, pastureId=1, batchId=137, windSpeed=0.0, windDirection=南风, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:50:35.375 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/winddirection
+18:50:35.594 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:50:35.605 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 百叶箱多气象传感器 (ID: 7) 的数据: {pm25=1339, pastureId=1, temperature=27.7, noise=30.0, pm10=0, humidity=56.7, light_intensity=271, type=weather, batchId=137, deviceId=7, deviceName=百叶箱多气象传感器}
+18:50:35.610 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:50:35.619 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=122, deviceId=7, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=27.7, humidity=56.7, lightIntensity=271.0, rainfall=0.0, airPressure=0.0)
+18:50:35.620 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/weather
+18:50:35.861 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:50:35.873 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风速传感器 (ID: 6) 的数据: {wind_speed=0.0, type=weather, batchId=137, deviceId=6, deviceName=风速传感器, pastureId=1}
+18:50:35.877 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:50:35.886 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=123, deviceId=6, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:50:35.887 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/windspeed
+18:50:40.580 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:50:40.590 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风向传感器 (ID: 1) 的数据: {pastureId=1, wind_direction=南风, type=weather, batchId=137, deviceId=1, deviceName=风向传感器, direction_angle=180}
+18:50:40.594 [pool-10-thread-1] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:50:40.602 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=124, deviceId=1, pastureId=1, batchId=137, windSpeed=0.0, windDirection=南风, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:50:40.602 [pool-10-thread-1] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/winddirection
+18:50:40.824 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:50:40.836 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 百叶箱多气象传感器 (ID: 7) 的数据: {pm25=1338, pastureId=1, temperature=27.7, noise=30.0, pm10=0, humidity=56.8, light_intensity=271, type=weather, batchId=137, deviceId=7, deviceName=百叶箱多气象传感器}
+18:50:40.839 [pool-10-thread-3] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:50:40.849 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=125, deviceId=7, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=27.7, humidity=56.8, lightIntensity=271.0, rainfall=0.0, airPressure=0.0)
+18:50:40.850 [pool-10-thread-3] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/weather
+18:50:41.092 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+18:50:41.103 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,224] - 成功接收并解析来自 风速传感器 (ID: 6) 的数据: {wind_speed=0.0, type=weather, batchId=137, deviceId=6, deviceName=风速传感器, pastureId=1}
+18:50:41.107 [pool-10-thread-2] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+18:50:41.114 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,118] - 成功保存气象数据: AgricultureWeatherData(id=126, deviceId=6, pastureId=1, batchId=137, windSpeed=0.0, windDirection=, temperature=0.0, humidity=0.0, lightIntensity=0.0, rainfall=0.0, airPressure=0.0)
+18:50:41.115 [pool-10-thread-2] INFO  c.s.i.s.DataProcessingService - [processAndStore,121] - 气象数据成功发布到MQTT主题 /fish-dish/windspeed
+18:50:44.044 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+18:51:46.507 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+18:51:46.514 [main] INFO  c.s.ServerApplication - [logStarting,55] - Starting ServerApplication using Java 17.0.14 on bxwy with PID 57372 (D:\ZLXN\fish-dish-server\server-admin\target\classes started by bxwy in D:\ZLXN\fish-dish-server)
+18:51:46.515 [main] INFO  c.s.ServerApplication - [logStartupProfileInfo,686] - The following 2 profiles are active: "dev", "druid"
+18:51:48.675 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+18:51:48.677 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+18:51:48.677 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.102]
+18:51:48.857 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+18:51:50.032 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+18:51:51.259 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/ca.crt failed, trying to load from the resourcePath /D:/ZLXN/fish-dish-server/server-admin/target/classes/
+18:51:51.261 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.crt failed, trying to load from the resourcePath /D:/ZLXN/fish-dish-server/server-admin/target/classes/
+18:51:51.261 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.key failed, trying to load from the resourcePath /D:/ZLXN/fish-dish-server/server-admin/target/classes/
+18:51:51.277 [main] INFO  o.f.b.s.n.ConnectionManager - [<init>,88] -  all connections, size: 2, list: [ConnectionInfo{host='192.168.31.210', port=20201}, ConnectionInfo{host='192.168.31.210', port=20200}]
+18:51:51.277 [main] INFO  o.f.b.s.n.NetworkImp - [start,167] - 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+
+18:51:51.279 [main] INFO  o.f.b.s.n.NetworkImp - [start,174] - ====> <==== STEP1-1: Load certificates for ecdsa context success..., start connManager with ECDSA sslContext
+18:51:51.338 [main] INFO  o.f.b.s.n.ConnectionManager - [initSslContext,238] -  build ECDSA ssl context with configured certificates 
+18:51:59.886 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20201
+18:51:59.886 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20200
+18:51:59.887 [nioEventLoopGroup-4-2] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20200, ctx: 903056949
+18:51:59.887 [nioEventLoopGroup-4-1] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20201, ctx: 200540523
+18:51:59.955 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":0,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+18:51:59.955 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":1,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+18:51:59.955 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+18:51:59.955 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+18:51:59.960 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20200, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+18:51:59.960 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20201, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+18:51:59.978 [main] INFO  o.f.b.s.c.ChannelImp - [checkConnectionsToStartPeriodTask,126] -  Connect to  nodes: 192.168.31.210:20200, 192.168.31.210:20201, 
+18:51:59.978 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,77] - create BcosSDK, start channel success, cryptoType: 0
+18:51:59.986 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,87] - create BcosSDK, start channel succ, channelProcessorThreadSize: 16, receiptProcessorThreadSize: 16
+18:51:59.993 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerBlockNumberNotifyHandler,260] - registerBlockNumberNotifyHandler
+18:51:59.994 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerTransactionNotifyHandler,282] - registerTransactionNotifyHandler
+18:52:00.020 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,98] - create BcosSDK, create groupManagerService success
+18:52:00.447 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+18:52:00.451 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+18:52:00.451 [main] INFO  o.f.b.s.amop.AmopImp - [start,188] - amop module started
+18:52:00.451 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+18:52:00.452 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,103] - create BcosSDK, create Amop success
+18:52:00.506 [main] INFO  o.f.b.s.c.Client - [build,114] - build client success for group 1, crypto type 0
+18:52:00.506 [main] INFO  o.f.bcos.sdk.BcosSDK - [getClient,178] - create client for group 1 success
+18:52:02.189 [main] INFO  c.s.i.c.MqttConfig - [afterPropertiesSet,40] - MQTT配置初始化完成 - serverUri: tcp://localhost:1883, clientId: fish-dish-server, defaultTopic: /fish-dish/data
+18:52:02.368 [main] INFO  c.s.i.s.SerialPortService - [init,36] - 正在初始化串口服务...
+18:52:02.369 [main] INFO  c.s.i.s.SerialPortService - [connect,41] - 正在尝试连接串口: COM3，波特率: 9600
+18:52:02.463 [main] INFO  c.s.i.s.SerialPortService - [connect,49] - 可用串口: []
+18:52:02.466 [main] INFO  c.s.i.s.SensorCommunicationService - [init,63] - 正在初始化传感器通信服务...
+18:52:02.548 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+18:52:02.560 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+18:52:02.561 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+18:52:02.561 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+18:52:02.562 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+18:52:02.562 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+18:52:02.562 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+18:52:02.562 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@6ff5eeed
+18:52:02.977 [main] INFO  c.s.i.c.MqttConfig - [mqttClientFactory,60] - 配置MQTT连接: serverUri=tcp://localhost:1883, username=guest, clientId=fish-dish-server
+18:52:02.991 [main] INFO  c.s.i.c.MqttConfig - [mqttOutboundChannel,81] - 创建MQTT出站通道: mqttOutboundChannel
+18:52:03.025 [main] INFO  c.s.i.c.MqttConfig - [mqttOutbound,101] - MQTT消息处理器配置完成: clientId=fish-dish-server_outbound_1751021523022, defaultTopic=/fish-dish/data
+18:52:04.255 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+18:52:04.939 [main] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+18:52:04.950 [main] INFO  c.s.ServerApplication - [logStarted,61] - Started ServerApplication in 18.714 seconds (JVM running for 19.546)
+18:52:04.953 [main] INFO  c.s.i.s.SensorCommunicationService - [onApplicationReady,74] - 应用程序已就绪，正在启动传感器通信...
+18:52:04.990 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 风向传感器 (ID: 1) 成功启动轮询任务。
+18:52:04.990 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-10-thread-1 正在启动，负责轮询传感器: 风向传感器 (ID: 1)
+18:52:04.990 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 风速传感器 (ID: 6) 成功启动轮询任务。
+18:52:04.990 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-10-thread-2 正在启动，负责轮询传感器: 风速传感器 (ID: 6)
+18:52:04.990 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 百叶箱多气象传感器 (ID: 7) 成功启动轮询任务。
+18:52:04.990 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-10-thread-3 正在启动，负责轮询传感器: 百叶箱多气象传感器 (ID: 7)
+18:52:12.700 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18:52:29.598 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+23:10:07.260 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+23:10:07.266 [main] INFO  c.s.ServerApplication - [logStarting,55] - Starting ServerApplication using Java 17.0.14 on bxwy with PID 32468 (D:\ZLXN\fish-dish-server\server-admin\target\classes started by bxwy in D:\ZLXN\fish-dish-server)
+23:10:07.267 [main] INFO  c.s.ServerApplication - [logStartupProfileInfo,686] - The following 2 profiles are active: "dev", "druid"
+23:10:09.329 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+23:10:09.330 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+23:10:09.330 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.102]
+23:10:09.492 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+23:10:10.643 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+23:10:11.824 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/ca.crt failed, trying to load from the resourcePath /D:/ZLXN/fish-dish-server/server-admin/target/classes/
+23:10:11.825 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.crt failed, trying to load from the resourcePath /D:/ZLXN/fish-dish-server/server-admin/target/classes/
+23:10:11.825 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.key failed, trying to load from the resourcePath /D:/ZLXN/fish-dish-server/server-admin/target/classes/
+23:10:11.839 [main] INFO  o.f.b.s.n.ConnectionManager - [<init>,88] -  all connections, size: 2, list: [ConnectionInfo{host='192.168.31.210', port=20201}, ConnectionInfo{host='192.168.31.210', port=20200}]
+23:10:11.840 [main] INFO  o.f.b.s.n.NetworkImp - [start,167] - 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+
+23:10:11.840 [main] INFO  o.f.b.s.n.NetworkImp - [start,174] - ====> <==== STEP1-1: Load certificates for ecdsa context success..., start connManager with ECDSA sslContext
+23:10:11.885 [main] INFO  o.f.b.s.n.ConnectionManager - [initSslContext,238] -  build ECDSA ssl context with configured certificates 
+23:10:13.347 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20201
+23:10:13.348 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20200
+23:10:13.348 [nioEventLoopGroup-4-1] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20201, ctx: 1547026509
+23:10:13.348 [nioEventLoopGroup-4-2] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20200, ctx: 537388900
+23:10:13.402 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":1,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+23:10:13.402 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":0,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+23:10:13.404 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+23:10:13.404 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+23:10:13.409 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20200, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+23:10:13.409 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20201, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+23:10:13.446 [main] INFO  o.f.b.s.c.ChannelImp - [checkConnectionsToStartPeriodTask,126] -  Connect to  nodes: 192.168.31.210:20200, 192.168.31.210:20201, 
+23:10:13.446 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,77] - create BcosSDK, start channel success, cryptoType: 0
+23:10:13.449 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,87] - create BcosSDK, start channel succ, channelProcessorThreadSize: 16, receiptProcessorThreadSize: 16
+23:10:13.457 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerBlockNumberNotifyHandler,260] - registerBlockNumberNotifyHandler
+23:10:13.457 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerTransactionNotifyHandler,282] - registerTransactionNotifyHandler
+23:10:13.481 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,98] - create BcosSDK, create groupManagerService success
+23:10:13.869 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+23:10:13.873 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+23:10:13.873 [main] INFO  o.f.b.s.amop.AmopImp - [start,188] - amop module started
+23:10:13.873 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+23:10:13.873 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,103] - create BcosSDK, create Amop success
+23:10:13.918 [main] INFO  o.f.b.s.c.Client - [build,114] - build client success for group 1, crypto type 0
+23:10:13.919 [main] INFO  o.f.bcos.sdk.BcosSDK - [getClient,178] - create client for group 1 success
+23:10:15.668 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+23:10:15.678 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+23:10:15.678 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+23:10:15.678 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+23:10:15.680 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+23:10:15.680 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+23:10:15.680 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+23:10:15.680 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@771c4015
+23:10:17.360 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+23:10:17.956 [main] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+23:10:17.967 [main] INFO  c.s.ServerApplication - [logStarted,61] - Started ServerApplication in 11.007 seconds (JVM running for 11.652)
+23:10:51.078 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:10:51.134 [http-nio-8080-exec-1] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+23:10:57.196 [schedule-pool-1] INFO  sys-user - [run,56] - [127.0.0.1]内网IP[admin][Success][登录成功]
+23:11:13.534 [http-nio-8080-exec-21] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+23:11:13.587 [pool-18-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+23:11:15.759 [http-nio-8080-exec-30] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+23:11:15.775 [pool-20-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+23:11:21.149 [http-nio-8080-exec-37] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:11:23.602 [pool-18-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+23:11:25.780 [pool-20-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+23:11:33.597 [pool-18-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+23:11:35.775 [pool-20-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+23:11:43.589 [pool-18-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+23:11:45.776 [pool-20-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+23:11:51.327 [http-nio-8080-exec-38] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:11:53.588 [pool-18-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+23:11:55.775 [pool-20-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+23:12:03.588 [pool-18-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+23:12:05.775 [pool-20-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+23:12:13.588 [pool-18-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+23:12:15.775 [pool-20-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+23:12:18.079 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
