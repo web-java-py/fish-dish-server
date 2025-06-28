@@ -60,7 +60,7 @@ public class AgricultureWaterQualityDataServiceImpl extends ServiceImpl<Agricult
     @Override
     public int insertAgricultureWaterQualityData(AgricultureWaterQualityData agricultureWaterQualityData)
     {
-        agricultureWaterQualityData.setCreateTime(LocalDateTime.now());
+
         return agricultureWaterQualityDataMapper.insert(agricultureWaterQualityData);
     }
 
@@ -73,7 +73,6 @@ public class AgricultureWaterQualityDataServiceImpl extends ServiceImpl<Agricult
     @Override
     public int updateAgricultureWaterQualityData(AgricultureWaterQualityData agricultureWaterQualityData)
     {
-        agricultureWaterQualityData.setUpdateTime(LocalDateTime.now());
         return updateById(agricultureWaterQualityData) ? 1 : 0;
     }
 

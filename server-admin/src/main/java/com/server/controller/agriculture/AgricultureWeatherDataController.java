@@ -38,7 +38,7 @@ public class AgricultureWeatherDataController extends BaseController
     /**
      * 查询气象数据列表
      */
-    @PreAuthorize("@ss.hasPermi('server:data:list')")
+    @PreAuthorize("@ss.hasPermi('agriculture:weather:list')")
     @GetMapping("/list")
     public TableDataInfo list(AgricultureWeatherData agricultureWeatherData)
     {
@@ -50,7 +50,7 @@ public class AgricultureWeatherDataController extends BaseController
     /**
      * 导出气象数据列表
      */
-    @PreAuthorize("@ss.hasPermi('server:data:export')")
+    @PreAuthorize("@ss.hasPermi('agriculture:weather:export')")
     @Log(title = "气象数据", businessType = BusinessType.EXPORT)
     @PostMapping("/export")
     public void export(HttpServletResponse response, AgricultureWeatherData agricultureWeatherData)
@@ -63,7 +63,7 @@ public class AgricultureWeatherDataController extends BaseController
     /**
      * 获取气象数据详细信息
      */
-    @PreAuthorize("@ss.hasPermi('server:data:query')")
+    @PreAuthorize("@ss.hasPermi('agriculture:weather:query')")
     @GetMapping(value = "/{id}")
     public AjaxResult getInfo(@PathVariable("id") Long id)
     {
@@ -73,7 +73,7 @@ public class AgricultureWeatherDataController extends BaseController
     /**
      * 新增气象数据
      */
-    @PreAuthorize("@ss.hasPermi('server:data:add')")
+    @PreAuthorize("@ss.hasPermi('agriculture:weather:add')")
     @Log(title = "气象数据", businessType = BusinessType.INSERT)
     @PostMapping
     public AjaxResult add(@RequestBody AgricultureWeatherData agricultureWeatherData)
@@ -84,7 +84,7 @@ public class AgricultureWeatherDataController extends BaseController
     /**
      * 修改气象数据
      */
-    @PreAuthorize("@ss.hasPermi('server:data:edit')")
+    @PreAuthorize("@ss.hasPermi('agriculture:weather:edit')")
     @Log(title = "气象数据", businessType = BusinessType.UPDATE)
     @PutMapping
     public AjaxResult edit(@RequestBody AgricultureWeatherData agricultureWeatherData)
@@ -95,7 +95,7 @@ public class AgricultureWeatherDataController extends BaseController
     /**
      * 删除气象数据
      */
-    @PreAuthorize("@ss.hasPermi('server:data:remove')")
+    @PreAuthorize("@ss.hasPermi('agriculture:weather:remove')")
     @Log(title = "气象数据", businessType = BusinessType.DELETE)
 	@DeleteMapping("/{ids}")
     public AjaxResult remove(@PathVariable Long[] ids)
