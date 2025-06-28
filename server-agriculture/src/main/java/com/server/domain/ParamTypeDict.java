@@ -1,5 +1,6 @@
 package com.server.domain;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import lombok.Data;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
@@ -26,7 +27,7 @@ public class ParamTypeDict implements Serializable  {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value="id")
+    @TableId(value="id",type = IdType.AUTO)
     @ApiModelProperty(value="主键ID")
     private Long id;
 
@@ -37,5 +38,9 @@ public class ParamTypeDict implements Serializable  {
     @TableField(value="param_type_cn")
     @ApiModelProperty(value="参数中文名")
     private String paramTypeCn;
+
+    @TableField(value = "remark")
+    @ApiModelProperty(value = "备注")
+    private String remark;
 
 }
