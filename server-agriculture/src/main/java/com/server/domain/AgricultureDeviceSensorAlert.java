@@ -77,9 +77,9 @@ public class AgricultureDeviceSensorAlert extends BaseEntityPlus implements Seri
     @ApiModelProperty(value="设备类型")
     private String deviceType;
 
-    @TableField(value="address")
-    @ApiModelProperty(value="设备位置")
-    private String address;
+    @TableField(value="block_address")
+    @ApiModelProperty(value="合约地址")
+    private String blockAddress;
 
     @TableField(value="alert_time")
     @ApiModelProperty(value="预警时间")

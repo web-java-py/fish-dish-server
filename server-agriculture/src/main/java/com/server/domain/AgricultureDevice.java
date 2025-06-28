@@ -88,7 +88,7 @@ public class AgricultureDevice extends BaseEntityPlus implements Serializable
 
     /** 区块地址 */
     @TableField(value="block_address")
-    @ApiModelProperty(value="区块地址")
+    @ApiModelProperty(value="合约地址")
     private String blockAddress;
 
     /** 传感器指令 */
