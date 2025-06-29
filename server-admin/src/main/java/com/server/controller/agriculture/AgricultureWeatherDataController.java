@@ -1,19 +1,13 @@
 package com.server.controller.agriculture;
 
 import java.util.List;
+import java.util.Map;
 import javax.servlet.http.HttpServletResponse;
 
 import com.server.domain.AgricultureWeatherData;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import com.server.annotation.Log;
 import com.server.core.controller.BaseController;
 import com.server.core.domain.AjaxResult;
@@ -34,6 +28,20 @@ public class AgricultureWeatherDataController extends BaseController
 {
     @Autowired
     private AgricultureWeatherDataService agricultureWeatherDataService;
+
+    /**
+     * 气象趋势数据（24小时/7天/30天）
+     */
+    @PreAuthorize("@ss.hasPermi('agriculture:weather:trend')")
+    @GetMapping("/trend")
+    public AjaxResult trend(
+            @RequestParam("pastureId") String pastureId,
+            @RequestParam("batchId") String batchId,
+            @RequestParam("range") String range //range（时间范围："day"、"week"、"month"）
+    ) {
+        Map<String, Object> trendData = agricultureWeatherDataService.getTrendData(pastureId, batchId, range);
+        return success(trendData);
+    }
 
     /**
      * 查询气象数据列表
