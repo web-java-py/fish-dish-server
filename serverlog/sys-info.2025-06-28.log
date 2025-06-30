@@ -1,0 +1,942 @@
+23:17:51.980 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+23:17:52.017 [main] INFO  c.s.ServerApplication - [logStarting,55] - Starting ServerApplication using Java 17.0.12 on zhubb with PID 41568 (D:\YCGSHou\fish-dish-server\server-admin\target\classes started by 18319 in D:\YCGSHou\fish-dish-server)
+23:17:52.017 [main] INFO  c.s.ServerApplication - [logStartupProfileInfo,686] - The following 2 profiles are active: "dev", "druid"
+23:18:01.326 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+23:18:01.327 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+23:18:01.327 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.102]
+23:18:01.440 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+23:18:02.850 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+23:18:04.428 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/ca.crt failed, trying to load from the resourcePath /D:/YCGSHou/fish-dish-server/server-admin/target/classes/
+23:18:04.442 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.crt failed, trying to load from the resourcePath /D:/YCGSHou/fish-dish-server/server-admin/target/classes/
+23:18:04.454 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.key failed, trying to load from the resourcePath /D:/YCGSHou/fish-dish-server/server-admin/target/classes/
+23:18:04.498 [main] INFO  o.f.b.s.n.ConnectionManager - [<init>,88] -  all connections, size: 2, list: [ConnectionInfo{host='192.168.31.210', port=20201}, ConnectionInfo{host='192.168.31.210', port=20200}]
+23:18:04.498 [main] INFO  o.f.b.s.n.NetworkImp - [start,167] - 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+
+23:18:04.499 [main] INFO  o.f.b.s.n.NetworkImp - [start,174] - ====> <==== STEP1-1: Load certificates for ecdsa context success..., start connManager with ECDSA sslContext
+23:18:04.546 [main] INFO  o.f.b.s.n.ConnectionManager - [initSslContext,238] -  build ECDSA ssl context with configured certificates 
+23:18:05.863 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20201
+23:18:05.864 [nioEventLoopGroup-4-1] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20201, ctx: 261041185
+23:18:05.900 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":0,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+23:18:05.900 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+23:18:05.905 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20201, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+23:18:06.850 [nioEventLoopGroup-4-2] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20200, ctx: 1591407371
+23:18:06.852 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20200
+23:18:06.852 [main] INFO  o.f.b.s.c.ChannelImp - [checkConnectionsToStartPeriodTask,126] -  Connect to  nodes: 192.168.31.210:20201, 
+23:18:06.853 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,77] - create BcosSDK, start channel success, cryptoType: 0
+23:18:06.853 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":1,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+23:18:06.853 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+23:18:06.853 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20200, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+23:18:06.854 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,87] - create BcosSDK, start channel succ, channelProcessorThreadSize: 32, receiptProcessorThreadSize: 32
+23:18:06.860 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerBlockNumberNotifyHandler,260] - registerBlockNumberNotifyHandler
+23:18:06.860 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerTransactionNotifyHandler,282] - registerTransactionNotifyHandler
+23:18:06.877 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,98] - create BcosSDK, create groupManagerService success
+23:18:07.218 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+23:18:07.221 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+23:18:07.222 [main] INFO  o.f.b.s.amop.AmopImp - [start,188] - amop module started
+23:18:07.222 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+23:18:07.222 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,103] - create BcosSDK, create Amop success
+23:18:07.240 [main] INFO  o.f.b.s.c.Client - [build,114] - build client success for group 1, crypto type 0
+23:18:07.240 [main] INFO  o.f.bcos.sdk.BcosSDK - [getClient,178] - create client for group 1 success
+23:18:08.311 [main] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+23:18:08.317 [main] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+23:18:08.433 [main] INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+23:18:34.735 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+23:18:34.738 [main] INFO  c.s.ServerApplication - [logStarting,55] - Starting ServerApplication using Java 17.0.12 on zhubb with PID 61988 (D:\YCGSHou\fish-dish-server\server-admin\target\classes started by 18319 in D:\YCGSHou\fish-dish-server)
+23:18:34.738 [main] INFO  c.s.ServerApplication - [logStartupProfileInfo,686] - The following 2 profiles are active: "dev", "druid"
+23:18:36.824 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+23:18:36.825 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+23:18:36.825 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.102]
+23:18:36.924 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+23:18:37.957 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+23:18:38.985 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/ca.crt failed, trying to load from the resourcePath /D:/YCGSHou/fish-dish-server/server-admin/target/classes/
+23:18:38.989 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.crt failed, trying to load from the resourcePath /D:/YCGSHou/fish-dish-server/server-admin/target/classes/
+23:18:38.991 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.key failed, trying to load from the resourcePath /D:/YCGSHou/fish-dish-server/server-admin/target/classes/
+23:18:39.025 [main] INFO  o.f.b.s.n.ConnectionManager - [<init>,88] -  all connections, size: 2, list: [ConnectionInfo{host='192.168.31.210', port=20201}, ConnectionInfo{host='192.168.31.210', port=20200}]
+23:18:39.026 [main] INFO  o.f.b.s.n.NetworkImp - [start,167] - 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+
+23:18:39.027 [main] INFO  o.f.b.s.n.NetworkImp - [start,174] - ====> <==== STEP1-1: Load certificates for ecdsa context success..., start connManager with ECDSA sslContext
+23:18:39.080 [main] INFO  o.f.b.s.n.ConnectionManager - [initSslContext,238] -  build ECDSA ssl context with configured certificates 
+23:18:40.470 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20201
+23:18:40.471 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20200
+23:18:40.471 [nioEventLoopGroup-4-1] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20201, ctx: 1326182285
+23:18:40.471 [nioEventLoopGroup-4-2] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20200, ctx: 929688111
+23:18:40.510 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":0,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+23:18:40.510 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":1,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+23:18:40.510 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+23:18:40.510 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+23:18:40.514 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20201, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+23:18:40.514 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20200, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+23:18:40.517 [main] INFO  o.f.b.s.c.ChannelImp - [checkConnectionsToStartPeriodTask,126] -  Connect to  nodes: 192.168.31.210:20200, 192.168.31.210:20201, 
+23:18:40.517 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,77] - create BcosSDK, start channel success, cryptoType: 0
+23:18:40.519 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,87] - create BcosSDK, start channel succ, channelProcessorThreadSize: 32, receiptProcessorThreadSize: 32
+23:18:40.526 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerBlockNumberNotifyHandler,260] - registerBlockNumberNotifyHandler
+23:18:40.527 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerTransactionNotifyHandler,282] - registerTransactionNotifyHandler
+23:18:40.542 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,98] - create BcosSDK, create groupManagerService success
+23:18:40.867 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+23:18:40.870 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+23:18:40.871 [main] INFO  o.f.b.s.amop.AmopImp - [start,188] - amop module started
+23:18:40.871 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+23:18:40.871 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,103] - create BcosSDK, create Amop success
+23:18:40.887 [main] INFO  o.f.b.s.c.Client - [build,114] - build client success for group 1, crypto type 0
+23:18:40.888 [main] INFO  o.f.bcos.sdk.BcosSDK - [getClient,178] - create client for group 1 success
+23:18:42.097 [main] INFO  c.s.i.c.MqttConfig - [afterPropertiesSet,40] - MQTT配置初始化完成 - serverUri: tcp://192.168.31.168:1883, clientId: fish-dish-server, defaultTopic: /fish-dish/data
+23:18:42.286 [main] INFO  c.s.i.s.SerialPortService - [init,36] - 正在初始化串口服务...
+23:18:42.287 [main] INFO  c.s.i.s.SerialPortService - [connect,41] - 正在尝试连接串口: COM3，波特率: 9600
+23:18:42.299 [main] INFO  c.s.i.s.SerialPortService - [connect,49] - 可用串口: []
+23:18:42.306 [main] INFO  c.s.i.s.SensorCommunicationService - [init,63] - 正在初始化传感器通信服务...
+23:18:42.408 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+23:18:42.428 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+23:18:42.429 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+23:18:42.431 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+23:18:42.432 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+23:18:42.432 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+23:18:42.433 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+23:18:42.433 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@736905fe
+23:18:42.864 [main] INFO  c.s.i.c.MqttConfig - [mqttClientFactory,60] - 配置MQTT连接: serverUri=tcp://192.168.31.168:1883, username=guest, clientId=fish-dish-server
+23:18:42.876 [main] INFO  c.s.i.c.MqttConfig - [mqttOutboundChannel,81] - 创建MQTT出站通道: mqttOutboundChannel
+23:18:42.896 [main] INFO  c.s.i.c.MqttConfig - [mqttOutbound,101] - MQTT消息处理器配置完成: clientId=fish-dish-server_outbound_1751123922891, defaultTopic=/fish-dish/data
+23:18:43.710 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+23:18:44.356 [main] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+23:18:44.365 [main] INFO  c.s.ServerApplication - [logStarted,61] - Started ServerApplication in 9.854 seconds (JVM running for 10.162)
+23:18:44.367 [main] INFO  c.s.i.s.SensorCommunicationService - [onApplicationReady,74] - 应用程序已就绪，正在启动传感器通信...
+23:18:44.396 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 风向传感器 (ID: 1) 成功启动轮询任务。
+23:18:44.396 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-10-thread-1 正在启动，负责轮询传感器: 风向传感器 (ID: 1)
+23:18:44.396 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 风速传感器 (ID: 6) 成功启动轮询任务。
+23:18:44.396 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-10-thread-2 正在启动，负责轮询传感器: 风速传感器 (ID: 6)
+23:18:44.396 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 百叶箱多气象传感器 (ID: 7) 成功启动轮询任务。
+23:18:44.397 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-10-thread-3 正在启动，负责轮询传感器: 百叶箱多气象传感器 (ID: 7)
+23:19:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:19:00.008 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:19:00.011 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:19:47.051 [lettuce-nioEventLoop-5-1] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:19:47.137 [lettuce-eventExecutorLoop-1-20] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:19:47.155 [lettuce-nioEventLoop-5-2] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:19:56.488 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:19:56.689 [http-nio-8080-exec-3] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+23:20:00.016 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:20:00.035 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:20:00.037 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:20:26.673 [http-nio-8080-exec-2] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:20:53.051 [lettuce-nioEventLoop-5-2] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:20:53.120 [lettuce-eventExecutorLoop-1-21] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:20:53.140 [lettuce-nioEventLoop-5-3] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:20:56.669 [http-nio-8080-exec-4] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:21:00.006 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:21:00.020 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:21:00.022 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:21:02.134 [schedule-pool-1] INFO  sys-user - [run,56] - [127.0.0.1]内网IP[admin][Success][登录成功]
+23:21:26.681 [http-nio-8080-exec-21] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:21:57.455 [http-nio-8080-exec-25] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:22:00.002 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:22:00.021 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:22:00.023 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:22:27.459 [http-nio-8080-exec-28] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:22:34.023 [lettuce-nioEventLoop-5-3] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:22:34.124 [lettuce-eventExecutorLoop-1-13] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:22:34.138 [lettuce-nioEventLoop-5-4] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:22:57.461 [http-nio-8080-exec-29] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:23:00.005 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:23:00.017 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:23:00.019 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:23:39.452 [http-nio-8080-exec-30] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:23:40.057 [lettuce-nioEventLoop-5-4] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:23:40.120 [lettuce-eventExecutorLoop-1-14] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:23:40.126 [lettuce-nioEventLoop-5-5] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:24:00.006 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:24:00.020 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:24:00.023 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:24:37.513 [http-nio-8080-exec-31] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:24:57.460 [http-nio-8080-exec-36] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:25:00.013 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:25:00.027 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:25:00.029 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:25:27.455 [http-nio-8080-exec-38] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:25:45.031 [lettuce-nioEventLoop-5-5] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:25:45.123 [lettuce-eventExecutorLoop-1-19] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:25:45.136 [lettuce-nioEventLoop-5-6] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:26:00.000 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:26:00.014 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:26:00.015 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:26:39.461 [http-nio-8080-exec-37] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:26:51.075 [lettuce-nioEventLoop-5-6] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:26:51.115 [lettuce-eventExecutorLoop-1-20] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:26:51.120 [lettuce-nioEventLoop-5-7] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:27:00.005 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:27:00.010 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:27:00.010 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:27:39.459 [http-nio-8080-exec-39] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:27:57.089 [lettuce-nioEventLoop-5-7] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:27:57.116 [lettuce-eventExecutorLoop-1-21] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:27:57.120 [lettuce-nioEventLoop-5-8] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:28:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:28:00.009 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:28:00.009 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:28:39.460 [http-nio-8080-exec-40] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:29:00.002 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:29:00.012 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:29:00.012 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:29:03.073 [lettuce-nioEventLoop-5-8] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:29:03.116 [lettuce-eventExecutorLoop-1-22] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:29:03.124 [lettuce-nioEventLoop-5-9] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:29:39.465 [http-nio-8080-exec-41] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:30:00.002 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:30:00.008 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:30:00.008 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:30:09.081 [lettuce-nioEventLoop-5-9] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:30:09.115 [lettuce-eventExecutorLoop-1-23] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:30:09.121 [lettuce-nioEventLoop-5-10] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:30:39.456 [http-nio-8080-exec-42] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:31:00.002 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:31:00.010 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:31:00.011 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:31:15.037 [lettuce-nioEventLoop-5-10] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:31:15.116 [lettuce-eventExecutorLoop-1-24] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:31:15.123 [lettuce-nioEventLoop-5-11] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:31:39.453 [http-nio-8080-exec-44] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:32:00.002 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:32:00.010 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:32:00.013 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:32:21.080 [lettuce-nioEventLoop-5-11] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:32:21.116 [lettuce-eventExecutorLoop-1-25] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:32:21.123 [lettuce-nioEventLoop-5-12] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:32:39.464 [http-nio-8080-exec-45] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:32:57.038 [http-nio-8080-exec-57] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:33:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:33:00.007 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:33:00.008 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:33:27.048 [lettuce-nioEventLoop-5-12] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:33:27.114 [lettuce-eventExecutorLoop-1-26] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:33:27.120 [lettuce-nioEventLoop-5-13] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:33:27.453 [http-nio-8080-exec-46] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:33:57.453 [http-nio-8080-exec-47] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:34:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:34:00.011 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:34:00.012 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:34:33.106 [lettuce-nioEventLoop-5-13] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:34:33.115 [lettuce-eventExecutorLoop-1-27] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:34:33.118 [lettuce-nioEventLoop-5-14] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:34:39.458 [http-nio-8080-exec-48] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:35:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:35:00.007 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:35:00.008 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:35:39.079 [lettuce-nioEventLoop-5-14] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:35:39.115 [lettuce-eventExecutorLoop-1-28] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:35:39.121 [lettuce-nioEventLoop-5-15] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:35:39.453 [http-nio-8080-exec-61] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:36:00.002 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:36:00.008 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:36:00.009 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:36:39.464 [http-nio-8080-exec-62] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:36:45.063 [lettuce-nioEventLoop-5-15] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:36:45.114 [lettuce-eventExecutorLoop-1-29] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:36:45.119 [lettuce-nioEventLoop-5-16] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:37:00.002 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:37:00.011 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:37:00.011 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:37:39.468 [http-nio-8080-exec-51] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:37:51.032 [lettuce-nioEventLoop-5-16] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:37:51.115 [lettuce-eventExecutorLoop-1-30] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:37:51.118 [lettuce-nioEventLoop-5-17] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:38:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:38:00.007 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:38:00.008 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:38:39.461 [http-nio-8080-exec-52] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:38:57.017 [lettuce-nioEventLoop-5-17] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:38:57.115 [lettuce-eventExecutorLoop-1-31] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:38:57.118 [lettuce-nioEventLoop-5-18] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:39:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:39:00.006 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:39:00.006 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:39:39.454 [http-nio-8080-exec-53] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:40:00.002 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:40:00.012 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:40:00.012 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:40:03.067 [lettuce-nioEventLoop-5-18] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:40:03.115 [lettuce-eventExecutorLoop-1-32] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:40:03.120 [lettuce-nioEventLoop-5-19] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:40:39.461 [http-nio-8080-exec-54] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:41:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:41:00.011 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:41:00.011 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:41:09.026 [lettuce-nioEventLoop-5-19] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:41:09.115 [lettuce-eventExecutorLoop-1-1] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:41:09.124 [lettuce-nioEventLoop-5-20] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:41:39.451 [http-nio-8080-exec-55] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:42:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:42:00.012 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:42:00.012 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:42:15.042 [lettuce-nioEventLoop-5-20] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:42:15.116 [lettuce-eventExecutorLoop-1-2] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:42:15.121 [lettuce-nioEventLoop-5-21] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:42:39.458 [http-nio-8080-exec-56] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:43:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:43:00.007 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:43:00.007 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:43:21.100 [lettuce-nioEventLoop-5-21] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:43:21.115 [lettuce-eventExecutorLoop-1-3] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:43:21.124 [lettuce-nioEventLoop-5-22] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:43:39.468 [http-nio-8080-exec-76] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:44:00.008 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:44:00.023 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:44:00.024 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:44:27.071 [lettuce-nioEventLoop-5-22] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:44:27.119 [lettuce-eventExecutorLoop-1-4] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:44:27.129 [lettuce-nioEventLoop-5-23] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:44:39.462 [http-nio-8080-exec-43] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:45:00.010 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:45:00.023 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:45:00.024 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:45:33.018 [lettuce-nioEventLoop-5-23] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:45:33.128 [lettuce-eventExecutorLoop-1-5] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:45:33.155 [lettuce-nioEventLoop-5-24] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:45:39.457 [http-nio-8080-exec-59] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:46:00.010 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:46:00.021 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:46:00.022 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:46:39.009 [lettuce-nioEventLoop-5-24] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:46:39.025 [lettuce-eventExecutorLoop-1-6] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:46:39.040 [lettuce-nioEventLoop-5-25] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:46:39.461 [http-nio-8080-exec-60] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:47:00.007 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:47:00.019 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:47:00.020 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:47:39.456 [http-nio-8080-exec-64] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:47:45.026 [lettuce-nioEventLoop-5-25] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:47:45.121 [lettuce-eventExecutorLoop-1-7] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:47:45.130 [lettuce-nioEventLoop-5-26] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:48:00.000 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:48:00.013 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:48:00.014 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:48:39.454 [http-nio-8080-exec-63] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:48:51.016 [lettuce-nioEventLoop-5-26] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:48:51.127 [lettuce-eventExecutorLoop-1-8] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:48:51.152 [lettuce-nioEventLoop-5-27] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:49:00.012 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:49:00.027 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:49:00.028 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:49:39.463 [http-nio-8080-exec-50] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:49:57.010 [lettuce-nioEventLoop-5-27] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:49:57.024 [lettuce-eventExecutorLoop-1-9] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:49:57.032 [lettuce-nioEventLoop-5-28] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:50:00.009 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:50:00.022 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:50:00.023 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:50:39.453 [http-nio-8080-exec-86] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:51:00.014 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:51:00.022 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:51:00.023 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:51:03.074 [lettuce-nioEventLoop-5-28] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:51:03.121 [lettuce-eventExecutorLoop-1-10] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:51:03.135 [lettuce-nioEventLoop-5-29] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:51:39.461 [http-nio-8080-exec-49] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:52:00.003 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:52:00.013 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:52:00.014 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:52:09.044 [lettuce-nioEventLoop-5-29] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:52:09.121 [lettuce-eventExecutorLoop-1-11] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:52:09.129 [lettuce-nioEventLoop-5-30] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:52:39.460 [http-nio-8080-exec-66] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:53:00.007 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:53:00.017 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:53:00.018 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:53:15.017 [lettuce-nioEventLoop-5-30] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:53:15.126 [lettuce-eventExecutorLoop-1-12] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:53:15.135 [lettuce-nioEventLoop-5-31] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:53:39.466 [http-nio-8080-exec-67] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:54:00.003 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:54:00.015 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:54:00.016 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:54:21.046 [lettuce-nioEventLoop-5-31] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:54:21.122 [lettuce-eventExecutorLoop-1-13] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:54:21.143 [lettuce-nioEventLoop-5-32] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:54:39.451 [http-nio-8080-exec-68] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:55:00.002 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:55:00.012 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:55:00.013 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:55:27.072 [lettuce-nioEventLoop-5-32] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:55:27.118 [lettuce-eventExecutorLoop-1-14] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:55:27.120 [lettuce-nioEventLoop-5-1] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:55:39.460 [http-nio-8080-exec-69] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:56:00.005 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:56:00.015 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:56:00.016 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:56:33.012 [lettuce-nioEventLoop-5-1] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:56:33.121 [lettuce-eventExecutorLoop-1-15] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:56:33.123 [lettuce-nioEventLoop-5-2] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:56:39.458 [http-nio-8080-exec-70] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:57:00.002 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:57:00.015 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,64] - 设备 1 已超时, 最后在线时间: 2025-06-28 22:17:47. 标记为离线.
+23:57:00.017 [scheduling-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+23:57:39.090 [lettuce-nioEventLoop-5-2] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:57:39.122 [lettuce-eventExecutorLoop-1-16] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:57:39.125 [lettuce-nioEventLoop-5-3] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:57:39.461 [http-nio-8080-exec-93] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:58:00.002 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:58:00.012 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+23:58:39.465 [http-nio-8080-exec-74] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:58:45.017 [lettuce-nioEventLoop-5-3] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:58:45.126 [lettuce-eventExecutorLoop-1-17] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:58:45.129 [lettuce-nioEventLoop-5-4] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+23:59:00.002 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+23:59:00.009 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+23:59:39.454 [http-nio-8080-exec-71] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+23:59:51.045 [lettuce-nioEventLoop-5-4] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+23:59:51.141 [lettuce-eventExecutorLoop-1-18] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+23:59:51.145 [lettuce-nioEventLoop-5-5] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379

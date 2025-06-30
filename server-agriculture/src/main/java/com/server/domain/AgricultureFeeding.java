@@ -12,43 +12,35 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-@ApiModel(value = "采摘信息")
+@ApiModel(value = "施肥")
 @Data
-public class IaPartitionFood implements Serializable {
-
-    @ApiModelProperty(value = "id-溯源码", example = "123")
+public class AgricultureFeeding implements Serializable {
     private String id;
 
     @ApiModelProperty(value = "分区id", example = "123", required = true)
     @NotBlank(message = "分区id为空")
     private String iaPartitionId;
 
-    @ApiModelProperty(value = "日期", required = true)
-    @NotNull(message = "日期为空")
+    @ApiModelProperty(value = "施肥时间", required = true)
+    @NotNull(message = "施肥时间为空")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date date;
 
-
-    @ApiModelProperty(value = "食品名称", example = "生菜", required = true)
-    @NotBlank(message = "食品名称为空")
-    private String name;
+    @ApiModelProperty(value = "施肥名称", example = "生菜", required = true)
+    @NotBlank(message = "施肥名称为空")
+    private String foodName;
     //重量
     @ApiModelProperty(value = "重量", example = "12322", required = true)
     @NotNull(message = "重量为空")
     private BigDecimal weight;
-
-    @ApiModelProperty(value = "食品质量（0 不及格、1 及格 2 优秀）", example = "1", required = true)
-    @NotNull(message = "食品质量为空")
-    private Long status;
     //备注
     @ApiModelProperty(value = "备注", example = "test", required = true)
     @NotBlank(message = "备注为空")
     private String description;
 
-    @ApiModelProperty(value = "二维码", example = "test")
+    @ApiModelProperty(value = "分区名", example = "test")
     @TableField(exist = false)
-    private String barcode;
-
+    private String partitionName;
 
 
 }

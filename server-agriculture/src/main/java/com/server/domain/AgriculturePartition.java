@@ -18,7 +18,7 @@ import java.util.Date;
 
 @Data
 @ApiModel(value = "分区")
-public class IaPartition {
+public class AgriculturePartition {
 
     @ApiModelProperty(value = "分区id")
     private String id;

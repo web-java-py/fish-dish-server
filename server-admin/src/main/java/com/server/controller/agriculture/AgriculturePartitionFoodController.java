@@ -3,7 +3,7 @@ package com.server.controller.agriculture;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
 
-import com.server.domain.dto.IaPartitionFoodPageDTO;
+import com.server.domain.dto.AgriculturePartitionFoodPageDTO;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +19,8 @@ import com.server.annotation.Log;
 import com.server.core.controller.BaseController;
 import com.server.core.domain.AjaxResult;
 import com.server.enums.BusinessType;
-import com.server.domain.IaPartitionFood;
-import com.server.service.IaPartitionFoodService;
+import com.server.domain.AgriculturePartitionFood;
+import com.server.service.AgriculturePartitionFoodService;
 import com.server.utils.poi.ExcelUtil;
 import com.server.core.page.TableDataInfo;
 
@@ -31,78 +31,78 @@ import com.server.core.page.TableDataInfo;
  * @date 2025-06-24
  */
 @RestController
-@RequestMapping("/iaPartitionFood")
-public class IaPartitionFoodController extends BaseController
+@RequestMapping("/agriculture/partitionFood")
+public class AgriculturePartitionFoodController extends BaseController
 {
     @Autowired
-    private IaPartitionFoodService iaPartitionFoodService;
+    private AgriculturePartitionFoodService agriculturePartitionFoodService;
 
     /**
      * 查询分区食品 采摘列表
      */
-    @PreAuthorize("@ss.hasPermi('iaPartitionFood:list')")
+    @PreAuthorize("@ss.hasPermi('agriculturePartitionFood:list')")
     @GetMapping("/list")
-    public TableDataInfo list(IaPartitionFood iaPartitionFood)
+    public TableDataInfo list(AgriculturePartitionFood agriculturePartitionFood)
     {
         startPage();
-        List<IaPartitionFood> list = iaPartitionFoodService.selectIaPartitionFoodList(iaPartitionFood);
+        List<AgriculturePartitionFood> list = agriculturePartitionFoodService.selectagriculturePartitionFoodList(agriculturePartitionFood);
         return getDataTable(list);
     }
 
     /**
      * 导出分区食品 采摘列表
      */
-    @PreAuthorize("@ss.hasPermi('iaPartitionFood:export')")
+    @PreAuthorize("@ss.hasPermi('agriculturePartitionFood:export')")
     @Log(title = "分区食品 采摘", businessType = BusinessType.EXPORT)
     @PostMapping("/export")
-    public void export(HttpServletResponse response, IaPartitionFood iaPartitionFood)
+    public void export(HttpServletResponse response, AgriculturePartitionFood agriculturePartitionFood)
     {
-        List<IaPartitionFood> list = iaPartitionFoodService.selectIaPartitionFoodList(iaPartitionFood);
-        ExcelUtil<IaPartitionFood> util = new ExcelUtil<IaPartitionFood>(IaPartitionFood.class);
+        List<AgriculturePartitionFood> list = agriculturePartitionFoodService.selectagriculturePartitionFoodList(agriculturePartitionFood);
+        ExcelUtil<AgriculturePartitionFood> util = new ExcelUtil<AgriculturePartitionFood>(AgriculturePartitionFood.class);
         util.exportExcel(response, list, "分区食品 采摘数据");
     }
 
     /**
      * 获取分区食品 采摘详细信息
      */
-    @PreAuthorize("@ss.hasPermi('iaPartitionFood:query')")
+    @PreAuthorize("@ss.hasPermi('agriculturePartitionFood:query')")
     @GetMapping(value = "/{id}")
     public AjaxResult getInfo(@PathVariable("id") String id)
     {
-        return success(iaPartitionFoodService.selectIaPartitionFoodById(id));
+        return success(agriculturePartitionFoodService.selectagriculturePartitionFoodById(id));
     }
 
     /**
      * 新增分区食品 采摘
      */
-    @PreAuthorize("@ss.hasPermi('iaPartitionFood:add')")
+    @PreAuthorize("@ss.hasPermi('agriculturePartitionFood:add')")
     @Log(title = "分区食品 采摘", businessType = BusinessType.INSERT)
     @PostMapping
-    public AjaxResult add(@RequestBody IaPartitionFood iaPartitionFood)
+    public AjaxResult add(@RequestBody AgriculturePartitionFood agriculturePartitionFood)
     {
-        return toAjax(iaPartitionFoodService.insertIaPartitionFood(iaPartitionFood));
+        return toAjax(agriculturePartitionFoodService.insertagriculturePartitionFood(agriculturePartitionFood));
     }
 
     /**
      * 修改分区食品 采摘
      */
-    @PreAuthorize("@ss.hasPermi('iaPartitionFood:edit')")
+    @PreAuthorize("@ss.hasPermi('agriculturePartitionFood:edit')")
     @Log(title = "分区食品 采摘", businessType = BusinessType.UPDATE)
     @PutMapping
-    public AjaxResult edit(@RequestBody IaPartitionFood iaPartitionFood)
+    public AjaxResult edit(@RequestBody AgriculturePartitionFood agriculturePartitionFood)
     {
-        return toAjax(iaPartitionFoodService.updateIaPartitionFood(iaPartitionFood));
+        return toAjax(agriculturePartitionFoodService.updateagriculturePartitionFood(agriculturePartitionFood));
     }
 
     /**
      * 删除分区食品 采摘
      */
-    @PreAuthorize("@ss.hasPermi('iaPartitionFood:remove')")
+    @PreAuthorize("@ss.hasPermi('agriculturePartitionFood:remove')")
     @Log(title = "分区食品 采摘", businessType = BusinessType.DELETE)
 	@DeleteMapping("/{ids}")
     public AjaxResult remove(@PathVariable String[] ids)
     {
-        return toAjax(iaPartitionFoodService.deleteIaPartitionFoodByIds(ids));
+        return toAjax(agriculturePartitionFoodService.deleteagriculturePartitionFoodByIds(ids));
     }
 
     /**
@@ -110,9 +110,9 @@ public class IaPartitionFoodController extends BaseController
      */
     @ApiOperation("分页列表")
     @GetMapping(value = "/page")
-    public TableDataInfo page(IaPartitionFoodPageDTO baseDTO) {
+    public TableDataInfo page(AgriculturePartitionFoodPageDTO baseDTO) {
         startPage();
-        List<IaPartitionFood> list = iaPartitionFoodService.fy(baseDTO);
+        List<AgriculturePartitionFood> list = agriculturePartitionFoodService.fy(baseDTO);
         return getDataTable(list);
     }
 }

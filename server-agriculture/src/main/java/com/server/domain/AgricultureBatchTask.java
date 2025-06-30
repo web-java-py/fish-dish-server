@@ -32,7 +32,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 @AllArgsConstructor
 @TableName(value ="agriculture_batch_task")
 @ApiModel(value = "AgricultureBatchTask", description = "分区批次任务表")
-public class AgricultureBatchTask extends BaseEntity implements Serializable {
+public class AgricultureBatchTask extends BaseEntity {
     private static final long serialVersionUID = 1L;
 
     /** 任务ID */
