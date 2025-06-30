@@ -5,22 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="实现大数据规模数据实时推送接口">
-      <change afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/data/TotalController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/enums/SeeMessageType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-data/src/main/java/com/server/aspect/DataSeeAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-data/src/main/java/com/server/service/TotalService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-data/src/main/java/com/server/service/impl/TotalServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureBatchTaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureBatchTaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureClassController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureClassController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureConsoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureCropBatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureCropBatchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureDeviceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureDeviceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureMachineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureMachineController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureMaterialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureMaterialController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgriculturePastureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgriculturePastureController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/annotation/SeeConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/annotation/SeeRefreshData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/aspect/SeeAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/aspect/AgricultureSeeAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ws/MqSocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ws/MqSocketServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +131,8 @@
       <workItem from="1751056765269" duration="11791000" />
       <workItem from="1751179052645" duration="12874000" />
       <workItem from="1751248760248" duration="20048000" />
-      <workItem from="1751273164691" duration="11284000" />
+      <workItem from="1751273164691" duration="15106000" />
+      <workItem from="1751294908427" duration="2688000" />
     </task>
     <task id="LOCAL-00002" summary="控制台接口完成50%">
       <created>1751193588659</created>
@@ -168,7 +155,21 @@
       <option name="project" value="LOCAL" />
       <updated>1751281088479</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="实现大数据规模数据实时推送接口">
+      <created>1751288998373</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1751288998373</updated>
+    </task>
+    <task id="LOCAL-00006" summary="实现大数据规模数据实时推送接口">
+      <created>1751289015071</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1751289015071</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

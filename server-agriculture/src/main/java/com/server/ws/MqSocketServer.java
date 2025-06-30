@@ -2,12 +2,13 @@ package com.server.ws;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
+
 import javax.websocket.*;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * RabbitMQ WebSocket服务
@@ -17,7 +18,7 @@ import java.util.Map;
 @ServerEndpoint("/ws/mq/{id}")
 public class MqSocketServer {
 
-    private static Map<String, Session> sessionMap = new HashMap<>();
+    private static final Map<String, Session> sessionMap = new ConcurrentHashMap<>();
 
     @OnOpen
     public void onOpen(Session session, @PathParam("id") String id) {
