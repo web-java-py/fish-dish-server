@@ -622,3 +622,5 @@ Failed to connect to all the nodes!
 
 	at org.fisco.bcos.sdk.network.NetworkImp.start(NetworkImp.java:192)
 	... 61 common frames omitted
+11:50:30.410 [nioEventLoopGroup-4-2] ERROR o.f.b.s.n.ChannelHandler - [userEventTriggered,58] -  idle state event:READER_IDLE connect192.168.31.210:20200 long time Inactive, disconnect
+11:50:30.410 [nioEventLoopGroup-4-1] ERROR o.f.b.s.n.ChannelHandler - [userEventTriggered,58] -  idle state event:READER_IDLE connect192.168.31.210:20201 long time Inactive, disconnect
