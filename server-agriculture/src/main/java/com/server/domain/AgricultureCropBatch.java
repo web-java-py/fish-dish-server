@@ -1,18 +1,19 @@
 package com.server.domain;
 
-import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.*;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import org.springframework.format.annotation.DateTimeFormat;
 
 
 /** 
@@ -25,7 +26,7 @@ import io.swagger.annotations.ApiModelProperty;
 @AllArgsConstructor
 @TableName(value ="agriculture_crop_batch")
 @ApiModel(value = "AgricultureCropBatch" , description="分区表")
-public class AgricultureCropBatch extends BaseEntityPlus implements Serializable  {
+public class AgricultureCropBatch implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -68,6 +69,28 @@ public class AgricultureCropBatch extends BaseEntityPlus implements Serializable
     @TableField(value="responsible_person_id")
     @ApiModelProperty(value="负责人Id")
     private Long responsiblePersonId;
+
+    @TableField(value = "create_by", fill = FieldFill.INSERT)
+    @ApiModelProperty(value = "创建者ID")
+    private String createBy;
+
+    @TableField(value = "create_time", fill = FieldFill.INSERT)
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @ApiModelProperty(value = "创建时间")
+    private Date createTime;
+
+    @TableField(value = "update_by", fill = FieldFill.INSERT_UPDATE)
+    @ApiModelProperty(value = "修改人ID")
+    private String updateBy;
+
+    @TableField(value = "update_time", fill = FieldFill.INSERT_UPDATE)
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @ApiModelProperty(value = "修改时间")
+    private Date updateTime;
+
+    @TableField(value = "remark")
+    @ApiModelProperty(value = "备注")
+    private String remark;
 
     @TableField(value="contract_addr")
     @ApiModelProperty(value="区块链合约地址")
