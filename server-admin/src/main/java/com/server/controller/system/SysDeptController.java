@@ -2,6 +2,7 @@ package com.server.controller.system;
 
 import java.util.List;
 
+import com.server.annotation.Log;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.commons.lang3.ArrayUtils;
@@ -16,7 +17,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.server.annotation.Log;
 import com.server.constant.UserConstants;
 import com.server.core.controller.BaseController;
 import com.server.core.domain.AjaxResult;

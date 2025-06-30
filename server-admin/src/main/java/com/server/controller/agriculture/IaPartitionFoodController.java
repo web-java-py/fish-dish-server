@@ -3,7 +3,9 @@ package com.server.controller.agriculture;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
 
+import com.server.annotation.Log;
 import com.server.domain.dto.IaPartitionFoodPageDTO;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +17,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.server.annotation.Log;
 import com.server.core.controller.BaseController;
 import com.server.core.domain.AjaxResult;
 import com.server.enums.BusinessType;
@@ -26,12 +27,13 @@ import com.server.core.page.TableDataInfo;
 
 /**
  * 分区食品 采摘Controller
- * 
+ *
  * @author server
  * @date 2025-06-24
  */
 @RestController
 @RequestMapping("/iaPartitionFood")
+@Api(tags = "收获")
 public class IaPartitionFoodController extends BaseController
 {
     @Autowired

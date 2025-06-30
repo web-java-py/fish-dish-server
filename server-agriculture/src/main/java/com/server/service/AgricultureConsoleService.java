@@ -3,20 +3,28 @@ package com.server.service;
 import com.server.domain.vo.AgricultureConsoleVO;
 
 import java.util.List;
+import java.util.Map;
 
 public interface AgricultureConsoleService {
 
     /**
-     * 卡片数据
+     * 获取农场数据
      *
      * @return
      */
-    List<AgricultureConsoleVO> cardData();
+    List<AgricultureConsoleVO> listAgriculture();
 
     /**
      * 统计数据
      *
      * @return
      */
-    List<AgricultureConsoleVO> countData();
+    List<AgricultureConsoleVO> listBatchTask();
+
+    /**
+     * 获取统计数据
+     *
+     * @return
+     */
+    Map<String, Object> listTotal();
 }

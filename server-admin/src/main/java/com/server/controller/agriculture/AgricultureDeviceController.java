@@ -3,6 +3,7 @@ package com.server.controller.agriculture;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
 
+import com.server.annotation.Log;
 import com.server.domain.vo.AgricultureDeviceVO;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.server.annotation.Log;
 import com.server.core.controller.BaseController;
 import com.server.core.domain.AjaxResult;
 import com.server.enums.BusinessType;
@@ -26,7 +26,7 @@ import com.server.core.page.TableDataInfo;
 
 /**
  * 设备信息Controller
- * 
+ *
  * @author bxwy
  * @date 2025-05-26
  */

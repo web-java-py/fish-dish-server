@@ -25,11 +25,6 @@ public class MqSocketServer {
         sessionMap.put(id, session);
     }
 
-    @OnMessage
-    public void onMessage(String message, @PathParam("id") String id) {
-        log.info("收到来自RabbitMQ客户端：" + id + "的信息:" + message);
-    }
-
     @OnClose
     public void onClose(@PathParam("id") String id) {
         log.info("RabbitMQ客户端连接断开:" + id);

@@ -18,6 +18,7 @@
         <module>server-generator</module>
         <module>server-quartz</module>
         <module>server-agriculture</module>
+        <module>server-data</module>
     </modules>
     <description>管理系统</description>
 
@@ -246,6 +247,13 @@
             <dependency>
                 <groupId>com.server</groupId>
                 <artifactId>server-agriculture</artifactId>
+                <version>${server.version}</version>
+            </dependency>
+
+            <!-- 大数据 -->
+            <dependency>
+                <groupId>com.server</groupId>
+                <artifactId>server-data</artifactId>
                 <version>${server.version}</version>
             </dependency>
 

@@ -105,8 +105,8 @@ public class SecurityConfig {
                 // 注解标记允许匿名访问的url
                 .authorizeHttpRequests((requests) -> {
                     permitAllUrl.getUrls().forEach(url -> requests.antMatchers(url).permitAll());
-                    // 对于登录login 注册register 验证码captchaImage 登陆功能开关loginFunctionEnabled 邮箱验证码mailCode 忘记密码forgetPwd webSocket 允许匿名访问
-                    requests.antMatchers("/login", "/register", "/captchaImage", "/loginFunctionEnabled", "/mailCode", "/forgetPwd", "/ws/**").permitAll()
+                    // 对于登录login 注册register 验证码captchaImage 登陆功能开关loginFunctionEnabled 邮箱验证码mailCode 忘记密码forgetPwd webSocket 大数据 允许匿名访问
+                    requests.antMatchers("/login", "/register", "/captchaImage", "/loginFunctionEnabled", "/mailCode", "/forgetPwd", "/ws/**", "/data/**").permitAll()
                             // 静态资源，可匿名访问
                             .antMatchers(HttpMethod.GET, "/", "/*.html", "/**/*.html", "/**/*.css", "/**/*.js", "/profile/**").permitAll()
                             .antMatchers("/swagger-ui.html", "/swagger-resources/**", "/webjars/**", "/*/api-docs", "/druid/**").permitAll()

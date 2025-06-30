@@ -18,7 +18,9 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class AgricultureConsoleServiceImpl implements AgricultureConsoleService {
@@ -36,12 +38,12 @@ public class AgricultureConsoleServiceImpl implements AgricultureConsoleService 
     private AgricultureBatchTaskServiceMapper agricultureBatchTaskServiceMapper;
 
     /**
-     * 卡片数据
+     * 获取农场数据
      *
      * @return
      */
     @Override
-    public List<AgricultureConsoleVO> cardData() {
+    public List<AgricultureConsoleVO> listAgriculture() {
         LambdaQueryWrapper<AgriculturePasture> lambdaPasture = new QueryWrapper<AgriculturePasture>().lambda();
         LambdaQueryWrapper<AgricultureCropBatch> lambdaCropBatch = new QueryWrapper<AgricultureCropBatch>().lambda();
         LambdaQueryWrapper<AgricultureClass> lambdaClass = new QueryWrapper<AgricultureClass>().lambda();
@@ -78,12 +80,12 @@ public class AgricultureConsoleServiceImpl implements AgricultureConsoleService 
     }
 
     /**
-     * 统计数据
+     * 获取任务数据
      *
      * @return
      */
     @Override
-    public List<AgricultureConsoleVO> countData() {
+    public List<AgricultureConsoleVO> listBatchTask() {
         String[] taskStatus = {
                 "未分配",
                 "已分配",
@@ -111,7 +113,7 @@ public class AgricultureConsoleServiceImpl implements AgricultureConsoleService 
             LambdaQueryWrapper<AgricultureBatchTask> lambda = new QueryWrapper<AgricultureBatchTask>().lambda();
             Integer lastTotal = agricultureBatchTaskServiceMapper.selectCount(
                     lambda.eq(AgricultureBatchTask::getStatus, i)
-                            .lt(AgricultureBatchTask::getCreateTime, lastWeekSunday())
+                            .lt(AgricultureBatchTask::getCreateTime, yesterday())
             );
             lambda = new QueryWrapper<AgricultureBatchTask>().lambda();
             Integer total = agricultureBatchTaskServiceMapper.selectCount(
@@ -121,6 +123,19 @@ public class AgricultureConsoleServiceImpl implements AgricultureConsoleService 
         }
 
         return result;
+    }
+
+    @Override
+    public Map<String, Object> listTotal() {
+        Map<String, Object> hashMap = new HashMap<>();
+        hashMap.put("agriculture", listAgriculture());
+        hashMap.put("batchTask", listBatchTask());
+        return hashMap;
+    }
+
+    private LocalDateTime yesterday() {
+        return LocalDateTime.now().minusDays(1)
+                .with(LocalTime.MIDNIGHT);
     }
 
     private LocalDateTime lastWeekSunday() {
