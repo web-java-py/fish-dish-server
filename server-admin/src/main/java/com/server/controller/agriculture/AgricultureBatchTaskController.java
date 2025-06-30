@@ -27,7 +27,7 @@ public class AgricultureBatchTaskController extends BaseController {
     private AgricultureBatchTaskService agricultureBatchTaskService;
 
     /**
-     * 查询批次任务列表
+     * 查询批次任务按钮列表
      */
     @PreAuthorize("@ss.hasPermi('agriculture:batchTask:list')")
     @GetMapping("/list")
@@ -37,7 +37,7 @@ public class AgricultureBatchTaskController extends BaseController {
         return getDataTable(agricultureBatchTaskService.selectBatchTaskList(agricultureBatchTask));
     }
     /**
-     * 获取批次任务详细信息
+     * 获取批次任务按钮详细信息
      */
     @PreAuthorize("@ss.hasPermi('agriculture:batchTask:query')")
     @GetMapping(value = "/{taskId}")
@@ -46,7 +46,7 @@ public class AgricultureBatchTaskController extends BaseController {
     }
 
     /**
-     * 删除分区
+     * 删除批次任务
      */
     @PreAuthorize("@ss.hasPermi('agriculture:batchTask:remove')")
     @Log(title = "分区", businessType = BusinessType.DELETE)

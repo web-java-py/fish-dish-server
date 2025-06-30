@@ -69,6 +69,7 @@ public class AgricultureBatchTask extends BaseEntity {
     @ApiModelProperty(value = "计划开始日期")
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Excel(name = "计划开始日期", width = 30, dateFormat = "yyyy-MM-dd")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date planStart;
 
     /** 计划结束日期 */
@@ -76,6 +77,7 @@ public class AgricultureBatchTask extends BaseEntity {
     @ApiModelProperty(value = "计划结束日期")
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Excel(name = "计划结束日期", width = 30, dateFormat = "yyyy-MM-dd")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date planFinish;
 
     /** 实际开始日期 */
