@@ -17163,3 +17163,106 @@ java.net.SocketException: Connection reset
 21:06:43.801 [http-nio-8080-exec-66] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
 21:07:00.012 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
 21:07:00.016 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+21:07:13.797 [http-nio-8080-exec-67] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+21:07:17.024 [lettuce-nioEventLoop-5-4] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+21:07:17.035 [lettuce-eventExecutorLoop-1-29] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+21:07:17.038 [lettuce-nioEventLoop-5-5] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+21:08:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+21:08:00.007 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+21:08:23.011 [lettuce-nioEventLoop-5-5] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+21:08:23.035 [lettuce-eventExecutorLoop-1-30] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+21:08:23.041 [lettuce-nioEventLoop-5-6] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+21:08:37.789 [http-nio-8080-exec-70] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+21:09:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+21:09:00.007 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+21:09:29.040 [lettuce-nioEventLoop-5-6] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+21:09:29.135 [lettuce-eventExecutorLoop-1-31] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+21:09:29.137 [lettuce-nioEventLoop-5-7] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+21:09:37.794 [http-nio-8080-exec-71] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+21:10:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+21:10:00.012 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+21:10:35.052 [lettuce-nioEventLoop-5-7] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+21:10:35.135 [lettuce-eventExecutorLoop-1-32] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+21:10:35.137 [lettuce-nioEventLoop-5-8] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+21:10:37.805 [http-nio-8080-exec-72] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+21:11:00.013 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+21:11:00.023 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+21:11:19.427 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+21:11:20.081 [SpringApplicationShutdownHook] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+21:11:20.097 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+21:11:20.097 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+21:11:20.097 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+21:11:20.098 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,32] - ====关闭后台任务任务线程池====
+21:11:20.098 [SpringApplicationShutdownHook] INFO  c.s.i.s.SensorCommunicationService - [destroy,84] - 正在关闭传感器通信服务...
+21:11:20.098 [SpringApplicationShutdownHook] INFO  c.s.i.s.SensorCommunicationService - [stopAllSensorTasks,167] - 正在尝试停止所有 4 个传感器任务...
+21:11:20.098 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,239] - 传感器 风向传感器 (ID: 1) 的轮询任务被主动中断，线程即将退出。
+21:11:20.098 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,256] - 传感器 风向传感器 (ID: 1) 的轮询任务已完全停止。
+21:11:20.098 [pool-10-thread-4] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,239] - 传感器 百叶箱多气象传感器 (ID: 7) 的轮询任务被主动中断，线程即将退出。
+21:11:20.098 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,239] - 传感器 风速传感器 (ID: 6) 的轮询任务被主动中断，线程即将退出。
+21:11:20.098 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,239] - 传感器 五合一水质传感器 (ID: 3) 的轮询任务被主动中断，线程即将退出。
+21:11:20.098 [SpringApplicationShutdownHook] INFO  c.s.i.s.SensorCommunicationService - [stopAllSensorTasks,176] - 已发送停止指令给所有传感器任务。
+21:11:20.098 [pool-10-thread-4] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,256] - 传感器 百叶箱多气象传感器 (ID: 7) 的轮询任务已完全停止。
+21:11:20.098 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,256] - 传感器 风速传感器 (ID: 6) 的轮询任务已完全停止。
+21:11:20.098 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,256] - 传感器 五合一水质传感器 (ID: 3) 的轮询任务已完全停止。
+21:11:20.104 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+21:11:20.107 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed

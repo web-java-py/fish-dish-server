@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="分区任务 的 批次任务以及头顶导航">
-      <change beforePath="$PROJECT_DIR$/serverlog/sys-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-error.log" afterDir="false" />
-    </list>
+    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="分区任务 的 批次任务以及头顶导航" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -165,7 +163,63 @@
       <option name="project" value="LOCAL" />
       <updated>1751288759816</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="分区任务 的 批次任务以及头顶导航">
+      <option name="closed" value="true" />
+      <created>1751288783832</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1751288783832</updated>
+    </task>
+    <task id="LOCAL-00009" summary="分区任务 的 批次任务以及头顶导航">
+      <option name="closed" value="true" />
+      <created>1751288821873</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1751288821873</updated>
+    </task>
+    <task id="LOCAL-00010" summary="分区任务 的 批次任务以及头顶导航">
+      <option name="closed" value="true" />
+      <created>1751288884858</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1751288884858</updated>
+    </task>
+    <task id="LOCAL-00011" summary="分区任务 的 批次任务以及头顶导航">
+      <option name="closed" value="true" />
+      <created>1751288918750</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1751288918750</updated>
+    </task>
+    <task id="LOCAL-00012" summary="分区任务 的 批次任务以及头顶导航">
+      <option name="closed" value="true" />
+      <created>1751288948483</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1751288948483</updated>
+    </task>
+    <task id="LOCAL-00013" summary="分区任务 的 批次任务以及头顶导航">
+      <option name="closed" value="true" />
+      <created>1751288993919</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1751288993919</updated>
+    </task>
+    <task id="LOCAL-00014" summary="分区任务 的 批次任务以及头顶导航">
+      <option name="closed" value="true" />
+      <created>1751289097815</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1751289097815</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
