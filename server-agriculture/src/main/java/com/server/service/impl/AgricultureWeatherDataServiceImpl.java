@@ -1,5 +1,7 @@
 package com.server.service.impl;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
@@ -102,7 +104,7 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
     }
 
     @Override
-    public Map<String, Object> getTrendData(String pastureId,String batchId, String range) {
+    public Map<String, Object> getTrendData(String pastureId, String batchId, String range) {
         // 1. 计算时间范围
         LocalDateTime now = LocalDateTime.now();
         LocalDateTime start;
@@ -131,7 +133,10 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
                 .orderByAsc(AgricultureWeatherData::getCollectTime)
                 .list();
 
-        // 3. 分桶聚合
+        // 3. 先合并同采集时间的数据
+        List<AgricultureWeatherData> mergedData = mergeSameTimeData(allData);
+
+        // 4. 分桶聚合
         Map<String, List<AgricultureWeatherData>> bucketMap = new LinkedHashMap<>();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(timeFormat);
         for (int i = 0; i < points; i++) {
@@ -144,7 +149,7 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
             String key = bucketTime.format(formatter);
             bucketMap.put(key, new ArrayList<>());
         }
-        for (AgricultureWeatherData d : allData) {
+        for (AgricultureWeatherData d : mergedData) {
             LocalDateTime t = d.getCollectTime();
             String key;
             if ("day".equals(range)) {
@@ -157,19 +162,18 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
             }
         }
 
-        // 4. 计算每个桶的平均值
+        // 5. 计算每个桶的平均值
         List<String> xAxis = new ArrayList<>(bucketMap.keySet());
         List<Double> temperature = new ArrayList<>();
         List<Double> humidity = new ArrayList<>();
         List<Double> windSpeed = new ArrayList<>();
-        List<Double> windDirection = new ArrayList<>();
         List<Double> lightIntensity = new ArrayList<>();
 
         for (List<AgricultureWeatherData> bucket : bucketMap.values()) {
-            temperature.add(avg(bucket, AgricultureWeatherData::getTemperature));
-            humidity.add(avg(bucket, AgricultureWeatherData::getHumidity));
-            windSpeed.add(avgWindSpeed(bucket)); // 用风速专用方法
-            lightIntensity.add(avg(bucket, AgricultureWeatherData::getLightIntensity));
+            temperature.add(calculateAverage(bucket, AgricultureWeatherData::getTemperature, "temperature"));
+            humidity.add(calculateAverage(bucket, AgricultureWeatherData::getHumidity, "humidity"));
+            windSpeed.add(calculateAverage(bucket, AgricultureWeatherData::getWindSpeed, "windSpeed"));
+            lightIntensity.add(calculateAverage(bucket, AgricultureWeatherData::getLightIntensity, "lightIntensity"));
         }
 
         Map<String, Object> result = new HashMap<>();
@@ -177,55 +181,110 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
         result.put("temperature", temperature);
         result.put("humidity", humidity);
         result.put("windSpeed", windSpeed);
-        result.put("windDirection", windDirection);
         result.put("lightIntensity", lightIntensity);
         return result;
     }
 
-    private Double avg(List<AgricultureWeatherData> list, Function<AgricultureWeatherData, ?> getter) {
-        if (list == null || list.isEmpty()) return null;
-        List<Double> valid = list.stream()
-                .map(getter)
-                .filter(Objects::nonNull)
-                .map(obj -> {
-                    if (obj instanceof Number) {
-                        double v = ((Number) obj).doubleValue();
-                        // 过滤掉0
-                        return v == 0.0 ? null : v;
-                    }
-                    if (obj instanceof String) {
-                        String s = ((String) obj).trim();
-                        if (s.isEmpty()) return null;
-                        try {
-                            double v = Double.parseDouble(s);
-                            return v == 0.0 ? null : v;
-                        } catch (Exception e) {
-                            return null;
-                        }
-                    }
-                    return null;
-                })
-                .filter(Objects::nonNull)
-                .collect(Collectors.toList());
-        if (valid.isEmpty()) return null;
-        return valid.stream().mapToDouble(Double::doubleValue).average().orElse(0);
+    /**
+     * 合并同一采集时间的多设备数据为一条完整数据
+     */
+    private List<AgricultureWeatherData> mergeSameTimeData(List<AgricultureWeatherData> dataList) {
+        // 按采集时间分组
+        Map<LocalDateTime, List<AgricultureWeatherData>> grouped = dataList.stream()
+                .collect(Collectors.groupingBy(AgricultureWeatherData::getCollectTime, LinkedHashMap::new, Collectors.toList()));
+
+        List<AgricultureWeatherData> mergedList = new ArrayList<>();
+        for (Map.Entry<LocalDateTime, List<AgricultureWeatherData>> entry : grouped.entrySet()) {
+            List<AgricultureWeatherData> group = entry.getValue();
+            AgricultureWeatherData merged = new AgricultureWeatherData();
+            merged.setCollectTime(entry.getKey());
+            merged.setPastureId(group.get(0).getPastureId());
+            merged.setBatchId(group.get(0).getBatchId());
+            // 合并各参数
+            for (AgricultureWeatherData d : group) {
+                if (d.getTemperature() != null) merged.setTemperature(d.getTemperature());
+                if (d.getHumidity() != null) merged.setHumidity(d.getHumidity());
+                if (d.getWindSpeed() != null) merged.setWindSpeed(d.getWindSpeed());
+                if (d.getLightIntensity() != null) merged.setLightIntensity(d.getLightIntensity());
+                // 风向不用合并
+            }
+            mergedList.add(merged);
+        }
+        return mergedList;
     }
 
-    private Double avgWindSpeed(List<AgricultureWeatherData> list) {
-        if (list == null || list.isEmpty()) return null;
-        List<Double> valid = list.stream()
-                .filter(d -> {
-                    // 只要风向、温度、湿度都没有值，才是风速数据
-                    boolean isWindSpeedData =
-                            (d.getWindDirection() == null || d.getWindDirection().trim().isEmpty()) &&
-                                    (d.getTemperature() == null || d.getTemperature().doubleValue() == 0.0) &&
-                                    (d.getHumidity() == null || d.getHumidity().doubleValue() == 0.0);
-                    return isWindSpeedData;
+    /**
+     * 计算平均值（忽略无效数据）
+     * @param dataList 数据列表
+     * @param valueGetter 获取字段值的方法引用
+     * @param fieldName 字段名（用于特殊处理风速等）
+     * @return 平均值，若无有效数据则返回 null
+     */
+    private Double calculateAverage(List<AgricultureWeatherData> dataList, Function<AgricultureWeatherData, Double> valueGetter, String fieldName) {
+        if (dataList == null || dataList.isEmpty()) return null;
+
+        // 过滤掉4个字段全为0或null的无效数据
+        List<AgricultureWeatherData> filteredList = dataList.stream()
+                .filter(data -> {
+                    Double temperature = data.getTemperature();
+                    Double humidity = data.getHumidity();
+                    Double windSpeed = data.getWindSpeed();
+                    Double lightIntensity = data.getLightIntensity();
+                    // 全为null或0时，过滤掉
+                    boolean allFieldsZeroOrNull =
+                            (temperature == null || temperature == 0)
+                                    && (humidity == null || humidity == 0)
+                                    && (windSpeed == null || windSpeed == 0)
+                                    && (lightIntensity == null || lightIntensity == 0);
+                    return !allFieldsZeroOrNull;
                 })
-                .map(AgricultureWeatherData::getWindSpeed)
-                .filter(Objects::nonNull)
                 .collect(Collectors.toList());
-        if (valid.isEmpty()) return null;
-        return valid.stream().mapToDouble(Double::doubleValue).average().orElse(0);
+
+        if (filteredList.isEmpty()) return null;
+
+        List<Double> validValues;
+        switch (fieldName) {
+            case "windSpeed":
+                // 风速为0可以，null不行
+                validValues = filteredList.stream()
+                        .map(AgricultureWeatherData::getWindSpeed)
+                        .filter(Objects::nonNull)
+                        .collect(Collectors.toList());
+                break;
+            case "temperature":
+                validValues = filteredList.stream()
+                        .map(AgricultureWeatherData::getTemperature)
+                        .filter(value -> value != null && value != 0)
+                        .collect(Collectors.toList());
+                break;
+            case "humidity":
+                validValues = filteredList.stream()
+                        .map(AgricultureWeatherData::getHumidity)
+                        .filter(value -> value != null && value != 0)
+                        .collect(Collectors.toList());
+                break;
+            case "lightIntensity":
+                validValues = filteredList.stream()
+                        .map(AgricultureWeatherData::getLightIntensity)
+                        .filter(value -> value != null && value != 0)
+                        .collect(Collectors.toList());
+                break;
+            default:
+                // 默认行为
+                validValues = filteredList.stream()
+                        .map(valueGetter)
+                        .filter(Objects::nonNull)
+                        .collect(Collectors.toList());
+        }
+
+        if (validValues.isEmpty()) return null;
+        double avg = validValues.stream().mapToDouble(Double::doubleValue).average().orElse(0);
+        return round(avg, 2);
     }
+
+    private Double round(Double value, int scale) {
+        if (value == null) return null;
+        return new BigDecimal(value).setScale(scale, RoundingMode.HALF_UP).doubleValue();
+    }
+
 }
