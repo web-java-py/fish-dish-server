@@ -1,11 +1,13 @@
 package com.server.controller.agriculture;
 
 import com.server.annotation.Log;
+import com.server.annotation.SeeRefreshData;
 import com.server.core.controller.BaseController;
 import com.server.core.domain.AjaxResult;
 import com.server.core.page.TableDataInfo;
 import com.server.domain.AgricultureMaterial;
 import com.server.enums.BusinessType;
+import com.server.enums.SeeMessageType;
 import com.server.service.AgricultureMaterialService;
 import com.server.utils.poi.ExcelUtil;
 import io.swagger.annotations.Api;
@@ -47,6 +49,7 @@ public class AgricultureMaterialController extends BaseController {
      */
     @Log(title = "农资管理",businessType = BusinessType.INSERT)
     @PostMapping()
+    @SeeRefreshData(seeMessageType = SeeMessageType.Data)
     public AjaxResult add(@RequestBody AgricultureMaterial agricultureMaterial){
         return toAjax(agricultureMaterialService.addAgricultureMaterial(agricultureMaterial));
     }
@@ -56,6 +59,7 @@ public class AgricultureMaterialController extends BaseController {
      */
     @Log(title = "农资管理",businessType = BusinessType.DELETE)
     @DeleteMapping("/{materialId}")
+    @SeeRefreshData(seeMessageType = SeeMessageType.Data)
     public AjaxResult delete(@PathVariable Long materialId){
         return toAjax(agricultureMaterialService.deleteById(materialId));
     }

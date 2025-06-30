@@ -1,11 +1,13 @@
 package com.server.controller.agriculture;
 
 import com.server.annotation.Log;
+import com.server.annotation.SeeRefreshData;
 import com.server.core.controller.BaseController;
 import com.server.core.domain.AjaxResult;
 import com.server.core.page.TableDataInfo;
 import com.server.domain.AgricultureMachine;
 import com.server.enums.BusinessType;
+import com.server.enums.SeeMessageType;
 import com.server.service.AgricultureMachineService;
 import com.server.utils.poi.ExcelUtil;
 import io.swagger.annotations.Api;
@@ -47,6 +49,7 @@ public class AgricultureMachineController extends BaseController {
 
     @Log(title = "农机管理",businessType = BusinessType.DELETE)
     @DeleteMapping("/{machineId}")
+    @SeeRefreshData(seeMessageType = SeeMessageType.Data)
     public AjaxResult delete(@PathVariable Long machineId){
         return toAjax(agricultureMachineService.deleteById(machineId));
     }
@@ -56,6 +59,7 @@ public class AgricultureMachineController extends BaseController {
      */
     @PostMapping
     @Log(title = "农机管理",businessType = BusinessType.INSERT)
+    @SeeRefreshData(seeMessageType = SeeMessageType.Data)
     public AjaxResult add(@RequestBody AgricultureMachine agricultureMachine){
         return toAjax(agricultureMachineService.addAgricultureMachine(agricultureMachine));
     }

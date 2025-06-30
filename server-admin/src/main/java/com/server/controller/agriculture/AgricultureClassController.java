@@ -1,7 +1,7 @@
 package com.server.controller.agriculture;
 
 import com.server.annotation.Log;
-import com.server.annotation.SeeConsole;
+import com.server.annotation.SeeRefreshData;
 import com.server.core.controller.BaseController;
 import com.server.core.domain.AjaxResult;
 import com.server.core.page.TableDataInfo;
@@ -45,7 +45,7 @@ public class AgricultureClassController extends BaseController {
     @Log(title = "种类管理", businessType = BusinessType.INSERT)
     @PostMapping
     @ApiOperation("新增种类数据")
-    @SeeConsole
+    @SeeRefreshData
     public AjaxResult add(@RequestBody AgricultureClass agricultureClass){
         return toAjax(agricultureClassService.addAgricultureClass(agricultureClass));
     }
@@ -70,7 +70,7 @@ public class AgricultureClassController extends BaseController {
     @Log(title = "种类管理", businessType = BusinessType.DELETE)
     @DeleteMapping("/{classId}")
     @ApiOperation("删除种类数据")
-    @SeeConsole
+    @SeeRefreshData
     public AjaxResult del(@PathVariable Long classId){
         return toAjax(agricultureClassService.delAgricultureClass(classId));
     }

@@ -1,13 +1,14 @@
 package com.server.controller.agriculture;
 
 import com.server.annotation.Log;
-import com.server.annotation.SeeConsole;
+import com.server.annotation.SeeRefreshData;
 import com.server.core.controller.BaseController;
 import com.server.core.domain.AjaxResult;
 import com.server.core.page.TableDataInfo;
 import com.server.domain.AgricultureBatchTask;
 import com.server.enums.BusinessType;
 //import com.server.service.AgricultureBatchTaskService;
+import com.server.enums.SeeMessageType;
 import com.server.service.AgricultureBatchTaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -50,7 +51,7 @@ public class AgricultureBatchTaskController extends BaseController {
     @PreAuthorize("@ss.hasPermi('agriculture:batchTask:remove')")
     @Log(title = "分区", businessType = BusinessType.DELETE)
     @DeleteMapping("/{taskId}")
-    @SeeConsole
+    @SeeRefreshData
     public AjaxResult remove(@PathVariable Long taskId)
     {
         return toAjax(agricultureBatchTaskService.deleteAgricultureCropBatchByBatchIds(taskId));
@@ -61,7 +62,7 @@ public class AgricultureBatchTaskController extends BaseController {
     @PreAuthorize("@ss.hasPermi('agriculture:batchTask:edit')")
     @Log(title = "批次任务", businessType = BusinessType.UPDATE)
     @PutMapping
-    @SeeConsole
+    @SeeRefreshData(seeMessageType = SeeMessageType.CONSOLE)
     public AjaxResult edit(@RequestBody AgricultureBatchTask agricultureBatchTask)
     {
         return toAjax(agricultureBatchTaskService.updateBatchTask(agricultureBatchTask));
@@ -72,7 +73,7 @@ public class AgricultureBatchTaskController extends BaseController {
     @PreAuthorize("@ss.hasPermi('agriculture:batchTask:add')")
     @Log(title = "批次任务", businessType = BusinessType.INSERT)
     @PostMapping
-    @SeeConsole
+    @SeeRefreshData
     public AjaxResult add(@RequestBody AgricultureBatchTask agricultureBatchTask)
     {
         return toAjax(agricultureBatchTaskService.insertBatchTask(agricultureBatchTask));

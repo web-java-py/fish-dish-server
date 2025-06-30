@@ -4,7 +4,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletResponse;
 
 import com.server.annotation.Log;
-import com.server.annotation.SeeConsole;
+import com.server.annotation.SeeRefreshData;
 import com.server.core.page.TableDataInfo;
 import com.server.domain.dto.AgricultureCropBatchDTO;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -85,7 +85,7 @@ public class AgricultureCropBatchController extends BaseController
     @PreAuthorize("@ss.hasPermi('agriculture:batch:add')")
     @Log(title = "分区", businessType = BusinessType.INSERT)
     @PostMapping
-    @SeeConsole
+    @SeeRefreshData
     public AjaxResult add(@RequestBody AgricultureCropBatch agricultureCropBatch)
     {
         return toAjax(agricultureCropBatchService.insertAgricultureCropBatch(agricultureCropBatch));
@@ -108,7 +108,7 @@ public class AgricultureCropBatchController extends BaseController
     @PreAuthorize("@ss.hasPermi('agriculture:batch:remove')")
     @Log(title = "分区", businessType = BusinessType.DELETE)
 	@DeleteMapping("/{batchId}")
-    @SeeConsole
+    @SeeRefreshData
     public AjaxResult remove(@PathVariable Long[] batchId)
     {
         return toAjax(agricultureCropBatchService.deleteAgricultureCropBatchByBatchIds(batchId));

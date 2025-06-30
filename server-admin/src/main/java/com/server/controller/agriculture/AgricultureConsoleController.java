@@ -2,6 +2,7 @@ package com.server.controller.agriculture;
 
 import com.server.constant.SseConstant;
 import com.server.core.domain.AjaxResult;
+import com.server.enums.SeeMessageType;
 import com.server.service.AgricultureConsoleService;
 import com.server.sse.SseServer;
 import io.swagger.annotations.Api;
@@ -33,10 +34,10 @@ public class AgricultureConsoleController {
     @GetMapping("/total")
     @ApiOperation("获取统计数据")
     public SseEmitter getTotal() {
-        String console = SseConstant.CONSOLE;
+        String console = SeeMessageType.CONSOLE.name();
         sseServer.createSse(console);
         Map<String, Object> map = agricultureConsoleService.listTotal();
-        sseServer.sendMessage(console, "*", map);
+        sseServer.sendMessage(console, console, map);
         return sseServer.getSseEmitter(console);
     }
 
