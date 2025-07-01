@@ -100,4 +100,18 @@ public class AgricultureDevice extends BaseEntityPlus implements Serializable
     @TableField(value="sensor_address")
     @ApiModelProperty(value="传感器设备地址")
     private String sensorAddress;
+
+    /** 打开指令 */
+    @TableField(value="command_on")
+    @ApiModelProperty(value="打开指令")
+    private String commandOn;
+
+    /** 关闭指令 */
+    @TableField(value="command_off")
+    @ApiModelProperty(value="关闭指令")
+    private String commandOff;
+
+    @TableField(value="is_controllable")
+    @ApiModelProperty(value="是否可控设备")
+    private String isControllable;
 }

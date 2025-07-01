@@ -2,6 +2,7 @@ package com.server.service.impl;
 
 import java.time.LocalDateTime;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -110,4 +111,18 @@ public class AgricultureThresholdConfigServiceImpl extends ServiceImpl<Agricultu
     {
         return removeById(id) ? 1 : 0;
     }
+
+    /**
+     * 根据设备ID集合查询所有对应的阈值配置
+     * @param deviceIds 设备ID集合
+     * @return 阈值配置列表，如果deviceIds为空则返回空列表
+     */
+    @Override
+    public List<AgricultureThresholdConfig> selectByDeviceIds(List<Long> deviceIds) {
+        if (deviceIds == null || deviceIds.isEmpty()) {
+            return Collections.emptyList();
+        }
+        return lambdaQuery().in(AgricultureThresholdConfig::getDeviceId, deviceIds).list();
+    }
+
 }

@@ -43,4 +43,8 @@ public class AgricultureDeviceType extends BaseEntityPlus implements Serializabl
     @ApiModelProperty(value="类型描述")
     private String typeDesc;
 
+    @TableField(value="is_controllable")
+    @ApiModelProperty(value="是否可控设备")
+    private String isControllable;
+
 }

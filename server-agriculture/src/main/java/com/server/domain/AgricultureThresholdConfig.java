@@ -55,6 +55,14 @@ public class AgricultureThresholdConfig extends BaseEntityPlus implements Serial
     @ApiModelProperty(value="阈值最大值")
     private Double thresholdMax;
 
+    @TableField(value="alarm_level")
+    @ApiModelProperty(value="报警级别（danger/严重、warning/警告等）")
+    private String alarmLevel;
+
+    @TableField(value="notify_type")
+    @ApiModelProperty(value="通知方式（system/系统通知, ring/强提醒, sms/短信等）")
+    private String notifyType;
+
     @TableField(value="is_enabled")
     @ApiModelProperty(value="是否启用（0-禁用，1-启用）")
     private Long isEnabled;

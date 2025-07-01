@@ -1,0 +1,6 @@
+17:37:28.611 [schedule-pool-1] INFO  sys-user - [run,56] - [127.0.0.1]内网IP[admin][Success][登录成功]
+19:47:23.505 [schedule-pool-13] INFO  sys-user - [run,56] - [127.0.0.1]内网IP[admin][Success][登录成功]
+20:33:26.893 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,32] - ====关闭后台任务任务线程池====
+21:36:40.414 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,32] - ====关闭后台任务任务线程池====
+23:26:43.332 [schedule-pool-4] INFO  sys-user - [run,56] - [127.0.0.1]内网IP[admin][Success][登录成功]
+23:59:07.630 [schedule-pool-1] INFO  sys-user - [run,56] - [127.0.0.1]内网IP[admin][Success][登录成功]
