@@ -4,25 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="优化通信">
-      <change afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/common/SseController.java" afterDir="false" />
+    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="优化sse 重构sse">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureBatchTaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureBatchTaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureConsoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureDeviceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureDeviceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureMachineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureMachineController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureMaterialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureMaterialController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/data/TotalController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/annotation/SeeRefreshData.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-common/src/main/java/com/server/annotation/SeeRefreshData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/aspect/AgricultureSeeAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/aspect/AgricultureSeeAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/enums/SeeMessageType.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-common/src/main/java/com/server/enums/SeeMessageType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureConsoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureConsoleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureConsoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureConsoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/sse/SseServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-framework/src/main/java/com/server/sse/SseServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-common/src/main/java/com/server/constant/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-common/src/main/java/com/server/constant/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-data/src/main/java/com/server/aspect/DataSeeAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-data/src/main/java/com/server/aspect/DataSeeAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-data/src/main/java/com/server/service/TotalService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-data/src/main/java/com/server/service/impl/TotalServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-framework/src/main/java/com/server/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-framework/src/main/java/com/server/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-framework/src/main/java/com/server/sse/SseServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-framework/src/main/java/com/server/sse/SseServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1751289015071</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="优化sse 重构sse">
+      <created>1751381153392</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1751381153392</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,7 +213,8 @@
     <MESSAGE value="控制台接口完成50%" />
     <MESSAGE value="配置see 工作台数据实时推送 新增data模块" />
     <MESSAGE value="实现大数据规模数据实时推送接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现大数据规模数据实时推送接口" />
+    <MESSAGE value="优化sse 重构sse" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化sse 重构sse" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

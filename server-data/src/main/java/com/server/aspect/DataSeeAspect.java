@@ -31,7 +31,7 @@ public class DataSeeAspect {
             Map<String, Object> hashMap = new HashMap<>();
             hashMap.put("device", scaleService.listDevice());
             hashMap.put("agriculture",  scaleService.listAgriculture());
-            sseServer.sendMessage(Constants.ALL_USER, SeeMessageType.DATA.name(), hashMap);
+            sseServer.sendToAllMessage(SeeMessageType.DATA.name(), hashMap);
         }
     }
 }

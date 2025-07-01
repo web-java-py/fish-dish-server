@@ -4,7 +4,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
+import javax.websocket.Session;
 import java.io.IOException;
+import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -16,6 +18,7 @@ public class SseServer {
 
     /**
      * 创建连接
+     *
      * @param uid
      * @return
      */
@@ -59,27 +62,29 @@ public class SseServer {
 
     /**
      * 发送消息
-     * @param uid
+     *
      * @param messageId
      * @param message
      */
-    public void sendMessage(String uid, String messageId, Object message) {
-        try {
-            SseEmitter sseEmitter = sseEmitterMap.get(uid);
-            sseEmitter.send(SseEmitter.event().id(messageId).reconnectTime(1 * 60 * 1000L).data(message));
-            log.info("用户{} 消息id:{} 推送成功:{}", uid, messageId, message);
-        } catch (Exception e) {
-            sseEmitterMap.remove(uid);
-            log.error("用户{} 消息id:{} 推送异常:{}", uid, messageId, e.getMessage());
+    public void sendToAllMessage(String messageId, Object message) {
+        Collection<SseEmitter> sseEmitters = sseEmitterMap.values();
+        for (SseEmitter sseEmitter : sseEmitters) {
+            try {
+                sseEmitter.send(SseEmitter.event().id(messageId).reconnectTime(1 * 60 * 1000L).data(message));
+                log.info("消息id:{} 推送成功:{}", messageId, message);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
     /**
      * 关闭连接
+     *
      * @param uid
      */
-    public void closeSse(String uid){
-        if (sseEmitterMap.containsKey(uid)){
+    public void closeSse(String uid) {
+        if (sseEmitterMap.containsKey(uid)) {
             sseEmitterMap.get(uid).complete();
             sseEmitterMap.remove(uid);
             log.info("[{}]sse关闭成功！", uid);
