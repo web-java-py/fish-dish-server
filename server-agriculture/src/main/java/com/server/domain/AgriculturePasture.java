@@ -51,6 +51,10 @@ public class AgriculturePasture extends BaseEntityPlus implements Serializable  
     @ApiModelProperty(value="大棚面积")
     private String area;
 
+    @TableField(value="remaining_area")
+    @ApiModelProperty(value="大棚剩余面积")
+    private String remainingArea;
+
     @TableField(value="big_breeding_quantity")
     @ApiModelProperty(value="最大分区数量")
     private Long bigBreedingQuantity;

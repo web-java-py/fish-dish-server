@@ -45,8 +45,7 @@ public class AgriculturePartitionFoodController extends BaseController
     public TableDataInfo list(AgriculturePartitionFood agriculturePartitionFood)
     {
         startPage();
-        List<AgriculturePartitionFood> list = agriculturePartitionFoodService.selectagriculturePartitionFoodList(agriculturePartitionFood);
-        return getDataTable(list);
+        return getDataTable(agriculturePartitionFoodService.selectagriculturePartitionFoodList(agriculturePartitionFood));
     }
 
     /**

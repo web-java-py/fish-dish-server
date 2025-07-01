@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="分区任务 的 批次任务以及头顶导航">
+    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="日志">
+      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/dto/AgriculturePastureDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureBatchTaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureBatchTaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureBatchTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureBatchTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureBatchTaskServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureBatchTaskServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgriculturePartitionFoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgriculturePartitionFoodController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgriculturePastureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgriculturePastureController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgriculturePasture.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgriculturePasture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgriculturePastureService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgriculturePastureService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgriculturePastureServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgriculturePastureServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-info.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-user.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-user.log" afterDir="false" />
@@ -20,6 +23,13 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -64,16 +74,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ServerApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "zbb",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/YCGSHou/fish-dish-server"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;zbb&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/JiuYCGS/Hou/znwl-agriculture-server-no&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.ServerApplication">
     <configuration name="ServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.server.ServerApplication" />
@@ -230,21 +240,21 @@
       <option name="project" value="LOCAL" />
       <updated>1751289097815</updated>
     </task>
-    <task id="LOCAL-00015" summary="分区任务 的 批次任务以及头顶导航">
+    <task id="LOCAL-00015" summary="日志">
       <option name="closed" value="true" />
-      <created>1751289145542</created>
+      <created>1751361231335</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1751289145542</updated>
+      <updated>1751361231335</updated>
     </task>
-    <task id="LOCAL-00016" summary="分区任务 的 批次任务以及头顶导航">
+    <task id="LOCAL-00016" summary="日志">
       <option name="closed" value="true" />
-      <created>1751289218287</created>
+      <created>1751361257671</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1751289218287</updated>
+      <updated>1751361257671</updated>
     </task>
     <option name="localTasksCounter" value="17" />
     <servers />
@@ -279,8 +289,11 @@
     <MESSAGE value="去掉.idea配置" />
     <MESSAGE value="Merge remote-tracking branch 'origin/main' into zbb&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;serverlog/sys-error.log&#10;#&#9;serverlog/sys-info.log&#10;#&#9;serverlog/sys-user.log" />
     <MESSAGE value="更改表数据名" />
+    <MESSAGE value="分区任务的批次任务按钮全部修饰完成以及bug" />
     <MESSAGE value="分区任务 的 批次任务以及头顶导航" />
-    <option name="LAST_COMMIT_MESSAGE" value="分区任务 的 批次任务以及头顶导航" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/zbb' into zbb&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;serverlog/sys-error.log&#10;#&#9;serverlog/sys-info.log&#10;#&#9;serverlog/sys-user.log" />
+    <MESSAGE value="日志" />
+    <option name="LAST_COMMIT_MESSAGE" value="日志" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
