@@ -7,17 +7,17 @@ package com.server.enums;
  */
 public enum SeeMessageType {
     /**
-     * 控制台
+     * 鱼菜
      */
-    CONSOLE,
+    AGRICULTURE,
 
     /**
      * 大数据
      */
-    Data,
+    DATA,
 
     /**
-     * 控制台 大数据
+     * 所有
      */
-    CONSOLE_AND_DATA
+    ALL
 }

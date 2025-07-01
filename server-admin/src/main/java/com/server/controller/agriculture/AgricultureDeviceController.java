@@ -80,7 +80,7 @@ public class AgricultureDeviceController extends BaseController
     @PreAuthorize("@ss.hasPermi('agriculture:device:add')")
     @Log(title = "设备信息", businessType = BusinessType.INSERT)
     @PostMapping
-    @SeeRefreshData(seeMessageType = SeeMessageType.Data)
+    @SeeRefreshData(seeMessageType = SeeMessageType.DATA)
     public AjaxResult add(@RequestBody AgricultureDevice agricultureDevice)
     {
         return toAjax(agricultureDeviceService.insertAgricultureDevice(agricultureDevice));
@@ -92,7 +92,7 @@ public class AgricultureDeviceController extends BaseController
     @PreAuthorize("@ss.hasPermi('agriculture:device:edit')")
     @Log(title = "设备信息", businessType = BusinessType.UPDATE)
     @PutMapping
-    @SeeRefreshData(seeMessageType = SeeMessageType.Data)
+    @SeeRefreshData(seeMessageType = SeeMessageType.DATA)
     public AjaxResult edit(@RequestBody AgricultureDevice agricultureDevice)
     {
         return toAjax(agricultureDeviceService.updateAgricultureDevice(agricultureDevice));
@@ -104,7 +104,7 @@ public class AgricultureDeviceController extends BaseController
     @PreAuthorize("@ss.hasPermi('agriculture:device:remove')")
     @Log(title = "设备信息", businessType = BusinessType.DELETE)
 	@DeleteMapping("/{ids}")
-    @SeeRefreshData(seeMessageType = SeeMessageType.Data)
+    @SeeRefreshData(seeMessageType = SeeMessageType.DATA)
     public AjaxResult remove(@PathVariable String[] ids)
     {
         return toAjax(agricultureDeviceService.deleteAgricultureDeviceByIds(ids));

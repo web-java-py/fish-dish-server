@@ -16,14 +16,16 @@ public class SseServer {
 
     /**
      * 创建连接
+     * @param uid
+     * @return
      */
     public SseEmitter createSse(String uid) {
         //默认30秒超时,设置为0L则永不超时
-        SseEmitter sseEmitter = new SseEmitter(0l);
+        SseEmitter sseEmitter = new SseEmitter(0L);
         //完成后回调
         sseEmitter.onCompletion(() -> {
-            log.info("[{}]结束连接...................", uid);
             sseEmitterMap.remove(uid);
+            log.info("[{}]结束连接...................", uid);
         });
         //超时回调
         sseEmitter.onTimeout(() -> {
@@ -41,14 +43,14 @@ public class SseServer {
                                 .reconnectTime(3000));
                         sseEmitterMap.put(uid, sseEmitter);
                     } catch (IOException e) {
-                        e.printStackTrace();
+                        log.info(e.getMessage());
                     }
                 }
         );
         try {
             sseEmitter.send(SseEmitter.event().reconnectTime(5000));
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
         }
         sseEmitterMap.put(uid, sseEmitter);
         log.info("[{}]创建sse连接成功！", uid);
@@ -56,7 +58,10 @@ public class SseServer {
     }
 
     /**
-     * 给指定用户发送消息
+     * 发送消息
+     * @param uid
+     * @param messageId
+     * @param message
      */
     public void sendMessage(String uid, String messageId, Object message) {
         try {
@@ -64,29 +69,20 @@ public class SseServer {
             sseEmitter.send(SseEmitter.event().id(messageId).reconnectTime(1 * 60 * 1000L).data(message));
             log.info("用户{} 消息id:{} 推送成功:{}", uid, messageId, message);
         } catch (Exception e) {
-            closeSse(uid);
+            sseEmitterMap.remove(uid);
             log.error("用户{} 消息id:{} 推送异常:{}", uid, messageId, e.getMessage());
         }
     }
 
     /**
-     * 查询 Emitter
-     * @param uid
-     * @return
-     */
-    public SseEmitter getSseEmitter(String uid){
-        return sseEmitterMap.get(uid);
-    }
-
-    /**
-     * 断开
-     *
+     * 关闭连接
      * @param uid
      */
-    public void closeSse(String uid) {
-        SseEmitter sseEmitter = sseEmitterMap.get(uid);
-        sseEmitter.complete();
-        sseEmitterMap.remove(uid);
-        log.error("用户{} 连接已关闭", uid);
+    public void closeSse(String uid){
+        if (sseEmitterMap.containsKey(uid)){
+            sseEmitterMap.get(uid).complete();
+            sseEmitterMap.remove(uid);
+            log.info("[{}]sse关闭成功！", uid);
+        }
     }
 }

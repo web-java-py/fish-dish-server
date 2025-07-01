@@ -62,7 +62,7 @@ public class AgricultureBatchTaskController extends BaseController {
     @PreAuthorize("@ss.hasPermi('agriculture:batchTask:edit')")
     @Log(title = "批次任务", businessType = BusinessType.UPDATE)
     @PutMapping
-    @SeeRefreshData(seeMessageType = SeeMessageType.CONSOLE)
+    @SeeRefreshData(seeMessageType = SeeMessageType.AGRICULTURE)
     public AjaxResult edit(@RequestBody AgricultureBatchTask agricultureBatchTask)
     {
         return toAjax(agricultureBatchTaskService.updateBatchTask(agricultureBatchTask));

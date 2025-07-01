@@ -4,9 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="实现大数据规模数据实时推送接口">
+    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="优化通信">
+      <change afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/common/SseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ws/MqSocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ws/MqSocketServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureBatchTaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureBatchTaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureConsoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureDeviceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureDeviceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureMachineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureMachineController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureMaterialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureMaterialController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/data/TotalController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/annotation/SeeRefreshData.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-common/src/main/java/com/server/annotation/SeeRefreshData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/aspect/AgricultureSeeAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/aspect/AgricultureSeeAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/enums/SeeMessageType.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-common/src/main/java/com/server/enums/SeeMessageType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureConsoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureConsoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureConsoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureConsoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/sse/SseServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-framework/src/main/java/com/server/sse/SseServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-common/src/main/java/com/server/constant/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-common/src/main/java/com/server/constant/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-data/src/main/java/com/server/aspect/DataSeeAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-data/src/main/java/com/server/aspect/DataSeeAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-data/src/main/java/com/server/service/TotalService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-data/src/main/java/com/server/service/impl/TotalServiceImpl.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

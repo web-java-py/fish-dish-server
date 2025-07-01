@@ -125,14 +125,6 @@ public class AgricultureConsoleServiceImpl implements AgricultureConsoleService 
         return result;
     }
 
-    @Override
-    public Map<String, Object> listTotal() {
-        Map<String, Object> hashMap = new HashMap<>();
-        hashMap.put("agriculture", listAgriculture());
-        hashMap.put("batchTask", listBatchTask());
-        return hashMap;
-    }
-
     private LocalDateTime yesterday() {
         return LocalDateTime.now().minusDays(1)
                 .with(LocalTime.MIDNIGHT);

@@ -49,7 +49,7 @@ public class AgricultureMaterialController extends BaseController {
      */
     @Log(title = "农资管理",businessType = BusinessType.INSERT)
     @PostMapping()
-    @SeeRefreshData(seeMessageType = SeeMessageType.Data)
+    @SeeRefreshData(seeMessageType = SeeMessageType.DATA)
     public AjaxResult add(@RequestBody AgricultureMaterial agricultureMaterial){
         return toAjax(agricultureMaterialService.addAgricultureMaterial(agricultureMaterial));
     }
@@ -59,7 +59,7 @@ public class AgricultureMaterialController extends BaseController {
      */
     @Log(title = "农资管理",businessType = BusinessType.DELETE)
     @DeleteMapping("/{materialId}")
-    @SeeRefreshData(seeMessageType = SeeMessageType.Data)
+    @SeeRefreshData(seeMessageType = SeeMessageType.DATA)
     public AjaxResult delete(@PathVariable Long materialId){
         return toAjax(agricultureMaterialService.deleteById(materialId));
     }

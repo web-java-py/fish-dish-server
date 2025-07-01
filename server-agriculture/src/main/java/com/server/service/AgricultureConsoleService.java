@@ -20,11 +20,4 @@ public interface AgricultureConsoleService {
      * @return
      */
     List<AgricultureConsoleVO> listBatchTask();
-
-    /**
-     * 获取统计数据
-     *
-     * @return
-     */
-    Map<String, Object> listTotal();
 }

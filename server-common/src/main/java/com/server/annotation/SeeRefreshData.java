@@ -12,5 +12,5 @@ public @interface SeeRefreshData {
     /**
      * 消息类型
      */
-    public SeeMessageType seeMessageType() default SeeMessageType.CONSOLE_AND_DATA;
+    public SeeMessageType seeMessageType() default SeeMessageType.ALL;
 }
