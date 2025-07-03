@@ -189,11 +189,6 @@ mqtt:
   default-topic: ${mqtt.default-topic}
   completion-timeout: ${mqtt.completion-timeout}
 
-# 串口配置
-serial:
-  port-name: ${serial.port-name}
-  baud-rate: ${serial.baud-rate}
-
 # 区块链
 fisco:
   enabled: ${fisco.enabled}

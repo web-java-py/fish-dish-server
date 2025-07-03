@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.server.domain.AgricultureDevice;
 import com.server.mapper.AgricultureDeviceMapper;
@@ -48,7 +49,22 @@ public class AgricultureDeviceSensorAlertServiceImpl extends ServiceImpl<Agricul
     @Override
     public List<AgricultureDeviceSensorAlert> selectAgricultureDeviceSensorAlertList(AgricultureDeviceSensorAlert agricultureDeviceSensorAlert)
     {
-        return list();
+        LambdaQueryWrapper<AgricultureDeviceSensorAlert> queryWrapper = new LambdaQueryWrapper<>();
+
+        //大棚 id 过滤
+        if (agricultureDeviceSensorAlert.getPastureId() != null && !agricultureDeviceSensorAlert.getPastureId().isEmpty()) {
+            queryWrapper.eq(AgricultureDeviceSensorAlert::getPastureId, agricultureDeviceSensorAlert.getPastureId());
+        }
+        //分区 id 过滤
+        if (agricultureDeviceSensorAlert.getBatchId() != null && !agricultureDeviceSensorAlert.getBatchId().isEmpty()) {
+            queryWrapper.eq(AgricultureDeviceSensorAlert::getBatchId, agricultureDeviceSensorAlert.getBatchId());
+        }
+        // 设备类型过滤
+        if (agricultureDeviceSensorAlert.getDeviceType() != null && !agricultureDeviceSensorAlert.getDeviceType().isEmpty()) {
+            queryWrapper.eq(AgricultureDeviceSensorAlert::getDeviceType, agricultureDeviceSensorAlert.getDeviceType());
+        }
+
+        return list(queryWrapper);
     }
 
     /**
