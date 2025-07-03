@@ -1,12 +1,15 @@
 package com.server.service.impl;
 
 import java.time.LocalDateTime;
-import java.util.Arrays;
-import java.util.List;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.server.domain.AgricultureDevice;
 import com.server.domain.AgricultureWaterQualityData;
+import com.server.domain.AgricultureWeatherData;
 import com.server.mapper.AgricultureDeviceMapper;
 import com.server.service.AgricultureDeviceService;
 import com.server.utils.DateUtils;
@@ -14,6 +17,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.server.mapper.AgricultureWaterQualityDataMapper;
 import com.server.service.AgricultureWaterQualityDataService;
+
+import static com.server.utils.Arith.round;
 
 /**
  * 水质数据Service业务层处理
@@ -26,6 +31,7 @@ public class AgricultureWaterQualityDataServiceImpl extends ServiceImpl<Agricult
 {
     @Autowired
     private AgricultureWaterQualityDataMapper agricultureWaterQualityDataMapper;
+
 
     /**
      * 查询水质数据
@@ -49,6 +55,100 @@ public class AgricultureWaterQualityDataServiceImpl extends ServiceImpl<Agricult
     public List<AgricultureWaterQualityData> selectAgricultureWaterQualityDataList(AgricultureWaterQualityData agricultureWaterQualityData)
     {
         return list();
+    }
+
+    //查询水质趋势数据图表数据
+    @Override
+    public Map<String, Object> getTrendData(String pastureId, String batchId, String range) {
+        // 1. 计算时间范围
+        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime start;
+        int points;
+        String timeFormat;
+        if ("day".equals(range)) {
+            start = now.minusHours(23).withMinute(0).withSecond(0).withNano(0);
+            points = 24;
+            timeFormat = "HH:00";
+        } else if ("week".equals(range)) {
+            start = now.minusDays(6).withHour(0).withMinute(0).withSecond(0).withNano(0);
+            points = 7;
+            timeFormat = "MM-dd";
+        } else { // month
+            start = now.minusDays(29).withHour(0).withMinute(0).withSecond(0).withNano(0);
+            points = 30;
+            timeFormat = "MM-dd";
+        }
+
+        // 2. 查询数据
+        List<AgricultureWaterQualityData> allData = this.lambdaQuery()
+                .eq(AgricultureWaterQualityData::getPastureId, pastureId)
+                .eq(AgricultureWaterQualityData::getBatchId, batchId)
+                .ge(AgricultureWaterQualityData::getCollectTime, start)
+                .le(AgricultureWaterQualityData::getCollectTime, now)
+                .orderByAsc(AgricultureWaterQualityData::getCollectTime)
+                .list();
+
+        // 3. 分桶聚合
+        Map<String, List<AgricultureWaterQualityData>> bucketMap = new LinkedHashMap<>();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(timeFormat);
+        for (int i = 0; i < points; i++) {
+            LocalDateTime bucketTime;
+            if ("day".equals(range)) {
+                bucketTime = start.plusHours(i);
+            } else {
+                bucketTime = start.plusDays(i);
+            }
+            String key = bucketTime.format(formatter);
+            bucketMap.put(key, new ArrayList<>());
+        }
+        for (AgricultureWaterQualityData d : allData) {
+            LocalDateTime t = d.getCollectTime();
+            String key;
+            if ("day".equals(range)) {
+                key = t.withMinute(0).withSecond(0).withNano(0).format(formatter);
+            } else {
+                key = t.withHour(0).withMinute(0).withSecond(0).withNano(0).format(formatter);
+            }
+            if (bucketMap.containsKey(key)) {
+                bucketMap.get(key).add(d);
+            }
+        }
+
+        // 4. 计算每个桶的平均值（只统计水质5个字段）
+        List<String> xAxis = new ArrayList<>(bucketMap.keySet());
+        List<Double> dissolvedOxygen = new ArrayList<>();
+        List<Double> ammoniaNitrogen = new ArrayList<>();
+        List<Double> waterTemperature = new ArrayList<>();
+        List<Double> phValue = new ArrayList<>();
+        List<Double> conductivity = new ArrayList<>();
+
+        for (List<AgricultureWaterQualityData> bucket : bucketMap.values()) {
+            dissolvedOxygen.add(average(bucket, AgricultureWaterQualityData::getDissolvedOxygen));
+            ammoniaNitrogen.add(average(bucket, AgricultureWaterQualityData::getAmmoniaNitrogen));
+            waterTemperature.add(average(bucket, AgricultureWaterQualityData::getWaterTemperature));
+            phValue.add(average(bucket, AgricultureWaterQualityData::getPhValue));
+            conductivity.add(average(bucket, AgricultureWaterQualityData::getConductivity));
+        }
+
+        Map<String, Object> result = new HashMap<>();
+        result.put("xAxis", xAxis);
+        result.put("dissolved_oxygen", dissolvedOxygen);
+        result.put("ammonia_nitrogen", ammoniaNitrogen);
+        result.put("water_temperature", waterTemperature);
+        result.put("ph_value", phValue);
+        result.put("conductivity", conductivity);
+        return result;
+    }
+
+    /**
+     * 计算平均值（忽略null）
+     */
+    private Double average(List<AgricultureWaterQualityData> list, Function<AgricultureWaterQualityData, Double> getter) {
+        if (list == null || list.isEmpty()) return null;
+        List<Double> values = list.stream().map(getter).filter(Objects::nonNull).collect(Collectors.toList());
+        if (values.isEmpty()) return null;
+        double avg = values.stream().mapToDouble(Double::doubleValue).average().orElse(0);
+        return round(avg, 2);
     }
 
     /**
