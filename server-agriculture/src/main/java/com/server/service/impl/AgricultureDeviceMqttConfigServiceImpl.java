@@ -36,6 +36,7 @@ public class AgricultureDeviceMqttConfigServiceImpl  extends ServiceImpl<Agricul
         return getById(id);
     }
 
+    // 根据设备id查询mqtt配置
     @Override
     public AgricultureDeviceMqttConfig getByDeviceId(Long deviceId) {
         return lambdaQuery()

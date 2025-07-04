@@ -1,0 +1,1380 @@
+00:00:00.002 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:00:00.011 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:00:09.019 [lettuce-nioEventLoop-5-3] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+00:00:09.066 [lettuce-eventExecutorLoop-1-23] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+00:00:09.070 [lettuce-nioEventLoop-5-4] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+00:00:49.140 [http-nio-8080-exec-63] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:01:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:01:00.006 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:01:15.029 [lettuce-nioEventLoop-5-4] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+00:01:15.065 [lettuce-eventExecutorLoop-1-22] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+00:01:15.067 [lettuce-nioEventLoop-5-5] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+00:01:49.158 [http-nio-8080-exec-66] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:02:00.002 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:02:00.009 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:02:21.083 [lettuce-nioEventLoop-5-5] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+00:02:21.165 [lettuce-eventExecutorLoop-1-24] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+00:02:21.168 [lettuce-nioEventLoop-5-6] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+00:02:49.181 [http-nio-8080-exec-68] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:03:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:03:00.008 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:03:27.065 [lettuce-nioEventLoop-5-6] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+00:03:27.165 [lettuce-eventExecutorLoop-1-25] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+00:03:27.169 [lettuce-nioEventLoop-5-7] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+00:03:49.132 [http-nio-8080-exec-26] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:04:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:04:00.007 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:04:33.006 [lettuce-nioEventLoop-5-7] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+00:04:33.066 [lettuce-eventExecutorLoop-1-27] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+00:04:33.069 [lettuce-nioEventLoop-5-8] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+00:04:49.137 [http-nio-8080-exec-67] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:05:00.016 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:05:00.023 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:05:05.859 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+00:05:06.095 [SpringApplicationShutdownHook] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:05:06.111 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+00:05:06.112 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+00:05:06.112 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+00:05:06.112 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,32] - ====关闭后台任务任务线程池====
+00:05:06.113 [SpringApplicationShutdownHook] INFO  c.s.i.s.SensorCommunicationService - [destroy,84] - 正在关闭传感器通信服务...
+00:05:06.113 [SpringApplicationShutdownHook] INFO  c.s.i.s.SensorCommunicationService - [stopAllSensorTasks,167] - 正在尝试停止所有 4 个传感器任务...
+00:05:06.113 [SpringApplicationShutdownHook] INFO  c.s.i.s.SensorCommunicationService - [stopAllSensorTasks,176] - 已发送停止指令给所有传感器任务。
+00:05:06.113 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,239] - 传感器 风向传感器 (ID: 1) 的轮询任务被主动中断，线程即将退出。
+00:05:06.113 [pool-10-thread-4] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,239] - 传感器 百叶箱多气象传感器 (ID: 7) 的轮询任务被主动中断，线程即将退出。
+00:05:06.113 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,239] - 传感器 五合一水质传感器 (ID: 3) 的轮询任务被主动中断，线程即将退出。
+00:05:06.113 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,239] - 传感器 风速传感器 (ID: 6) 的轮询任务被主动中断，线程即将退出。
+00:05:06.113 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,256] - 传感器 风向传感器 (ID: 1) 的轮询任务已完全停止。
+00:05:06.113 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,256] - 传感器 五合一水质传感器 (ID: 3) 的轮询任务已完全停止。
+00:05:06.113 [pool-10-thread-4] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,256] - 传感器 百叶箱多气象传感器 (ID: 7) 的轮询任务已完全停止。
+00:05:06.113 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,256] - 传感器 风速传感器 (ID: 6) 的轮询任务已完全停止。
+00:05:06.117 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+00:05:06.121 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+00:05:09.597 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+00:05:09.599 [main] INFO  c.s.ServerApplication - [logStarting,55] - Starting ServerApplication using Java 17.0.12 on zhubb with PID 71980 (D:\YCGSHou\fish-dish-server\server-admin\target\classes started by 18319 in D:\YCGSHou\fish-dish-server)
+00:05:09.599 [main] INFO  c.s.ServerApplication - [logStartupProfileInfo,686] - The following 2 profiles are active: "dev", "druid"
+00:05:11.460 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+00:05:11.461 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+00:05:11.461 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.102]
+00:05:11.556 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+00:05:12.575 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+00:05:13.758 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/ca.crt failed, trying to load from the resourcePath /D:/YCGSHou/fish-dish-server/server-admin/target/classes/
+00:05:13.761 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.crt failed, trying to load from the resourcePath /D:/YCGSHou/fish-dish-server/server-admin/target/classes/
+00:05:13.761 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.key failed, trying to load from the resourcePath /D:/YCGSHou/fish-dish-server/server-admin/target/classes/
+00:05:13.793 [main] INFO  o.f.b.s.n.ConnectionManager - [<init>,88] -  all connections, size: 2, list: [ConnectionInfo{host='192.168.31.210', port=20201}, ConnectionInfo{host='192.168.31.210', port=20200}]
+00:05:13.794 [main] INFO  o.f.b.s.n.NetworkImp - [start,167] - 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+
+00:05:13.795 [main] INFO  o.f.b.s.n.NetworkImp - [start,174] - ====> <==== STEP1-1: Load certificates for ecdsa context success..., start connManager with ECDSA sslContext
+00:05:13.838 [main] INFO  o.f.b.s.n.ConnectionManager - [initSslContext,238] -  build ECDSA ssl context with configured certificates 
+00:05:15.303 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20201
+00:05:15.303 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20200
+00:05:15.303 [nioEventLoopGroup-4-2] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20200, ctx: 259041157
+00:05:15.303 [nioEventLoopGroup-4-1] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20201, ctx: 10401778
+00:05:15.341 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":1,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+00:05:15.341 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":0,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+00:05:15.343 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+00:05:15.343 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+00:05:15.347 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20201, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+00:05:15.347 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20200, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+00:05:15.367 [main] INFO  o.f.b.s.c.ChannelImp - [checkConnectionsToStartPeriodTask,126] -  Connect to  nodes: 192.168.31.210:20200, 192.168.31.210:20201, 
+00:05:15.367 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,77] - create BcosSDK, start channel success, cryptoType: 0
+00:05:15.371 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,87] - create BcosSDK, start channel succ, channelProcessorThreadSize: 32, receiptProcessorThreadSize: 32
+00:05:15.375 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerBlockNumberNotifyHandler,260] - registerBlockNumberNotifyHandler
+00:05:15.376 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerTransactionNotifyHandler,282] - registerTransactionNotifyHandler
+00:05:15.392 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,98] - create BcosSDK, create groupManagerService success
+00:05:15.697 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+00:05:15.699 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+00:05:15.700 [main] INFO  o.f.b.s.amop.AmopImp - [start,188] - amop module started
+00:05:15.700 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+00:05:15.700 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,103] - create BcosSDK, create Amop success
+00:05:15.717 [main] INFO  o.f.b.s.c.Client - [build,114] - build client success for group 1, crypto type 0
+00:05:15.717 [main] INFO  o.f.bcos.sdk.BcosSDK - [getClient,178] - create client for group 1 success
+00:05:16.986 [main] INFO  c.s.i.c.MqttConfig - [afterPropertiesSet,40] - MQTT配置初始化完成 - serverUri: tcp://192.168.31.168:1883, clientId: fish-dish-server, defaultTopic: /fish-dish/data
+00:05:17.175 [main] INFO  c.s.i.s.SerialPortService - [init,36] - 正在初始化串口服务...
+00:05:17.176 [main] INFO  c.s.i.s.SerialPortService - [connect,41] - 正在尝试连接串口: COM3，波特率: 9600
+00:05:22.375 [main] INFO  c.s.i.s.SerialPortService - [connect,49] - 可用串口: [COM3, COM4]
+00:05:22.381 [main] INFO  c.s.i.s.SensorCommunicationService - [init,63] - 正在初始化传感器通信服务...
+00:05:22.479 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+00:05:22.498 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+00:05:22.499 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+00:05:22.502 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+00:05:22.503 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+00:05:22.503 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+00:05:22.504 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+00:05:22.504 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@f2120d5
+00:05:22.893 [main] INFO  c.s.i.c.MqttConfig - [mqttClientFactory,60] - 配置MQTT连接: serverUri=tcp://192.168.31.168:1883, username=guest, clientId=fish-dish-server
+00:05:22.910 [main] INFO  c.s.i.c.MqttConfig - [mqttOutboundChannel,81] - 创建MQTT出站通道: mqttOutboundChannel
+00:05:22.925 [main] INFO  c.s.i.c.MqttConfig - [mqttOutbound,101] - MQTT消息处理器配置完成: clientId=fish-dish-server_outbound_1751472322922, defaultTopic=/fish-dish/data
+00:05:23.656 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+00:05:23.766 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:05:23.843 [http-nio-8080-exec-1] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:05:23.855 [http-nio-8080-exec-2] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:05:23.869 [http-nio-8080-exec-4] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:05:23.884 [http-nio-8080-exec-6] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:05:23.899 [http-nio-8080-exec-8] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:05:24.267 [main] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+00:05:24.282 [main] INFO  c.s.ServerApplication - [logStarted,61] - Started ServerApplication in 14.954 seconds (JVM running for 15.253)
+00:05:24.285 [main] INFO  c.s.i.s.SensorCommunicationService - [onApplicationReady,74] - 应用程序已就绪，正在启动传感器通信...
+00:05:24.319 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 风向传感器 (ID: 1) 成功启动轮询任务。
+00:05:24.319 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-10-thread-1 正在启动，负责轮询传感器: 风向传感器 (ID: 1)
+00:05:24.319 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 五合一水质传感器 (ID: 3) 成功启动轮询任务。
+00:05:24.319 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-10-thread-2 正在启动，负责轮询传感器: 五合一水质传感器 (ID: 3)
+00:05:24.319 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 风速传感器 (ID: 6) 成功启动轮询任务。
+00:05:24.319 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-10-thread-3 正在启动，负责轮询传感器: 风速传感器 (ID: 6)
+00:05:24.319 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 百叶箱多气象传感器 (ID: 7) 成功启动轮询任务。
+00:05:24.319 [pool-10-thread-4] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-10-thread-4 正在启动，负责轮询传感器: 百叶箱多气象传感器 (ID: 7)
+00:05:25.133 [http-nio-8080-exec-9] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:05:54.164 [http-nio-8080-exec-14] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:05:54.164 [http-nio-8080-exec-12] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:05:54.164 [http-nio-8080-exec-11] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:05:54.164 [http-nio-8080-exec-13] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:05:54.164 [http-nio-8080-exec-10] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:05:56.136 [http-nio-8080-exec-15] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:06:00.005 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:06:00.010 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:06:22.041 [lettuce-nioEventLoop-5-1] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+00:06:22.050 [lettuce-eventExecutorLoop-1-20] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+00:06:22.055 [lettuce-nioEventLoop-5-2] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+00:06:24.136 [http-nio-8080-exec-16] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:06:24.136 [http-nio-8080-exec-16] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:06:24.136 [http-nio-8080-exec-18] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:06:24.136 [http-nio-8080-exec-17] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:06:24.137 [http-nio-8080-exec-16] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:06:26.133 [http-nio-8080-exec-21] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:06:54.137 [http-nio-8080-exec-22] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:06:54.137 [http-nio-8080-exec-24] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:06:54.137 [http-nio-8080-exec-23] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:06:54.137 [http-nio-8080-exec-25] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:06:54.138 [http-nio-8080-exec-26] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:06:56.139 [http-nio-8080-exec-27] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:07:00.002 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:07:00.013 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:07:12.541 [http-nio-8080-exec-31] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,70] - Query parameters: AgricultureBatchTask(taskId=null, batchId=194, taskName=null, responsiblePersonId=null, responsiblePersonName=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+00:07:12.572 [http-nio-8080-exec-31] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,74] - Query result size: 0
+00:07:14.431 [http-nio-8080-exec-33] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:07:14.452 [http-nio-8080-exec-33] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:07:14.464 [http-nio-8080-exec-33] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:07:14.470 [http-nio-8080-exec-33] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:07:14.475 [http-nio-8080-exec-33] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:07:14.479 [http-nio-8080-exec-33] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:07:18.622 [http-nio-8080-exec-40] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:07:18.634 [http-nio-8080-exec-40] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:07:18.639 [http-nio-8080-exec-40] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:07:18.644 [http-nio-8080-exec-40] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:07:18.651 [http-nio-8080-exec-40] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:07:18.655 [http-nio-8080-exec-40] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:07:24.129 [http-nio-8080-exec-41] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:07:24.130 [http-nio-8080-exec-43] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:07:24.130 [http-nio-8080-exec-42] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:07:24.130 [http-nio-8080-exec-44] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:07:24.130 [http-nio-8080-exec-45] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:07:26.132 [http-nio-8080-exec-46] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:07:35.353 [http-nio-8080-exec-49] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:07:35.364 [http-nio-8080-exec-49] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:07:35.374 [http-nio-8080-exec-49] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:07:35.383 [http-nio-8080-exec-49] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:07:35.391 [http-nio-8080-exec-49] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:07:35.401 [http-nio-8080-exec-49] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:07:50.474 [http-nio-8080-exec-54] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+00:07:53.456 [http-nio-8080-exec-58] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:07:53.469 [http-nio-8080-exec-58] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:07:53.478 [http-nio-8080-exec-58] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:07:53.487 [http-nio-8080-exec-58] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:07:53.496 [http-nio-8080-exec-58] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:07:53.503 [http-nio-8080-exec-58] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:07:53.843 [http-nio-8080-exec-60] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:07:53.861 [http-nio-8080-exec-62] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:07:53.877 [http-nio-8080-exec-61] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:07:53.893 [http-nio-8080-exec-63] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:07:53.908 [http-nio-8080-exec-64] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:07:56.128 [http-nio-8080-exec-65] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:08:00.002 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:08:00.006 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:08:24.139 [http-nio-8080-exec-67] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:08:24.139 [http-nio-8080-exec-70] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:08:24.139 [http-nio-8080-exec-68] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:08:24.139 [http-nio-8080-exec-66] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:08:24.139 [http-nio-8080-exec-69] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:08:26.135 [http-nio-8080-exec-72] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:08:31.381 [http-nio-8080-exec-74] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:08:31.390 [http-nio-8080-exec-74] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:08:31.401 [http-nio-8080-exec-74] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:08:31.410 [http-nio-8080-exec-74] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:08:31.419 [http-nio-8080-exec-74] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:08:31.428 [http-nio-8080-exec-74] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:08:54.132 [http-nio-8080-exec-78] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:08:54.133 [http-nio-8080-exec-79] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:08:54.133 [http-nio-8080-exec-80] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:08:54.133 [http-nio-8080-exec-79] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:08:54.134 [http-nio-8080-exec-81] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:08:56.131 [http-nio-8080-exec-83] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:09:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:09:00.008 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:09:24.144 [http-nio-8080-exec-84] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:09:24.144 [http-nio-8080-exec-85] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:09:24.144 [http-nio-8080-exec-86] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:09:24.144 [http-nio-8080-exec-87] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:09:24.144 [http-nio-8080-exec-88] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:09:26.130 [http-nio-8080-exec-89] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:09:37.002 [lettuce-nioEventLoop-5-2] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+00:09:37.049 [lettuce-eventExecutorLoop-1-15] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+00:09:37.052 [lettuce-nioEventLoop-5-3] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+00:10:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:10:00.005 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:10:23.585 [http-nio-8080-exec-92] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:10:23.585 [http-nio-8080-exec-91] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:10:23.585 [http-nio-8080-exec-90] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:10:23.588 [http-nio-8080-exec-93] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:10:23.588 [http-nio-8080-exec-94] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:10:23.588 [http-nio-8080-exec-95] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:10:25.139 [http-nio-8080-exec-96] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:10:26.177 [http-nio-8080-exec-100] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,70] - Query parameters: AgricultureBatchTask(taskId=null, batchId=194, taskName=null, responsiblePersonId=null, responsiblePersonName=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+00:10:26.180 [http-nio-8080-exec-100] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,74] - Query result size: 0
+00:10:29.341 [http-nio-8080-exec-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:10:29.346 [http-nio-8080-exec-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:10:29.352 [http-nio-8080-exec-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:10:29.358 [http-nio-8080-exec-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:10:29.364 [http-nio-8080-exec-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:10:29.368 [http-nio-8080-exec-1] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:10:53.847 [http-nio-8080-exec-7] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:10:53.860 [http-nio-8080-exec-4] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:10:53.878 [http-nio-8080-exec-5] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:10:53.893 [http-nio-8080-exec-6] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:10:53.911 [http-nio-8080-exec-3] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:10:55.146 [http-nio-8080-exec-8] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:11:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:11:00.005 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:11:23.842 [http-nio-8080-exec-9] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:11:23.858 [http-nio-8080-exec-11] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:11:23.874 [http-nio-8080-exec-14] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:11:23.889 [http-nio-8080-exec-12] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:11:23.906 [http-nio-8080-exec-13] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:11:25.143 [http-nio-8080-exec-10] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:11:30.102 [http-nio-8080-exec-17] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:11:30.107 [http-nio-8080-exec-17] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:11:30.114 [http-nio-8080-exec-17] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:11:30.120 [http-nio-8080-exec-17] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:11:30.126 [http-nio-8080-exec-17] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:11:30.133 [http-nio-8080-exec-17] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:11:35.240 [http-nio-8080-exec-21] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:11:35.248 [http-nio-8080-exec-21] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:11:35.255 [http-nio-8080-exec-21] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:11:35.265 [http-nio-8080-exec-21] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:11:35.275 [http-nio-8080-exec-21] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:11:35.285 [http-nio-8080-exec-21] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:11:37.433 [http-nio-8080-exec-26] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:11:37.446 [http-nio-8080-exec-26] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:11:37.457 [http-nio-8080-exec-26] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:11:37.467 [http-nio-8080-exec-26] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:11:37.477 [http-nio-8080-exec-26] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:11:37.486 [http-nio-8080-exec-26] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:11:53.840 [http-nio-8080-exec-29] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:11:53.860 [http-nio-8080-exec-30] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:11:53.872 [http-nio-8080-exec-31] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:11:53.888 [http-nio-8080-exec-32] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:11:53.905 [http-nio-8080-exec-34] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:11:55.139 [http-nio-8080-exec-35] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:12:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:12:00.009 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:12:23.841 [http-nio-8080-exec-36] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:12:23.860 [http-nio-8080-exec-33] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:12:23.875 [http-nio-8080-exec-37] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:12:23.887 [http-nio-8080-exec-38] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:12:23.908 [http-nio-8080-exec-39] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:12:25.139 [http-nio-8080-exec-40] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:12:43.031 [lettuce-nioEventLoop-5-3] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+00:12:43.049 [lettuce-eventExecutorLoop-1-32] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+00:12:43.051 [lettuce-nioEventLoop-5-4] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+00:12:53.837 [http-nio-8080-exec-41] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:12:53.858 [http-nio-8080-exec-43] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:12:53.877 [http-nio-8080-exec-42] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:12:53.891 [http-nio-8080-exec-44] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:12:53.909 [http-nio-8080-exec-45] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:12:55.147 [http-nio-8080-exec-46] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:13:00.003 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:13:00.011 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:13:23.845 [http-nio-8080-exec-48] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:13:23.858 [http-nio-8080-exec-47] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:13:23.874 [http-nio-8080-exec-50] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:13:23.891 [http-nio-8080-exec-51] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:13:23.907 [http-nio-8080-exec-52] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:13:25.140 [http-nio-8080-exec-49] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:13:49.030 [lettuce-nioEventLoop-5-4] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+00:13:49.050 [lettuce-eventExecutorLoop-1-1] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+00:13:49.055 [lettuce-nioEventLoop-5-5] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+00:13:53.838 [http-nio-8080-exec-53] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:13:53.859 [http-nio-8080-exec-54] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:13:53.875 [http-nio-8080-exec-55] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:13:53.891 [http-nio-8080-exec-56] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:13:53.909 [http-nio-8080-exec-57] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:13:55.136 [http-nio-8080-exec-59] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:13:56.553 [http-nio-8080-exec-61] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:13:56.558 [http-nio-8080-exec-61] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:13:56.566 [http-nio-8080-exec-61] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:13:56.572 [http-nio-8080-exec-61] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:13:56.577 [http-nio-8080-exec-61] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:13:56.582 [http-nio-8080-exec-61] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:00.002 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:14:00.005 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:14:03.148 [http-nio-8080-exec-67] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:03.154 [http-nio-8080-exec-67] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:03.159 [http-nio-8080-exec-67] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:03.165 [http-nio-8080-exec-67] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:03.171 [http-nio-8080-exec-67] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:03.177 [http-nio-8080-exec-67] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:18.494 [http-nio-8080-exec-73] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:18.502 [http-nio-8080-exec-73] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:18.507 [http-nio-8080-exec-73] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:18.512 [http-nio-8080-exec-73] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:18.518 [http-nio-8080-exec-73] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:18.523 [http-nio-8080-exec-73] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:23.840 [http-nio-8080-exec-74] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:14:23.857 [http-nio-8080-exec-78] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:14:23.875 [http-nio-8080-exec-82] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:14:23.891 [http-nio-8080-exec-80] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:14:23.901 [http-nio-8080-exec-79] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:14:25.138 [http-nio-8080-exec-81] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:14:25.615 [http-nio-8080-exec-85] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:25.620 [http-nio-8080-exec-85] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:25.626 [http-nio-8080-exec-85] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:25.632 [http-nio-8080-exec-85] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:25.637 [http-nio-8080-exec-85] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:25.644 [http-nio-8080-exec-85] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:34.999 [http-nio-8080-exec-92] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:35.004 [http-nio-8080-exec-92] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:35.010 [http-nio-8080-exec-92] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:35.017 [http-nio-8080-exec-92] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:35.022 [http-nio-8080-exec-92] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:35.027 [http-nio-8080-exec-92] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:44.242 [http-nio-8080-exec-97] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:44.247 [http-nio-8080-exec-97] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:44.253 [http-nio-8080-exec-97] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:44.260 [http-nio-8080-exec-97] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:44.266 [http-nio-8080-exec-97] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:44.272 [http-nio-8080-exec-97] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:14:54.131 [http-nio-8080-exec-7] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:14:54.131 [http-nio-8080-exec-2] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:14:54.131 [http-nio-8080-exec-4] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:14:54.131 [http-nio-8080-exec-1] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:14:54.131 [http-nio-8080-exec-5] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:14:56.139 [http-nio-8080-exec-6] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:15:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:15:00.009 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:15:24.135 [http-nio-8080-exec-3] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:15:24.135 [http-nio-8080-exec-8] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:15:24.135 [http-nio-8080-exec-9] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:15:24.135 [http-nio-8080-exec-11] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:15:24.135 [http-nio-8080-exec-14] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:15:26.127 [http-nio-8080-exec-12] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:15:40.804 [http-nio-8080-exec-18] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:15:40.804 [http-nio-8080-exec-20] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:15:40.804 [http-nio-8080-exec-13] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:15:40.804 [http-nio-8080-exec-15] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:15:40.804 [http-nio-8080-exec-19] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:15:40.804 [http-nio-8080-exec-10] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:15:41.210 [http-nio-8080-exec-16] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:15:41.851 [http-nio-8080-exec-23] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:15:41.856 [http-nio-8080-exec-23] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:15:41.862 [http-nio-8080-exec-23] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:15:41.867 [http-nio-8080-exec-23] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:15:41.876 [http-nio-8080-exec-23] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:15:41.883 [http-nio-8080-exec-23] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:15:43.015 [http-nio-8080-exec-29] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:15:43.020 [http-nio-8080-exec-29] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:15:43.031 [http-nio-8080-exec-29] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:15:43.036 [http-nio-8080-exec-29] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:15:43.040 [http-nio-8080-exec-29] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:15:43.044 [http-nio-8080-exec-29] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:15:44.201 [http-nio-8080-exec-35] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:15:44.207 [http-nio-8080-exec-35] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:15:44.212 [http-nio-8080-exec-35] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:15:44.217 [http-nio-8080-exec-35] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:15:44.222 [http-nio-8080-exec-35] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:15:44.228 [http-nio-8080-exec-35] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:15:47.266 [http-nio-8080-exec-37] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:15:47.272 [http-nio-8080-exec-37] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:15:47.278 [http-nio-8080-exec-37] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:15:47.284 [http-nio-8080-exec-37] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:15:47.289 [http-nio-8080-exec-37] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:15:47.294 [http-nio-8080-exec-37] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:16:00.000 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:16:00.003 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:16:11.497 [http-nio-8080-exec-40] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:16:11.503 [http-nio-8080-exec-40] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:16:11.508 [http-nio-8080-exec-40] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:16:11.512 [http-nio-8080-exec-40] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:16:11.516 [http-nio-8080-exec-40] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:16:11.522 [http-nio-8080-exec-40] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:16:12.134 [http-nio-8080-exec-44] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:16:32.544 [http-nio-8080-exec-47] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:16:32.550 [http-nio-8080-exec-47] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:16:32.555 [http-nio-8080-exec-47] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:16:32.561 [http-nio-8080-exec-47] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:16:32.566 [http-nio-8080-exec-47] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:16:32.571 [http-nio-8080-exec-47] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:16:42.139 [http-nio-8080-exec-49] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:16:56.688 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:16:56.693 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:16:56.698 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:16:56.702 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:16:56.706 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:16:56.710 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:17:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:17:00.004 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:17:12.128 [http-nio-8080-exec-54] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:17:36.093 [http-nio-8080-exec-57] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:17:36.097 [http-nio-8080-exec-57] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:17:36.100 [http-nio-8080-exec-57] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:17:36.103 [http-nio-8080-exec-57] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:17:36.108 [http-nio-8080-exec-57] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:17:36.112 [http-nio-8080-exec-57] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:17:41.413 [http-nio-8080-exec-62] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:17:44.169 [http-nio-8080-exec-63] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:17:44.177 [http-nio-8080-exec-63] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:17:44.184 [http-nio-8080-exec-63] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:17:44.190 [http-nio-8080-exec-63] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:17:44.197 [http-nio-8080-exec-63] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:17:44.205 [http-nio-8080-exec-63] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:17:50.953 [http-nio-8080-exec-65] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:17:50.957 [http-nio-8080-exec-65] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:17:50.962 [http-nio-8080-exec-65] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:17:50.967 [http-nio-8080-exec-65] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:17:50.973 [http-nio-8080-exec-65] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:17:50.977 [http-nio-8080-exec-65] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:18:00.002 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:18:00.007 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:18:11.277 [http-nio-8080-exec-69] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:18:11.879 [http-nio-8080-exec-71] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:18:12.361 [http-nio-8080-exec-75] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:18:12.982 [http-nio-8080-exec-78] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:18:12.990 [http-nio-8080-exec-78] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:18:12.995 [http-nio-8080-exec-78] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:18:12.999 [http-nio-8080-exec-78] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:18:13.003 [http-nio-8080-exec-78] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:18:13.007 [http-nio-8080-exec-78] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:18:42.402 [http-nio-8080-exec-83] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:19:00.002 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:19:00.006 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:19:13.137 [http-nio-8080-exec-86] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:19:43.135 [http-nio-8080-exec-88] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:19:45.056 [lettuce-nioEventLoop-5-5] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+00:19:45.151 [lettuce-eventExecutorLoop-1-6] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+00:19:45.158 [lettuce-nioEventLoop-5-6] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+00:20:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:20:00.006 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:20:11.868 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+00:20:12.916 [SpringApplicationShutdownHook] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:20:12.933 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+00:20:12.933 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+00:20:12.933 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+00:20:12.933 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,32] - ====关闭后台任务任务线程池====
+00:20:12.934 [SpringApplicationShutdownHook] INFO  c.s.i.s.SensorCommunicationService - [destroy,84] - 正在关闭传感器通信服务...
+00:20:12.934 [SpringApplicationShutdownHook] INFO  c.s.i.s.SensorCommunicationService - [stopAllSensorTasks,167] - 正在尝试停止所有 4 个传感器任务...
+00:20:12.934 [SpringApplicationShutdownHook] INFO  c.s.i.s.SensorCommunicationService - [stopAllSensorTasks,176] - 已发送停止指令给所有传感器任务。
+00:20:12.934 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,239] - 传感器 五合一水质传感器 (ID: 3) 的轮询任务被主动中断，线程即将退出。
+00:20:12.934 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,239] - 传感器 风向传感器 (ID: 1) 的轮询任务被主动中断，线程即将退出。
+00:20:12.934 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,256] - 传感器 五合一水质传感器 (ID: 3) 的轮询任务已完全停止。
+00:20:12.934 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,256] - 传感器 风向传感器 (ID: 1) 的轮询任务已完全停止。
+00:20:12.934 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,239] - 传感器 风速传感器 (ID: 6) 的轮询任务被主动中断，线程即将退出。
+00:20:12.934 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,256] - 传感器 风速传感器 (ID: 6) 的轮询任务已完全停止。
+00:20:12.934 [pool-10-thread-4] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,239] - 传感器 百叶箱多气象传感器 (ID: 7) 的轮询任务被主动中断，线程即将退出。
+00:20:12.934 [pool-10-thread-4] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,256] - 传感器 百叶箱多气象传感器 (ID: 7) 的轮询任务已完全停止。
+00:20:12.939 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+00:20:12.942 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+00:20:16.026 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+00:20:16.033 [main] INFO  c.s.ServerApplication - [logStarting,55] - Starting ServerApplication using Java 17.0.12 on zhubb with PID 18868 (D:\YCGSHou\fish-dish-server\server-admin\target\classes started by 18319 in D:\YCGSHou\fish-dish-server)
+00:20:16.033 [main] INFO  c.s.ServerApplication - [logStartupProfileInfo,686] - The following 2 profiles are active: "dev", "druid"
+00:20:17.773 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+00:20:17.777 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+00:20:17.778 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.102]
+00:20:17.870 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+00:20:18.979 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+00:20:20.049 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/ca.crt failed, trying to load from the resourcePath /D:/YCGSHou/fish-dish-server/server-admin/target/classes/
+00:20:20.051 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.crt failed, trying to load from the resourcePath /D:/YCGSHou/fish-dish-server/server-admin/target/classes/
+00:20:20.052 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.key failed, trying to load from the resourcePath /D:/YCGSHou/fish-dish-server/server-admin/target/classes/
+00:20:20.080 [main] INFO  o.f.b.s.n.ConnectionManager - [<init>,88] -  all connections, size: 2, list: [ConnectionInfo{host='192.168.31.210', port=20201}, ConnectionInfo{host='192.168.31.210', port=20200}]
+00:20:20.081 [main] INFO  o.f.b.s.n.NetworkImp - [start,167] - 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+
+00:20:20.082 [main] INFO  o.f.b.s.n.NetworkImp - [start,174] - ====> <==== STEP1-1: Load certificates for ecdsa context success..., start connManager with ECDSA sslContext
+00:20:20.130 [main] INFO  o.f.b.s.n.ConnectionManager - [initSslContext,238] -  build ECDSA ssl context with configured certificates 
+00:20:21.556 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20201
+00:20:21.557 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20200
+00:20:21.557 [nioEventLoopGroup-4-1] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20201, ctx: 1819123916
+00:20:21.557 [nioEventLoopGroup-4-2] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20200, ctx: 768007166
+00:20:21.593 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":1,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+00:20:21.593 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":0,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+00:20:21.594 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+00:20:21.594 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+00:20:21.597 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20201, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+00:20:21.597 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20200, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+00:20:21.618 [main] INFO  o.f.b.s.c.ChannelImp - [checkConnectionsToStartPeriodTask,126] -  Connect to  nodes: 192.168.31.210:20200, 192.168.31.210:20201, 
+00:20:21.618 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,77] - create BcosSDK, start channel success, cryptoType: 0
+00:20:21.620 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,87] - create BcosSDK, start channel succ, channelProcessorThreadSize: 32, receiptProcessorThreadSize: 32
+00:20:21.624 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerBlockNumberNotifyHandler,260] - registerBlockNumberNotifyHandler
+00:20:21.624 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerTransactionNotifyHandler,282] - registerTransactionNotifyHandler
+00:20:21.637 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,98] - create BcosSDK, create groupManagerService success
+00:20:21.948 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+00:20:21.951 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+00:20:21.952 [main] INFO  o.f.b.s.amop.AmopImp - [start,188] - amop module started
+00:20:21.952 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+00:20:21.952 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,103] - create BcosSDK, create Amop success
+00:20:21.968 [main] INFO  o.f.b.s.c.Client - [build,114] - build client success for group 1, crypto type 0
+00:20:21.969 [main] INFO  o.f.bcos.sdk.BcosSDK - [getClient,178] - create client for group 1 success
+00:20:23.247 [main] INFO  c.s.i.c.MqttConfig - [afterPropertiesSet,40] - MQTT配置初始化完成 - serverUri: tcp://192.168.31.168:1883, clientId: fish-dish-server, defaultTopic: /fish-dish/data
+00:20:23.425 [main] INFO  c.s.i.s.SerialPortService - [init,36] - 正在初始化串口服务...
+00:20:23.425 [main] INFO  c.s.i.s.SerialPortService - [connect,41] - 正在尝试连接串口: COM3，波特率: 9600
+00:20:28.622 [main] INFO  c.s.i.s.SerialPortService - [connect,49] - 可用串口: [COM3, COM4]
+00:20:28.625 [main] INFO  c.s.i.s.SensorCommunicationService - [init,63] - 正在初始化传感器通信服务...
+00:20:28.696 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+00:20:28.707 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+00:20:28.707 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+00:20:28.709 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+00:20:28.710 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+00:20:28.710 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+00:20:28.711 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+00:20:28.711 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@39da0e47
+00:20:29.138 [main] INFO  c.s.i.c.MqttConfig - [mqttClientFactory,60] - 配置MQTT连接: serverUri=tcp://192.168.31.168:1883, username=guest, clientId=fish-dish-server
+00:20:29.151 [main] INFO  c.s.i.c.MqttConfig - [mqttOutboundChannel,81] - 创建MQTT出站通道: mqttOutboundChannel
+00:20:29.166 [main] INFO  c.s.i.c.MqttConfig - [mqttOutbound,101] - MQTT消息处理器配置完成: clientId=fish-dish-server_outbound_1751473229162, defaultTopic=/fish-dish/data
+00:20:29.974 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+00:20:30.187 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:20:30.270 [http-nio-8080-exec-2] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:20:30.270 [http-nio-8080-exec-4] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:20:30.270 [http-nio-8080-exec-1] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:20:30.271 [http-nio-8080-exec-6] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:20:30.286 [http-nio-8080-exec-5] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:20:30.574 [main] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+00:20:30.582 [main] INFO  c.s.ServerApplication - [logStarted,61] - Started ServerApplication in 14.789 seconds (JVM running for 15.077)
+00:20:30.584 [main] INFO  c.s.i.s.SensorCommunicationService - [onApplicationReady,74] - 应用程序已就绪，正在启动传感器通信...
+00:20:30.613 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-10-thread-1 正在启动，负责轮询传感器: 风向传感器 (ID: 1)
+00:20:30.613 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 风向传感器 (ID: 1) 成功启动轮询任务。
+00:20:30.613 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 五合一水质传感器 (ID: 3) 成功启动轮询任务。
+00:20:30.614 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-10-thread-2 正在启动，负责轮询传感器: 五合一水质传感器 (ID: 3)
+00:20:30.614 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 风速传感器 (ID: 6) 成功启动轮询任务。
+00:20:30.614 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-10-thread-3 正在启动，负责轮询传感器: 风速传感器 (ID: 6)
+00:20:30.614 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 百叶箱多气象传感器 (ID: 7) 成功启动轮询任务。
+00:20:30.614 [pool-10-thread-4] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-10-thread-4 正在启动，负责轮询传感器: 百叶箱多气象传感器 (ID: 7)
+00:20:32.143 [http-nio-8080-exec-7] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:21:00.012 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:21:00.022 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:21:01.129 [http-nio-8080-exec-9] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:21:01.129 [http-nio-8080-exec-8] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:21:01.129 [http-nio-8080-exec-10] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:21:01.129 [http-nio-8080-exec-11] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:21:01.129 [http-nio-8080-exec-12] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:21:03.140 [http-nio-8080-exec-13] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:21:28.073 [lettuce-nioEventLoop-5-1] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+00:21:28.136 [lettuce-eventExecutorLoop-1-20] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+00:21:28.143 [lettuce-nioEventLoop-5-2] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+00:21:31.135 [http-nio-8080-exec-14] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:21:31.135 [http-nio-8080-exec-15] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:21:31.160 [http-nio-8080-exec-16] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:21:31.160 [http-nio-8080-exec-17] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:21:31.160 [http-nio-8080-exec-18] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:21:32.537 [http-nio-8080-exec-25] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:21:33.909 [http-nio-8080-exec-22] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:21:33.909 [http-nio-8080-exec-23] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:21:33.909 [http-nio-8080-exec-20] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:21:33.909 [http-nio-8080-exec-24] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:21:33.909 [http-nio-8080-exec-27] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:21:33.909 [http-nio-8080-exec-19] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:21:34.321 [http-nio-8080-exec-26] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:21:35.107 [http-nio-8080-exec-30] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:21:35.123 [http-nio-8080-exec-30] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:21:35.131 [http-nio-8080-exec-30] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:21:35.137 [http-nio-8080-exec-30] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:21:35.145 [http-nio-8080-exec-30] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:21:35.151 [http-nio-8080-exec-30] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:22:00.014 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:22:00.027 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:22:05.131 [http-nio-8080-exec-37] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:22:34.421 [http-nio-8080-exec-38] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:22:46.006 [lettuce-nioEventLoop-5-2] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+00:22:46.034 [lettuce-eventExecutorLoop-1-28] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+00:22:46.040 [lettuce-nioEventLoop-5-3] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+00:23:00.002 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:23:00.008 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:23:05.132 [http-nio-8080-exec-36] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:23:35.137 [http-nio-8080-exec-40] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:23:52.014 [lettuce-nioEventLoop-5-3] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+00:23:52.035 [lettuce-eventExecutorLoop-1-29] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+00:23:52.040 [lettuce-nioEventLoop-5-4] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+00:24:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:24:00.006 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:24:05.134 [http-nio-8080-exec-41] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:24:15.725 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+00:24:16.346 [SpringApplicationShutdownHook] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:24:16.359 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+00:24:16.359 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+00:24:16.360 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+00:24:16.360 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,32] - ====关闭后台任务任务线程池====
+00:24:16.360 [SpringApplicationShutdownHook] INFO  c.s.i.s.SensorCommunicationService - [destroy,84] - 正在关闭传感器通信服务...
+00:24:16.360 [SpringApplicationShutdownHook] INFO  c.s.i.s.SensorCommunicationService - [stopAllSensorTasks,167] - 正在尝试停止所有 4 个传感器任务...
+00:24:16.360 [SpringApplicationShutdownHook] INFO  c.s.i.s.SensorCommunicationService - [stopAllSensorTasks,176] - 已发送停止指令给所有传感器任务。
+00:24:16.360 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,239] - 传感器 风速传感器 (ID: 6) 的轮询任务被主动中断，线程即将退出。
+00:24:16.361 [pool-10-thread-4] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,239] - 传感器 百叶箱多气象传感器 (ID: 7) 的轮询任务被主动中断，线程即将退出。
+00:24:16.361 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,239] - 传感器 五合一水质传感器 (ID: 3) 的轮询任务被主动中断，线程即将退出。
+00:24:16.361 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,256] - 传感器 风速传感器 (ID: 6) 的轮询任务已完全停止。
+00:24:16.361 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,239] - 传感器 风向传感器 (ID: 1) 的轮询任务被主动中断，线程即将退出。
+00:24:16.361 [pool-10-thread-4] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,256] - 传感器 百叶箱多气象传感器 (ID: 7) 的轮询任务已完全停止。
+00:24:16.361 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,256] - 传感器 五合一水质传感器 (ID: 3) 的轮询任务已完全停止。
+00:24:16.361 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,256] - 传感器 风向传感器 (ID: 1) 的轮询任务已完全停止。
+00:24:16.366 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+00:24:16.369 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+00:24:19.831 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+00:24:19.836 [main] INFO  c.s.ServerApplication - [logStarting,55] - Starting ServerApplication using Java 17.0.12 on zhubb with PID 13816 (D:\YCGSHou\fish-dish-server\server-admin\target\classes started by 18319 in D:\YCGSHou\fish-dish-server)
+00:24:19.836 [main] INFO  c.s.ServerApplication - [logStartupProfileInfo,686] - The following 2 profiles are active: "dev", "druid"
+00:24:21.633 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+00:24:21.635 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+00:24:21.635 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.102]
+00:24:21.733 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+00:24:22.901 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+00:24:23.938 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/ca.crt failed, trying to load from the resourcePath /D:/YCGSHou/fish-dish-server/server-admin/target/classes/
+00:24:23.941 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.crt failed, trying to load from the resourcePath /D:/YCGSHou/fish-dish-server/server-admin/target/classes/
+00:24:23.941 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.key failed, trying to load from the resourcePath /D:/YCGSHou/fish-dish-server/server-admin/target/classes/
+00:24:23.971 [main] INFO  o.f.b.s.n.ConnectionManager - [<init>,88] -  all connections, size: 2, list: [ConnectionInfo{host='192.168.31.210', port=20201}, ConnectionInfo{host='192.168.31.210', port=20200}]
+00:24:23.971 [main] INFO  o.f.b.s.n.NetworkImp - [start,167] - 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+
+00:24:23.972 [main] INFO  o.f.b.s.n.NetworkImp - [start,174] - ====> <==== STEP1-1: Load certificates for ecdsa context success..., start connManager with ECDSA sslContext
+00:24:24.016 [main] INFO  o.f.b.s.n.ConnectionManager - [initSslContext,238] -  build ECDSA ssl context with configured certificates 
+00:24:25.436 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20201
+00:24:25.436 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20200
+00:24:25.436 [nioEventLoopGroup-4-1] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20201, ctx: 1559142068
+00:24:25.436 [nioEventLoopGroup-4-2] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20200, ctx: 88819395
+00:24:25.475 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":0,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+00:24:25.475 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":1,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+00:24:25.476 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+00:24:25.476 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+00:24:25.480 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20200, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+00:24:25.480 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20201, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+00:24:25.498 [main] INFO  o.f.b.s.c.ChannelImp - [checkConnectionsToStartPeriodTask,126] -  Connect to  nodes: 192.168.31.210:20200, 192.168.31.210:20201, 
+00:24:25.498 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,77] - create BcosSDK, start channel success, cryptoType: 0
+00:24:25.501 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,87] - create BcosSDK, start channel succ, channelProcessorThreadSize: 32, receiptProcessorThreadSize: 32
+00:24:25.506 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerBlockNumberNotifyHandler,260] - registerBlockNumberNotifyHandler
+00:24:25.506 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerTransactionNotifyHandler,282] - registerTransactionNotifyHandler
+00:24:25.529 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,98] - create BcosSDK, create groupManagerService success
+00:24:25.839 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+00:24:25.844 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+00:24:25.845 [main] INFO  o.f.b.s.amop.AmopImp - [start,188] - amop module started
+00:24:25.845 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+00:24:25.845 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,103] - create BcosSDK, create Amop success
+00:24:25.860 [main] INFO  o.f.b.s.c.Client - [build,114] - build client success for group 1, crypto type 0
+00:24:25.861 [main] INFO  o.f.bcos.sdk.BcosSDK - [getClient,178] - create client for group 1 success
+00:24:26.980 [main] INFO  c.s.i.c.MqttConfig - [afterPropertiesSet,40] - MQTT配置初始化完成 - serverUri: tcp://192.168.31.168:1883, clientId: fish-dish-server, defaultTopic: /fish-dish/data
+00:24:27.103 [main] INFO  c.s.i.s.SerialPortService - [init,36] - 正在初始化串口服务...
+00:24:27.103 [main] INFO  c.s.i.s.SerialPortService - [connect,41] - 正在尝试连接串口: COM3，波特率: 9600
+00:24:32.297 [main] INFO  c.s.i.s.SerialPortService - [connect,49] - 可用串口: [COM3, COM4]
+00:24:32.300 [main] INFO  c.s.i.s.SensorCommunicationService - [init,63] - 正在初始化传感器通信服务...
+00:24:32.375 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+00:24:32.390 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+00:24:32.390 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+00:24:32.391 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+00:24:32.391 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+00:24:32.391 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+00:24:32.391 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+00:24:32.392 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@75c2a35
+00:24:32.787 [main] INFO  c.s.i.c.MqttConfig - [mqttClientFactory,60] - 配置MQTT连接: serverUri=tcp://192.168.31.168:1883, username=guest, clientId=fish-dish-server
+00:24:32.796 [main] INFO  c.s.i.c.MqttConfig - [mqttOutboundChannel,81] - 创建MQTT出站通道: mqttOutboundChannel
+00:24:32.808 [main] INFO  c.s.i.c.MqttConfig - [mqttOutbound,101] - MQTT消息处理器配置完成: clientId=fish-dish-server_outbound_1751473472806, defaultTopic=/fish-dish/data
+00:24:33.593 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+00:24:33.726 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:24:33.846 [http-nio-8080-exec-1] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:24:33.846 [http-nio-8080-exec-7] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:24:33.846 [http-nio-8080-exec-5] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:24:34.140 [http-nio-8080-exec-2] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:24:34.168 [http-nio-8080-exec-6] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:24:34.290 [main] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+00:24:34.298 [main] INFO  c.s.ServerApplication - [logStarted,61] - Started ServerApplication in 14.68 seconds (JVM running for 14.966)
+00:24:34.301 [main] INFO  c.s.i.s.SensorCommunicationService - [onApplicationReady,74] - 应用程序已就绪，正在启动传感器通信...
+00:24:34.334 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-10-thread-1 正在启动，负责轮询传感器: 风向传感器 (ID: 1)
+00:24:34.334 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 风向传感器 (ID: 1) 成功启动轮询任务。
+00:24:34.334 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 五合一水质传感器 (ID: 3) 成功启动轮询任务。
+00:24:34.334 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-10-thread-2 正在启动，负责轮询传感器: 五合一水质传感器 (ID: 3)
+00:24:34.334 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 风速传感器 (ID: 6) 成功启动轮询任务。
+00:24:34.335 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 百叶箱多气象传感器 (ID: 7) 成功启动轮询任务。
+00:24:34.335 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-10-thread-3 正在启动，负责轮询传感器: 风速传感器 (ID: 6)
+00:24:34.335 [pool-10-thread-4] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-10-thread-4 正在启动，负责轮询传感器: 百叶箱多气象传感器 (ID: 7)
+00:24:36.144 [http-nio-8080-exec-10] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:24:36.662 [http-nio-8080-exec-11] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:24:36.662 [http-nio-8080-exec-9] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:24:36.662 [http-nio-8080-exec-41] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:24:36.662 [http-nio-8080-exec-8] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:24:36.662 [http-nio-8080-exec-3] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:24:36.662 [http-nio-8080-exec-40] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:24:37.058 [http-nio-8080-exec-45] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:24:37.781 [http-nio-8080-exec-61] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:24:37.799 [http-nio-8080-exec-61] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:24:37.806 [http-nio-8080-exec-61] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:24:37.813 [http-nio-8080-exec-61] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:24:37.822 [http-nio-8080-exec-61] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:24:37.829 [http-nio-8080-exec-61] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:25:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:25:00.007 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:25:08.130 [http-nio-8080-exec-69] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:25:38.132 [http-nio-8080-exec-68] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:25:47.038 [lettuce-nioEventLoop-5-1] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+00:25:47.051 [lettuce-eventExecutorLoop-1-27] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+00:25:47.056 [lettuce-nioEventLoop-5-2] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+00:26:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:26:00.005 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:26:08.139 [http-nio-8080-exec-27] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:26:28.310 [http-nio-8080-exec-28] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:26:28.318 [http-nio-8080-exec-28] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:26:28.327 [http-nio-8080-exec-28] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:26:28.335 [http-nio-8080-exec-28] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:26:28.347 [http-nio-8080-exec-28] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:26:28.354 [http-nio-8080-exec-28] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:26:38.128 [http-nio-8080-exec-34] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:26:46.866 [http-nio-8080-exec-35] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:26:47.483 [http-nio-8080-exec-36] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:26:48.172 [http-nio-8080-exec-84] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:26:48.180 [http-nio-8080-exec-84] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:26:48.188 [http-nio-8080-exec-84] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:26:48.198 [http-nio-8080-exec-84] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:26:48.205 [http-nio-8080-exec-84] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:26:48.212 [http-nio-8080-exec-84] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:27:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:27:00.008 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:27:18.137 [http-nio-8080-exec-14] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:27:48.131 [http-nio-8080-exec-92] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:27:56.062 [lettuce-nioEventLoop-5-2] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+00:27:56.147 [lettuce-eventExecutorLoop-1-7] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+00:27:56.155 [lettuce-nioEventLoop-5-3] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+00:28:00.002 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:28:00.010 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:28:07.994 [http-nio-8080-exec-51] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:28:08.001 [http-nio-8080-exec-51] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:28:08.009 [http-nio-8080-exec-51] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:28:08.017 [http-nio-8080-exec-51] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:28:08.024 [http-nio-8080-exec-51] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:28:08.030 [http-nio-8080-exec-51] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:28:14.179 [http-nio-8080-exec-17] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:28:14.656 [http-nio-8080-exec-98] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:28:15.305 [http-nio-8080-exec-63] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:28:15.311 [http-nio-8080-exec-63] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:28:15.318 [http-nio-8080-exec-63] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:28:15.324 [http-nio-8080-exec-63] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:28:15.329 [http-nio-8080-exec-63] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:28:15.336 [http-nio-8080-exec-63] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:28:44.768 [http-nio-8080-exec-26] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:29:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:29:00.007 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:29:14.759 [http-nio-8080-exec-70] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:29:45.096 [http-nio-8080-exec-71] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:29:46.018 [lettuce-nioEventLoop-5-3] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+00:29:46.047 [lettuce-eventExecutorLoop-1-25] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+00:29:46.053 [lettuce-nioEventLoop-5-4] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+00:30:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:30:00.006 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:30:15.133 [http-nio-8080-exec-72] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:30:45.144 [http-nio-8080-exec-32] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:30:52.014 [lettuce-nioEventLoop-5-4] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+00:30:52.049 [lettuce-eventExecutorLoop-1-26] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+00:30:52.055 [lettuce-nioEventLoop-5-5] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+00:31:00.000 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:31:00.004 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:31:15.141 [http-nio-8080-exec-74] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:31:49.134 [http-nio-8080-exec-75] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:31:58.103 [lettuce-nioEventLoop-5-5] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+00:31:58.148 [lettuce-eventExecutorLoop-1-27] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+00:31:58.150 [lettuce-nioEventLoop-5-6] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+00:32:00.002 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:32:00.008 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:32:12.796 [http-nio-8080-exec-77] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:32:12.801 [http-nio-8080-exec-77] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:32:12.806 [http-nio-8080-exec-77] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:32:12.810 [http-nio-8080-exec-77] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:32:12.815 [http-nio-8080-exec-77] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:32:12.821 [http-nio-8080-exec-77] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:32:32.904 [http-nio-8080-exec-43] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:32:33.733 [http-nio-8080-exec-83] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:32:34.334 [http-nio-8080-exec-4] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:32:35.003 [http-nio-8080-exec-91] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:32:35.009 [http-nio-8080-exec-91] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:32:35.016 [http-nio-8080-exec-91] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:32:35.022 [http-nio-8080-exec-91] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:32:35.028 [http-nio-8080-exec-91] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:32:35.033 [http-nio-8080-exec-91] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:32:51.818 [http-nio-8080-exec-57] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:32:51.823 [http-nio-8080-exec-57] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:32:51.828 [http-nio-8080-exec-57] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:32:51.833 [http-nio-8080-exec-57] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:32:51.838 [http-nio-8080-exec-57] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:32:51.842 [http-nio-8080-exec-57] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:33:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:33:00.008 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:33:05.133 [http-nio-8080-exec-7] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:33:35.142 [http-nio-8080-exec-5] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:34:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:34:00.008 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:34:01.017 [lettuce-nioEventLoop-5-6] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+00:34:01.048 [lettuce-eventExecutorLoop-1-12] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+00:34:01.050 [lettuce-nioEventLoop-5-7] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+00:34:05.128 [http-nio-8080-exec-1] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:34:24.166 [http-nio-8080-exec-10] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:34:24.172 [http-nio-8080-exec-10] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:34:24.177 [http-nio-8080-exec-10] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:34:24.183 [http-nio-8080-exec-10] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:34:24.189 [http-nio-8080-exec-10] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:34:24.194 [http-nio-8080-exec-10] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:34:34.432 [http-nio-8080-exec-8] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:34:42.673 [http-nio-8080-exec-11] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+00:34:44.836 [http-nio-8080-exec-55] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:34:44.845 [http-nio-8080-exec-55] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:34:44.849 [http-nio-8080-exec-55] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:34:44.853 [http-nio-8080-exec-55] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:34:44.857 [http-nio-8080-exec-55] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:34:44.861 [http-nio-8080-exec-55] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:34:46.611 [http-nio-8080-exec-22] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:34:46.617 [http-nio-8080-exec-22] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:34:46.622 [http-nio-8080-exec-22] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:34:46.627 [http-nio-8080-exec-22] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:34:46.631 [http-nio-8080-exec-22] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:34:46.635 [http-nio-8080-exec-22] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:35:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:35:00.005 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:35:05.141 [http-nio-8080-exec-31] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:35:32.059 [http-nio-8080-exec-33] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:35:32.064 [http-nio-8080-exec-33] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:35:32.068 [http-nio-8080-exec-33] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:35:32.073 [http-nio-8080-exec-33] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:35:32.077 [http-nio-8080-exec-33] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:35:32.082 [http-nio-8080-exec-33] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:35:35.137 [http-nio-8080-exec-37] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:35:41.365 [http-nio-8080-exec-82] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:35:41.773 [http-nio-8080-exec-44] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:35:42.375 [http-nio-8080-exec-14] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:35:42.380 [http-nio-8080-exec-14] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:35:42.385 [http-nio-8080-exec-14] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:35:42.389 [http-nio-8080-exec-14] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:35:42.394 [http-nio-8080-exec-14] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:35:42.398 [http-nio-8080-exec-14] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:35:53.189 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:35:53.192 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:35:53.195 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:35:53.198 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:35:53.202 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:35:53.205 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:36:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:36:00.011 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:36:12.129 [http-nio-8080-exec-98] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:36:42.139 [http-nio-8080-exec-56] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:36:59.059 [lettuce-nioEventLoop-5-7] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+00:36:59.148 [lettuce-eventExecutorLoop-1-10] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+00:36:59.150 [lettuce-nioEventLoop-5-8] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+00:37:00.001 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:37:00.005 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:37:12.132 [http-nio-8080-exec-58] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:37:42.130 [http-nio-8080-exec-59] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:38:00.002 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,45] - 开始执行定时任务：检查设备离线状态...
+00:38:00.006 [scheduling-1] INFO  c.s.i.t.AgricultureDeviceStatusCheckTask - [checkDevicesOffline,69] - 设备离线状态检查任务执行结束.
+00:38:05.018 [lettuce-nioEventLoop-5-8] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+00:38:05.048 [lettuce-eventExecutorLoop-1-11] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+00:38:05.055 [lettuce-nioEventLoop-5-9] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+00:38:12.128 [http-nio-8080-exec-60] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:38:19.509 [http-nio-8080-exec-63] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:38:19.514 [http-nio-8080-exec-63] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:38:19.518 [http-nio-8080-exec-63] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:38:19.522 [http-nio-8080-exec-63] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:38:19.527 [http-nio-8080-exec-63] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:38:19.532 [http-nio-8080-exec-63] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:38:32.966 [http-nio-8080-exec-72] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:38:32.974 [http-nio-8080-exec-72] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:38:32.982 [http-nio-8080-exec-72] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:38:32.992 [http-nio-8080-exec-72] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:38:33.000 [http-nio-8080-exec-72] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:38:33.009 [http-nio-8080-exec-72] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:38:42.133 [http-nio-8080-exec-74] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:38:44.619 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+00:38:45.549 [SpringApplicationShutdownHook] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:38:45.565 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+00:38:45.567 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+00:38:45.567 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+00:38:45.567 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,32] - ====关闭后台任务任务线程池====
+00:38:45.567 [SpringApplicationShutdownHook] INFO  c.s.i.s.SensorCommunicationService - [destroy,84] - 正在关闭传感器通信服务...
+00:38:45.567 [SpringApplicationShutdownHook] INFO  c.s.i.s.SensorCommunicationService - [stopAllSensorTasks,167] - 正在尝试停止所有 4 个传感器任务...
+00:38:45.567 [SpringApplicationShutdownHook] INFO  c.s.i.s.SensorCommunicationService - [stopAllSensorTasks,176] - 已发送停止指令给所有传感器任务。
+00:38:45.567 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,239] - 传感器 风速传感器 (ID: 6) 的轮询任务被主动中断，线程即将退出。
+00:38:45.567 [pool-10-thread-4] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,239] - 传感器 百叶箱多气象传感器 (ID: 7) 的轮询任务被主动中断，线程即将退出。
+00:38:45.567 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,239] - 传感器 风向传感器 (ID: 1) 的轮询任务被主动中断，线程即将退出。
+00:38:45.567 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,239] - 传感器 五合一水质传感器 (ID: 3) 的轮询任务被主动中断，线程即将退出。
+00:38:45.567 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,256] - 传感器 风速传感器 (ID: 6) 的轮询任务已完全停止。
+00:38:45.567 [pool-10-thread-4] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,256] - 传感器 百叶箱多气象传感器 (ID: 7) 的轮询任务已完全停止。
+00:38:45.567 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,256] - 传感器 风向传感器 (ID: 1) 的轮询任务已完全停止。
+00:38:45.567 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,256] - 传感器 五合一水质传感器 (ID: 3) 的轮询任务已完全停止。
+00:38:45.574 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+00:38:45.577 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+00:41:49.347 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+00:41:49.350 [main] INFO  c.s.ServerApplication - [logStarting,55] - Starting ServerApplication using Java 17.0.12 on zhubb with PID 29356 (D:\YCGSHou\fish-dish-server\server-admin\target\classes started by 18319 in D:\YCGSHou\fish-dish-server)
+00:41:49.350 [main] INFO  c.s.ServerApplication - [logStartupProfileInfo,686] - The following 2 profiles are active: "dev", "druid"
+00:41:51.071 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+00:41:51.073 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+00:41:51.073 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.102]
+00:41:51.165 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+00:41:52.126 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+00:41:53.161 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/ca.crt failed, trying to load from the resourcePath /D:/YCGSHou/fish-dish-server/server-admin/target/classes/
+00:41:53.165 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.crt failed, trying to load from the resourcePath /D:/YCGSHou/fish-dish-server/server-admin/target/classes/
+00:41:53.165 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.key failed, trying to load from the resourcePath /D:/YCGSHou/fish-dish-server/server-admin/target/classes/
+00:41:53.188 [main] INFO  o.f.b.s.n.ConnectionManager - [<init>,88] -  all connections, size: 2, list: [ConnectionInfo{host='192.168.31.210', port=20201}, ConnectionInfo{host='192.168.31.210', port=20200}]
+00:41:53.188 [main] INFO  o.f.b.s.n.NetworkImp - [start,167] - 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+
+00:41:53.189 [main] INFO  o.f.b.s.n.NetworkImp - [start,174] - ====> <==== STEP1-1: Load certificates for ecdsa context success..., start connManager with ECDSA sslContext
+00:41:53.238 [main] INFO  o.f.b.s.n.ConnectionManager - [initSslContext,238] -  build ECDSA ssl context with configured certificates 
+00:41:54.722 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20201
+00:41:54.722 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20200
+00:41:54.722 [nioEventLoopGroup-4-1] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20201, ctx: 832380408
+00:41:54.722 [nioEventLoopGroup-4-2] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20200, ctx: 304510495
+00:41:54.763 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":0,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+00:41:54.763 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":1,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+00:41:54.763 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+00:41:54.763 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+00:41:54.768 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20201, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+00:41:54.768 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20200, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+00:41:54.798 [main] INFO  o.f.b.s.c.ChannelImp - [checkConnectionsToStartPeriodTask,126] -  Connect to  nodes: 192.168.31.210:20200, 192.168.31.210:20201, 
+00:41:54.799 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,77] - create BcosSDK, start channel success, cryptoType: 0
+00:41:54.800 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,87] - create BcosSDK, start channel succ, channelProcessorThreadSize: 32, receiptProcessorThreadSize: 32
+00:41:54.805 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerBlockNumberNotifyHandler,260] - registerBlockNumberNotifyHandler
+00:41:54.805 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerTransactionNotifyHandler,282] - registerTransactionNotifyHandler
+00:41:54.825 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,98] - create BcosSDK, create groupManagerService success
+00:41:55.145 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+00:41:55.148 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+00:41:55.149 [main] INFO  o.f.b.s.amop.AmopImp - [start,188] - amop module started
+00:41:55.149 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+00:41:55.149 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,103] - create BcosSDK, create Amop success
+00:41:55.171 [main] INFO  o.f.b.s.c.Client - [build,114] - build client success for group 1, crypto type 0
+00:41:55.171 [main] INFO  o.f.bcos.sdk.BcosSDK - [getClient,178] - create client for group 1 success
+00:41:56.396 [main] INFO  c.s.i.c.MqttConfig - [afterPropertiesSet,40] - MQTT配置初始化完成 - serverUri: tcp://192.168.31.168:1883, clientId: fish-dish-server, defaultTopic: /fish-dish/data
+00:41:56.542 [main] INFO  c.s.i.s.SerialPortService - [init,36] - 正在初始化串口服务...
+00:41:56.542 [main] INFO  c.s.i.s.SerialPortService - [connect,41] - 正在尝试连接串口: COM3，波特率: 9600
+00:42:01.738 [main] INFO  c.s.i.s.SerialPortService - [connect,49] - 可用串口: [COM3, COM4]
+00:42:01.741 [main] INFO  c.s.i.s.SensorCommunicationService - [init,63] - 正在初始化传感器通信服务...
+00:42:01.808 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+00:42:01.816 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+00:42:01.816 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+00:42:01.817 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+00:42:01.817 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+00:42:01.818 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+00:42:01.818 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+00:42:01.818 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@53bc8c7e
+00:42:02.229 [main] INFO  c.s.i.c.MqttConfig - [mqttClientFactory,60] - 配置MQTT连接: serverUri=tcp://192.168.31.168:1883, username=guest, clientId=fish-dish-server
+00:42:02.238 [main] INFO  c.s.i.c.MqttConfig - [mqttOutboundChannel,81] - 创建MQTT出站通道: mqttOutboundChannel
+00:42:02.251 [main] INFO  c.s.i.c.MqttConfig - [mqttOutbound,101] - MQTT消息处理器配置完成: clientId=fish-dish-server_outbound_1751474522249, defaultTopic=/fish-dish/data
+00:42:03.068 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+00:42:03.239 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:42:03.323 [http-nio-8080-exec-1] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:42:03.323 [http-nio-8080-exec-2] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:42:03.333 [http-nio-8080-exec-3] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:42:03.724 [main] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+00:42:03.733 [main] INFO  c.s.ServerApplication - [logStarted,61] - Started ServerApplication in 14.604 seconds (JVM running for 14.892)
+00:42:03.736 [main] INFO  c.s.i.s.SensorCommunicationService - [onApplicationReady,74] - 应用程序已就绪，正在启动传感器通信...
+00:42:03.770 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 风向传感器 (ID: 1) 成功启动轮询任务。
+00:42:03.771 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-10-thread-1 正在启动，负责轮询传感器: 风向传感器 (ID: 1)
+00:42:03.771 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 五合一水质传感器 (ID: 3) 成功启动轮询任务。
+00:42:03.771 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 风速传感器 (ID: 6) 成功启动轮询任务。
+00:42:03.771 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-10-thread-2 正在启动，负责轮询传感器: 五合一水质传感器 (ID: 3)
+00:42:03.771 [main] INFO  c.s.i.s.SensorCommunicationService - [startSensorTask,159] - 已为传感器 百叶箱多气象传感器 (ID: 7) 成功启动轮询任务。
+00:42:03.771 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-10-thread-3 正在启动，负责轮询传感器: 风速传感器 (ID: 6)
+00:42:03.771 [pool-10-thread-4] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,189] - 线程 pool-10-thread-4 正在启动，负责轮询传感器: 百叶箱多气象传感器 (ID: 7)
+00:42:04.130 [http-nio-8080-exec-5] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:42:04.143 [http-nio-8080-exec-6] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:42:06.138 [http-nio-8080-exec-13] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:42:34.134 [http-nio-8080-exec-8] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:42:34.134 [http-nio-8080-exec-9] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:42:34.135 [http-nio-8080-exec-10] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:42:35.137 [http-nio-8080-exec-11] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:42:35.138 [http-nio-8080-exec-12] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:42:37.130 [http-nio-8080-exec-7] INFO  c.s.w.MqSocketServer - [onMessage,30] - 收到来自RabbitMQ客户端：admin的信息:{"id":"heartbeat","type":"heartbeat","content":"ping"}
+00:42:44.172 [http-nio-8080-exec-16] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:42:44.172 [http-nio-8080-exec-17] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:42:44.172 [http-nio-8080-exec-14] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:42:44.172 [http-nio-8080-exec-18] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:42:44.172 [http-nio-8080-exec-19] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:42:44.172 [http-nio-8080-exec-15] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:42:44.333 [http-nio-8080-exec-20] INFO  c.s.w.MqSocketServer - [onOpen,24] - RabbitMQ客户端：admin建立连接
+00:42:44.977 [http-nio-8080-exec-24] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:42:44.988 [http-nio-8080-exec-24] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:42:44.994 [http-nio-8080-exec-24] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:42:44.998 [http-nio-8080-exec-24] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:42:45.004 [http-nio-8080-exec-24] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:42:45.009 [http-nio-8080-exec-24] INFO  c.s.h.MyMetaObjectHandler - [updateFill,29] - start update fill ....
+00:42:54.771 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+00:42:54.885 [SpringApplicationShutdownHook] INFO  c.s.w.MqSocketServer - [onClose,35] - RabbitMQ客户端连接断开:admin
+00:42:54.899 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+00:42:54.899 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+00:42:54.899 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+00:42:54.900 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,32] - ====关闭后台任务任务线程池====
+00:42:54.900 [SpringApplicationShutdownHook] INFO  c.s.i.s.SensorCommunicationService - [destroy,84] - 正在关闭传感器通信服务...
+00:42:54.900 [SpringApplicationShutdownHook] INFO  c.s.i.s.SensorCommunicationService - [stopAllSensorTasks,167] - 正在尝试停止所有 4 个传感器任务...
+00:42:54.901 [SpringApplicationShutdownHook] INFO  c.s.i.s.SensorCommunicationService - [stopAllSensorTasks,176] - 已发送停止指令给所有传感器任务。
+00:42:54.901 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,239] - 传感器 风向传感器 (ID: 1) 的轮询任务被主动中断，线程即将退出。
+00:42:54.901 [pool-10-thread-4] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,239] - 传感器 百叶箱多气象传感器 (ID: 7) 的轮询任务被主动中断，线程即将退出。
+00:42:54.901 [pool-10-thread-1] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,256] - 传感器 风向传感器 (ID: 1) 的轮询任务已完全停止。
+00:42:54.901 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,239] - 传感器 风速传感器 (ID: 6) 的轮询任务被主动中断，线程即将退出。
+00:42:54.901 [pool-10-thread-4] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,256] - 传感器 百叶箱多气象传感器 (ID: 7) 的轮询任务已完全停止。
+00:42:54.901 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,239] - 传感器 五合一水质传感器 (ID: 3) 的轮询任务被主动中断，线程即将退出。
+00:42:54.901 [pool-10-thread-3] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,256] - 传感器 风速传感器 (ID: 6) 的轮询任务已完全停止。
+00:42:54.901 [pool-10-thread-2] INFO  c.s.i.s.SensorCommunicationService - [sensorRequest,256] - 传感器 五合一水质传感器 (ID: 3) 的轮询任务已完全停止。
+00:42:54.912 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+00:42:54.916 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed

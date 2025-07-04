@@ -5,6 +5,7 @@ import com.server.domain.AgricultureDevice;
 import com.server.domain.AgricultureWaterQualityData;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 水质数据Service接口
@@ -14,6 +15,19 @@ import java.util.List;
  */
 public interface AgricultureWaterQualityDataService  extends IService<AgricultureWaterQualityData>
 {
+
+
+
+    /**
+     * 查询水质趋势数据（支持24小时、7天、30天）
+     *
+     * @param pastureId
+     * @param batchId
+     * @param range    时间范围类型，可选值："day"（24小时）、"week"（7天）、"month"（30天）
+     * @return         包含x轴时间点和各气象参数趋势的Map数据
+     */
+    Map<String, Object> getTrendData(String pastureId, String batchId, String range);
+
     /**
      * 查询水质数据
      * 

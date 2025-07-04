@@ -3,6 +3,7 @@ package com.server.service.impl;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -117,6 +118,12 @@ public class AgricultureDeviceServiceImpl extends ServiceImpl<AgricultureDeviceM
      */
     @Override
     public int insertAgricultureDevice(AgricultureDevice agricultureDevice) {
+
+        // 如果是可控设备，设置状态
+        if ("1".equals(String.valueOf(agricultureDevice.getIsControllable()))) {
+            agricultureDevice.setStatus("1");         // 设备状态
+            agricultureDevice.setControlStatus("0");  // 用户控制状态
+        }
         if (Convert.toBool(fiscoEnabled)){
             try {
                 /* 部署合约 拿到合约地址 */
@@ -145,7 +152,17 @@ public class AgricultureDeviceServiceImpl extends ServiceImpl<AgricultureDeviceM
     @Override
     public int updateAgricultureDevice(AgricultureDevice agricultureDevice) {
         int update = agricultureDeviceMapper.updateById(agricultureDevice);
-        agricultureDevice.setUpdateBy(SecurityUtils.getUsername());
+        String username;
+        try {
+            username = SecurityUtils.getUsername();
+            if (org.apache.commons.lang3.StringUtils.isEmpty(username)) {
+                username = "system";
+            }
+        } catch (Exception e) {
+            username = "system";
+        }
+        agricultureDevice.setUpdateBy(username);
+
         rabbitTemplate.convertAndSend(FB_EXCHANGE, "*", agricultureDevice);
         return update;
     }
@@ -170,5 +187,16 @@ public class AgricultureDeviceServiceImpl extends ServiceImpl<AgricultureDeviceM
     @Override
     public int deleteAgricultureDeviceById(String id) {
         return removeById(id) ? 1 : 0; // removeById 返回 boolean
+    }
+    //根据大棚和id查询设备列表
+    @Override
+    public List<Long> selectDeviceIdsByPastureAndBatch(Long pastureId, Long batchId) {
+        return lambdaQuery()
+                .eq(AgricultureDevice::getPastureId, pastureId)
+                .eq(AgricultureDevice::getBatchId, batchId)
+                .list()
+                .stream()
+                .map(AgricultureDevice::getId)
+                .collect(Collectors.toList());
     }
 }
