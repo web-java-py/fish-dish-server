@@ -62,6 +62,7 @@ public class AgricultureTaskLogServiceImpl extends ServiceImpl<AgricultureTaskLo
     }
 
     /**
+     *
      * 修改批次任务日志
      * 
      * @param agricultureTaskLog 批次任务日志

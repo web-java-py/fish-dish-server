@@ -48,10 +48,16 @@
             <artifactId>knife4j-spring-boot-starter</artifactId>
         </dependency>
 
-        <!-- 核心模块-->
+        <!-- 核心模块 -->
         <dependency>
             <groupId>com.server</groupId>
             <artifactId>server-agriculture</artifactId>
+        </dependency>
+
+        <!-- 大数据 -->
+        <dependency>
+            <groupId>com.server</groupId>
+            <artifactId>server-data</artifactId>
         </dependency>
 
         <!-- 代码生成 -->

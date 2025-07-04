@@ -14,6 +14,7 @@ import com.server.core.domain.BaseEntity;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * 批次任务日志对象 agriculture_task_log
@@ -29,7 +30,7 @@ public class AgricultureTaskLog implements Serializable
     /** 日志ID */
     @TableId(value = "log_id", type = IdType.AUTO)
     @ApiModelProperty(value = "日志ID")
-    private String logId;
+    private Long logId;
 
     /** 任务ID */
     @TableField(value = "task_id")

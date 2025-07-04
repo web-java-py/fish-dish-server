@@ -5,6 +5,7 @@ import com.server.domain.AgriculturePasture;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.server.domain.AgricultureDeviceSensorAlert;
 import com.server.domain.AgriculturePasture;
+import com.server.domain.dto.AgriculturePastureDTO;
 
 /**
  * 大棚Service接口
@@ -61,4 +62,9 @@ public interface AgriculturePastureService  extends IService<AgriculturePasture>
      * @return 结果
      */
     public int deleteAgriculturePastureById(Long id);
+
+    /**
+     * 获取大棚剩余面积
+     */
+    List<AgriculturePastureDTO> selectRemainingArea(AgriculturePastureDTO agriculturePastureDTO);
 }

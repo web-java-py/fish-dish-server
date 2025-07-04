@@ -2,6 +2,8 @@ package com.server.controller.agriculture;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
+
+import com.server.domain.dto.AgriculturePastureDTO;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -100,5 +102,16 @@ public class AgriculturePastureController extends BaseController
     public AjaxResult remove(@PathVariable Long[] ids)
     {
         return toAjax(agriculturePastureService.deleteAgriculturePastureByIds(ids));
+    }
+
+    /**
+     * 获取大棚剩余面积以及查询大棚之下有多少个分区
+     */
+    @PreAuthorize("@ss.hasPermi('agriculture:pasture:area')")
+    @GetMapping("/area")
+    public TableDataInfo remainingArea(AgriculturePastureDTO agriculturePastureDTO){
+        startPage();
+        List<AgriculturePastureDTO> list = agriculturePastureService.selectRemainingArea(agriculturePastureDTO);
+        return getDataTable(list);
     }
 }

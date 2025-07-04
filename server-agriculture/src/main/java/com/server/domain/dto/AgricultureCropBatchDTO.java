@@ -25,4 +25,6 @@ public class AgricultureCropBatchDTO {
     private String classImage;         // 从 agriculture_class 表获取
     private String className;
     private String nickName;
+    private String classId;            // agriculture_class 和 agriculture_job
+    private String jobName;            // agriculture_job
 }

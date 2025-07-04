@@ -191,4 +191,9 @@ public class Constants
      * ai防止重复提交提示
      */
     public static final String AI_NOT_REPEAT_SUBMIT_MESSAGE = "AI助手正在处理啦，请不要重复提交！";
+
+    /**
+     * 所有用户
+     */
+    public static final String ALL_USER = "*";
 }
