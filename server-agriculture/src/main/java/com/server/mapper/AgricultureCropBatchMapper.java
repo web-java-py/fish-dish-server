@@ -2,6 +2,7 @@ package com.server.mapper;
 
 import java.util.List;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.server.domain.AgricultureCropBatch;
 import com.server.domain.dto.AgricultureCropBatchDTO;

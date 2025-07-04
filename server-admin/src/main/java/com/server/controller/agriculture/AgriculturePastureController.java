@@ -3,8 +3,7 @@ package com.server.controller.agriculture;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
 
-import com.server.annotation.Log;
-import com.server.annotation.SeeRefreshData;
+import com.server.domain.dto.AgriculturePastureDTO;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import com.server.annotation.Log;
 import com.server.core.controller.BaseController;
 import com.server.core.domain.AjaxResult;
 import com.server.enums.BusinessType;
@@ -25,7 +25,7 @@ import com.server.core.page.TableDataInfo;
 
 /**
  * 大棚Controller
- *
+ * 
  * @author server
  * @date 2025-05-27
  */
@@ -77,7 +77,6 @@ public class AgriculturePastureController extends BaseController
     @PreAuthorize("@ss.hasPermi('agriculture:pasture:add')")
     @Log(title = "大棚", businessType = BusinessType.INSERT)
     @PostMapping
-    @SeeRefreshData
     public AjaxResult add(@RequestBody AgriculturePasture agriculturePasture)
     {
         return toAjax(agriculturePastureService.insertAgriculturePasture(agriculturePasture));
@@ -89,7 +88,6 @@ public class AgriculturePastureController extends BaseController
     @PreAuthorize("@ss.hasPermi('agriculture:pasture:edit')")
     @Log(title = "大棚", businessType = BusinessType.UPDATE)
     @PutMapping
-    @SeeRefreshData
     public AjaxResult edit(@RequestBody AgriculturePasture agriculturePasture)
     {
         return toAjax(agriculturePastureService.updateAgriculturePasture(agriculturePasture));
@@ -101,9 +99,19 @@ public class AgriculturePastureController extends BaseController
     @PreAuthorize("@ss.hasPermi('agriculture:pasture:remove')")
     @Log(title = "大棚", businessType = BusinessType.DELETE)
 	@DeleteMapping("/{ids}")
-    @SeeRefreshData
     public AjaxResult remove(@PathVariable Long[] ids)
     {
         return toAjax(agriculturePastureService.deleteAgriculturePastureByIds(ids));
+    }
+
+    /**
+     * 获取大棚剩余面积以及查询大棚之下有多少个分区
+     */
+    @PreAuthorize("@ss.hasPermi('agriculture:pasture:area')")
+    @GetMapping("/area")
+    public TableDataInfo remainingArea(AgriculturePastureDTO agriculturePastureDTO){
+        startPage();
+        List<AgriculturePastureDTO> list = agriculturePastureService.selectRemainingArea(agriculturePastureDTO);
+        return getDataTable(list);
     }
 }

@@ -14,6 +14,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.ZoneId;
 import java.util.Date;
 import java.util.List;
 
@@ -32,23 +34,45 @@ public class AgricultureBatchTaskServiceImpl extends ServiceImpl<AgricultureBatc
      */
     @Override
     public List<AgricultureBatchTask> selectBatchTaskList(AgricultureBatchTask agricultureBatchTask) {
+        // 创建 LambdaQueryWrapper 用于构建动态查询条件
         LambdaQueryWrapper<AgricultureBatchTask> queryWrapper = new LambdaQueryWrapper<>();
+        // 获取 planFinish 字段的值（结束日期）
+        Date planFinishDate = agricultureBatchTask.getPlanFinish();
+        if (planFinishDate != null) {
+            // 将 Date 类型转换为 LocalDateTime，便于处理时间部分
+            LocalDateTime finishDateTime = planFinishDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
+            // 如果时间为 00:00:00，说明前端只传了日期，需要补全为 23:59:59.999，确保当天的数据能被查出
+            if (finishDateTime.toLocalTime().equals(LocalTime.MIDNIGHT)) {
+                finishDateTime = finishDateTime.with(LocalTime.MAX);
+                // 将补全后的 LocalDateTime 转回 Date 类型
+                planFinishDate = Date.from(finishDateTime.atZone(ZoneId.systemDefault()).toInstant());
+            }
+        }
+        // 如果 batchId 不为空，添加等值查询条件
         queryWrapper.eq(agricultureBatchTask.getBatchId() != null,
                         AgricultureBatchTask::getBatchId,
                         agricultureBatchTask.getBatchId())
-                //只有在 taskName 字段不为空时,这个条件才会被添加。
+                // 如果 taskName 不为空，添加模糊查询条件
                 .like(StringUtils.isNotBlank(agricultureBatchTask.getTaskName()),
                         AgricultureBatchTask::getTaskName,
                         agricultureBatchTask.getTaskName())
+                // 如果 status 不为空，添加等值查询条件
                 .eq(StringUtils.isNotBlank(agricultureBatchTask.getStatus()),
                         AgricultureBatchTask::getStatus,
                         agricultureBatchTask.getStatus())
-                //设置结果集按照 orderNum 字段升序排序
+                // 如果 planStart 不为空，添加大于等于的范围查询条件
+                .ge(agricultureBatchTask.getPlanStart() != null, AgricultureBatchTask::getPlanStart, agricultureBatchTask.getPlanStart())
+                // 如果 planFinish 不为空，添加小于等于的范围查询条件（已补全为 23:59:59）
+                .le(planFinishDate != null, AgricultureBatchTask::getPlanFinish, planFinishDate)
+                // 设置结果集按照 orderNum 字段升序排序
                 .orderByAsc(AgricultureBatchTask::getOrderNum);
-        // 添加日志输出，方便调试
+        // 日志输出查询参数，便于调试
         log.info("Query parameters: {}", agricultureBatchTask);
+        // 执行查询，获取结果列表
         List<AgricultureBatchTask> result = baseMapper.selectList(queryWrapper);
+        // 日志输出结果数量，便于调试
         log.info("Query result size: {}", result.size());
+        // 返回查询结果
         return result;
     }
 
