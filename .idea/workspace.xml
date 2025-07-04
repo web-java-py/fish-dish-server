@@ -52,9 +52,6 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="PerforceDirect.Settings">
-    <option name="CHARSET" value="无" />
-  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
@@ -152,6 +149,7 @@
       <workItem from="1751003071297" duration="1009000" />
       <workItem from="1751004119272" duration="31000" />
       <workItem from="1751195563334" duration="38537000" />
+      <workItem from="1751619143171" duration="178000" />
     </task>
     <task id="LOCAL-00002" summary="bug修复">
       <option name="closed" value="true" />
@@ -241,7 +239,23 @@
       <option name="project" value="LOCAL" />
       <updated>1751544893028</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="水质图表数据接口实现">
+      <option name="closed" value="true" />
+      <created>1751619148709</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1751619148709</updated>
+    </task>
+    <task id="LOCAL-00014" summary="水质图表数据接口实现">
+      <option name="closed" value="true" />
+      <created>1751619308188</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1751619308188</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +272,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="origin/main" />
                       </list>
                     </value>
                   </entry>
@@ -281,7 +295,8 @@
     <MESSAGE value="图表趋势数据绑定实现" />
     <MESSAGE value="修复一堆bug" />
     <MESSAGE value="自动策略实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="自动策略实现" />
+    <MESSAGE value="水质图表数据接口实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="水质图表数据接口实现" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
