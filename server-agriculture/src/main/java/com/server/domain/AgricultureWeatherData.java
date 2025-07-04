@@ -1,13 +1,12 @@
 package com.server.domain;
 
-import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.*;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import io.swagger.annotations.ApiModel;
@@ -24,7 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 @AllArgsConstructor
 @TableName(value ="agriculture_weather_data")
 @ApiModel(value = "AgricultureWeatherData" , description="气象数据表")
-public class AgricultureWeatherData extends BaseEntityPlus implements Serializable  {
+public class AgricultureWeatherData implements Serializable  {
 
     private static final long serialVersionUID = 1L;
 
@@ -72,8 +71,11 @@ public class AgricultureWeatherData extends BaseEntityPlus implements Serializab
     @ApiModelProperty(value="气压(hPa)")
     private Double airPressure;
 
-    @TableField(value="collect_time")
-    @ApiModelProperty(value="采集时间")
+    @TableField(value = "collect_time")
+    @ApiModelProperty(value = "采集时间")
     private LocalDateTime collectTime;
 
+    @TableField(value = "remark")
+    @ApiModelProperty(value = "备注")
+    private String remark;
 }

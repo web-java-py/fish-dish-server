@@ -1,5 +1,6 @@
 package com.server.domain;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import lombok.Data;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
@@ -26,7 +27,7 @@ public class AgricultureDeviceType extends BaseEntityPlus implements Serializabl
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value="id")
+    @TableId(value="id",type = IdType.AUTO)
     @ApiModelProperty(value="主键ID")
     private Long id;
 
@@ -41,5 +42,9 @@ public class AgricultureDeviceType extends BaseEntityPlus implements Serializabl
     @TableField(value="type_desc")
     @ApiModelProperty(value="类型描述")
     private String typeDesc;
+
+    @TableField(value="is_controllable")
+    @ApiModelProperty(value="是否可控设备")
+    private String isControllable;
 
 }

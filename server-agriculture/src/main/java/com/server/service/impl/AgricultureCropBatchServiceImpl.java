@@ -72,6 +72,8 @@ public class AgricultureCropBatchServiceImpl extends ServiceImpl<AgricultureCrop
     @Override
     public int insertAgricultureCropBatch(AgricultureCropBatch agricultureCropBatch)
     {
+
+
         agricultureCropBatch.setCreateTime(LocalDateTime.now());
         return agricultureCropBatchMapper.insert(agricultureCropBatch);
     }

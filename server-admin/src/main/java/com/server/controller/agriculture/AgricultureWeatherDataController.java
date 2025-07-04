@@ -1,20 +1,14 @@
 package com.server.controller.agriculture;
 
 import java.util.List;
+import java.util.Map;
 import javax.servlet.http.HttpServletResponse;
 
-import com.server.annotation.Log;
 import com.server.domain.AgricultureWeatherData;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import com.server.annotation.Log;
 import com.server.core.controller.BaseController;
 import com.server.core.domain.AjaxResult;
 import com.server.enums.BusinessType;
@@ -24,7 +18,7 @@ import com.server.core.page.TableDataInfo;
 
 /**
  * 气象数据Controller
- *
+ * 
  * @author bxwy
  * @date 2025-06-08
  */
@@ -36,9 +30,23 @@ public class AgricultureWeatherDataController extends BaseController
     private AgricultureWeatherDataService agricultureWeatherDataService;
 
     /**
+     * 气象趋势数据（24小时/7天/30天）
+     */
+    @PreAuthorize("@ss.hasPermi('agriculture:weather:trend')")
+    @GetMapping("/trend")
+    public AjaxResult trend(
+            @RequestParam("pastureId") String pastureId,
+            @RequestParam("batchId") String batchId,
+            @RequestParam("range") String range //range（时间范围："day"、"week"、"month"）
+    ) {
+        Map<String, Object> trendData = agricultureWeatherDataService.getTrendData(pastureId, batchId, range);
+        return success(trendData);
+    }
+
+    /**
      * 查询气象数据列表
      */
-    @PreAuthorize("@ss.hasPermi('server:data:list')")
+    @PreAuthorize("@ss.hasPermi('agriculture:weather:list')")
     @GetMapping("/list")
     public TableDataInfo list(AgricultureWeatherData agricultureWeatherData)
     {
@@ -50,7 +58,7 @@ public class AgricultureWeatherDataController extends BaseController
     /**
      * 导出气象数据列表
      */
-    @PreAuthorize("@ss.hasPermi('server:data:export')")
+    @PreAuthorize("@ss.hasPermi('agriculture:weather:export')")
     @Log(title = "气象数据", businessType = BusinessType.EXPORT)
     @PostMapping("/export")
     public void export(HttpServletResponse response, AgricultureWeatherData agricultureWeatherData)
@@ -63,7 +71,7 @@ public class AgricultureWeatherDataController extends BaseController
     /**
      * 获取气象数据详细信息
      */
-    @PreAuthorize("@ss.hasPermi('server:data:query')")
+    @PreAuthorize("@ss.hasPermi('agriculture:weather:query')")
     @GetMapping(value = "/{id}")
     public AjaxResult getInfo(@PathVariable("id") Long id)
     {
@@ -73,7 +81,7 @@ public class AgricultureWeatherDataController extends BaseController
     /**
      * 新增气象数据
      */
-    @PreAuthorize("@ss.hasPermi('server:data:add')")
+    @PreAuthorize("@ss.hasPermi('agriculture:weather:add')")
     @Log(title = "气象数据", businessType = BusinessType.INSERT)
     @PostMapping
     public AjaxResult add(@RequestBody AgricultureWeatherData agricultureWeatherData)
@@ -84,7 +92,7 @@ public class AgricultureWeatherDataController extends BaseController
     /**
      * 修改气象数据
      */
-    @PreAuthorize("@ss.hasPermi('server:data:edit')")
+    @PreAuthorize("@ss.hasPermi('agriculture:weather:edit')")
     @Log(title = "气象数据", businessType = BusinessType.UPDATE)
     @PutMapping
     public AjaxResult edit(@RequestBody AgricultureWeatherData agricultureWeatherData)
@@ -95,7 +103,7 @@ public class AgricultureWeatherDataController extends BaseController
     /**
      * 删除气象数据
      */
-    @PreAuthorize("@ss.hasPermi('server:data:remove')")
+    @PreAuthorize("@ss.hasPermi('agriculture:weather:remove')")
     @Log(title = "气象数据", businessType = BusinessType.DELETE)
 	@DeleteMapping("/{ids}")
     public AjaxResult remove(@PathVariable Long[] ids)

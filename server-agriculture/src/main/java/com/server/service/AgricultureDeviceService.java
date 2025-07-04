@@ -70,4 +70,9 @@ public interface AgricultureDeviceService extends IService<AgricultureDevice>
      * @return 结果
      */
     public int deleteAgricultureDeviceById(String id);
+
+    /**
+     * 根据大棚id和分区id查询设备id集合
+     */
+    List<Long> selectDeviceIdsByPastureAndBatch(Long pastureId, Long batchId);
 }

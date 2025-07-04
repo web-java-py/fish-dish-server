@@ -1,9 +1,11 @@
 //package com.server.iot.service;
 //
 //import com.fasterxml.jackson.databind.ObjectMapper;
+//import com.server.domain.AgricultureDeviceMqttConfig;
 //import com.server.domain.AgricultureWaterQualityData;
 //import com.server.domain.AgricultureWeatherData;
 //import com.server.iot.gateway.MqttGateway;
+//import com.server.service.AgricultureDeviceMqttConfigService;
 //import com.server.service.AgricultureWaterQualityDataService;
 //import com.server.service.AgricultureWeatherDataService;
 //import org.slf4j.Logger;
@@ -32,6 +34,8 @@
 //    private AgricultureWeatherDataService weatherDataService; // 气象数据
 //
 //    @Autowired
+//    private AgricultureDeviceMqttConfigService deviceMqttConfigService; //Mqtt配置
+//    @Autowired
 //    private MqttGateway mqttGateway; // MQTT消息推送网关
 //
 //    @Autowired
@@ -48,7 +52,6 @@
 //            String dataString = new String(data);
 //            Map<String, Object> parsedData = parseData(dataString);
 //            String type = (String) parsedData.get("type");
-//            // mqttGateway.sendToMqtt("测试测试MQTT", "/fish-dish/water"); // 这行看起来是测试代码，可以考虑移除
 //            if ("water".equals(type)) {
 //                AgricultureWaterQualityData waterData = createWaterQualityData(parsedData);
 //                waterQualityDataService.save(waterData); // 保存到数据库
@@ -77,40 +80,50 @@
 //     */
 //    public void processAndStore(Map<String, Object> parsedData) {
 //        try {
-//            // 从Map中获取数据类型，以决定如何处理
+//            // 1. 获取设备ID
+//            Long deviceId = null;
+//            if (parsedData.get("deviceId") != null) {
+//                deviceId = Long.valueOf(parsedData.get("deviceId").toString());
+//            }
+//
+//            // 2. 查找该设备的MQTT配置，获取专属topic
+//            String topic = null;
+//            if (deviceId != null) {
+//                AgricultureDeviceMqttConfig config = deviceMqttConfigService.getByDeviceId(deviceId);
+//                if (config != null && config.getMqttTopic() != null && !config.getMqttTopic().isEmpty()) {
+//                    topic = config.getMqttTopic();
+//                }
+//            }
+//            // 兜底：如果没有查到topic，推送到一个默认主题
+//            if (topic == null) {
+//                topic = "/fish-dish/unknown";
+//                log.warn("设备ID {} 未配置MQTT主题，推送到默认主题 {}", deviceId, topic);
+//            }
+//
+//            // 3. 数据类型（决定存储到哪张表，但推送MQTT只看设备ID）
 //            String type = (String) parsedData.get("type");
 //
 //            if ("water".equals(type)) {
-//                // 1. 创建水质数据实体对象
+//                // 水质数据，存表
 //                AgricultureWaterQualityData waterData = createWaterQualityData(parsedData);
-//                // 2. 将实体对象保存到数据库
 //                waterQualityDataService.save(waterData);
 //                log.info("成功保存水质数据: {}", waterData);
-//                // 3. 推送到MQTT
-//                try {
-//                    mqttGateway.sendToMqtt(objectMapper.writeValueAsString(waterData), "/fish-dish/water");
-//                    log.info("水质数据成功发布到MQTT主题 /fish-dish/water");
-//                } catch (Exception e) {
-//                    log.error("水质数据发布到MQTT失败: {}", e.getMessage(), e);
-//                }
-//
+//                // 推送到设备专属topic
+//                mqttGateway.sendToMqtt(objectMapper.writeValueAsString(waterData), topic);
+//                log.info("水质数据成功发布到MQTT主题 {}", topic);
 //            } else if ("weather".equals(type)) {
-//                // 1. 创建气象数据实体对象
+//                // 气象数据，存表
 //                AgricultureWeatherData weatherData = createWeatherData(parsedData);
-//                // 2. 将实体对象保存到数据库
 //                weatherDataService.save(weatherData);
 //                log.info("成功保存气象数据: {}", weatherData);
-//                // 3. 推送到MQTT
-//                try {
-//                    mqttGateway.sendToMqtt(objectMapper.writeValueAsString(weatherData), "/fish-dish/weather");
-//                    log.info("气象数据成功发布到MQTT主题 /fish-dish/weather");
-//                } catch (Exception e) {
-//                    log.error("气象数据发布到MQTT失败: {}", e.getMessage(), e);
-//                }
+//                // 推送到设备专属topic
+//                mqttGateway.sendToMqtt(objectMapper.writeValueAsString(weatherData), topic);
+//                log.info("气象数据成功发布到MQTT主题 {}", topic);
 //            } else {
-//                log.warn("收到未知数据类型: {}", type);
+//                // 其它类型，直接推送原始数据
+//                mqttGateway.sendToMqtt(objectMapper.writeValueAsString(parsedData), topic);
+//                log.warn("收到未知数据类型: {}，原始数据已推送到MQTT主题 {}", type, topic);
 //            }
-//
 //        } catch (Exception e) {
 //            log.error("处理并存储已解析的数据失败", e);
 //        }
@@ -172,8 +185,6 @@
 //        // 风向是字符串类型，进行null检查
 //        String windDirection = (String) data.get("wind_direction");
 //        weatherData.setWindDirection(windDirection != null ? windDirection : ""); // 如果为null，则设置为空字符串
-//
-//        weatherData.setCollectTime(LocalDateTime.now()); // 设置数据采集时间为当前服务器时间
 //        return weatherData;
 //    }
 //

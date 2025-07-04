@@ -24,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
 @AllArgsConstructor
 @TableName(value ="agriculture_water_quality_data")
 @ApiModel(value = "AgricultureWaterQualityData" , description="水质数据表")
-public class AgricultureWaterQualityData extends BaseEntityPlus implements Serializable  {
+public class AgricultureWaterQualityData  implements Serializable  {
 
     private static final long serialVersionUID = 1L;
 
@@ -67,5 +67,9 @@ public class AgricultureWaterQualityData extends BaseEntityPlus implements Seria
     @TableField(value="collect_time")
     @ApiModelProperty(value="采集时间")
     private LocalDateTime collectTime;
+
+    @TableField(value = "remark")
+    @ApiModelProperty(value = "备注")
+    private String remark;
 
 }
