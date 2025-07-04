@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="优化sse 重构sse">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/aspect/AgricultureSeeAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/aspect/AgricultureSeeAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-data/src/main/java/com/server/aspect/DataSeeAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-data/src/main/java/com/server/aspect/DataSeeAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-framework/src/main/java/com/server/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-framework/src/main/java/com/server/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-framework/src/main/java/com/server/sse/SseServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-framework/src/main/java/com/server/sse/SseServer.java" afterDir="false" />
+    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="实现sse推送所有用户 声明websocket也是推送所有用户">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2025_6_27_13_32__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2025_6_27_13_32__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/mapper/ParamTypeDictMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/mapper/ParamTypeDictMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
