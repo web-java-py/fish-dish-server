@@ -145,13 +145,18 @@ public class AgricultureCropBatchServiceImpl extends ServiceImpl<AgricultureCrop
 
     /**
      * 批量删除分区
-     *
+     *删除的同时将分区下的任务一起删掉，避免数据库过多不用的数据
      * @param batchId 需要删除的分区主键
      * @return 结果
      */
     @Override
     public int deleteAgricultureCropBatchByBatchIds(Long[] batchId)
     {
+        LambdaQueryWrapper<AgricultureBatchTask> queryWrapper = new LambdaQueryWrapper<>();
+        //传给batch_id的参数是一个序列化的Java对象 如 Long[] 或 List<Long>）而不是单个 Long 类型的分区ID
+        queryWrapper.in(AgricultureBatchTask::getBatchId, Arrays.asList(batchId));
+        //AgricultureBatchTask的batchId 和 AgricultureCropBatch的batchId相等删除之后再删除分区
+        agricultureBatchTaskService.remove(queryWrapper);
         return removeByIds(Arrays.asList(batchId)) ? batchId.length : 0;
     }
 
