@@ -19,6 +19,7 @@
         <module>server-quartz</module>
         <module>server-agriculture</module>
         <module>server-data</module>
+        <module>server-app</module>
     </modules>
     <description>管理系统</description>
 
@@ -257,6 +258,12 @@
                 <version>${server.version}</version>
             </dependency>
 
+            <!-- app -->
+            <dependency>
+                <groupId>com.server</groupId>
+                <artifactId>server-app</artifactId>
+                <version>${server.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

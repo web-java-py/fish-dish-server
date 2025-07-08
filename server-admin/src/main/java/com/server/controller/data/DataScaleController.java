@@ -12,7 +12,7 @@ import com.server.service.ScaleService;
 @RestController
 @RequestMapping("/data/scope")
 @Api(tags = "规模")
-public class ScaleController {
+public class DataScaleController {
 
     @Autowired
     private ScaleService scaleService;
