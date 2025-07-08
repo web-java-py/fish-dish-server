@@ -117,7 +117,7 @@ public class AgricultureDeviceServiceImpl extends ServiceImpl<AgricultureDeviceM
      * @return 结果
      */
     @Override
-    public int insertAgricultureDevice(AgricultureDevice agricultureDevice) {
+    public Long insertAgricultureDevice(AgricultureDevice agricultureDevice) {
 
         // 如果是可控设备，设置状态
         if ("1".equals(String.valueOf(agricultureDevice.getIsControllable()))) {
@@ -140,7 +140,8 @@ public class AgricultureDeviceServiceImpl extends ServiceImpl<AgricultureDeviceM
                 log.error(e.getMessage());
             }
         }
-        return agricultureDeviceMapper.insert(agricultureDevice);
+        agricultureDeviceMapper.insert(agricultureDevice);
+        return agricultureDevice.getId();
     }
 
     /**

@@ -45,7 +45,7 @@ public interface AgricultureDeviceService extends IService<AgricultureDevice>
      * @param agricultureDevice 设备信息
      * @return 结果
      */
-    public int insertAgricultureDevice(AgricultureDevice agricultureDevice);
+    public Long insertAgricultureDevice(AgricultureDevice agricultureDevice);
 
     /**
      * 修改设备信息

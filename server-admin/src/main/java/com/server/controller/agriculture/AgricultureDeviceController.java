@@ -83,7 +83,8 @@ public class AgricultureDeviceController extends BaseController
     @SeeRefreshData(seeMessageType = SeeMessageType.DATA)
     public AjaxResult add(@RequestBody AgricultureDevice agricultureDevice)
     {
-        return toAjax(agricultureDeviceService.insertAgricultureDevice(agricultureDevice));
+        Long id = agricultureDeviceService.insertAgricultureDevice(agricultureDevice);
+        return AjaxResult.success("操作成功", id);
     }
 
     /**
