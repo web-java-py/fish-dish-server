@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="实现sse推送所有用户 声明websocket也是推送所有用户">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2025_6_27_13_32__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2025_6_27_13_32__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/mapper/ParamTypeDictMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/mapper/ParamTypeDictMapper.java" afterDir="false" />
+    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="修复本地配置">
+      <change afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/app/AppConsoleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-app/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/data/ScaleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/data/DataScaleController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +32,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -106,6 +116,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ServerApplication" />
+        <item itemvalue="Spring Boot.ServerApplication" />
+        <item itemvalue="Spring Boot.ServerApplication" />
+        <item itemvalue="Spring Boot.ServerApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -133,6 +146,10 @@
       <workItem from="1751248760248" duration="20048000" />
       <workItem from="1751273164691" duration="15106000" />
       <workItem from="1751294908427" duration="2688000" />
+      <workItem from="1751697159798" duration="851000" />
+      <workItem from="1751734218307" duration="712000" />
+      <workItem from="1751782012085" duration="1321000" />
+      <workItem from="1751869048980" duration="2820000" />
     </task>
     <task id="LOCAL-00002" summary="控制台接口完成50%">
       <created>1751193588659</created>
@@ -193,7 +210,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="851543" />
+                        <option value="origin/main" />
                       </list>
                     </value>
                   </entry>

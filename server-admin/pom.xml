@@ -60,6 +60,12 @@
             <artifactId>server-data</artifactId>
         </dependency>
 
+        <!-- app -->
+        <dependency>
+            <groupId>com.server</groupId>
+            <artifactId>server-app</artifactId>
+        </dependency>
+
         <!-- 代码生成 -->
         <dependency>
             <groupId>com.server</groupId>
