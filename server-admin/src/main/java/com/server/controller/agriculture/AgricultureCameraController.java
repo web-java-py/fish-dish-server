@@ -47,6 +47,15 @@ public class AgricultureCameraController extends BaseController
     }
 
     /**
+     * 根据设备ID获取摄像头参数
+     */
+    @PreAuthorize("@ss.hasPermi('agriculture:camera:query')")
+    @GetMapping("/byDeviceId/{deviceId}")
+    public AjaxResult getByDeviceId(@PathVariable("deviceId") Long deviceId) {
+        return success(agricultureCameraService.selectByDeviceId(deviceId));
+    }
+
+    /**
      * 导出摄像头参数列表
      */
     @PreAuthorize("@ss.hasPermi('agriculture:camera:export')")

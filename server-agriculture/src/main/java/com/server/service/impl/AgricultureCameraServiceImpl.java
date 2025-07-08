@@ -36,7 +36,11 @@ public class AgricultureCameraServiceImpl extends ServiceImpl<AgricultureCameraM
     {
         return getById(id);
     }
-
+    //根据设备id查询摄像头参数
+    @Override
+    public AgricultureCamera selectByDeviceId(Long deviceId) {
+        return lambdaQuery().eq(AgricultureCamera::getDeviceId, deviceId).one();
+    }
     /**
      * 查询摄像头参数列表
      * 
