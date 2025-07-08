@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="实现sse推送所有用户 声明websocket也是推送所有用户">
+    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="删除分区同时删除对应的任务">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureCropBatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureCropBatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/dto/AgricultureCropBatchDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/dto/AgricultureCropBatchDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCropBatchServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCropBatchServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-info.log" afterDir="false" />
@@ -59,9 +61,9 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2z4udUhg2iMJ66cZymyeur89p2B" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -74,7 +76,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "zbb",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/JiuYCGS/Hou/znwl-agriculture-server-no",
+    "last_opened_file_path": "D:/YCGSHou/fish-dish-server",
     "settings.editor.selected.configurable": "MavenSettings"
   }
 }]]></component>
@@ -186,7 +188,31 @@
       <option name="project" value="LOCAL" />
       <updated>1751381153392</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="删除分区同时删除对应的任务">
+      <option name="closed" value="true" />
+      <created>1751705845250</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1751705845250</updated>
+    </task>
+    <task id="LOCAL-00009" summary="删除分区同时删除对应的任务">
+      <option name="closed" value="true" />
+      <created>1751705877626</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1751705877626</updated>
+    </task>
+    <task id="LOCAL-00010" summary="删除分区同时删除对应的任务">
+      <option name="closed" value="true" />
+      <created>1751705917523</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1751705917523</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,7 +248,8 @@
     <MESSAGE value="实现大数据规模数据实时推送接口" />
     <MESSAGE value="优化sse 重构sse" />
     <MESSAGE value="日志" />
-    <option name="LAST_COMMIT_MESSAGE" value="日志" />
+    <MESSAGE value="删除分区同时删除对应的任务" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除分区同时删除对应的任务" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -231,6 +258,11 @@
           <properties class="org.springframework.beans.factory.BeanDefinitionStoreException" package="org.springframework.beans.factory" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCropBatchServiceImpl.java</url>
+          <line>94</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

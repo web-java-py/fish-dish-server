@@ -8,6 +8,7 @@ import lombok.Data;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 public class AgricultureCropBatchDTO {
@@ -16,6 +17,7 @@ public class AgricultureCropBatchDTO {
     @TableId(value="batch_id",type = IdType.AUTO)
     private String batchId;
     private Long germplasmId;
+    private Long vegetableId;
     private Long pastureId;            // 从 agriculture_crop_batch 表获取
     private LocalDateTime startTime;
     private double cropArea;       // 从 agriculture_crop_batch 表获取
