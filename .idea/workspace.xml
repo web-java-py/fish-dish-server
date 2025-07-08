@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="物联网设备bug修复">
-      <change afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureCameraController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/mapper/AgricultureCameraMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureCameraService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCameraServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f197720f-b50e-45ce-8c7c-6381843bae90.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f197720f-b50e-45ce-8c7c-6381843bae90.xml" afterDir="false" />
+    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="摄像头参数配置接口实现">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureDeviceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureDeviceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureDeviceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureDeviceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureDeviceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureDeviceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureCameraController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureCameraController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureCameraService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureCameraService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureClassService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureClassService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCameraServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCameraServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-info.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-user.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-user.log" afterDir="false" />
@@ -88,7 +83,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.ServerApplication.executor": "Run",
+    "Spring Boot.ServerApplication.executor": "Debug",
     "git-widget-placeholder": "bxwy",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/ZLXN/fish-dish-server/server-agriculture/src/main/java/com/server/service/impl",
@@ -108,6 +103,9 @@
     ]
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\ZLXN\fish-dish-server\server-agriculture\src\main\java\com\server\service\impl" />
@@ -164,7 +162,7 @@
       <workItem from="1751004119272" duration="31000" />
       <workItem from="1751195563334" duration="38537000" />
       <workItem from="1751619143171" duration="4893000" />
-      <workItem from="1751703405583" duration="11695000" />
+      <workItem from="1751703405583" duration="15989000" />
     </task>
     <task id="LOCAL-00002" summary="bug修复">
       <option name="closed" value="true" />
@@ -286,7 +284,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751638023136</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="摄像头参数配置接口实现">
+      <option name="closed" value="true" />
+      <created>1751987590167</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1751987590167</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,7 +334,8 @@
     <MESSAGE value="自动策略实现" />
     <MESSAGE value="水质图表数据接口实现" />
     <MESSAGE value="物联网设备bug修复" />
-    <option name="LAST_COMMIT_MESSAGE" value="物联网设备bug修复" />
+    <MESSAGE value="摄像头参数配置接口实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="摄像头参数配置接口实现" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

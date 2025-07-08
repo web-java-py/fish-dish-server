@@ -15,6 +15,8 @@ public interface AgricultureClassService extends IService<AgricultureClass> {
      */
     List<AgricultureClass> selectAgricultureClassList(AgricultureClass agricultureClass);
 
+
+
     /**
      * 新增种类数据
      * @param agricultureClass

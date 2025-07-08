@@ -22,6 +22,9 @@ public interface AgricultureCameraService extends IService<AgricultureCamera>
      */
     public AgricultureCamera selectAgricultureCameraById(Long id);
 
+
+    //根据设备id查询摄像头参数
+    AgricultureCamera selectByDeviceId(Long deviceId);
     /**
      * 查询摄像头参数列表
      * 
