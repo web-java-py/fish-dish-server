@@ -48,6 +48,10 @@ public class AgricultureCostMachineServiceImpl extends ServiceImpl<AgricultureCo
     public List<AgricultureCostMachine> selectAgricultureCostMachineList(AgricultureCostMachine agricultureCostMachine)
     {
         LambdaQueryWrapper<AgricultureCostMachine> lambdaQueryWrapper = new QueryWrapper<AgricultureCostMachine>().lambda();
+        // 新增：如果传入的agricultureCostMachine包含taskId，则加上where条件
+        if (agricultureCostMachine.getTaskId() != null) {
+            lambdaQueryWrapper.eq(AgricultureCostMachine::getTaskId, agricultureCostMachine.getTaskId());
+        }
         //将 cost_id 倒叙，这样子就能看到最新的机械工时数据
         lambdaQueryWrapper.orderByDesc(AgricultureCostMachine::getCostId);
         return agricultureCostMachineMapper.selectList(lambdaQueryWrapper);

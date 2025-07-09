@@ -5,18 +5,220 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="日志">
-      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/dto/AgriculturePastureDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f197720f-b50e-45ce-8c7c-6381843bae90.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f197720f-b50e-45ce-8c7c-6381843bae90/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f197720f-b50e-45ce-8c7c-6381843bae90/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f197720f-b50e-45ce-8c7c-6381843bae90/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f197720f-b50e-45ce-8c7c-6381843bae90/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2025_6_27_14_15_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2025_6_27_14_15_[Changes]1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2025_6_27_14_15__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureAutoControlStrategyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureConsoleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/ParamTypeDictController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/common/SseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/data/ScaleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/aspect/AgricultureSeeAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/constant/SseConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureAutoControlStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/ParamTypeDict.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/vo/AgricultureConsoleVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/mapper/AgricultureAutoControlStrategyMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/mapper/ParamTypeDictMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureAutoControlStrategyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureConsoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/ParamTypeDictService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureAutoControlStrategyServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureConsoleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/ParamTypeDictServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-common/src/main/java/com/server/annotation/SeeRefreshData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-common/src/main/java/com/server/enums/SeeMessageType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-data/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-data/src/main/java/com/server/aspect/DataSeeAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-data/src/main/java/com/server/domain/vo/ScaleVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-data/src/main/java/com/server/service/ScaleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-data/src/main/java/com/server/service/impl/ScaleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-framework/src/main/java/com/server/sse/SseServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/avatar/2025/06/28/0QtYZ3Tj7Nw957d253dadd7121bbd10c10bbe98e65bb_20250628210742A001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/avatar/2025/06/28/1FUQTyEVmikVd784bc317f07fc7fe5e85997d612ac52_20250628212246A010.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/avatar/2025/06/28/2QszghzsfgDw50c8bc3e27595460747a11157ffe8c71_20250628210952A004.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/avatar/2025/06/28/3UjgPr3dDFB45cf7c49590b4d25eaf3e5e6a48560083_20250628214148A020.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/avatar/2025/06/28/4oNhnBvZdG0q14636b11b3ce175f933f1014bacd07d8_20250628214145A019.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/avatar/2025/06/28/ADdEo4vjiLHT57d253dadd7121bbd10c10bbe98e65bb_20250628211647A009.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/avatar/2025/06/28/AdtRSsak4K5031239e31dc34440c95fb8cc48e3f206e_20250628214151A021.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/avatar/2025/06/28/KC4T2CikOPxu57d253dadd7121bbd10c10bbe98e65bb_20250628211057A007.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/avatar/2025/06/28/KJs4jKxgdxLE96715f23292d0049af0e771bcaf48eca_20250628212802A013.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/avatar/2025/06/28/KZZPQz0IvOv1d784bc317f07fc7fe5e85997d612ac52_20250628212256A012.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/avatar/2025/06/28/L3UqWHQvQV3u57d253dadd7121bbd10c10bbe98e65bb_20250628212249A011.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/avatar/2025/06/28/NIeOMdJiCWX9a609c04b0a2251277e4b516d3df126cf_20250628214127A017.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/avatar/2025/06/28/OMcBYg16DuLS72263a03f112bf3ae58cfd8c473da608_20250628212807A014.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/avatar/2025/06/28/eVaz3YYmSX4H57d253dadd7121bbd10c10bbe98e65bb_20250628211000A005.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/avatar/2025/06/28/hrHo8guVUpJv33e9ee74934ebcc990a3d0e4ca4de44f_20250628214132A018.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/avatar/2025/06/28/pPr0D1XB4d2v3678c7eea1da8f5f502b280bade7751c_20250628211039A006.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/avatar/2025/06/28/sACAZOGI3SXJ6559571327bb657811446e72da7f645a_20250628214255A022.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/avatar/2025/06/28/sGgAMVS1urnR96715f23292d0049af0e771bcaf48eca_20250628212811A015.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/avatar/2025/06/28/tiBwGrKkY3bz57d253dadd7121bbd10c10bbe98e65bb_20250628210859A003.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/avatar/2025/06/28/ucdiBpcDFbpJ4df76806de438f073bf0492a5fab48d4_20250628210758A002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/avatar/2025/06/28/wJCu7zKheo0x72263a03f112bf3ae58cfd8c473da608_20250628214122A016.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/avatar/2025/06/28/wP7cspeQujeld784bc317f07fc7fe5e85997d612ac52_20250628211643A008.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/06/30/5ce86a74d5608a4a2694a980d33c5b7_20250630210516A001.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/06/30/5ce86a74d5608a4a2694a980d33c5b7_20250630212132A001.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/06/30/5ce86a74d5608a4a2694a980d33c5b7_20250630212156A002.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/06/30/avatar_20250630173941A001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/06/30/avatar_20250630174813A004.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/06/30/avatar_20250630174919A005.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/06/30/avatar_20250630175757A001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/06/30/avatar_20250630180607A005.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/06/30/c1380fb5bffb43439f9c493360db04a4_20250630174538A001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/06/30/c1380fb5bffb43439f9c493360db04a4_20250630174800A003.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/06/30/c18f1b6ebfbc47b8e9aa5a7cf5cc0a0_20250630174032A002.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/06/30/c18f1b6ebfbc47b8e9aa5a7cf5cc0a0_20250630175424A006.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/06/30/ca18946b8a37cb829e231dc4f460acd_20250630210539A002.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/06/30/ca18946b8a37cb829e231dc4f460acd_20250630212559A003.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/06/30/ca18946b8a37cb829e231dc4f460acd_20250630235845A001.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/06/30/ca18946b8a37cb829e231dc4f460acd_20250630235934A002.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/06/30/cb3bf8923182e2cdb77951d31a5768d_20250630174735A002.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/06/30/cb3bf8923182e2cdb77951d31a5768d_20250630180352A002.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/06/30/cb3bf8923182e2cdb77951d31a5768d_20250630180410A003.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/06/30/f3cdfbffb3e1fd83b1a6c7edd98f051_20250630180457A004.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/06/30/pe_20250630180739A006.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/01/4@E0)8W_0VRV32L@]VCUMJ1_20250701222518A001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/01/5ce86a74d5608a4a2694a980d33c5b7_20250701180048A002.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/01/avatar_20250701180038A001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/01/avatar_20250701230551A002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/01/avatar_20250701230612A003.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/01/c18f1b6ebfbc47b8e9aa5a7cf5cc0a0_20250701232452A002.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/01/cb3bf8923182e2cdb77951d31a5768d_20250701230212A001.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/01/cb3bf8923182e2cdb77951d31a5768d_20250701230641A004.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/01/cb3bf8923182e2cdb77951d31a5768d_20250701230720A005.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/01/cb3bf8923182e2cdb77951d31a5768d_20250701232322A001.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/01/f3cdfbffb3e1fd83b1a6c7edd98f051_20250701221813A001.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/01/【哲风壁纸】2024-11-18 17_26_05_20250701221945A002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/01/【哲风壁纸】2024-11-18 17_26_05_20250701222521A002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/04/tp1_20250704202957A001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/05/tp1_20250705164322A001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/06/tp1_20250706205642A001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/08/sl_20250708220327A002.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/08/sl_20250708220540A003.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/08/sl_20250708220705A005.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/08/sl_20250708220733A007.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/08/sl_20250708221039A009.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/08/sl_20250708221557A011.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/08/sl_20250708221616A013.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/08/sl_20250708233838A016.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/08/sl_20250708234303A021.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/08/sp_20250708220654A004.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/08/sp_20250708220708A006.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/08/sp_20250708220736A008.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/08/sp_20250708221323A010.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/08/sp_20250708221601A012.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/08/sp_20250708221620A014.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/08/tp1_20250708171733A001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/08/tp1_20250708220140A001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/08/tp1_20250708222039A015.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/08/tp1_20250708234152A017.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/08/tp1_20250708234209A018.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/08/tp1_20250708234227A019.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/08/tp1_20250708234245A020.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/08/tp1_20250708234321A022.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/09/sl_20250709130958A023.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/uploadPath/upload/2025/07/09/sp_20250709131002A024.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serverlog/sys-error.2025-06-26.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serverlog/sys-error.2025-07-04.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serverlog/sys-error.2025-07-06.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serverlog/sys-error.2025-07-07.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serverlog/sys-error.2025-07-08.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serverlog/sys-info.2025-06-26.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serverlog/sys-info.2025-07-04.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serverlog/sys-info.2025-07-05.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serverlog/sys-info.2025-07-06.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serverlog/sys-info.2025-07-07.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serverlog/sys-info.2025-07-08.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serverlog/sys-user.2025-07-04.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serverlog/sys-user.2025-07-05.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serverlog/sys-user.2025-07-06.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serverlog/sys-user.2025-07-07.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serverlog/sys-user.2025-07-08.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgriculturePartitionFoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgriculturePartitionFoodController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgriculturePastureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgriculturePastureController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgriculturePasture.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgriculturePasture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgriculturePastureService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgriculturePastureService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgriculturePastureServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgriculturePastureServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverlog/sys-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverlog/sys-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-info.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverlog/sys-user.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-user.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureBaitInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureBaitInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureBatchTaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureBatchTaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureClassController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureClassController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureCostBaitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureCostBaitController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureCostEmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureCostEmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureCostMachineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureCostMachineController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureCropBatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureCropBatchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureDeviceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureDeviceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureDeviceMqttConfigController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureDeviceMqttConfigController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureDeviceSensorAlertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureDeviceSensorAlertController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureDeviceTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureDeviceTypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureEmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureEmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureMachineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureMachineController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureMaterialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureMaterialController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureTaskEmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureTaskEmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureTaskLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureTaskLogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureThresholdConfigController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureThresholdConfigController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureWaterQualityDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureWaterQualityDataController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureWeatherDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureWeatherDataController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/monitor/SysLogininforController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/monitor/SysLogininforController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/monitor/SysOperlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/monitor/SysOperlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/monitor/SysUserOnlineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/monitor/SysUserOnlineController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/system/SysConfigController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/system/SysConfigController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/system/SysDeptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/system/SysDeptController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/system/SysDictDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/system/SysDictDataController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/system/SysDictTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/system/SysDictTypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/system/SysMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/system/SysMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/system/SysNoticeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/system/SysNoticeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/system/SysPostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/system/SysPostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/system/SysProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/system/SysProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/system/SysRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/system/SysRoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/system/SysUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/system/SysUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureBatchTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureBatchTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureCropBatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureCropBatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureDevice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureDeviceSensorAlert.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureDeviceSensorAlert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureDeviceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureDeviceType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureThresholdConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureThresholdConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureWaterQualityData.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureWaterQualityData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureWeatherData.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureWeatherData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/dto/AgricultureCropBatchDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/dto/AgricultureCropBatchDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/config/MqttConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/config/MqttConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/controller/MqttTestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/controller/MqttTestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/controller/SensorCommunicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/controller/SensorCommunicationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/gateway/MqttGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/gateway/MqttGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/service/DataProcessingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/service/DataProcessingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/service/SensorCommunicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/service/SensorCommunicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/service/SerialPortService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/service/SerialPortService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/task/AgricultureDeviceStatusCheckTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/iot/task/AgricultureDeviceStatusCheckTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/mapper/AgricultureDeviceMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/mapper/AgricultureDeviceMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/mapper/AgricultureDeviceTypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/mapper/AgricultureDeviceTypeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureDeviceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureDeviceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureThresholdConfigService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureThresholdConfigService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureWaterQualityDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureWaterQualityDataService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureWeatherDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureWeatherDataService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCostBaitServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCostBaitServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCostEmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCostEmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCostMachineServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCostMachineServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCropBatchServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCropBatchServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureDeviceMqttConfigServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureDeviceMqttConfigServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureDeviceSensorAlertServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureDeviceSensorAlertServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureDeviceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureDeviceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureThresholdConfigServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureThresholdConfigServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureWaterQualityDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureWaterQualityDataServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureWeatherDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureWeatherDataServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ws/MqSocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ws/MqSocketServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-common/src/main/java/com/server/constant/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-common/src/main/java/com/server/constant/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-framework/src/main/java/com/server/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-framework/src/main/java/com/server/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-framework/src/main/java/com/server/handler/MyMetaObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-framework/src/main/java/com/server/handler/MyMetaObjectHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-quartz/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server-quartz/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-quartz/src/main/java/com/server/mapper/SysJobMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-quartz/src/main/java/com/server/mapper/SysJobMapper.java" afterDir="false" />
     </list>
-    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="分区任务 的 批次任务以及头顶导航" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,10 +254,10 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="customMavenHome" value="$PROJECT_DIR$/../../../Java_Maven/apache-maven-3.5.4" />
-        <option name="localRepository" value="E:\idea\Java_Maven\apache-maven-3.5.4\repo" />
+        <option name="customMavenHome" value="D:\maven\apache-maven-3.9.9" />
+        <option name="localRepository" value="D:\maven\apache-maven-3.9.9\Repository" />
         <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
-        <option name="userSettingsFile" value="E:\idea\Java_Maven\apache-maven-3.5.4\conf\settings.xml" />
+        <option name="userSettingsFile" value="D:\maven\apache-maven-3.9.9\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -70,21 +272,25 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="2z4udUhg2iMJ66cZymyeur89p2B" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;zbb&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/JiuYCGS/Hou/znwl-agriculture-server-no&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ServerApplication.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "Merging zbb",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/JiuYCGS/Hou/znwl-agriculture-server-no",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "MavenSettings"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Spring Boot.ServerApplication">
     <configuration name="ServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.server.ServerApplication" />

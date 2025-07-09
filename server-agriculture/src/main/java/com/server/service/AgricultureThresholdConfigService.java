@@ -69,4 +69,12 @@ public interface AgricultureThresholdConfigService extends IService<AgricultureT
      * @return 结果
      */
     public int deleteAgricultureThresholdConfigById(Long id);
+
+    /**
+     * 根据设备id集合查询阈值配置
+     * @param deviceIds 设备id集合
+     * @return 阈值配置集合
+     */
+    List<AgricultureThresholdConfig> selectByDeviceIds(List<Long> deviceIds);
+
 }

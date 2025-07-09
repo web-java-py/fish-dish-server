@@ -5,6 +5,8 @@ import java.time.ZoneId;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -91,19 +93,43 @@ public class AgricultureCropBatchServiceImpl extends ServiceImpl<AgricultureCrop
         int result = agricultureCropBatchMapper.insert(agricultureCropBatch);
         // 成功插入后，agricultureCropBatch.getBatchId() 将会持有数据库生成的ID
         if (result > 0) {
-            // 创建查询条件，查询标准作业列表
-            AgricultureJob agricultureJob = new AgricultureJob();
-            //获取种质ID
-            agricultureJob.setClassId(agricultureCropBatch.getGermplasmId());
-            // 查询标准作业列表
-            List<AgricultureJob> sjList = agricultureJobService.selectAgricultureJobList(agricultureJob);
-            // 遍历标准作业列表，生成批次任务
+            // 1. 查询鱼的标准作业
+            List<AgricultureJob> fishJobList = null;
+            if (agricultureCropBatch.getGermplasmId() != null) {
+                AgricultureJob fishJob = new AgricultureJob();
+                fishJob.setClassId(agricultureCropBatch.getGermplasmId());
+                fishJobList = agricultureJobService.selectAgricultureJobList(fishJob);
+            }
+
+            // 2. 查询菜的标准作业
+            List<AgricultureJob> vegJobList = null;
+            if (agricultureCropBatch.getVegetableId() != null) {
+                AgricultureJob vegJob = new AgricultureJob();
+                vegJob.setClassId(agricultureCropBatch.getVegetableId());
+                vegJobList = agricultureJobService.selectAgricultureJobList(vegJob);
+            }
+
+            // 3. 合并两个作业列表
+            List<AgricultureJob> sjList = new ArrayList<>();
+            if (fishJobList != null) sjList.addAll(fishJobList);
+            if (vegJobList != null) sjList.addAll(vegJobList);
+
+            // 4. 去重（如果有必要，可以根据jobId去重）
+            sjList = sjList.stream().distinct().collect(Collectors.toList());
+
+            // 5. 遍历插入任务（保持你原有的插入逻辑）
             for (AgricultureJob sj : sjList) {
                 AgricultureBatchTask agricultureBatchTask = new AgricultureBatchTask();
                 //设置批次任务的相关信息
                 agricultureBatchTask.setBatchId(agricultureCropBatch.getBatchId());
                 agricultureBatchTask.setResponsiblePersonId(agricultureCropBatch.getResponsiblePersonId());
                 agricultureBatchTask.setTaskName(sj.getJobName());
+                // 新增：设置fishDish字段，鱼为0，菜为1
+                if (agricultureCropBatch.getGermplasmId() != null && sj.getClassId() != null && sj.getClassId().equals(agricultureCropBatch.getGermplasmId())) {
+                    agricultureBatchTask.setFishDish(0L); // 鱼
+                } else if (agricultureCropBatch.getVegetableId() != null && sj.getClassId() != null && sj.getClassId().equals(agricultureCropBatch.getVegetableId())) {
+                    agricultureBatchTask.setFishDish(1L); // 菜
+                }
                 // 根据周期单位设置乘数（0:天, 1:周）
                 int mult = sj.getCycleUnit().equals("0")? 1 : 7;
                 LocalDateTime startTime = agricultureCropBatch.getStartTime();
@@ -145,13 +171,18 @@ public class AgricultureCropBatchServiceImpl extends ServiceImpl<AgricultureCrop
 
     /**
      * 批量删除分区
-     *
+     *删除的同时将分区下的任务一起删掉，避免数据库过多不用的数据
      * @param batchId 需要删除的分区主键
      * @return 结果
      */
     @Override
     public int deleteAgricultureCropBatchByBatchIds(Long[] batchId)
     {
+        LambdaQueryWrapper<AgricultureBatchTask> queryWrapper = new LambdaQueryWrapper<>();
+        //传给batch_id的参数是一个序列化的Java对象 如 Long[] 或 List<Long>）而不是单个 Long 类型的分区ID
+        queryWrapper.in(AgricultureBatchTask::getBatchId, Arrays.asList(batchId));
+        //AgricultureBatchTask的batchId 和 AgricultureCropBatch的batchId相等删除之后再删除分区
+        agricultureBatchTaskService.remove(queryWrapper);
         return removeByIds(Arrays.asList(batchId)) ? batchId.length : 0;
     }
 

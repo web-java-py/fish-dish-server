@@ -169,6 +169,7 @@ xss:
 
 # AI服务
 ai:
+  # ollama
   ollama:
     base-url: ${ollama.base-url}
     model-name: ${ollama.model-name}
@@ -187,11 +188,6 @@ mqtt:
   password: ${mqtt.password}  # RabbitMQ默认密码
   default-topic: ${mqtt.default-topic}
   completion-timeout: ${mqtt.completion-timeout}
-
-# 串口配置
-serial:
-  port-name: ${serial.port-name}
-  baud-rate: ${serial.baud-rate}
 
 # 区块链
 fisco:
