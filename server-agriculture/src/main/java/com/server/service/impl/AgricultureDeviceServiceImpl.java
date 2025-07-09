@@ -75,24 +75,19 @@ public class AgricultureDeviceServiceImpl extends ServiceImpl<AgricultureDeviceM
      */
     @Override
     public List<AgricultureDeviceVO> selectAgricultureDeviceListVO(AgricultureDevice agricultureDevice) {
-        // 创建查询条件构造器
-        LambdaQueryWrapper<AgricultureDevice> wrapper = new LambdaQueryWrapper<>();
-
-        // 添加查询条件
+        QueryWrapper<AgricultureDevice> wrapper = new QueryWrapper<>();
         if (StringUtils.isNotEmpty(agricultureDevice.getDeviceName())) {
-            wrapper.like(AgricultureDevice::getDeviceName, agricultureDevice.getDeviceName());
+            wrapper.like("d.device_name", agricultureDevice.getDeviceName());
         }
         if (agricultureDevice.getPastureId() != null) {
-            wrapper.eq(AgricultureDevice::getPastureId, agricultureDevice.getPastureId());
+            wrapper.eq("d.pasture_id", agricultureDevice.getPastureId());
         }
         if (agricultureDevice.getBatchId() != null) {
-            wrapper.eq(AgricultureDevice::getBatchId, agricultureDevice.getBatchId());
+            wrapper.eq("d.batch_id", agricultureDevice.getBatchId());
         }
         if (agricultureDevice.getDeviceTypeId() != null) {
-            wrapper.eq(AgricultureDevice::getDeviceTypeId, agricultureDevice.getDeviceTypeId());
+            wrapper.eq("d.device_type_id", agricultureDevice.getDeviceTypeId());
         }
-
-        // 使用注解方法直接查询VO对象列表
         return agricultureDeviceMapper.selectAgricultureDeviceVOList(wrapper);
     }
 
@@ -186,6 +181,8 @@ public class AgricultureDeviceServiceImpl extends ServiceImpl<AgricultureDeviceM
     public int deleteAgricultureDeviceById(String id) {
         return removeById(id) ? 1 : 0; // removeById 返回 boolean
     }
+
+
     //根据大棚和id查询设备列表
     @Override
     public List<Long> selectDeviceIdsByPastureAndBatch(Long pastureId, Long batchId) {
