@@ -18,15 +18,14 @@ import java.util.List;
 public class TraceabilityDetailVO {
     @ApiModelProperty("溯源食品信息")
     private AgriculturePartitionFood foodInfo;
+
     @ApiModelProperty("分区信息")
     private AgricultureCropBatch cropBatch;
+
     @ApiModelProperty("大棚信息")
     private AgriculturePasture pastureInfo;
-    @ApiModelProperty("批次任务信息")
-    private List<AgricultureBatchTask> batchTaskList;
-    @ApiModelProperty("环境气象数据")
-    private List<AgricultureWeatherData> weatherDataList;
-    @ApiModelProperty("水质数据")
-    private List<AgricultureWaterQualityData> waterQualityDataList;
-    // 其他需要返回的字段
+
+    @ApiModelProperty("批次任务详情列表")
+    private List<BatchTaskDetailVO> batchTaskDetailList;
+
 }

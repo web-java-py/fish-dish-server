@@ -27436,3 +27436,1352 @@ java.net.SocketException: Connection reset
 01:10:47.052 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,32] - ====关闭后台任务任务线程池====
 01:10:47.058 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
 01:10:47.063 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+01:10:51.584 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+01:10:51.590 [main] INFO  c.s.ServerApplication - [logStarting,55] - Starting ServerApplication using Java 17.0.14 on bxwy with PID 31832 (D:\ZLXN\fish-dish-server\server-admin\target\classes started by bxwy in D:\ZLXN\fish-dish-server)
+01:10:51.591 [main] INFO  c.s.ServerApplication - [logStartupProfileInfo,686] - The following 2 profiles are active: "dev", "druid"
+01:10:53.636 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+01:10:53.637 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+01:10:53.637 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.102]
+01:10:53.775 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+01:10:54.794 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+01:10:56.076 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/ca.crt failed, trying to load from the resourcePath /D:/ZLXN/fish-dish-server/server-admin/target/classes/
+01:10:56.077 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.crt failed, trying to load from the resourcePath /D:/ZLXN/fish-dish-server/server-admin/target/classes/
+01:10:56.078 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.key failed, trying to load from the resourcePath /D:/ZLXN/fish-dish-server/server-admin/target/classes/
+01:10:56.093 [main] INFO  o.f.b.s.n.ConnectionManager - [<init>,88] -  all connections, size: 2, list: [ConnectionInfo{host='192.168.31.210', port=20201}, ConnectionInfo{host='192.168.31.210', port=20200}]
+01:10:56.093 [main] INFO  o.f.b.s.n.NetworkImp - [start,167] - 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+
+01:10:56.093 [main] INFO  o.f.b.s.n.NetworkImp - [start,174] - ====> <==== STEP1-1: Load certificates for ecdsa context success..., start connManager with ECDSA sslContext
+01:10:56.137 [main] INFO  o.f.b.s.n.ConnectionManager - [initSslContext,238] -  build ECDSA ssl context with configured certificates 
+01:10:57.589 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20201
+01:10:57.589 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20200
+01:10:57.590 [nioEventLoopGroup-4-1] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20201, ctx: 1342557958
+01:10:57.590 [nioEventLoopGroup-4-2] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20200, ctx: 1165523382
+01:10:57.641 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":1,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+01:10:57.641 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":0,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+01:10:57.642 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+01:10:57.642 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+01:10:57.645 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20201, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+01:10:57.645 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20200, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+01:10:57.651 [main] INFO  o.f.b.s.c.ChannelImp - [checkConnectionsToStartPeriodTask,126] -  Connect to  nodes: 192.168.31.210:20200, 192.168.31.210:20201, 
+01:10:57.651 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,77] - create BcosSDK, start channel success, cryptoType: 0
+01:10:57.653 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,87] - create BcosSDK, start channel succ, channelProcessorThreadSize: 16, receiptProcessorThreadSize: 16
+01:10:57.660 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerBlockNumberNotifyHandler,260] - registerBlockNumberNotifyHandler
+01:10:57.661 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerTransactionNotifyHandler,282] - registerTransactionNotifyHandler
+01:10:57.677 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,98] - create BcosSDK, create groupManagerService success
+01:10:58.070 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+01:10:58.074 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+01:10:58.074 [main] INFO  o.f.b.s.amop.AmopImp - [start,188] - amop module started
+01:10:58.075 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+01:10:58.075 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,103] - create BcosSDK, create Amop success
+01:10:58.113 [main] INFO  o.f.b.s.c.Client - [build,114] - build client success for group 1, crypto type 0
+01:10:58.113 [main] INFO  o.f.bcos.sdk.BcosSDK - [getClient,178] - create client for group 1 success
+01:10:59.762 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+01:10:59.775 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+01:10:59.775 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+01:10:59.776 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+01:10:59.776 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+01:10:59.776 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+01:10:59.776 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+01:10:59.776 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7781b55f
+01:11:01.494 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+01:11:01.648 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+01:11:01.707 [http-nio-8080-exec-2] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:11:01.707 [http-nio-8080-exec-1] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:11:01.723 [http-nio-8080-exec-4] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:11:01.739 [http-nio-8080-exec-6] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:11:01.755 [http-nio-8080-exec-13] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:11:01.772 [http-nio-8080-exec-10] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:11:02.116 [main] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+01:11:02.127 [main] INFO  c.s.ServerApplication - [logStarted,61] - Started ServerApplication in 10.843 seconds (JVM running for 11.47)
+01:11:02.444 [http-nio-8080-exec-11] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:11:04.435 [http-nio-8080-exec-16] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:11:49.590 [http-nio-8080-exec-23] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+01:12:03.403 [http-nio-8080-exec-46] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:12:03.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:03.517 [http-nio-8080-exec-46] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:DATA 推送成功:{agriculture=[ScaleVO(label=面积, value=157816), ScaleVO(label=分区, value=3), ScaleVO(label=大棚, value=10), ScaleVO(label=种类, value=4), ScaleVO(label=鱼, value=3), ScaleVO(label=菜, value=1), ScaleVO(label=农资, value=4), ScaleVO(label=农机, value=8), ScaleVO(label=任务, value=9)], device=[ScaleVO(label=气象传感器, value=4), ScaleVO(label=水质传感器, value=1), ScaleVO(label=网关, value=0), ScaleVO(label=控制器, value=0), ScaleVO(label=摄像头, value=1), ScaleVO(label=风机, value=1), ScaleVO(label=加湿器, value=0), ScaleVO(label=水泵, value=1), ScaleVO(label=补光灯, value=0), ScaleVO(label=警报灯, value=1), ScaleVO(label=其他传感器, value=0), ScaleVO(label=其他设备, value=0)]}
+01:12:05.459 [http-nio-8080-exec-62] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:12:05.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:05.545 [http-nio-8080-exec-62] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:DATA 推送成功:{agriculture=[ScaleVO(label=面积, value=157816), ScaleVO(label=分区, value=3), ScaleVO(label=大棚, value=10), ScaleVO(label=种类, value=4), ScaleVO(label=鱼, value=3), ScaleVO(label=菜, value=1), ScaleVO(label=农资, value=4), ScaleVO(label=农机, value=8), ScaleVO(label=任务, value=9)], device=[ScaleVO(label=气象传感器, value=4), ScaleVO(label=水质传感器, value=1), ScaleVO(label=网关, value=0), ScaleVO(label=控制器, value=0), ScaleVO(label=摄像头, value=1), ScaleVO(label=风机, value=1), ScaleVO(label=加湿器, value=0), ScaleVO(label=水泵, value=1), ScaleVO(label=补光灯, value=0), ScaleVO(label=警报灯, value=1), ScaleVO(label=其他传感器, value=0), ScaleVO(label=其他设备, value=0)]}
+01:12:07.360 [http-nio-8080-exec-73] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:12:07.372 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:07.417 [http-nio-8080-exec-73] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:DATA 推送成功:{agriculture=[ScaleVO(label=面积, value=157816), ScaleVO(label=分区, value=3), ScaleVO(label=大棚, value=10), ScaleVO(label=种类, value=4), ScaleVO(label=鱼, value=3), ScaleVO(label=菜, value=1), ScaleVO(label=农资, value=4), ScaleVO(label=农机, value=8), ScaleVO(label=任务, value=9)], device=[ScaleVO(label=气象传感器, value=4), ScaleVO(label=水质传感器, value=1), ScaleVO(label=网关, value=0), ScaleVO(label=控制器, value=0), ScaleVO(label=摄像头, value=1), ScaleVO(label=风机, value=1), ScaleVO(label=加湿器, value=0), ScaleVO(label=水泵, value=1), ScaleVO(label=补光灯, value=0), ScaleVO(label=警报灯, value=1), ScaleVO(label=其他传感器, value=0), ScaleVO(label=其他设备, value=0)]}
+01:12:09.215 [http-nio-8080-exec-83] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:12:09.230 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:09.299 [http-nio-8080-exec-83] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:DATA 推送成功:{agriculture=[ScaleVO(label=面积, value=157816), ScaleVO(label=分区, value=3), ScaleVO(label=大棚, value=10), ScaleVO(label=种类, value=4), ScaleVO(label=鱼, value=3), ScaleVO(label=菜, value=1), ScaleVO(label=农资, value=4), ScaleVO(label=农机, value=8), ScaleVO(label=任务, value=9)], device=[ScaleVO(label=气象传感器, value=4), ScaleVO(label=水质传感器, value=1), ScaleVO(label=网关, value=0), ScaleVO(label=控制器, value=0), ScaleVO(label=摄像头, value=1), ScaleVO(label=风机, value=1), ScaleVO(label=加湿器, value=0), ScaleVO(label=水泵, value=1), ScaleVO(label=补光灯, value=0), ScaleVO(label=警报灯, value=1), ScaleVO(label=其他传感器, value=0), ScaleVO(label=其他设备, value=0)]}
+01:12:09.449 [http-nio-8080-exec-93] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:12:09.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:09.529 [http-nio-8080-exec-93] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:DATA 推送成功:{agriculture=[ScaleVO(label=面积, value=157816), ScaleVO(label=分区, value=3), ScaleVO(label=大棚, value=10), ScaleVO(label=种类, value=4), ScaleVO(label=鱼, value=3), ScaleVO(label=菜, value=1), ScaleVO(label=农资, value=4), ScaleVO(label=农机, value=8), ScaleVO(label=任务, value=9)], device=[ScaleVO(label=气象传感器, value=4), ScaleVO(label=水质传感器, value=1), ScaleVO(label=网关, value=0), ScaleVO(label=控制器, value=0), ScaleVO(label=摄像头, value=1), ScaleVO(label=风机, value=1), ScaleVO(label=加湿器, value=0), ScaleVO(label=水泵, value=1), ScaleVO(label=补光灯, value=0), ScaleVO(label=警报灯, value=1), ScaleVO(label=其他传感器, value=0), ScaleVO(label=其他设备, value=0)]}
+01:12:10.080 [http-nio-8080-exec-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:12:10.096 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:10.160 [http-nio-8080-exec-3] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:DATA 推送成功:{agriculture=[ScaleVO(label=面积, value=157816), ScaleVO(label=分区, value=3), ScaleVO(label=大棚, value=10), ScaleVO(label=种类, value=4), ScaleVO(label=鱼, value=3), ScaleVO(label=菜, value=1), ScaleVO(label=农资, value=4), ScaleVO(label=农机, value=8), ScaleVO(label=任务, value=9)], device=[ScaleVO(label=气象传感器, value=4), ScaleVO(label=水质传感器, value=1), ScaleVO(label=网关, value=0), ScaleVO(label=控制器, value=0), ScaleVO(label=摄像头, value=1), ScaleVO(label=风机, value=1), ScaleVO(label=加湿器, value=0), ScaleVO(label=水泵, value=1), ScaleVO(label=补光灯, value=0), ScaleVO(label=警报灯, value=1), ScaleVO(label=其他传感器, value=0), ScaleVO(label=其他设备, value=0)]}
+01:12:12.321 [http-nio-8080-exec-19] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:12:12.328 [http-nio-8080-exec-19] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:12:12.336 [http-nio-8080-exec-19] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:12:12.344 [http-nio-8080-exec-19] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:12:12.350 [http-nio-8080-exec-19] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:12:12.356 [http-nio-8080-exec-19] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:12:12.371 [http-nio-8080-exec-19] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:12:12.378 [http-nio-8080-exec-19] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:12:12.384 [http-nio-8080-exec-19] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:12:12.390 [http-nio-8080-exec-19] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:12:13.459 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:15.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:17.361 [http-nio-8080-exec-41] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:12:17.369 [http-nio-8080-exec-41] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:12:17.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:17.376 [http-nio-8080-exec-41] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:12:17.381 [http-nio-8080-exec-41] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:12:17.387 [http-nio-8080-exec-41] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:12:17.392 [http-nio-8080-exec-41] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:12:17.398 [http-nio-8080-exec-41] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:12:17.404 [http-nio-8080-exec-41] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:12:17.409 [http-nio-8080-exec-41] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:12:18.864 [http-nio-8080-exec-44] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+01:12:18.874 [http-nio-8080-exec-44] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 1
+01:12:19.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:19.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:20.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:23.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:25.478 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:27.189 [http-nio-8080-exec-45] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:DATA 推送成功:{agriculture=[ScaleVO(label=面积, value=157816), ScaleVO(label=分区, value=3), ScaleVO(label=大棚, value=10), ScaleVO(label=种类, value=4), ScaleVO(label=鱼, value=3), ScaleVO(label=菜, value=1), ScaleVO(label=农资, value=4), ScaleVO(label=农机, value=8), ScaleVO(label=任务, value=10)], device=[ScaleVO(label=气象传感器, value=4), ScaleVO(label=水质传感器, value=1), ScaleVO(label=网关, value=0), ScaleVO(label=控制器, value=0), ScaleVO(label=摄像头, value=1), ScaleVO(label=风机, value=1), ScaleVO(label=加湿器, value=0), ScaleVO(label=水泵, value=1), ScaleVO(label=补光灯, value=0), ScaleVO(label=警报灯, value=1), ScaleVO(label=其他传感器, value=0), ScaleVO(label=其他设备, value=0)]}
+01:12:27.242 [http-nio-8080-exec-45] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:AGRICULTURE 推送成功:{agriculture=[AgricultureConsoleVO(label=农场大棚, value=10, change=+100.0%, icon=&#xe632, classType=null), AgricultureConsoleVO(label=农场分区, value=3, change=+0%, icon=&#xe66b, classType=null), AgricultureConsoleVO(label=农场种类, value=4, change=+33.3%, icon=&#xe60a, classType=null), AgricultureConsoleVO(label=农场面积, value=157816, change=+23.1%, icon=&#xe6dc, classType=null)], batchTask=[AgricultureConsoleVO(label=未分配, value=7, change=+0%, icon=&#xe7d9, classType=bg-primary), AgricultureConsoleVO(label=已分配, value=0, change=+0%, icon=&#xe712, classType=bg-warning), AgricultureConsoleVO(label=进行中, value=1, change=+0.0%, icon=&#xe77f, classType=bg-error), AgricultureConsoleVO(label=已完成, value=2, change=+100.0%, icon=&#xe70f, classType=bg-success)]}
+01:12:27.267 [http-nio-8080-exec-47] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+01:12:27.276 [http-nio-8080-exec-47] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 2
+01:12:27.377 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:29.242 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:29.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:30.098 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:33.117 [http-nio-8080-exec-53] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:DATA 推送成功:{agriculture=[ScaleVO(label=面积, value=157816), ScaleVO(label=分区, value=3), ScaleVO(label=大棚, value=10), ScaleVO(label=种类, value=4), ScaleVO(label=鱼, value=3), ScaleVO(label=菜, value=1), ScaleVO(label=农资, value=4), ScaleVO(label=农机, value=8), ScaleVO(label=任务, value=11)], device=[ScaleVO(label=气象传感器, value=4), ScaleVO(label=水质传感器, value=1), ScaleVO(label=网关, value=0), ScaleVO(label=控制器, value=0), ScaleVO(label=摄像头, value=1), ScaleVO(label=风机, value=1), ScaleVO(label=加湿器, value=0), ScaleVO(label=水泵, value=1), ScaleVO(label=补光灯, value=0), ScaleVO(label=警报灯, value=1), ScaleVO(label=其他传感器, value=0), ScaleVO(label=其他设备, value=0)]}
+01:12:33.151 [http-nio-8080-exec-53] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:AGRICULTURE 推送成功:{agriculture=[AgricultureConsoleVO(label=农场大棚, value=10, change=+100.0%, icon=&#xe632, classType=null), AgricultureConsoleVO(label=农场分区, value=3, change=+0%, icon=&#xe66b, classType=null), AgricultureConsoleVO(label=农场种类, value=4, change=+33.3%, icon=&#xe60a, classType=null), AgricultureConsoleVO(label=农场面积, value=157816, change=+23.1%, icon=&#xe6dc, classType=null)], batchTask=[AgricultureConsoleVO(label=未分配, value=8, change=+0%, icon=&#xe7d9, classType=bg-primary), AgricultureConsoleVO(label=已分配, value=0, change=+0%, icon=&#xe712, classType=bg-warning), AgricultureConsoleVO(label=进行中, value=1, change=+0.0%, icon=&#xe77f, classType=bg-error), AgricultureConsoleVO(label=已完成, value=2, change=+100.0%, icon=&#xe70f, classType=bg-success)]}
+01:12:33.175 [http-nio-8080-exec-54] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+01:12:33.184 [http-nio-8080-exec-54] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 3
+01:12:33.462 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:35.482 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:37.382 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:39.236 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:39.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:39.610 [http-nio-8080-exec-57] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:DATA 推送成功:{agriculture=[ScaleVO(label=面积, value=157816), ScaleVO(label=分区, value=3), ScaleVO(label=大棚, value=10), ScaleVO(label=种类, value=4), ScaleVO(label=鱼, value=3), ScaleVO(label=菜, value=1), ScaleVO(label=农资, value=4), ScaleVO(label=农机, value=8), ScaleVO(label=任务, value=12)], device=[ScaleVO(label=气象传感器, value=4), ScaleVO(label=水质传感器, value=1), ScaleVO(label=网关, value=0), ScaleVO(label=控制器, value=0), ScaleVO(label=摄像头, value=1), ScaleVO(label=风机, value=1), ScaleVO(label=加湿器, value=0), ScaleVO(label=水泵, value=1), ScaleVO(label=补光灯, value=0), ScaleVO(label=警报灯, value=1), ScaleVO(label=其他传感器, value=0), ScaleVO(label=其他设备, value=0)]}
+01:12:39.636 [http-nio-8080-exec-57] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:AGRICULTURE 推送成功:{agriculture=[AgricultureConsoleVO(label=农场大棚, value=10, change=+100.0%, icon=&#xe632, classType=null), AgricultureConsoleVO(label=农场分区, value=3, change=+0%, icon=&#xe66b, classType=null), AgricultureConsoleVO(label=农场种类, value=4, change=+33.3%, icon=&#xe60a, classType=null), AgricultureConsoleVO(label=农场面积, value=157816, change=+23.1%, icon=&#xe6dc, classType=null)], batchTask=[AgricultureConsoleVO(label=未分配, value=9, change=+0%, icon=&#xe7d9, classType=bg-primary), AgricultureConsoleVO(label=已分配, value=0, change=+0%, icon=&#xe712, classType=bg-warning), AgricultureConsoleVO(label=进行中, value=1, change=+0.0%, icon=&#xe77f, classType=bg-error), AgricultureConsoleVO(label=已完成, value=2, change=+100.0%, icon=&#xe70f, classType=bg-success)]}
+01:12:39.663 [http-nio-8080-exec-58] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+01:12:39.671 [http-nio-8080-exec-58] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+01:12:40.104 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:42.078 [http-nio-8080-exec-62] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+01:12:42.086 [http-nio-8080-exec-62] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+01:12:43.473 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:45.481 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:47.139 [http-nio-8080-exec-77] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+01:12:47.381 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:48.639 [http-nio-8080-exec-80] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:AGRICULTURE 推送成功:{agriculture=[AgricultureConsoleVO(label=农场大棚, value=10, change=+100.0%, icon=&#xe632, classType=null), AgricultureConsoleVO(label=农场分区, value=3, change=+0%, icon=&#xe66b, classType=null), AgricultureConsoleVO(label=农场种类, value=4, change=+33.3%, icon=&#xe60a, classType=null), AgricultureConsoleVO(label=农场面积, value=157816, change=+23.1%, icon=&#xe6dc, classType=null)], batchTask=[AgricultureConsoleVO(label=未分配, value=8, change=+0%, icon=&#xe7d9, classType=bg-primary), AgricultureConsoleVO(label=已分配, value=0, change=+0%, icon=&#xe712, classType=bg-warning), AgricultureConsoleVO(label=进行中, value=1, change=+0.0%, icon=&#xe77f, classType=bg-error), AgricultureConsoleVO(label=已完成, value=3, change=+200.0%, icon=&#xe70f, classType=bg-success)]}
+01:12:48.646 [http-nio-8080-exec-81] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+01:12:48.682 [http-nio-8080-exec-83] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+01:12:48.688 [http-nio-8080-exec-83] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+01:12:49.234 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:49.469 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:50.106 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:53.464 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:55.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:57.375 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:57.631 [http-nio-8080-exec-85] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:AGRICULTURE 推送成功:{agriculture=[AgricultureConsoleVO(label=农场大棚, value=10, change=+100.0%, icon=&#xe632, classType=null), AgricultureConsoleVO(label=农场分区, value=3, change=+0%, icon=&#xe66b, classType=null), AgricultureConsoleVO(label=农场种类, value=4, change=+33.3%, icon=&#xe60a, classType=null), AgricultureConsoleVO(label=农场面积, value=157816, change=+23.1%, icon=&#xe6dc, classType=null)], batchTask=[AgricultureConsoleVO(label=未分配, value=8, change=+0%, icon=&#xe7d9, classType=bg-primary), AgricultureConsoleVO(label=已分配, value=0, change=+0%, icon=&#xe712, classType=bg-warning), AgricultureConsoleVO(label=进行中, value=1, change=+0.0%, icon=&#xe77f, classType=bg-error), AgricultureConsoleVO(label=已完成, value=3, change=+200.0%, icon=&#xe70f, classType=bg-success)]}
+01:12:57.639 [http-nio-8080-exec-86] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+01:12:57.680 [http-nio-8080-exec-84] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+01:12:57.687 [http-nio-8080-exec-84] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+01:12:59.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:59.474 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:12:59.758 [http-nio-8080-exec-88] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:AGRICULTURE 推送成功:{agriculture=[AgricultureConsoleVO(label=农场大棚, value=10, change=+100.0%, icon=&#xe632, classType=null), AgricultureConsoleVO(label=农场分区, value=3, change=+0%, icon=&#xe66b, classType=null), AgricultureConsoleVO(label=农场种类, value=4, change=+33.3%, icon=&#xe60a, classType=null), AgricultureConsoleVO(label=农场面积, value=157816, change=+23.1%, icon=&#xe6dc, classType=null)], batchTask=[AgricultureConsoleVO(label=未分配, value=8, change=+0%, icon=&#xe7d9, classType=bg-primary), AgricultureConsoleVO(label=已分配, value=0, change=+0%, icon=&#xe712, classType=bg-warning), AgricultureConsoleVO(label=进行中, value=1, change=+0.0%, icon=&#xe77f, classType=bg-error), AgricultureConsoleVO(label=已完成, value=3, change=+200.0%, icon=&#xe70f, classType=bg-success)]}
+01:12:59.765 [http-nio-8080-exec-89] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+01:12:59.801 [http-nio-8080-exec-91] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+01:12:59.808 [http-nio-8080-exec-91] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+01:13:00.102 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:03.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:03.655 [http-nio-8080-exec-100] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+01:13:03.706 [http-nio-8080-exec-1] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:AGRICULTURE 推送成功:{agriculture=[AgricultureConsoleVO(label=农场大棚, value=10, change=+100.0%, icon=&#xe632, classType=null), AgricultureConsoleVO(label=农场分区, value=3, change=+0%, icon=&#xe66b, classType=null), AgricultureConsoleVO(label=农场种类, value=4, change=+33.3%, icon=&#xe60a, classType=null), AgricultureConsoleVO(label=农场面积, value=157816, change=+23.1%, icon=&#xe6dc, classType=null)], batchTask=[AgricultureConsoleVO(label=未分配, value=8, change=+0%, icon=&#xe7d9, classType=bg-primary), AgricultureConsoleVO(label=已分配, value=0, change=+0%, icon=&#xe712, classType=bg-warning), AgricultureConsoleVO(label=进行中, value=1, change=+0.0%, icon=&#xe77f, classType=bg-error), AgricultureConsoleVO(label=已完成, value=3, change=+200.0%, icon=&#xe70f, classType=bg-success)]}
+01:13:03.714 [http-nio-8080-exec-3] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+01:13:03.756 [http-nio-8080-exec-6] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+01:13:03.764 [http-nio-8080-exec-6] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+01:13:05.476 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:07.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:09.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:09.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:09.650 [http-nio-8080-exec-22] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:AGRICULTURE 推送成功:{agriculture=[AgricultureConsoleVO(label=农场大棚, value=10, change=+100.0%, icon=&#xe632, classType=null), AgricultureConsoleVO(label=农场分区, value=3, change=+0%, icon=&#xe66b, classType=null), AgricultureConsoleVO(label=农场种类, value=4, change=+33.3%, icon=&#xe60a, classType=null), AgricultureConsoleVO(label=农场面积, value=157816, change=+23.1%, icon=&#xe6dc, classType=null)], batchTask=[AgricultureConsoleVO(label=未分配, value=8, change=+0%, icon=&#xe7d9, classType=bg-primary), AgricultureConsoleVO(label=已分配, value=0, change=+0%, icon=&#xe712, classType=bg-warning), AgricultureConsoleVO(label=进行中, value=1, change=+0.0%, icon=&#xe77f, classType=bg-error), AgricultureConsoleVO(label=已完成, value=3, change=+200.0%, icon=&#xe70f, classType=bg-success)]}
+01:13:09.657 [http-nio-8080-exec-25] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+01:13:09.697 [http-nio-8080-exec-26] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+01:13:09.705 [http-nio-8080-exec-26] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+01:13:10.096 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:11.247 [http-nio-8080-exec-27] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:AGRICULTURE 推送成功:{agriculture=[AgricultureConsoleVO(label=农场大棚, value=10, change=+100.0%, icon=&#xe632, classType=null), AgricultureConsoleVO(label=农场分区, value=3, change=+0%, icon=&#xe66b, classType=null), AgricultureConsoleVO(label=农场种类, value=4, change=+33.3%, icon=&#xe60a, classType=null), AgricultureConsoleVO(label=农场面积, value=157816, change=+23.1%, icon=&#xe6dc, classType=null)], batchTask=[AgricultureConsoleVO(label=未分配, value=8, change=+0%, icon=&#xe7d9, classType=bg-primary), AgricultureConsoleVO(label=已分配, value=0, change=+0%, icon=&#xe712, classType=bg-warning), AgricultureConsoleVO(label=进行中, value=1, change=+0.0%, icon=&#xe77f, classType=bg-error), AgricultureConsoleVO(label=已完成, value=3, change=+200.0%, icon=&#xe70f, classType=bg-success)]}
+01:13:11.254 [http-nio-8080-exec-28] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+01:13:11.292 [http-nio-8080-exec-30] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+01:13:11.299 [http-nio-8080-exec-30] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+01:13:12.455 [http-nio-8080-exec-31] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:AGRICULTURE 推送成功:{agriculture=[AgricultureConsoleVO(label=农场大棚, value=10, change=+100.0%, icon=&#xe632, classType=null), AgricultureConsoleVO(label=农场分区, value=3, change=+0%, icon=&#xe66b, classType=null), AgricultureConsoleVO(label=农场种类, value=4, change=+33.3%, icon=&#xe60a, classType=null), AgricultureConsoleVO(label=农场面积, value=157816, change=+23.1%, icon=&#xe6dc, classType=null)], batchTask=[AgricultureConsoleVO(label=未分配, value=8, change=+0%, icon=&#xe7d9, classType=bg-primary), AgricultureConsoleVO(label=已分配, value=0, change=+0%, icon=&#xe712, classType=bg-warning), AgricultureConsoleVO(label=进行中, value=1, change=+0.0%, icon=&#xe77f, classType=bg-error), AgricultureConsoleVO(label=已完成, value=3, change=+200.0%, icon=&#xe70f, classType=bg-success)]}
+01:13:12.465 [http-nio-8080-exec-32] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+01:13:12.500 [http-nio-8080-exec-35] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+01:13:12.507 [http-nio-8080-exec-35] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+01:13:13.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:14.931 [http-nio-8080-exec-34] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:AGRICULTURE 推送成功:{agriculture=[AgricultureConsoleVO(label=农场大棚, value=10, change=+100.0%, icon=&#xe632, classType=null), AgricultureConsoleVO(label=农场分区, value=3, change=+0%, icon=&#xe66b, classType=null), AgricultureConsoleVO(label=农场种类, value=4, change=+33.3%, icon=&#xe60a, classType=null), AgricultureConsoleVO(label=农场面积, value=157816, change=+23.1%, icon=&#xe6dc, classType=null)], batchTask=[AgricultureConsoleVO(label=未分配, value=8, change=+0%, icon=&#xe7d9, classType=bg-primary), AgricultureConsoleVO(label=已分配, value=0, change=+0%, icon=&#xe712, classType=bg-warning), AgricultureConsoleVO(label=进行中, value=1, change=+0.0%, icon=&#xe77f, classType=bg-error), AgricultureConsoleVO(label=已完成, value=3, change=+200.0%, icon=&#xe70f, classType=bg-success)]}
+01:13:14.938 [http-nio-8080-exec-20] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+01:13:14.976 [http-nio-8080-exec-38] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+01:13:14.982 [http-nio-8080-exec-38] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+01:13:15.476 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:17.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:19.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:19.462 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:20.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:23.459 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:25.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:27.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:27.675 [http-nio-8080-exec-52] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:AGRICULTURE 推送成功:{agriculture=[AgricultureConsoleVO(label=农场大棚, value=10, change=+100.0%, icon=&#xe632, classType=null), AgricultureConsoleVO(label=农场分区, value=3, change=+0%, icon=&#xe66b, classType=null), AgricultureConsoleVO(label=农场种类, value=4, change=+33.3%, icon=&#xe60a, classType=null), AgricultureConsoleVO(label=农场面积, value=157816, change=+23.1%, icon=&#xe6dc, classType=null)], batchTask=[AgricultureConsoleVO(label=未分配, value=8, change=+0%, icon=&#xe7d9, classType=bg-primary), AgricultureConsoleVO(label=已分配, value=0, change=+0%, icon=&#xe712, classType=bg-warning), AgricultureConsoleVO(label=进行中, value=1, change=+0.0%, icon=&#xe77f, classType=bg-error), AgricultureConsoleVO(label=已完成, value=3, change=+200.0%, icon=&#xe70f, classType=bg-success)]}
+01:13:27.682 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+01:13:27.716 [http-nio-8080-exec-55] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+01:13:27.723 [http-nio-8080-exec-55] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+01:13:29.078 [http-nio-8080-exec-56] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:AGRICULTURE 推送成功:{agriculture=[AgricultureConsoleVO(label=农场大棚, value=10, change=+100.0%, icon=&#xe632, classType=null), AgricultureConsoleVO(label=农场分区, value=3, change=+0%, icon=&#xe66b, classType=null), AgricultureConsoleVO(label=农场种类, value=4, change=+33.3%, icon=&#xe60a, classType=null), AgricultureConsoleVO(label=农场面积, value=157816, change=+23.1%, icon=&#xe6dc, classType=null)], batchTask=[AgricultureConsoleVO(label=未分配, value=7, change=+0%, icon=&#xe7d9, classType=bg-primary), AgricultureConsoleVO(label=已分配, value=1, change=+0%, icon=&#xe712, classType=bg-warning), AgricultureConsoleVO(label=进行中, value=1, change=+0.0%, icon=&#xe77f, classType=bg-error), AgricultureConsoleVO(label=已完成, value=3, change=+200.0%, icon=&#xe70f, classType=bg-success)]}
+01:13:29.086 [http-nio-8080-exec-57] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+01:13:29.125 [http-nio-8080-exec-59] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+01:13:29.131 [http-nio-8080-exec-59] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+01:13:29.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:29.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:30.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:30.424 [http-nio-8080-exec-60] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:AGRICULTURE 推送成功:{agriculture=[AgricultureConsoleVO(label=农场大棚, value=10, change=+100.0%, icon=&#xe632, classType=null), AgricultureConsoleVO(label=农场分区, value=3, change=+0%, icon=&#xe66b, classType=null), AgricultureConsoleVO(label=农场种类, value=4, change=+33.3%, icon=&#xe60a, classType=null), AgricultureConsoleVO(label=农场面积, value=157816, change=+23.1%, icon=&#xe6dc, classType=null)], batchTask=[AgricultureConsoleVO(label=未分配, value=7, change=+0%, icon=&#xe7d9, classType=bg-primary), AgricultureConsoleVO(label=已分配, value=1, change=+0%, icon=&#xe712, classType=bg-warning), AgricultureConsoleVO(label=进行中, value=1, change=+0.0%, icon=&#xe77f, classType=bg-error), AgricultureConsoleVO(label=已完成, value=3, change=+200.0%, icon=&#xe70f, classType=bg-success)]}
+01:13:30.432 [http-nio-8080-exec-61] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+01:13:30.470 [http-nio-8080-exec-67] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+01:13:30.477 [http-nio-8080-exec-67] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+01:13:31.721 [http-nio-8080-exec-66] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:AGRICULTURE 推送成功:{agriculture=[AgricultureConsoleVO(label=农场大棚, value=10, change=+100.0%, icon=&#xe632, classType=null), AgricultureConsoleVO(label=农场分区, value=3, change=+0%, icon=&#xe66b, classType=null), AgricultureConsoleVO(label=农场种类, value=4, change=+33.3%, icon=&#xe60a, classType=null), AgricultureConsoleVO(label=农场面积, value=157816, change=+23.1%, icon=&#xe6dc, classType=null)], batchTask=[AgricultureConsoleVO(label=未分配, value=7, change=+0%, icon=&#xe7d9, classType=bg-primary), AgricultureConsoleVO(label=已分配, value=0, change=+0%, icon=&#xe712, classType=bg-warning), AgricultureConsoleVO(label=进行中, value=1, change=+0.0%, icon=&#xe77f, classType=bg-error), AgricultureConsoleVO(label=已完成, value=4, change=+300.0%, icon=&#xe70f, classType=bg-success)]}
+01:13:31.727 [http-nio-8080-exec-63] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+01:13:31.764 [http-nio-8080-exec-71] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+01:13:31.778 [http-nio-8080-exec-71] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+01:13:32.670 [http-nio-8080-exec-75] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+01:13:33.459 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:35.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:35.814 [http-nio-8080-exec-80] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:AGRICULTURE 推送成功:{agriculture=[AgricultureConsoleVO(label=农场大棚, value=10, change=+100.0%, icon=&#xe632, classType=null), AgricultureConsoleVO(label=农场分区, value=3, change=+0%, icon=&#xe66b, classType=null), AgricultureConsoleVO(label=农场种类, value=4, change=+33.3%, icon=&#xe60a, classType=null), AgricultureConsoleVO(label=农场面积, value=157816, change=+23.1%, icon=&#xe6dc, classType=null)], batchTask=[AgricultureConsoleVO(label=未分配, value=7, change=+0%, icon=&#xe7d9, classType=bg-primary), AgricultureConsoleVO(label=已分配, value=0, change=+0%, icon=&#xe712, classType=bg-warning), AgricultureConsoleVO(label=进行中, value=1, change=+0.0%, icon=&#xe77f, classType=bg-error), AgricultureConsoleVO(label=已完成, value=4, change=+300.0%, icon=&#xe70f, classType=bg-success)]}
+01:13:35.823 [http-nio-8080-exec-81] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+01:13:35.865 [http-nio-8080-exec-83] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+01:13:35.871 [http-nio-8080-exec-83] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+01:13:37.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:39.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:39.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:40.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:43.334 [http-nio-8080-exec-98] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+01:13:43.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:45.324 [http-nio-8080-exec-2] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:AGRICULTURE 推送成功:{agriculture=[AgricultureConsoleVO(label=农场大棚, value=10, change=+100.0%, icon=&#xe632, classType=null), AgricultureConsoleVO(label=农场分区, value=3, change=+0%, icon=&#xe66b, classType=null), AgricultureConsoleVO(label=农场种类, value=4, change=+33.3%, icon=&#xe60a, classType=null), AgricultureConsoleVO(label=农场面积, value=157816, change=+23.1%, icon=&#xe6dc, classType=null)], batchTask=[AgricultureConsoleVO(label=未分配, value=6, change=+0%, icon=&#xe7d9, classType=bg-primary), AgricultureConsoleVO(label=已分配, value=0, change=+0%, icon=&#xe712, classType=bg-warning), AgricultureConsoleVO(label=进行中, value=1, change=+0.0%, icon=&#xe77f, classType=bg-error), AgricultureConsoleVO(label=已完成, value=5, change=+400.0%, icon=&#xe70f, classType=bg-success)]}
+01:13:45.331 [http-nio-8080-exec-1] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+01:13:45.368 [http-nio-8080-exec-4] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+01:13:45.373 [http-nio-8080-exec-4] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+01:13:45.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:47.374 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:49.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:49.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:50.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:50.098 [http-nio-8080-exec-5] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:AGRICULTURE 推送成功:{agriculture=[AgricultureConsoleVO(label=农场大棚, value=10, change=+100.0%, icon=&#xe632, classType=null), AgricultureConsoleVO(label=农场分区, value=3, change=+0%, icon=&#xe66b, classType=null), AgricultureConsoleVO(label=农场种类, value=4, change=+33.3%, icon=&#xe60a, classType=null), AgricultureConsoleVO(label=农场面积, value=157816, change=+23.1%, icon=&#xe6dc, classType=null)], batchTask=[AgricultureConsoleVO(label=未分配, value=6, change=+0%, icon=&#xe7d9, classType=bg-primary), AgricultureConsoleVO(label=已分配, value=0, change=+0%, icon=&#xe712, classType=bg-warning), AgricultureConsoleVO(label=进行中, value=1, change=+0.0%, icon=&#xe77f, classType=bg-error), AgricultureConsoleVO(label=已完成, value=5, change=+400.0%, icon=&#xe70f, classType=bg-success)]}
+01:13:50.106 [http-nio-8080-exec-6] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+01:13:50.143 [http-nio-8080-exec-13] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+01:13:50.150 [http-nio-8080-exec-13] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+01:13:51.607 [http-nio-8080-exec-11] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:AGRICULTURE 推送成功:{agriculture=[AgricultureConsoleVO(label=农场大棚, value=10, change=+100.0%, icon=&#xe632, classType=null), AgricultureConsoleVO(label=农场分区, value=3, change=+0%, icon=&#xe66b, classType=null), AgricultureConsoleVO(label=农场种类, value=4, change=+33.3%, icon=&#xe60a, classType=null), AgricultureConsoleVO(label=农场面积, value=157816, change=+23.1%, icon=&#xe6dc, classType=null)], batchTask=[AgricultureConsoleVO(label=未分配, value=6, change=+0%, icon=&#xe7d9, classType=bg-primary), AgricultureConsoleVO(label=已分配, value=0, change=+0%, icon=&#xe712, classType=bg-warning), AgricultureConsoleVO(label=进行中, value=1, change=+0.0%, icon=&#xe77f, classType=bg-error), AgricultureConsoleVO(label=已完成, value=5, change=+400.0%, icon=&#xe70f, classType=bg-success)]}
+01:13:51.614 [http-nio-8080-exec-9] INFO  c.s.h.MyMetaObjectHandler - [insertFill,18] - start insert fill ....
+01:13:51.659 [http-nio-8080-exec-10] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+01:13:51.665 [http-nio-8080-exec-10] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+01:13:53.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:55.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:56.088 [http-nio-8080-exec-21] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:13:56.094 [http-nio-8080-exec-21] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:13:56.099 [http-nio-8080-exec-22] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+01:13:56.099 [http-nio-8080-exec-23] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=255, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+01:13:56.099 [http-nio-8080-exec-25] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=249, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+01:13:56.103 [http-nio-8080-exec-21] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:13:56.109 [http-nio-8080-exec-25] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 2
+01:13:56.109 [http-nio-8080-exec-23] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+01:13:56.109 [http-nio-8080-exec-22] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+01:13:56.109 [http-nio-8080-exec-21] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:13:56.114 [http-nio-8080-exec-21] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:13:56.121 [http-nio-8080-exec-21] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:13:56.126 [http-nio-8080-exec-21] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:13:56.132 [http-nio-8080-exec-21] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:13:56.138 [http-nio-8080-exec-21] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:13:56.143 [http-nio-8080-exec-21] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:13:57.374 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:59.232 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:13:59.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:00.096 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:03.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:05.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:07.374 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:09.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:09.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:09.597 [http-nio-8080-exec-37] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=249, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+01:14:09.597 [http-nio-8080-exec-38] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+01:14:09.597 [http-nio-8080-exec-42] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=255, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+01:14:09.603 [http-nio-8080-exec-37] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 2
+01:14:09.604 [http-nio-8080-exec-42] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+01:14:09.604 [http-nio-8080-exec-38] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+01:14:10.096 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:13.459 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:15.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:17.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:19.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:19.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:20.096 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:23.459 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:25.476 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:27.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:29.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:29.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:30.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:33.459 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:35.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:37.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:39.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:39.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:40.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:43.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:45.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:47.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:49.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:49.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:50.098 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:53.459 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:55.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:57.374 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:59.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:14:59.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:00.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:03.459 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:05.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:07.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:09.232 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:09.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:10.096 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:13.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:15.476 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:17.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:19.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:19.462 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:20.096 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:23.040 [lettuce-nioEventLoop-5-1] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+01:15:23.142 [lettuce-eventExecutorLoop-1-4] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+01:15:23.148 [lettuce-nioEventLoop-5-2] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+01:15:23.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:25.476 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:27.374 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:29.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:29.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:30.096 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:33.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:35.476 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:37.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:39.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:39.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:40.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:43.459 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:45.476 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:47.374 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:49.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:49.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:50.098 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:53.459 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:55.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:57.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:59.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:15:59.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:00.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:03.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:05.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:07.382 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:09.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:09.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:10.108 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:13.468 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:15.480 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:17.380 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:19.232 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:19.466 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:20.103 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:23.471 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:25.483 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:27.383 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:29.043 [lettuce-nioEventLoop-5-2] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+01:16:29.139 [lettuce-eventExecutorLoop-1-5] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+01:16:29.143 [lettuce-nioEventLoop-5-3] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+01:16:29.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:29.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:30.100 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:33.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:35.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:37.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:39.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:39.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:40.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:43.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:45.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:47.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:49.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:49.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:50.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:53.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:55.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:57.374 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:59.232 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:16:59.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:00.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:03.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:05.476 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:07.374 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:09.232 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:09.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:10.096 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:13.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:15.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:17.374 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:19.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:19.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:20.096 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:23.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:25.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:27.374 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:29.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:29.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:30.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:33.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:35.052 [lettuce-nioEventLoop-5-3] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+01:17:35.139 [lettuce-eventExecutorLoop-1-6] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+01:17:35.142 [lettuce-nioEventLoop-5-4] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+01:17:35.476 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:37.374 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:39.232 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:39.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:40.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:43.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:45.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:47.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:49.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:49.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:50.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:53.459 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:55.476 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:57.374 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:59.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:17:59.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:00.096 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:03.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:05.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:07.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:09.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:09.462 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:10.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:13.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:15.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:17.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:19.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:19.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:20.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:23.459 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:25.476 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:27.374 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:29.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:29.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:30.096 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:33.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:35.476 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:37.374 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:39.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:39.462 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:40.096 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:41.005 [lettuce-nioEventLoop-5-4] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+01:18:41.040 [lettuce-eventExecutorLoop-1-7] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+01:18:41.043 [lettuce-nioEventLoop-5-5] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+01:18:43.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:45.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:47.374 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:49.232 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:49.462 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:50.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:53.459 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:55.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:57.374 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:59.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:18:59.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:00.096 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:03.459 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:05.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:07.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:09.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:09.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:10.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:13.459 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:15.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:17.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:19.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:19.462 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:20.096 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:23.459 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:25.476 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:27.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:29.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:29.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:30.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:33.459 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:35.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:37.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:39.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:39.464 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:40.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:43.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:45.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:47.091 [lettuce-nioEventLoop-5-5] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+01:19:47.139 [lettuce-eventExecutorLoop-1-8] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+01:19:47.142 [lettuce-nioEventLoop-5-6] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+01:19:47.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:49.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:49.464 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:50.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:53.460 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:55.476 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:57.374 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:59.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:19:59.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:00.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:03.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:05.478 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:07.374 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:09.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:09.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:10.096 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:13.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:15.480 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:17.381 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:19.232 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:19.468 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:20.109 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:23.466 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:25.477 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:27.376 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:29.243 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:29.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:30.101 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:33.469 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:35.476 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:37.375 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:39.241 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:39.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:40.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:43.473 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:45.481 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:47.381 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:49.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:49.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:50.096 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:53.067 [lettuce-nioEventLoop-5-6] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+01:20:53.139 [lettuce-eventExecutorLoop-1-9] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+01:20:53.142 [lettuce-nioEventLoop-5-7] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+01:20:53.459 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:55.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:57.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:59.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:20:59.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:00.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:03.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:05.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:07.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:09.232 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:09.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:10.096 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:13.459 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:15.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:17.374 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:19.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:19.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:20.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:23.459 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:25.476 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:27.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:29.234 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:29.462 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:30.104 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:33.465 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:35.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:37.388 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:39.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:39.476 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:40.102 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:43.473 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:45.478 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:47.384 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:49.240 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:49.473 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:50.108 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:53.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:55.488 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:57.382 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:59.033 [lettuce-nioEventLoop-5-7] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+01:21:59.039 [lettuce-eventExecutorLoop-1-10] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+01:21:59.041 [lettuce-nioEventLoop-5-8] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+01:21:59.234 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:21:59.468 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:00.108 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:03.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:05.476 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:07.374 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:09.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:09.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:10.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:13.459 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:15.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:17.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:19.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:19.464 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:20.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:23.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:25.476 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:27.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:29.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:29.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:30.096 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:33.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:35.476 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:37.373 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:39.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:39.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:40.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:43.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:45.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:47.374 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:49.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:49.462 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:50.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:53.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:55.475 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:57.374 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:59.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:22:59.462 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:23:00.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:23:03.458 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:23:05.016 [lettuce-nioEventLoop-5-8] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+01:23:05.039 [lettuce-eventExecutorLoop-1-11] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+01:23:05.041 [lettuce-nioEventLoop-5-9] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+01:23:05.477 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:23:07.374 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:23:09.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:23:09.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:23:10.097 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:23:13.459 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:23:15.476 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:23:17.381 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:23:19.231 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:23:19.463 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:23:20.102 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:23:23.471 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:23:25.481 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:23:27.383 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:23:29.236 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:23:29.471 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:23:30.110 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:23:33.473 [pool-17-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:23:35.483 [pool-19-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:23:37.386 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:23:39.236 [pool-23-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:23:39.472 [pool-25-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:23:40.098 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+01:23:42.620 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+01:23:49.097 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+01:23:49.101 [main] INFO  c.s.ServerApplication - [logStarting,55] - Starting ServerApplication using Java 17.0.14 on bxwy with PID 34232 (D:\ZLXN\fish-dish-server\server-admin\target\classes started by bxwy in D:\ZLXN\fish-dish-server)
+01:23:49.102 [main] INFO  c.s.ServerApplication - [logStartupProfileInfo,686] - The following 2 profiles are active: "dev", "druid"
+01:23:51.158 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+01:23:51.160 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+01:23:51.160 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.102]
+01:23:51.299 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+01:23:52.404 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+01:23:53.788 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/ca.crt failed, trying to load from the resourcePath /D:/ZLXN/fish-dish-server/server-admin/target/classes/
+01:23:53.789 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.crt failed, trying to load from the resourcePath /D:/ZLXN/fish-dish-server/server-admin/target/classes/
+01:23:53.789 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.key failed, trying to load from the resourcePath /D:/ZLXN/fish-dish-server/server-admin/target/classes/
+01:23:53.802 [main] INFO  o.f.b.s.n.ConnectionManager - [<init>,88] -  all connections, size: 2, list: [ConnectionInfo{host='192.168.31.210', port=20201}, ConnectionInfo{host='192.168.31.210', port=20200}]
+01:23:53.803 [main] INFO  o.f.b.s.n.NetworkImp - [start,167] - 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+
+01:23:53.803 [main] INFO  o.f.b.s.n.NetworkImp - [start,174] - ====> <==== STEP1-1: Load certificates for ecdsa context success..., start connManager with ECDSA sslContext
+01:23:53.848 [main] INFO  o.f.b.s.n.ConnectionManager - [initSslContext,238] -  build ECDSA ssl context with configured certificates 
+01:23:55.302 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20201
+01:23:55.302 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20200
+01:23:55.303 [nioEventLoopGroup-4-2] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20200, ctx: 1495517200
+01:23:55.303 [nioEventLoopGroup-4-1] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20201, ctx: 1910429384
+01:23:55.356 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":1,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+01:23:55.356 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":0,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+01:23:55.356 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+01:23:55.356 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+01:23:55.361 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20201, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+01:23:55.361 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20200, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+01:23:55.365 [main] INFO  o.f.b.s.c.ChannelImp - [checkConnectionsToStartPeriodTask,126] -  Connect to  nodes: 192.168.31.210:20200, 192.168.31.210:20201, 
+01:23:55.365 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,77] - create BcosSDK, start channel success, cryptoType: 0
+01:23:55.368 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,87] - create BcosSDK, start channel succ, channelProcessorThreadSize: 16, receiptProcessorThreadSize: 16
+01:23:55.374 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerBlockNumberNotifyHandler,260] - registerBlockNumberNotifyHandler
+01:23:55.374 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerTransactionNotifyHandler,282] - registerTransactionNotifyHandler
+01:23:55.396 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,98] - create BcosSDK, create groupManagerService success
+01:23:55.796 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+01:23:55.801 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+01:23:55.801 [main] INFO  o.f.b.s.amop.AmopImp - [start,188] - amop module started
+01:23:55.801 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+01:23:55.801 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,103] - create BcosSDK, create Amop success
+01:23:55.850 [main] INFO  o.f.b.s.c.Client - [build,114] - build client success for group 1, crypto type 0
+01:23:55.850 [main] INFO  o.f.bcos.sdk.BcosSDK - [getClient,178] - create client for group 1 success
+01:23:57.723 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+01:23:57.735 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+01:23:57.736 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+01:23:57.737 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+01:23:57.738 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+01:23:57.738 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+01:23:57.738 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+01:23:57.739 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@511f21f9
+01:23:59.503 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+01:23:59.702 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+01:23:59.771 [http-nio-8080-exec-1] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:23:59.771 [http-nio-8080-exec-2] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:23:59.793 [http-nio-8080-exec-4] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:23:59.803 [http-nio-8080-exec-5] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:23:59.806 [http-nio-8080-exec-6] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:23:59.819 [http-nio-8080-exec-8] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:23:59.819 [http-nio-8080-exec-7] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:23:59.835 [http-nio-8080-exec-10] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:23:59.852 [http-nio-8080-exec-13] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:23:59.865 [http-nio-8080-exec-12] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:24:00.213 [main] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+01:24:00.227 [main] INFO  c.s.ServerApplication - [logStarted,61] - Started ServerApplication in 11.506 seconds (JVM running for 12.127)
+01:24:00.443 [http-nio-8080-exec-14] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:24:02.437 [http-nio-8080-exec-15] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:25:32.050 [lettuce-nioEventLoop-5-1] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+01:25:32.074 [lettuce-eventExecutorLoop-1-6] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+01:25:32.079 [lettuce-nioEventLoop-5-2] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+01:26:38.053 [lettuce-nioEventLoop-5-2] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+01:26:38.072 [lettuce-eventExecutorLoop-1-7] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+01:26:38.077 [lettuce-nioEventLoop-5-3] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+01:27:37.832 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+01:27:38.674 [SpringApplicationShutdownHook] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+01:27:38.675 [SpringApplicationShutdownHook] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+01:27:38.675 [SpringApplicationShutdownHook] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+01:27:38.676 [SpringApplicationShutdownHook] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+01:27:38.676 [SpringApplicationShutdownHook] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+01:27:38.676 [SpringApplicationShutdownHook] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+01:27:38.677 [SpringApplicationShutdownHook] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+01:27:38.677 [SpringApplicationShutdownHook] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+01:27:38.677 [SpringApplicationShutdownHook] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+01:27:38.678 [SpringApplicationShutdownHook] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+01:27:38.678 [SpringApplicationShutdownHook] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+01:27:38.678 [SpringApplicationShutdownHook] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+01:27:38.700 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+01:27:38.700 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+01:27:38.700 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+01:27:38.701 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,32] - ====关闭后台任务任务线程池====
+01:27:38.709 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+01:27:38.716 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+01:27:42.818 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+01:27:42.823 [main] INFO  c.s.ServerApplication - [logStarting,55] - Starting ServerApplication using Java 17.0.14 on bxwy with PID 32600 (D:\ZLXN\fish-dish-server\server-admin\target\classes started by bxwy in D:\ZLXN\fish-dish-server)
+01:27:42.824 [main] INFO  c.s.ServerApplication - [logStartupProfileInfo,686] - The following 2 profiles are active: "dev", "druid"
+01:27:44.857 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+01:27:44.858 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+01:27:44.859 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.102]
+01:27:44.998 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+01:27:46.049 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+01:27:47.387 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/ca.crt failed, trying to load from the resourcePath /D:/ZLXN/fish-dish-server/server-admin/target/classes/
+01:27:47.388 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.crt failed, trying to load from the resourcePath /D:/ZLXN/fish-dish-server/server-admin/target/classes/
+01:27:47.389 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.key failed, trying to load from the resourcePath /D:/ZLXN/fish-dish-server/server-admin/target/classes/
+01:27:47.402 [main] INFO  o.f.b.s.n.ConnectionManager - [<init>,88] -  all connections, size: 2, list: [ConnectionInfo{host='192.168.31.210', port=20201}, ConnectionInfo{host='192.168.31.210', port=20200}]
+01:27:47.402 [main] INFO  o.f.b.s.n.NetworkImp - [start,167] - 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+
+01:27:47.402 [main] INFO  o.f.b.s.n.NetworkImp - [start,174] - ====> <==== STEP1-1: Load certificates for ecdsa context success..., start connManager with ECDSA sslContext
+01:27:47.441 [main] INFO  o.f.b.s.n.ConnectionManager - [initSslContext,238] -  build ECDSA ssl context with configured certificates 
+01:27:48.912 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20201
+01:27:48.912 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20200
+01:27:48.913 [nioEventLoopGroup-4-1] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20201, ctx: 1560161569
+01:27:48.913 [nioEventLoopGroup-4-2] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20200, ctx: 1421604297
+01:27:48.971 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":1,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+01:27:48.971 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":0,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+01:27:48.972 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+01:27:48.972 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+01:27:48.976 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20201, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+01:27:48.976 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20200, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+01:27:48.986 [main] INFO  o.f.b.s.c.ChannelImp - [checkConnectionsToStartPeriodTask,126] -  Connect to  nodes: 192.168.31.210:20200, 192.168.31.210:20201, 
+01:27:48.986 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,77] - create BcosSDK, start channel success, cryptoType: 0
+01:27:48.989 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,87] - create BcosSDK, start channel succ, channelProcessorThreadSize: 16, receiptProcessorThreadSize: 16
+01:27:48.997 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerBlockNumberNotifyHandler,260] - registerBlockNumberNotifyHandler
+01:27:48.997 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerTransactionNotifyHandler,282] - registerTransactionNotifyHandler
+01:27:49.017 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,98] - create BcosSDK, create groupManagerService success
+01:27:49.432 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+01:27:49.436 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+01:27:49.436 [main] INFO  o.f.b.s.amop.AmopImp - [start,188] - amop module started
+01:27:49.436 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+01:27:49.436 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,103] - create BcosSDK, create Amop success
+01:27:49.479 [main] INFO  o.f.b.s.c.Client - [build,114] - build client success for group 1, crypto type 0
+01:27:49.479 [main] INFO  o.f.bcos.sdk.BcosSDK - [getClient,178] - create client for group 1 success
+01:27:51.184 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+01:27:51.194 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+01:27:51.195 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+01:27:51.195 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+01:27:51.196 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+01:27:51.196 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+01:27:51.196 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+01:27:51.196 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@3d980928
+01:27:53.470 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+01:27:53.638 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+01:27:53.725 [http-nio-8080-exec-1] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:27:53.725 [http-nio-8080-exec-2] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:27:53.743 [http-nio-8080-exec-4] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:27:53.760 [http-nio-8080-exec-6] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:27:53.775 [http-nio-8080-exec-8] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:27:53.789 [http-nio-8080-exec-10] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:27:53.804 [http-nio-8080-exec-12] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:27:53.820 [http-nio-8080-exec-14] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:27:53.837 [http-nio-8080-exec-16] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:27:53.851 [http-nio-8080-exec-18] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:27:54.300 [main] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+01:27:54.312 [main] INFO  c.s.ServerApplication - [logStarted,61] - Started ServerApplication in 11.82 seconds (JVM running for 12.49)
+01:27:54.442 [http-nio-8080-exec-19] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:27:56.448 [http-nio-8080-exec-22] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:29:02.034 [lettuce-nioEventLoop-5-1] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+01:29:02.141 [lettuce-eventExecutorLoop-1-5] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+01:29:02.147 [lettuce-nioEventLoop-5-2] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+01:30:08.106 [lettuce-nioEventLoop-5-2] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+01:30:08.137 [lettuce-eventExecutorLoop-1-6] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+01:30:08.141 [lettuce-nioEventLoop-5-3] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+01:30:14.260 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+01:31:43.465 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+01:31:43.469 [main] INFO  c.s.ServerApplication - [logStarting,55] - Starting ServerApplication using Java 17.0.14 on bxwy with PID 36908 (D:\ZLXN\fish-dish-server\server-admin\target\classes started by bxwy in D:\ZLXN\fish-dish-server)
+01:31:43.470 [main] INFO  c.s.ServerApplication - [logStartupProfileInfo,686] - The following 2 profiles are active: "dev", "druid"
+01:31:45.553 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+01:31:45.554 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+01:31:45.554 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.102]
+01:31:45.695 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+01:31:46.889 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+01:31:48.270 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/ca.crt failed, trying to load from the resourcePath /D:/ZLXN/fish-dish-server/server-admin/target/classes/
+01:31:48.271 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.crt failed, trying to load from the resourcePath /D:/ZLXN/fish-dish-server/server-admin/target/classes/
+01:31:48.271 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.key failed, trying to load from the resourcePath /D:/ZLXN/fish-dish-server/server-admin/target/classes/
+01:31:48.284 [main] INFO  o.f.b.s.n.ConnectionManager - [<init>,88] -  all connections, size: 2, list: [ConnectionInfo{host='192.168.31.210', port=20201}, ConnectionInfo{host='192.168.31.210', port=20200}]
+01:31:48.284 [main] INFO  o.f.b.s.n.NetworkImp - [start,167] - 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+
+01:31:48.284 [main] INFO  o.f.b.s.n.NetworkImp - [start,174] - ====> <==== STEP1-1: Load certificates for ecdsa context success..., start connManager with ECDSA sslContext
+01:31:48.327 [main] INFO  o.f.b.s.n.ConnectionManager - [initSslContext,238] -  build ECDSA ssl context with configured certificates 
+01:31:49.806 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20201
+01:31:49.807 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20200
+01:31:49.807 [nioEventLoopGroup-4-2] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20200, ctx: 1800592403
+01:31:49.807 [nioEventLoopGroup-4-1] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20201, ctx: 1577119688
+01:31:49.871 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":1,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+01:31:49.871 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":0,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+01:31:49.872 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+01:31:49.872 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+01:31:49.877 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20201, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+01:31:49.877 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20200, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+01:31:49.885 [main] INFO  o.f.b.s.c.ChannelImp - [checkConnectionsToStartPeriodTask,126] -  Connect to  nodes: 192.168.31.210:20200, 192.168.31.210:20201, 
+01:31:49.885 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,77] - create BcosSDK, start channel success, cryptoType: 0
+01:31:49.888 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,87] - create BcosSDK, start channel succ, channelProcessorThreadSize: 16, receiptProcessorThreadSize: 16
+01:31:49.898 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerBlockNumberNotifyHandler,260] - registerBlockNumberNotifyHandler
+01:31:49.899 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerTransactionNotifyHandler,282] - registerTransactionNotifyHandler
+01:31:49.923 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,98] - create BcosSDK, create groupManagerService success
+01:31:50.388 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+01:31:50.393 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+01:31:50.393 [main] INFO  o.f.b.s.amop.AmopImp - [start,188] - amop module started
+01:31:50.393 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+01:31:50.393 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,103] - create BcosSDK, create Amop success
+01:31:50.437 [main] INFO  o.f.b.s.c.Client - [build,114] - build client success for group 1, crypto type 0
+01:31:50.438 [main] INFO  o.f.bcos.sdk.BcosSDK - [getClient,178] - create client for group 1 success
+01:31:52.266 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+01:31:52.280 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+01:31:52.280 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+01:31:52.281 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+01:31:52.282 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+01:31:52.282 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+01:31:52.282 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+01:31:52.282 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@23df16cf
+01:31:54.058 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+01:31:54.256 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+01:31:54.317 [http-nio-8080-exec-2] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:31:54.317 [http-nio-8080-exec-1] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:31:54.327 [http-nio-8080-exec-4] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:31:54.342 [http-nio-8080-exec-6] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:31:54.358 [http-nio-8080-exec-8] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:31:54.373 [http-nio-8080-exec-9] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:31:54.387 [http-nio-8080-exec-12] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:31:54.404 [http-nio-8080-exec-15] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:31:54.418 [http-nio-8080-exec-16] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:31:54.434 [http-nio-8080-exec-17] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:31:54.736 [main] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+01:31:54.747 [main] INFO  c.s.ServerApplication - [logStarted,61] - Started ServerApplication in 11.589 seconds (JVM running for 12.217)
+01:31:55.464 [http-nio-8080-exec-18] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:31:57.447 [http-nio-8080-exec-20] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+01:33:04.054 [lettuce-nioEventLoop-5-1] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+01:33:04.073 [lettuce-eventExecutorLoop-1-5] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+01:33:04.077 [lettuce-nioEventLoop-5-2] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+01:34:10.031 [lettuce-nioEventLoop-5-2] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+01:34:10.071 [lettuce-eventExecutorLoop-1-6] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+01:34:10.074 [lettuce-nioEventLoop-5-3] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+01:34:44.867 [http-nio-8080-exec-80] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+01:34:50.488 [http-nio-8080-exec-94] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:34:50.504 [http-nio-8080-exec-94] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:34:50.512 [http-nio-8080-exec-94] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:34:50.519 [http-nio-8080-exec-94] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:34:50.539 [http-nio-8080-exec-94] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:34:50.548 [http-nio-8080-exec-94] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:34:50.556 [http-nio-8080-exec-94] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:34:50.564 [http-nio-8080-exec-94] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:34:50.571 [http-nio-8080-exec-94] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:34:50.577 [http-nio-8080-exec-94] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:35:24.222 [http-nio-8080-exec-33] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+01:35:31.139 [http-nio-8080-exec-36] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:35:31.153 [http-nio-8080-exec-36] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:35:31.170 [http-nio-8080-exec-36] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:35:31.183 [http-nio-8080-exec-36] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:35:31.191 [http-nio-8080-exec-36] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:35:31.201 [http-nio-8080-exec-36] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:35:31.211 [http-nio-8080-exec-36] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:35:31.222 [http-nio-8080-exec-36] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:35:31.232 [http-nio-8080-exec-36] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:35:31.241 [http-nio-8080-exec-36] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+01:35:43.083 [http-nio-8080-exec-64] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+01:36:52.070 [lettuce-nioEventLoop-5-3] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+01:36:52.177 [lettuce-eventExecutorLoop-1-9] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+01:36:52.180 [lettuce-nioEventLoop-5-4] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+01:37:58.019 [lettuce-nioEventLoop-5-4] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+01:37:58.082 [lettuce-eventExecutorLoop-1-10] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+01:37:58.085 [lettuce-nioEventLoop-5-5] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+01:39:04.106 [lettuce-nioEventLoop-5-5] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+01:39:04.184 [lettuce-eventExecutorLoop-1-11] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+01:39:04.187 [lettuce-nioEventLoop-5-6] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+01:40:10.104 [lettuce-nioEventLoop-5-6] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+01:40:10.182 [lettuce-eventExecutorLoop-1-12] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+01:40:10.184 [lettuce-nioEventLoop-5-7] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+01:41:16.070 [lettuce-nioEventLoop-5-7] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+01:41:16.180 [lettuce-eventExecutorLoop-1-13] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+01:41:16.183 [lettuce-nioEventLoop-5-8] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+01:42:22.047 [lettuce-nioEventLoop-5-8] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+01:42:22.078 [lettuce-eventExecutorLoop-1-14] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+01:42:22.081 [lettuce-nioEventLoop-5-9] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+01:43:28.004 [lettuce-nioEventLoop-5-9] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+01:43:28.082 [lettuce-eventExecutorLoop-1-15] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+01:43:28.086 [lettuce-nioEventLoop-5-10] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+01:44:34.092 [lettuce-nioEventLoop-5-10] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+01:44:34.184 [lettuce-eventExecutorLoop-1-16] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+01:44:34.187 [lettuce-nioEventLoop-5-11] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+01:45:40.086 [lettuce-nioEventLoop-5-11] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+01:45:40.181 [lettuce-eventExecutorLoop-1-1] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+01:45:40.184 [lettuce-nioEventLoop-5-12] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+01:46:46.067 [lettuce-nioEventLoop-5-12] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+01:46:46.083 [lettuce-eventExecutorLoop-1-2] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+01:46:46.086 [lettuce-nioEventLoop-5-13] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+01:47:52.011 [lettuce-nioEventLoop-5-13] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+01:47:52.074 [lettuce-eventExecutorLoop-1-3] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+01:47:52.077 [lettuce-nioEventLoop-5-14] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+01:48:11.656 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.

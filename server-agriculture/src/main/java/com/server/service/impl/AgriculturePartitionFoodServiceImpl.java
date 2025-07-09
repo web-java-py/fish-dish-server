@@ -1,12 +1,14 @@
 package com.server.service.impl;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.server.domain.*;
 import com.server.domain.dto.AgriculturePartitionFoodPageDTO;
+import com.server.domain.vo.BatchTaskDetailVO;
 import com.server.domain.vo.TraceabilityDetailVO;
 import com.server.mapper.*;
 import com.server.utils.QRCodeUtil;
@@ -76,46 +78,123 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
                 new QueryWrapper<AgricultureBatchTask>().eq("batch_id", food.getIaPartitionId())
         );
 
-        // 5. 合并所有批次任务的计划周期，查环境数据（如需更细粒度可循环查）
-        List<AgricultureWeatherData> weatherList = new ArrayList<>();
-        List<AgricultureWaterQualityData> waterList = new ArrayList<>();
-        if (!batchTaskList.isEmpty()) {
-            // 取所有批次任务的最早开始和最晚结束
-            Date minStart = batchTaskList.stream()
-                    .filter(t -> t.getPlanStart() != null)
-                    .map(AgricultureBatchTask::getPlanStart)
-                    .min(Date::compareTo).orElse(null);
-            Date maxFinish = batchTaskList.stream()
-                    .filter(t -> t.getPlanFinish() != null)
-                    .map(AgricultureBatchTask::getPlanFinish)
-                    .max(Date::compareTo).orElse(null);
+        List<BatchTaskDetailVO> batchTaskDetailList = new ArrayList<>();
 
-            if (minStart != null && maxFinish != null) {
-                weatherList = weatherDataMapper.selectList(
+        for (AgricultureBatchTask batchTask : batchTaskList) {
+            BatchTaskDetailVO detailVO = new BatchTaskDetailVO();
+            detailVO.setBatchTask(batchTask);
+
+            // 只处理有实际开始和结束时间的任务
+            if (batchTask.getActualStart() != null && batchTask.getActualFinish() != null) {
+                // 1. 查询气象原始数据（大棚id+分区id+时间区间）
+                List<AgricultureWeatherData> weatherDataList = weatherDataMapper.selectList(
                         new QueryWrapper<AgricultureWeatherData>()
+                                .eq("pasture_id", cropBatch.getPastureId())
                                 .eq("batch_id", food.getIaPartitionId())
-                                .between("collect_time", minStart, maxFinish)
+                                .between("collect_time", batchTask.getActualStart(), batchTask.getActualFinish())
+                                .orderByAsc("collect_time")
                 );
-                waterList = waterQualityDataMapper.selectList(
+                // 2. 聚合气象数据（每3条合成一条）
+                List<AgricultureWeatherData> weatherMergedList = mergeWeatherDataByThree(weatherDataList);
+
+                // 3. 计算气象平均值（对聚合后的数据做平均）
+                Map<String, Double> weatherAvg = calculateWeatherAvg(weatherMergedList);
+
+                // 4. 查询水质原始数据
+                List<AgricultureWaterQualityData> waterQualityDataList = waterQualityDataMapper.selectList(
                         new QueryWrapper<AgricultureWaterQualityData>()
+                                .eq("pasture_id", cropBatch.getPastureId())
                                 .eq("batch_id", food.getIaPartitionId())
-                                .between("collect_time", minStart, maxFinish)
+                                .between("collect_time", batchTask.getActualStart(), batchTask.getActualFinish())
+                                .orderByAsc("collect_time")
                 );
+                // 5. 计算水质平均值（对所有原始数据做平均）
+                Map<String, Double> waterQualityAvg = calculateWaterQualityAvg(waterQualityDataList);
+
+                // 设置聚合后的气象数据列表
+                // detailVO.setWeatherMergedList(weatherMergedList);
+
+                // 设置气象平均值（基于聚合数据）
+                detailVO.setWeatherAvg(weatherAvg);
+                // 设置所有水质原始数据
+                // detailVO.setWaterQualityDataList(waterQualityDataList); // 所有水质数据
+
+                // 设置水质平均值
+                detailVO.setWaterQualityAvg(waterQualityAvg);
             }
+            batchTaskDetailList.add(detailVO);
         }
 
-        // 6. 组装VO
+        // 5. 组装VO
         TraceabilityDetailVO vo = new TraceabilityDetailVO();
         vo.setFoodInfo(food);
         vo.setCropBatch(cropBatch);
         vo.setPastureInfo(pasture);
-        vo.setBatchTaskList(batchTaskList);
-        vo.setWeatherDataList(weatherList);
-        vo.setWaterQualityDataList(waterList);
+        vo.setBatchTaskDetailList(batchTaskDetailList);
         return vo;
     }
-
-
+        //气象数据聚合
+        private List<AgricultureWeatherData> mergeWeatherDataByThree(List<AgricultureWeatherData> dataList) {
+            // 将原始气象数据每3条聚合成一条，聚合时取各字段的平均值
+            List<AgricultureWeatherData> merged = new ArrayList<>();
+            for (int i = 0; i < dataList.size(); i += 3) {
+                List<AgricultureWeatherData> group = dataList.subList(i, Math.min(i + 3, dataList.size()));
+                AgricultureWeatherData m = new AgricultureWeatherData();
+                m.setCollectTime(group.get(0).getCollectTime());
+                m.setPastureId(group.get(0).getPastureId());
+                m.setBatchId(group.get(0).getBatchId());
+                // 计算每组的平均值，温度、湿度、光照强度过滤掉0和null，风速只过滤null
+                m.setTemperature(group.stream().map(AgricultureWeatherData::getTemperature).filter(val -> val != null && val != 0).mapToDouble(Double::doubleValue).average().orElse(0));
+                m.setHumidity(group.stream().map(AgricultureWeatherData::getHumidity).filter(val -> val != null && val != 0).mapToDouble(Double::doubleValue).average().orElse(0));
+                m.setWindSpeed(group.stream().map(AgricultureWeatherData::getWindSpeed).filter(Objects::nonNull).mapToDouble(Double::doubleValue).average().orElse(0));
+                m.setLightIntensity(group.stream().map(AgricultureWeatherData::getLightIntensity).filter(val -> val != null && val != 0).mapToDouble(Double::doubleValue).average().orElse(0));
+                // 判断该聚合结果是否全为0或null，如果是则不加入merged
+                boolean allFieldsZeroOrNull =
+                    (m.getTemperature() == null || m.getTemperature() == 0)
+                    && (m.getHumidity() == null || m.getHumidity() == 0)
+                    && (m.getWindSpeed() == null || m.getWindSpeed() == 0)
+                    && (m.getLightIntensity() == null || m.getLightIntensity() == 0);
+                if (!allFieldsZeroOrNull) {
+                    merged.add(m);
+                }
+            }
+            return merged;
+        }
+        //气象平均值
+        private Map<String, Double> calculateWeatherAvg(List<AgricultureWeatherData> dataList) {
+            // 计算传入气象数据列表的各项平均值，温度、湿度、光照强度过滤掉0和null，风速只过滤null
+            // 并且全为0或null的聚合结果不参与平均
+            Map<String, Double> avg = new HashMap<>();
+            // 过滤掉全为0或null的无效数据
+            List<AgricultureWeatherData> filteredList = dataList.stream().filter(data -> {
+                Double temperature = data.getTemperature();
+                Double humidity = data.getHumidity();
+                Double windSpeed = data.getWindSpeed();
+                Double lightIntensity = data.getLightIntensity();
+                boolean allFieldsZeroOrNull =
+                    (temperature == null || temperature == 0)
+                    && (humidity == null || humidity == 0)
+                    && (windSpeed == null || windSpeed == 0)
+                    && (lightIntensity == null || lightIntensity == 0);
+                return !allFieldsZeroOrNull;
+            }).collect(Collectors.toList());
+            avg.put("temperature", filteredList.stream().map(AgricultureWeatherData::getTemperature).filter(val -> val != null && val != 0).mapToDouble(Double::doubleValue).average().orElse(0));
+            avg.put("humidity", filteredList.stream().map(AgricultureWeatherData::getHumidity).filter(val -> val != null && val != 0).mapToDouble(Double::doubleValue).average().orElse(0));
+            avg.put("windSpeed", filteredList.stream().map(AgricultureWeatherData::getWindSpeed).filter(Objects::nonNull).mapToDouble(Double::doubleValue).average().orElse(0));
+            avg.put("lightIntensity", filteredList.stream().map(AgricultureWeatherData::getLightIntensity).filter(val -> val != null && val != 0).mapToDouble(Double::doubleValue).average().orElse(0));
+            return avg;
+        }
+    //水质平均值
+    private Map<String, Double> calculateWaterQualityAvg(List<AgricultureWaterQualityData> dataList) {
+        // 计算传入水质数据列表的各项平均值
+        Map<String, Double> avg = new HashMap<>();
+        avg.put("phValue", dataList.stream().map(AgricultureWaterQualityData::getPhValue).filter(Objects::nonNull).mapToDouble(Double::doubleValue).average().orElse(0));
+        avg.put("dissolvedOxygen", dataList.stream().map(AgricultureWaterQualityData::getDissolvedOxygen).filter(Objects::nonNull).mapToDouble(Double::doubleValue).average().orElse(0));
+        avg.put("ammoniaNitrogen", dataList.stream().map(AgricultureWaterQualityData::getAmmoniaNitrogen).filter(Objects::nonNull).mapToDouble(Double::doubleValue).average().orElse(0));
+        avg.put("waterTemperature", dataList.stream().map(AgricultureWaterQualityData::getWaterTemperature).filter(Objects::nonNull).mapToDouble(Double::doubleValue).average().orElse(0));
+        avg.put("conductivity", dataList.stream().map(AgricultureWaterQualityData::getConductivity).filter(Objects::nonNull).mapToDouble(Double::doubleValue).average().orElse(0));
+        return avg;
+    }
     /**
      * 查询分区食品 采摘
      * 
