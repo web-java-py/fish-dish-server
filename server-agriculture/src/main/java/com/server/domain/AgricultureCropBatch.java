@@ -39,8 +39,12 @@ public class AgricultureCropBatch implements Serializable {
     private String batchName;
 
     @TableField(value="germplasm_id")
-    @ApiModelProperty(value="种质ID")
+    @ApiModelProperty(value="鱼种质ID")
     private Long germplasmId;
+
+    @TableField(value="vegetable_id")
+    @ApiModelProperty(value="菜种质ID")
+    private Long vegetableId;
 
     @TableField(value="pasture_id")
     @ApiModelProperty(value="大棚ID")
