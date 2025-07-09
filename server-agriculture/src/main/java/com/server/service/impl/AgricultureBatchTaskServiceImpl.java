@@ -3,12 +3,10 @@ package com.server.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.server.domain.AgricultureBatchTask;
-import com.server.mapper.AgricultureBatchTaskServiceMapper;
+import com.server.mapper.AgricultureBatchTaskMapper;
 import com.server.service.AgricultureBatchTaskService;
 import com.server.utils.StringUtils;
-import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.poi.ss.usermodel.DateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,10 +19,10 @@ import java.util.List;
 
 @Service
 @Slf4j
-public class AgricultureBatchTaskServiceImpl extends ServiceImpl<AgricultureBatchTaskServiceMapper, AgricultureBatchTask> implements AgricultureBatchTaskService {
+public class AgricultureBatchTaskServiceImpl extends ServiceImpl<AgricultureBatchTaskMapper, AgricultureBatchTask> implements AgricultureBatchTaskService {
 
     @Autowired
-    private AgricultureBatchTaskServiceMapper batchTaskServiceMapper;
+    private AgricultureBatchTaskMapper batchTaskServiceMapper;
 
     /**
      * 查询批次任务列表

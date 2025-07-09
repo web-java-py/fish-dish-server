@@ -40,7 +40,7 @@ public class ScaleServiceImpl implements ScaleService {
     private AgricultureMachineMapper agricultureMachineMapper;
 
     @Autowired
-    private AgricultureBatchTaskServiceMapper agricultureBatchTaskServiceMapper;
+    private AgricultureBatchTaskMapper agricultureBatchTaskMapper;
 
     /**
      * 获取设备规模
@@ -76,7 +76,7 @@ public class ScaleServiceImpl implements ScaleService {
         Integer dishCount = agricultureClassMapper.selectCount(new QueryWrapper<AgricultureClass>().lambda().eq(AgricultureClass::getClassType,1));
         Integer materialCount = agricultureMaterialMapper.selectCount(null);
         Integer machineCount = agricultureMachineMapper.selectCount(null);
-        Integer batchTaskCount = agricultureBatchTaskServiceMapper.selectCount(null);
+        Integer batchTaskCount = agricultureBatchTaskMapper.selectCount(null);
 
 
         List<ScaleVO> result = new ArrayList<ScaleVO>();

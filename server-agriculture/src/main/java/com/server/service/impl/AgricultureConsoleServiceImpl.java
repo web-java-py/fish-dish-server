@@ -2,7 +2,6 @@ package com.server.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.server.core.domain.AjaxResult;
 import com.server.domain.AgricultureBatchTask;
 import com.server.domain.AgricultureClass;
 import com.server.domain.AgricultureCropBatch;
@@ -18,9 +17,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class AgricultureConsoleServiceImpl implements AgricultureConsoleService {
@@ -35,7 +32,7 @@ public class AgricultureConsoleServiceImpl implements AgricultureConsoleService 
     private AgricultureClassMapper agricultureClassMapper;
 
     @Autowired
-    private AgricultureBatchTaskServiceMapper agricultureBatchTaskServiceMapper;
+    private AgricultureBatchTaskMapper agricultureBatchTaskMapper;
 
     /**
      * 获取农场数据
@@ -111,12 +108,12 @@ public class AgricultureConsoleServiceImpl implements AgricultureConsoleService 
 
         for (int i = 0; i < taskStatus.length; i++) {
             LambdaQueryWrapper<AgricultureBatchTask> lambda = new QueryWrapper<AgricultureBatchTask>().lambda();
-            Integer lastTotal = agricultureBatchTaskServiceMapper.selectCount(
+            Integer lastTotal = agricultureBatchTaskMapper.selectCount(
                     lambda.eq(AgricultureBatchTask::getStatus, i)
                             .lt(AgricultureBatchTask::getCreateTime, yesterday())
             );
             lambda = new QueryWrapper<AgricultureBatchTask>().lambda();
-            Integer total = agricultureBatchTaskServiceMapper.selectCount(
+            Integer total = agricultureBatchTaskMapper.selectCount(
                     lambda.eq(AgricultureBatchTask::getStatus, i)
             );
             result.add(fillAgricultureConsoleVO(taskStatus[i], total, lastTotal, taskIcon[i], taskClass[i]));
