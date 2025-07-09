@@ -46,8 +46,10 @@ public class AgricultureCostBaitServiceImpl extends ServiceImpl<AgricultureCostB
     @Override
     public List<AgricultureCostBait> selectFishCostBaitList(AgricultureCostBait agricultureCostBait)
     {
-
         LambdaQueryWrapper<AgricultureCostBait> lambdaQueryWrapper = new QueryWrapper<AgricultureCostBait>().lambda();
+        if (agricultureCostBait.getTaskId() != null){
+            lambdaQueryWrapper.eq(AgricultureCostBait::getTaskId,agricultureCostBait.getTaskId());
+        }
         return fishCostBaitMapper.selectList(lambdaQueryWrapper);
     }
 

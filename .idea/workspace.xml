@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="删除分区同时删除对应的任务">
+    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="新加字段 将新增分区信息的种质,鱼和蔬菜分开,可以同时新增或者单独新增 &#10;批次任务按钮的任务做升序处理">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureCropBatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureCropBatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/dto/AgricultureCropBatchDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/dto/AgricultureCropBatchDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureBatchTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureBatchTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCostBaitServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCostBaitServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCostEmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCostEmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCostMachineServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCostMachineServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCropBatchServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCropBatchServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-info.log" afterDir="false" />
@@ -72,11 +74,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.ServerApplication.executor": "Run",
+    "Application.ServerApplication.executor": "Debug",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "zbb",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/YCGSHou/fish-dish-server",
+    "last_opened_file_path": "D:/JiuYCGS/Hou/znwl-agriculture-server-no",
     "settings.editor.selected.configurable": "MavenSettings"
   }
 }]]></component>
@@ -212,7 +214,55 @@
       <option name="project" value="LOCAL" />
       <updated>1751705917523</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="新加字段 将新增分区信息的种质,鱼和蔬菜分开,可以同时新增或者单独新增 &#10;批次任务按钮的任务做升序处理">
+      <option name="closed" value="true" />
+      <created>1751964888498</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1751964888498</updated>
+    </task>
+    <task id="LOCAL-00012" summary="新加字段 将新增分区信息的种质,鱼和蔬菜分开,可以同时新增或者单独新增 &#10;批次任务按钮的任务做升序处理">
+      <option name="closed" value="true" />
+      <created>1751964993471</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1751964993471</updated>
+    </task>
+    <task id="LOCAL-00013" summary="新加字段 将新增分区信息的种质,鱼和蔬菜分开,可以同时新增或者单独新增 &#10;批次任务按钮的任务做升序处理">
+      <option name="closed" value="true" />
+      <created>1751964997113</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1751964997113</updated>
+    </task>
+    <task id="LOCAL-00014" summary="新加字段 将新增分区信息的种质,鱼和蔬菜分开,可以同时新增或者单独新增 &#10;批次任务按钮的任务做升序处理">
+      <option name="closed" value="true" />
+      <created>1751964997678</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1751964997678</updated>
+    </task>
+    <task id="LOCAL-00015" summary="新加字段 将新增分区信息的种质,鱼和蔬菜分开,可以同时新增或者单独新增 &#10;批次任务按钮的任务做升序处理">
+      <option name="closed" value="true" />
+      <created>1751964998111</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1751964998111</updated>
+    </task>
+    <task id="LOCAL-00016" summary="新加字段 将新增分区信息的种质,鱼和蔬菜分开,可以同时新增或者单独新增 &#10;批次任务按钮的任务做升序处理">
+      <option name="closed" value="true" />
+      <created>1751965047238</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1751965047238</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,7 +299,8 @@
     <MESSAGE value="优化sse 重构sse" />
     <MESSAGE value="日志" />
     <MESSAGE value="删除分区同时删除对应的任务" />
-    <option name="LAST_COMMIT_MESSAGE" value="删除分区同时删除对应的任务" />
+    <MESSAGE value="新加字段 将新增分区信息的种质,鱼和蔬菜分开,可以同时新增或者单独新增 &#10;批次任务按钮的任务做升序处理" />
+    <option name="LAST_COMMIT_MESSAGE" value="新加字段 将新增分区信息的种质,鱼和蔬菜分开,可以同时新增或者单独新增 &#10;批次任务按钮的任务做升序处理" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -258,11 +309,6 @@
           <properties class="org.springframework.beans.factory.BeanDefinitionStoreException" package="org.springframework.beans.factory" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCropBatchServiceImpl.java</url>
-          <line>94</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

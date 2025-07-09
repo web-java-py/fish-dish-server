@@ -45,6 +45,9 @@ public class AgricultureCostEmployeeServiceImpl extends ServiceImpl<AgricultureC
     public List<AgricultureCostEmployee> selectAgricultureCostEmployeeList(AgricultureCostEmployee agricultureCostEmployee)
     {
         LambdaQueryWrapper<AgricultureCostEmployee> lambdaQueryWrapper = new QueryWrapper<AgricultureCostEmployee>().lambda();
+        if (agricultureCostEmployee.getTaskId() != null) {
+            lambdaQueryWrapper.eq(AgricultureCostEmployee::getTaskId, agricultureCostEmployee.getTaskId());
+        }
         return agricultureCostEmployeeMapper.selectList(lambdaQueryWrapper);
     }
 

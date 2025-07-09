@@ -64,6 +64,12 @@ public class AgricultureBatchTask extends BaseEntity {
     @Excel(name = "任务负责人姓名")
     private String responsiblePersonName;
 
+    /** 任务负责人ID */
+    @TableField(value = "fish_dish")
+    @ApiModelProperty(value = "状态(0是菜,1是鱼)")
+    @Excel(name = "状态(0是菜,1是鱼)")
+    private Long fishDish;
+
     /** 计划开始日期 */
     @TableField(value = "plan_start")
     @ApiModelProperty(value = "计划开始日期")

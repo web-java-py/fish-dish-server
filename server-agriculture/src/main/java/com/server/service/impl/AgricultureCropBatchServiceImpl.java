@@ -124,6 +124,12 @@ public class AgricultureCropBatchServiceImpl extends ServiceImpl<AgricultureCrop
                 agricultureBatchTask.setBatchId(agricultureCropBatch.getBatchId());
                 agricultureBatchTask.setResponsiblePersonId(agricultureCropBatch.getResponsiblePersonId());
                 agricultureBatchTask.setTaskName(sj.getJobName());
+                // 新增：设置fishDish字段，鱼为0，菜为1
+                if (agricultureCropBatch.getGermplasmId() != null && sj.getClassId() != null && sj.getClassId().equals(agricultureCropBatch.getGermplasmId())) {
+                    agricultureBatchTask.setFishDish(0L); // 鱼
+                } else if (agricultureCropBatch.getVegetableId() != null && sj.getClassId() != null && sj.getClassId().equals(agricultureCropBatch.getVegetableId())) {
+                    agricultureBatchTask.setFishDish(1L); // 菜
+                }
                 // 根据周期单位设置乘数（0:天, 1:周）
                 int mult = sj.getCycleUnit().equals("0")? 1 : 7;
                 LocalDateTime startTime = agricultureCropBatch.getStartTime();
