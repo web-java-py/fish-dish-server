@@ -4,17 +4,11 @@ import java.util.List;
 import javax.servlet.http.HttpServletResponse;
 
 import com.server.domain.dto.AgriculturePartitionFoodPageDTO;
+import com.server.domain.vo.TraceabilityDetailVO;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import com.server.annotation.Log;
 import com.server.core.controller.BaseController;
 import com.server.core.domain.AjaxResult;
@@ -48,6 +42,17 @@ public class AgriculturePartitionFoodController extends BaseController
         return getDataTable(agriculturePartitionFoodService.selectagriculturePartitionFoodList(agriculturePartitionFood));
     }
 
+    /**
+     * 根据溯源码查询溯源详情信息（分区、大棚、批次任务、环境数据等）
+     */
+    @ApiOperation("根据溯源码查询溯源详情信息")
+    @PreAuthorize("@ss.hasPermi('agriculturePartitionFood:traceDetail')")
+    @GetMapping("/traceDetail")
+    public AjaxResult getTraceabilityDetail(@RequestParam("traceId") String traceId) {
+        // 调用Service方法获取溯源详情
+        TraceabilityDetailVO vo = agriculturePartitionFoodService.getTraceabilityDetailById(traceId);
+        return success(vo);
+    }
     /**
      * 导出分区食品 采摘列表
      */

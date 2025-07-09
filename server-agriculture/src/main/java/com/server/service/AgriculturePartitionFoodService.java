@@ -5,6 +5,12 @@ import java.util.List;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.server.domain.AgriculturePartitionFood;
 import com.server.domain.dto.AgriculturePartitionFoodPageDTO;
+import com.server.domain.vo.TraceabilityDetailVO;
+import com.server.mapper.AgriculturePartitionFoodMapper;
+import com.server.mapper.AgriculturePastureMapper;
+import com.server.mapper.AgricultureWaterQualityDataMapper;
+import com.server.mapper.AgricultureWeatherDataMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * 分区食品 采摘Service接口
@@ -14,6 +20,7 @@ import com.server.domain.dto.AgriculturePartitionFoodPageDTO;
  */
 public interface AgriculturePartitionFoodService extends IService<AgriculturePartitionFood>
 {
+
     /**
      * 查询分区食品 采摘
      * 
@@ -66,6 +73,7 @@ public interface AgriculturePartitionFoodService extends IService<AgriculturePar
      * 新增采摘 生成二维码展示
      */
     List<AgriculturePartitionFood> fy(AgriculturePartitionFoodPageDTO baseDTO);
-
+    //查询溯源详细信息
+    TraceabilityDetailVO getTraceabilityDetailById(String traceId);
 
 }
