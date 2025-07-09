@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="设备VO分页Bug修复2" />
+    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="日志">
+      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/dto/AgriculturePastureDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgriculturePartitionFoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgriculturePartitionFoodController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgriculturePastureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgriculturePastureController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgriculturePasture.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgriculturePasture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgriculturePastureService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgriculturePastureService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgriculturePastureServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgriculturePastureServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-info.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-user.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-user.log" afterDir="false" />
+    </list>
+    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="分区任务 的 批次任务以及头顶导航" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,15 +25,16 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;BuXianWanYin&quot;
-  }
-}</component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
       <filtered-out-file-type name="LOCAL_BRANCH" />
@@ -30,12 +43,6 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/web-java-py/fish-dish-server.git&quot;,
-    &quot;accountId&quot;: &quot;de79a800-e6f1-4294-8e51-75e1fbc82f5c&quot;
-  }
-}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/server-admin/src/main/resources/application-dev.yml" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -45,70 +52,53 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="customMavenHome" value="D:\maven\apache-maven-3.9.9" />
-        <option name="localRepository" value="D:\maven\apache-maven-3.9.9\Repository" />
+        <option name="customMavenHome" value="$PROJECT_DIR$/../../../Java_Maven/apache-maven-3.5.4" />
+        <option name="localRepository" value="E:\idea\Java_Maven\apache-maven-3.5.4\repo" />
         <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
-        <option name="userSettingsFile" value="D:\maven\apache-maven-3.9.9\conf\settings.xml" />
+        <option name="userSettingsFile" value="E:\idea\Java_Maven\apache-maven-3.5.4\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="PerforceDirect.Settings">
-    <option name="CHARSET" value="无" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 8
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="2z4udUhg2iMJ66cZymyeur89p2B" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;Application.ServerApplication.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;bxwy&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;zbb&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/ZLXN/fish-dish-server/server-agriculture/src/main/java/com/server/service/impl&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
-    ]
+    &quot;last_opened_file_path&quot;: &quot;D:/JiuYCGS/Hou/znwl-agriculture-server-no&quot;
   }
 }</component>
-  <component name="ReactorSettings">
-    <option name="notificationShown" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\ZLXN\fish-dish-server\server-agriculture\src\main\java\com\server\service\impl" />
-      <recent name="D:\ZLXN\fish-dish-server\server-agriculture\src\main\java\com\server\service" />
-      <recent name="D:\ZLXN\fish-dish-server\server-agriculture\src\main\java\com\server\mapper" />
-      <recent name="D:\ZLXN\fish-dish-server\server-admin\src\main\java\com\server\controller\agriculture" />
-    </key>
-  </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.ServerApplication">
+    <configuration name="ServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.server.ServerApplication" />
+      <module name="server-admin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="server-admin" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.server.ServerApplication" />
@@ -122,19 +112,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.ServerApplication" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.19416.15" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.19416.15" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -154,172 +131,128 @@
       <workItem from="1751002765376" duration="291000" />
       <workItem from="1751003071297" duration="1009000" />
       <workItem from="1751004119272" duration="31000" />
-      <workItem from="1751195563334" duration="38537000" />
-      <workItem from="1751619143171" duration="4893000" />
-      <workItem from="1751703405583" duration="16642000" />
-      <workItem from="1752019524762" duration="15212000" />
     </task>
-    <task id="LOCAL-00002" summary="bug修复">
+    <task id="LOCAL-00002">
       <option name="closed" value="true" />
-      <created>1751020840992</created>
+      <created>1751253237269</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1751020840992</updated>
+      <updated>1751253237269</updated>
     </task>
-    <task id="LOCAL-00003" summary="mqtt推送 数据解析拆分">
+    <task id="LOCAL-00003" summary="更改表数据名">
       <option name="closed" value="true" />
-      <created>1751037274215</created>
+      <created>1751253268979</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1751037274215</updated>
+      <updated>1751253268979</updated>
     </task>
-    <task id="LOCAL-00004" summary="mqtt推送 数据解析拆分">
+    <task id="LOCAL-00004" summary="更改表数据名">
       <option name="closed" value="true" />
-      <created>1751038844188</created>
+      <created>1751288645601</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1751038844188</updated>
+      <updated>1751288645601</updated>
     </task>
-    <task id="LOCAL-00005" summary="参数类型字典实现">
+    <task id="LOCAL-00005" summary="分区任务 的 批次任务以及头顶导航">
       <option name="closed" value="true" />
-      <created>1751117377800</created>
+      <created>1751288672288</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1751117377800</updated>
+      <updated>1751288672288</updated>
     </task>
-    <task id="LOCAL-00006" summary="新增类型实现">
+    <task id="LOCAL-00006" summary="分区任务 的 批次任务以及头顶导航">
       <option name="closed" value="true" />
-      <created>1751119474187</created>
+      <created>1751288708906</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1751119474187</updated>
+      <updated>1751288708906</updated>
     </task>
-    <task id="LOCAL-00007" summary="实体类字段修改">
+    <task id="LOCAL-00007" summary="分区任务 的 批次任务以及头顶导航">
       <option name="closed" value="true" />
-      <created>1751128784598</created>
+      <created>1751288759816</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1751128784598</updated>
+      <updated>1751288759816</updated>
     </task>
-    <task id="LOCAL-00008" summary="图表趋势数据绑定实现">
+    <task id="LOCAL-00008" summary="分区任务 的 批次任务以及头顶导航">
       <option name="closed" value="true" />
-      <created>1751219816621</created>
+      <created>1751288783832</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1751219816621</updated>
+      <updated>1751288783832</updated>
     </task>
-    <task id="LOCAL-00009" summary="图表趋势数据绑定实现">
+    <task id="LOCAL-00009" summary="分区任务 的 批次任务以及头顶导航">
       <option name="closed" value="true" />
-      <created>1751255679187</created>
+      <created>1751288821873</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1751255679187</updated>
+      <updated>1751288821873</updated>
     </task>
-    <task id="LOCAL-00010" summary="图表趋势数据绑定实现">
+    <task id="LOCAL-00010" summary="分区任务 的 批次任务以及头顶导航">
       <option name="closed" value="true" />
-      <created>1751255831393</created>
+      <created>1751288884858</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1751255831393</updated>
+      <updated>1751288884858</updated>
     </task>
-    <task id="LOCAL-00011" summary="修复一堆bug">
+    <task id="LOCAL-00011" summary="分区任务 的 批次任务以及头顶导航">
       <option name="closed" value="true" />
-      <created>1751386819657</created>
+      <created>1751288918750</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1751386819657</updated>
+      <updated>1751288918750</updated>
     </task>
-    <task id="LOCAL-00012" summary="自动策略实现">
+    <task id="LOCAL-00012" summary="分区任务 的 批次任务以及头顶导航">
       <option name="closed" value="true" />
-      <created>1751544893028</created>
+      <created>1751288948483</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1751544893028</updated>
+      <updated>1751288948483</updated>
     </task>
-    <task id="LOCAL-00013" summary="水质图表数据接口实现">
+    <task id="LOCAL-00013" summary="分区任务 的 批次任务以及头顶导航">
       <option name="closed" value="true" />
-      <created>1751619148709</created>
+      <created>1751288993919</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1751619148709</updated>
+      <updated>1751288993919</updated>
     </task>
-    <task id="LOCAL-00014" summary="水质图表数据接口实现">
+    <task id="LOCAL-00014" summary="分区任务 的 批次任务以及头顶导航">
       <option name="closed" value="true" />
-      <created>1751619308188</created>
+      <created>1751289097815</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1751619308188</updated>
+      <updated>1751289097815</updated>
     </task>
-    <task id="LOCAL-00015" summary="水质图表数据接口实现">
+    <task id="LOCAL-00015" summary="日志">
       <option name="closed" value="true" />
-      <created>1751619418991</created>
+      <created>1751361231335</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1751619418991</updated>
+      <updated>1751361231335</updated>
     </task>
-    <task id="LOCAL-00016" summary="物联网设备bug修复">
+    <task id="LOCAL-00016" summary="日志">
       <option name="closed" value="true" />
-      <created>1751638023136</created>
+      <created>1751289218287</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1751638023136</updated>
+      <updated>1751289218287</updated>
     </task>
-    <task id="LOCAL-00017" summary="摄像头参数配置接口实现">
-      <option name="closed" value="true" />
-      <created>1751987590167</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1751987590167</updated>
-    </task>
-    <task id="LOCAL-00018" summary="摄像头参数配置接口实现2">
-      <option name="closed" value="true" />
-      <created>1751992600921</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1751992600921</updated>
-    </task>
-    <task id="LOCAL-00019" summary="摄像头实现">
-      <option name="closed" value="true" />
-      <created>1752024700578</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1752024700578</updated>
-    </task>
-    <task id="LOCAL-00020" summary="设备VO分页Bug修复">
-      <option name="closed" value="true" />
-      <created>1752038193250</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1752038193250</updated>
-    </task>
-    <task id="LOCAL-00021" summary="设备VO分页Bug修复2">
-      <option name="closed" value="true" />
-      <created>1752054214173</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1752054214173</updated>
-    </task>
-    <option name="localTasksCounter" value="22" />
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,7 +269,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="bxwy" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -350,23 +283,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="去掉.idea配置" />
-    <MESSAGE value="修复本地" />
-    <MESSAGE value="bug修复" />
-    <MESSAGE value="mqtt推送 数据解析拆分" />
-    <MESSAGE value="参数类型字典实现" />
-    <MESSAGE value="新增类型实现" />
-    <MESSAGE value="实体类字段修改" />
-    <MESSAGE value="图表趋势数据绑定实现" />
-    <MESSAGE value="修复一堆bug" />
-    <MESSAGE value="自动策略实现" />
-    <MESSAGE value="水质图表数据接口实现" />
-    <MESSAGE value="物联网设备bug修复" />
-    <MESSAGE value="摄像头参数配置接口实现" />
-    <MESSAGE value="摄像头参数配置接口实现2" />
-    <MESSAGE value="摄像头实现" />
-    <MESSAGE value="设备VO分页Bug修复" />
-    <MESSAGE value="设备VO分页Bug修复2" />
-    <option name="LAST_COMMIT_MESSAGE" value="设备VO分页Bug修复2" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/main' into zbb&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;serverlog/sys-error.log&#10;#&#9;serverlog/sys-info.log&#10;#&#9;serverlog/sys-user.log" />
+    <MESSAGE value="更改表数据名" />
+    <MESSAGE value="分区任务 的 批次任务以及头顶导航" />
+    <option name="LAST_COMMIT_MESSAGE" value="分区任务 的 批次任务以及头顶导航" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
