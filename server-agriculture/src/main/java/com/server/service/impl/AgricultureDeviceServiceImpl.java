@@ -20,6 +20,7 @@ import com.server.fisco.bcos.AgricultureDeviceFB;
 import com.server.mapper.*;
 import com.server.service.AgricultureDeviceService;
 import com.server.utils.SecurityUtils;
+import com.server.utils.StringUtils;
 import org.apache.commons.lang3.ObjectUtils;
 import org.fisco.bcos.sdk.client.Client;
 import org.fisco.bcos.sdk.transaction.model.exception.ContractException;
@@ -74,29 +75,25 @@ public class AgricultureDeviceServiceImpl extends ServiceImpl<AgricultureDeviceM
      */
     @Override
     public List<AgricultureDeviceVO> selectAgricultureDeviceListVO(AgricultureDevice agricultureDevice) {
-        List<AgricultureDevice> deviceList = list();
-        List<AgricultureDeviceVO> voList = new ArrayList<>();
-        for (AgricultureDevice device : deviceList) {
-            AgricultureDeviceVO vo = new AgricultureDeviceVO();
-            BeanUtils.copyProperties(device, vo);
-            // 查大棚名
-            if (device.getPastureId() != null) {
-                AgriculturePasture pasture = agriculturePastureMapper.selectById(device.getPastureId());
-                vo.setPastureName(pasture != null ? pasture.getName() : null);
-            }
-            // 查分区名
-            if (device.getBatchId() != null) {
-                AgricultureCropBatch batch = agricultureCropBatchMapper.selectById(device.getBatchId());
-                vo.setBatchName(batch != null ? batch.getBatchName() : null);
-            }
-            // 查设备类型
-            if (device.getBatchId() != null) {
-                AgricultureDeviceType type = agricultureDeviceTypeMapper.selectById(device.getDeviceTypeId());
-                vo.setDeviceTypeName(type != null ? type.getTypeName() : null);
-            }
-            voList.add(vo);
+        // 创建查询条件构造器
+        LambdaQueryWrapper<AgricultureDevice> wrapper = new LambdaQueryWrapper<>();
+
+        // 添加查询条件
+        if (StringUtils.isNotEmpty(agricultureDevice.getDeviceName())) {
+            wrapper.like(AgricultureDevice::getDeviceName, agricultureDevice.getDeviceName());
         }
-        return voList;
+        if (agricultureDevice.getPastureId() != null) {
+            wrapper.eq(AgricultureDevice::getPastureId, agricultureDevice.getPastureId());
+        }
+        if (agricultureDevice.getBatchId() != null) {
+            wrapper.eq(AgricultureDevice::getBatchId, agricultureDevice.getBatchId());
+        }
+        if (agricultureDevice.getDeviceTypeId() != null) {
+            wrapper.eq(AgricultureDevice::getDeviceTypeId, agricultureDevice.getDeviceTypeId());
+        }
+
+        // 使用注解方法直接查询VO对象列表
+        return agricultureDeviceMapper.selectAgricultureDeviceVOList(wrapper);
     }
 
     /**
