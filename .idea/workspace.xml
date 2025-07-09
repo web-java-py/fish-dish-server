@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="合并zbb">
-      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/vo/TraceabilityDetailVO.java" afterDir="false" />
+    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="溯源接口实现">
+      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/vo/BatchTaskDetailVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgriculturePartitionFoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgriculturePartitionFoodController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/mapper/AgricultureBatchTaskServiceMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/mapper/AgricultureBatchTaskMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgriculturePartitionFoodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgriculturePartitionFoodService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureBatchTaskServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureBatchTaskServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureConsoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureConsoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/vo/TraceabilityDetailVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/vo/TraceabilityDetailVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgriculturePartitionFoodServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgriculturePartitionFoodServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-data/src/main/java/com/server/service/impl/ScaleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-data/src/main/java/com/server/service/impl/ScaleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverlog/sys-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-info.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-user.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-user.log" afterDir="false" />
     </list>
@@ -347,7 +341,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752078738966</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="溯源接口实现">
+      <option name="closed" value="true" />
+      <created>1752081324050</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1752081324050</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,7 +397,8 @@
     <MESSAGE value="设备VO分页Bug修复" />
     <MESSAGE value="设备VO分页Bug修复2" />
     <MESSAGE value="合并zbb" />
-    <option name="LAST_COMMIT_MESSAGE" value="合并zbb" />
+    <MESSAGE value="溯源接口实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="溯源接口实现" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
