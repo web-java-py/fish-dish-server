@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="溯源接口实现">
-      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/vo/BatchTaskDetailVO.java" afterDir="false" />
+    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="溯源接口实现 bug修复">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureCropBatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureCropBatch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/vo/TraceabilityDetailVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/vo/TraceabilityDetailVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgriculturePartitionFoodServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgriculturePartitionFoodServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-info.log" afterDir="false" />
@@ -349,7 +349,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752081324050</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="溯源接口实现2">
+      <option name="closed" value="true" />
+      <created>1752083339384</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1752083339384</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,7 +406,9 @@
     <MESSAGE value="设备VO分页Bug修复2" />
     <MESSAGE value="合并zbb" />
     <MESSAGE value="溯源接口实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="溯源接口实现" />
+    <MESSAGE value="溯源接口实现2" />
+    <MESSAGE value="溯源接口实现 bug修复" />
+    <option name="LAST_COMMIT_MESSAGE" value="溯源接口实现 bug修复" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

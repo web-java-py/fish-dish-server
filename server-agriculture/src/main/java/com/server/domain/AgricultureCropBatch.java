@@ -83,6 +83,7 @@ public class AgricultureCropBatch implements Serializable {
     private String createBy;
 
     @TableField(value = "create_time", fill = FieldFill.INSERT)
+    @JsonFormat(pattern = "yyyy-MM-dd")
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @ApiModelProperty(value = "创建时间")
     private Date createTime;
@@ -92,6 +93,7 @@ public class AgricultureCropBatch implements Serializable {
     private String updateBy;
 
     @TableField(value = "update_time", fill = FieldFill.INSERT_UPDATE)
+    @JsonFormat(pattern = "yyyy-MM-dd")
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @ApiModelProperty(value = "修改时间")
     private Date updateTime;

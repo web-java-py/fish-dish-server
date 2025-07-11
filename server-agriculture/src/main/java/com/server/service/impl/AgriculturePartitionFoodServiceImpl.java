@@ -2,6 +2,8 @@ package com.server.service.impl;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.text.SimpleDateFormat;
+import java.text.DecimalFormat;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -66,6 +68,13 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
 
         // 2. 查分区
         AgricultureCropBatch cropBatch = agricultureCropBatchMapper.selectById(food.getIaPartitionId());
+        
+        // 格式化分区的创建时间为年-月-日格式
+        String formattedCreateTime = null;
+        if (cropBatch != null && cropBatch.getCreateTime() != null) {
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            formattedCreateTime = dateFormat.format(cropBatch.getCreateTime());
+        }
 
         // 3. 查大棚
         AgriculturePasture pasture = null;
@@ -114,13 +123,13 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
                 // 设置聚合后的气象数据列表
                 // detailVO.setWeatherMergedList(weatherMergedList);
 
-                // 设置气象平均值（基于聚合数据）
-                detailVO.setWeatherAvg(weatherAvg);
+                // 设置气象平均值（基于聚合数据），保留两位小数
+                detailVO.setWeatherAvg(formatDecimalMap(weatherAvg));
                 // 设置所有水质原始数据
                 // detailVO.setWaterQualityDataList(waterQualityDataList); // 所有水质数据
 
-                // 设置水质平均值
-                detailVO.setWaterQualityAvg(waterQualityAvg);
+                // 设置水质平均值，保留两位小数
+                detailVO.setWaterQualityAvg(formatDecimalMap(waterQualityAvg));
             }
             batchTaskDetailList.add(detailVO);
         }
@@ -131,8 +140,32 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
         vo.setCropBatch(cropBatch);
         vo.setPastureInfo(pasture);
         vo.setBatchTaskDetailList(batchTaskDetailList);
+        vo.setCropBatchCreateTimeFormatted(formattedCreateTime);
         return vo;
     }
+
+    /**
+     * 格式化Map中的Double值，保留两位小数
+     * @param originalMap 原始Map
+     * @return 格式化后的Map
+     */
+    private Map<String, Double> formatDecimalMap(Map<String, Double> originalMap) {
+        Map<String, Double> formattedMap = new HashMap<>();
+        DecimalFormat df = new DecimalFormat("#.##");
+        
+        for (Map.Entry<String, Double> entry : originalMap.entrySet()) {
+            Double value = entry.getValue();
+            if (value != null) {
+                // 使用DecimalFormat格式化，然后转回Double
+                String formatted = df.format(value);
+                formattedMap.put(entry.getKey(), Double.parseDouble(formatted));
+            } else {
+                formattedMap.put(entry.getKey(), 0.0);
+            }
+        }
+        return formattedMap;
+    }
+
         //气象数据聚合
         private List<AgricultureWeatherData> mergeWeatherDataByThree(List<AgricultureWeatherData> dataList) {
             // 将原始气象数据每3条聚合成一条，聚合时取各字段的平均值
