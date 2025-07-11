@@ -28,4 +28,7 @@ public class TraceabilityDetailVO {
     @ApiModelProperty("批次任务详情列表")
     private List<BatchTaskDetailVO> batchTaskDetailList;
 
+    @ApiModelProperty("分区创建时间（格式化：年-月-日）")
+    private String cropBatchCreateTimeFormatted;
+
 }
