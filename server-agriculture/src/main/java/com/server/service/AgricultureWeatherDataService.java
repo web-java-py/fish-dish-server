@@ -3,6 +3,7 @@ package com.server.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.server.domain.AgricultureWeatherData;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
 
@@ -73,4 +74,5 @@ public interface AgricultureWeatherDataService extends IService<AgricultureWeath
      * @return 结果
      */
     public int deleteAgricultureWeatherDataById(Long id);
+
 }
