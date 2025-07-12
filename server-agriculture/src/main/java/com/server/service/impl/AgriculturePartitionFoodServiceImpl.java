@@ -4,6 +4,8 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.text.SimpleDateFormat;
 import java.text.DecimalFormat;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -13,6 +15,7 @@ import com.server.domain.dto.AgriculturePartitionFoodPageDTO;
 import com.server.domain.vo.BatchTaskDetailVO;
 import com.server.domain.vo.TraceabilityDetailVO;
 import com.server.mapper.*;
+import com.server.service.*;
 import com.server.utils.QRCodeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -50,6 +53,14 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
     // 注入水质数据Mapper，用于操作水质数据表
     @Autowired
     private AgricultureWaterQualityDataMapper waterQualityDataMapper;
+
+    // 注入小时统计服务
+    @Autowired
+    private AgricultureWeatherHourlyStatsService hourlyStatsService;
+
+    // 注入日统计服务
+    @Autowired
+    private AgricultureWeatherDailyStatsService dailyStatsService;
 
     /**
      * 根据溯源码查询溯源详情信息，包括分区、大棚、批次任务、环境数据等
@@ -95,19 +106,8 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
 
             // 只处理有实际开始和结束时间的任务
             if (batchTask.getActualStart() != null && batchTask.getActualFinish() != null) {
-                // 1. 查询气象原始数据（大棚id+分区id+时间区间）
-                List<AgricultureWeatherData> weatherDataList = weatherDataMapper.selectList(
-                        new QueryWrapper<AgricultureWeatherData>()
-                                .eq("pasture_id", cropBatch.getPastureId())
-                                .eq("batch_id", food.getIaPartitionId())
-                                .between("collect_time", batchTask.getActualStart(), batchTask.getActualFinish())
-                                .orderByAsc("collect_time")
-                );
-                // 2. 聚合气象数据（每3条合成一条）
-                List<AgricultureWeatherData> weatherMergedList = mergeWeatherDataByThree(weatherDataList);
-
-                // 3. 计算气象平均值（对聚合后的数据做平均）
-                Map<String, Double> weatherAvg = calculateWeatherAvg(weatherMergedList);
+                // 优先使用聚合表查询气象数据
+                Map<String, Double> weatherAvg = getWeatherAvgFromStats(cropBatch.getPastureId().toString(), food.getIaPartitionId(), batchTask.getActualStart(), batchTask.getActualFinish());
 
                 // 4. 查询水质原始数据
                 List<AgricultureWaterQualityData> waterQualityDataList = waterQualityDataMapper.selectList(
@@ -120,14 +120,8 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
                 // 5. 计算水质平均值（对所有原始数据做平均）
                 Map<String, Double> waterQualityAvg = calculateWaterQualityAvg(waterQualityDataList);
 
-                // 设置聚合后的气象数据列表
-                // detailVO.setWeatherMergedList(weatherMergedList);
-
-                // 设置气象平均值（基于聚合数据），保留两位小数
+                // 设置气象平均值，保留两位小数
                 detailVO.setWeatherAvg(formatDecimalMap(weatherAvg));
-                // 设置所有水质原始数据
-                // detailVO.setWaterQualityDataList(waterQualityDataList); // 所有水质数据
-
                 // 设置水质平均值，保留两位小数
                 detailVO.setWaterQualityAvg(formatDecimalMap(waterQualityAvg));
             }
@@ -142,6 +136,158 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
         vo.setBatchTaskDetailList(batchTaskDetailList);
         vo.setCropBatchCreateTimeFormatted(formattedCreateTime);
         return vo;
+    }
+
+    /**
+     * 优先从聚合表获取气象平均值，如果没有数据则从原始数据计算
+     */
+    private Map<String, Double> getWeatherAvgFromStats(String pastureId, String batchId, Date startTime, Date endTime) {
+        // 转换Date为LocalDateTime
+        LocalDateTime start = startTime.toInstant().atZone(java.time.ZoneId.systemDefault()).toLocalDateTime();
+        LocalDateTime end = endTime.toInstant().atZone(java.time.ZoneId.systemDefault()).toLocalDateTime();
+        
+        // 计算时间跨度
+        long hoursDiff = ChronoUnit.HOURS.between(start, end);
+        
+        Map<String, Double> weatherAvg = new HashMap<>();
+        
+        if (hoursDiff <= 24) {
+            // 24小时内，优先使用小时统计表
+            List<AgricultureWeatherHourlyStats> hourlyStats = hourlyStatsService.getHourlyStats(pastureId, batchId, start, end);
+            if (!hourlyStats.isEmpty()) {
+                weatherAvg = calculateAvgFromHourlyStats(hourlyStats);
+            }
+        } else {
+            // 超过24小时，优先使用日统计表
+            List<AgricultureWeatherDailyStats> dailyStats = dailyStatsService.getDailyStats(pastureId, batchId, start, end);
+            if (!dailyStats.isEmpty()) {
+                weatherAvg = calculateAvgFromDailyStats(dailyStats);
+            }
+        }
+        
+        // 如果聚合表没有数据，则查询原始数据
+        if (weatherAvg.isEmpty()) {
+            List<AgricultureWeatherData> weatherDataList = weatherDataMapper.selectList(
+                    new QueryWrapper<AgricultureWeatherData>()
+                            .eq("pasture_id", pastureId)
+                            .eq("batch_id", batchId)
+                            .between("collect_time", startTime, endTime)
+                            .orderByAsc("collect_time")
+            );
+            
+            // 聚合气象数据（每3条合成一条）
+            List<AgricultureWeatherData> weatherMergedList = mergeWeatherDataByThree(weatherDataList);
+            // 计算气象平均值（对聚合后的数据做平均）
+            weatherAvg = calculateWeatherAvg(weatherMergedList);
+        }
+        
+        return weatherAvg;
+    }
+
+    /**
+     * 从小时统计数据计算平均值
+     */
+    private Map<String, Double> calculateAvgFromHourlyStats(List<AgricultureWeatherHourlyStats> stats) {
+        Map<String, Double> avg = new HashMap<>();
+        
+        // 过滤掉全为0的无效数据
+        List<AgricultureWeatherHourlyStats> validStats = stats.stream()
+                .filter(stat -> {
+                    boolean allZero = (stat.getAvgTemperature() == null || stat.getAvgTemperature().doubleValue() == 0)
+                            && (stat.getAvgHumidity() == null || stat.getAvgHumidity().doubleValue() == 0)
+                            && (stat.getAvgWindSpeed() == null || stat.getAvgWindSpeed().doubleValue() == 0)
+                            && (stat.getAvgLightIntensity() == null || stat.getAvgLightIntensity().doubleValue() == 0);
+                    return !allZero;
+                })
+                .collect(Collectors.toList());
+        
+        if (validStats.isEmpty()) {
+            avg.put("temperature", 0.0);
+            avg.put("humidity", 0.0);
+            avg.put("windSpeed", 0.0);
+            avg.put("lightIntensity", 0.0);
+            return avg;
+        }
+        
+        // 计算平均值
+        avg.put("temperature", validStats.stream()
+                .map(AgricultureWeatherHourlyStats::getAvgTemperature)
+                .filter(val -> val != null && val.doubleValue() != 0)
+                .mapToDouble(val -> val.doubleValue())
+                .average().orElse(0));
+        
+        avg.put("humidity", validStats.stream()
+                .map(AgricultureWeatherHourlyStats::getAvgHumidity)
+                .filter(val -> val != null && val.doubleValue() != 0)
+                .mapToDouble(val -> val.doubleValue())
+                .average().orElse(0));
+        
+        avg.put("windSpeed", validStats.stream()
+                .map(AgricultureWeatherHourlyStats::getAvgWindSpeed)
+                .filter(Objects::nonNull)
+                .mapToDouble(val -> val.doubleValue())
+                .average().orElse(0));
+        
+        avg.put("lightIntensity", validStats.stream()
+                .map(AgricultureWeatherHourlyStats::getAvgLightIntensity)
+                .filter(val -> val != null && val.doubleValue() != 0)
+                .mapToDouble(val -> val.doubleValue())
+                .average().orElse(0));
+        
+        return avg;
+    }
+
+    /**
+     * 从日统计数据计算平均值
+     */
+    private Map<String, Double> calculateAvgFromDailyStats(List<AgricultureWeatherDailyStats> stats) {
+        Map<String, Double> avg = new HashMap<>();
+        
+        // 过滤掉全为0的无效数据
+        List<AgricultureWeatherDailyStats> validStats = stats.stream()
+                .filter(stat -> {
+                    boolean allZero = (stat.getAvgTemperature() == null || stat.getAvgTemperature().doubleValue() == 0)
+                            && (stat.getAvgHumidity() == null || stat.getAvgHumidity().doubleValue() == 0)
+                            && (stat.getAvgWindSpeed() == null || stat.getAvgWindSpeed().doubleValue() == 0)
+                            && (stat.getAvgLightIntensity() == null || stat.getAvgLightIntensity().doubleValue() == 0);
+                    return !allZero;
+                })
+                .collect(Collectors.toList());
+        
+        if (validStats.isEmpty()) {
+            avg.put("temperature", 0.0);
+            avg.put("humidity", 0.0);
+            avg.put("windSpeed", 0.0);
+            avg.put("lightIntensity", 0.0);
+            return avg;
+        }
+        
+        // 计算平均值
+        avg.put("temperature", validStats.stream()
+                .map(AgricultureWeatherDailyStats::getAvgTemperature)
+                .filter(val -> val != null && val.doubleValue() != 0)
+                .mapToDouble(val -> val.doubleValue())
+                .average().orElse(0));
+        
+        avg.put("humidity", validStats.stream()
+                .map(AgricultureWeatherDailyStats::getAvgHumidity)
+                .filter(val -> val != null && val.doubleValue() != 0)
+                .mapToDouble(val -> val.doubleValue())
+                .average().orElse(0));
+        
+        avg.put("windSpeed", validStats.stream()
+                .map(AgricultureWeatherDailyStats::getAvgWindSpeed)
+                .filter(Objects::nonNull)
+                .mapToDouble(val -> val.doubleValue())
+                .average().orElse(0));
+        
+        avg.put("lightIntensity", validStats.stream()
+                .map(AgricultureWeatherDailyStats::getAvgLightIntensity)
+                .filter(val -> val != null && val.doubleValue() != 0)
+                .mapToDouble(val -> val.doubleValue())
+                .average().orElse(0));
+        
+        return avg;
     }
 
     /**
