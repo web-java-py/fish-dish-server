@@ -2,6 +2,7 @@ package com.server.service.impl;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
@@ -18,6 +19,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.server.mapper.AgricultureWeatherDataMapper;
 import com.server.service.AgricultureWeatherDataService;
+import com.server.domain.AgricultureWeatherDailyStats;
+import com.server.domain.AgricultureWeatherHourlyStats;
+import com.server.mapper.AgricultureWeatherDailyStatsMapper;
+import com.server.mapper.AgricultureWeatherHourlyStatsMapper;
+import com.server.service.AgricultureWeatherDailyStatsService;
+import com.server.service.AgricultureWeatherHourlyStatsService;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 
 /**
  * 气象数据Service业务层处理
@@ -30,6 +38,12 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
 {
     @Autowired
     private AgricultureWeatherDataMapper agricultureWeatherDataMapper;
+
+    @Autowired
+    private AgricultureWeatherDailyStatsService dailyStatsService;
+
+    @Autowired
+    private AgricultureWeatherHourlyStatsService hourlyStatsService;
 
     /**
      * 查询气象数据
@@ -105,6 +119,137 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
 
     @Override
     public Map<String, Object> getTrendData(String pastureId, String batchId, String range) {
+        // 优先查询统计表，如果没有数据再查询原始表
+        if ("day".equals(range)) {
+            return getHourlyTrendData(pastureId, batchId);
+        } else {
+            return getDailyTrendData(pastureId, batchId, range);
+        }
+    }
+
+    /**
+     * 获取小时趋势数据（优先查询统计表）
+     */
+    private Map<String, Object> getHourlyTrendData(String pastureId, String batchId) {
+        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime start = now.minusHours(23).withMinute(0).withSecond(0).withNano(0);
+        
+        // 先查询统计表
+        List<AgricultureWeatherHourlyStats> stats = hourlyStatsService.getHourlyStats(pastureId, batchId, start, now);
+        
+        if (!stats.isEmpty()) {
+            return buildTrendDataFromHourlyStats(stats);
+        }
+        
+        // 统计表没有数据，查询原始表
+        return getTrendDataFromRawData(pastureId, batchId, "day");
+    }
+
+    /**
+     * 获取日趋势数据（优先查询统计表）
+     */
+    private Map<String, Object> getDailyTrendData(String pastureId, String batchId, String range) {
+        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime start;
+        
+        if ("week".equals(range)) {
+            start = now.minusDays(6).withHour(0).withMinute(0).withSecond(0).withNano(0);
+        } else { // month
+            start = now.minusDays(29).withHour(0).withMinute(0).withSecond(0).withNano(0);
+        }
+        
+        // 先查询统计表
+        List<AgricultureWeatherDailyStats> stats = dailyStatsService.getDailyStats(pastureId, batchId, start, now);
+        
+        if (!stats.isEmpty()) {
+            return buildTrendDataFromDailyStats(stats, range);
+        }
+        
+        // 统计表没有数据，查询原始表
+        return getTrendDataFromRawData(pastureId, batchId, range);
+    }
+
+    /**
+     * 从小时统计表构建趋势数据
+     */
+    private Map<String, Object> buildTrendDataFromHourlyStats(List<AgricultureWeatherHourlyStats> stats) {
+        // 1. 生成24小时xAxis和默认值
+        List<String> xAxis = new ArrayList<>();
+        List<Double> temperature = new ArrayList<>(Collections.nCopies(24, 0.0));
+        List<Double> humidity = new ArrayList<>(Collections.nCopies(24, 0.0));
+        List<Double> windSpeed = new ArrayList<>(Collections.nCopies(24, 0.0));
+        List<Double> lightIntensity = new ArrayList<>(Collections.nCopies(24, 0.0));
+
+        for (int i = 0; i < 24; i++) {
+            xAxis.add(String.format("%02d:00", i));
+        }
+
+        // 2. 用有数据的小时覆盖
+        for (AgricultureWeatherHourlyStats stat : stats) {
+            int hour = stat.getStatHour().getHour();
+            temperature.set(hour, stat.getAvgTemperature() == null ? 0.0 : stat.getAvgTemperature().doubleValue());
+            humidity.set(hour, stat.getAvgHumidity() == null ? 0.0 : stat.getAvgHumidity().doubleValue());
+            windSpeed.set(hour, stat.getAvgWindSpeed() == null ? 0.0 : stat.getAvgWindSpeed().doubleValue());
+            lightIntensity.set(hour, stat.getAvgLightIntensity() == null ? 0.0 : stat.getAvgLightIntensity().doubleValue());
+        }
+
+        Map<String, Object> result = new HashMap<>();
+        result.put("xAxis", xAxis);
+        result.put("temperature", temperature);
+        result.put("humidity", humidity);
+        result.put("windSpeed", windSpeed);
+        result.put("lightIntensity", lightIntensity);
+        return result;
+    }
+
+    /**
+     * 从日统计表构建趋势数据
+     */
+    private Map<String, Object> buildTrendDataFromDailyStats(List<AgricultureWeatherDailyStats> stats, String range) {
+        int days = "week".equals(range) ? 7 : 30;
+
+        List<String> xAxis = new ArrayList<>();
+        List<Double> temperature = new ArrayList<>(Collections.nCopies(days, 0.0));
+        List<Double> humidity = new ArrayList<>(Collections.nCopies(days, 0.0));
+        List<Double> windSpeed = new ArrayList<>(Collections.nCopies(days, 0.0));
+        List<Double> lightIntensity = new ArrayList<>(Collections.nCopies(days, 0.0));
+
+        LocalDate endDate = LocalDate.now();
+        LocalDate startDate = endDate.minusDays(days - 1);
+
+        Map<String, AgricultureWeatherDailyStats> statMap = new HashMap<>();
+        for (AgricultureWeatherDailyStats stat : stats) {
+            String key = stat.getStatDate().format(DateTimeFormatter.ofPattern("MM-dd"));
+            statMap.put(key, stat);
+        }
+
+        for (int i = 0; i < days; i++) {
+            LocalDate date = startDate.plusDays(i);
+            String key = date.format(DateTimeFormatter.ofPattern("MM-dd"));
+            xAxis.add(key);
+
+            AgricultureWeatherDailyStats stat = statMap.get(key);
+            if (stat != null) {
+                temperature.set(i, stat.getAvgTemperature() == null ? 0.0 : stat.getAvgTemperature().doubleValue());
+                humidity.set(i, stat.getAvgHumidity() == null ? 0.0 : stat.getAvgHumidity().doubleValue());
+                windSpeed.set(i, stat.getAvgWindSpeed() == null ? 0.0 : stat.getAvgWindSpeed().doubleValue());
+                lightIntensity.set(i, stat.getAvgLightIntensity() == null ? 0.0 : stat.getAvgLightIntensity().doubleValue());
+            }
+        }
+
+        Map<String, Object> result = new HashMap<>();
+        result.put("xAxis", xAxis);
+        result.put("temperature", temperature);
+        result.put("humidity", humidity);
+        result.put("windSpeed", windSpeed);
+        result.put("lightIntensity", lightIntensity);
+        return result;
+    }
+
+    /**
+     * 从原始数据获取趋势数据
+     */
+    private Map<String, Object> getTrendDataFromRawData(String pastureId, String batchId, String range) {
         // 1. 计算时间范围
         LocalDateTime now = LocalDateTime.now();
         LocalDateTime start;
@@ -287,4 +432,5 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
         return new BigDecimal(value).setScale(scale, RoundingMode.HALF_UP).doubleValue();
     }
 
+    private double round2(double v) { return Math.round(v * 100.0) / 100.0; }
 }
