@@ -1,6 +1,7 @@
 package com.server.domain;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -9,54 +10,55 @@ import lombok.Data;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.util.Date;
 
 @ApiModel(value = "采摘信息")
 @Data
+@TableName(value = "agriculture_partition_food")
 public class AgriculturePartitionFood implements Serializable {
 
     @ApiModelProperty(value = "id-溯源码", example = "123")
+    @TableField(value = "id")
     private String id;
 
     @ApiModelProperty(value = "分区id", example = "123", required = true)
     @NotBlank(message = "分区id为空")
+    @TableField(value = "ia_partition_id")
     private String iaPartitionId;
 
-    @ApiModelProperty(value = "日期", required = true)
-    @NotNull(message = "日期为空")
+    @ApiModelProperty(value = "日期")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    @TableField(value = "date")
     private Date date;
 
 
-    @ApiModelProperty(value = "食品名称", example = "生菜", required = true)
-    @NotBlank(message = "食品名称为空")
+    @ApiModelProperty(value = "食品名称", example = "生菜")
+    @TableField(value = "name")
     private String name;
+    
+    @ApiModelProperty(value = "蔬菜重量", example = "12322")
+    @TableField(value = "cuisine_weight")
+    private Double cuisineWeight;
+    
+    @ApiModelProperty(value = "鱼类重量", example = "12322")
+    @TableField(value = "fish_weight")
+    private Double fishWeight;
 
-    //蔬菜重量
-    @ApiModelProperty(value = "蔬菜重量", example = "12322", required = true)
-    @NotNull(message = "蔬菜重量为空")
-    private BigDecimal cuisineWeight;
-
-    //鱼类重量
-    @ApiModelProperty(value = "鱼类重量", example = "12322", required = true)
-    @NotNull(message = "鱼类重量为空")
-    private BigDecimal fishWeight;
-
-    @ApiModelProperty(value = "食品质量（0 不及格、1 及格 2 优秀）", example = "1", required = true)
-    @NotNull(message = "食品质量为空")
-    private Long status;
-
-    @ApiModelProperty(value = "食品质量（0 不及格、1 及格 2 优秀）", example = "1", required = true)
-    @NotNull(message = "蔬菜质量为空")
-    private Long cuisineStatus;
-
-    @ApiModelProperty(value = "食品质量（0 不及格、1 及格 2 优秀）", example = "1", required = true)
-    @NotNull(message = "鱼类质量为空")
-    private Long fishStatus;
+    @ApiModelProperty(value = "食品质量（0 不及格、1 及格 2 优秀）", example = "1")
+    @TableField(value = "status")
+    private Integer status;
+    
+    @ApiModelProperty(value = "蔬菜食品质量（0 不及格、1 及格 2 优秀）")
+    @TableField(value = "cuisine_status")
+    private Integer cuisineStatus;
+    
+    @ApiModelProperty(value = "鱼类食品质量（0 不及格、1 及格 2 优秀）")
+    @TableField(value = "fish_status")
+    private Integer fishStatus;
+    
     //备注
-    @ApiModelProperty(value = "备注", example = "test", required = true)
-    @NotBlank(message = "备注为空")
+    @ApiModelProperty(value = "备注", example = "test")
+    @TableField(value = "description")
     private String description;
 
     @ApiModelProperty(value = "二维码", example = "test")
