@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="新加字段 将新增分区信息的种质,鱼和蔬菜分开,可以同时新增或者单独新增 &#10;批次任务按钮的任务做升序处理">
+    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="1新加字段 fishDish 用于判断鱼菜的任务处理，0是鱼1是菜 农资和饵料动态渲染&#10;2 任务处理按钮里面任务休息各个查询添加查询条件">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureBatchTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureBatchTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCostBaitServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCostBaitServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCostEmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCostEmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCostMachineServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCostMachineServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCropBatchServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureCropBatchServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureCropBatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureCropBatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgriculturePartitionFood.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgriculturePartitionFood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/dto/AgricultureCropBatchDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/dto/AgricultureCropBatchDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/dto/AgriculturePastureDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/dto/AgriculturePastureDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/mapper/AgricultureCropBatchMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/mapper/AgricultureCropBatchMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgriculturePastureServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgriculturePastureServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-info.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-user.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-user.log" afterDir="false" />
@@ -74,7 +75,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.ServerApplication.executor": "Debug",
+    "Application.ServerApplication.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "zbb",
     "kotlin-language-version-configured": "true",
@@ -262,7 +264,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751965047238</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="1新加字段 fishDish 用于判断鱼菜的任务处理，0是鱼1是菜 农资和饵料动态渲染&#10;2 任务处理按钮里面任务休息各个查询添加查询条件">
+      <option name="closed" value="true" />
+      <created>1752055519749</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1752055519749</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,7 +310,8 @@
     <MESSAGE value="日志" />
     <MESSAGE value="删除分区同时删除对应的任务" />
     <MESSAGE value="新加字段 将新增分区信息的种质,鱼和蔬菜分开,可以同时新增或者单独新增 &#10;批次任务按钮的任务做升序处理" />
-    <option name="LAST_COMMIT_MESSAGE" value="新加字段 将新增分区信息的种质,鱼和蔬菜分开,可以同时新增或者单独新增 &#10;批次任务按钮的任务做升序处理" />
+    <MESSAGE value="1新加字段 fishDish 用于判断鱼菜的任务处理，0是鱼1是菜 农资和饵料动态渲染&#10;2 任务处理按钮里面任务休息各个查询添加查询条件" />
+    <option name="LAST_COMMIT_MESSAGE" value="1新加字段 fishDish 用于判断鱼菜的任务处理，0是鱼1是菜 农资和饵料动态渲染&#10;2 任务处理按钮里面任务休息各个查询添加查询条件" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

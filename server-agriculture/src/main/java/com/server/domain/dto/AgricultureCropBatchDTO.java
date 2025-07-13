@@ -21,6 +21,7 @@ public class AgricultureCropBatchDTO {
     private Long pastureId;            // 从 agriculture_crop_batch 表获取
     private LocalDateTime startTime;
     private double cropArea;       // 从 agriculture_crop_batch 表获取
+    private double fishArea;
     private String contractAddr;       // 从 agriculture_crop_batch 表获取
     @TableField(value = "create_time",fill = FieldFill.INSERT)
     private LocalDate createTime;           // 从 agriculture_crop_batch 表获取

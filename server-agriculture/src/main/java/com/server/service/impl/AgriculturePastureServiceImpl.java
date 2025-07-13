@@ -188,6 +188,11 @@ public class AgriculturePastureServiceImpl extends ServiceImpl<AgriculturePastur
                     //mapToLong方法将流中的每个作物批次对象（cb）映射到一个long值并调用longValue()来将其转换为基本类型long
                 .mapToLong(cb -> cb.getCropArea().longValue())
                 .sum();
+            // 统计所有分区的鱼塘面积总和
+            long totalFishArea = cropBatches.stream()
+                .filter(cb -> cb.getFishArea() != null)
+                .mapToLong(cb -> cb.getFishArea().longValue())
+                .sum();
             // area和remainingArea为字符串类型，需做类型转换
             long area = 0L;
             try {
@@ -197,8 +202,8 @@ public class AgriculturePastureServiceImpl extends ServiceImpl<AgriculturePastur
                 // 如果转换失败，默认面积为0
                 area = 0L;
             }
-            // 计算剩余面积 = 大棚面积 - 分区总面积
-            long remaining = area - totalCropArea;
+            // 计算剩余面积 = 大棚面积 - crop_area 总和 - fish_area 总和
+            long remaining = area - totalCropArea - totalFishArea;
             // 构建DTO对象，封装结果
             AgriculturePastureDTO dto = new AgriculturePastureDTO();
             dto.setId(pasture.getId()); // 设置大棚ID
@@ -208,6 +213,7 @@ public class AgriculturePastureServiceImpl extends ServiceImpl<AgriculturePastur
             dto.setCrop_area(totalCropArea); // 设置分区总面积
             dto.setBig_breeding_quantity(pasture.getBigBreedingQuantity()); // 设置最大分区数量
             dto.setBreeding_quantity(pasture.getBreedingQuantity()); // 设置当前分区数量
+            dto.setFish_area(totalFishArea); // 设置鱼塘总面积
             // 添加到结果列表
             result.add(dto);
         }

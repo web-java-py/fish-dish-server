@@ -50,6 +50,10 @@ public class AgricultureCropBatch implements Serializable {
     @ApiModelProperty(value="大棚ID")
     private Long pastureId;
 
+    @TableField(value="fish_area")
+    @ApiModelProperty(value="养殖面积(亩)")
+    private Double fishArea;
+
     @TableField(value="crop_area")
     @ApiModelProperty(value="种植面积(亩)")
     private Double cropArea;

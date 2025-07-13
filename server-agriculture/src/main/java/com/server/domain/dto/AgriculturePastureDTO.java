@@ -13,6 +13,7 @@ public class AgriculturePastureDTO {
     private String area;   //大棚面积
     private String remaining_area;   //大棚剩余面积
     private Long crop_area;   //agriculture_crop_batch表的种植面积
+    private Long fish_area;
     private Long big_breeding_quantity; //最大分区数量
     private Long breeding_quantity;  //当前分区数量
 }

@@ -32,14 +32,28 @@ public class AgriculturePartitionFood implements Serializable {
     @ApiModelProperty(value = "食品名称", example = "生菜", required = true)
     @NotBlank(message = "食品名称为空")
     private String name;
-    //重量
-    @ApiModelProperty(value = "重量", example = "12322", required = true)
-    @NotNull(message = "重量为空")
-    private BigDecimal weight;
+
+    //蔬菜重量
+    @ApiModelProperty(value = "蔬菜重量", example = "12322", required = true)
+    @NotNull(message = "蔬菜重量为空")
+    private BigDecimal cuisineWeight;
+
+    //鱼类重量
+    @ApiModelProperty(value = "鱼类重量", example = "12322", required = true)
+    @NotNull(message = "鱼类重量为空")
+    private BigDecimal fishWeight;
 
     @ApiModelProperty(value = "食品质量（0 不及格、1 及格 2 优秀）", example = "1", required = true)
     @NotNull(message = "食品质量为空")
     private Long status;
+
+    @ApiModelProperty(value = "食品质量（0 不及格、1 及格 2 优秀）", example = "1", required = true)
+    @NotNull(message = "蔬菜质量为空")
+    private Long cuisineStatus;
+
+    @ApiModelProperty(value = "食品质量（0 不及格、1 及格 2 优秀）", example = "1", required = true)
+    @NotNull(message = "鱼类质量为空")
+    private Long fishStatus;
     //备注
     @ApiModelProperty(value = "备注", example = "test", required = true)
     @NotBlank(message = "备注为空")
