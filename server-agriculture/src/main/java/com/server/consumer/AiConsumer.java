@@ -75,9 +75,11 @@ public class AiConsumer {
                     .content("您的AI助手已经完成种类作业流程的处理啦！")
                     .build();
             mqSocketServer.sendToAllClient(JSON.toJSONString(socketResponse));
-            redisCache.deleteObject(AI_JOB_NOT_REPEAT_SUBMIT + aiMessageVO.getId());
         } catch (Exception e) {
             log.error(e.getMessage());
+        } finally {
+            redisCache.deleteObject(AI_JOB_NOT_REPEAT_SUBMIT + aiMessageVO.getId());
+
         }
     }
 
@@ -147,9 +149,10 @@ public class AiConsumer {
                     .content("您的AI助手已经完成种类智能报告的处理啦！")
                     .build();
             mqSocketServer.sendToAllClient(JSON.toJSONString(socketResponse));
-            redisCache.deleteObject(AI_JOB_NOT_REPEAT_SUBMIT + aiMessageVO.getId());
         } catch (Exception e) {
             log.error(e.getMessage());
+        } finally {
+            redisCache.deleteObject(AI_JOB_NOT_REPEAT_SUBMIT + aiMessageVO.getId());
         }
     }
 }
