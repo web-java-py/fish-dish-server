@@ -128,93 +128,90 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
     }
 
     /**
-     * 获取小时趋势数据（优先查询统计表）
+     * 获取小时趋势数据（优先查询统计表，补充当前小时数据）
      */
     private Map<String, Object> getHourlyTrendData(String pastureId, String batchId) {
         LocalDateTime now = LocalDateTime.now();
         LocalDateTime start = now.minusHours(23).withMinute(0).withSecond(0).withNano(0);
         
-        // 先查询统计表
+        // 查询统计表数据（历史数据）
         List<AgricultureWeatherHourlyStats> stats = hourlyStatsService.getHourlyStats(pastureId, batchId, start, now);
         
-        if (!stats.isEmpty()) {
-            return buildTrendDataFromHourlyStats(stats);
+        // 查询当前小时的原始数据
+        LocalDateTime currentHour = now.withMinute(0).withSecond(0).withNano(0);
+        List<AgricultureWeatherData> currentHourData = this.lambdaQuery()
+                .eq(AgricultureWeatherData::getPastureId, pastureId)
+                .eq(AgricultureWeatherData::getBatchId, batchId)
+                .ge(AgricultureWeatherData::getCollectTime, currentHour)
+                .lt(AgricultureWeatherData::getCollectTime, currentHour.plusHours(1))
+                .list();
+        
+        // 如果有当前小时的数据，计算平均值并添加到统计列表中
+        if (!currentHourData.isEmpty()) {
+            AgricultureWeatherHourlyStats currentHourStats = calculateHourlyStatsFromRawData(currentHourData, currentHour);
+            stats.add(currentHourStats);
         }
         
-        // 统计表没有数据，查询原始表
-        return getTrendDataFromRawData(pastureId, batchId, "day");
+        return buildTrendDataFromHourlyStats(stats);
     }
 
     /**
-     * 获取日趋势数据（优先查询统计表）
+     * 获取日趋势数据（优先查询统计表，补充今天的数据）
      */
     private Map<String, Object> getDailyTrendData(String pastureId, String batchId, String range) {
         LocalDateTime now = LocalDateTime.now();
         LocalDateTime start;
+        int days;
         
         if ("week".equals(range)) {
             start = now.minusDays(6).withHour(0).withMinute(0).withSecond(0).withNano(0);
+            days = 7;
         } else { // month
             start = now.minusDays(29).withHour(0).withMinute(0).withSecond(0).withNano(0);
+            days = 30;
         }
         
-        // 先查询统计表
+        // 查询统计表数据（历史数据）
         List<AgricultureWeatherDailyStats> stats = dailyStatsService.getDailyStats(pastureId, batchId, start, now);
         
-        if (!stats.isEmpty()) {
-            return buildTrendDataFromDailyStats(stats, range);
+        // 查询今天的原始数据
+        LocalDate today = now.toLocalDate();
+        List<AgricultureWeatherData> todayData = this.lambdaQuery()
+                .eq(AgricultureWeatherData::getPastureId, pastureId)
+                .eq(AgricultureWeatherData::getBatchId, batchId)
+                .ge(AgricultureWeatherData::getCollectTime, today.atStartOfDay())
+                .le(AgricultureWeatherData::getCollectTime, today.atTime(23, 59, 59, 999999999))
+                .list();
+        
+        // 如果有今天的数据，计算平均值并添加到统计列表中
+        if (!todayData.isEmpty()) {
+            AgricultureWeatherDailyStats todayStats = calculateDailyStatsFromRawData(todayData, today);
+            stats.add(todayStats);
         }
         
-        // 统计表没有数据，查询原始表
-        return getTrendDataFromRawData(pastureId, batchId, range);
+        return buildTrendDataFromDailyStats(stats, range, start, days);
     }
 
     /**
      * 从小时统计表构建趋势数据
      */
     private Map<String, Object> buildTrendDataFromHourlyStats(List<AgricultureWeatherHourlyStats> stats) {
-        LocalDateTime now = LocalDateTime.now();
-        LocalDateTime start = now.minusHours(23).withMinute(0).withSecond(0).withNano(0);
-        
-        // 1. 生成实际时间范围的xAxis和默认值
         List<String> xAxis = new ArrayList<>();
         List<Double> temperature = new ArrayList<>();
         List<Double> humidity = new ArrayList<>();
         List<Double> windSpeed = new ArrayList<>();
         List<Double> lightIntensity = new ArrayList<>();
-    
-        // 生成从start到now的每个小时
-        LocalDateTime currentHour = start;
-        while (!currentHour.isAfter(now)) {
-            xAxis.add(currentHour.format(DateTimeFormatter.ofPattern("HH:mm")));
-            temperature.add(0.0);
-            humidity.add(0.0);
-            windSpeed.add(0.0);
-            lightIntensity.add(0.0);
-            currentHour = currentHour.plusHours(1);
-        }
-    
-        // 2. 用有数据的小时覆盖
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:00");
+        
         for (AgricultureWeatherHourlyStats stat : stats) {
-            // 找到对应的索引位置
-            int index = -1;
-            for (int i = 0; i < xAxis.size(); i++) {
-                LocalDateTime hourTime = start.plusHours(i);
-                if (hourTime.getHour() == stat.getStatHour().getHour() && 
-                    hourTime.toLocalDate().equals(stat.getStatHour().toLocalDate())) {
-                    index = i;
-                    break;
-                }
-            }
-            
-            if (index >= 0 && index < xAxis.size()) {
-                temperature.set(index, stat.getAvgTemperature() == null ? 0.0 : stat.getAvgTemperature().doubleValue());
-                humidity.set(index, stat.getAvgHumidity() == null ? 0.0 : stat.getAvgHumidity().doubleValue());
-                windSpeed.set(index, stat.getAvgWindSpeed() == null ? 0.0 : stat.getAvgWindSpeed().doubleValue());
-                lightIntensity.set(index, stat.getAvgLightIntensity() == null ? 0.0 : stat.getAvgLightIntensity().doubleValue());
-            }
+            xAxis.add(stat.getStatHour().format(formatter));
+            temperature.add(stat.getAvgTemperature() != null ? stat.getAvgTemperature().doubleValue() : 0.0);
+            humidity.add(stat.getAvgHumidity() != null ? stat.getAvgHumidity().doubleValue() : 0.0);
+            windSpeed.add(stat.getAvgWindSpeed() != null ? stat.getAvgWindSpeed().doubleValue() : 0.0);
+            lightIntensity.add(stat.getAvgLightIntensity() != null ? stat.getAvgLightIntensity().doubleValue() : 0.0);
         }
-    
+
         Map<String, Object> result = new HashMap<>();
         result.put("xAxis", xAxis);
         result.put("temperature", temperature);
@@ -227,17 +224,17 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
     /**
      * 从日统计表构建趋势数据
      */
-    private Map<String, Object> buildTrendDataFromDailyStats(List<AgricultureWeatherDailyStats> stats, String range) {
-        int days = "week".equals(range) ? 7 : 30;
+    private Map<String, Object> buildTrendDataFromDailyStats(List<AgricultureWeatherDailyStats> stats, String range, LocalDateTime start, int days) {
+        int expectedDays = "week".equals(range) ? 7 : 30;
 
         List<String> xAxis = new ArrayList<>();
-        List<Double> temperature = new ArrayList<>(Collections.nCopies(days, 0.0));
-        List<Double> humidity = new ArrayList<>(Collections.nCopies(days, 0.0));
-        List<Double> windSpeed = new ArrayList<>(Collections.nCopies(days, 0.0));
-        List<Double> lightIntensity = new ArrayList<>(Collections.nCopies(days, 0.0));
+        List<Double> temperature = new ArrayList<>(Collections.nCopies(expectedDays, 0.0));
+        List<Double> humidity = new ArrayList<>(Collections.nCopies(expectedDays, 0.0));
+        List<Double> windSpeed = new ArrayList<>(Collections.nCopies(expectedDays, 0.0));
+        List<Double> lightIntensity = new ArrayList<>(Collections.nCopies(expectedDays, 0.0));
 
         LocalDate endDate = LocalDate.now();
-        LocalDate startDate = endDate.minusDays(days - 1);
+        LocalDate startDate = endDate.minusDays(expectedDays - 1);
 
         Map<String, AgricultureWeatherDailyStats> statMap = new HashMap<>();
         for (AgricultureWeatherDailyStats stat : stats) {
@@ -245,7 +242,7 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
             statMap.put(key, stat);
         }
 
-        for (int i = 0; i < days; i++) {
+        for (int i = 0; i < expectedDays; i++) {
             LocalDate date = startDate.plusDays(i);
             String key = date.format(DateTimeFormatter.ofPattern("MM-dd"));
             xAxis.add(key);
@@ -447,6 +444,91 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
         if (validValues.isEmpty()) return null;
         double avg = validValues.stream().mapToDouble(Double::doubleValue).average().orElse(0);
         return round(avg, 2);
+    }
+
+    /**
+     * 从原始数据计算小时统计数据
+     */
+    private AgricultureWeatherHourlyStats calculateHourlyStatsFromRawData(List<AgricultureWeatherData> dataList, LocalDateTime hour) {
+        if (dataList.isEmpty()) {
+            return null;
+        }
+        
+        // 合并同采集时间的数据
+        List<AgricultureWeatherData> mergedData = mergeSameTimeData(dataList);
+        
+        // 计算平均值
+        BigDecimal avgTemperature = calculateAverage(mergedData, AgricultureWeatherData::getTemperature);
+        BigDecimal avgHumidity = calculateAverage(mergedData, AgricultureWeatherData::getHumidity);
+        BigDecimal avgWindSpeed = calculateAverage(mergedData, AgricultureWeatherData::getWindSpeed);
+        BigDecimal avgLightIntensity = calculateAverage(mergedData, AgricultureWeatherData::getLightIntensity);
+        BigDecimal avgRainfall = calculateAverage(mergedData, AgricultureWeatherData::getRainfall);
+        BigDecimal avgAirPressure = calculateAverage(mergedData, AgricultureWeatherData::getAirPressure);
+        
+        return AgricultureWeatherHourlyStats.builder()
+                .pastureId(dataList.get(0).getPastureId())
+                .batchId(dataList.get(0).getBatchId())
+                .statHour(hour)
+                .avgTemperature(avgTemperature)
+                .avgHumidity(avgHumidity)
+                .avgWindSpeed(avgWindSpeed)
+                .avgLightIntensity(avgLightIntensity)
+                .avgRainfall(avgRainfall)
+                .avgAirPressure(avgAirPressure)
+                .dataCount(dataList.size())
+                .createTime(LocalDateTime.now())
+                .build();
+    }
+
+    /**
+     * 从原始数据计算日统计数据
+     */
+    private AgricultureWeatherDailyStats calculateDailyStatsFromRawData(List<AgricultureWeatherData> dataList, LocalDate date) {
+        if (dataList.isEmpty()) {
+            return null;
+        }
+        
+        // 合并同采集时间的数据
+        List<AgricultureWeatherData> mergedData = mergeSameTimeData(dataList);
+        
+        // 计算平均值
+        BigDecimal avgTemperature = calculateAverage(mergedData, AgricultureWeatherData::getTemperature);
+        BigDecimal avgHumidity = calculateAverage(mergedData, AgricultureWeatherData::getHumidity);
+        BigDecimal avgWindSpeed = calculateAverage(mergedData, AgricultureWeatherData::getWindSpeed);
+        BigDecimal avgLightIntensity = calculateAverage(mergedData, AgricultureWeatherData::getLightIntensity);
+        BigDecimal avgRainfall = calculateAverage(mergedData, AgricultureWeatherData::getRainfall);
+        BigDecimal avgAirPressure = calculateAverage(mergedData, AgricultureWeatherData::getAirPressure);
+        
+        return AgricultureWeatherDailyStats.builder()
+                .pastureId(dataList.get(0).getPastureId())
+                .batchId(dataList.get(0).getBatchId())
+                .statDate(date)
+                .avgTemperature(avgTemperature)
+                .avgHumidity(avgHumidity)
+                .avgWindSpeed(avgWindSpeed)
+                .avgLightIntensity(avgLightIntensity)
+                .avgRainfall(avgRainfall)
+                .avgAirPressure(avgAirPressure)
+                .dataCount(dataList.size())
+                .createTime(LocalDateTime.now())
+                .build();
+    }
+
+    /**
+     * 计算平均值（用于统计计算）
+     */
+    private BigDecimal calculateAverage(List<AgricultureWeatherData> dataList, Function<AgricultureWeatherData, Double> getter) {
+        List<Double> validValues = dataList.stream()
+                .map(getter)
+                .filter(value -> value != null && value != 0)
+                .collect(Collectors.toList());
+        
+        if (validValues.isEmpty()) {
+            return BigDecimal.ZERO;
+        }
+        
+        double avg = validValues.stream().mapToDouble(Double::doubleValue).average().orElse(0);
+        return BigDecimal.valueOf(avg).setScale(2, RoundingMode.HALF_UP);
     }
 
     private Double round(Double value, int scale) {
