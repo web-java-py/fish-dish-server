@@ -173,26 +173,48 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
      * 从小时统计表构建趋势数据
      */
     private Map<String, Object> buildTrendDataFromHourlyStats(List<AgricultureWeatherHourlyStats> stats) {
-        // 1. 生成24小时xAxis和默认值
+        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime start = now.minusHours(23).withMinute(0).withSecond(0).withNano(0);
+        
+        // 1. 生成实际时间范围的xAxis和默认值
         List<String> xAxis = new ArrayList<>();
-        List<Double> temperature = new ArrayList<>(Collections.nCopies(24, 0.0));
-        List<Double> humidity = new ArrayList<>(Collections.nCopies(24, 0.0));
-        List<Double> windSpeed = new ArrayList<>(Collections.nCopies(24, 0.0));
-        List<Double> lightIntensity = new ArrayList<>(Collections.nCopies(24, 0.0));
-
-        for (int i = 0; i < 24; i++) {
-            xAxis.add(String.format("%02d:00", i));
+        List<Double> temperature = new ArrayList<>();
+        List<Double> humidity = new ArrayList<>();
+        List<Double> windSpeed = new ArrayList<>();
+        List<Double> lightIntensity = new ArrayList<>();
+    
+        // 生成从start到now的每个小时
+        LocalDateTime currentHour = start;
+        while (!currentHour.isAfter(now)) {
+            xAxis.add(currentHour.format(DateTimeFormatter.ofPattern("HH:mm")));
+            temperature.add(0.0);
+            humidity.add(0.0);
+            windSpeed.add(0.0);
+            lightIntensity.add(0.0);
+            currentHour = currentHour.plusHours(1);
         }
-
+    
         // 2. 用有数据的小时覆盖
         for (AgricultureWeatherHourlyStats stat : stats) {
-            int hour = stat.getStatHour().getHour();
-            temperature.set(hour, stat.getAvgTemperature() == null ? 0.0 : stat.getAvgTemperature().doubleValue());
-            humidity.set(hour, stat.getAvgHumidity() == null ? 0.0 : stat.getAvgHumidity().doubleValue());
-            windSpeed.set(hour, stat.getAvgWindSpeed() == null ? 0.0 : stat.getAvgWindSpeed().doubleValue());
-            lightIntensity.set(hour, stat.getAvgLightIntensity() == null ? 0.0 : stat.getAvgLightIntensity().doubleValue());
+            // 找到对应的索引位置
+            int index = -1;
+            for (int i = 0; i < xAxis.size(); i++) {
+                LocalDateTime hourTime = start.plusHours(i);
+                if (hourTime.getHour() == stat.getStatHour().getHour() && 
+                    hourTime.toLocalDate().equals(stat.getStatHour().toLocalDate())) {
+                    index = i;
+                    break;
+                }
+            }
+            
+            if (index >= 0 && index < xAxis.size()) {
+                temperature.set(index, stat.getAvgTemperature() == null ? 0.0 : stat.getAvgTemperature().doubleValue());
+                humidity.set(index, stat.getAvgHumidity() == null ? 0.0 : stat.getAvgHumidity().doubleValue());
+                windSpeed.set(index, stat.getAvgWindSpeed() == null ? 0.0 : stat.getAvgWindSpeed().doubleValue());
+                lightIntensity.set(index, stat.getAvgLightIntensity() == null ? 0.0 : stat.getAvgLightIntensity().doubleValue());
+            }
         }
-
+    
         Map<String, Object> result = new HashMap<>();
         result.put("xAxis", xAxis);
         result.put("temperature", temperature);
