@@ -79,7 +79,6 @@ public class AiConsumer {
             log.error(e.getMessage());
         } finally {
             redisCache.deleteObject(AI_JOB_NOT_REPEAT_SUBMIT + aiMessageVO.getId());
-
         }
     }
 
@@ -152,7 +151,7 @@ public class AiConsumer {
         } catch (Exception e) {
             log.error(e.getMessage());
         } finally {
-            redisCache.deleteObject(AI_JOB_NOT_REPEAT_SUBMIT + aiMessageVO.getId());
+            redisCache.deleteObject(AI_REPORT_NOT_REPEAT_SUBMIT + aiMessageVO.getId());
         }
     }
 }
