@@ -10,8 +10,12 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.server.domain.AgricultureDevice;
 import com.server.domain.AgricultureWaterQualityData;
 import com.server.domain.AgricultureWeatherData;
+import com.server.domain.AgricultureWaterQualityDailyStats;
+import com.server.domain.AgricultureWaterQualityHourlyStats;
 import com.server.mapper.AgricultureDeviceMapper;
 import com.server.service.AgricultureDeviceService;
+import com.server.service.AgricultureWaterQualityDailyStatsService;
+import com.server.service.AgricultureWaterQualityHourlyStatsService;
 import com.server.utils.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,6 +35,12 @@ public class AgricultureWaterQualityDataServiceImpl extends ServiceImpl<Agricult
 {
     @Autowired
     private AgricultureWaterQualityDataMapper agricultureWaterQualityDataMapper;
+
+    @Autowired
+    private AgricultureWaterQualityDailyStatsService dailyStatsService;
+
+    @Autowired
+    private AgricultureWaterQualityHourlyStatsService hourlyStatsService;
 
 
     /**
@@ -60,6 +70,124 @@ public class AgricultureWaterQualityDataServiceImpl extends ServiceImpl<Agricult
     //查询水质趋势数据图表数据
     @Override
     public Map<String, Object> getTrendData(String pastureId, String batchId, String range) {
+        // 优先查询统计表，如果没有数据再查询原始表
+        if ("day".equals(range)) {
+            return getHourlyTrendData(pastureId, batchId);
+        } else {
+            return getDailyTrendData(pastureId, batchId, range);
+        }
+    }
+
+    /**
+     * 获取小时趋势数据（优先查询统计表）
+     */
+    private Map<String, Object> getHourlyTrendData(String pastureId, String batchId) {
+        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime start = now.minusHours(23).withMinute(0).withSecond(0).withNano(0);
+        
+        // 先查询统计表
+        List<AgricultureWaterQualityHourlyStats> stats = hourlyStatsService.getHourlyStats(pastureId, batchId, start, now);
+        
+        if (!stats.isEmpty()) {
+            return buildTrendDataFromHourlyStats(stats);
+        }
+        
+        // 统计表没有数据，查询原始表
+        return getTrendDataFromRawData(pastureId, batchId, "day");
+    }
+
+    /**
+     * 获取日趋势数据（优先查询统计表）
+     */
+    private Map<String, Object> getDailyTrendData(String pastureId, String batchId, String range) {
+        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime start;
+        if ("week".equals(range)) {
+            start = now.minusDays(6).withHour(0).withMinute(0).withSecond(0).withNano(0);
+        } else { // month
+            start = now.minusDays(29).withHour(0).withMinute(0).withSecond(0).withNano(0);
+        }
+        
+        // 先查询统计表
+        List<AgricultureWaterQualityDailyStats> stats = dailyStatsService.getDailyStats(pastureId, batchId, start, now);
+        
+        if (!stats.isEmpty()) {
+            return buildTrendDataFromDailyStats(stats, range);
+        }
+        
+        // 统计表没有数据，查询原始表
+        return getTrendDataFromRawData(pastureId, batchId, range);
+    }
+
+    /**
+     * 从小时统计数据构建趋势数据
+     */
+    private Map<String, Object> buildTrendDataFromHourlyStats(List<AgricultureWaterQualityHourlyStats> stats) {
+        List<String> xAxis = new ArrayList<>();
+        List<Double> dissolvedOxygen = new ArrayList<>();
+        List<Double> ammoniaNitrogen = new ArrayList<>();
+        List<Double> waterTemperature = new ArrayList<>();
+        List<Double> phValue = new ArrayList<>();
+        List<Double> conductivity = new ArrayList<>();
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:00");
+        
+        for (AgricultureWaterQualityHourlyStats stat : stats) {
+            xAxis.add(stat.getStatHour().format(formatter));
+            dissolvedOxygen.add(stat.getAvgDissolvedOxygen() != null ? stat.getAvgDissolvedOxygen().doubleValue() : null);
+            ammoniaNitrogen.add(stat.getAvgAmmoniaNitrogen() != null ? stat.getAvgAmmoniaNitrogen().doubleValue() : null);
+            waterTemperature.add(stat.getAvgWaterTemperature() != null ? stat.getAvgWaterTemperature().doubleValue() : null);
+            phValue.add(stat.getAvgPhValue() != null ? stat.getAvgPhValue().doubleValue() : null);
+            conductivity.add(stat.getAvgConductivity() != null ? stat.getAvgConductivity().doubleValue() : null);
+        }
+
+        Map<String, Object> result = new HashMap<>();
+        result.put("xAxis", xAxis);
+        result.put("dissolved_oxygen", dissolvedOxygen);
+        result.put("ammonia_nitrogen", ammoniaNitrogen);
+        result.put("water_temperature", waterTemperature);
+        result.put("ph_value", phValue);
+        result.put("conductivity", conductivity);
+        return result;
+    }
+
+    /**
+     * 从日统计数据构建趋势数据
+     */
+    private Map<String, Object> buildTrendDataFromDailyStats(List<AgricultureWaterQualityDailyStats> stats, String range) {
+        List<String> xAxis = new ArrayList<>();
+        List<Double> dissolvedOxygen = new ArrayList<>();
+        List<Double> ammoniaNitrogen = new ArrayList<>();
+        List<Double> waterTemperature = new ArrayList<>();
+        List<Double> phValue = new ArrayList<>();
+        List<Double> conductivity = new ArrayList<>();
+
+        String timeFormat = "MM-dd";
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(timeFormat);
+        
+        for (AgricultureWaterQualityDailyStats stat : stats) {
+            xAxis.add(stat.getStatDate().format(formatter));
+            dissolvedOxygen.add(stat.getAvgDissolvedOxygen() != null ? stat.getAvgDissolvedOxygen().doubleValue() : null);
+            ammoniaNitrogen.add(stat.getAvgAmmoniaNitrogen() != null ? stat.getAvgAmmoniaNitrogen().doubleValue() : null);
+            waterTemperature.add(stat.getAvgWaterTemperature() != null ? stat.getAvgWaterTemperature().doubleValue() : null);
+            phValue.add(stat.getAvgPhValue() != null ? stat.getAvgPhValue().doubleValue() : null);
+            conductivity.add(stat.getAvgConductivity() != null ? stat.getAvgConductivity().doubleValue() : null);
+        }
+
+        Map<String, Object> result = new HashMap<>();
+        result.put("xAxis", xAxis);
+        result.put("dissolved_oxygen", dissolvedOxygen);
+        result.put("ammonia_nitrogen", ammoniaNitrogen);
+        result.put("water_temperature", waterTemperature);
+        result.put("ph_value", phValue);
+        result.put("conductivity", conductivity);
+        return result;
+    }
+
+    /**
+     * 从原始数据获取趋势数据（备用方案）
+     */
+    private Map<String, Object> getTrendDataFromRawData(String pastureId, String batchId, String range) {
         // 1. 计算时间范围
         LocalDateTime now = LocalDateTime.now();
         LocalDateTime start;

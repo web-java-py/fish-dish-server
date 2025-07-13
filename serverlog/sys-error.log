@@ -1,60 +1,34 @@
-20:17:24.601 [http-nio-8080-exec-26] ERROR c.s.w.e.GlobalExceptionHandler - [handleException,112] - 请求地址'/sse/AGRICULTURE',发生系统异常.
-java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
-	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
-	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:54)
-	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:132)
-	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:97)
-	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:53)
-	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:532)
-	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:140)
-	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1430)
-	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:775)
-	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:739)
-	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:723)
-	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:574)
-	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:156)
-	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:216)
-	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1273)
-	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:407)
-	at org.apache.coyote.Response.action(Response.java:207)
-	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:304)
-	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:270)
-	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:133)
-	at org.springframework.security.web.util.OnCommittedResponseWrapper$SaveContextServletOutputStream.flush(OnCommittedResponseWrapper.java:523)
-	at org.springframework.web.context.request.async.StandardServletAsyncWebRequest$LifecycleServletOutputStream.flush(StandardServletAsyncWebRequest.java:389)
-	at java.base/java.io.FilterOutputStream.flush(FilterOutputStream.java:153)
-	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1193)
-	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1008)
-	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:456)
-	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.writeInternal(AbstractGenericHttpMessageConverter.java:113)
-	at org.springframework.http.converter.AbstractHttpMessageConverter.write(AbstractHttpMessageConverter.java:227)
-	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitterReturnValueHandler$HttpMessageConvertingHandler.sendInternal(ResponseBodyEmitterReturnValueHandler.java:212)
-	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitterReturnValueHandler$HttpMessageConvertingHandler.send(ResponseBodyEmitterReturnValueHandler.java:205)
-	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter.sendInternal(ResponseBodyEmitter.java:204)
-	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter.send(ResponseBodyEmitter.java:198)
-	at org.springframework.web.servlet.mvc.method.annotation.SseEmitter.send(SseEmitter.java:127)
-	at com.server.sse.SseServer.sendToAllMessage(SseServer.java:73)
-	at com.server.aspect.DataSeeAspect.after(DataSeeAspect.java:34)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
-	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:617)
-	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:52)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
-	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
-	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
-	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
-	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
+17:05:19.559 [http-nio-8080-exec-8] ERROR c.s.w.e.GlobalExceptionHandler - [handleRuntimeException,101] - 请求地址'/agriculture/partitionFood/traceDetail',发生未知异常.
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'weight' in 'field list'
+### The error may exist in com/server/mapper/AgriculturePartitionFoodMapper.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT id,ia_partition_id,date,name,weight,status,description FROM agriculture_partition_food WHERE id=?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'weight' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'weight' in 'field list'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:236)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:439)
+	at jdk.proxy2/jdk.proxy2.$Proxy135.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:160)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:90)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy202.selectById(Unknown Source)
+	at com.server.service.impl.AgriculturePartitionFoodServiceImpl.getTraceabilityDetailById(AgriculturePartitionFoodServiceImpl.java:75)
+	at com.server.service.impl.AgriculturePartitionFoodServiceImpl$$FastClassBySpringCGLIB$$adeb9247.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386)
+	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703)
+	at com.server.service.impl.AgriculturePartitionFoodServiceImpl$$EnhancerBySpringCGLIB$$556fbf9a.getTraceabilityDetailById(<generated>)
+	at com.server.controller.agriculture.AgriculturePartitionFoodController.getTraceabilityDetail(AgriculturePartitionFoodController.java:53)
+	at com.server.controller.agriculture.AgriculturePartitionFoodController$$FastClassBySpringCGLIB$$766fb824.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:792)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
 	at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.invoke(AuthorizationManagerBeforeMethodInterceptor.java:162)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
@@ -63,7 +37,7 @@ java.io.IOException: 你的主机中的软件中止了一个已建立的连接�
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:707)
-	at com.server.controller.agriculture.AgricultureDeviceController$$EnhancerBySpringCGLIB$$80f06250.edit(<generated>)
+	at com.server.controller.agriculture.AgriculturePartitionFoodController$$EnhancerBySpringCGLIB$$9b29543a.getTraceabilityDetail(<generated>)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -77,8 +51,8 @@ java.io.IOException: 你的主机中的软件中止了一个已建立的连接�
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:558)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
@@ -95,7 +69,7 @@ java.io.IOException: 你的主机中的软件中止了一个已建立的连接�
 	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:114)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
-	at com.server.filter.RepeatableFilter.doFilter(RepeatableFilter.java:39)
+	at com.server.filter.RepeatableFilter.doFilter(RepeatableFilter.java:35)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
@@ -171,63 +145,70 @@ java.io.IOException: 你的主机中的软件中止了一个已建立的连接�
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:840)
-20:17:24.607 [http-nio-8080-exec-26] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - [log,175] - Servlet.service() for servlet [dispatcherServlet] threw exception
-java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
-	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
-	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:54)
-	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:132)
-	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:97)
-	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:53)
-	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:532)
-	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:140)
-	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1430)
-	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:775)
-	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:739)
-	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:723)
-	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:574)
-	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:156)
-	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:216)
-	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1273)
-	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:407)
-	at org.apache.coyote.Response.action(Response.java:207)
-	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:304)
-	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:270)
-	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:133)
-	at org.springframework.security.web.util.OnCommittedResponseWrapper$SaveContextServletOutputStream.flush(OnCommittedResponseWrapper.java:523)
-	at org.springframework.web.context.request.async.StandardServletAsyncWebRequest$LifecycleServletOutputStream.flush(StandardServletAsyncWebRequest.java:389)
-	at java.base/java.io.FilterOutputStream.flush(FilterOutputStream.java:153)
-	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1193)
-	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1008)
-	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:456)
-	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.writeInternal(AbstractGenericHttpMessageConverter.java:113)
-	at org.springframework.http.converter.AbstractHttpMessageConverter.write(AbstractHttpMessageConverter.java:227)
-	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitterReturnValueHandler$HttpMessageConvertingHandler.sendInternal(ResponseBodyEmitterReturnValueHandler.java:212)
-	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitterReturnValueHandler$HttpMessageConvertingHandler.send(ResponseBodyEmitterReturnValueHandler.java:205)
-	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter.sendInternal(ResponseBodyEmitter.java:204)
-	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter.send(ResponseBodyEmitter.java:198)
-	at org.springframework.web.servlet.mvc.method.annotation.SseEmitter.send(SseEmitter.java:127)
-	at com.server.sse.SseServer.sendToAllMessage(SseServer.java:73)
-	at com.server.aspect.DataSeeAspect.after(DataSeeAspect.java:34)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'weight' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3462)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:434)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3460)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:158)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:483)
+	at jdk.internal.reflect.GeneratedMethodAccessor85.invoke(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
-	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:617)
-	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:52)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
-	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
-	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
-	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
-	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:58)
+	at jdk.proxy3/jdk.proxy3.$Proxy228.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:80)
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.doQuery(MybatisSimpleExecutor.java:69)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:333)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.query(MybatisCachingExecutor.java:165)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:151)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:59)
+	at jdk.proxy2/jdk.proxy2.$Proxy323.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:75)
+	at jdk.internal.reflect.GeneratedMethodAccessor97.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	... 134 common frames omitted
+17:06:55.654 [http-nio-8080-exec-16] ERROR c.s.w.e.GlobalExceptionHandler - [handleRuntimeException,101] - 请求地址'/agriculture/partitionFood/traceDetail',发生未知异常.
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'weight' in 'field list'
+### The error may exist in com/server/mapper/AgriculturePartitionFoodMapper.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT id,ia_partition_id,date,name,weight,status,description FROM agriculture_partition_food WHERE id=?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'weight' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'weight' in 'field list'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:236)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:439)
+	at jdk.proxy2/jdk.proxy2.$Proxy135.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:160)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:90)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy202.selectById(Unknown Source)
+	at com.server.service.impl.AgriculturePartitionFoodServiceImpl.getTraceabilityDetailById(AgriculturePartitionFoodServiceImpl.java:75)
+	at com.server.service.impl.AgriculturePartitionFoodServiceImpl$$FastClassBySpringCGLIB$$adeb9247.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386)
+	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703)
+	at com.server.service.impl.AgriculturePartitionFoodServiceImpl$$EnhancerBySpringCGLIB$$556fbf9a.getTraceabilityDetailById(<generated>)
+	at com.server.controller.agriculture.AgriculturePartitionFoodController.getTraceabilityDetail(AgriculturePartitionFoodController.java:53)
+	at com.server.controller.agriculture.AgriculturePartitionFoodController$$FastClassBySpringCGLIB$$766fb824.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:792)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
 	at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.invoke(AuthorizationManagerBeforeMethodInterceptor.java:162)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
@@ -236,7 +217,7 @@ java.io.IOException: 你的主机中的软件中止了一个已建立的连接�
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:707)
-	at com.server.controller.agriculture.AgricultureDeviceController$$EnhancerBySpringCGLIB$$80f06250.edit(<generated>)
+	at com.server.controller.agriculture.AgriculturePartitionFoodController$$EnhancerBySpringCGLIB$$9b29543a.getTraceabilityDetail(<generated>)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -250,8 +231,8 @@ java.io.IOException: 你的主机中的软件中止了一个已建立的连接�
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:558)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
@@ -268,7 +249,7 @@ java.io.IOException: 你的主机中的软件中止了一个已建立的连接�
 	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:114)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
-	at com.server.filter.RepeatableFilter.doFilter(RepeatableFilter.java:39)
+	at com.server.filter.RepeatableFilter.doFilter(RepeatableFilter.java:35)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
@@ -344,63 +325,72 @@ java.io.IOException: 你的主机中的软件中止了一个已建立的连接�
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:840)
-20:17:24.609 [http-nio-8080-exec-26] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - [log,175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
-java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
-	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
-	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:54)
-	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:132)
-	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:97)
-	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:53)
-	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:532)
-	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:140)
-	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1430)
-	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:775)
-	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:739)
-	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:723)
-	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:574)
-	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:156)
-	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:216)
-	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1273)
-	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:407)
-	at org.apache.coyote.Response.action(Response.java:207)
-	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:304)
-	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:270)
-	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:133)
-	at org.springframework.security.web.util.OnCommittedResponseWrapper$SaveContextServletOutputStream.flush(OnCommittedResponseWrapper.java:523)
-	at org.springframework.web.context.request.async.StandardServletAsyncWebRequest$LifecycleServletOutputStream.flush(StandardServletAsyncWebRequest.java:389)
-	at java.base/java.io.FilterOutputStream.flush(FilterOutputStream.java:153)
-	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1193)
-	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1008)
-	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:456)
-	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.writeInternal(AbstractGenericHttpMessageConverter.java:113)
-	at org.springframework.http.converter.AbstractHttpMessageConverter.write(AbstractHttpMessageConverter.java:227)
-	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitterReturnValueHandler$HttpMessageConvertingHandler.sendInternal(ResponseBodyEmitterReturnValueHandler.java:212)
-	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitterReturnValueHandler$HttpMessageConvertingHandler.send(ResponseBodyEmitterReturnValueHandler.java:205)
-	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter.sendInternal(ResponseBodyEmitter.java:204)
-	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter.send(ResponseBodyEmitter.java:198)
-	at org.springframework.web.servlet.mvc.method.annotation.SseEmitter.send(SseEmitter.java:127)
-	at com.server.sse.SseServer.sendToAllMessage(SseServer.java:73)
-	at com.server.aspect.DataSeeAspect.after(DataSeeAspect.java:34)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'weight' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3462)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:434)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3460)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:158)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:483)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
-	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:617)
-	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:52)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
-	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
-	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
-	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
-	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:58)
+	at jdk.proxy3/jdk.proxy3.$Proxy228.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:80)
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.doQuery(MybatisSimpleExecutor.java:69)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:333)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.query(MybatisCachingExecutor.java:165)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:151)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:59)
+	at jdk.proxy2/jdk.proxy2.$Proxy323.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	... 134 common frames omitted
+17:07:06.702 [http-nio-8080-exec-44] ERROR c.s.w.e.GlobalExceptionHandler - [handleRuntimeException,101] - 请求地址'/agriculture/partitionFood/traceDetail',发生未知异常.
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'weight' in 'field list'
+### The error may exist in com/server/mapper/AgriculturePartitionFoodMapper.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT id,ia_partition_id,date,name,weight,status,description FROM agriculture_partition_food WHERE id=?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'weight' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'weight' in 'field list'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:236)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:439)
+	at jdk.proxy2/jdk.proxy2.$Proxy135.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:160)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:90)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy202.selectById(Unknown Source)
+	at com.server.service.impl.AgriculturePartitionFoodServiceImpl.getTraceabilityDetailById(AgriculturePartitionFoodServiceImpl.java:75)
+	at com.server.service.impl.AgriculturePartitionFoodServiceImpl$$FastClassBySpringCGLIB$$adeb9247.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386)
+	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703)
+	at com.server.service.impl.AgriculturePartitionFoodServiceImpl$$EnhancerBySpringCGLIB$$556fbf9a.getTraceabilityDetailById(<generated>)
+	at com.server.controller.agriculture.AgriculturePartitionFoodController.getTraceabilityDetail(AgriculturePartitionFoodController.java:53)
+	at com.server.controller.agriculture.AgriculturePartitionFoodController$$FastClassBySpringCGLIB$$766fb824.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:792)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
 	at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.invoke(AuthorizationManagerBeforeMethodInterceptor.java:162)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
@@ -409,7 +399,7 @@ java.io.IOException: 你的主机中的软件中止了一个已建立的连接�
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:707)
-	at com.server.controller.agriculture.AgricultureDeviceController$$EnhancerBySpringCGLIB$$80f06250.edit(<generated>)
+	at com.server.controller.agriculture.AgriculturePartitionFoodController$$EnhancerBySpringCGLIB$$9b29543a.getTraceabilityDetail(<generated>)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -423,8 +413,8 @@ java.io.IOException: 你的主机中的软件中止了一个已建立的连接�
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:558)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
@@ -441,7 +431,7 @@ java.io.IOException: 你的主机中的软件中止了一个已建立的连接�
 	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:114)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
-	at com.server.filter.RepeatableFilter.doFilter(RepeatableFilter.java:39)
+	at com.server.filter.RepeatableFilter.doFilter(RepeatableFilter.java:35)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
@@ -517,328 +507,36 @@ java.io.IOException: 你的主机中的软件中止了一个已建立的连接�
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:840)
-20:52:34.401 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-04T20:00 时发生错误：Index 3 out of bounds for length 3
-20:52:34.423 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-04T21:00 时发生错误：Index 3 out of bounds for length 3
-20:52:34.491 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-04T22:00 时发生错误：Index 3 out of bounds for length 3
-20:52:34.556 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-04T23:00 时发生错误：Index 3 out of bounds for length 3
-20:52:34.620 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T00:00 时发生错误：Index 3 out of bounds for length 3
-20:52:34.686 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T01:00 时发生错误：Index 3 out of bounds for length 3
-20:52:34.753 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T02:00 时发生错误：Index 3 out of bounds for length 3
-20:52:34.819 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T03:00 时发生错误：Index 3 out of bounds for length 3
-20:52:34.887 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T04:00 时发生错误：Index 3 out of bounds for length 3
-20:52:34.954 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T05:00 时发生错误：Index 3 out of bounds for length 3
-20:52:35.020 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T06:00 时发生错误：Index 3 out of bounds for length 3
-20:52:35.085 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T07:00 时发生错误：Index 3 out of bounds for length 3
-20:52:35.160 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T08:00 时发生错误：Index 3 out of bounds for length 3
-20:52:35.225 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T09:00 时发生错误：Index 3 out of bounds for length 3
-20:52:35.306 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T10:00 时发生错误：Index 3 out of bounds for length 3
-20:52:35.376 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T11:00 时发生错误：Index 3 out of bounds for length 3
-20:52:35.442 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T12:00 时发生错误：Index 3 out of bounds for length 3
-20:52:35.510 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T13:00 时发生错误：Index 3 out of bounds for length 3
-20:52:35.584 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T14:00 时发生错误：Index 3 out of bounds for length 3
-20:52:35.649 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T15:00 时发生错误：Index 3 out of bounds for length 3
-20:52:35.705 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T16:00 时发生错误：Index 3 out of bounds for length 3
-20:52:35.780 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T17:00 时发生错误：Index 3 out of bounds for length 3
-20:52:35.847 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T18:00 时发生错误：Index 3 out of bounds for length 3
-20:52:35.915 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T19:00 时发生错误：Index 3 out of bounds for length 3
-20:52:35.994 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T20:00 时发生错误：Index 3 out of bounds for length 3
-20:52:36.068 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T21:00 时发生错误：Index 3 out of bounds for length 3
-20:52:36.141 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T22:00 时发生错误：Index 3 out of bounds for length 3
-20:52:36.211 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T23:00 时发生错误：Index 3 out of bounds for length 3
-20:52:36.278 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T00:00 时发生错误：Index 3 out of bounds for length 3
-20:52:36.344 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T01:00 时发生错误：Index 3 out of bounds for length 3
-20:52:36.413 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T02:00 时发生错误：Index 3 out of bounds for length 3
-20:52:36.483 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T03:00 时发生错误：Index 3 out of bounds for length 3
-20:52:36.556 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T04:00 时发生错误：Index 3 out of bounds for length 3
-20:52:36.621 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T05:00 时发生错误：Index 3 out of bounds for length 3
-20:52:36.686 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T06:00 时发生错误：Index 3 out of bounds for length 3
-20:52:36.758 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T07:00 时发生错误：Index 3 out of bounds for length 3
-20:52:36.834 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T08:00 时发生错误：Index 3 out of bounds for length 3
-20:52:36.900 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T09:00 时发生错误：Index 3 out of bounds for length 3
-20:52:36.966 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T10:00 时发生错误：Index 3 out of bounds for length 3
-20:52:37.032 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T11:00 时发生错误：Index 3 out of bounds for length 3
-20:52:37.098 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T12:00 时发生错误：Index 3 out of bounds for length 3
-20:52:37.164 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T13:00 时发生错误：Index 3 out of bounds for length 3
-20:52:37.229 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T14:00 时发生错误：Index 3 out of bounds for length 3
-20:52:37.298 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T15:00 时发生错误：Index 3 out of bounds for length 3
-20:52:37.365 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T16:00 时发生错误：Index 3 out of bounds for length 3
-20:52:37.432 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T17:00 时发生错误：Index 3 out of bounds for length 3
-20:52:37.503 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T18:00 时发生错误：Index 3 out of bounds for length 3
-20:52:37.570 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T19:00 时发生错误：Index 3 out of bounds for length 3
-20:52:37.636 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T20:00 时发生错误：Index 3 out of bounds for length 3
-20:52:37.708 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T21:00 时发生错误：Index 3 out of bounds for length 3
-20:52:37.780 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T22:00 时发生错误：Index 3 out of bounds for length 3
-20:52:37.845 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T23:00 时发生错误：Index 3 out of bounds for length 3
-20:52:37.915 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T00:00 时发生错误：Index 3 out of bounds for length 3
-20:52:37.990 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T01:00 时发生错误：Index 3 out of bounds for length 3
-20:52:38.062 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T02:00 时发生错误：Index 3 out of bounds for length 3
-20:52:38.137 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T03:00 时发生错误：Index 3 out of bounds for length 3
-20:52:38.218 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T04:00 时发生错误：Index 3 out of bounds for length 3
-20:52:38.286 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T05:00 时发生错误：Index 3 out of bounds for length 3
-20:52:38.356 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T06:00 时发生错误：Index 3 out of bounds for length 3
-20:52:38.420 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T07:00 时发生错误：Index 3 out of bounds for length 3
-20:52:38.484 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T08:00 时发生错误：Index 3 out of bounds for length 3
-20:52:38.548 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T09:00 时发生错误：Index 3 out of bounds for length 3
-20:52:38.613 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T10:00 时发生错误：Index 3 out of bounds for length 3
-20:52:38.688 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T11:00 时发生错误：Index 3 out of bounds for length 3
-20:52:38.755 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T12:00 时发生错误：Index 3 out of bounds for length 3
-20:52:38.821 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T13:00 时发生错误：Index 3 out of bounds for length 3
-20:52:38.889 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T14:00 时发生错误：Index 3 out of bounds for length 3
-20:52:38.961 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T15:00 时发生错误：Index 3 out of bounds for length 3
-20:52:39.027 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T16:00 时发生错误：Index 3 out of bounds for length 3
-20:52:39.092 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T17:00 时发生错误：Index 3 out of bounds for length 3
-20:52:39.161 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T18:00 时发生错误：Index 3 out of bounds for length 3
-20:52:39.226 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T19:00 时发生错误：Index 3 out of bounds for length 3
-20:52:39.290 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T20:00 时发生错误：Index 3 out of bounds for length 3
-20:52:39.354 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T21:00 时发生错误：Index 3 out of bounds for length 3
-20:52:39.418 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T22:00 时发生错误：Index 3 out of bounds for length 3
-20:52:39.490 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T23:00 时发生错误：Index 3 out of bounds for length 3
-20:52:39.560 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T00:00 时发生错误：Index 3 out of bounds for length 3
-20:52:39.625 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T01:00 时发生错误：Index 3 out of bounds for length 3
-20:52:39.692 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T02:00 时发生错误：Index 3 out of bounds for length 3
-20:52:39.761 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T03:00 时发生错误：Index 3 out of bounds for length 3
-20:52:39.832 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T04:00 时发生错误：Index 3 out of bounds for length 3
-20:52:39.897 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T05:00 时发生错误：Index 3 out of bounds for length 3
-20:52:39.971 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T06:00 时发生错误：Index 3 out of bounds for length 3
-20:52:40.038 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T07:00 时发生错误：Index 3 out of bounds for length 3
-20:52:40.102 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T08:00 时发生错误：Index 3 out of bounds for length 3
-20:52:40.169 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T09:00 时发生错误：Index 3 out of bounds for length 3
-20:52:40.240 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T10:00 时发生错误：Index 3 out of bounds for length 3
-20:52:40.311 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T11:00 时发生错误：Index 3 out of bounds for length 3
-20:52:40.381 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T12:00 时发生错误：Index 3 out of bounds for length 3
-20:52:40.448 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T13:00 时发生错误：Index 3 out of bounds for length 3
-20:52:40.513 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T14:00 时发生错误：Index 3 out of bounds for length 3
-20:52:40.581 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T15:00 时发生错误：Index 3 out of bounds for length 3
-20:52:40.651 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T16:00 时发生错误：Index 3 out of bounds for length 3
-20:52:40.717 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T17:00 时发生错误：Index 3 out of bounds for length 3
-20:52:40.784 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T18:00 时发生错误：Index 3 out of bounds for length 3
-20:52:40.851 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T19:00 时发生错误：Index 3 out of bounds for length 3
-20:52:40.915 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T20:00 时发生错误：Index 3 out of bounds for length 3
-20:52:40.983 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T21:00 时发生错误：Index 3 out of bounds for length 3
-20:52:41.050 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T22:00 时发生错误：Index 3 out of bounds for length 3
-20:52:41.124 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T23:00 时发生错误：Index 3 out of bounds for length 3
-20:52:41.197 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T00:00 时发生错误：Index 3 out of bounds for length 3
-20:52:41.267 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T01:00 时发生错误：Index 3 out of bounds for length 3
-20:52:41.334 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T02:00 时发生错误：Index 3 out of bounds for length 3
-20:52:41.399 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T03:00 时发生错误：Index 3 out of bounds for length 3
-20:52:41.464 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T04:00 时发生错误：Index 3 out of bounds for length 3
-20:52:41.533 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T05:00 时发生错误：Index 3 out of bounds for length 3
-20:52:41.601 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T08:00 时发生错误：Index 3 out of bounds for length 3
-20:52:41.667 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T09:00 时发生错误：Index 3 out of bounds for length 3
-20:52:41.734 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T10:00 时发生错误：Index 3 out of bounds for length 3
-20:52:41.803 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T11:00 时发生错误：Index 3 out of bounds for length 3
-20:52:41.870 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T12:00 时发生错误：Index 3 out of bounds for length 3
-20:52:41.935 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T13:00 时发生错误：Index 3 out of bounds for length 3
-20:52:42.000 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T14:00 时发生错误：Index 3 out of bounds for length 3
-20:52:42.067 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T15:00 时发生错误：Index 3 out of bounds for length 3
-20:52:42.133 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T16:00 时发生错误：Index 3 out of bounds for length 3
-20:52:42.202 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T17:00 时发生错误：Index 3 out of bounds for length 3
-20:52:42.282 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T18:00 时发生错误：Index 3 out of bounds for length 3
-20:52:42.365 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T19:00 时发生错误：Index 3 out of bounds for length 3
-20:52:42.447 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T20:00 时发生错误：Index 3 out of bounds for length 3
-20:52:42.521 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T21:00 时发生错误：Index 3 out of bounds for length 3
-20:52:42.594 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T22:00 时发生错误：Index 3 out of bounds for length 3
-20:52:42.661 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T23:00 时发生错误：Index 3 out of bounds for length 3
-20:52:42.729 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T00:00 时发生错误：Index 3 out of bounds for length 3
-20:52:42.803 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T01:00 时发生错误：Index 3 out of bounds for length 3
-20:52:42.869 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T02:00 时发生错误：Index 3 out of bounds for length 3
-20:52:42.934 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T03:00 时发生错误：Index 3 out of bounds for length 3
-20:52:43.002 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T04:00 时发生错误：Index 3 out of bounds for length 3
-20:52:43.066 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T05:00 时发生错误：Index 3 out of bounds for length 3
-20:52:43.134 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T06:00 时发生错误：Index 3 out of bounds for length 3
-20:52:43.200 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T07:00 时发生错误：Index 3 out of bounds for length 3
-20:52:43.277 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T08:00 时发生错误：Index 3 out of bounds for length 3
-20:52:43.346 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T09:00 时发生错误：Index 3 out of bounds for length 3
-20:52:43.410 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T10:00 时发生错误：Index 3 out of bounds for length 3
-20:52:43.482 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T11:00 时发生错误：Index 3 out of bounds for length 3
-20:52:43.550 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T12:00 时发生错误：Index 3 out of bounds for length 3
-20:52:43.619 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T13:00 时发生错误：Index 3 out of bounds for length 3
-20:52:43.683 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T14:00 时发生错误：Index 3 out of bounds for length 3
-20:52:43.749 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T15:00 时发生错误：Index 3 out of bounds for length 3
-20:52:43.816 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T16:00 时发生错误：Index 3 out of bounds for length 3
-20:52:43.887 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T17:00 时发生错误：Index 3 out of bounds for length 3
-20:52:43.951 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T18:00 时发生错误：Index 3 out of bounds for length 3
-20:52:44.017 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T19:00 时发生错误：Index 3 out of bounds for length 3
-20:52:44.084 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T20:00 时发生错误：Index 3 out of bounds for length 3
-20:52:44.150 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T21:00 时发生错误：Index 3 out of bounds for length 3
-20:52:44.216 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T22:00 时发生错误：Index 3 out of bounds for length 3
-20:52:44.284 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T23:00 时发生错误：Index 3 out of bounds for length 3
-20:52:44.349 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T00:00 时发生错误：Index 3 out of bounds for length 3
-20:52:44.415 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T01:00 时发生错误：Index 3 out of bounds for length 3
-20:52:44.481 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T02:00 时发生错误：Index 3 out of bounds for length 3
-20:52:44.546 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T03:00 时发生错误：Index 3 out of bounds for length 3
-20:52:44.581 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T04:00 时发生错误：Index 3 out of bounds for length 3
-20:52:44.618 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T09:00 时发生错误：Index 3 out of bounds for length 3
-20:52:44.695 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T10:00 时发生错误：Index 3 out of bounds for length 3
-20:52:44.759 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T11:00 时发生错误：Index 3 out of bounds for length 3
-20:52:44.832 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T12:00 时发生错误：Index 3 out of bounds for length 3
-20:52:44.898 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T13:00 时发生错误：Index 3 out of bounds for length 3
-20:52:44.964 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T14:00 时发生错误：Index 3 out of bounds for length 3
-20:52:45.032 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T15:00 时发生错误：Index 3 out of bounds for length 3
-20:52:45.098 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T16:00 时发生错误：Index 3 out of bounds for length 3
-20:52:45.165 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T17:00 时发生错误：Index 3 out of bounds for length 3
-20:52:45.196 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T18:00 时发生错误：Index 3 out of bounds for length 3
-20:52:45.286 [Thread-4] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-12T20:00 时发生错误：Index 3 out of bounds for length 3
-20:54:56.995 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-04T20:00 时发生错误：Index 3 out of bounds for length 3
-20:54:57.022 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-04T21:00 时发生错误：Index 3 out of bounds for length 3
-20:54:57.094 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-04T22:00 时发生错误：Index 3 out of bounds for length 3
-20:54:57.190 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-04T23:00 时发生错误：Index 3 out of bounds for length 3
-20:54:57.265 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T00:00 时发生错误：Index 3 out of bounds for length 3
-20:54:57.345 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T01:00 时发生错误：Index 3 out of bounds for length 3
-20:54:57.445 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T02:00 时发生错误：Index 3 out of bounds for length 3
-20:54:57.525 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T03:00 时发生错误：Index 3 out of bounds for length 3
-20:54:57.601 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T04:00 时发生错误：Index 3 out of bounds for length 3
-20:54:57.675 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T05:00 时发生错误：Index 3 out of bounds for length 3
-20:54:57.743 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T06:00 时发生错误：Index 3 out of bounds for length 3
-20:54:57.816 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T07:00 时发生错误：Index 3 out of bounds for length 3
-20:54:57.885 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T08:00 时发生错误：Index 3 out of bounds for length 3
-20:54:57.958 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T09:00 时发生错误：Index 3 out of bounds for length 3
-20:54:58.035 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T10:00 时发生错误：Index 3 out of bounds for length 3
-20:54:58.114 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T11:00 时发生错误：Index 3 out of bounds for length 3
-20:54:58.189 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T12:00 时发生错误：Index 3 out of bounds for length 3
-20:54:58.265 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T13:00 时发生错误：Index 3 out of bounds for length 3
-20:54:58.348 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T14:00 时发生错误：Index 3 out of bounds for length 3
-20:54:58.439 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T15:00 时发生错误：Index 3 out of bounds for length 3
-20:54:58.501 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T16:00 时发生错误：Index 3 out of bounds for length 3
-20:54:58.571 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T17:00 时发生错误：Index 3 out of bounds for length 3
-20:54:58.644 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T18:00 时发生错误：Index 3 out of bounds for length 3
-20:54:58.713 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T19:00 时发生错误：Index 3 out of bounds for length 3
-20:54:58.786 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T20:00 时发生错误：Index 3 out of bounds for length 3
-20:54:58.855 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T21:00 时发生错误：Index 3 out of bounds for length 3
-20:54:58.923 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T22:00 时发生错误：Index 3 out of bounds for length 3
-20:54:58.999 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-05T23:00 时发生错误：Index 3 out of bounds for length 3
-20:54:59.072 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T00:00 时发生错误：Index 3 out of bounds for length 3
-20:54:59.140 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T01:00 时发生错误：Index 3 out of bounds for length 3
-20:54:59.208 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T02:00 时发生错误：Index 3 out of bounds for length 3
-20:54:59.285 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T03:00 时发生错误：Index 3 out of bounds for length 3
-20:54:59.351 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T04:00 时发生错误：Index 3 out of bounds for length 3
-20:54:59.427 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T05:00 时发生错误：Index 3 out of bounds for length 3
-20:54:59.502 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T06:00 时发生错误：Index 3 out of bounds for length 3
-20:54:59.585 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T07:00 时发生错误：Index 3 out of bounds for length 3
-20:54:59.657 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T08:00 时发生错误：Index 3 out of bounds for length 3
-20:54:59.723 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T09:00 时发生错误：Index 3 out of bounds for length 3
-20:54:59.795 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T10:00 时发生错误：Index 3 out of bounds for length 3
-20:54:59.882 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T11:00 时发生错误：Index 3 out of bounds for length 3
-20:54:59.954 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T12:00 时发生错误：Index 3 out of bounds for length 3
-20:55:00.051 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T13:00 时发生错误：Index 3 out of bounds for length 3
-20:55:00.124 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T14:00 时发生错误：Index 3 out of bounds for length 3
-20:55:00.211 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T15:00 时发生错误：Index 3 out of bounds for length 3
-20:55:00.301 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T16:00 时发生错误：Index 3 out of bounds for length 3
-20:55:00.385 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T17:00 时发生错误：Index 3 out of bounds for length 3
-20:55:00.478 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T18:00 时发生错误：Index 3 out of bounds for length 3
-20:55:00.580 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T19:00 时发生错误：Index 3 out of bounds for length 3
-20:55:00.652 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T20:00 时发生错误：Index 3 out of bounds for length 3
-20:55:00.719 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T21:00 时发生错误：Index 3 out of bounds for length 3
-20:55:00.788 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T22:00 时发生错误：Index 3 out of bounds for length 3
-20:55:00.863 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-06T23:00 时发生错误：Index 3 out of bounds for length 3
-20:55:00.936 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T00:00 时发生错误：Index 3 out of bounds for length 3
-20:55:01.048 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T01:00 时发生错误：Index 3 out of bounds for length 3
-20:55:01.130 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T02:00 时发生错误：Index 3 out of bounds for length 3
-20:55:01.211 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T03:00 时发生错误：Index 3 out of bounds for length 3
-20:55:01.292 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T04:00 时发生错误：Index 3 out of bounds for length 3
-20:55:01.359 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T05:00 时发生错误：Index 3 out of bounds for length 3
-20:55:01.436 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T06:00 时发生错误：Index 3 out of bounds for length 3
-20:55:01.501 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T07:00 时发生错误：Index 3 out of bounds for length 3
-20:55:01.570 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T08:00 时发生错误：Index 3 out of bounds for length 3
-20:55:01.640 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T09:00 时发生错误：Index 3 out of bounds for length 3
-20:55:01.706 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T10:00 时发生错误：Index 3 out of bounds for length 3
-20:55:01.776 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T11:00 时发生错误：Index 3 out of bounds for length 3
-20:55:01.850 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T12:00 时发生错误：Index 3 out of bounds for length 3
-20:55:01.915 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T13:00 时发生错误：Index 3 out of bounds for length 3
-20:55:01.982 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T14:00 时发生错误：Index 3 out of bounds for length 3
-20:55:02.055 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T15:00 时发生错误：Index 3 out of bounds for length 3
-20:55:02.124 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T16:00 时发生错误：Index 3 out of bounds for length 3
-20:55:02.193 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T17:00 时发生错误：Index 3 out of bounds for length 3
-20:55:02.264 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T18:00 时发生错误：Index 3 out of bounds for length 3
-20:55:02.351 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T19:00 时发生错误：Index 3 out of bounds for length 3
-20:55:02.421 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T20:00 时发生错误：Index 3 out of bounds for length 3
-20:55:02.488 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T21:00 时发生错误：Index 3 out of bounds for length 3
-20:55:02.555 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T22:00 时发生错误：Index 3 out of bounds for length 3
-20:55:02.629 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-07T23:00 时发生错误：Index 3 out of bounds for length 3
-20:55:02.694 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T00:00 时发生错误：Index 3 out of bounds for length 3
-20:55:02.761 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T01:00 时发生错误：Index 3 out of bounds for length 3
-20:55:02.827 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T02:00 时发生错误：Index 3 out of bounds for length 3
-20:55:02.893 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T03:00 时发生错误：Index 3 out of bounds for length 3
-20:55:02.958 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T04:00 时发生错误：Index 3 out of bounds for length 3
-20:55:03.025 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T05:00 时发生错误：Index 3 out of bounds for length 3
-20:55:03.092 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T06:00 时发生错误：Index 3 out of bounds for length 3
-20:55:03.158 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T07:00 时发生错误：Index 3 out of bounds for length 3
-20:55:03.226 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T08:00 时发生错误：Index 3 out of bounds for length 3
-20:55:03.293 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T09:00 时发生错误：Index 3 out of bounds for length 3
-20:55:03.357 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T10:00 时发生错误：Index 3 out of bounds for length 3
-20:55:03.427 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T11:00 时发生错误：Index 3 out of bounds for length 3
-20:55:03.495 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T12:00 时发生错误：Index 3 out of bounds for length 3
-20:55:03.559 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T13:00 时发生错误：Index 3 out of bounds for length 3
-20:55:03.631 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T14:00 时发生错误：Index 3 out of bounds for length 3
-20:55:03.723 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T15:00 时发生错误：Index 3 out of bounds for length 3
-20:55:03.807 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T16:00 时发生错误：Index 3 out of bounds for length 3
-20:55:03.905 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T17:00 时发生错误：Index 3 out of bounds for length 3
-20:55:03.979 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T18:00 时发生错误：Index 3 out of bounds for length 3
-20:55:04.047 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T19:00 时发生错误：Index 3 out of bounds for length 3
-20:55:04.112 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T20:00 时发生错误：Index 3 out of bounds for length 3
-20:55:04.182 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T21:00 时发生错误：Index 3 out of bounds for length 3
-20:55:04.260 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T22:00 时发生错误：Index 3 out of bounds for length 3
-20:55:04.324 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-08T23:00 时发生错误：Index 3 out of bounds for length 3
-20:55:04.388 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T00:00 时发生错误：Index 3 out of bounds for length 3
-20:55:04.457 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T01:00 时发生错误：Index 3 out of bounds for length 3
-20:55:04.522 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T02:00 时发生错误：Index 3 out of bounds for length 3
-20:55:04.590 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T03:00 时发生错误：Index 3 out of bounds for length 3
-20:55:04.658 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T04:00 时发生错误：Index 3 out of bounds for length 3
-20:55:04.721 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T05:00 时发生错误：Index 3 out of bounds for length 3
-20:55:04.784 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T08:00 时发生错误：Index 3 out of bounds for length 3
-20:55:04.852 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T09:00 时发生错误：Index 3 out of bounds for length 3
-20:55:04.917 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T10:00 时发生错误：Index 3 out of bounds for length 3
-20:55:04.984 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T11:00 时发生错误：Index 3 out of bounds for length 3
-20:55:05.052 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T12:00 时发生错误：Index 3 out of bounds for length 3
-20:55:05.117 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T13:00 时发生错误：Index 3 out of bounds for length 3
-20:55:05.181 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T14:00 时发生错误：Index 3 out of bounds for length 3
-20:55:05.247 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T15:00 时发生错误：Index 3 out of bounds for length 3
-20:55:05.316 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T16:00 时发生错误：Index 3 out of bounds for length 3
-20:55:05.385 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T17:00 时发生错误：Index 3 out of bounds for length 3
-20:55:05.462 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T18:00 时发生错误：Index 3 out of bounds for length 3
-20:55:05.541 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T19:00 时发生错误：Index 3 out of bounds for length 3
-20:55:05.608 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T20:00 时发生错误：Index 3 out of bounds for length 3
-20:55:05.675 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T21:00 时发生错误：Index 3 out of bounds for length 3
-20:55:05.738 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T22:00 时发生错误：Index 3 out of bounds for length 3
-20:55:05.804 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-09T23:00 时发生错误：Index 3 out of bounds for length 3
-20:55:05.869 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T00:00 时发生错误：Index 3 out of bounds for length 3
-20:55:05.934 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T01:00 时发生错误：Index 3 out of bounds for length 3
-20:55:05.998 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T02:00 时发生错误：Index 3 out of bounds for length 3
-20:55:06.065 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T03:00 时发生错误：Index 3 out of bounds for length 3
-20:55:06.130 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T04:00 时发生错误：Index 3 out of bounds for length 3
-20:55:06.195 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T05:00 时发生错误：Index 3 out of bounds for length 3
-20:55:06.263 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T06:00 时发生错误：Index 3 out of bounds for length 3
-20:55:06.327 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T07:00 时发生错误：Index 3 out of bounds for length 3
-20:55:06.395 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T08:00 时发生错误：Index 3 out of bounds for length 3
-20:55:06.462 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T09:00 时发生错误：Index 3 out of bounds for length 3
-20:55:06.526 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T10:00 时发生错误：Index 3 out of bounds for length 3
-20:55:06.592 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T11:00 时发生错误：Index 3 out of bounds for length 3
-20:55:06.656 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T12:00 时发生错误：Index 3 out of bounds for length 3
-20:55:06.721 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T13:00 时发生错误：Index 3 out of bounds for length 3
-20:55:06.785 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T14:00 时发生错误：Index 3 out of bounds for length 3
-20:55:06.851 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T15:00 时发生错误：Index 3 out of bounds for length 3
-20:55:06.916 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T16:00 时发生错误：Index 3 out of bounds for length 3
-20:55:06.981 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T17:00 时发生错误：Index 3 out of bounds for length 3
-20:55:07.047 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T18:00 时发生错误：Index 3 out of bounds for length 3
-20:55:07.118 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T19:00 时发生错误：Index 3 out of bounds for length 3
-20:55:07.187 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T20:00 时发生错误：Index 3 out of bounds for length 3
-20:55:07.253 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T21:00 时发生错误：Index 3 out of bounds for length 3
-20:55:07.324 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T22:00 时发生错误：Index 3 out of bounds for length 3
-20:55:07.388 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-10T23:00 时发生错误：Index 3 out of bounds for length 3
-20:55:07.455 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T00:00 时发生错误：Index 3 out of bounds for length 3
-20:55:07.520 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T01:00 时发生错误：Index 3 out of bounds for length 3
-20:55:07.585 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T02:00 时发生错误：Index 3 out of bounds for length 3
-20:55:07.649 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T03:00 时发生错误：Index 3 out of bounds for length 3
-20:55:07.685 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T04:00 时发生错误：Index 3 out of bounds for length 3
-20:55:07.719 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T09:00 时发生错误：Index 3 out of bounds for length 3
-20:55:07.787 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T10:00 时发生错误：Index 3 out of bounds for length 3
-20:55:07.856 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T11:00 时发生错误：Index 3 out of bounds for length 3
-20:55:07.923 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T12:00 时发生错误：Index 3 out of bounds for length 3
-20:55:07.987 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T13:00 时发生错误：Index 3 out of bounds for length 3
-20:55:08.055 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T14:00 时发生错误：Index 3 out of bounds for length 3
-20:55:08.121 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T15:00 时发生错误：Index 3 out of bounds for length 3
-20:55:08.185 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T16:00 时发生错误：Index 3 out of bounds for length 3
-20:55:08.249 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T17:00 时发生错误：Index 3 out of bounds for length 3
-20:55:08.278 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-11T18:00 时发生错误：Index 3 out of bounds for length 3
-20:55:08.349 [Thread-5] ERROR c.s.t.AgricultureRecent10DaysImportTask - [importHourlyStatsFor10Days,110] - 处理小时统计时间 2025-07-12T20:00 时发生错误：Index 3 out of bounds for length 3
-21:17:52.563 [http-nio-8080-exec-53] ERROR c.s.w.e.GlobalExceptionHandler - [handleHttpRequestMethodNotSupported,52] - 请求地址'/device/weather/trend',不支持'POST'请求
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'weight' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3462)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:434)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3460)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:158)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:483)
+	at jdk.internal.reflect.GeneratedMethodAccessor85.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:58)
+	at jdk.proxy3/jdk.proxy3.$Proxy228.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:80)
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.doQuery(MybatisSimpleExecutor.java:69)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:333)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.query(MybatisCachingExecutor.java:165)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:151)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:59)
+	at jdk.proxy2/jdk.proxy2.$Proxy323.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:75)
+	at jdk.internal.reflect.GeneratedMethodAccessor98.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	... 134 common frames omitted
