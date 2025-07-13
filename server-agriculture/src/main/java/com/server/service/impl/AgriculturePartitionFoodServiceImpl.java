@@ -14,6 +14,8 @@ import com.server.domain.*;
 import com.server.domain.dto.AgriculturePartitionFoodPageDTO;
 import com.server.domain.vo.BatchTaskDetailVO;
 import com.server.domain.vo.TraceabilityDetailVO;
+import com.server.service.AgricultureWaterQualityHourlyStatsService;
+import com.server.service.AgricultureWaterQualityDailyStatsService;
 import com.server.mapper.*;
 import com.server.service.*;
 import com.server.utils.QRCodeUtil;
@@ -62,6 +64,14 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
     @Autowired
     private AgricultureWeatherDailyStatsService dailyStatsService;
 
+    // 注入水质小时统计服务
+    @Autowired
+    private AgricultureWaterQualityHourlyStatsService waterQualityHourlyStatsService;
+
+    // 注入水质日统计服务
+    @Autowired
+    private AgricultureWaterQualityDailyStatsService waterQualityDailyStatsService;
+
     /**
      * 根据溯源码查询溯源详情信息，包括分区、大棚、批次任务、环境数据等
      *
@@ -109,16 +119,8 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
                 // 优先使用聚合表查询气象数据
                 Map<String, Double> weatherAvg = getWeatherAvgFromStats(cropBatch.getPastureId().toString(), food.getIaPartitionId(), batchTask.getActualStart(), batchTask.getActualFinish());
 
-                // 4. 查询水质原始数据
-                List<AgricultureWaterQualityData> waterQualityDataList = waterQualityDataMapper.selectList(
-                        new QueryWrapper<AgricultureWaterQualityData>()
-                                .eq("pasture_id", cropBatch.getPastureId())
-                                .eq("batch_id", food.getIaPartitionId())
-                                .between("collect_time", batchTask.getActualStart(), batchTask.getActualFinish())
-                                .orderByAsc("collect_time")
-                );
-                // 5. 计算水质平均值（对所有原始数据做平均）
-                Map<String, Double> waterQualityAvg = calculateWaterQualityAvg(waterQualityDataList);
+                // 优先使用聚合表查询水质数据
+                Map<String, Double> waterQualityAvg = getWaterQualityAvgFromStats(cropBatch.getPastureId().toString(), food.getIaPartitionId(), batchTask.getActualStart(), batchTask.getActualFinish());
 
                 // 设置气象平均值，保留两位小数
                 detailVO.setWeatherAvg(formatDecimalMap(weatherAvg));
@@ -182,6 +184,50 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
         }
         
         return weatherAvg;
+    }
+
+    /**
+     * 优先从聚合表获取水质平均值，如果没有数据则从原始数据计算
+     */
+    private Map<String, Double> getWaterQualityAvgFromStats(String pastureId, String batchId, Date startTime, Date endTime) {
+        // 转换Date为LocalDateTime
+        LocalDateTime start = startTime.toInstant().atZone(java.time.ZoneId.systemDefault()).toLocalDateTime();
+        LocalDateTime end = endTime.toInstant().atZone(java.time.ZoneId.systemDefault()).toLocalDateTime();
+        
+        // 计算时间跨度
+        long hoursDiff = ChronoUnit.HOURS.between(start, end);
+        
+        Map<String, Double> waterQualityAvg = new HashMap<>();
+        
+        if (hoursDiff <= 24) {
+            // 24小时内，优先使用小时统计表
+            List<AgricultureWaterQualityHourlyStats> hourlyStats = waterQualityHourlyStatsService.getHourlyStats(pastureId, batchId, start, end);
+            if (!hourlyStats.isEmpty()) {
+                waterQualityAvg = calculateAvgFromWaterQualityHourlyStats(hourlyStats);
+            }
+        } else {
+            // 超过24小时，优先使用日统计表
+            List<AgricultureWaterQualityDailyStats> dailyStats = waterQualityDailyStatsService.getDailyStats(pastureId, batchId, start, end);
+            if (!dailyStats.isEmpty()) {
+                waterQualityAvg = calculateAvgFromWaterQualityDailyStats(dailyStats);
+            }
+        }
+        
+        // 如果聚合表没有数据，则查询原始数据
+        if (waterQualityAvg.isEmpty()) {
+            List<AgricultureWaterQualityData> waterQualityDataList = waterQualityDataMapper.selectList(
+                    new QueryWrapper<AgricultureWaterQualityData>()
+                            .eq("pasture_id", pastureId)
+                            .eq("batch_id", batchId)
+                            .between("collect_time", startTime, endTime)
+                            .orderByAsc("collect_time")
+            );
+            
+            // 计算水质平均值（对原始数据做平均）
+            waterQualityAvg = calculateWaterQualityAvg(waterQualityDataList);
+        }
+        
+        return waterQualityAvg;
     }
 
     /**
@@ -284,6 +330,128 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
         avg.put("lightIntensity", validStats.stream()
                 .map(AgricultureWeatherDailyStats::getAvgLightIntensity)
                 .filter(val -> val != null && val.doubleValue() != 0)
+                .mapToDouble(val -> val.doubleValue())
+                .average().orElse(0));
+        
+        return avg;
+    }
+
+    /**
+     * 从水质小时统计数据计算平均值
+     */
+    private Map<String, Double> calculateAvgFromWaterQualityHourlyStats(List<AgricultureWaterQualityHourlyStats> stats) {
+        Map<String, Double> avg = new HashMap<>();
+        
+        // 过滤掉全为0的无效数据
+        List<AgricultureWaterQualityHourlyStats> validStats = stats.stream()
+                .filter(stat -> {
+                    boolean allZero = (stat.getAvgPhValue() == null || stat.getAvgPhValue().doubleValue() == 0)
+                            && (stat.getAvgDissolvedOxygen() == null || stat.getAvgDissolvedOxygen().doubleValue() == 0)
+                            && (stat.getAvgAmmoniaNitrogen() == null || stat.getAvgAmmoniaNitrogen().doubleValue() == 0)
+                            && (stat.getAvgWaterTemperature() == null || stat.getAvgWaterTemperature().doubleValue() == 0)
+                            && (stat.getAvgConductivity() == null || stat.getAvgConductivity().doubleValue() == 0);
+                    return !allZero;
+                })
+                .collect(Collectors.toList());
+        
+        if (validStats.isEmpty()) {
+            avg.put("phValue", 0.0);
+            avg.put("dissolvedOxygen", 0.0);
+            avg.put("ammoniaNitrogen", 0.0);
+            avg.put("waterTemperature", 0.0);
+            avg.put("conductivity", 0.0);
+            return avg;
+        }
+        
+        // 计算平均值
+        avg.put("phValue", validStats.stream()
+                .map(AgricultureWaterQualityHourlyStats::getAvgPhValue)
+                .filter(Objects::nonNull)
+                .mapToDouble(val -> val.doubleValue())
+                .average().orElse(0));
+        
+        avg.put("dissolvedOxygen", validStats.stream()
+                .map(AgricultureWaterQualityHourlyStats::getAvgDissolvedOxygen)
+                .filter(Objects::nonNull)
+                .mapToDouble(val -> val.doubleValue())
+                .average().orElse(0));
+        
+        avg.put("ammoniaNitrogen", validStats.stream()
+                .map(AgricultureWaterQualityHourlyStats::getAvgAmmoniaNitrogen)
+                .filter(Objects::nonNull)
+                .mapToDouble(val -> val.doubleValue())
+                .average().orElse(0));
+        
+        avg.put("waterTemperature", validStats.stream()
+                .map(AgricultureWaterQualityHourlyStats::getAvgWaterTemperature)
+                .filter(Objects::nonNull)
+                .mapToDouble(val -> val.doubleValue())
+                .average().orElse(0));
+        
+        avg.put("conductivity", validStats.stream()
+                .map(AgricultureWaterQualityHourlyStats::getAvgConductivity)
+                .filter(Objects::nonNull)
+                .mapToDouble(val -> val.doubleValue())
+                .average().orElse(0));
+        
+        return avg;
+    }
+
+    /**
+     * 从水质日统计数据计算平均值
+     */
+    private Map<String, Double> calculateAvgFromWaterQualityDailyStats(List<AgricultureWaterQualityDailyStats> stats) {
+        Map<String, Double> avg = new HashMap<>();
+        
+        // 过滤掉全为0的无效数据
+        List<AgricultureWaterQualityDailyStats> validStats = stats.stream()
+                .filter(stat -> {
+                    boolean allZero = (stat.getAvgPhValue() == null || stat.getAvgPhValue().doubleValue() == 0)
+                            && (stat.getAvgDissolvedOxygen() == null || stat.getAvgDissolvedOxygen().doubleValue() == 0)
+                            && (stat.getAvgAmmoniaNitrogen() == null || stat.getAvgAmmoniaNitrogen().doubleValue() == 0)
+                            && (stat.getAvgWaterTemperature() == null || stat.getAvgWaterTemperature().doubleValue() == 0)
+                            && (stat.getAvgConductivity() == null || stat.getAvgConductivity().doubleValue() == 0);
+                    return !allZero;
+                })
+                .collect(Collectors.toList());
+        
+        if (validStats.isEmpty()) {
+            avg.put("phValue", 0.0);
+            avg.put("dissolvedOxygen", 0.0);
+            avg.put("ammoniaNitrogen", 0.0);
+            avg.put("waterTemperature", 0.0);
+            avg.put("conductivity", 0.0);
+            return avg;
+        }
+        
+        // 计算平均值
+        avg.put("phValue", validStats.stream()
+                .map(AgricultureWaterQualityDailyStats::getAvgPhValue)
+                .filter(Objects::nonNull)
+                .mapToDouble(val -> val.doubleValue())
+                .average().orElse(0));
+        
+        avg.put("dissolvedOxygen", validStats.stream()
+                .map(AgricultureWaterQualityDailyStats::getAvgDissolvedOxygen)
+                .filter(Objects::nonNull)
+                .mapToDouble(val -> val.doubleValue())
+                .average().orElse(0));
+        
+        avg.put("ammoniaNitrogen", validStats.stream()
+                .map(AgricultureWaterQualityDailyStats::getAvgAmmoniaNitrogen)
+                .filter(Objects::nonNull)
+                .mapToDouble(val -> val.doubleValue())
+                .average().orElse(0));
+        
+        avg.put("waterTemperature", validStats.stream()
+                .map(AgricultureWaterQualityDailyStats::getAvgWaterTemperature)
+                .filter(Objects::nonNull)
+                .mapToDouble(val -> val.doubleValue())
+                .average().orElse(0));
+        
+        avg.put("conductivity", validStats.stream()
+                .map(AgricultureWaterQualityDailyStats::getAvgConductivity)
+                .filter(Objects::nonNull)
                 .mapToDouble(val -> val.doubleValue())
                 .average().orElse(0));
         
