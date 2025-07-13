@@ -2,6 +2,7 @@ package com.server.controller.agriculture;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServletRequest;
 
 import com.server.domain.dto.AgriculturePartitionFoodPageDTO;
 import com.server.domain.vo.TraceabilityDetailVO;
@@ -48,11 +49,17 @@ public class AgriculturePartitionFoodController extends BaseController
     @ApiOperation("根据溯源码查询溯源详情信息")
     @PreAuthorize("@ss.hasPermi('agriculturePartitionFood:traceDetail')")
     @GetMapping("/traceDetail")
-    public AjaxResult getTraceabilityDetail(@RequestParam("traceId") String traceId) {
-        // 调用Service方法获取溯源详情
-        TraceabilityDetailVO vo = agriculturePartitionFoodService.getTraceabilityDetailById(traceId);
-        return success(vo);
-    }
+    public AjaxResult getTraceabilityDetail(@RequestParam("traceId") String traceId,
+                                       HttpServletRequest request) {
+    // 自动获取客户端信息
+    String queryIp = getClientIpAddress(request);
+    String userAgent = request.getHeader("User-Agent");
+    String queryType = "web"; // 可以根据需要判断是web、app还是scan
+    
+    // 调用Service方法获取溯源详情
+    TraceabilityDetailVO vo = agriculturePartitionFoodService.getTraceabilityDetailById(traceId, queryIp, userAgent, queryType);
+    return success(vo);
+}
     /**
      * 导出分区食品 采摘列表
      */
@@ -118,5 +125,22 @@ public class AgriculturePartitionFoodController extends BaseController
         startPage();
         List<AgriculturePartitionFood> list = agriculturePartitionFoodService.fy(baseDTO);
         return getDataTable(list);
+    }
+
+    /**
+     * 获取客户端真实IP地址
+     */
+    private String getClientIpAddress(HttpServletRequest request) {
+        String xForwardedFor = request.getHeader("X-Forwarded-For");
+        if (xForwardedFor != null && !xForwardedFor.isEmpty() && !"unknown".equalsIgnoreCase(xForwardedFor)) {
+            return xForwardedFor.split(",")[0];
+        }
+        
+        String xRealIp = request.getHeader("X-Real-IP");
+        if (xRealIp != null && !xRealIp.isEmpty() && !"unknown".equalsIgnoreCase(xRealIp)) {
+            return xRealIp;
+        }
+        
+        return request.getRemoteAddr();
     }
 }

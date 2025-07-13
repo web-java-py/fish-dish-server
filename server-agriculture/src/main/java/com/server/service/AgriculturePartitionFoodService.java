@@ -73,7 +73,18 @@ public interface AgriculturePartitionFoodService extends IService<AgriculturePar
      * 新增采摘 生成二维码展示
      */
     List<AgriculturePartitionFood> fy(AgriculturePartitionFoodPageDTO baseDTO);
-    //查询溯源详细信息
+    /**
+     * 根据溯源码查询溯源详情信息，包括分区、大棚、批次任务、环境数据等
+     * @param traceId 溯源码（溯源id）
+     * @param queryIp 查询IP
+     * @param userAgent 用户代理
+     * @param queryType 查询类型
+     * @return TraceabilityDetailVO 溯源详情VO
+     * @throws RuntimeException 如果溯源信息不存在
+     */
+    TraceabilityDetailVO getTraceabilityDetailById(String traceId, String queryIp, String userAgent, String queryType);
+
+    // 重载原来的方法
     TraceabilityDetailVO getTraceabilityDetailById(String traceId);
 
 }

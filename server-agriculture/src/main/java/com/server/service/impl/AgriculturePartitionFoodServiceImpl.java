@@ -22,6 +22,7 @@ import com.server.utils.QRCodeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.server.service.AgriculturePartitionFoodService;
+import com.server.service.AgricultureTraceabilityLogService;
 
 /**
  * 分区食品 采摘Service业务层处理
@@ -72,22 +73,35 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
     @Autowired
     private AgricultureWaterQualityDailyStatsService waterQualityDailyStatsService;
 
+    // 注入溯源查询记录服务
+    @Autowired
+    private AgricultureTraceabilityLogService traceabilityLogService;
+
     /**
      * 根据溯源码查询溯源详情信息，包括分区、大棚、批次任务、环境数据等
      *
      * @param traceId 溯源码（溯源id）
+     * @param queryIp 查询IP
+     * @param userAgent 用户代理
+     * @param queryType 查询类型
      * @return TraceabilityDetailVO 溯源详情VO
      * @throws RuntimeException 如果溯源信息不存在
      */
     @Override
-    public TraceabilityDetailVO getTraceabilityDetailById(String traceId) {
+    public TraceabilityDetailVO getTraceabilityDetailById(String traceId, String queryIp, String userAgent, String queryType) {
         // 1. 查溯源表
         AgriculturePartitionFood food = agriculturePartitionFoodMapper.selectById(traceId);
         if (food == null) {
             throw new RuntimeException("溯源信息不存在");
         }
 
-        // 2. 查分区
+        // 2. 记录查询日志
+        traceabilityLogService.recordTraceabilityQuery(traceId, food.getIaPartitionId(), queryIp, userAgent, queryType);
+
+        // 查询该溯源码的溯源次数
+        Long traceCount = traceabilityLogService.getTraceabilityCountByCode(traceId);
+
+        // 3. 查分区
         AgricultureCropBatch cropBatch = agricultureCropBatchMapper.selectById(food.getIaPartitionId());
         
         // 格式化分区的创建时间为年-月-日格式
@@ -97,13 +111,13 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
             formattedCreateTime = dateFormat.format(cropBatch.getCreateTime());
         }
 
-        // 3. 查大棚
+        // 4. 查大棚
         AgriculturePasture pasture = null;
         if (cropBatch != null) {
             pasture = pastureMapper.selectById(cropBatch.getPastureId());
         }
 
-        // 4. 查所有批次任务
+        // 5. 查所有批次任务
         List<AgricultureBatchTask> batchTaskList = batchTaskMapper.selectList(
                 new QueryWrapper<AgricultureBatchTask>().eq("batch_id", food.getIaPartitionId())
         );
@@ -130,14 +144,28 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
             batchTaskDetailList.add(detailVO);
         }
 
-        // 5. 组装VO
+        // 6. 组装VO
         TraceabilityDetailVO vo = new TraceabilityDetailVO();
         vo.setFoodInfo(food);
         vo.setCropBatch(cropBatch);
         vo.setPastureInfo(pasture);
         vo.setBatchTaskDetailList(batchTaskDetailList);
         vo.setCropBatchCreateTimeFormatted(formattedCreateTime);
+        vo.setTraceCount(traceCount); // 溯源次数
         return vo;
+    }
+
+    /**
+     * 根据溯源码查询溯源详情信息（重载方法，不记录日志）
+     *
+     * @param traceId 溯源码（溯源id）
+     * @return TraceabilityDetailVO 溯源详情VO
+     * @throws RuntimeException 如果溯源信息不存在
+     */
+    @Override
+    public TraceabilityDetailVO getTraceabilityDetailById(String traceId) {
+        // 调用带日志记录的方法，传入默认值
+        return getTraceabilityDetailById(traceId, null, null, null);
     }
 
     /**

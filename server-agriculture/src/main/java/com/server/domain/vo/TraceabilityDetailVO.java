@@ -31,4 +31,6 @@ public class TraceabilityDetailVO {
     @ApiModelProperty("分区创建时间（格式化：年-月-日）")
     private String cropBatchCreateTimeFormatted;
 
+    @ApiModelProperty(value = "溯源次数")
+    private Long traceCount;
 }
