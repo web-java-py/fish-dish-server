@@ -20078,3 +20078,924 @@ java.net.SocketException: Connection reset
 21:18:06.903 [http-nio-8080-exec-1] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
 21:18:11.253 [http-nio-8080-exec-3] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
 21:18:21.954 [http-nio-8080-exec-4] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+21:19:30.045 [lettuce-nioEventLoop-5-1] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+21:19:30.143 [lettuce-eventExecutorLoop-1-10] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+21:19:30.149 [lettuce-nioEventLoop-5-2] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+21:20:36.057 [lettuce-nioEventLoop-5-2] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+21:20:36.141 [lettuce-eventExecutorLoop-1-11] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+21:20:36.143 [lettuce-nioEventLoop-5-3] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+21:21:42.023 [lettuce-nioEventLoop-5-3] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+21:21:42.042 [lettuce-eventExecutorLoop-1-12] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+21:21:42.045 [lettuce-nioEventLoop-5-4] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+21:22:48.070 [lettuce-nioEventLoop-5-4] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+21:22:48.141 [lettuce-eventExecutorLoop-1-13] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+21:22:48.144 [lettuce-nioEventLoop-5-5] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+21:23:13.049 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+21:23:51.452 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+21:23:51.455 [main] INFO  c.s.ServerApplication - [logStarting,55] - Starting ServerApplication using Java 17.0.14 on bxwy with PID 19112 (D:\ZLXN\fish-dish-server\server-admin\target\classes started by bxwy in D:\ZLXN\fish-dish-server)
+21:23:51.456 [main] INFO  c.s.ServerApplication - [logStartupProfileInfo,686] - The following 2 profiles are active: "dev", "druid"
+21:23:53.646 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+21:23:53.647 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+21:23:53.648 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.102]
+21:23:53.792 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+21:23:54.828 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+21:23:58.162 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+21:23:58.173 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+21:23:58.173 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+21:23:58.174 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+21:23:58.174 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+21:23:58.175 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+21:23:58.175 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+21:23:58.175 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@4efb7c99
+21:23:59.834 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+21:24:00.168 [http-nio-8080-exec-3] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:24:00.234 [http-nio-8080-exec-3] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+21:24:00.234 [http-nio-8080-exec-1] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+21:24:00.246 [http-nio-8080-exec-5] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+21:24:00.262 [http-nio-8080-exec-6] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+21:24:00.277 [http-nio-8080-exec-2] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+21:24:00.578 [main] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+21:24:00.591 [main] INFO  c.s.ServerApplication - [logStarted,61] - Started ServerApplication in 9.491 seconds (JVM running for 10.19)
+21:24:02.222 [http-nio-8080-exec-11] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+21:25:03.072 [lettuce-nioEventLoop-4-1] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+21:25:03.137 [lettuce-eventExecutorLoop-1-4] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+21:25:03.143 [lettuce-nioEventLoop-4-2] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+21:26:09.033 [lettuce-nioEventLoop-4-2] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+21:26:09.135 [lettuce-eventExecutorLoop-1-5] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+21:26:09.138 [lettuce-nioEventLoop-4-3] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+21:27:15.058 [lettuce-nioEventLoop-4-3] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+21:27:15.135 [lettuce-eventExecutorLoop-1-6] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+21:27:15.139 [lettuce-nioEventLoop-4-4] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+21:28:21.026 [lettuce-nioEventLoop-4-4] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+21:28:21.036 [lettuce-eventExecutorLoop-1-7] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+21:28:21.040 [lettuce-nioEventLoop-4-5] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+21:29:27.019 [lettuce-nioEventLoop-4-5] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+21:29:27.036 [lettuce-eventExecutorLoop-1-8] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+21:29:27.039 [lettuce-nioEventLoop-4-6] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+21:30:33.031 [lettuce-nioEventLoop-4-6] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+21:30:33.036 [lettuce-eventExecutorLoop-1-9] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+21:30:33.039 [lettuce-nioEventLoop-4-7] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+21:31:39.015 [lettuce-nioEventLoop-4-7] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+21:31:39.035 [lettuce-eventExecutorLoop-1-10] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+21:31:39.038 [lettuce-nioEventLoop-4-8] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+21:32:45.028 [lettuce-nioEventLoop-4-8] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+21:32:45.035 [lettuce-eventExecutorLoop-1-11] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+21:32:45.038 [lettuce-nioEventLoop-4-9] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+21:33:20.968 [http-nio-8080-exec-86] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+21:35:12.107 [lettuce-nioEventLoop-4-9] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+21:35:12.135 [lettuce-eventExecutorLoop-1-16] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+21:35:12.138 [lettuce-nioEventLoop-4-10] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+21:43:55.021 [lettuce-nioEventLoop-4-10] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+21:43:55.035 [lettuce-eventExecutorLoop-1-1] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+21:43:55.038 [lettuce-nioEventLoop-4-11] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+21:45:01.101 [lettuce-nioEventLoop-4-11] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+21:45:01.136 [lettuce-eventExecutorLoop-1-2] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+21:45:01.138 [lettuce-nioEventLoop-4-12] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+21:46:07.003 [lettuce-nioEventLoop-4-12] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+21:46:07.035 [lettuce-eventExecutorLoop-1-3] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+21:46:07.037 [lettuce-nioEventLoop-4-13] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+21:47:13.100 [lettuce-nioEventLoop-4-13] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+21:47:13.136 [lettuce-eventExecutorLoop-1-4] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+21:47:13.139 [lettuce-nioEventLoop-4-14] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+21:47:54.304 [http-nio-8080-exec-82] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+21:49:00.057 [lettuce-nioEventLoop-4-14] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+21:49:00.135 [lettuce-eventExecutorLoop-1-7] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+21:49:00.137 [lettuce-nioEventLoop-4-15] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+21:53:31.284 [http-nio-8080-exec-100] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+21:53:31.292 [http-nio-8080-exec-100] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+21:53:31.295 [http-nio-8080-exec-100] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+21:53:31.298 [http-nio-8080-exec-100] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+21:53:31.302 [http-nio-8080-exec-100] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+21:53:31.305 [http-nio-8080-exec-100] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+21:53:31.308 [http-nio-8080-exec-100] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+21:53:31.311 [http-nio-8080-exec-100] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+21:53:31.314 [http-nio-8080-exec-100] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+21:53:31.318 [http-nio-8080-exec-100] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+21:53:53.334 [http-nio-8080-exec-20] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+21:55:02.042 [lettuce-nioEventLoop-4-15] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+21:55:02.136 [lettuce-eventExecutorLoop-1-5] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+21:55:02.139 [lettuce-nioEventLoop-4-16] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+21:55:30.691 [http-nio-8080-exec-47] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+21:56:07.816 [http-nio-8080-exec-70] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+21:56:07.862 [http-nio-8080-exec-75] INFO  c.s.sse.SseServer - [lambda$2,41] - [AGRICULTURE]连接异常,java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+21:56:07.880 [http-nio-8080-exec-75] INFO  c.s.sse.SseServer - [lambda$0,31] - [AGRICULTURE]结束连接...................
+21:56:08.900 [http-nio-8080-exec-82] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+21:56:16.198 [http-nio-8080-exec-88] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+21:56:16.203 [http-nio-8080-exec-88] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+21:56:16.207 [http-nio-8080-exec-88] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+21:56:16.210 [http-nio-8080-exec-88] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+21:56:16.213 [http-nio-8080-exec-88] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+21:56:16.217 [http-nio-8080-exec-88] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+21:56:16.222 [http-nio-8080-exec-88] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+21:56:16.226 [http-nio-8080-exec-88] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+21:56:16.229 [http-nio-8080-exec-88] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+21:56:16.233 [http-nio-8080-exec-88] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+21:57:28.080 [lettuce-nioEventLoop-4-16] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+21:57:28.143 [lettuce-eventExecutorLoop-1-7] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+21:57:28.144 [lettuce-nioEventLoop-4-1] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+21:58:34.044 [lettuce-nioEventLoop-4-1] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+21:58:34.137 [lettuce-eventExecutorLoop-1-8] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+21:58:34.138 [lettuce-nioEventLoop-4-2] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+21:59:40.061 [lettuce-nioEventLoop-4-2] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+21:59:40.140 [lettuce-eventExecutorLoop-1-9] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+21:59:40.141 [lettuce-nioEventLoop-4-3] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+22:00:00.003 [scheduling-1] INFO  c.s.s.i.AgricultureWeatherHourlyStatsServiceImpl - [calculateHourlyStats,41] - 开始计算小时统计数据，时间范围：2025-07-13T21:00 - 2025-07-13T22:00
+22:00:00.075 [scheduling-1] INFO  c.s.s.i.AgricultureWeatherHourlyStatsServiceImpl - [calculateHourlyStats,51] - 查询到 2160 条原始数据
+22:00:00.078 [scheduling-1] INFO  c.s.s.i.AgricultureWeatherHourlyStatsServiceImpl - [calculateHourlyStats,72] - 分组后共有 1 个时间段
+22:00:00.080 [scheduling-1] INFO  c.s.s.i.AgricultureWeatherHourlyStatsServiceImpl - [calculateHourlyStats,114] - 生成了 1 条统计数据
+22:00:00.087 [scheduling-1] INFO  c.s.s.i.AgricultureWeatherHourlyStatsServiceImpl - [calculateHourlyStats,143] - 成功保存 1 条统计数据
+22:00:00.088 [scheduling-1] INFO  c.s.s.i.AgricultureWaterQualityHourlyStatsServiceImpl - [calculateHourlyStats,41] - 开始计算水质小时统计数据，时间范围：2025-07-13T21:00 - 2025-07-13T22:00
+22:00:00.109 [scheduling-1] INFO  c.s.s.i.AgricultureWaterQualityHourlyStatsServiceImpl - [calculateHourlyStats,51] - 查询到 720 条原始数据
+22:00:00.111 [scheduling-1] INFO  c.s.s.i.AgricultureWaterQualityHourlyStatsServiceImpl - [calculateHourlyStats,72] - 分组后共有 1 个时间段
+22:00:00.115 [scheduling-1] INFO  c.s.s.i.AgricultureWaterQualityHourlyStatsServiceImpl - [calculateHourlyStats,113] - 生成了 1 条统计数据
+22:00:00.121 [scheduling-1] INFO  c.s.s.i.AgricultureWaterQualityHourlyStatsServiceImpl - [calculateHourlyStats,142] - 成功保存 1 条统计数据
+22:00:46.048 [lettuce-nioEventLoop-4-3] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+22:00:46.141 [lettuce-eventExecutorLoop-1-10] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+22:00:46.142 [lettuce-nioEventLoop-4-4] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+22:01:41.992 [http-nio-8080-exec-52] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+22:01:41.994 [http-nio-8080-exec-61] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:02:33.983 [http-nio-8080-exec-84] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:02:34.846 [http-nio-8080-exec-89] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+22:02:35.371 [http-nio-8080-exec-90] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+22:02:35.373 [http-nio-8080-exec-91] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:02:40.901 [http-nio-8080-exec-100] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:02:40.904 [http-nio-8080-exec-100] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:02:40.908 [http-nio-8080-exec-100] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:02:40.911 [http-nio-8080-exec-100] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:02:40.915 [http-nio-8080-exec-100] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:02:40.919 [http-nio-8080-exec-100] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:02:40.922 [http-nio-8080-exec-100] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:02:40.926 [http-nio-8080-exec-100] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:02:40.930 [http-nio-8080-exec-100] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:02:40.933 [http-nio-8080-exec-100] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:03:47.030 [lettuce-nioEventLoop-4-4] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+22:03:47.045 [lettuce-eventExecutorLoop-1-9] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+22:03:47.047 [lettuce-nioEventLoop-4-5] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+22:03:55.409 [http-nio-8080-exec-64] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:03:56.091 [http-nio-8080-exec-65] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+22:03:56.596 [http-nio-8080-exec-62] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+22:03:56.598 [http-nio-8080-exec-67] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:03:57.453 [http-nio-8080-exec-66] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:03:57.456 [http-nio-8080-exec-66] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:03:57.459 [http-nio-8080-exec-66] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:03:57.464 [http-nio-8080-exec-66] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:03:57.468 [http-nio-8080-exec-66] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:03:57.472 [http-nio-8080-exec-66] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:03:57.477 [http-nio-8080-exec-66] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:03:57.480 [http-nio-8080-exec-66] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:03:57.484 [http-nio-8080-exec-66] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:03:57.487 [http-nio-8080-exec-66] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:04:24.917 [http-nio-8080-exec-27] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:04:28.787 [http-nio-8080-exec-34] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+22:04:29.280 [http-nio-8080-exec-35] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+22:04:29.282 [http-nio-8080-exec-38] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:04:30.098 [http-nio-8080-exec-37] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:04:30.102 [http-nio-8080-exec-37] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:04:30.105 [http-nio-8080-exec-37] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:04:30.110 [http-nio-8080-exec-37] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:04:30.113 [http-nio-8080-exec-37] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:04:30.117 [http-nio-8080-exec-37] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:04:30.121 [http-nio-8080-exec-37] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:04:30.124 [http-nio-8080-exec-37] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:04:30.128 [http-nio-8080-exec-37] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:04:30.132 [http-nio-8080-exec-37] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:05:26.754 [http-nio-8080-exec-44] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:05:27.550 [http-nio-8080-exec-53] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+22:05:28.001 [http-nio-8080-exec-50] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+22:05:28.003 [http-nio-8080-exec-45] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:05:28.858 [http-nio-8080-exec-51] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:05:28.861 [http-nio-8080-exec-51] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:05:28.866 [http-nio-8080-exec-51] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:05:28.868 [http-nio-8080-exec-51] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:05:28.873 [http-nio-8080-exec-51] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:05:28.876 [http-nio-8080-exec-51] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:05:28.880 [http-nio-8080-exec-51] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:05:28.882 [http-nio-8080-exec-51] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:05:28.886 [http-nio-8080-exec-51] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:05:28.889 [http-nio-8080-exec-51] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:05:39.322 [http-nio-8080-exec-92] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:05:47.638 [http-nio-8080-exec-88] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:05:49.265 [http-nio-8080-exec-94] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+22:05:49.267 [http-nio-8080-exec-95] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:05:50.335 [http-nio-8080-exec-1] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:05:54.291 [http-nio-8080-exec-13] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:05:54.311 [http-nio-8080-exec-13] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:05:54.317 [http-nio-8080-exec-13] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:05:54.321 [http-nio-8080-exec-13] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:05:54.326 [http-nio-8080-exec-13] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:05:54.333 [http-nio-8080-exec-13] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:05:54.337 [http-nio-8080-exec-13] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:05:54.343 [http-nio-8080-exec-13] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:05:54.347 [http-nio-8080-exec-13] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:05:54.352 [http-nio-8080-exec-13] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:05:54.359 [http-nio-8080-exec-6] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=272, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:05:54.359 [http-nio-8080-exec-19] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:05:54.359 [http-nio-8080-exec-10] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=273, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:05:54.359 [http-nio-8080-exec-100] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=271, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:05:54.366 [http-nio-8080-exec-10] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 3
+22:05:54.366 [http-nio-8080-exec-19] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:05:54.366 [http-nio-8080-exec-6] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:05:54.366 [http-nio-8080-exec-100] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:05:56.447 [http-nio-8080-exec-14] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+22:05:56.447 [http-nio-8080-exec-28] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+22:05:56.447 [http-nio-8080-exec-21] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+22:05:56.447 [http-nio-8080-exec-25] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+22:05:56.447 [http-nio-8080-exec-20] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+22:05:56.447 [http-nio-8080-exec-30] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+22:06:01.840 [http-nio-8080-exec-27] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:06:40.859 [http-nio-8080-exec-41] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:06:44.006 [http-nio-8080-exec-40] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:07:27.477 [http-nio-8080-exec-61] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:07:36.066 [http-nio-8080-exec-60] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:07:37.335 [http-nio-8080-exec-63] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:07:38.306 [http-nio-8080-exec-64] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:08:46.041 [lettuce-nioEventLoop-4-5] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+22:08:46.136 [lettuce-eventExecutorLoop-1-5] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+22:08:46.137 [lettuce-nioEventLoop-4-6] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+22:09:23.209 [http-nio-8080-exec-66] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:10:16.831 [http-nio-8080-exec-81] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:10:29.086 [http-nio-8080-exec-78] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:11:35.065 [lettuce-nioEventLoop-4-6] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+22:11:35.142 [lettuce-eventExecutorLoop-1-9] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+22:11:35.143 [lettuce-nioEventLoop-4-7] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+22:12:41.102 [lettuce-nioEventLoop-4-7] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+22:12:41.148 [lettuce-eventExecutorLoop-1-10] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+22:12:41.149 [lettuce-nioEventLoop-4-8] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+22:13:35.878 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+22:13:40.709 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+22:13:40.714 [main] INFO  c.s.ServerApplication - [logStarting,55] - Starting ServerApplication using Java 17.0.14 on bxwy with PID 50052 (D:\ZLXN\fish-dish-server\server-admin\target\classes started by bxwy in D:\ZLXN\fish-dish-server)
+22:13:40.714 [main] INFO  c.s.ServerApplication - [logStartupProfileInfo,686] - The following 2 profiles are active: "dev", "druid"
+22:13:42.814 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+22:13:42.816 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+22:13:42.816 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.102]
+22:13:42.968 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+22:13:44.223 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+22:13:47.687 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+22:13:47.699 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+22:13:47.700 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+22:13:47.700 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+22:13:47.701 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+22:13:47.701 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+22:13:47.701 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+22:13:47.701 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5a14a8c1
+22:13:49.483 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+22:13:49.554 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:13:49.620 [http-nio-8080-exec-1] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+22:13:49.620 [http-nio-8080-exec-2] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+22:13:49.631 [http-nio-8080-exec-4] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+22:13:49.648 [http-nio-8080-exec-5] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+22:13:49.662 [http-nio-8080-exec-8] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+22:13:49.677 [http-nio-8080-exec-10] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+22:13:50.160 [main] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+22:13:50.170 [main] INFO  c.s.ServerApplication - [logStarted,61] - Started ServerApplication in 9.753 seconds (JVM running for 10.404)
+22:13:51.234 [http-nio-8080-exec-13] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+22:13:51.249 [http-nio-8080-exec-12] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+22:14:53.092 [lettuce-nioEventLoop-4-1] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+22:14:53.138 [lettuce-eventExecutorLoop-1-4] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+22:14:53.143 [lettuce-nioEventLoop-4-2] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+22:15:20.408 [http-nio-8080-exec-31] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:15:20.956 [http-nio-8080-exec-36] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:15:57.858 [http-nio-8080-exec-49] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:16:09.582 [http-nio-8080-exec-50] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:17:10.064 [http-nio-8080-exec-77] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:17:10.077 [http-nio-8080-exec-77] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:17:10.083 [http-nio-8080-exec-77] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:17:10.092 [http-nio-8080-exec-77] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:17:10.098 [http-nio-8080-exec-77] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:17:10.104 [http-nio-8080-exec-77] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:17:10.109 [http-nio-8080-exec-77] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:17:10.117 [http-nio-8080-exec-77] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:17:10.124 [http-nio-8080-exec-77] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:17:10.960 [http-nio-8080-exec-80] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:17:10.973 [http-nio-8080-exec-80] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:17:14.694 [http-nio-8080-exec-82] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=273, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:17:14.702 [http-nio-8080-exec-82] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 3
+22:17:17.707 [http-nio-8080-exec-84] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=271, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:17:17.715 [http-nio-8080-exec-84] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:17:55.423 [http-nio-8080-exec-98] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=272, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:17:55.432 [http-nio-8080-exec-98] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:17:59.015 [http-nio-8080-exec-2] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:17:59.024 [http-nio-8080-exec-2] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:18:00.495 [http-nio-8080-exec-3] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=273, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:18:00.502 [http-nio-8080-exec-3] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 3
+22:18:00.943 [http-nio-8080-exec-4] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=272, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:18:00.950 [http-nio-8080-exec-4] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:18:01.420 [http-nio-8080-exec-6] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=271, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:18:01.427 [http-nio-8080-exec-6] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:18:02.154 [http-nio-8080-exec-5] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:18:02.160 [http-nio-8080-exec-5] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:18:02.607 [http-nio-8080-exec-7] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=271, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:18:02.614 [http-nio-8080-exec-7] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:18:03.298 [http-nio-8080-exec-8] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=272, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:18:03.305 [http-nio-8080-exec-8] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:18:03.916 [http-nio-8080-exec-9] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=273, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:18:03.923 [http-nio-8080-exec-9] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 3
+22:18:04.419 [http-nio-8080-exec-10] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=272, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:18:04.426 [http-nio-8080-exec-10] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:18:05.019 [http-nio-8080-exec-13] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=273, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:18:05.025 [http-nio-8080-exec-13] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 3
+22:18:06.127 [http-nio-8080-exec-12] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=272, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:18:06.134 [http-nio-8080-exec-12] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:18:06.738 [http-nio-8080-exec-16] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=271, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:18:06.745 [http-nio-8080-exec-16] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:18:07.108 [http-nio-8080-exec-15] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:18:07.114 [http-nio-8080-exec-15] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:18:07.458 [http-nio-8080-exec-17] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=271, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:18:07.463 [http-nio-8080-exec-17] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:18:07.880 [http-nio-8080-exec-19] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=272, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:18:07.888 [http-nio-8080-exec-19] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:18:08.501 [http-nio-8080-exec-18] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=273, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:18:08.507 [http-nio-8080-exec-18] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 3
+22:18:13.783 [http-nio-8080-exec-21] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:13.788 [http-nio-8080-exec-21] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:13.791 [http-nio-8080-exec-27] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=273, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:18:13.791 [http-nio-8080-exec-26] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=272, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:18:13.791 [http-nio-8080-exec-23] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:18:13.791 [http-nio-8080-exec-25] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=271, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:18:13.793 [http-nio-8080-exec-21] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:13.795 [http-nio-8080-exec-26] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:18:13.795 [http-nio-8080-exec-25] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:18:13.795 [http-nio-8080-exec-27] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 3
+22:18:13.797 [http-nio-8080-exec-23] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:18:13.797 [http-nio-8080-exec-21] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:13.802 [http-nio-8080-exec-21] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:13.808 [http-nio-8080-exec-21] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:13.812 [http-nio-8080-exec-21] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:13.817 [http-nio-8080-exec-21] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:13.821 [http-nio-8080-exec-21] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:13.827 [http-nio-8080-exec-21] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:19.105 [http-nio-8080-exec-33] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:19.110 [http-nio-8080-exec-33] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:19.112 [http-nio-8080-exec-35] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=271, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:18:19.112 [http-nio-8080-exec-31] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=272, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:18:19.112 [http-nio-8080-exec-36] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=273, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:18:19.112 [http-nio-8080-exec-32] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:18:19.115 [http-nio-8080-exec-33] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:19.118 [http-nio-8080-exec-36] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 3
+22:18:19.118 [http-nio-8080-exec-35] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:18:19.118 [http-nio-8080-exec-32] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:18:19.118 [http-nio-8080-exec-31] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:18:19.122 [http-nio-8080-exec-33] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:19.128 [http-nio-8080-exec-33] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:19.133 [http-nio-8080-exec-33] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:19.138 [http-nio-8080-exec-33] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:19.143 [http-nio-8080-exec-33] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:19.148 [http-nio-8080-exec-33] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:19.156 [http-nio-8080-exec-33] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:27.592 [http-nio-8080-exec-44] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+22:18:27.592 [http-nio-8080-exec-45] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+22:18:27.592 [http-nio-8080-exec-43] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+22:18:27.592 [http-nio-8080-exec-42] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+22:18:28.261 [http-nio-8080-exec-46] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+22:18:28.265 [http-nio-8080-exec-48] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:18:28.837 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:28.844 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:28.850 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:28.861 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:28.877 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:28.889 [http-nio-8080-exec-55] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=271, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:18:28.888 [http-nio-8080-exec-54] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:18:28.889 [http-nio-8080-exec-56] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=272, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:18:28.891 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:28.892 [http-nio-8080-exec-57] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=273, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:18:28.909 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:28.909 [http-nio-8080-exec-55] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:18:28.909 [http-nio-8080-exec-56] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:18:28.909 [http-nio-8080-exec-54] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:18:28.912 [http-nio-8080-exec-57] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 3
+22:18:28.918 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:28.925 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:28.931 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:18:30.980 [http-nio-8080-exec-62] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+22:18:31.427 [http-nio-8080-exec-61] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+22:18:31.430 [http-nio-8080-exec-64] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:19:37.016 [lettuce-nioEventLoop-4-2] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+22:19:37.033 [lettuce-eventExecutorLoop-1-6] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+22:19:37.038 [lettuce-nioEventLoop-4-3] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+22:19:41.328 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+22:19:44.346 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+22:19:44.350 [main] INFO  c.s.ServerApplication - [logStarting,55] - Starting ServerApplication using Java 17.0.14 on bxwy with PID 2740 (D:\ZLXN\fish-dish-server\server-admin\target\classes started by bxwy in D:\ZLXN\fish-dish-server)
+22:19:44.351 [main] INFO  c.s.ServerApplication - [logStartupProfileInfo,686] - The following 2 profiles are active: "dev", "druid"
+22:19:46.422 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+22:19:46.423 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+22:19:46.424 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.102]
+22:19:46.560 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+22:19:47.635 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+22:19:51.094 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+22:19:51.104 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+22:19:51.104 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+22:19:51.105 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+22:19:51.106 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+22:19:51.106 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+22:19:51.106 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+22:19:51.106 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5a14a8c1
+22:19:52.836 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+22:19:52.986 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:19:53.059 [http-nio-8080-exec-1] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+22:19:53.059 [http-nio-8080-exec-2] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+22:19:53.075 [http-nio-8080-exec-4] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+22:19:53.091 [http-nio-8080-exec-8] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+22:19:53.107 [http-nio-8080-exec-6] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+22:19:53.121 [http-nio-8080-exec-9] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+22:19:53.230 [http-nio-8080-exec-13] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+22:19:53.580 [main] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+22:19:53.594 [main] INFO  c.s.ServerApplication - [logStarted,61] - Started ServerApplication in 9.543 seconds (JVM running for 10.239)
+22:19:55.227 [http-nio-8080-exec-12] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+22:19:55.948 [http-nio-8080-exec-11] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:19:56.394 [http-nio-8080-exec-15] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+22:19:56.394 [http-nio-8080-exec-14] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+22:19:56.739 [http-nio-8080-exec-16] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+22:19:56.743 [http-nio-8080-exec-17] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+22:19:59.194 [http-nio-8080-exec-25] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:19:59.209 [http-nio-8080-exec-25] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:19:59.210 [http-nio-8080-exec-29] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=273, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:19:59.210 [http-nio-8080-exec-27] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=271, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:19:59.210 [http-nio-8080-exec-28] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=272, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:19:59.210 [http-nio-8080-exec-26] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,68] - Query parameters: AgricultureBatchTask(taskId=null, batchId=214, taskName=null, responsiblePersonId=null, responsiblePersonName=null, fishDish=null, planStart=null, planFinish=null, actualStart=null, actualFinish=null, taskDetail=null, taskImages=null, taskVideos=null, status=null, orderNum=null, delFlag=null, searchValue=null, params=null, remark=null)
+22:19:59.215 [http-nio-8080-exec-25] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:19:59.223 [http-nio-8080-exec-29] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 3
+22:19:59.224 [http-nio-8080-exec-27] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:19:59.224 [http-nio-8080-exec-28] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:19:59.224 [http-nio-8080-exec-26] INFO  c.s.s.i.AgricultureBatchTaskServiceImpl - [selectBatchTaskList,72] - Query result size: 4
+22:19:59.225 [http-nio-8080-exec-25] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:19:59.233 [http-nio-8080-exec-25] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:19:59.239 [http-nio-8080-exec-25] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:19:59.245 [http-nio-8080-exec-25] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:19:59.253 [http-nio-8080-exec-25] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:19:59.260 [http-nio-8080-exec-25] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:19:59.267 [http-nio-8080-exec-25] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+22:21:05.050 [lettuce-nioEventLoop-4-1] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+22:21:05.118 [lettuce-eventExecutorLoop-1-3] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+22:21:05.124 [lettuce-nioEventLoop-4-2] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+22:21:16.912 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.

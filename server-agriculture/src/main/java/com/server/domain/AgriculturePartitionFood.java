@@ -55,7 +55,10 @@ public class AgriculturePartitionFood implements Serializable {
     @ApiModelProperty(value = "鱼类食品质量（0 不及格、1 及格 2 优秀）")
     @TableField(value = "fish_status")
     private Integer fishStatus;
-    
+
+    @ApiModelProperty(value = "食品类型（fish-鱼 cuisine-菜）")
+    @TableField(value = "food_type")
+    private String foodType;
     //备注
     @ApiModelProperty(value = "备注", example = "test")
     @TableField(value = "description")
