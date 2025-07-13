@@ -168,7 +168,7 @@
       <workItem from="1751619143171" duration="4893000" />
       <workItem from="1751703405583" duration="16642000" />
       <workItem from="1752019524762" duration="15212000" />
-      <workItem from="1752314798293" duration="8374000" />
+      <workItem from="1752314798293" duration="8986000" />
     </task>
     <task id="LOCAL-00002" summary="bug修复">
       <option name="closed" value="true" />
@@ -386,7 +386,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752374692047</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="气象溯源sql调优 &#10;查询优化 &#10;溯源查询效率提高100倍">
+      <option name="closed" value="true" />
+      <created>1752396358179</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1752396358179</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
