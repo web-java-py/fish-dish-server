@@ -106,4 +106,7 @@ public class AgricultureCropBatch implements Serializable {
     @ApiModelProperty(value="区块链合约地址")
     private String contractAddr;
 
+    @TableField(value="harvest")
+    @ApiModelProperty(value="收获标志(0代表已收获，1代表未收获)")
+    private String harvest;
 }

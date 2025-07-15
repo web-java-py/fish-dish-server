@@ -1,7 +1,4 @@
-package com.server.domain.dto;/*
- * @author 不羡晚吟
- * @version 1.0
- */
+package com.server.domain.dto;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
