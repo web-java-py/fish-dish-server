@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="气象溯源sql调优 &#10;查询优化 &#10;溯源查询效率提高100倍">
+      <change afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/app/AppAgricultureController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-app/src/main/java/com/server/domain/vo/BatchInfoVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-app/src/main/java/com/server/domain/vo/BatchTaskVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-app/src/main/java/com/server/domain/vo/BatchVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-app/src/main/java/com/server/domain/vo/PastureVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-app/src/main/java/com/server/service/AppAgricultureService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-app/src/main/java/com/server/service/AppConsoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-app/src/main/java/com/server/service/impl/AppAgricultureServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-app/src/main/java/com/server/service/impl/AppConsoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/consumer/AiConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/consumer/AiConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/app/AppConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/app/AppConsoleController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +95,9 @@
       <recent name="D:\ZLXN\fish-dish-server\server-agriculture\src\main\java\com\server\mapper" />
       <recent name="D:\ZLXN\fish-dish-server\server-admin\src\main\java\com\server\controller\agriculture" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.server.controller.app" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
@@ -102,6 +115,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.ServerApplication" />
+        <item itemvalue="Spring Boot.ServerApplication" />
         <item itemvalue="Spring Boot.ServerApplication" />
         <item itemvalue="Spring Boot.ServerApplication" />
       </list>
@@ -380,7 +395,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="bxwy" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
