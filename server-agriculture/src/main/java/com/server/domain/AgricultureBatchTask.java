@@ -89,15 +89,15 @@ public class AgricultureBatchTask extends BaseEntity {
     /** 实际开始日期 */
     @TableField(value = "actual_start")
     @ApiModelProperty(value = "实际开始日期")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date actualStart;
 
     /** 实际结束日期 */
     @TableField(value = "actual_finish")
     @ApiModelProperty(value = "实际结束日期")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date actualFinish;
 
     /** 任务详情 */
