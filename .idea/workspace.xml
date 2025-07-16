@@ -5,18 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="气象溯源sql调优 &#10;查询优化 &#10;溯源查询效率提高100倍">
-      <change afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/app/AppAgricultureController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-app/src/main/java/com/server/domain/vo/BatchInfoVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-app/src/main/java/com/server/domain/vo/BatchTaskVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-app/src/main/java/com/server/domain/vo/BatchVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-app/src/main/java/com/server/domain/vo/PastureVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-app/src/main/java/com/server/service/AppAgricultureService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-app/src/main/java/com/server/service/AppConsoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-app/src/main/java/com/server/service/impl/AppAgricultureServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-app/src/main/java/com/server/service/impl/AppConsoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/vo/TraceTotalVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/mapper/AgricultureConsoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-common/src/main/java/com/server/utils/DateIntervalUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f197720f-b50e-45ce-8c7c-6381843bae90.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f197720f-b50e-45ce-8c7c-6381843bae90.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_13_17_24__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_13_17_24__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_13_21_23__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_13_21_23__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_13_21_27__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_13_21_27__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2025_7_13_5_44___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2025_7_13_5_44___Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/app/AppConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/app/AppConsoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureConsoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureConsoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureConsoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureConsoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureConsoleServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,13 +83,22 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect" value="MySQL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server-agriculture/src/main/java" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\idea\project\Java\fish-dish-server\server-agriculture\src\main\java" />
       <recent name="D:\ZLXN\fish-dish-server\server-agriculture\src\main\java\com\server\service\impl" />
       <recent name="D:\ZLXN\fish-dish-server\server-agriculture\src\main\java\com\server\service" />
       <recent name="D:\ZLXN\fish-dish-server\server-agriculture\src\main\java\com\server\mapper" />
@@ -153,6 +162,7 @@
       <workItem from="1751703405583" duration="16642000" />
       <workItem from="1752019524762" duration="15212000" />
       <workItem from="1752314798293" duration="8986000" />
+      <workItem from="1752632079589" duration="5869000" />
     </task>
     <task id="LOCAL-00002" summary="bug修复">
       <option name="closed" value="true" />

@@ -20,4 +20,10 @@ public interface AgricultureConsoleService {
      * @return
      */
     List<AgricultureConsoleVO> listBatchTask();
+
+    /**
+     * 溯源统计
+     * @return
+     */
+    String listTraceTotal();
 }
