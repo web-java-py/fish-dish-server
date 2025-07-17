@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="修复溯源统计空格问题">
+    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="为大棚添加实时注解">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgriculturePastureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgriculturePastureController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-data/src/main/java/com/server/service/impl/ScaleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-data/src/main/java/com/server/service/impl/ScaleServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -390,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1752673685034</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="为大棚添加实时注解">
+      <created>1752738322048</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1752738322048</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,7 +432,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="去掉.idea配置" />
     <MESSAGE value="修复本地" />
     <MESSAGE value="bug修复" />
     <MESSAGE value="mqtt推送 数据解析拆分" />
@@ -450,7 +456,8 @@
     <MESSAGE value="气象书院sql调优 &#10;查询优化 &#10;溯源查询效率提高100倍" />
     <MESSAGE value="气象溯源sql调优 &#10;查询优化 &#10;溯源查询效率提高100倍" />
     <MESSAGE value="分区上链完成操作" />
-    <option name="LAST_COMMIT_MESSAGE" value="分区上链完成操作" />
+    <MESSAGE value="为大棚添加实时注解" />
+    <option name="LAST_COMMIT_MESSAGE" value="为大棚添加实时注解" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
