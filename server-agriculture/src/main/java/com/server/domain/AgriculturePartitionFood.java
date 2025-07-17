@@ -68,4 +68,8 @@ public class AgriculturePartitionFood implements Serializable {
     @TableField(exist = false)
     private String barcode;
 
+    @ApiModelProperty(value = "首次溯源查询时间", example = "2025-07-17 20:27:48")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    @TableField(value = "first_trace_time")
+    private Date firstTraceTime;
 }

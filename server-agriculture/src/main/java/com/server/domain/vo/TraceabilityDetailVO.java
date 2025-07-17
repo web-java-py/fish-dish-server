@@ -28,9 +28,15 @@ public class TraceabilityDetailVO {
     @ApiModelProperty("批次任务详情列表")
     private List<BatchTaskDetailVO> batchTaskDetailList;
 
+    @ApiModelProperty("该大棚和分区下有阈值配置的所有阈值配置列表")
+    private List<AgricultureThresholdConfig> thresholdConfigList;
+
     @ApiModelProperty("分区创建时间（格式化：年-月-日）")
     private String cropBatchCreateTimeFormatted;
 
     @ApiModelProperty(value = "溯源次数")
     private Long traceCount;
+
+    @ApiModelProperty("该大棚和分区下的所有传感器预警信息")
+    private List<AgricultureDeviceSensorAlert> sensorAlertList;
 }

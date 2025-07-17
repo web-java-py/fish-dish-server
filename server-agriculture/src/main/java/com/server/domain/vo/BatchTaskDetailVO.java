@@ -1,6 +1,7 @@
 package com.server.domain.vo;
 
 import com.server.domain.AgricultureBatchTask;
+import com.server.domain.AgricultureDeviceSensorAlert;
 import com.server.domain.AgricultureWaterQualityData;
 import com.server.domain.AgricultureWeatherData;
 import io.swagger.annotations.ApiModel;
@@ -37,4 +38,10 @@ public class BatchTaskDetailVO {
 
     @ApiModelProperty("水质数据平均值")
     private Map<String, Double> waterQualityAvg;
+
+    @ApiModelProperty("该批次任务区间内的传感器预警信息")
+    private List<AgricultureDeviceSensorAlert> sensorAlertList;
+
+    @ApiModelProperty("该批次任务区间内的预警条数")
+    private Integer alertCount;
 }
