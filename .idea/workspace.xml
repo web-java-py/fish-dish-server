@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="1 新加字段 fishArea养殖面积(亩) fish_weight鱼类重量&#10;2 新增分区 拿 vegetableId 与 种类表的id关联&#10;3 溯源多种质，生成两个溯源信息&#10;4 多个种质 图片轮播">
+    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="大数据面板，溯源统计">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureBatchTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureBatchTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureCropBatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureCropBatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgriculturePartitionFood.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgriculturePartitionFood.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/dto/AgricultureCropBatchDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/dto/AgricultureCropBatchDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/dto/AgriculturePartitionFoodPageDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/dto/AgriculturePartitionFoodPageDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureClassServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureClassServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgriculturePartitionFoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgriculturePartitionFoodController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-data/src/main/java/com/server/aspect/DataSeeAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-data/src/main/java/com/server/aspect/DataSeeAspect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-info.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-user.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-user.log" afterDir="false" />
@@ -90,7 +86,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.ServerApplication.executor": "Debug",
+    "Application.ServerApplication.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -426,7 +422,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752398042177</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="大数据面板，溯源统计">
+      <option name="closed" value="true" />
+      <created>1752673620750</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1752673620750</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,7 +460,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="去掉.idea配置" />
     <MESSAGE value="修复本地" />
     <MESSAGE value="bug修复" />
     <MESSAGE value="mqtt推送 数据解析拆分" />
@@ -481,7 +484,8 @@
     <MESSAGE value="气象书院sql调优 &#10;查询优化 &#10;溯源查询效率提高100倍" />
     <MESSAGE value="气象溯源sql调优 &#10;查询优化 &#10;溯源查询效率提高100倍" />
     <MESSAGE value="水质溯源sql调优 &#10;查询优化 &#10;性能提升了 75.09%，查询时间减少了约3/4" />
-    <option name="LAST_COMMIT_MESSAGE" value="水质溯源sql调优 &#10;查询优化 &#10;性能提升了 75.09%，查询时间减少了约3/4" />
+    <MESSAGE value="大数据面板，溯源统计" />
+    <option name="LAST_COMMIT_MESSAGE" value="大数据面板，溯源统计" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
