@@ -30,4 +30,5 @@ public class AgricultureCropBatchDTO {
     private String nickName;
     private String classId;            // agriculture_class 和 agriculture_job
     private String jobName;            // agriculture_job
+    private String harvest;
 }

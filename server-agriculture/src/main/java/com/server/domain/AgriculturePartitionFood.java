@@ -68,6 +68,10 @@ public class AgriculturePartitionFood implements Serializable {
     @TableField(exist = false)
     private String barcode;
 
+    @ApiModelProperty(value = "食品类型（fish-鱼 cuisine-菜）")
+    @TableField(value = "food_type")
+    private String foodType;
+
 
 
 }

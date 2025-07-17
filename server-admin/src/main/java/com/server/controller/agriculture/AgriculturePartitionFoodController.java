@@ -4,8 +4,10 @@ import java.util.List;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
+import com.server.annotation.SeeRefreshData;
 import com.server.domain.dto.AgriculturePartitionFoodPageDTO;
 import com.server.domain.vo.TraceabilityDetailVO;
+import com.server.enums.SeeMessageType;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,6 +51,7 @@ public class AgriculturePartitionFoodController extends BaseController
     @ApiOperation("根据溯源码查询溯源详情信息")
     @PreAuthorize("@ss.hasPermi('agriculturePartitionFood:traceDetail')")
     @GetMapping("/traceDetail")
+    @SeeRefreshData(seeMessageType = SeeMessageType.DATA)
     public AjaxResult getTraceabilityDetail(@RequestParam("traceId") String traceId,
                                        HttpServletRequest request) {
     // 自动获取客户端信息
