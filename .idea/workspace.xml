@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="为大棚添加实时注解">
+    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="修复响应数据">
+      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/fisco/bcos/AgricultureDeviceSensorAlertFB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-data/src/main/java/com/server/service/impl/ScaleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-data/src/main/java/com/server/service/impl/ScaleServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,6 +158,7 @@
       <workItem from="1752314798293" duration="8986000" />
       <workItem from="1752632079589" duration="5869000" />
       <workItem from="1752669852407" duration="4011000" />
+      <workItem from="1752750625125" duration="4409000" />
     </task>
     <task id="LOCAL-00002" summary="bug修复">
       <option name="closed" value="true" />
