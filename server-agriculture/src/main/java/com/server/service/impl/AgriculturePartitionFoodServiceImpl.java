@@ -14,6 +14,7 @@ import com.server.domain.*;
 import com.server.domain.dto.AgriculturePartitionFoodPageDTO;
 import com.server.domain.vo.BatchTaskDetailVO;
 import com.server.domain.vo.TraceabilityDetailVO;
+import com.server.domain.vo.DeviceWithThresholdVO;
 import com.server.service.AgricultureWaterQualityHourlyStatsService;
 import com.server.service.AgricultureWaterQualityDailyStatsService;
 import com.server.mapper.*;
@@ -23,6 +24,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.server.service.AgriculturePartitionFoodService;
 import com.server.service.AgricultureTraceabilityLogService;
+import com.server.service.AgricultureDeviceSensorAlertService;
 
 /**
  * 分区食品 采摘Service业务层处理
@@ -77,6 +79,13 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
     @Autowired
     private AgricultureTraceabilityLogService traceabilityLogService;
 
+    @Autowired
+    private AgricultureDeviceService agricultureDeviceService;
+    @Autowired
+    private AgricultureThresholdConfigService agricultureThresholdConfigService;
+    @Autowired
+    private AgricultureDeviceSensorAlertService sensorAlertService;
+
     /**
      * 根据溯源码查询溯源详情信息，包括分区、大棚、批次任务、环境数据等
      *
@@ -88,42 +97,46 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
      * @throws RuntimeException 如果溯源信息不存在
      */
     @Override
-    public TraceabilityDetailVO getTraceabilityDetailById(String traceId, String queryIp, String userAgent, String queryType) {
+    public TraceabilityDetailVO getTraceabilityDetailById(String traceId, String queryIp, String userAgent, String queryType, Date firstTraceTime) {
         // 1. 查溯源表
         AgriculturePartitionFood food = agriculturePartitionFoodMapper.selectById(traceId);
         if (food == null) {
             throw new RuntimeException("溯源信息不存在");
         }
 
-        // 2. 记录查询日志
+        // 2. 首次溯源时间处理
+        if (food.getFirstTraceTime() == null && firstTraceTime != null) {
+            food.setFirstTraceTime(firstTraceTime);
+            agriculturePartitionFoodMapper.updateById(food);
+        }
+
+        // 3. 记录查询日志
         traceabilityLogService.recordTraceabilityQuery(traceId, food.getIaPartitionId(), queryIp, userAgent, queryType);
 
-        // 查询该溯源码的溯源次数
+        // 4. 查询该溯源码的溯源次数
         Long traceCount = traceabilityLogService.getTraceabilityCountByCode(traceId);
 
-        // 3. 查分区
+        // 5. 查分区
         AgricultureCropBatch cropBatch = agricultureCropBatchMapper.selectById(food.getIaPartitionId());
-        
-        // 格式化分区的创建时间为年-月-日格式
+
+        // 6. 格式化分区的创建时间为年-月-日格式
         String formattedCreateTime = null;
         if (cropBatch != null && cropBatch.getCreateTime() != null) {
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
             formattedCreateTime = dateFormat.format(cropBatch.getCreateTime());
         }
 
-        // 4. 查大棚
+        // 7. 查大棚
         AgriculturePasture pasture = null;
         if (cropBatch != null) {
             pasture = pastureMapper.selectById(cropBatch.getPastureId());
         }
 
-        // 5. 查所有批次任务
+        // 8. 查所有批次任务
         List<AgricultureBatchTask> batchTaskList = batchTaskMapper.selectList(
-                new QueryWrapper<AgricultureBatchTask>().eq("batch_id", food.getIaPartitionId())
+            new QueryWrapper<AgricultureBatchTask>().eq("batch_id", food.getIaPartitionId())
         );
-
         List<BatchTaskDetailVO> batchTaskDetailList = new ArrayList<>();
-
         for (AgricultureBatchTask batchTask : batchTaskList) {
             BatchTaskDetailVO detailVO = new BatchTaskDetailVO();
             detailVO.setBatchTask(batchTask);
@@ -144,14 +157,64 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
             batchTaskDetailList.add(detailVO);
         }
 
-        // 6. 组装VO
+        // 9. 查设备及阈值配置（只返回有阈值配置的所有阈值配置信息）
+        List<Long> deviceIds = agricultureDeviceService.selectDeviceIdsByPastureAndBatch(
+            cropBatch != null ? Long.valueOf(cropBatch.getPastureId()) : null,
+            cropBatch != null ? Long.valueOf(cropBatch.getBatchId()) : null
+        );
+        List<AgricultureThresholdConfig> thresholdConfigList = new ArrayList<>();
+        if (deviceIds != null && !deviceIds.isEmpty()) {
+            thresholdConfigList = agricultureThresholdConfigService.selectByDeviceIds(deviceIds);
+        }
+
+        // 10. 查大棚和分区下的所有预警信息
+        List<AgricultureDeviceSensorAlert> allSensorAlerts = sensorAlertService.list(
+            new QueryWrapper<AgricultureDeviceSensorAlert>()
+                .eq("pasture_id", cropBatch.getPastureId())
+                .eq("batch_id", cropBatch.getBatchId())
+        );
+
+        // 11. 归属到批次任务区间
+        for (BatchTaskDetailVO detailVO : batchTaskDetailList) {
+            AgricultureBatchTask batchTask = detailVO.getBatchTask();
+            if (batchTask.getActualStart() != null && batchTask.getActualFinish() != null) {
+                LocalDateTime start = toLocalDateTime(batchTask.getActualStart());
+                LocalDateTime end = toLocalDateTime(batchTask.getActualFinish());
+                // 新建 final 局部变量
+                final LocalDateTime realStart, realEnd;
+                if (start != null && end != null && start.isAfter(end)) {
+                    realStart = end;
+                    realEnd = start;
+                } else {
+                    realStart = start;
+                    realEnd = end;
+                }
+                List<AgricultureDeviceSensorAlert> alertsInTask = allSensorAlerts.stream()
+                    .filter(alert -> {
+                        LocalDateTime alertTime = alert.getAlertTime();
+                        return alertTime != null &&
+                            !alertTime.isBefore(realStart) &&
+                            !alertTime.isAfter(realEnd);
+                    })
+                    .collect(Collectors.toList());
+                detailVO.setSensorAlertList(alertsInTask);
+                detailVO.setAlertCount(alertsInTask.size());
+            } else {
+                detailVO.setSensorAlertList(Collections.emptyList());
+                detailVO.setAlertCount(0);
+            }
+        }
+
+        // 12. 组装VO
         TraceabilityDetailVO vo = new TraceabilityDetailVO();
         vo.setFoodInfo(food);
         vo.setCropBatch(cropBatch);
         vo.setPastureInfo(pasture);
         vo.setBatchTaskDetailList(batchTaskDetailList);
         vo.setCropBatchCreateTimeFormatted(formattedCreateTime);
-        vo.setTraceCount(traceCount); // 溯源次数
+        vo.setTraceCount(traceCount);
+        vo.setThresholdConfigList(thresholdConfigList);
+        vo.setSensorAlertList(allSensorAlerts);
         return vo;
     }
 
@@ -165,7 +228,7 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
     @Override
     public TraceabilityDetailVO getTraceabilityDetailById(String traceId) {
         // 调用带日志记录的方法，传入默认值
-        return getTraceabilityDetailById(traceId, null, null, null);
+        return getTraceabilityDetailById(traceId, null, null, null,null);
     }
 
     /**
@@ -686,4 +749,10 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
 //        return agriculturePartitionFoods;
 //    }
 
+    private LocalDateTime toLocalDateTime(Date date) {
+        if (date == null) {
+            return null;
+        }
+        return date.toInstant().atZone(java.time.ZoneId.systemDefault()).toLocalDateTime();
+    }
 }
