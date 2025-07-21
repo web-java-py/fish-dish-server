@@ -1,20 +1,29 @@
 package com.server.service.impl;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.server.core.text.Convert;
 import com.server.domain.AgricultureDevice;
+import com.server.fisco.bcos.AgricultureDeviceSensorAlertFB;
 import com.server.mapper.AgricultureDeviceMapper;
 import com.server.service.AgricultureDeviceService;
 import com.server.utils.DateUtils;
+import org.fisco.bcos.sdk.client.Client;
+import org.fisco.bcos.sdk.model.TransactionReceipt;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import com.server.mapper.AgricultureDeviceSensorAlertMapper;
 import com.server.domain.AgricultureDeviceSensorAlert;
 import com.server.service.AgricultureDeviceSensorAlertService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * 传感器预警信息Service业务层处理
@@ -25,8 +34,17 @@ import com.server.service.AgricultureDeviceSensorAlertService;
 @Service
 public class AgricultureDeviceSensorAlertServiceImpl extends ServiceImpl<AgricultureDeviceSensorAlertMapper, AgricultureDeviceSensorAlert> implements AgricultureDeviceSensorAlertService
 {
+
+
+    private static final Logger log = LoggerFactory.getLogger(AgricultureDeviceSensorAlertServiceImpl.class);
+
     @Autowired
     private AgricultureDeviceSensorAlertMapper agricultureDeviceSensorAlertMapper;
+    @Autowired(required = false)
+    private Client client;
+
+    @Value("${fisco.enabled}")
+    private String fiscoEnabled;
 
     /**
      * 查询传感器预警信息
@@ -74,10 +92,39 @@ public class AgricultureDeviceSensorAlertServiceImpl extends ServiceImpl<Agricul
      * @return 结果
      */
     @Override
-    public int insertAgricultureDeviceSensorAlert(AgricultureDeviceSensorAlert agricultureDeviceSensorAlert)
+    public AgricultureDeviceSensorAlert insertAgricultureDeviceSensorAlert(AgricultureDeviceSensorAlert agricultureDeviceSensorAlert)
     {
+        // 上链
+        if (Convert.toBool(fiscoEnabled)) {
+            try {
+                AgricultureDeviceSensorAlertFB contract = AgricultureDeviceSensorAlertFB.deploy(
+                        client, client.getCryptoSuite().getCryptoKeyPair());
+
+                TransactionReceipt receipt = contract.SensorAlertCreate(
+                        BigInteger.valueOf(agricultureDeviceSensorAlert.getId() == null ? 0L : agricultureDeviceSensorAlert.getId()),
+                        agricultureDeviceSensorAlert.getAlertType(),
+                        agricultureDeviceSensorAlert.getAlertMessage(),
+                        agricultureDeviceSensorAlert.getParamName(),
+                        agricultureDeviceSensorAlert.getParamValue(),
+                        agricultureDeviceSensorAlert.getThresholdMax() == null ? BigInteger.ZERO : BigDecimal.valueOf(agricultureDeviceSensorAlert.getThresholdMax()).toBigInteger(),
+                        agricultureDeviceSensorAlert.getThresholdMin() == null ? BigInteger.ZERO : BigDecimal.valueOf(agricultureDeviceSensorAlert.getThresholdMin()).toBigInteger(),
+                        agricultureDeviceSensorAlert.getPastureId(),
+                        agricultureDeviceSensorAlert.getBatchId(),
+                        agricultureDeviceSensorAlert.getDeviceId() == null ? BigInteger.ZERO : BigInteger.valueOf(agricultureDeviceSensorAlert.getDeviceId()),
+                        agricultureDeviceSensorAlert.getAlertTime() == null ? "" : agricultureDeviceSensorAlert.getAlertTime().toString(),
+                        agricultureDeviceSensorAlert.getAlertLevel() == null ? BigInteger.ZERO : BigInteger.valueOf(agricultureDeviceSensorAlert.getAlertLevel())
+                );
+                // 存交易哈希
+                agricultureDeviceSensorAlert.setBlockAddress(contract.getContractAddress());
+                log.info("预警信息上链成功，交易哈希: {}", contract.getContractAddress());
+            } catch (Exception e) {
+                log.error("预警信息上链失败: {}", e.getMessage(), e);
+            }
+        }
+        // 存数据库
         agricultureDeviceSensorAlert.setCreateTime(LocalDateTime.now());
-        return agricultureDeviceSensorAlertMapper.insert(agricultureDeviceSensorAlert);
+        agricultureDeviceSensorAlertMapper.insert(agricultureDeviceSensorAlert);
+        return agricultureDeviceSensorAlert; // 返回对象
     }
 
     /**

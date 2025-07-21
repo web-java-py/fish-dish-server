@@ -36,7 +36,7 @@ public interface AgricultureDeviceSensorAlertService extends IService<Agricultur
      * @param agricultureDeviceSensorAlert 传感器预警信息
      * @return 结果
      */
-    public int insertAgricultureDeviceSensorAlert(AgricultureDeviceSensorAlert agricultureDeviceSensorAlert);
+    public AgricultureDeviceSensorAlert insertAgricultureDeviceSensorAlert(AgricultureDeviceSensorAlert agricultureDeviceSensorAlert);
 
     /**
      * 修改传感器预警信息
