@@ -73,12 +73,13 @@ public class AgricultureDeviceSensorAlertController extends BaseController
     /**
      * 新增传感器预警信息
      */
-    @PreAuthorize("@ss.hasPermi('agriculture:alert:add')")
-    @Log(title = "传感器预警信息", businessType = BusinessType.INSERT)
+//    @PreAuthorize("@ss.hasPermi('agriculture:alert:add')")
+//    @Log(title = "传感器预警信息", businessType = BusinessType.INSERT)
     @PostMapping
     public AjaxResult add(@RequestBody AgricultureDeviceSensorAlert agricultureDeviceSensorAlert)
     {
-        return toAjax(agricultureDeviceSensorAlertService.insertAgricultureDeviceSensorAlert(agricultureDeviceSensorAlert));
+        AgricultureDeviceSensorAlert saved = agricultureDeviceSensorAlertService.insertAgricultureDeviceSensorAlert(agricultureDeviceSensorAlert);
+        return AjaxResult.success(saved); // 返回完整对象
     }
 
     /**

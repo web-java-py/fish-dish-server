@@ -111,7 +111,7 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
         }
 
         // 3. 记录查询日志
-        traceabilityLogService.recordTraceabilityQuery(traceId, food.getIaPartitionId(), queryIp, userAgent, queryType);
+        traceabilityLogService.recordTraceabilityQuery(traceId, food.getIaPartitionId(), queryIp, userAgent, queryType,food.getFoodType());
 
         // 4. 查询该溯源码的溯源次数
         Long traceCount = traceabilityLogService.getTraceabilityCountByCode(traceId);
