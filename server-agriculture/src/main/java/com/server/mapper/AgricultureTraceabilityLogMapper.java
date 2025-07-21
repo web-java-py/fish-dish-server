@@ -89,4 +89,36 @@ public interface AgricultureTraceabilityLogMapper extends BaseMapper<Agriculture
             "WHERE trace_code = #{traceCode} " +
             "ORDER BY query_time DESC")
     List<Map<String, Object>> getTraceabilityLogsByCode(@Param("traceCode") String traceCode);
+
+    /**
+     * 工作台溯源统计
+     * 年
+     * DATE_FORMAT 将字段 query_time 格式化为 YYYY-MM 的字符串，比如 2025-07 count 统计每个月的记录
+     * YEAR(query_time)：提取每条记录的查询时间的年份。  YEAR(CURDATE())：获取当前系统时间的年份
+     * @return
+     */
+    @Select("SELECT " +
+            "DATE_FORMAT(query_time, '%Y-%m') as time, COUNT(*) as count FROM agriculture_traceability_log " +
+            "WHERE YEAR(query_time) = YEAR(CURDATE()) GROUP BY time ORDER BY time")
+    List<Map<String, Object>> getTraceTotalByYear();
+
+    /**
+     * 工作台溯源统计
+     * 月  CURDATE返回当前的日期 DATE_SUB(CURDATE(), INTERVAL 30 DAY) 从当前日期减去30天
+     * @return
+     */
+    @Select("SELECT " +
+            "DATE_FORMAT(query_time, '%Y-%m-%d') as time, COUNT(*) as count FROM agriculture_traceability_log " +
+            "WHERE query_time >= DATE_SUB(CURDATE(), INTERVAL 30 DAY) AND query_time <= CURDATE() GROUP BY time ORDER BY time")
+    List<Map<String, Object>> getTraceTotalByMonth();
+
+    /**
+     * 工作台溯源统计
+     * 日
+     * @return
+     */
+    @Select("SELECT " +
+            "DATE_FORMAT(query_time, '%Y-%m-%d') as time, COUNT(*) as count FROM agriculture_traceability_log " +
+            "WHERE query_time >= DATE_SUB(CURDATE(), INTERVAL 8 DAY) AND query_time <= CURDATE() GROUP BY time ORDER BY time")
+    List<Map<String, Object>> getTraceTotalByWeek();
 }

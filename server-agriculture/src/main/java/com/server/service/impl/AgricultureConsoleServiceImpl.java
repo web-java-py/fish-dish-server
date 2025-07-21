@@ -2,10 +2,7 @@ package com.server.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.server.domain.AgricultureBatchTask;
-import com.server.domain.AgricultureClass;
-import com.server.domain.AgricultureCropBatch;
-import com.server.domain.AgriculturePasture;
+import com.server.domain.*;
 import com.server.domain.vo.AgricultureConsoleVO;
 import com.server.mapper.*;
 import com.server.service.AgricultureConsoleService;
@@ -18,6 +15,8 @@ import java.time.LocalTime;
 import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 
 @Service
 public class AgricultureConsoleServiceImpl implements AgricultureConsoleService {
@@ -33,6 +32,9 @@ public class AgricultureConsoleServiceImpl implements AgricultureConsoleService 
 
     @Autowired
     private AgricultureBatchTaskMapper agricultureBatchTaskMapper;
+
+    @Autowired
+    private  AgricultureTraceabilityLogMapper agricultureTraceabilityLogMapper;
 
     /**
      * 获取农场数据
@@ -122,6 +124,22 @@ public class AgricultureConsoleServiceImpl implements AgricultureConsoleService 
         return result;
     }
 
+    @Override
+    public Map<String, Object> listTraceTotal() {
+        Map<String, Object> result = new HashMap<>();
+        //添加键值对
+        result.put("year", agricultureTraceabilityLogMapper.getTraceTotalByYear());
+        result.put("month", agricultureTraceabilityLogMapper.getTraceTotalByMonth());
+        result.put("week", agricultureTraceabilityLogMapper.getTraceTotalByWeek());
+        return result;
+    }
+
+    /**
+     * 溯源统计
+     * @return
+     */
+
+
     private LocalDateTime yesterday() {
         return LocalDateTime.now().minusDays(1)
                 .with(LocalTime.MIDNIGHT);
@@ -159,4 +177,5 @@ public class AgricultureConsoleServiceImpl implements AgricultureConsoleService 
                 .classType(classType)
                 .build();
     }
+
 }

@@ -4,10 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="大数据面板，溯源统计">
+    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="大数据面板，溯源统计 sse无刷新获取最新数据">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_13_17_24_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_13_17_24__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_13_21_23_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_13_21_23__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_13_21_27_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_13_21_27__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2025_7_13_5_44___Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/在进行合并之前于_2025_7_13_下午5_44_取消提交了更改_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureConsoleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgriculturePartitionFoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgriculturePartitionFoodController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-data/src/main/java/com/server/aspect/DataSeeAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-data/src/main/java/com/server/aspect/DataSeeAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/vo/AgricultureConsoleVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/vo/AgricultureConsoleVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/mapper/AgricultureTraceabilityLogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/mapper/AgricultureTraceabilityLogMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureConsoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureConsoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureConsoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureConsoleServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-info.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-user.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-user.log" afterDir="false" />
@@ -86,7 +99,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.ServerApplication.executor": "Run",
+    "Application.ServerApplication.executor": "Debug",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -430,7 +443,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752673620750</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="大数据面板，溯源统计 sse无刷新获取最新数据">
+      <option name="closed" value="true" />
+      <created>1752727366488</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1752727366488</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,7 +481,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修复本地" />
     <MESSAGE value="bug修复" />
     <MESSAGE value="mqtt推送 数据解析拆分" />
     <MESSAGE value="参数类型字典实现" />
@@ -485,7 +505,8 @@
     <MESSAGE value="气象溯源sql调优 &#10;查询优化 &#10;溯源查询效率提高100倍" />
     <MESSAGE value="水质溯源sql调优 &#10;查询优化 &#10;性能提升了 75.09%，查询时间减少了约3/4" />
     <MESSAGE value="大数据面板，溯源统计" />
-    <option name="LAST_COMMIT_MESSAGE" value="大数据面板，溯源统计" />
+    <MESSAGE value="大数据面板，溯源统计 sse无刷新获取最新数据" />
+    <option name="LAST_COMMIT_MESSAGE" value="大数据面板，溯源统计 sse无刷新获取最新数据" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

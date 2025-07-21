@@ -51,7 +51,7 @@ public class AgriculturePartitionFoodController extends BaseController
     @ApiOperation("根据溯源码查询溯源详情信息")
     @PreAuthorize("@ss.hasPermi('agriculturePartitionFood:traceDetail')")
     @GetMapping("/traceDetail")
-    @SeeRefreshData(seeMessageType = SeeMessageType.DATA)
+    @SeeRefreshData
     public AjaxResult getTraceabilityDetail(@RequestParam("traceId") String traceId,
                                        HttpServletRequest request) {
     // 自动获取客户端信息
