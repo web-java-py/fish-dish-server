@@ -4,21 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="溯源带异常数据实现">
-      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/fisco/bcos/AgricultureDeviceSensorAlertFB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_13_17_24_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_13_17_24__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_13_21_23_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_13_21_23__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_13_21_27_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_13_21_27__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2025_7_13_5_44___Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/在进行合并之前于_2025_7_13_下午5_44_取消提交了更改_[Changes]/shelved.patch" beforeDir="false" />
+    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="溯源带异常数据上链实现">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureDeviceSensorAlertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureDeviceSensorAlertController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureDeviceSensorAlertService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureDeviceSensorAlertService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureDeviceSensorAlertServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureDeviceSensorAlertServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-framework/src/main/java/com/server/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-framework/src/main/java/com/server/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureTraceabilityLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureTraceabilityLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureTraceabilityLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureTraceabilityLogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgriculturePartitionFoodServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgriculturePartitionFoodServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureTraceabilityLogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureTraceabilityLogServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-info.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-user.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-user.log" afterDir="false" />
@@ -184,7 +175,7 @@
       <workItem from="1752314798293" duration="20785000" />
       <workItem from="1752841645559" duration="1965000" />
       <workItem from="1752846328892" duration="2702000" />
-      <workItem from="1753064929875" duration="4662000" />
+      <workItem from="1753064929875" duration="6612000" />
     </task>
     <task id="LOCAL-00002" summary="bug修复">
       <option name="closed" value="true" />
@@ -474,7 +465,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752762312630</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="溯源带异常数据上链实现">
+      <option name="closed" value="true" />
+      <created>1753069835429</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1753069835429</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -504,7 +503,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="参数类型字典实现" />
     <MESSAGE value="新增类型实现" />
     <MESSAGE value="实体类字段修改" />
     <MESSAGE value="图表趋势数据绑定实现" />
@@ -529,7 +527,8 @@
     <MESSAGE value="溯源表新增区分鱼菜字段" />
     <MESSAGE value="合并zbb" />
     <MESSAGE value="溯源带异常数据实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="溯源带异常数据实现" />
+    <MESSAGE value="溯源带异常数据上链实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="溯源带异常数据上链实现" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

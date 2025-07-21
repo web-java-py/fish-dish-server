@@ -11,7 +11,7 @@ public interface AgricultureTraceabilityLogService extends IService<AgricultureT
     /**
      * 记录溯源查询
      */
-    void recordTraceabilityQuery(String traceCode, String partitionId, String queryIp, String userAgent, String queryType);
+    void recordTraceabilityQuery(String traceCode, String partitionId, String queryIp, String userAgent, String queryType,String foodType);
 
     /**
      * 获取溯源统计信息

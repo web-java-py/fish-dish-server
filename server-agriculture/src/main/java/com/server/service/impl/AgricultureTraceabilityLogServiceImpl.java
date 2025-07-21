@@ -15,7 +15,7 @@ public class AgricultureTraceabilityLogServiceImpl extends ServiceImpl<Agricultu
         implements AgricultureTraceabilityLogService {
 
     @Override
-    public void recordTraceabilityQuery(String traceCode, String partitionId, String queryIp, String userAgent, String queryType) {
+    public void recordTraceabilityQuery(String traceCode, String partitionId, String queryIp, String userAgent, String queryType,String foodType) {
         AgricultureTraceabilityLog log = new AgricultureTraceabilityLog();
         log.setTraceCode(traceCode);
         log.setPartitionId(partitionId);
@@ -23,7 +23,7 @@ public class AgricultureTraceabilityLogServiceImpl extends ServiceImpl<Agricultu
         log.setQueryIp(queryIp);
         log.setUserAgent(userAgent);
         log.setQueryType(queryType);
-
+        log.setFoodType(foodType);
         this.save(log);
     }
 
