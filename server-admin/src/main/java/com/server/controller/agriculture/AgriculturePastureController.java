@@ -3,6 +3,7 @@ package com.server.controller.agriculture;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
 
+import com.server.annotation.SeeRefreshData;
 import com.server.domain.dto.AgriculturePastureDTO;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,7 @@ import com.server.core.page.TableDataInfo;
 
 /**
  * 大棚Controller
- * 
+ *
  * @author server
  * @date 2025-05-27
  */
@@ -77,6 +78,7 @@ public class AgriculturePastureController extends BaseController
     @PreAuthorize("@ss.hasPermi('agriculture:pasture:add')")
     @Log(title = "大棚", businessType = BusinessType.INSERT)
     @PostMapping
+    @SeeRefreshData
     public AjaxResult add(@RequestBody AgriculturePasture agriculturePasture)
     {
         return toAjax(agriculturePastureService.insertAgriculturePasture(agriculturePasture));
@@ -88,6 +90,7 @@ public class AgriculturePastureController extends BaseController
     @PreAuthorize("@ss.hasPermi('agriculture:pasture:edit')")
     @Log(title = "大棚", businessType = BusinessType.UPDATE)
     @PutMapping
+    @SeeRefreshData
     public AjaxResult edit(@RequestBody AgriculturePasture agriculturePasture)
     {
         return toAjax(agriculturePastureService.updateAgriculturePasture(agriculturePasture));
@@ -99,6 +102,7 @@ public class AgriculturePastureController extends BaseController
     @PreAuthorize("@ss.hasPermi('agriculture:pasture:remove')")
     @Log(title = "大棚", businessType = BusinessType.DELETE)
 	@DeleteMapping("/{ids}")
+    @SeeRefreshData
     public AjaxResult remove(@PathVariable Long[] ids)
     {
         return toAjax(agriculturePastureService.deleteAgriculturePastureByIds(ids));

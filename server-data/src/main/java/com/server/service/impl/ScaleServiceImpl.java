@@ -82,8 +82,8 @@ public class ScaleServiceImpl implements ScaleService {
         List<ScaleVO> result = new ArrayList<ScaleVO>();
 
         result.add(scaleVO("面积", areaSum));
-        result.add(scaleVO("分区", cropBatchCount));
         result.add(scaleVO("大棚", agriculturePastures.size()));
+        result.add(scaleVO("分区", cropBatchCount));
         result.add(scaleVO("种类", classCount));
         result.add(scaleVO("鱼", fishCount));
         result.add(scaleVO("菜", dishCount));

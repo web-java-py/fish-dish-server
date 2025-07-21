@@ -38,4 +38,14 @@ public class AgricultureConsoleController {
     public AjaxResult getBatchTask() {
         return AjaxResult.success(agricultureConsoleService.listBatchTask());
     }
+
+    /**
+     * 溯源统计
+     * @return
+     */
+    @GetMapping("/traceTotal")
+    @ApiOperation("溯源统计")
+    public AjaxResult getTraceTotal(){
+        return AjaxResult.success(agricultureConsoleService.listTraceTotal());
+    }
 }

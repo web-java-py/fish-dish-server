@@ -7,8 +7,10 @@ import com.server.domain.AgricultureClass;
 import com.server.domain.AgricultureCropBatch;
 import com.server.domain.AgriculturePasture;
 import com.server.domain.vo.AgricultureConsoleVO;
+import com.server.domain.vo.TraceTotalVO;
 import com.server.mapper.*;
 import com.server.service.AgricultureConsoleService;
+import com.server.utils.DateIntervalUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,6 +35,9 @@ public class AgricultureConsoleServiceImpl implements AgricultureConsoleService 
 
     @Autowired
     private AgricultureBatchTaskMapper agricultureBatchTaskMapper;
+
+    @Autowired
+    private AgricultureConsoleMapper agricultureConsoleMapper;
 
     /**
      * 获取农场数据
@@ -120,6 +125,18 @@ public class AgricultureConsoleServiceImpl implements AgricultureConsoleService 
         }
 
         return result;
+    }
+
+    /**
+     * 溯源统计
+     * @return
+     */
+    @Override
+    public String listTraceTotal() {
+        List<TraceTotalVO> traceTotalVOS = agricultureConsoleMapper.listTraceTotal(DateIntervalUtils.getNearlyWeekDates());
+        List<TraceTotalVO> traceTotalVOSS = agricultureConsoleMapper.listTraceTotal(DateIntervalUtils.getNearlyMonthDates());
+        List<TraceTotalVO> traceTotalVOSSS = agricultureConsoleMapper.listTraceTotal(DateIntervalUtils.getNearlyYearDates());
+        return null;
     }
 
     private LocalDateTime yesterday() {
