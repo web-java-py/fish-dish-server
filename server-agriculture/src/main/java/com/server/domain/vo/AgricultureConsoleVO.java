@@ -23,4 +23,5 @@ public class AgricultureConsoleVO {
     private char traceCode;
     @TableField(value="query_time")
     private LocalDateTime queryTime;
+    private  String foodType;
 }

@@ -765,3 +765,10 @@ Caused by: java.sql.SQLException: Field 'food_type' doesn't have a default value
 	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
 	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
 	... 142 common frames omitted
+19:59:42.253 [http-nio-8080-exec-56] ERROR c.s.w.MqSocketServer - [onError,48] - RabbitMQ客户端异常
+19:59:42.252 [http-nio-8080-exec-63] ERROR c.s.w.MqSocketServer - [onError,48] - RabbitMQ客户端异常
+19:59:42.253 [http-nio-8080-exec-62] ERROR c.s.w.MqSocketServer - [onError,48] - RabbitMQ客户端异常
+19:59:42.253 [http-nio-8080-exec-51] ERROR c.s.w.MqSocketServer - [onError,48] - RabbitMQ客户端异常
+19:59:42.253 [http-nio-8080-exec-61] ERROR c.s.w.MqSocketServer - [onError,48] - RabbitMQ客户端异常
+19:59:42.253 [http-nio-8080-exec-59] ERROR c.s.w.MqSocketServer - [onError,48] - RabbitMQ客户端异常
+19:59:42.253 [http-nio-8080-exec-67] ERROR c.s.w.MqSocketServer - [onError,48] - RabbitMQ客户端异常
