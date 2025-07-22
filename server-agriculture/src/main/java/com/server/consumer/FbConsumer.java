@@ -1,5 +1,6 @@
 package com.server.consumer;
 
+import com.server.domain.AgricultureCropBatch;
 import com.server.domain.AgricultureDevice;
 import com.server.domain.AgriculturePasture;
 import com.server.fisco.bcos.AgricultureDeviceFB;
@@ -14,6 +15,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
+
+import java.math.BigDecimal;
+import java.math.BigInteger;
 
 import static com.server.constant.RabbitMQConstant.*;
 
@@ -65,6 +69,42 @@ public class FbConsumer {
                     agriculturePasture.getAddress(),
                     agriculturePasture.getArea(),
                     agriculturePasture.getDescription()
+            );
+        }
+    }
+
+    /**
+     * 分区区块链操作
+     *
+     * @param agricultureCropBatch
+     */
+    @RabbitHandler
+    public void agricultureCropBatchProcess(AgricultureCropBatch agricultureCropBatch) {
+        /* 加载合约 拿到合约地址 */
+        AgriculturePastureFB agriculturePastureFB = AgriculturePastureFB.load(agricultureCropBatch.getContractAddr(), client, cryptoKeyPair);
+        if (StringUtils.isEmpty(agricultureCropBatch.getContractAddr())) {
+            /* 调用合约 响应交易信息 */
+            agriculturePastureFB.createBatch(
+                    BigInteger.valueOf(agricultureCropBatch.getBatchId()),
+                    agricultureCropBatch.getBatchName(),
+                    BigInteger.valueOf(agricultureCropBatch.getGermplasmId()),
+                    BigInteger.valueOf(agricultureCropBatch.getVegetableId()),
+                    BigDecimal.valueOf(agricultureCropBatch.getFishArea()).toBigInteger(),
+                    BigDecimal.valueOf(agricultureCropBatch.getCropArea()).toBigInteger(),
+                    agricultureCropBatch.getCreateTime().toString(),
+                    BigInteger.valueOf(agricultureCropBatch.getResponsiblePersonId())
+            );
+        } else {
+            /* 调用合约 响应交易信息 */
+            agriculturePastureFB.updateBatch(
+                    BigInteger.valueOf(agricultureCropBatch.getBatchId()),
+                    agricultureCropBatch.getBatchName(),
+                    BigInteger.valueOf(agricultureCropBatch.getGermplasmId()),
+                    BigInteger.valueOf(agricultureCropBatch.getVegetableId()),
+                    BigDecimal.valueOf(agricultureCropBatch.getFishArea()).toBigInteger(),
+                    BigDecimal.valueOf(agricultureCropBatch.getCropArea()).toBigInteger(),
+                    agricultureCropBatch.getCreateTime().toString(),
+                    BigInteger.valueOf(agricultureCropBatch.getResponsiblePersonId())
             );
         }
     }

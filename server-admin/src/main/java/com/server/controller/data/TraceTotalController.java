@@ -23,6 +23,7 @@ public class TraceTotalController extends BaseController {
 
     @Autowired
     private TraceTotalService traceTotalService;
+
     /**
      * 查询2025年和2024年当前月及前四个月（共五个月）的溯源日志数量，按年和月分组
      */

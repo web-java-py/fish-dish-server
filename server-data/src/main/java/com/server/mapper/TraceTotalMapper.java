@@ -13,6 +13,7 @@ import java.util.Map;
  * @Date: 2025/7/16 20:05
  */
 public interface TraceTotalMapper extends BaseMapper<AgricultureTraceabilityLog> {
+
     /**
      * 查询2025年和2024年当前月及前四个月（共五个月）的溯源日志数量，按年和月分组
      */

@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="溯源带异常数据上链实现">
+    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="修复响应数据">
+      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/fisco/bcos/AgricultureDeviceSensorAlertFB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureTraceabilityLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureTraceabilityLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureTraceabilityLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureTraceabilityLogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgriculturePartitionFoodServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgriculturePartitionFoodServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureTraceabilityLogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureTraceabilityLogServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverlog/sys-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverlog/sys-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-info.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverlog/sys-user.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-user.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,14 +25,13 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;BuXianWanYin&quot;
-  }
-}</component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
       <filtered-out-file-type name="LOCAL_BRANCH" />
@@ -47,12 +40,6 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/web-java-py/fish-dish-server.git&quot;,
-    &quot;accountId&quot;: &quot;de79a800-e6f1-4294-8e51-75e1fbc82f5c&quot;
-  }
-}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/server-admin/src/main/resources/application-dev.yml" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -62,19 +49,18 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="customMavenHome" value="D:\maven\apache-maven-3.9.9" />
-        <option name="localRepository" value="D:\maven\apache-maven-3.9.9\Repository" />
-        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
-        <option name="userSettingsFile" value="D:\maven\apache-maven-3.9.9\conf\settings.xml" />
+        <option name="localRepository" value="E:\idea\Java_Maven\apache-maven-3.5.4\repo" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../Java_Maven/apache-maven-3.5.4" />
+        <option name="userSettingsFile" value="E:\idea\Java_Maven\apache-maven-3.5.4\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="PerforceDirect.Settings">
+    <option name="CHARSET" value="无" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 8
-}</component>
   <component name="ProjectId" id="2z4udUhg2iMJ66cZymyeur89p2B" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -83,49 +69,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.ServerApplication.executor": "Run",
-    "git-widget-placeholder": "bxwy",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/ZLXN/fish-dish-web",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
-    ]
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect" value="MySQL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/fisco/bcos" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="ts.external.directory.path" value="E:\idea\idea2021\IntelliJ IDEA 2021.3.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\idea\project\Java\fish-dish-server\server-agriculture\src\main\java\com\server\fisco\bcos" />
+      <recent name="E:\idea\project\Java\fish-dish-server\server-agriculture\src\main\java" />
       <recent name="D:\ZLXN\fish-dish-server\server-agriculture\src\main\java\com\server\service\impl" />
       <recent name="D:\ZLXN\fish-dish-server\server-agriculture\src\main\java\com\server\service" />
       <recent name="D:\ZLXN\fish-dish-server\server-agriculture\src\main\java\com\server\mapper" />
-      <recent name="D:\ZLXN\fish-dish-server\server-admin\src\main\java\com\server\controller\agriculture" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.server.controller.app" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.ServerApplication">
+    <configuration name="ServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.server.ServerApplication" />
       <module name="server-admin" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.server.ServerApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.server.*" />
@@ -136,9 +115,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="server-admin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.server.ServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ServerApplication" />
+        <item itemvalue="Application.ServerApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -172,10 +164,10 @@
       <workItem from="1751619143171" duration="4893000" />
       <workItem from="1751703405583" duration="16642000" />
       <workItem from="1752019524762" duration="15212000" />
-      <workItem from="1752314798293" duration="20785000" />
-      <workItem from="1752841645559" duration="1965000" />
-      <workItem from="1752846328892" duration="2702000" />
-      <workItem from="1753064929875" duration="6612000" />
+      <workItem from="1752314798293" duration="8986000" />
+      <workItem from="1752632079589" duration="5869000" />
+      <workItem from="1752669852407" duration="4011000" />
+      <workItem from="1752750625125" duration="4409000" />
     </task>
     <task id="LOCAL-00002" summary="bug修复">
       <option name="closed" value="true" />
@@ -401,79 +393,21 @@
       <option name="project" value="LOCAL" />
       <updated>1752396358179</updated>
     </task>
-    <task id="LOCAL-00030" summary="气象溯源sql调优 &#10;查询优化 &#10;溯源查询效率提高100倍">
-      <option name="closed" value="true" />
-      <created>1752396396112</created>
+    <task id="LOCAL-00030" summary="分区上链完成操作">
+      <created>1752673685034</created>
       <option name="number" value="00030" />
       <option name="presentableId" value="LOCAL-00030" />
       <option name="project" value="LOCAL" />
-      <updated>1752396396112</updated>
+      <updated>1752673685034</updated>
     </task>
-    <task id="LOCAL-00031" summary="水质溯源sql调优 &#10;查询优化 &#10;性能提升了 75.09%，查询时间减少了约3/4">
-      <option name="closed" value="true" />
-      <created>1752398042177</created>
+    <task id="LOCAL-00031" summary="为大棚添加实时注解">
+      <created>1752738322048</created>
       <option name="number" value="00031" />
       <option name="presentableId" value="LOCAL-00031" />
       <option name="project" value="LOCAL" />
-      <updated>1752398042177</updated>
+      <updated>1752738322048</updated>
     </task>
-    <task id="LOCAL-00032" summary="气象 水质溯源sql调优 &#10;查询优化">
-      <option name="closed" value="true" />
-      <created>1752399051415</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1752399051415</updated>
-    </task>
-    <task id="LOCAL-00033" summary="气象 水质溯源sql调优 &#10;查询优化">
-      <option name="closed" value="true" />
-      <created>1752399915123</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1752399915123</updated>
-    </task>
-    <task id="LOCAL-00034" summary="溯源次数统计实现">
-      <option name="closed" value="true" />
-      <created>1752412962761</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1752412962761</updated>
-    </task>
-    <task id="LOCAL-00035" summary="溯源表新增区分鱼菜字段">
-      <option name="closed" value="true" />
-      <created>1752416631825</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1752416631825</updated>
-    </task>
-    <task id="LOCAL-00036" summary="合并zbb">
-      <option name="closed" value="true" />
-      <created>1752746349245</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1752746349245</updated>
-    </task>
-    <task id="LOCAL-00037" summary="溯源带异常数据实现">
-      <option name="closed" value="true" />
-      <created>1752762312630</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1752762312630</updated>
-    </task>
-    <task id="LOCAL-00038" summary="溯源带异常数据上链实现">
-      <option name="closed" value="true" />
-      <created>1753069835429</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1753069835429</updated>
-    </task>
-    <option name="localTasksCounter" value="39" />
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,7 +424,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="851543" />
                       </list>
                     </value>
                   </entry>
@@ -499,10 +433,19 @@
             </State>
           </value>
         </entry>
+        <entry key="d4ff72b8-a48d-44b4-8d6c-16242e4a1c47">
+          <value>
+            <State />
+          </value>
+        </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="修复本地" />
+    <MESSAGE value="bug修复" />
+    <MESSAGE value="mqtt推送 数据解析拆分" />
+    <MESSAGE value="参数类型字典实现" />
     <MESSAGE value="新增类型实现" />
     <MESSAGE value="实体类字段修改" />
     <MESSAGE value="图表趋势数据绑定实现" />
@@ -515,20 +458,16 @@
     <MESSAGE value="摄像头实现" />
     <MESSAGE value="设备VO分页Bug修复" />
     <MESSAGE value="设备VO分页Bug修复2" />
+    <MESSAGE value="合并zbb" />
     <MESSAGE value="溯源接口实现" />
     <MESSAGE value="溯源接口实现2" />
     <MESSAGE value="溯源接口实现 bug修复" />
     <MESSAGE value="sql调优 查询优化 气象查询效率提高500倍" />
     <MESSAGE value="气象书院sql调优 &#10;查询优化 &#10;溯源查询效率提高100倍" />
     <MESSAGE value="气象溯源sql调优 &#10;查询优化 &#10;溯源查询效率提高100倍" />
-    <MESSAGE value="水质溯源sql调优 &#10;查询优化 &#10;性能提升了 75.09%，查询时间减少了约3/4" />
-    <MESSAGE value="气象 水质溯源sql调优 &#10;查询优化" />
-    <MESSAGE value="溯源次数统计实现" />
-    <MESSAGE value="溯源表新增区分鱼菜字段" />
-    <MESSAGE value="合并zbb" />
-    <MESSAGE value="溯源带异常数据实现" />
-    <MESSAGE value="溯源带异常数据上链实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="溯源带异常数据上链实现" />
+    <MESSAGE value="分区上链完成操作" />
+    <MESSAGE value="为大棚添加实时注解" />
+    <option name="LAST_COMMIT_MESSAGE" value="为大棚添加实时注解" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -541,7 +480,9 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/fish_dish_server$ServerApplication.ic" NAME="ServerApplication Coverage Results" MODIFIED="1750586508593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/fish_dish_server$ServerApplication.ic" NAME="ServerApplication Coverage Results" MODIFIED="1752669807889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.server.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/fish_dish_server$Agriculture_BcosSDKTest.ic" NAME="Agriculture.BcosSDKTest Coverage Results" MODIFIED="1750751250882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

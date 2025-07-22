@@ -898,3 +898,37 @@ java.net.SocketException: Connection reset
 10:30:02.349 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,32] - ====关闭后台任务任务线程池====
 10:30:02.372 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
 10:30:02.376 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+10:42:52.398 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+10:42:52.401 [main] INFO  c.s.ServerApplication - [logStarting,55] - Starting ServerApplication using Java 17.0.12 on zhubb with PID 146948 (D:\YCGSHou\fish-dish-server\server-admin\target\classes started by 18319 in D:\YCGSHou\fish-dish-server)
+10:42:52.401 [main] INFO  c.s.ServerApplication - [logStartupProfileInfo,686] - The following 2 profiles are active: "dev", "druid"
+10:42:55.651 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+10:42:55.654 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+10:42:55.655 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.102]
+10:42:55.778 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+10:42:56.796 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+10:42:59.687 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+10:42:59.702 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+10:42:59.703 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+10:42:59.704 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+10:42:59.706 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+10:42:59.706 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+10:42:59.706 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+10:42:59.706 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7f1e946f
+10:43:01.080 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+10:43:01.847 [main] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+10:43:01.858 [main] INFO  c.s.ServerApplication - [logStarted,61] - Started ServerApplication in 9.701 seconds (JVM running for 9.995)
+10:43:11.546 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+10:43:11.607 [http-nio-8080-exec-1] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+10:43:11.817 [http-nio-8080-exec-2] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+10:43:57.765 [http-nio-8080-exec-9] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+10:44:36.062 [http-nio-8080-exec-14] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+10:44:36.271 [http-nio-8080-exec-15] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+10:44:36.272 [http-nio-8080-exec-16] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+10:44:48.953 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
