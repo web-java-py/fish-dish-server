@@ -15,11 +15,6 @@
         大数据
     </description>
 
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-    </properties>
-
     <dependencies>
         <!-- 鱼菜核心 -->
         <dependency>

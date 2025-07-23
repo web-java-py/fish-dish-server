@@ -1,12 +1,15 @@
 package com.server.ai;
 
 import com.alibaba.fastjson2.JSON;
+import com.server.ai.tool.AgricultureTools;
 import com.server.domain.dto.IdentifyDTO;
 import com.server.exception.ServiceException;
 import com.server.properties.AiLocalProperties;
 import com.server.properties.AiOllamaProperties;
 import com.server.utils.HttpUtils;
 import com.server.utils.StringUtils;
+import dev.langchain4j.agent.tool.ToolSpecification;
+import dev.langchain4j.agent.tool.ToolSpecifications;
 import dev.langchain4j.model.chat.StreamingChatLanguageModel;
 import dev.langchain4j.model.chat.request.ChatRequest;
 import dev.langchain4j.model.chat.request.ResponseFormat;
@@ -27,8 +30,10 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
+import static dev.langchain4j.data.message.SystemMessage.systemMessage;
 import static dev.langchain4j.data.message.UserMessage.userMessage;
 
 @Log
@@ -38,7 +43,7 @@ public class AiService {
     @Autowired
     private AiLocalProperties aiLocalProperties;
 
-    private OllamaChatModel ollamaChatModel;
+    public OllamaChatModel ollamaChatModel;
     private StreamingChatLanguageModel streamingChatLanguageModel;
 
     public AiService(AiOllamaProperties aiOllamaProperties) {
@@ -121,5 +126,14 @@ public class AiService {
                 }
             }
         });
+    }
+
+    public Flux<String> chatAgents(String prompt){
+        List<ToolSpecification> toolSpecifications = ToolSpecifications.toolSpecificationsFrom(AgricultureTools.class);
+        ChatResponse chatResponse = ollamaChatModel.chat(ChatRequest.builder()
+                .messages(systemMessage("ss"),userMessage(prompt))
+                .toolSpecifications(toolSpecifications)
+                .build());
+        return null;
     }
 }
