@@ -29,7 +29,7 @@ public class AgricultureAiController {
     public Flux<String> chatStream(@RequestBody ChatStreamDTO chatStreamDTO){
         return StringUtils.isNotEmpty(chatStreamDTO.getFile()) ?
                 aiService.chatVl(chatStreamDTO.getPrompt(),chatStreamDTO.getFile())
-                :aiService.chatAgents(chatStreamDTO.getPrompt());
+                :aiService.chatAgentsStream(chatStreamDTO.getPrompt());
     }
 
     /**
