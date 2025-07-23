@@ -31,6 +31,7 @@ public class AgricultureSeeAspect {
             Map<String, Object> hashMap = new HashMap<>();
             hashMap.put("agriculture", agricultureConsoleService.listAgriculture());
             hashMap.put("batchTask", agricultureConsoleService.listBatchTask());
+            hashMap.put("traceTotal",agricultureConsoleService.listTraceTotal());
             sseServer.sendToAllMessage(SeeMessageType.AGRICULTURE.name(), hashMap);
         }
     }
