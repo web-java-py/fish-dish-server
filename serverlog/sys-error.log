@@ -366,3 +366,4 @@ Caused by: java.lang.Error: Unresolved compilation problems:
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
 	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:213)
 	... 19 common frames omitted
+17:14:37.890 [http-nio-8080-exec-16] ERROR c.s.w.e.GlobalExceptionHandler - [handleHttpRequestMethodNotSupported,52] - 请求地址'/agriculture/robot',不支持'GET'请求

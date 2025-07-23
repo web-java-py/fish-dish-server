@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="提交合并俊少">
+    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="工作台 溯源统计 &#10;任务处理 图片视频上传闪烁">
+      <change afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureRobotController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/AgricultureRobot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/mapper/AgricultureRobotMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureRobotService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureRobotServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgriculturePartitionFoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgriculturePartitionFoodController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/aspect/AgricultureSeeAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/aspect/AgricultureSeeAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/mapper/AgricultureConsoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/mapper/AgricultureConsoleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/mapper/AgricultureTraceabilityLogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/mapper/AgricultureTraceabilityLogMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureConsoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureConsoleServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-info.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-user.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-user.log" afterDir="false" />
@@ -26,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -89,6 +89,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "zbb",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/JiuYCGS/Hou/znwl-agriculture-server-no",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -416,7 +417,23 @@
       <option name="project" value="LOCAL" />
       <updated>1753152344372</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="工作台 溯源统计 &#10;任务处理 图片视频上传闪烁">
+      <option name="closed" value="true" />
+      <created>1753254663184</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1753254663184</updated>
+    </task>
+    <task id="LOCAL-00034" summary="工作台 溯源统计 &#10;任务处理 图片视频上传闪烁">
+      <option name="closed" value="true" />
+      <created>1753254767450</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1753254767450</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -451,7 +468,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="mqtt推送 数据解析拆分" />
     <MESSAGE value="参数类型字典实现" />
     <MESSAGE value="新增类型实现" />
     <MESSAGE value="实体类字段修改" />
@@ -476,7 +492,8 @@
     <MESSAGE value="为大棚添加实时注解" />
     <MESSAGE value="工作台溯源统计，更改sql，加入注解" />
     <MESSAGE value="提交合并俊少" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交合并俊少" />
+    <MESSAGE value="工作台 溯源统计 &#10;任务处理 图片视频上传闪烁" />
+    <option name="LAST_COMMIT_MESSAGE" value="工作台 溯源统计 &#10;任务处理 图片视频上传闪烁" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
