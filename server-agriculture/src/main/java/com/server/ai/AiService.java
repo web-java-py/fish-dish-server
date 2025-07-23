@@ -141,7 +141,7 @@ public class AiService {
                     .build(), new StreamingChatResponseHandler() {
                 @Override
                 public void onPartialResponse(String partialResponse) {
-                    String response = partialResponse.replace("<think>", "").replace("</think>", "").replaceAll("\\s+", "").trim();
+                    String response = partialResponse.replace("<think>", "").replace("</think>", "");
                     if (StringUtils.isEmpty(response)) return;
                     Map<String, Object> hashMap = new HashMap<String, Object>();
                     hashMap.put("role", "assistant");
