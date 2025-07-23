@@ -27,7 +27,7 @@ public class AgricultureAiController {
     @PostMapping(value = "/chatStream")
     @ApiOperation("在线聊天")
     public Flux<String> chatStream(@RequestBody ChatStreamDTO chatStreamDTO){
-        return StringUtils.isEmpty(chatStreamDTO.getFile()) ?
+        return StringUtils.isNotEmpty(chatStreamDTO.getFile()) ?
                 aiService.chatVl(chatStreamDTO.getPrompt(),chatStreamDTO.getFile())
                 :aiService.chatAgents(chatStreamDTO.getPrompt());
     }

@@ -10,6 +10,8 @@ import com.server.utils.HttpUtils;
 import com.server.utils.StringUtils;
 import dev.langchain4j.agent.tool.ToolSpecification;
 import dev.langchain4j.agent.tool.ToolSpecifications;
+import dev.langchain4j.data.document.Document;
+import dev.langchain4j.data.document.parser.TextDocumentParser;
 import dev.langchain4j.model.chat.StreamingChatLanguageModel;
 import dev.langchain4j.model.chat.request.ChatRequest;
 import dev.langchain4j.model.chat.request.ResponseFormat;
@@ -128,12 +130,36 @@ public class AiService {
         });
     }
 
-    public Flux<String> chatAgents(String prompt){
+    public Flux<String> chatAgents(String prompt) {
         List<ToolSpecification> toolSpecifications = ToolSpecifications.toolSpecificationsFrom(AgricultureTools.class);
-        ChatResponse chatResponse = ollamaChatModel.chat(ChatRequest.builder()
-                .messages(systemMessage("ss"),userMessage(prompt))
-                .toolSpecifications(toolSpecifications)
-                .build());
-        return null;
+        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("templates/ai/chat-role.txt");
+        String system = new TextDocumentParser().parse(inputStream).text();
+        return Flux.create(sink -> {
+            streamingChatLanguageModel.chat(ChatRequest.builder()
+                    .messages(systemMessage(system), userMessage(prompt + "/set nothink"))
+                    .toolSpecifications(toolSpecifications)
+                    .build(), new StreamingChatResponseHandler() {
+                @Override
+                public void onPartialResponse(String partialResponse) {
+                    String response = partialResponse.replace("<think>", "").replace("</think>", "").replaceAll("\\s+", "").trim();
+                    if (StringUtils.isEmpty(response)) return;
+                    Map<String, Object> hashMap = new HashMap<String, Object>();
+                    hashMap.put("role", "assistant");
+                    hashMap.put("response", response);
+                    hashMap.put("finish_reason", null);
+                    sink.next(JSON.toJSONString(hashMap));
+                }
+
+                @Override
+                public void onCompleteResponse(ChatResponse completeResponse) {
+                    sink.complete();
+                }
+
+                @Override
+                public void onError(Throwable error) {
+                    sink.error(error);
+                }
+            });
+        });
     }
 }
