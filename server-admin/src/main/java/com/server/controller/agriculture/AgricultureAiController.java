@@ -3,6 +3,7 @@ package com.server.controller.agriculture;
 import com.server.ai.AiService;
 import com.server.core.domain.AjaxResult;
 import com.server.domain.dto.ChatStreamDTO;
+import com.server.utils.StringUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,9 @@ public class AgricultureAiController {
     @PostMapping(value = "/chatStream")
     @ApiOperation("在线聊天")
     public Flux<String> chatStream(@RequestBody ChatStreamDTO chatStreamDTO){
-        return aiService.chatVl(chatStreamDTO.getPrompt(),chatStreamDTO.getFile());
+        return StringUtils.isEmpty(chatStreamDTO.getFile()) ?
+                aiService.chatVl(chatStreamDTO.getPrompt(),chatStreamDTO.getFile())
+                :aiService.chatAgents(chatStreamDTO.getPrompt());
     }
 
     /**
