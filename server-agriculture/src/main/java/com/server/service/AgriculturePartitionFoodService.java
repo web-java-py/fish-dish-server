@@ -1,5 +1,6 @@
 package com.server.service;
 
+import java.util.Date;
 import java.util.List;
 
 import com.baomidou.mybatisplus.extension.service.IService;
@@ -82,7 +83,7 @@ public interface AgriculturePartitionFoodService extends IService<AgriculturePar
      * @return TraceabilityDetailVO 溯源详情VO
      * @throws RuntimeException 如果溯源信息不存在
      */
-    TraceabilityDetailVO getTraceabilityDetailById(String traceId, String queryIp, String userAgent, String queryType);
+    TraceabilityDetailVO getTraceabilityDetailById(String traceId, String queryIp, String userAgent, String queryType, Date firstTraceTime);
 
     // 重载原来的方法
     TraceabilityDetailVO getTraceabilityDetailById(String traceId);

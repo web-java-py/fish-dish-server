@@ -1,5 +1,6 @@
 package com.server.service;
 
+import com.server.domain.AgricultureTraceabilityLog;
 import com.server.domain.vo.AgricultureConsoleVO;
 
 import java.util.List;
@@ -21,9 +22,12 @@ public interface AgricultureConsoleService {
      */
     List<AgricultureConsoleVO> listBatchTask();
 
+
     /**
      * 溯源统计
      * @return
      */
-    String listTraceTotal();
+    Map<String, Object> listTraceTotal();
+
+
 }

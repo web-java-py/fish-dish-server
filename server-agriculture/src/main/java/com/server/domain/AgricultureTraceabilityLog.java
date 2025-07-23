@@ -45,4 +45,8 @@ public class AgricultureTraceabilityLog implements Serializable {
     @ApiModelProperty(value = "查询类型(web/app/scan)")
     @TableField(value = "query_type")
     private String queryType;
+
+    @ApiModelProperty(value = "食品类型(fish-鱼, cuisine-蔬菜)", required = true)
+    @TableField(value = "food_type")
+    private String foodType;
 }

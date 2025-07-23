@@ -1,5 +1,7 @@
 package com.server.controller.agriculture;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpServletRequest;
@@ -51,18 +53,28 @@ public class AgriculturePartitionFoodController extends BaseController
     @ApiOperation("根据溯源码查询溯源详情信息")
     @PreAuthorize("@ss.hasPermi('agriculturePartitionFood:traceDetail')")
     @GetMapping("/traceDetail")
-    @SeeRefreshData(seeMessageType = SeeMessageType.DATA)
-    public AjaxResult getTraceabilityDetail(@RequestParam("traceId") String traceId,
-                                       HttpServletRequest request) {
-    // 自动获取客户端信息
-    String queryIp = getClientIpAddress(request);
-    String userAgent = request.getHeader("User-Agent");
-    String queryType = "web"; // 可以根据需要判断是web、app还是scan
-    
-    // 调用Service方法获取溯源详情
-    TraceabilityDetailVO vo = agriculturePartitionFoodService.getTraceabilityDetailById(traceId, queryIp, userAgent, queryType);
-    return success(vo);
-}
+    @SeeRefreshData
+    public AjaxResult getTraceabilityDetail(
+        @RequestParam("traceId") String traceId,
+        @RequestParam(value = "firstTraceTime", required = false) String firstTraceTimeStr,
+        HttpServletRequest request) {
+        String queryIp = getClientIpAddress(request);
+        String userAgent = request.getHeader("User-Agent");
+        String queryType = "web";
+
+        Date firstTraceTime = null;
+        if (firstTraceTimeStr != null && !firstTraceTimeStr.isEmpty()) {
+            try {
+                firstTraceTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(firstTraceTimeStr);
+            } catch (Exception e) {
+                return error("firstTraceTime 格式错误，应为 yyyy-MM-dd HH:mm:ss");
+            }
+        }
+
+        // 传递 firstTraceTime 到 Service
+        TraceabilityDetailVO vo = agriculturePartitionFoodService.getTraceabilityDetailById(traceId, queryIp, userAgent, queryType, firstTraceTime);
+        return success(vo);
+    }
     /**
      * 导出分区食品 采摘列表
      */
