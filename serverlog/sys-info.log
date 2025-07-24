@@ -4866,3 +4866,789 @@ java.net.SocketException: Connection reset
 15:10:42.392 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,32] - ====关闭后台任务任务线程池====
 15:10:42.396 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
 15:10:42.400 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+11:05:41.814 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+11:05:41.817 [main] INFO  c.s.ServerApplication - [logStarting,55] - Starting ServerApplication using Java 17.0.14 on bxwy with PID 23324 (D:\ZLXN\fish-dish-server\server-admin\target\classes started by bxwy in D:\ZLXN\fish-dish-server)
+11:05:41.818 [main] INFO  c.s.ServerApplication - [logStartupProfileInfo,686] - The following 2 profiles are active: "dev", "druid"
+11:05:43.963 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+11:05:43.965 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+11:05:43.965 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.102]
+11:05:44.107 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+11:05:44.716 [main] INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+11:07:30.202 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+11:07:30.208 [main] INFO  c.s.ServerApplication - [logStarting,55] - Starting ServerApplication using Java 17.0.14 on bxwy with PID 28268 (D:\ZLXN\fish-dish-server\server-admin\target\classes started by bxwy in D:\ZLXN\fish-dish-server)
+11:07:30.209 [main] INFO  c.s.ServerApplication - [logStartupProfileInfo,686] - The following 2 profiles are active: "dev", "druid"
+11:07:32.392 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+11:07:32.393 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+11:07:32.393 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.102]
+11:07:32.542 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+11:07:33.664 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+11:07:35.081 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/ca.crt failed, trying to load from the resourcePath /D:/ZLXN/fish-dish-server/server-admin/target/classes/
+11:07:35.082 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.crt failed, trying to load from the resourcePath /D:/ZLXN/fish-dish-server/server-admin/target/classes/
+11:07:35.083 [main] INFO  o.f.b.s.c.m.ConfigProperty - [getConfigInputStream,123] - Load config from fisco/conf/sdk.key failed, trying to load from the resourcePath /D:/ZLXN/fish-dish-server/server-admin/target/classes/
+11:07:35.096 [main] INFO  o.f.b.s.n.ConnectionManager - [<init>,88] -  all connections, size: 2, list: [ConnectionInfo{host='192.168.31.210', port=20201}, ConnectionInfo{host='192.168.31.210', port=20200}]
+11:07:35.098 [main] INFO  o.f.b.s.n.NetworkImp - [start,167] - 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+
+11:07:35.098 [main] INFO  o.f.b.s.n.NetworkImp - [start,174] - ====> <==== STEP1-1: Load certificates for ecdsa context success..., start connManager with ECDSA sslContext
+11:07:35.139 [main] INFO  o.f.b.s.n.ConnectionManager - [initSslContext,238] -  build ECDSA ssl context with configured certificates 
+11:07:36.570 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20201
+11:07:36.570 [main] INFO  o.f.b.s.n.ConnectionManager - [checkConnectionResult,402] -  ssl handshake success 192.168.31.210:20200
+11:07:36.571 [nioEventLoopGroup-4-1] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20201, ctx: 713802359
+11:07:36.571 [nioEventLoopGroup-4-2] INFO  o.f.b.s.n.ChannelHandler - [userEventTriggered,73] -  handshake success, host: 192.168.31.210, port: 20200, ctx: 1345334677
+11:07:36.626 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":1,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+11:07:36.626 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,225] -  node: ClientVersion{version='2.11.0', supportedVersion='2.11.0', chainId='1', buildTime='20240520 01:38:47', buildType='Linux/g++/Release', gitBranch='HEAD', gitCommitHash='bee4dda033297443f02774973445d954933db885'}, content: {"id":0,"jsonrpc":"2.0","result":{"Build Time":"20240520 01:38:47","Build Type":"Linux/g++/Release","Chain Id":"1","FISCO-BCOS Version":"2.11.0","Git Branch":"HEAD","Git Commit Hash":"bee4dda033297443f02774973445d954933db885","Supported Version":"2.11.0"}}
+
+11:07:36.627 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+11:07:36.627 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,233] -  support channel handshake node
+11:07:36.629 [nioEventLoopGroup-4-1] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20201, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+11:07:36.629 [nioEventLoopGroup-4-2] INFO  o.f.b.s.c.ChannelImp - [onResponse,309] -  channel protocol handshake success, set socket channel protocol, host: 192.168.31.210:20200, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.11.0, EnumProtocol=VERSION_3]
+11:07:36.645 [main] INFO  o.f.b.s.c.ChannelImp - [checkConnectionsToStartPeriodTask,126] -  Connect to  nodes: 192.168.31.210:20200, 192.168.31.210:20201, 
+11:07:36.645 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,77] - create BcosSDK, start channel success, cryptoType: 0
+11:07:36.650 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,87] - create BcosSDK, start channel succ, channelProcessorThreadSize: 16, receiptProcessorThreadSize: 16
+11:07:36.656 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerBlockNumberNotifyHandler,260] - registerBlockNumberNotifyHandler
+11:07:36.656 [main] INFO  o.f.b.s.s.GroupManagerServiceImpl - [registerTransactionNotifyHandler,282] - registerTransactionNotifyHandler
+11:07:36.676 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,98] - create BcosSDK, create groupManagerService success
+11:07:37.065 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+11:07:37.069 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+11:07:37.070 [main] INFO  o.f.b.s.amop.AmopImp - [start,188] - amop module started
+11:07:37.070 [main] INFO  o.f.b.s.amop.AmopImp - [sendSubscribe,216] - update subscribe inform 2 peers
+11:07:37.070 [main] INFO  o.f.bcos.sdk.BcosSDK - [<init>,103] - create BcosSDK, create Amop success
+11:07:37.115 [main] INFO  o.f.b.s.c.Client - [build,114] - build client success for group 1, crypto type 0
+11:07:37.115 [main] INFO  o.f.bcos.sdk.BcosSDK - [getClient,178] - create client for group 1 success
+11:07:39.080 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+11:07:39.091 [main] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+11:07:39.092 [main] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+11:07:39.092 [main] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+11:07:39.093 [main] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+11:07:39.093 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+11:07:39.093 [main] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+11:07:39.093 [main] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@6ab4215d
+11:07:40.878 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+11:07:41.499 [main] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+11:07:41.511 [main] INFO  c.s.ServerApplication - [logStarted,61] - Started ServerApplication in 11.611 seconds (JVM running for 12.309)
+11:07:50.217 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+11:07:50.289 [http-nio-8080-exec-1] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+11:07:50.310 [http-nio-8080-exec-2] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+11:07:52.915 [schedule-pool-1] INFO  sys-user - [run,56] - [127.0.0.1]内网IP[admin][Success][登录成功]
+11:07:59.881 [http-nio-8080-exec-22] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:07:59.892 [http-nio-8080-exec-22] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:07:59.899 [http-nio-8080-exec-22] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:07:59.904 [http-nio-8080-exec-22] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:07:59.913 [http-nio-8080-exec-22] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:07:59.920 [http-nio-8080-exec-22] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:08:08.422 [http-nio-8080-exec-26] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:08:08.487 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:08:08.533 [http-nio-8080-exec-26] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:DATA 推送成功:{agriculture=[ScaleVO(label=面积, value=129413), ScaleVO(label=大棚, value=6), ScaleVO(label=分区, value=6), ScaleVO(label=种类, value=6), ScaleVO(label=鱼, value=3), ScaleVO(label=菜, value=3), ScaleVO(label=农资, value=4), ScaleVO(label=农机, value=8), ScaleVO(label=任务, value=24)], traceTotal=[{month=7, year=2025, totalCount=393}, {month=6, year=2025, totalCount=7}, {month=5, year=2025, totalCount=1}, {month=4, year=2025, totalCount=1}, {month=3, year=2025, totalCount=1}, {month=7, year=2024, totalCount=1}, {month=6, year=2024, totalCount=1}], device=[ScaleVO(label=气象传感器, value=3), ScaleVO(label=水质传感器, value=1), ScaleVO(label=网关, value=0), ScaleVO(label=控制器, value=0), ScaleVO(label=摄像头, value=1), ScaleVO(label=排气扇, value=1), ScaleVO(label=加湿器, value=0), ScaleVO(label=水泵, value=1), ScaleVO(label=补光灯, value=0), ScaleVO(label=警报灯, value=1), ScaleVO(label=其他传感器, value=0), ScaleVO(label=其他设备, value=0)]}
+11:08:18.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:08:28.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:08:38.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:08:48.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:08:58.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:09:08.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:09:14.079 [lettuce-nioEventLoop-5-1] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+11:09:14.119 [lettuce-eventExecutorLoop-1-13] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+11:09:14.125 [lettuce-nioEventLoop-5-2] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+11:09:18.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:09:28.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:09:38.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:09:48.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:09:58.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:10:08.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:10:18.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:10:20.105 [lettuce-nioEventLoop-5-2] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+11:10:20.115 [lettuce-eventExecutorLoop-1-14] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+11:10:20.118 [lettuce-nioEventLoop-5-3] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+11:10:28.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:10:30.335 [http-nio-8080-exec-43] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+11:10:33.285 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:10:33.291 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:10:33.298 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:10:33.306 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:10:33.311 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:10:33.318 [http-nio-8080-exec-53] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:10:36.917 [http-nio-8080-exec-55] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:10:36.931 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:10:36.984 [http-nio-8080-exec-55] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:DATA 推送成功:{agriculture=[ScaleVO(label=面积, value=129413), ScaleVO(label=大棚, value=6), ScaleVO(label=分区, value=6), ScaleVO(label=种类, value=6), ScaleVO(label=鱼, value=3), ScaleVO(label=菜, value=3), ScaleVO(label=农资, value=4), ScaleVO(label=农机, value=8), ScaleVO(label=任务, value=24)], traceTotal=[{month=7, year=2025, totalCount=393}, {month=6, year=2025, totalCount=7}, {month=5, year=2025, totalCount=1}, {month=4, year=2025, totalCount=1}, {month=3, year=2025, totalCount=1}, {month=7, year=2024, totalCount=1}, {month=6, year=2024, totalCount=1}], device=[ScaleVO(label=气象传感器, value=3), ScaleVO(label=水质传感器, value=1), ScaleVO(label=网关, value=0), ScaleVO(label=控制器, value=0), ScaleVO(label=摄像头, value=1), ScaleVO(label=排气扇, value=1), ScaleVO(label=加湿器, value=0), ScaleVO(label=水泵, value=0), ScaleVO(label=补光灯, value=0), ScaleVO(label=警报灯, value=1), ScaleVO(label=其他传感器, value=0), ScaleVO(label=其他设备, value=0), ScaleVO(label=电动推杆, value=1)]}
+11:10:37.910 [http-nio-8080-exec-65] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+11:10:38.178 [http-nio-8080-exec-66] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+11:10:38.180 [http-nio-8080-exec-67] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+11:10:38.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:10:46.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:10:48.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:10:56.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:10:58.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:11:06.933 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:11:08.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:11:16.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:11:18.264 [http-nio-8080-exec-81] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+11:11:18.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:11:21.284 [http-nio-8080-exec-83] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:11:21.291 [http-nio-8080-exec-83] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:11:21.296 [http-nio-8080-exec-83] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:11:21.303 [http-nio-8080-exec-83] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:11:21.310 [http-nio-8080-exec-83] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:11:21.316 [http-nio-8080-exec-83] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:11:26.933 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:11:28.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:11:36.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:11:38.489 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:11:46.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:11:48.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:11:56.933 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:11:58.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:12:06.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:12:08.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:12:16.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:12:18.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:12:26.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:12:28.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:12:36.945 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:12:37.566 [http-nio-8080-exec-97] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+11:12:38.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:12:45.344 [http-nio-8080-exec-99] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+11:12:46.240 [http-nio-8080-exec-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:12:46.245 [http-nio-8080-exec-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:12:46.251 [http-nio-8080-exec-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:12:46.258 [http-nio-8080-exec-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:12:46.264 [http-nio-8080-exec-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:12:46.270 [http-nio-8080-exec-3] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:12:46.935 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:12:48.495 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:12:56.934 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:12:58.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:13:06.936 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:13:08.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:13:16.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:13:18.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:13:26.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:13:28.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:13:36.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:13:38.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:13:46.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:13:48.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:13:52.030 [lettuce-nioEventLoop-5-3] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+11:13:52.115 [lettuce-eventExecutorLoop-1-7] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+11:13:52.118 [lettuce-nioEventLoop-5-4] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+11:13:56.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:13:58.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:14:06.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:14:08.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:14:16.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:14:18.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:14:26.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:14:28.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:14:36.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:14:38.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:14:46.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:14:48.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:14:56.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:14:58.063 [lettuce-nioEventLoop-5-4] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+11:14:58.115 [lettuce-eventExecutorLoop-1-8] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+11:14:58.118 [lettuce-nioEventLoop-5-5] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+11:14:58.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:15:06.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:15:08.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:15:16.940 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:15:18.496 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:15:26.943 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:15:28.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:15:36.940 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:15:38.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:15:46.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:15:48.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:15:56.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:15:58.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:16:04.011 [lettuce-nioEventLoop-5-5] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+11:16:04.016 [lettuce-eventExecutorLoop-1-9] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+11:16:04.018 [lettuce-nioEventLoop-5-6] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+11:16:06.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:16:08.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:16:16.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:16:18.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:16:26.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:16:28.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:16:36.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:16:38.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:16:46.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:16:48.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:16:56.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:16:58.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:17:06.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:17:08.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:17:10.057 [lettuce-nioEventLoop-5-6] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+11:17:10.115 [lettuce-eventExecutorLoop-1-10] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+11:17:10.119 [lettuce-nioEventLoop-5-7] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+11:17:16.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:17:18.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:17:26.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:17:28.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:17:36.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:17:38.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:17:46.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:17:48.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:17:56.931 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:17:58.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:18:06.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:18:08.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:18:16.074 [lettuce-nioEventLoop-5-7] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+11:18:16.115 [lettuce-eventExecutorLoop-1-11] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+11:18:16.118 [lettuce-nioEventLoop-5-8] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+11:18:16.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:18:18.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:18:26.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:18:28.133 [http-nio-8080-exec-11] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+11:18:28.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:18:28.764 [http-nio-8080-exec-10] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+11:18:29.046 [http-nio-8080-exec-9] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+11:18:29.048 [http-nio-8080-exec-13] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+11:18:36.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:18:38.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:18:46.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:18:48.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:18:56.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:18:57.900 [http-nio-8080-exec-54] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:18:57.918 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:18:57.966 [http-nio-8080-exec-54] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:DATA 推送成功:{agriculture=[ScaleVO(label=面积, value=129413), ScaleVO(label=大棚, value=6), ScaleVO(label=分区, value=6), ScaleVO(label=种类, value=6), ScaleVO(label=鱼, value=3), ScaleVO(label=菜, value=3), ScaleVO(label=农资, value=4), ScaleVO(label=农机, value=8), ScaleVO(label=任务, value=24)], traceTotal=[{month=7, year=2025, totalCount=393}, {month=6, year=2025, totalCount=7}, {month=5, year=2025, totalCount=1}, {month=4, year=2025, totalCount=1}, {month=3, year=2025, totalCount=1}, {month=7, year=2024, totalCount=1}, {month=6, year=2024, totalCount=1}], device=[ScaleVO(label=气象传感器, value=3), ScaleVO(label=水质传感器, value=1), ScaleVO(label=网关, value=0), ScaleVO(label=控制器, value=0), ScaleVO(label=摄像头, value=1), ScaleVO(label=排气扇, value=1), ScaleVO(label=加湿器, value=0), ScaleVO(label=水泵, value=0), ScaleVO(label=补光灯, value=0), ScaleVO(label=警报灯, value=1), ScaleVO(label=其他传感器, value=0), ScaleVO(label=其他设备, value=0), ScaleVO(label=电动推杆, value=1)]}
+11:18:58.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:18:59.952 [http-nio-8080-exec-66] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:18:59.964 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:00.003 [http-nio-8080-exec-66] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:DATA 推送成功:{agriculture=[ScaleVO(label=面积, value=129413), ScaleVO(label=大棚, value=6), ScaleVO(label=分区, value=6), ScaleVO(label=种类, value=6), ScaleVO(label=鱼, value=3), ScaleVO(label=菜, value=3), ScaleVO(label=农资, value=4), ScaleVO(label=农机, value=8), ScaleVO(label=任务, value=24)], traceTotal=[{month=7, year=2025, totalCount=393}, {month=6, year=2025, totalCount=7}, {month=5, year=2025, totalCount=1}, {month=4, year=2025, totalCount=1}, {month=3, year=2025, totalCount=1}, {month=7, year=2024, totalCount=1}, {month=6, year=2024, totalCount=1}], device=[ScaleVO(label=气象传感器, value=3), ScaleVO(label=水质传感器, value=1), ScaleVO(label=网关, value=0), ScaleVO(label=控制器, value=0), ScaleVO(label=摄像头, value=1), ScaleVO(label=排气扇, value=1), ScaleVO(label=加湿器, value=0), ScaleVO(label=水泵, value=0), ScaleVO(label=补光灯, value=0), ScaleVO(label=警报灯, value=1), ScaleVO(label=其他传感器, value=0), ScaleVO(label=其他设备, value=0), ScaleVO(label=电动推杆, value=1)]}
+11:19:02.379 [http-nio-8080-exec-77] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:19:02.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:02.429 [http-nio-8080-exec-77] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:DATA 推送成功:{agriculture=[ScaleVO(label=面积, value=129413), ScaleVO(label=大棚, value=6), ScaleVO(label=分区, value=6), ScaleVO(label=种类, value=6), ScaleVO(label=鱼, value=3), ScaleVO(label=菜, value=3), ScaleVO(label=农资, value=4), ScaleVO(label=农机, value=8), ScaleVO(label=任务, value=24)], traceTotal=[{month=7, year=2025, totalCount=393}, {month=6, year=2025, totalCount=7}, {month=5, year=2025, totalCount=1}, {month=4, year=2025, totalCount=1}, {month=3, year=2025, totalCount=1}, {month=7, year=2024, totalCount=1}, {month=6, year=2024, totalCount=1}], device=[ScaleVO(label=气象传感器, value=3), ScaleVO(label=水质传感器, value=1), ScaleVO(label=网关, value=0), ScaleVO(label=控制器, value=0), ScaleVO(label=摄像头, value=1), ScaleVO(label=排气扇, value=1), ScaleVO(label=加湿器, value=0), ScaleVO(label=水泵, value=0), ScaleVO(label=补光灯, value=0), ScaleVO(label=警报灯, value=1), ScaleVO(label=其他传感器, value=0), ScaleVO(label=其他设备, value=0), ScaleVO(label=电动推杆, value=1)]}
+11:19:04.403 [http-nio-8080-exec-88] INFO  c.s.h.MyMetaObjectHandler - [updateFill,38] - start update fill ....
+11:19:04.415 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:04.455 [http-nio-8080-exec-88] INFO  c.s.sse.SseServer - [sendToAllMessage,74] - 消息id:DATA 推送成功:{agriculture=[ScaleVO(label=面积, value=129413), ScaleVO(label=大棚, value=6), ScaleVO(label=分区, value=6), ScaleVO(label=种类, value=6), ScaleVO(label=鱼, value=3), ScaleVO(label=菜, value=3), ScaleVO(label=农资, value=4), ScaleVO(label=农机, value=8), ScaleVO(label=任务, value=24)], traceTotal=[{month=7, year=2025, totalCount=393}, {month=6, year=2025, totalCount=7}, {month=5, year=2025, totalCount=1}, {month=4, year=2025, totalCount=1}, {month=3, year=2025, totalCount=1}, {month=7, year=2024, totalCount=1}, {month=6, year=2024, totalCount=1}], device=[ScaleVO(label=气象传感器, value=3), ScaleVO(label=水质传感器, value=1), ScaleVO(label=网关, value=0), ScaleVO(label=控制器, value=0), ScaleVO(label=摄像头, value=1), ScaleVO(label=排气扇, value=1), ScaleVO(label=加湿器, value=0), ScaleVO(label=水泵, value=0), ScaleVO(label=补光灯, value=0), ScaleVO(label=警报灯, value=1), ScaleVO(label=其他传感器, value=0), ScaleVO(label=其他设备, value=0), ScaleVO(label=电动推杆, value=1)]}
+11:19:05.323 [http-nio-8080-exec-98] INFO  c.s.w.MqSocketServer - [onClose,31] - RabbitMQ客户端连接断开:admin
+11:19:05.572 [http-nio-8080-exec-99] INFO  c.s.w.MqSocketServer - [onOpen,25] - RabbitMQ客户端：admin建立连接
+11:19:05.576 [http-nio-8080-exec-100] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+11:19:06.942 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:07.922 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:08.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:09.973 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:12.405 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:14.428 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:16.935 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:17.933 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:18.499 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:19.978 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:22.405 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:24.424 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:26.942 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:27.923 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:28.498 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:29.965 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:32.396 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:34.421 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:36.943 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:37.926 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:38.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:39.965 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:42.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:44.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:46.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:47.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:48.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:49.964 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:52.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:54.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:56.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:57.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:58.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:19:59.964 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:02.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:04.417 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:06.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:07.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:08.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:09.965 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:12.020 [lettuce-nioEventLoop-5-8] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+11:20:12.115 [lettuce-eventExecutorLoop-1-11] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+11:20:12.118 [lettuce-nioEventLoop-5-9] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+11:20:12.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:14.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:16.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:17.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:18.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:19.964 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:22.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:24.419 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:26.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:27.922 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:28.497 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:29.978 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:32.397 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:34.425 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:36.933 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:37.930 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:38.495 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:39.977 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:42.401 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:44.428 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:46.942 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:47.922 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:48.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:49.968 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:52.398 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:54.422 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:56.933 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:57.920 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:58.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:20:59.963 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:02.393 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:04.418 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:06.934 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:07.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:08.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:09.970 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:12.391 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:14.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:16.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:17.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:18.028 [lettuce-nioEventLoop-5-9] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+11:21:18.115 [lettuce-eventExecutorLoop-1-12] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+11:21:18.118 [lettuce-nioEventLoop-5-10] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+11:21:18.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:19.964 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:22.395 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:24.417 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:26.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:27.920 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:28.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:29.964 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:32.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:34.417 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:36.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:37.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:38.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:39.965 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:42.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:44.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:46.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:47.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:48.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:49.965 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:52.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:54.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:56.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:57.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:58.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:21:59.964 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:02.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:04.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:06.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:07.920 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:08.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:09.965 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:12.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:14.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:16.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:17.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:18.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:19.965 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:22.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:24.039 [lettuce-nioEventLoop-5-10] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+11:22:24.115 [lettuce-eventExecutorLoop-1-13] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+11:22:24.119 [lettuce-nioEventLoop-5-11] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+11:22:24.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:26.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:27.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:28.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:29.965 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:32.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:34.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:36.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:37.920 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:38.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:39.964 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:42.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:44.417 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:46.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:47.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:48.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:49.964 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:52.393 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:54.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:56.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:57.920 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:58.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:22:59.965 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:02.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:04.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:06.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:07.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:08.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:09.964 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:12.393 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:14.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:16.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:17.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:18.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:19.965 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:22.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:24.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:26.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:27.920 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:28.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:29.965 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:30.017 [lettuce-nioEventLoop-5-11] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+11:23:30.115 [lettuce-eventExecutorLoop-1-14] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+11:23:30.118 [lettuce-nioEventLoop-5-12] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+11:23:32.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:34.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:36.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:37.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:38.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:39.965 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:42.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:44.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:46.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:47.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:48.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:49.965 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:52.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:54.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:56.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:57.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:58.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:23:59.964 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:02.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:04.417 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:06.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:07.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:08.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:09.965 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:12.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:14.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:16.931 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:17.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:18.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:19.965 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:22.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:24.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:26.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:27.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:28.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:29.965 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:32.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:34.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:36.092 [lettuce-nioEventLoop-5-12] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+11:24:36.115 [lettuce-eventExecutorLoop-1-15] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+11:24:36.119 [lettuce-nioEventLoop-5-13] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+11:24:36.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:37.920 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:38.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:39.965 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:42.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:44.417 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:46.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:47.920 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:48.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:49.965 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:52.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:54.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:56.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:57.920 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:58.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:24:59.964 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:02.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:04.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:06.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:07.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:08.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:09.965 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:12.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:14.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:16.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:17.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:18.487 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:19.965 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:22.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:24.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:26.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:27.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:28.489 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:29.964 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:32.393 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:34.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:36.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:37.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:38.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:39.964 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:42.105 [lettuce-nioEventLoop-5-13] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+11:25:42.115 [lettuce-eventExecutorLoop-1-16] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+11:25:42.118 [lettuce-nioEventLoop-5-14] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+11:25:42.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:44.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:46.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:47.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:48.489 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:49.965 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:52.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:54.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:56.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:57.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:58.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:25:59.965 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:02.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:04.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:06.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:07.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:08.487 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:09.964 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:12.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:14.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:16.933 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:17.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:18.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:19.965 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:22.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:24.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:26.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:27.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:28.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:29.964 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:32.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:34.417 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:36.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:37.919 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:38.489 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:39.964 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:42.393 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:44.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:46.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:47.920 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:48.101 [lettuce-nioEventLoop-5-14] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+11:26:48.115 [lettuce-eventExecutorLoop-1-1] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+11:26:48.119 [lettuce-nioEventLoop-5-15] INFO  i.l.c.p.ReconnectionHandler - [lambda$null$3,174] - Reconnected to localhost/<unresolved>:6379
+11:26:48.488 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:49.964 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:52.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:54.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:56.932 [pool-21-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:57.920 [pool-36-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:58.489 [pool-16-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:26:59.964 [pool-38-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:27:02.392 [pool-40-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:27:04.416 [pool-42-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+11:27:05.008 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
