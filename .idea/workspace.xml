@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="拿取app接口">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f197720f-b50e-45ce-8c7c-6381843bae90.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f197720f-b50e-45ce-8c7c-6381843bae90.xml" afterDir="false" />
+    <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="拿取app接口">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Merge_2025_7_24_11_03___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Merge_2025_7_24_11_03___Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureWaterQualityDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureWaterQualityDataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureWeatherDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureWeatherDataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureWaterQualityDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureWaterQualityDataService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureWeatherDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/AgricultureWeatherDataService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgriculturePartitionFoodServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgriculturePartitionFoodServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureWaterQualityDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureWaterQualityDataServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureWeatherDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureWeatherDataServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverlog/sys-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverlog/sys-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-info.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverlog/sys-user.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-user.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,12 +27,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;BuXianWanYin&quot;
-  }
-}</component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
       <filtered-out-file-type name="LOCAL_BRANCH" />
@@ -53,12 +35,6 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/web-java-py/fish-dish-server.git&quot;,
-    &quot;accountId&quot;: &quot;de79a800-e6f1-4294-8e51-75e1fbc82f5c&quot;
-  }
-}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/server-admin/src/main/resources/application-dev.yml" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -68,9 +44,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="customMavenHome" value="D:\maven\apache-maven-3.9.9" />
         <option name="localRepository" value="D:\maven\apache-maven-3.9.9\Repository" />
-        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
         <option name="userSettingsFile" value="D:\maven\apache-maven-3.9.9\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -81,9 +55,6 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 8
-}</component>
   <component name="ProjectId" id="2z4udUhg2iMJ66cZymyeur89p2B" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -92,34 +63,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;bxwy&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/ZLXN/fish-dish-web&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
-    ]
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -134,13 +84,13 @@
   <component name="RunManager">
     <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="server-admin" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.server.ServerApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.server.ServerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -574,7 +524,9 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/fish_dish_server$ServerApplication.ic" NAME="ServerApplication Coverage Results" MODIFIED="1750586508593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/fish_dish_server$ServerApplication.ic" NAME="ServerApplication Coverage Results" MODIFIED="1752669807889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.server.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/fish_dish_server$Agriculture_BcosSDKTest.ic" NAME="Agriculture.BcosSDKTest Coverage Results" MODIFIED="1750751250882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

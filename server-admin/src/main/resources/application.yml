@@ -194,5 +194,7 @@ mqtt:
 fisco:
   enabled: ${fisco.enabled}
 
-codepath: ${codepath.path}
+# 溯源地址
+codepath:
+  path: ${codepath.path}
 
