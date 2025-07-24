@@ -195,6 +195,5 @@ fisco:
   enabled: ${fisco.enabled}
 
 # 溯源地址
-codepath:
-  path: ${codepath.path}
+codepath: ${codepath.path}
 
