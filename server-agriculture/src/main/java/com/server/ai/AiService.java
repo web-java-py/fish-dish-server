@@ -10,6 +10,7 @@ import com.server.properties.AiLocalProperties;
 import com.server.properties.AiOllamaProperties;
 import com.server.utils.HttpUtils;
 import com.server.utils.StringUtils;
+import dev.langchain4j.agent.tool.ToolExecutionRequest;
 import dev.langchain4j.agent.tool.ToolSpecification;
 import dev.langchain4j.agent.tool.ToolSpecifications;
 import dev.langchain4j.data.document.parser.TextDocumentParser;
@@ -22,10 +23,12 @@ import dev.langchain4j.model.chat.response.StreamingChatResponseHandler;
 import dev.langchain4j.model.ollama.OllamaChatModel;
 import dev.langchain4j.model.ollama.OllamaStreamingChatModel;
 import lombok.extern.java.Log;
+import org.apache.commons.lang3.ObjectUtils;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.FluxSink;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -138,37 +141,44 @@ public class AiService {
     }
 
     public Flux<String> chatAgentsStream(String prompt) {
-        List<ToolSpecification> toolSpecifications = ToolSpecifications.toolSpecificationsFrom(agricultureTools);
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream(AiConstants.BOT);
-        SystemMessage systemMessage = systemMessage(new TextDocumentParser().parse(inputStream).text());
-        UserMessage userMessage = userMessage(prompt + this.think);
-        ChatResponse chat = ollamaChatModel.chat(ChatRequest.builder()
-                .messages(systemMessage, userMessage)
-                .toolSpecifications(toolSpecifications)
-                .build());
-        AiMessage aiMessage = chat.aiMessage();
         List<ChatMessage> chatMessages = new ArrayList<>();
-        chatMessages.add(systemMessage);
-        chatMessages.add(userMessage);
-        chatMessages.add(aiMessage);
-        List<ChatMessage> chatMessageList = AiUtils.operateToolExecution(agricultureTools, aiMessage.toolExecutionRequests(), chatMessages);
+        chatMessages.add(systemMessage(new TextDocumentParser().parse(inputStream).text()));
+        chatMessages.add(userMessage(prompt + this.think));
         return Flux.create(sink -> {
-            streamingChatLanguageModel.chat(ChatRequest.builder()
-                    .messages(chatMessageList)
-                    .toolSpecifications(toolSpecifications)
-                    .build(), new StreamingChatResponseHandler() {
+            streamingChatLanguageModel.chat(getChatRequest(chatMessages), new StreamingChatResponseHandler() {
+
                 @Override
                 public void onPartialResponse(String partialResponse) {
-                    String response = partialResponse.replace("<think>", "").replace("</think>", "");
-                    if (StringUtils.isEmpty(response)) return;
-                    sink.next(JSON.toJSONString(ChatStreamVO.builder()
-                            .response(response)
-                            .build()));
+                    sinkNext(sink, partialResponse);
                 }
 
                 @Override
                 public void onCompleteResponse(ChatResponse completeResponse) {
-                    sink.complete();
+                    List<ToolExecutionRequest> toolExecutionRequests = completeResponse.aiMessage().toolExecutionRequests();
+                    if (ObjectUtils.isNotEmpty(toolExecutionRequests)) {
+                        chatMessages.add(completeResponse.aiMessage());
+                        List<ChatMessage> chatMessageList = AiUtils.operateToolExecution(agricultureTools, toolExecutionRequests, chatMessages);
+                        streamingChatLanguageModel.chat(getChatRequest(chatMessageList), new StreamingChatResponseHandler() {
+
+                            @Override
+                            public void onPartialResponse(String partialResponse) {
+                                sinkNext(sink, partialResponse);
+                            }
+
+                            @Override
+                            public void onCompleteResponse(ChatResponse chatResponse) {
+                                sink.complete();
+                            }
+
+                            @Override
+                            public void onError(Throwable error) {
+                                sink.error(error);
+                            }
+                        });
+                    } else {
+                        sink.complete();
+                    }
                 }
 
                 @Override
@@ -177,5 +187,21 @@ public class AiService {
                 }
             });
         });
+    }
+
+    private void sinkNext(FluxSink<String> sink, String partialResponse) {
+        String response = think.contains("think") ? partialResponse : partialResponse.replace("<think>", "").replace("</think>", "");
+        if (StringUtils.isEmpty(response)) return;
+        sink.next(JSON.toJSONString(ChatStreamVO.builder()
+                .response(response)
+                .build()));
+    }
+
+    private ChatRequest getChatRequest(List<ChatMessage> messages) {
+        List<ToolSpecification> toolSpecifications = ToolSpecifications.toolSpecificationsFrom(agricultureTools);
+        return ChatRequest.builder()
+                .messages(messages)
+                .toolSpecifications(toolSpecifications)
+                .build();
     }
 }
