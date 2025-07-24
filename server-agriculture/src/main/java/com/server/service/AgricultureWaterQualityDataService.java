@@ -75,4 +75,11 @@ public interface AgricultureWaterQualityDataService  extends IService<Agricultur
      * @return 结果
      */
     public int deleteAgricultureWaterQualityDataById(Long id);
+
+    /**
+     * 获取最新一条水质数据
+     * @param pastureId 大棚ID
+     * @return 最新水质数据
+     */
+    AgricultureWaterQualityData getLatestWaterQualityData(String pastureId);
 }

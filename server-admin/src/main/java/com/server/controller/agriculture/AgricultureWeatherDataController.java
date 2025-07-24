@@ -79,6 +79,16 @@ public class AgricultureWeatherDataController extends BaseController
     }
 
     /**
+     * 获取合并后的最新一条气象数据
+     */
+    @PreAuthorize("@ss.hasPermi('agriculture:weather:query')")
+    @GetMapping("/latest")
+    public AjaxResult getLatestWeatherData(@RequestParam("pastureId") String pastureId) {
+        AgricultureWeatherData latest = agricultureWeatherDataService.getLatestMergedWeatherData(pastureId);
+        return success(latest);
+    }
+
+    /**
      * 新增气象数据
      */
     @PreAuthorize("@ss.hasPermi('agriculture:weather:add')")

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="@192.168.31.37">
-  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.32">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.52">
     <root id="1">
       <DefaultCasing>lower/lower</DefaultCasing>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -1245,380 +1245,380 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
     <column id="348" parent="297" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>主键，自增</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="349" parent="297" name="pasture_id">
       <Comment>大棚ID</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="350" parent="297" name="batch_id">
       <Comment>分区ID</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="351" parent="297" name="device_id">
       <Comment>设备ID</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="352" parent="297" name="strategy_type">
       <Comment>策略类型（weather=气象，water=水质）</Comment>
-      <DataType>varchar(32)|0s</DataType>
+      <DasType>varchar(32)|0s</DasType>
       <DefaultExpression>&apos;weather&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <column id="353" parent="297" name="parameter">
       <Comment>监测参数（如 temperature）</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
     <column id="354" parent="297" name="condition_operator">
       <Comment>触发条件操作符</Comment>
-      <DataType>varchar(8)|0s</DataType>
+      <DasType>varchar(8)|0s</DasType>
       <DefaultExpression>&apos;&gt;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
     <column id="355" parent="297" name="condition_value">
       <Comment>触发条件数值</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <DefaultExpression>0.00</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
     <column id="356" parent="297" name="action">
       <Comment>执行动作（如 on/off）</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>9</Position>
     </column>
     <column id="357" parent="297" name="execute_duration">
       <Comment>执行时长(秒)</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>10</Position>
     </column>
     <column id="358" parent="297" name="status">
       <Comment>启用状态（1启用，0禁用）</Comment>
-      <DataType>tinyint|0s</DataType>
+      <DasType>tinyint|0s</DasType>
       <DefaultExpression>1</DefaultExpression>
       <Position>11</Position>
     </column>
     <column id="359" parent="297" name="description">
       <Comment>策略说明</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>12</Position>
     </column>
     <column id="360" parent="297" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <Position>13</Position>
     </column>
     <column id="361" parent="297" name="update_time">
       <Comment>更新时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
       <Position>14</Position>
     </column>
     <key id="362" parent="297" name="PRIMARY">
-      <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
     </key>
     <column id="363" parent="298" name="bait_id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>饵料ID</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="364" parent="298" name="bait_code">
       <Comment>饵料编码</Comment>
-      <DataType>varchar(20)|0s</DataType>
+      <DasType>varchar(20)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="365" parent="298" name="bait_name">
       <Comment>饵料名称</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="366" parent="298" name="bait_sl">
       <Comment>投喂数量</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="367" parent="298" name="measure_unit">
       <Comment>计量单位</Comment>
-      <DataType>varchar(10)|0s</DataType>
+      <DasType>varchar(10)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <column id="368" parent="298" name="remark">
       <Comment>备注</Comment>
-      <DataType>varchar(2000)|0s</DataType>
+      <DasType>varchar(2000)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
     <column id="369" parent="298" name="status">
       <Comment>状态</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
     <column id="370" parent="298" name="order_num">
       <Comment>排序</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
     <column id="371" parent="298" name="create_by">
       <Comment>创建者ID</Comment>
-      <DataType>varchar(20)|0s</DataType>
+      <DasType>varchar(20)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>9</Position>
     </column>
     <column id="372" parent="298" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>10</Position>
     </column>
     <column id="373" parent="298" name="update_by">
       <Comment>修改人ID</Comment>
-      <DataType>varchar(20)|0s</DataType>
+      <DasType>varchar(20)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>11</Position>
     </column>
     <column id="374" parent="298" name="update_time">
       <Comment>修改时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>12</Position>
     </column>
     <key id="375" parent="298" name="PRIMARY">
-      <ColNames>bait_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>bait_id</UnderlyingIndexColNames>
     </key>
     <column id="376" parent="299" name="task_id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>任务ID</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="377" parent="299" name="batch_id">
       <Comment>分区ID</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <Position>2</Position>
     </column>
     <column id="378" parent="299" name="task_name">
       <Comment>任务名称</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="379" parent="299" name="responsible_person_id">
       <Comment>任务负责人ID</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <Position>4</Position>
     </column>
     <column id="380" parent="299" name="responsible_person_name">
       <Comment>任务负责人姓名</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <Position>5</Position>
     </column>
     <column id="381" parent="299" name="fish_dish">
       <Comment>状态(0是鱼，1是菜)</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <Position>6</Position>
     </column>
     <column id="382" parent="299" name="plan_start">
       <Comment>计划开始日期</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>7</Position>
     </column>
     <column id="383" parent="299" name="plan_finish">
       <Comment>计划结束日期</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>8</Position>
     </column>
     <column id="384" parent="299" name="actual_start">
       <Comment>实际开始日期</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>9</Position>
     </column>
     <column id="385" parent="299" name="actual_finish">
       <Comment>实际结束日期</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>10</Position>
     </column>
     <column id="386" parent="299" name="task_detail">
       <Comment>任务详情</Comment>
-      <DataType>varchar(2000)|0s</DataType>
+      <DasType>varchar(2000)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>11</Position>
     </column>
     <column id="387" parent="299" name="task_images">
       <Comment>图片资料</Comment>
-      <DataType>text|0s</DataType>
+      <DasType>text|0s</DasType>
       <Position>12</Position>
     </column>
     <column id="388" parent="299" name="task_videos">
       <Comment>视频资料</Comment>
-      <DataType>text|0s</DataType>
+      <DasType>text|0s</DasType>
       <Position>13</Position>
     </column>
     <column id="389" parent="299" name="remark">
       <Comment>备注</Comment>
-      <DataType>varchar(2000)|0s</DataType>
+      <DasType>varchar(2000)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>14</Position>
     </column>
     <column id="390" parent="299" name="status">
       <Comment>0未分配 1已分配 2进行中 3已完成</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>15</Position>
     </column>
     <column id="391" parent="299" name="order_num">
       <Comment>排序</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>16</Position>
     </column>
     <column id="392" parent="299" name="create_by">
       <Comment>创建者ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>17</Position>
     </column>
     <column id="393" parent="299" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>18</Position>
     </column>
     <column id="394" parent="299" name="update_by">
       <Comment>修改人ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>19</Position>
     </column>
     <column id="395" parent="299" name="update_time">
       <Comment>修改时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>20</Position>
     </column>
     <column id="396" parent="299" name="del_flag">
       <Comment>删除标志（0代表存在 2代表删除）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>21</Position>
     </column>
     <key id="397" parent="299" name="PRIMARY">
-      <ColNames>task_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>task_id</UnderlyingIndexColNames>
     </key>
     <column id="398" parent="300" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>主键ID</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="399" parent="300" name="device_id">
       <Comment>设备ID，关联agriculture_device表</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="400" parent="300" name="username">
       <Comment>摄像头登录用户名</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="401" parent="300" name="password">
       <Comment>摄像头登录密码</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="402" parent="300" name="ip">
       <Comment>摄像头IP地址</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <column id="403" parent="300" name="port">
       <Comment>摄像头端口号</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
     <column id="404" parent="300" name="channel">
       <Comment>通道号</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
     <column id="405" parent="300" name="subtype">
       <Comment>码流类型（0-主码流，1-子码流）</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
     <column id="406" parent="300" name="create_by">
       <Comment>创建者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <Position>9</Position>
     </column>
     <column id="407" parent="300" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>10</Position>
     </column>
     <column id="408" parent="300" name="update_by">
       <Comment>更新者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <Position>11</Position>
     </column>
     <column id="409" parent="300" name="update_time">
       <Comment>更新时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>12</Position>
     </column>
     <column id="410" parent="300" name="remark">
       <Comment>备注</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>13</Position>
     </column>
     <foreign-key id="411" parent="300" name="fk_device_id">
@@ -1633,57 +1633,56 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Unique>1</Unique>
     </index>
     <key id="413" parent="300" name="PRIMARY">
-      <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
     </key>
     <key id="414" parent="300" name="uniq_device_id">
-      <ColNames>device_id</ColNames>
       <UnderlyingIndexName>uniq_device_id</UnderlyingIndexName>
     </key>
     <column id="415" parent="301" name="class_id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>种类ID</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="416" parent="301" name="class_name">
       <Comment>种类名称</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="417" parent="301" name="class_type_name">
       <Comment>种类类别名称</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="418" parent="301" name="class_type">
       <Comment>类型（0鱼 1菜）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <Position>4</Position>
     </column>
     <column id="419" parent="301" name="class_image">
       <Comment>种类图片</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <column id="420" parent="301" name="class_des">
       <Comment>宣传语</Comment>
-      <DataType>varchar(500)|0s</DataType>
+      <DasType>varchar(500)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
     <column id="421" parent="301" name="status">
       <Comment>状态（0正常 1停用）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>7</Position>
@@ -1691,632 +1690,632 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </column>
     <column id="422" parent="301" name="order_num">
       <Comment>排序</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
     <column id="423" parent="301" name="create_by">
       <Comment>创建者ID</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>9</Position>
     </column>
     <column id="424" parent="301" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>10</Position>
     </column>
     <column id="425" parent="301" name="update_by">
       <Comment>修改人ID</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>11</Position>
     </column>
     <column id="426" parent="301" name="update_time">
       <Comment>修改时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>12</Position>
     </column>
     <column id="427" parent="301" name="remark">
       <Comment>备注</Comment>
-      <DataType>varchar(2000)|0s</DataType>
+      <DasType>varchar(2000)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>13</Position>
     </column>
     <key id="428" parent="301" name="PRIMARY">
-      <ColNames>class_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>class_id</UnderlyingIndexColNames>
     </key>
     <column id="429" parent="302" name="report_id">
       <Comment>报告ID</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
     <column id="430" parent="302" name="class_id">
       <Comment>种类ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="431" parent="302" name="optimalTemperature">
       <Comment>最适温度范围</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>3</Position>
     </column>
     <column id="432" parent="302" name="optimalHumidity">
       <Comment>最适湿度范围</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>4</Position>
     </column>
     <column id="433" parent="302" name="optimalLight">
       <Comment>最适光照范围</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>5</Position>
     </column>
     <column id="434" parent="302" name="optimalSoilPh">
       <Comment>最适土壤pH范围</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>6</Position>
     </column>
     <column id="435" parent="302" name="optimalWindDirection">
       <Comment>最适风向</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>7</Position>
     </column>
     <column id="436" parent="302" name="optimalWindSpeed">
       <Comment>最适风速范围(m/s)</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>8</Position>
     </column>
     <column id="437" parent="302" name="optimalWaterTemperature">
       <Comment>最适水温范围</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>9</Position>
     </column>
     <column id="438" parent="302" name="optimalWaterPh">
       <Comment>最适水质pH范围</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>10</Position>
     </column>
     <column id="439" parent="302" name="optimalDissolvedOxygen">
       <Comment>最适溶解氧范围(mg/L)</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>11</Position>
     </column>
     <column id="440" parent="302" name="optimalAmmonia">
       <Comment>最适氨氮范围(mg/L)</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>12</Position>
     </column>
     <column id="441" parent="302" name="optimalNitrite">
       <Comment>最适亚硝酸盐范围(mg/L)</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>13</Position>
     </column>
     <column id="442" parent="302" name="growthRate">
       <Comment>生长速度(%)</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>14</Position>
     </column>
     <column id="443" parent="302" name="diseaseResistance">
       <Comment>抗病能力(%)</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>15</Position>
     </column>
     <column id="444" parent="302" name="feedConversion">
       <Comment>饲料/肥料转化率(%)</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>16</Position>
     </column>
     <column id="445" parent="302" name="marketAcceptance">
       <Comment>市场认可度(%)</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>17</Position>
     </column>
     <column id="446" parent="302" name="waterManagement">
       <Comment>水质/水分管理建议</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>18</Position>
     </column>
     <column id="447" parent="302" name="feedingManagement">
       <Comment>投喂/肥料管理建议</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>19</Position>
     </column>
     <column id="448" parent="302" name="diseasePrevention">
       <Comment>疾病防控/病虫害防治建议</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>20</Position>
     </column>
     <column id="449" parent="302" name="environmentMonitoring">
       <Comment>环境监控/环境监控建议</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>21</Position>
     </column>
     <column id="450" parent="302" name="growthAssessment">
       <Comment>生长评估</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>22</Position>
     </column>
     <column id="451" parent="302" name="cultivationDifficulty">
       <Comment>养殖/种植难度</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>23</Position>
     </column>
     <column id="452" parent="302" name="generalRecommendations">
       <Comment>综合建议</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>24</Position>
     </column>
     <column id="453" parent="302" name="marketAnalysis">
       <Comment>市场分析</Comment>
-      <DataType>text|0s</DataType>
+      <DasType>text|0s</DasType>
       <Position>25</Position>
     </column>
     <column id="454" parent="302" name="create_by">
       <Comment>创建者ID</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>26</Position>
     </column>
     <column id="455" parent="302" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>27</Position>
     </column>
     <column id="456" parent="302" name="update_by">
       <Comment>修改人ID</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>28</Position>
     </column>
     <column id="457" parent="302" name="update_time">
       <Comment>修改时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>29</Position>
     </column>
     <column id="458" parent="302" name="remark">
       <Comment>备注</Comment>
-      <DataType>varchar(2000)|0s</DataType>
+      <DasType>varchar(2000)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>30</Position>
     </column>
     <key id="459" parent="302" name="PRIMARY">
-      <ColNames>report_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>report_id</UnderlyingIndexColNames>
     </key>
     <column id="460" parent="303" name="cost_id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>ID</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="461" parent="303" name="task_id">
       <Comment>任务ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="462" parent="303" name="bait_id">
       <Comment>饵料ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="463" parent="303" name="bait_count">
       <Comment>饵料数量</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="464" parent="303" name="measure_unit">
       <Comment>计量单位</Comment>
-      <DataType>varchar(10)|0s</DataType>
+      <DasType>varchar(10)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <column id="465" parent="303" name="working_start">
       <Comment>开始日期</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>6</Position>
     </column>
     <column id="466" parent="303" name="working_finish">
       <Comment>结束日期</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>7</Position>
     </column>
     <column id="467" parent="303" name="remark">
       <Comment>备注</Comment>
-      <DataType>varchar(2000)|0s</DataType>
+      <DasType>varchar(2000)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
     <column id="468" parent="303" name="status">
       <Comment>状态</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>9</Position>
     </column>
     <column id="469" parent="303" name="order_num">
       <Comment>排序</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>10</Position>
     </column>
     <column id="470" parent="303" name="create_by">
       <Comment>创建者ID</Comment>
-      <DataType>varchar(20)|0s</DataType>
+      <DasType>varchar(20)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>11</Position>
     </column>
     <column id="471" parent="303" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>12</Position>
     </column>
     <column id="472" parent="303" name="update_by">
       <Comment>修改人ID</Comment>
-      <DataType>varchar(20)|0s</DataType>
+      <DasType>varchar(20)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>13</Position>
     </column>
     <column id="473" parent="303" name="update_time">
       <Comment>修改时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>14</Position>
     </column>
     <key id="474" parent="303" name="PRIMARY">
-      <ColNames>cost_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>cost_id</UnderlyingIndexColNames>
     </key>
     <column id="475" parent="304" name="cost_id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>ID</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="476" parent="304" name="task_id">
       <Comment>任务ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="477" parent="304" name="employee_id">
       <Comment>雇员ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="478" parent="304" name="working_hours">
       <Comment>工时</Comment>
-      <DataType>decimal(8,2 digit)|0s</DataType>
+      <DasType>decimal(8,2 digit)|0s</DasType>
       <DefaultExpression>0.00</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="479" parent="304" name="working_start">
       <Comment>开始日期</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>5</Position>
     </column>
     <column id="480" parent="304" name="working_finish">
       <Comment>结束日期</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>6</Position>
     </column>
     <column id="481" parent="304" name="remark">
       <Comment>备注</Comment>
-      <DataType>varchar(2000)|0s</DataType>
+      <DasType>varchar(2000)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
     <column id="482" parent="304" name="status">
       <Comment>状态</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
     <column id="483" parent="304" name="order_num">
       <Comment>排序</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>9</Position>
     </column>
     <column id="484" parent="304" name="create_by">
       <Comment>创建者ID</Comment>
-      <DataType>varchar(20)|0s</DataType>
+      <DasType>varchar(20)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>10</Position>
     </column>
     <column id="485" parent="304" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>11</Position>
     </column>
     <column id="486" parent="304" name="update_by">
       <Comment>修改人ID</Comment>
-      <DataType>varchar(20)|0s</DataType>
+      <DasType>varchar(20)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>12</Position>
     </column>
     <column id="487" parent="304" name="update_time">
       <Comment>修改时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>13</Position>
     </column>
     <key id="488" parent="304" name="PRIMARY">
-      <ColNames>cost_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>cost_id</UnderlyingIndexColNames>
     </key>
     <column id="489" parent="305" name="cost_id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>ID</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="490" parent="305" name="task_id">
       <Comment>任务ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="491" parent="305" name="machine_id">
       <Comment>机械ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="492" parent="305" name="machine_count">
       <Comment>机械数量</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="493" parent="305" name="working_hours">
       <Comment>工时</Comment>
-      <DataType>decimal(8,2 digit)|0s</DataType>
+      <DasType>decimal(8,2 digit)|0s</DasType>
       <DefaultExpression>0.00</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <column id="494" parent="305" name="working_start">
       <Comment>开始日期</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>6</Position>
     </column>
     <column id="495" parent="305" name="working_finish">
       <Comment>结束日期</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>7</Position>
     </column>
     <column id="496" parent="305" name="remark">
       <Comment>备注</Comment>
-      <DataType>varchar(2000)|0s</DataType>
+      <DasType>varchar(2000)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
     <column id="497" parent="305" name="status">
       <Comment>状态</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>9</Position>
     </column>
     <column id="498" parent="305" name="order_num">
       <Comment>排序</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>10</Position>
     </column>
     <column id="499" parent="305" name="create_by">
       <Comment>创建者ID</Comment>
-      <DataType>varchar(20)|0s</DataType>
+      <DasType>varchar(20)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>11</Position>
     </column>
     <column id="500" parent="305" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>12</Position>
     </column>
     <column id="501" parent="305" name="update_by">
       <Comment>修改人ID</Comment>
-      <DataType>varchar(20)|0s</DataType>
+      <DasType>varchar(20)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>13</Position>
     </column>
     <column id="502" parent="305" name="update_time">
       <Comment>修改时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>14</Position>
     </column>
     <column id="503" parent="305" name="del_flag">
       <Comment>删除标志（0代表存在 2代表删除）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>15</Position>
     </column>
     <key id="504" parent="305" name="PRIMARY">
-      <ColNames>cost_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>cost_id</UnderlyingIndexColNames>
     </key>
     <column id="505" parent="306" name="batch_id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>分区ID</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="506" parent="306" name="batch_name">
       <Comment>分区名称</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="507" parent="306" name="germplasm_id">
       <Comment>鱼种质ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <Position>3</Position>
     </column>
     <column id="508" parent="306" name="vegetable_id">
       <Comment>菜种质ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <Position>4</Position>
     </column>
     <column id="509" parent="306" name="pasture_id">
       <Comment>大棚ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <column id="510" parent="306" name="fish_area">
       <Comment>养殖面积(亩)</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>6</Position>
     </column>
     <column id="511" parent="306" name="crop_area">
       <Comment>种植面积（亩）</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <DefaultExpression>0.00</DefaultExpression>
       <Position>7</Position>
     </column>
     <column id="512" parent="306" name="start_time">
       <Comment>开始时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>8</Position>
     </column>
     <column id="513" parent="306" name="remark">
       <Comment>备注</Comment>
-      <DataType>varchar(2000)|0s</DataType>
+      <DasType>varchar(2000)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>9</Position>
     </column>
     <column id="514" parent="306" name="status">
       <Comment>状态</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>10</Position>
     </column>
     <column id="515" parent="306" name="order_num">
       <Comment>排序</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>11</Position>
     </column>
     <column id="516" parent="306" name="create_by">
       <Comment>创建者ID</Comment>
-      <DataType>varchar(20)|0s</DataType>
+      <DasType>varchar(20)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>12</Position>
     </column>
     <column id="517" parent="306" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>13</Position>
     </column>
     <column id="518" parent="306" name="update_by">
       <Comment>修改人ID</Comment>
-      <DataType>varchar(20)|0s</DataType>
+      <DasType>varchar(20)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>14</Position>
     </column>
     <column id="519" parent="306" name="update_time">
       <Comment>修改时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>15</Position>
     </column>
     <column id="520" parent="306" name="del_flag">
       <Comment>删除标志（0代表存在 2代表删除）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>16</Position>
     </column>
     <column id="521" parent="306" name="responsible_person_id">
       <Comment>负责人Id</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>17</Position>
     </column>
     <column id="522" parent="306" name="contract_addr">
       <Comment>区块链合约地址</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>18</Position>
     </column>
     <column id="523" parent="306" name="harvest">
       <Comment>收获标志(0代表已收获，1代表未收获)</Comment>
-      <DataType>varchar(10)|0s</DataType>
+      <DasType>varchar(10)|0s</DasType>
       <Position>19</Position>
     </column>
     <key id="524" parent="306" name="PRIMARY">
-      <ColNames>batch_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>batch_id</UnderlyingIndexColNames>
     </key>
     <column id="525" parent="307" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>主键ID</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="526" parent="307" name="device_name">
       <Comment>设备名称</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="527" parent="307" name="device_image">
       <Comment>设备图片URL</Comment>
-      <DataType>text|0s</DataType>
+      <DasType>text|0s</DasType>
       <Position>3</Position>
     </column>
     <column id="528" parent="307" name="device_type_id">
@@ -2328,100 +2327,100 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
 5 摄像头&#xd;
 6 其他传感器&#xd;
 7 其他设备</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="529" parent="307" name="status">
       <Comment>设备物理在线状态（0-离线，1-在线）</Comment>
-      <DataType>varchar(1)|0s</DataType>
+      <DasType>varchar(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>5</Position>
     </column>
     <column id="530" parent="307" name="control_status">
       <Comment>用户控制状态（0-关闭，1-开启）</Comment>
-      <DataType>varchar(1)|0s</DataType>
+      <DasType>varchar(1)|0s</DasType>
       <DefaultExpression>&apos;1&apos;</DefaultExpression>
       <Position>6</Position>
     </column>
     <column id="531" parent="307" name="alarm_status">
       <Comment>告警状态（0-正常，1-告警）</Comment>
-      <DataType>varchar(1)|0s</DataType>
+      <DasType>varchar(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>7</Position>
     </column>
     <column id="532" parent="307" name="last_online_time">
       <Comment>最后在线时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>8</Position>
     </column>
     <column id="533" parent="307" name="pasture_id">
       <Comment>大棚id，空为没有绑定大棚</Comment>
-      <DataType>char(19)|0s</DataType>
+      <DasType>char(19)|0s</DasType>
       <Position>9</Position>
     </column>
     <column id="534" parent="307" name="batch_id">
       <Comment>分区id，空为没有绑定分区</Comment>
-      <DataType>char(19)|0s</DataType>
+      <DasType>char(19)|0s</DasType>
       <Position>10</Position>
     </column>
     <column id="535" parent="307" name="block_address">
       <Comment>区块地址</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>11</Position>
     </column>
     <column id="536" parent="307" name="sensor_command">
       <Comment>传感器指令</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>12</Position>
     </column>
     <column id="537" parent="307" name="sensor_address">
       <Comment>传感器设备地址 485通讯</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <Position>13</Position>
     </column>
     <column id="538" parent="307" name="command_on">
       <Comment>可控设备打开指令 风扇等</Comment>
-      <DataType>varchar(100)|0s</DataType>
+      <DasType>varchar(100)|0s</DasType>
       <Position>14</Position>
     </column>
     <column id="539" parent="307" name="command_off">
       <Comment>可控设备关闭指令</Comment>
-      <DataType>varchar(100)|0s</DataType>
+      <DasType>varchar(100)|0s</DasType>
       <Position>15</Position>
     </column>
     <column id="540" parent="307" name="is_controllable">
       <Comment>是否可控（0-否，1-是）</Comment>
-      <DataType>tinyint(1)|0s</DataType>
+      <DasType>tinyint(1)|0s</DasType>
       <Position>16</Position>
     </column>
     <column id="541" parent="307" name="create_by">
       <Comment>创建者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>17</Position>
     </column>
     <column id="542" parent="307" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>18</Position>
     </column>
     <column id="543" parent="307" name="update_time">
       <Comment>更改时间</Comment>
-      <DataType>timestamp|0s</DataType>
+      <DasType>timestamp|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
       <Position>19</Position>
     </column>
     <column id="544" parent="307" name="update_by">
       <Comment>更新者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>20</Position>
     </column>
     <column id="545" parent="307" name="remark">
       <Comment>备注</Comment>
-      <DataType>text|0s</DataType>
+      <DasType>text|0s</DasType>
       <Position>21</Position>
     </column>
     <index id="546" parent="307" name="idx_pasture_id">
@@ -2433,76 +2432,76 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Type>btree</Type>
     </index>
     <key id="548" parent="307" name="PRIMARY">
-      <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
     </key>
     <column id="549" parent="308" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>主键ID</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="550" parent="308" name="device_id">
       <Comment>设备ID</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="551" parent="308" name="mqtt_broker">
       <Comment>MQTT Broker地址</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="552" parent="308" name="mqtt_topic">
       <Comment>订阅主题</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="553" parent="308" name="mqtt_qos">
       <Comment>QOS等级</Comment>
-      <DataType>tinyint|0s</DataType>
+      <DasType>tinyint|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <column id="554" parent="308" name="mqtt_username">
       <Comment>MQTT用户名</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <Position>6</Position>
     </column>
     <column id="555" parent="308" name="mqtt_password">
       <Comment>MQTT密码</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <Position>7</Position>
     </column>
     <column id="556" parent="308" name="remark">
       <Comment>备注</Comment>
-      <DataType>text|0s</DataType>
+      <DasType>text|0s</DasType>
       <Position>8</Position>
     </column>
     <column id="557" parent="308" name="create_by">
       <Comment>创建者ID</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <Position>9</Position>
     </column>
     <column id="558" parent="308" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <Position>10</Position>
     </column>
     <column id="559" parent="308" name="update_by">
       <Comment>修改人ID</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <Position>11</Position>
     </column>
     <column id="560" parent="308" name="update_time">
       <Comment>修改时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
       <Position>12</Position>
@@ -2512,119 +2511,119 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Type>btree</Type>
     </index>
     <key id="562" parent="308" name="PRIMARY">
-      <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
     </key>
     <column id="563" parent="309" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>预警ID</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="564" parent="309" name="alert_type">
       <Comment>预警类型</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <Position>2</Position>
     </column>
     <column id="565" parent="309" name="alert_message">
       <Comment>预警消息</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
     </column>
     <column id="566" parent="309" name="param_name">
       <Comment>参数名称</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <Position>4</Position>
     </column>
     <column id="567" parent="309" name="param_value">
       <Comment>参数值</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>5</Position>
     </column>
     <column id="568" parent="309" name="threshold_min">
       <Comment>阈值下限</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>6</Position>
     </column>
     <column id="569" parent="309" name="threshold_max">
       <Comment>阈值上限</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>7</Position>
     </column>
     <column id="570" parent="309" name="pasture_id">
       <Comment>大棚ID</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <Position>8</Position>
     </column>
     <column id="571" parent="309" name="batch_id">
       <Comment>分区ID</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <Position>9</Position>
     </column>
     <column id="572" parent="309" name="device_id">
       <Comment>设备ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <Position>10</Position>
     </column>
     <column id="573" parent="309" name="device_name">
       <Comment>设备名称</Comment>
-      <DataType>varchar(100)|0s</DataType>
+      <DasType>varchar(100)|0s</DasType>
       <Position>11</Position>
     </column>
     <column id="574" parent="309" name="device_type">
       <Comment>设备类型</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <Position>12</Position>
     </column>
     <column id="575" parent="309" name="block_address">
       <Comment>合约地址</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>13</Position>
     </column>
     <column id="576" parent="309" name="alert_time">
       <Comment>预警时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>14</Position>
     </column>
     <column id="577" parent="309" name="alert_level">
       <Comment>级别（0-警告，1-严重）</Comment>
-      <DataType>tinyint|0s</DataType>
+      <DasType>tinyint|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>15</Position>
     </column>
     <column id="578" parent="309" name="status">
       <Comment>处理状态（0未处理，1已处理）</Comment>
-      <DataType>tinyint|0s</DataType>
+      <DasType>tinyint|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>16</Position>
     </column>
     <column id="579" parent="309" name="remark">
       <Comment>处理备注</Comment>
-      <DataType>varchar(500)|0s</DataType>
+      <DasType>varchar(500)|0s</DasType>
       <Position>17</Position>
     </column>
     <column id="580" parent="309" name="create_by">
       <Comment>创建者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>18</Position>
     </column>
     <column id="581" parent="309" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>19</Position>
     </column>
     <column id="582" parent="309" name="update_by">
       <Comment>更新者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>20</Position>
     </column>
     <column id="583" parent="309" name="update_time">
       <Comment>更改时间</Comment>
-      <DataType>timestamp|0s</DataType>
+      <DasType>timestamp|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
       <Position>21</Position>
@@ -2646,204 +2645,204 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Type>btree</Type>
     </index>
     <key id="588" parent="309" name="PRIMARY">
-      <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
     </key>
     <column id="589" parent="310" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>主键ID</Comment>
-      <DataType>int unsigned|0s</DataType>
+      <DasType>int unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="590" parent="310" name="type_code">
       <Comment>类型编码</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="591" parent="310" name="type_name">
       <Comment>类型名称</Comment>
-      <DataType>varchar(100)|0s</DataType>
+      <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="592" parent="310" name="type_desc">
       <Comment>类型描述</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
     </column>
     <column id="593" parent="310" name="create_by">
       <Comment>创建者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <Position>5</Position>
     </column>
     <column id="594" parent="310" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>6</Position>
     </column>
     <column id="595" parent="310" name="update_by">
       <Comment>更新者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <Position>7</Position>
     </column>
     <column id="596" parent="310" name="update_time">
       <Comment>更新时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>8</Position>
     </column>
     <column id="597" parent="310" name="remark">
       <Comment>备注</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>9</Position>
     </column>
     <column id="598" parent="310" name="is_controllable">
       <Comment>是否可控（0-否，1-是）</Comment>
-      <DataType>tinyint(1)|0s</DataType>
+      <DasType>tinyint(1)|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>10</Position>
     </column>
     <key id="599" parent="310" name="PRIMARY">
-      <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
     </key>
     <column id="600" parent="311" name="employee_id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>雇员ID</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="601" parent="311" name="employee_code">
       <Comment>编码</Comment>
-      <DataType>varchar(20)|0s</DataType>
+      <DasType>varchar(20)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="602" parent="311" name="employee_name">
       <Comment>姓名</Comment>
-      <DataType>varchar(10)|0s</DataType>
+      <DasType>varchar(10)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="603" parent="311" name="employee_type">
       <Comment>字典</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="604" parent="311" name="employee_tel">
       <Comment>手机号码</Comment>
-      <DataType>varchar(20)|0s</DataType>
+      <DasType>varchar(20)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <column id="605" parent="311" name="employee_sex">
       <Comment>字典 sys_user_sex</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
     <column id="606" parent="311" name="employee_address">
       <Comment>地址</Comment>
-      <DataType>varchar(200)|0s</DataType>
+      <DasType>varchar(200)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
     <column id="607" parent="311" name="remark">
       <Comment>备注</Comment>
-      <DataType>varchar(2000)|0s</DataType>
+      <DasType>varchar(2000)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
     <column id="608" parent="311" name="status">
       <Comment>状态</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>9</Position>
     </column>
     <column id="609" parent="311" name="order_num">
       <Comment>排序</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>10</Position>
     </column>
     <column id="610" parent="311" name="create_by">
       <Comment>创建者ID</Comment>
-      <DataType>varchar(20)|0s</DataType>
+      <DasType>varchar(20)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>11</Position>
     </column>
     <column id="611" parent="311" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>12</Position>
     </column>
     <column id="612" parent="311" name="update_by">
       <Comment>修改人ID</Comment>
-      <DataType>varchar(20)|0s</DataType>
+      <DasType>varchar(20)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>13</Position>
     </column>
     <column id="613" parent="311" name="update_time">
       <Comment>修改时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>14</Position>
     </column>
     <column id="614" parent="311" name="del_flag">
       <Comment>删除标志（0代表存在 2代表删除）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>15</Position>
     </column>
     <key id="615" parent="311" name="PRIMARY">
-      <ColNames>employee_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>employee_id</UnderlyingIndexColNames>
     </key>
     <column id="616" parent="312" name="id">
       <Comment>id</Comment>
-      <DataType>char(19)|0s</DataType>
+      <DasType>char(19)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
     <column id="617" parent="312" name="ia_partition_id">
       <Comment>分区id</Comment>
-      <DataType>char(19)|0s</DataType>
+      <DasType>char(19)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="618" parent="312" name="date">
       <Comment>施肥时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>3</Position>
     </column>
     <column id="619" parent="312" name="food_name">
       <Comment>肥料名称</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
     </column>
     <column id="620" parent="312" name="weight">
       <Comment>重量</Comment>
-      <DataType>double|0s</DataType>
+      <DasType>double|0s</DasType>
       <Position>5</Position>
     </column>
     <column id="621" parent="312" name="description">
       <Comment>备注</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>6</Position>
     </column>
     <foreign-key id="622" parent="312" name="agriculture_feeding_ibfk_1">
@@ -2857,54 +2856,54 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Type>btree</Type>
     </index>
     <key id="624" parent="312" name="PRIMARY">
-      <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
     </key>
     <column id="625" parent="313" name="job_id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>作业任务ID</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="626" parent="313" name="class_id">
       <Comment>种类ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="627" parent="313" name="job_name">
       <Comment>作业任务名称</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="628" parent="313" name="cycle_unit">
       <Comment>作业周期单位（0代表周 1代表天）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="629" parent="313" name="job_start">
       <Comment>起始周/天</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <column id="630" parent="313" name="job_finish">
       <Comment>结束周/天</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
     <column id="631" parent="313" name="status">
       <Comment>状态（0正常 1停用）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>7</Position>
@@ -2912,268 +2911,268 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </column>
     <column id="632" parent="313" name="create_by">
       <Comment>创建者ID</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>8</Position>
     </column>
     <column id="633" parent="313" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>9</Position>
     </column>
     <column id="634" parent="313" name="update_by">
       <Comment>修改人ID</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>10</Position>
     </column>
     <column id="635" parent="313" name="update_time">
       <Comment>修改时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>11</Position>
     </column>
     <column id="636" parent="313" name="remark">
       <Comment>备注</Comment>
-      <DataType>varchar(2000)|0s</DataType>
+      <DasType>varchar(2000)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>12</Position>
     </column>
     <key id="637" parent="313" name="PRIMARY">
-      <ColNames>job_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>job_id</UnderlyingIndexColNames>
     </key>
     <column id="638" parent="314" name="machine_id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>机械ID</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="639" parent="314" name="machine_code">
       <Comment>机械编码</Comment>
-      <DataType>varchar(20)|0s</DataType>
+      <DasType>varchar(20)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="640" parent="314" name="machine_name">
       <Comment>机械名称</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="641" parent="314" name="machine_image">
       <Comment>机械图片</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
     </column>
     <column id="642" parent="314" name="measure_unit">
       <Comment>计量单位</Comment>
-      <DataType>varchar(10)|0s</DataType>
+      <DasType>varchar(10)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <column id="643" parent="314" name="remark">
       <Comment>备注</Comment>
-      <DataType>varchar(2000)|0s</DataType>
+      <DasType>varchar(2000)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
     <column id="644" parent="314" name="status">
       <Comment>状态</Comment>
-      <DataType>varchar(1)|0s</DataType>
+      <DasType>varchar(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
     <column id="645" parent="314" name="order_num">
       <Comment>排序</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
     <column id="646" parent="314" name="create_by">
       <Comment>创建者ID</Comment>
-      <DataType>varchar(10)|0s</DataType>
+      <DasType>varchar(10)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>9</Position>
     </column>
     <column id="647" parent="314" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>10</Position>
     </column>
     <column id="648" parent="314" name="update_by">
       <Comment>修改人ID</Comment>
-      <DataType>varchar(10)|0s</DataType>
+      <DasType>varchar(10)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>11</Position>
     </column>
     <column id="649" parent="314" name="update_time">
       <Comment>修改时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>12</Position>
     </column>
     <column id="650" parent="314" name="del_flag">
       <Comment>删除标志（0代表存在 2代表删除）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>13</Position>
     </column>
     <key id="651" parent="314" name="PRIMARY">
-      <ColNames>machine_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>machine_id</UnderlyingIndexColNames>
     </key>
     <column id="652" parent="315" name="material_id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>农资ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="653" parent="315" name="material_code">
       <Comment>农资编码</Comment>
-      <DataType>varchar(20)|0s</DataType>
+      <DasType>varchar(20)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="654" parent="315" name="material_name">
       <Comment>农资名称</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="655" parent="315" name="material_image">
       <Comment>农资图片</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
     </column>
     <column id="656" parent="315" name="measure_unit">
       <Comment>计量单位</Comment>
-      <DataType>varchar(10)|0s</DataType>
+      <DasType>varchar(10)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <column id="657" parent="315" name="remark">
       <Comment>备注</Comment>
-      <DataType>varchar(2000)|0s</DataType>
+      <DasType>varchar(2000)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
     <column id="658" parent="315" name="status">
       <Comment>状态(0是菜，1是鱼)</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>7</Position>
     </column>
     <column id="659" parent="315" name="order_num">
       <Comment>排序</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
     <column id="660" parent="315" name="create_by">
       <Comment>创建者ID</Comment>
-      <DataType>varchar(10)|0s</DataType>
+      <DasType>varchar(10)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>9</Position>
     </column>
     <column id="661" parent="315" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>10</Position>
     </column>
     <column id="662" parent="315" name="update_by">
       <Comment>修改人ID</Comment>
-      <DataType>varchar(10)|0s</DataType>
+      <DasType>varchar(10)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>11</Position>
     </column>
     <column id="663" parent="315" name="update_time">
       <Comment>修改时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>12</Position>
     </column>
     <column id="664" parent="315" name="del_flag">
       <Comment>删除标志（0代表存在 2代表删除）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>13</Position>
     </column>
     <key id="665" parent="315" name="PRIMARY">
-      <ColNames>material_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>material_id</UnderlyingIndexColNames>
     </key>
     <column id="666" parent="316" name="id">
       <Comment>id-溯源码</Comment>
-      <DataType>char(19)|0s</DataType>
+      <DasType>char(19)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
     <column id="667" parent="316" name="ia_partition_id">
       <Comment>分区id</Comment>
-      <DataType>char(19)|0s</DataType>
+      <DasType>char(19)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="668" parent="316" name="cuisine_weight">
       <Comment>蔬菜重量</Comment>
-      <DataType>double|0s</DataType>
+      <DasType>double|0s</DasType>
       <Position>3</Position>
     </column>
     <column id="669" parent="316" name="fish_weight">
       <Comment>鱼类重量</Comment>
-      <DataType>double|0s</DataType>
+      <DasType>double|0s</DasType>
       <Position>4</Position>
     </column>
     <column id="670" parent="316" name="name">
       <Comment>食品名称</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>5</Position>
     </column>
     <column id="671" parent="316" name="date">
       <Comment>日期</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>6</Position>
     </column>
     <column id="672" parent="316" name="description">
       <Comment>备注</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>7</Position>
     </column>
     <column id="673" parent="316" name="status">
       <Comment>食品质量（0 不及格、1 及格 2 优秀）</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>8</Position>
     </column>
     <column id="674" parent="316" name="cuisine_status">
       <Comment>蔬菜食品质量（0 不及格、1 及格 2 优秀）</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <Position>9</Position>
     </column>
     <column id="675" parent="316" name="fish_status">
       <Comment>鱼类食品质量（0 不及格、1 及格 2 优秀）</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <Position>10</Position>
     </column>
     <column id="676" parent="316" name="food_type">
       <Comment>食品类型（fish-鱼/cuisine-菜/）</Comment>
-      <DataType>varchar(20)|0s</DataType>
+      <DasType>varchar(20)|0s</DasType>
       <Position>11</Position>
     </column>
     <index id="677" parent="316" name="ia_partition_id_1">
@@ -3181,87 +3180,87 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Type>btree</Type>
     </index>
     <key id="678" parent="316" name="PRIMARY">
-      <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
     </key>
     <column id="679" parent="317" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>id</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="680" parent="317" name="name">
       <Comment>名称</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="681" parent="317" name="contract_addr">
       <Comment>合约地址</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
     </column>
     <column id="682" parent="317" name="address">
       <Comment>大棚位置</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
     </column>
     <column id="683" parent="317" name="description">
       <Comment>备注</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>5</Position>
     </column>
     <column id="684" parent="317" name="area">
       <Comment>大棚面积</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>6</Position>
     </column>
     <column id="685" parent="317" name="remaining_area">
       <Comment>大棚剩余面积</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>7</Position>
     </column>
     <column id="686" parent="317" name="big_breeding_quantity">
       <Comment>最大分区数量</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <Position>8</Position>
     </column>
     <column id="687" parent="317" name="breeding_quantity">
       <Comment>当前分区数量</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>9</Position>
     </column>
     <column id="688" parent="317" name="create_by">
       <Comment>创建者ID</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>10</Position>
     </column>
     <column id="689" parent="317" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>11</Position>
     </column>
     <column id="690" parent="317" name="update_by">
       <Comment>修改人ID</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>12</Position>
     </column>
     <column id="691" parent="317" name="update_time">
       <Comment>修改时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>13</Position>
     </column>
     <column id="692" parent="317" name="remark">
       <Comment>备注</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>14</Position>
     </column>
     <column id="693" parent="317" name="del_flag">
       <Comment>删除标志 (0未删除 1已删除)</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>15</Position>
     </column>
@@ -3271,264 +3270,263 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Unique>1</Unique>
     </index>
     <key id="695" parent="317" name="PRIMARY">
-      <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
     </key>
     <key id="696" parent="317" name="name">
-      <ColNames>name</ColNames>
       <UnderlyingIndexName>name</UnderlyingIndexName>
     </key>
     <column id="697" parent="318" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>ID</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="698" parent="318" name="task_id">
       <Comment>任务ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="699" parent="318" name="employee_id">
       <Comment>员工ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="700" parent="318" name="remark">
       <Comment>备注</Comment>
-      <DataType>varchar(2000)|0s</DataType>
+      <DasType>varchar(2000)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="701" parent="318" name="status">
       <Comment>状态</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <column id="702" parent="318" name="order_num">
       <Comment>排序</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
     <column id="703" parent="318" name="create_by">
       <Comment>创建者ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
     <column id="704" parent="318" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>8</Position>
     </column>
     <column id="705" parent="318" name="update_by">
       <Comment>修改人ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>9</Position>
     </column>
     <column id="706" parent="318" name="update_time">
       <Comment>修改时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>10</Position>
     </column>
     <column id="707" parent="318" name="del_flag">
       <Comment>删除标志（0代表存在 2代表删除）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>11</Position>
     </column>
     <key id="708" parent="318" name="PRIMARY">
-      <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
     </key>
     <column id="709" parent="319" name="log_id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>日志ID</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="710" parent="319" name="task_id">
       <Comment>任务ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="711" parent="319" name="oper_name">
       <Comment>操作人名称</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="712" parent="319" name="oper_id">
       <Comment>操作人Id</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="713" parent="319" name="oper_des">
       <Comment>操作描述</Comment>
-      <DataType>varchar(500)|0s</DataType>
+      <DasType>varchar(500)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <column id="714" parent="319" name="remark">
       <Comment>备注</Comment>
-      <DataType>varchar(2000)|0s</DataType>
+      <DasType>varchar(2000)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
     <column id="715" parent="319" name="status">
       <Comment>状态</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
     <column id="716" parent="319" name="order_num">
       <Comment>排序</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
     <column id="717" parent="319" name="create_by">
       <Comment>创建者ID</Comment>
-      <DataType>varchar(20)|0s</DataType>
+      <DasType>varchar(20)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>9</Position>
     </column>
     <column id="718" parent="319" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>10</Position>
     </column>
     <column id="719" parent="319" name="update_by">
       <Comment>修改人ID</Comment>
-      <DataType>varchar(20)|0s</DataType>
+      <DasType>varchar(20)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>11</Position>
     </column>
     <column id="720" parent="319" name="update_time">
       <Comment>修改时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>12</Position>
     </column>
     <column id="721" parent="319" name="del_flag">
       <Comment>删除标志（0代表存在 2代表删除）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>13</Position>
     </column>
     <key id="722" parent="319" name="PRIMARY">
-      <ColNames>log_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>log_id</UnderlyingIndexColNames>
     </key>
     <column id="723" parent="320" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>主键ID</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="724" parent="320" name="device_id">
       <Comment>设备ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="725" parent="320" name="device_type">
       <Comment>设备类型（气象、水质等）</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="726" parent="320" name="param_type">
       <Comment>参数类型（如：风速、温度、PH值等）</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="727" parent="320" name="unit">
       <Comment>单位</Comment>
-      <DataType>varchar(20)|0s</DataType>
+      <DasType>varchar(20)|0s</DasType>
       <Position>5</Position>
     </column>
     <column id="728" parent="320" name="threshold_min">
       <Comment>阈值最小值</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>6</Position>
     </column>
     <column id="729" parent="320" name="threshold_max">
       <Comment>阈值最大值</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>7</Position>
     </column>
     <column id="730" parent="320" name="alarm_level">
       <Comment>报警级别（danger/严重、warning/警告等）</Comment>
-      <DataType>varchar(10)|0s</DataType>
+      <DasType>varchar(10)|0s</DasType>
       <Position>8</Position>
     </column>
     <column id="731" parent="320" name="notify_type">
       <Comment>通知方式（system/系统通知, ring/强提醒, sms/短信等）</Comment>
-      <DataType>varchar(20)|0s</DataType>
+      <DasType>varchar(20)|0s</DasType>
       <Position>9</Position>
     </column>
     <column id="732" parent="320" name="is_enabled">
       <Comment>是否启用（0-禁用，1-启用）</Comment>
-      <DataType>tinyint(1)|0s</DataType>
+      <DasType>tinyint(1)|0s</DasType>
       <DefaultExpression>1</DefaultExpression>
       <Position>10</Position>
     </column>
     <column id="733" parent="320" name="create_by">
       <Comment>创建者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>11</Position>
     </column>
     <column id="734" parent="320" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>12</Position>
     </column>
     <column id="735" parent="320" name="update_by">
       <Comment>更新者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>13</Position>
     </column>
     <column id="736" parent="320" name="update_time">
       <Comment>更改时间</Comment>
-      <DataType>timestamp|0s</DataType>
+      <DasType>timestamp|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
       <Position>14</Position>
     </column>
     <column id="737" parent="320" name="remark">
       <Comment>备注</Comment>
-      <DataType>text|0s</DataType>
+      <DasType>text|0s</DasType>
       <Position>15</Position>
     </column>
     <index id="738" parent="320" name="idx_device_id">
@@ -3540,48 +3538,48 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Type>btree</Type>
     </index>
     <key id="740" parent="320" name="PRIMARY">
-      <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
     </key>
     <column id="741" parent="321" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>主键ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="742" parent="321" name="trace_code">
       <Comment>溯源码</Comment>
-      <DataType>char(19)|0s</DataType>
+      <DasType>char(19)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="743" parent="321" name="partition_id">
       <Comment>分区ID</Comment>
-      <DataType>char(19)|0s</DataType>
+      <DasType>char(19)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="744" parent="321" name="query_time">
       <Comment>查询时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="745" parent="321" name="query_ip">
       <Comment>查询IP</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <Position>5</Position>
     </column>
     <column id="746" parent="321" name="user_agent">
       <Comment>用户代理</Comment>
-      <DataType>varchar(500)|0s</DataType>
+      <DasType>varchar(500)|0s</DasType>
       <Position>6</Position>
     </column>
     <column id="747" parent="321" name="query_type">
       <Comment>查询类型(web/app/scan)</Comment>
-      <DataType>varchar(20)|0s</DataType>
+      <DasType>varchar(20)|0s</DasType>
       <Position>7</Position>
     </column>
     <index id="748" parent="321" name="idx_trace_code">
@@ -3597,75 +3595,75 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Type>btree</Type>
     </index>
     <key id="751" parent="321" name="PRIMARY">
-      <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
     </key>
     <column id="752" parent="322" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>主键ID</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="753" parent="322" name="pasture_id">
       <Comment>大棚ID</Comment>
-      <DataType>char(19)|0s</DataType>
+      <DasType>char(19)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="754" parent="322" name="batch_id">
       <Comment>分区ID</Comment>
-      <DataType>char(19)|0s</DataType>
+      <DasType>char(19)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="755" parent="322" name="stat_date">
       <Comment>统计日期</Comment>
-      <DataType>date|0s</DataType>
+      <DasType>date|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="756" parent="322" name="avg_ph_value">
       <Comment>PH值平均值</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>5</Position>
     </column>
     <column id="757" parent="322" name="avg_dissolved_oxygen">
       <Comment>溶解氧平均值</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>6</Position>
     </column>
     <column id="758" parent="322" name="avg_ammonia_nitrogen">
       <Comment>氨氮平均值</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>7</Position>
     </column>
     <column id="759" parent="322" name="avg_water_temperature">
       <Comment>水温平均值</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>8</Position>
     </column>
     <column id="760" parent="322" name="avg_conductivity">
       <Comment>电导率平均值</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>9</Position>
     </column>
     <column id="761" parent="322" name="data_count">
       <Comment>数据条数</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>10</Position>
     </column>
     <column id="762" parent="322" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>11</Position>
     </column>
     <column id="763" parent="322" name="update_time">
       <Comment>更新时间</Comment>
-      <DataType>timestamp|0s</DataType>
+      <DasType>timestamp|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
       <Position>12</Position>
@@ -3690,97 +3688,94 @@ stat_date</ColNames>
       <Type>btree</Type>
     </index>
     <key id="768" parent="322" name="PRIMARY">
-      <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
     </key>
     <key id="769" parent="322" name="uk_pasture_batch_date">
-      <ColNames>pasture_id
-batch_id
-stat_date</ColNames>
       <UnderlyingIndexName>uk_pasture_batch_date</UnderlyingIndexName>
     </key>
     <column id="770" parent="323" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>主键ID</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="771" parent="323" name="device_id">
       <Comment>设备ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="772" parent="323" name="pasture_id">
       <Comment>大棚ID</Comment>
-      <DataType>char(19)|0s</DataType>
+      <DasType>char(19)|0s</DasType>
       <Position>3</Position>
     </column>
     <column id="773" parent="323" name="batch_id">
       <Comment>分区ID</Comment>
-      <DataType>char(19)|0s</DataType>
+      <DasType>char(19)|0s</DasType>
       <Position>4</Position>
     </column>
     <column id="774" parent="323" name="ph_value">
       <Comment>PH值</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>5</Position>
     </column>
     <column id="775" parent="323" name="dissolved_oxygen">
       <Comment>溶解氧(mg/L)</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>6</Position>
     </column>
     <column id="776" parent="323" name="ammonia_nitrogen">
       <Comment>氨氮(mg/L)</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>7</Position>
     </column>
     <column id="777" parent="323" name="water_temperature">
       <Comment>水温(℃)</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>8</Position>
     </column>
     <column id="778" parent="323" name="conductivity">
       <Comment>电导率(μS/cm)</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>9</Position>
     </column>
     <column id="779" parent="323" name="collect_time">
       <Comment>采集时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <NotNull>1</NotNull>
       <Position>10</Position>
     </column>
     <column id="780" parent="323" name="create_by">
       <Comment>创建者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>11</Position>
     </column>
     <column id="781" parent="323" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>12</Position>
     </column>
     <column id="782" parent="323" name="update_by">
       <Comment>更新者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>13</Position>
     </column>
     <column id="783" parent="323" name="update_time">
       <Comment>更改时间</Comment>
-      <DataType>timestamp|0s</DataType>
+      <DasType>timestamp|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
       <Position>14</Position>
     </column>
     <column id="784" parent="323" name="remark">
       <Comment>备注</Comment>
-      <DataType>text|0s</DataType>
+      <DasType>text|0s</DasType>
       <Position>15</Position>
     </column>
     <index id="785" parent="323" name="idx_device_id">
@@ -3800,75 +3795,75 @@ stat_date</ColNames>
       <Type>btree</Type>
     </index>
     <key id="789" parent="323" name="PRIMARY">
-      <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
     </key>
     <column id="790" parent="324" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>主键ID</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="791" parent="324" name="pasture_id">
       <Comment>大棚ID</Comment>
-      <DataType>char(19)|0s</DataType>
+      <DasType>char(19)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="792" parent="324" name="batch_id">
       <Comment>分区ID</Comment>
-      <DataType>char(19)|0s</DataType>
+      <DasType>char(19)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="793" parent="324" name="stat_hour">
       <Comment>统计小时</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="794" parent="324" name="avg_ph_value">
       <Comment>PH值平均值</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>5</Position>
     </column>
     <column id="795" parent="324" name="avg_dissolved_oxygen">
       <Comment>溶解氧平均值</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>6</Position>
     </column>
     <column id="796" parent="324" name="avg_ammonia_nitrogen">
       <Comment>氨氮平均值</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>7</Position>
     </column>
     <column id="797" parent="324" name="avg_water_temperature">
       <Comment>水温平均值</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>8</Position>
     </column>
     <column id="798" parent="324" name="avg_conductivity">
       <Comment>电导率平均值</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>9</Position>
     </column>
     <column id="799" parent="324" name="data_count">
       <Comment>数据条数</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>10</Position>
     </column>
     <column id="800" parent="324" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>11</Position>
     </column>
     <column id="801" parent="324" name="update_time">
       <Comment>更新时间</Comment>
-      <DataType>timestamp|0s</DataType>
+      <DasType>timestamp|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
       <Position>12</Position>
@@ -3893,80 +3888,77 @@ stat_hour</ColNames>
       <Type>btree</Type>
     </index>
     <key id="806" parent="324" name="PRIMARY">
-      <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
     </key>
     <key id="807" parent="324" name="uk_pasture_batch_hour">
-      <ColNames>pasture_id
-batch_id
-stat_hour</ColNames>
       <UnderlyingIndexName>uk_pasture_batch_hour</UnderlyingIndexName>
     </key>
     <column id="808" parent="325" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>主键ID</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="809" parent="325" name="pasture_id">
       <Comment>大棚ID</Comment>
-      <DataType>char(19)|0s</DataType>
+      <DasType>char(19)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="810" parent="325" name="batch_id">
       <Comment>分区ID</Comment>
-      <DataType>char(19)|0s</DataType>
+      <DasType>char(19)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="811" parent="325" name="stat_date">
       <Comment>统计日期</Comment>
-      <DataType>date|0s</DataType>
+      <DasType>date|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="812" parent="325" name="avg_temperature">
       <Comment>平均温度</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>5</Position>
     </column>
     <column id="813" parent="325" name="avg_humidity">
       <Comment>平均湿度</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>6</Position>
     </column>
     <column id="814" parent="325" name="avg_wind_speed">
       <Comment>平均风速</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>7</Position>
     </column>
     <column id="815" parent="325" name="avg_light_intensity">
       <Comment>平均光照强度</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>8</Position>
     </column>
     <column id="816" parent="325" name="avg_rainfall">
       <Comment>平均降雨量</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>9</Position>
     </column>
     <column id="817" parent="325" name="avg_air_pressure">
       <Comment>平均气压</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>10</Position>
     </column>
     <column id="818" parent="325" name="data_count">
       <Comment>数据条数</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>11</Position>
     </column>
     <column id="819" parent="325" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <Position>12</Position>
     </column>
@@ -3982,82 +3974,79 @@ stat_date</ColNames>
       <Type>btree</Type>
     </index>
     <key id="822" parent="325" name="PRIMARY">
-      <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
     </key>
     <key id="823" parent="325" name="uk_pasture_batch_date">
-      <ColNames>pasture_id
-batch_id
-stat_date</ColNames>
       <UnderlyingIndexName>uk_pasture_batch_date</UnderlyingIndexName>
     </key>
     <column id="824" parent="326" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>主键ID</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="825" parent="326" name="device_id">
       <Comment>设备ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="826" parent="326" name="pasture_id">
       <Comment>大棚ID</Comment>
-      <DataType>char(19)|0s</DataType>
+      <DasType>char(19)|0s</DasType>
       <Position>3</Position>
     </column>
     <column id="827" parent="326" name="batch_id">
       <Comment>分区ID</Comment>
-      <DataType>char(19)|0s</DataType>
+      <DasType>char(19)|0s</DasType>
       <Position>4</Position>
     </column>
     <column id="828" parent="326" name="wind_speed">
       <Comment>风速(m/s)</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>5</Position>
     </column>
     <column id="829" parent="326" name="wind_direction">
       <Comment>风向</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <Position>6</Position>
     </column>
     <column id="830" parent="326" name="temperature">
       <Comment>温度(℃)</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>7</Position>
     </column>
     <column id="831" parent="326" name="humidity">
       <Comment>湿度(%)</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>8</Position>
     </column>
     <column id="832" parent="326" name="light_intensity">
       <Comment>光照强度(lux)</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>9</Position>
     </column>
     <column id="833" parent="326" name="rainfall">
       <Comment>降雨量(mm)</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>10</Position>
     </column>
     <column id="834" parent="326" name="air_pressure">
       <Comment>气压(hPa)</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>11</Position>
     </column>
     <column id="835" parent="326" name="collect_time">
       <Comment>采集时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>12</Position>
     </column>
     <column id="836" parent="326" name="remark">
       <Comment>备注</Comment>
-      <DataType>text|0s</DataType>
+      <DasType>text|0s</DasType>
       <Position>13</Position>
     </column>
     <index id="837" parent="326" name="idx_device_id">
@@ -4083,74 +4072,74 @@ collect_time</ColNames>
       <Type>btree</Type>
     </index>
     <key id="842" parent="326" name="PRIMARY">
-      <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
     </key>
     <column id="843" parent="327" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>主键ID</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="844" parent="327" name="pasture_id">
       <Comment>大棚ID</Comment>
-      <DataType>char(19)|0s</DataType>
+      <DasType>char(19)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="845" parent="327" name="batch_id">
       <Comment>分区ID</Comment>
-      <DataType>char(19)|0s</DataType>
+      <DasType>char(19)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="846" parent="327" name="stat_hour">
       <Comment>统计小时</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="847" parent="327" name="avg_temperature">
       <Comment>平均温度</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>5</Position>
     </column>
     <column id="848" parent="327" name="avg_humidity">
       <Comment>平均湿度</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>6</Position>
     </column>
     <column id="849" parent="327" name="avg_wind_speed">
       <Comment>平均风速</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>7</Position>
     </column>
     <column id="850" parent="327" name="avg_light_intensity">
       <Comment>平均光照强度</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>8</Position>
     </column>
     <column id="851" parent="327" name="avg_rainfall">
       <Comment>平均降雨量</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>9</Position>
     </column>
     <column id="852" parent="327" name="avg_air_pressure">
       <Comment>平均气压</Comment>
-      <DataType>decimal(10,2 digit)|0s</DataType>
+      <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>10</Position>
     </column>
     <column id="853" parent="327" name="data_count">
       <Comment>数据条数</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>11</Position>
     </column>
     <column id="854" parent="327" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <Position>12</Position>
     </column>
@@ -4166,570 +4155,567 @@ stat_hour</ColNames>
       <Type>btree</Type>
     </index>
     <key id="857" parent="327" name="PRIMARY">
-      <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
     </key>
     <key id="858" parent="327" name="uk_pasture_batch_hour">
-      <ColNames>pasture_id
-batch_id
-stat_hour</ColNames>
       <UnderlyingIndexName>uk_pasture_batch_hour</UnderlyingIndexName>
     </key>
     <column id="859" parent="328" name="table_id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>编号</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="860" parent="328" name="table_name">
       <Comment>表名称</Comment>
-      <DataType>varchar(200)|0s</DataType>
+      <DasType>varchar(200)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>2</Position>
     </column>
     <column id="861" parent="328" name="table_comment">
       <Comment>表描述</Comment>
-      <DataType>varchar(500)|0s</DataType>
+      <DasType>varchar(500)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>3</Position>
     </column>
     <column id="862" parent="328" name="sub_table_name">
       <Comment>关联子表的表名</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <Position>4</Position>
     </column>
     <column id="863" parent="328" name="sub_table_fk_name">
       <Comment>子表关联的外键名</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <Position>5</Position>
     </column>
     <column id="864" parent="328" name="class_name">
       <Comment>实体类名称</Comment>
-      <DataType>varchar(100)|0s</DataType>
+      <DasType>varchar(100)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>6</Position>
     </column>
     <column id="865" parent="328" name="tpl_category">
       <Comment>使用的模板（crud单表操作 tree树表操作）</Comment>
-      <DataType>varchar(200)|0s</DataType>
+      <DasType>varchar(200)|0s</DasType>
       <DefaultExpression>&apos;crud&apos;</DefaultExpression>
       <Position>7</Position>
     </column>
     <column id="866" parent="328" name="tpl_web_type">
       <Comment>前端模板类型（element-ui模版 element-plus模版）</Comment>
-      <DataType>varchar(30)|0s</DataType>
+      <DasType>varchar(30)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>8</Position>
     </column>
     <column id="867" parent="328" name="package_name">
       <Comment>生成包路径</Comment>
-      <DataType>varchar(100)|0s</DataType>
+      <DasType>varchar(100)|0s</DasType>
       <Position>9</Position>
     </column>
     <column id="868" parent="328" name="module_name">
       <Comment>生成模块名</Comment>
-      <DataType>varchar(30)|0s</DataType>
+      <DasType>varchar(30)|0s</DasType>
       <Position>10</Position>
     </column>
     <column id="869" parent="328" name="business_name">
       <Comment>生成业务名</Comment>
-      <DataType>varchar(30)|0s</DataType>
+      <DasType>varchar(30)|0s</DasType>
       <Position>11</Position>
     </column>
     <column id="870" parent="328" name="function_name">
       <Comment>生成功能名</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <Position>12</Position>
     </column>
     <column id="871" parent="328" name="function_author">
       <Comment>生成功能作者</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <Position>13</Position>
     </column>
     <column id="872" parent="328" name="gen_type">
       <Comment>生成代码方式（0zip压缩包 1自定义路径）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>14</Position>
     </column>
     <column id="873" parent="328" name="gen_path">
       <Comment>生成路径（不填默认项目路径）</Comment>
-      <DataType>varchar(200)|0s</DataType>
+      <DasType>varchar(200)|0s</DasType>
       <DefaultExpression>&apos;/&apos;</DefaultExpression>
       <Position>15</Position>
     </column>
     <column id="874" parent="328" name="options">
       <Comment>其它生成选项</Comment>
-      <DataType>varchar(1000)|0s</DataType>
+      <DasType>varchar(1000)|0s</DasType>
       <Position>16</Position>
     </column>
     <column id="875" parent="328" name="create_by">
       <Comment>创建者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>17</Position>
     </column>
     <column id="876" parent="328" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>18</Position>
     </column>
     <column id="877" parent="328" name="update_by">
       <Comment>更新者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>19</Position>
     </column>
     <column id="878" parent="328" name="update_time">
       <Comment>更新时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>20</Position>
     </column>
     <column id="879" parent="328" name="remark">
       <Comment>备注</Comment>
-      <DataType>varchar(500)|0s</DataType>
+      <DasType>varchar(500)|0s</DasType>
       <Position>21</Position>
     </column>
     <key id="880" parent="328" name="PRIMARY">
-      <ColNames>table_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>table_id</UnderlyingIndexColNames>
     </key>
     <column id="881" parent="329" name="column_id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>编号</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="882" parent="329" name="table_id">
       <Comment>归属表编号</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <Position>2</Position>
     </column>
     <column id="883" parent="329" name="column_name">
       <Comment>列名称</Comment>
-      <DataType>varchar(200)|0s</DataType>
+      <DasType>varchar(200)|0s</DasType>
       <Position>3</Position>
     </column>
     <column id="884" parent="329" name="column_comment">
       <Comment>列描述</Comment>
-      <DataType>varchar(500)|0s</DataType>
+      <DasType>varchar(500)|0s</DasType>
       <Position>4</Position>
     </column>
     <column id="885" parent="329" name="column_type">
       <Comment>列类型</Comment>
-      <DataType>varchar(100)|0s</DataType>
+      <DasType>varchar(100)|0s</DasType>
       <Position>5</Position>
     </column>
     <column id="886" parent="329" name="java_type">
       <Comment>JAVA类型</Comment>
-      <DataType>varchar(500)|0s</DataType>
+      <DasType>varchar(500)|0s</DasType>
       <Position>6</Position>
     </column>
     <column id="887" parent="329" name="java_field">
       <Comment>JAVA字段名</Comment>
-      <DataType>varchar(200)|0s</DataType>
+      <DasType>varchar(200)|0s</DasType>
       <Position>7</Position>
     </column>
     <column id="888" parent="329" name="is_pk">
       <Comment>是否主键（1是）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <Position>8</Position>
     </column>
     <column id="889" parent="329" name="is_increment">
       <Comment>是否自增（1是）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <Position>9</Position>
     </column>
     <column id="890" parent="329" name="is_required">
       <Comment>是否必填（1是）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <Position>10</Position>
     </column>
     <column id="891" parent="329" name="is_insert">
       <Comment>是否为插入字段（1是）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <Position>11</Position>
     </column>
     <column id="892" parent="329" name="is_edit">
       <Comment>是否编辑字段（1是）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <Position>12</Position>
     </column>
     <column id="893" parent="329" name="is_list">
       <Comment>是否列表字段（1是）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <Position>13</Position>
     </column>
     <column id="894" parent="329" name="is_query">
       <Comment>是否查询字段（1是）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <Position>14</Position>
     </column>
     <column id="895" parent="329" name="query_type">
       <Comment>查询方式（等于、不等于、大于、小于、范围）</Comment>
-      <DataType>varchar(200)|0s</DataType>
+      <DasType>varchar(200)|0s</DasType>
       <DefaultExpression>&apos;EQ&apos;</DefaultExpression>
       <Position>15</Position>
     </column>
     <column id="896" parent="329" name="html_type">
       <Comment>显示类型（文本框、文本域、下拉框、复选框、单选框、日期控件）</Comment>
-      <DataType>varchar(200)|0s</DataType>
+      <DasType>varchar(200)|0s</DasType>
       <Position>16</Position>
     </column>
     <column id="897" parent="329" name="dict_type">
       <Comment>字典类型</Comment>
-      <DataType>varchar(200)|0s</DataType>
+      <DasType>varchar(200)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>17</Position>
     </column>
     <column id="898" parent="329" name="sort">
       <Comment>排序</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <Position>18</Position>
     </column>
     <column id="899" parent="329" name="create_by">
       <Comment>创建者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>19</Position>
     </column>
     <column id="900" parent="329" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>20</Position>
     </column>
     <column id="901" parent="329" name="update_by">
       <Comment>更新者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>21</Position>
     </column>
     <column id="902" parent="329" name="update_time">
       <Comment>更新时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>22</Position>
     </column>
     <key id="903" parent="329" name="PRIMARY">
-      <ColNames>column_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>column_id</UnderlyingIndexColNames>
     </key>
     <column id="904" parent="330" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>主键ID</Comment>
-      <DataType>bigint unsigned|0s</DataType>
+      <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="905" parent="330" name="param_type_en">
       <Comment>参数英文名</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="906" parent="330" name="param_type_cn">
       <Comment>参数中文名</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="907" parent="330" name="remark">
       <Comment>备注</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
     </column>
     <key id="908" parent="330" name="PRIMARY">
-      <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
     </key>
     <column id="909" parent="331" name="config_id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>参数主键</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="910" parent="331" name="config_name">
       <Comment>参数名称</Comment>
-      <DataType>varchar(100)|0s</DataType>
+      <DasType>varchar(100)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>2</Position>
     </column>
     <column id="911" parent="331" name="config_key">
       <Comment>参数键名</Comment>
-      <DataType>varchar(100)|0s</DataType>
+      <DasType>varchar(100)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>3</Position>
     </column>
     <column id="912" parent="331" name="config_value">
       <Comment>参数键值</Comment>
-      <DataType>varchar(500)|0s</DataType>
+      <DasType>varchar(500)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>4</Position>
     </column>
     <column id="913" parent="331" name="config_type">
       <Comment>系统内置（Y是 N否）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;N&apos;</DefaultExpression>
       <Position>5</Position>
     </column>
     <column id="914" parent="331" name="create_by">
       <Comment>创建者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>6</Position>
     </column>
     <column id="915" parent="331" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>7</Position>
     </column>
     <column id="916" parent="331" name="update_by">
       <Comment>更新者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>8</Position>
     </column>
     <column id="917" parent="331" name="update_time">
       <Comment>更新时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>9</Position>
     </column>
     <column id="918" parent="331" name="remark">
       <Comment>备注</Comment>
-      <DataType>varchar(500)|0s</DataType>
+      <DasType>varchar(500)|0s</DasType>
       <Position>10</Position>
     </column>
     <key id="919" parent="331" name="PRIMARY">
-      <ColNames>config_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>config_id</UnderlyingIndexColNames>
     </key>
     <column id="920" parent="332" name="dept_id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>部门id</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="921" parent="332" name="parent_id">
       <Comment>父部门id</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>2</Position>
     </column>
     <column id="922" parent="332" name="ancestors">
       <Comment>祖级列表</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>3</Position>
     </column>
     <column id="923" parent="332" name="dept_name">
       <Comment>部门名称</Comment>
-      <DataType>varchar(30)|0s</DataType>
+      <DasType>varchar(30)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>4</Position>
     </column>
     <column id="924" parent="332" name="order_num">
       <Comment>显示顺序</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>5</Position>
     </column>
     <column id="925" parent="332" name="leader">
       <Comment>负责人</Comment>
-      <DataType>varchar(20)|0s</DataType>
+      <DasType>varchar(20)|0s</DasType>
       <Position>6</Position>
     </column>
     <column id="926" parent="332" name="phone">
       <Comment>联系电话</Comment>
-      <DataType>varchar(11)|0s</DataType>
+      <DasType>varchar(11)|0s</DasType>
       <Position>7</Position>
     </column>
     <column id="927" parent="332" name="email">
       <Comment>邮箱</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <Position>8</Position>
     </column>
     <column id="928" parent="332" name="status">
       <Comment>部门状态（0正常 1停用）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>9</Position>
     </column>
     <column id="929" parent="332" name="del_flag">
       <Comment>删除标志（0代表存在 2代表删除）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>10</Position>
     </column>
     <column id="930" parent="332" name="create_by">
       <Comment>创建者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>11</Position>
     </column>
     <column id="931" parent="332" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>12</Position>
     </column>
     <column id="932" parent="332" name="update_by">
       <Comment>更新者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>13</Position>
     </column>
     <column id="933" parent="332" name="update_time">
       <Comment>更新时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>14</Position>
     </column>
     <key id="934" parent="332" name="PRIMARY">
-      <ColNames>dept_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>dept_id</UnderlyingIndexColNames>
     </key>
     <column id="935" parent="333" name="dict_code">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>字典编码</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="936" parent="333" name="dict_sort">
       <Comment>字典排序</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>2</Position>
     </column>
     <column id="937" parent="333" name="dict_label">
       <Comment>字典标签</Comment>
-      <DataType>varchar(100)|0s</DataType>
+      <DasType>varchar(100)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>3</Position>
     </column>
     <column id="938" parent="333" name="dict_value">
       <Comment>字典键值</Comment>
-      <DataType>varchar(100)|0s</DataType>
+      <DasType>varchar(100)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>4</Position>
     </column>
     <column id="939" parent="333" name="dict_type">
       <Comment>字典类型</Comment>
-      <DataType>varchar(100)|0s</DataType>
+      <DasType>varchar(100)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>5</Position>
     </column>
     <column id="940" parent="333" name="css_class">
       <Comment>样式属性（其他样式扩展）</Comment>
-      <DataType>varchar(100)|0s</DataType>
+      <DasType>varchar(100)|0s</DasType>
       <Position>6</Position>
     </column>
     <column id="941" parent="333" name="list_class">
       <Comment>表格回显样式</Comment>
-      <DataType>varchar(100)|0s</DataType>
+      <DasType>varchar(100)|0s</DasType>
       <Position>7</Position>
     </column>
     <column id="942" parent="333" name="is_default">
       <Comment>是否默认（Y是 N否）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;N&apos;</DefaultExpression>
       <Position>8</Position>
     </column>
     <column id="943" parent="333" name="status">
       <Comment>状态（0正常 1停用）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>9</Position>
     </column>
     <column id="944" parent="333" name="create_by">
       <Comment>创建者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>10</Position>
     </column>
     <column id="945" parent="333" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>11</Position>
     </column>
     <column id="946" parent="333" name="update_by">
       <Comment>更新者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>12</Position>
     </column>
     <column id="947" parent="333" name="update_time">
       <Comment>更新时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>13</Position>
     </column>
     <column id="948" parent="333" name="remark">
       <Comment>备注</Comment>
-      <DataType>varchar(500)|0s</DataType>
+      <DasType>varchar(500)|0s</DasType>
       <Position>14</Position>
     </column>
     <key id="949" parent="333" name="PRIMARY">
-      <ColNames>dict_code</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>dict_code</UnderlyingIndexColNames>
     </key>
     <column id="950" parent="334" name="dict_id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>字典主键</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="951" parent="334" name="dict_name">
       <Comment>字典名称</Comment>
-      <DataType>varchar(100)|0s</DataType>
+      <DasType>varchar(100)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>2</Position>
     </column>
     <column id="952" parent="334" name="dict_type">
       <Comment>字典类型</Comment>
-      <DataType>varchar(100)|0s</DataType>
+      <DasType>varchar(100)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>3</Position>
     </column>
     <column id="953" parent="334" name="status">
       <Comment>状态（0正常 1停用）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>4</Position>
     </column>
     <column id="954" parent="334" name="create_by">
       <Comment>创建者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>5</Position>
     </column>
     <column id="955" parent="334" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>6</Position>
     </column>
     <column id="956" parent="334" name="update_by">
       <Comment>更新者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>7</Position>
     </column>
     <column id="957" parent="334" name="update_time">
       <Comment>更新时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>8</Position>
     </column>
     <column id="958" parent="334" name="remark">
       <Comment>备注</Comment>
-      <DataType>varchar(500)|0s</DataType>
+      <DasType>varchar(500)|0s</DasType>
       <Position>9</Position>
     </column>
     <index id="959" parent="334" name="dict_type">
@@ -4738,204 +4724,203 @@ stat_hour</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="960" parent="334" name="PRIMARY">
-      <ColNames>dict_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>dict_id</UnderlyingIndexColNames>
     </key>
     <key id="961" parent="334" name="dict_type">
-      <ColNames>dict_type</ColNames>
       <UnderlyingIndexName>dict_type</UnderlyingIndexName>
     </key>
     <column id="962" parent="335" name="job_id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>任务ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="963" parent="335" name="job_name">
       <Comment>任务名称</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="964" parent="335" name="job_group">
       <Comment>任务组名</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;DEFAULT&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="965" parent="335" name="invoke_target">
       <Comment>调用目标字符串</Comment>
-      <DataType>varchar(500)|0s</DataType>
+      <DasType>varchar(500)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="966" parent="335" name="cron_expression">
       <Comment>cron执行表达式</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>5</Position>
     </column>
     <column id="967" parent="335" name="misfire_policy">
       <Comment>计划执行错误策略（1立即执行 2执行一次 3放弃执行）</Comment>
-      <DataType>varchar(20)|0s</DataType>
+      <DasType>varchar(20)|0s</DasType>
       <DefaultExpression>&apos;3&apos;</DefaultExpression>
       <Position>6</Position>
     </column>
     <column id="968" parent="335" name="concurrent">
       <Comment>是否并发执行（0允许 1禁止）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;1&apos;</DefaultExpression>
       <Position>7</Position>
     </column>
     <column id="969" parent="335" name="status">
       <Comment>状态（0正常 1暂停）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>8</Position>
     </column>
     <column id="970" parent="335" name="create_by">
       <Comment>创建者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>9</Position>
     </column>
     <column id="971" parent="335" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>10</Position>
     </column>
     <column id="972" parent="335" name="update_by">
       <Comment>更新者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>11</Position>
     </column>
     <column id="973" parent="335" name="update_time">
       <Comment>更新时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>12</Position>
     </column>
     <column id="974" parent="335" name="remark">
       <Comment>备注信息</Comment>
-      <DataType>varchar(500)|0s</DataType>
+      <DasType>varchar(500)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>13</Position>
     </column>
     <key id="975" parent="335" name="PRIMARY">
-      <ColNames>job_id
-job_name
-job_group</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>job_id
+job_name
+job_group</UnderlyingIndexColNames>
     </key>
     <column id="976" parent="336" name="job_log_id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>任务日志ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="977" parent="336" name="job_name">
       <Comment>任务名称</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="978" parent="336" name="job_group">
       <Comment>任务组名</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="979" parent="336" name="invoke_target">
       <Comment>调用目标字符串</Comment>
-      <DataType>varchar(500)|0s</DataType>
+      <DasType>varchar(500)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="980" parent="336" name="job_message">
       <Comment>日志信息</Comment>
-      <DataType>varchar(500)|0s</DataType>
+      <DasType>varchar(500)|0s</DasType>
       <Position>5</Position>
     </column>
     <column id="981" parent="336" name="status">
       <Comment>执行状态（0正常 1失败）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>6</Position>
     </column>
     <column id="982" parent="336" name="exception_info">
       <Comment>异常信息</Comment>
-      <DataType>varchar(2000)|0s</DataType>
+      <DasType>varchar(2000)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>7</Position>
     </column>
     <column id="983" parent="336" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>8</Position>
     </column>
     <key id="984" parent="336" name="PRIMARY">
-      <ColNames>job_log_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>job_log_id</UnderlyingIndexColNames>
     </key>
     <column id="985" parent="337" name="info_id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>访问ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="986" parent="337" name="user_name">
       <Comment>用户账号</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>2</Position>
     </column>
     <column id="987" parent="337" name="ipaddr">
       <Comment>登录IP地址</Comment>
-      <DataType>varchar(128)|0s</DataType>
+      <DasType>varchar(128)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>3</Position>
     </column>
     <column id="988" parent="337" name="login_location">
       <Comment>登录地点</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>4</Position>
     </column>
     <column id="989" parent="337" name="browser">
       <Comment>浏览器类型</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>5</Position>
     </column>
     <column id="990" parent="337" name="os">
       <Comment>操作系统</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>6</Position>
     </column>
     <column id="991" parent="337" name="status">
       <Comment>登录状态（0成功 1失败）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>7</Position>
     </column>
     <column id="992" parent="337" name="msg">
       <Comment>提示消息</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>8</Position>
     </column>
     <column id="993" parent="337" name="login_time">
       <Comment>访问时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>9</Position>
     </column>
     <index id="994" parent="337" name="idx_sys_logininfor_s">
@@ -4947,292 +4932,292 @@ job_group</ColNames>
       <Type>btree</Type>
     </index>
     <key id="996" parent="337" name="PRIMARY">
-      <ColNames>info_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>info_id</UnderlyingIndexColNames>
     </key>
     <column id="997" parent="338" name="menu_id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>菜单ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="998" parent="338" name="menu_name">
       <Comment>菜单名称</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="999" parent="338" name="parent_id">
       <Comment>父菜单ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>3</Position>
     </column>
     <column id="1000" parent="338" name="order_num">
       <Comment>显示顺序</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>4</Position>
     </column>
     <column id="1001" parent="338" name="path">
       <Comment>路由地址</Comment>
-      <DataType>varchar(200)|0s</DataType>
+      <DasType>varchar(200)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>5</Position>
     </column>
     <column id="1002" parent="338" name="component">
       <Comment>组件路径</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>6</Position>
     </column>
     <column id="1003" parent="338" name="query">
       <Comment>路由参数</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>7</Position>
     </column>
     <column id="1004" parent="338" name="route_name">
       <Comment>路由名称</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>8</Position>
     </column>
     <column id="1005" parent="338" name="is_frame">
       <Comment>是否为外链（0是 1否）</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>1</DefaultExpression>
       <Position>9</Position>
     </column>
     <column id="1006" parent="338" name="is_cache">
       <Comment>是否缓存（0缓存 1不缓存）</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>10</Position>
     </column>
     <column id="1007" parent="338" name="menu_type">
       <Comment>菜单类型（M目录 C菜单 F按钮）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>11</Position>
     </column>
     <column id="1008" parent="338" name="visible">
       <Comment>菜单状态（0显示 1隐藏）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>12</Position>
     </column>
     <column id="1009" parent="338" name="status">
       <Comment>菜单状态（0正常 1停用）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>13</Position>
     </column>
     <column id="1010" parent="338" name="perms">
       <Comment>权限标识</Comment>
-      <DataType>varchar(100)|0s</DataType>
+      <DasType>varchar(100)|0s</DasType>
       <Position>14</Position>
     </column>
     <column id="1011" parent="338" name="icon">
       <Comment>菜单图标</Comment>
-      <DataType>varchar(100)|0s</DataType>
+      <DasType>varchar(100)|0s</DasType>
       <DefaultExpression>&apos;#&apos;</DefaultExpression>
       <Position>15</Position>
     </column>
     <column id="1012" parent="338" name="create_by">
       <Comment>创建者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>16</Position>
     </column>
     <column id="1013" parent="338" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>17</Position>
     </column>
     <column id="1014" parent="338" name="update_by">
       <Comment>更新者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>18</Position>
     </column>
     <column id="1015" parent="338" name="update_time">
       <Comment>更新时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>19</Position>
     </column>
     <column id="1016" parent="338" name="remark">
       <Comment>备注</Comment>
-      <DataType>varchar(500)|0s</DataType>
+      <DasType>varchar(500)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>20</Position>
     </column>
     <key id="1017" parent="338" name="PRIMARY">
-      <ColNames>menu_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>menu_id</UnderlyingIndexColNames>
     </key>
     <column id="1018" parent="339" name="notice_id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>公告ID</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="1019" parent="339" name="notice_title">
       <Comment>公告标题</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="1020" parent="339" name="notice_type">
       <Comment>公告类型（1通知 2公告）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="1021" parent="339" name="notice_content">
       <Comment>公告内容</Comment>
-      <DataType>longblob|0s</DataType>
+      <DasType>longblob|0s</DasType>
       <Position>4</Position>
     </column>
     <column id="1022" parent="339" name="status">
       <Comment>公告状态（0正常 1关闭）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>5</Position>
     </column>
     <column id="1023" parent="339" name="create_by">
       <Comment>创建者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>6</Position>
     </column>
     <column id="1024" parent="339" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>7</Position>
     </column>
     <column id="1025" parent="339" name="update_by">
       <Comment>更新者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>8</Position>
     </column>
     <column id="1026" parent="339" name="update_time">
       <Comment>更新时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>9</Position>
     </column>
     <column id="1027" parent="339" name="remark">
       <Comment>备注</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>10</Position>
     </column>
     <key id="1028" parent="339" name="PRIMARY">
-      <ColNames>notice_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>notice_id</UnderlyingIndexColNames>
     </key>
     <column id="1029" parent="340" name="oper_id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>日志主键</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="1030" parent="340" name="title">
       <Comment>模块标题</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>2</Position>
     </column>
     <column id="1031" parent="340" name="business_type">
       <Comment>业务类型（0其它 1新增 2修改 3删除）</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>3</Position>
     </column>
     <column id="1032" parent="340" name="method">
       <Comment>方法名称</Comment>
-      <DataType>varchar(200)|0s</DataType>
+      <DasType>varchar(200)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>4</Position>
     </column>
     <column id="1033" parent="340" name="request_method">
       <Comment>请求方式</Comment>
-      <DataType>varchar(10)|0s</DataType>
+      <DasType>varchar(10)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>5</Position>
     </column>
     <column id="1034" parent="340" name="operator_type">
       <Comment>操作类别（0其它 1后台用户 2手机端用户）</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>6</Position>
     </column>
     <column id="1035" parent="340" name="oper_name">
       <Comment>操作人员</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>7</Position>
     </column>
     <column id="1036" parent="340" name="dept_name">
       <Comment>部门名称</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>8</Position>
     </column>
     <column id="1037" parent="340" name="oper_url">
       <Comment>请求URL</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>9</Position>
     </column>
     <column id="1038" parent="340" name="oper_ip">
       <Comment>主机地址</Comment>
-      <DataType>varchar(128)|0s</DataType>
+      <DasType>varchar(128)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>10</Position>
     </column>
     <column id="1039" parent="340" name="oper_location">
       <Comment>操作地点</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <DasType>varchar(255)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>11</Position>
     </column>
     <column id="1040" parent="340" name="oper_param">
       <Comment>请求参数</Comment>
-      <DataType>varchar(2000)|0s</DataType>
+      <DasType>varchar(2000)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>12</Position>
     </column>
     <column id="1041" parent="340" name="json_result">
       <Comment>返回参数</Comment>
-      <DataType>varchar(2000)|0s</DataType>
+      <DasType>varchar(2000)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>13</Position>
     </column>
     <column id="1042" parent="340" name="status">
       <Comment>操作状态（0正常 1异常）</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>14</Position>
     </column>
     <column id="1043" parent="340" name="error_msg">
       <Comment>错误消息</Comment>
-      <DataType>varchar(2000)|0s</DataType>
+      <DasType>varchar(2000)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>15</Position>
     </column>
     <column id="1044" parent="340" name="oper_time">
       <Comment>操作时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>16</Position>
     </column>
     <column id="1045" parent="340" name="cost_time">
       <Comment>消耗时间</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>17</Position>
     </column>
@@ -5249,346 +5234,346 @@ job_group</ColNames>
       <Type>btree</Type>
     </index>
     <key id="1049" parent="340" name="PRIMARY">
-      <ColNames>oper_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>oper_id</UnderlyingIndexColNames>
     </key>
     <column id="1050" parent="341" name="post_id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>岗位ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="1051" parent="341" name="post_code">
       <Comment>岗位编码</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="1052" parent="341" name="post_name">
       <Comment>岗位名称</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="1053" parent="341" name="post_sort">
       <Comment>显示顺序</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="1054" parent="341" name="status">
       <Comment>状态（0正常 1停用）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <column id="1055" parent="341" name="create_by">
       <Comment>创建者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>6</Position>
     </column>
     <column id="1056" parent="341" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>7</Position>
     </column>
     <column id="1057" parent="341" name="update_by">
       <Comment>更新者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>8</Position>
     </column>
     <column id="1058" parent="341" name="update_time">
       <Comment>更新时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>9</Position>
     </column>
     <column id="1059" parent="341" name="remark">
       <Comment>备注</Comment>
-      <DataType>varchar(500)|0s</DataType>
+      <DasType>varchar(500)|0s</DasType>
       <Position>10</Position>
     </column>
     <key id="1060" parent="341" name="PRIMARY">
-      <ColNames>post_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>post_id</UnderlyingIndexColNames>
     </key>
     <column id="1061" parent="342" name="role_id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>角色ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="1062" parent="342" name="role_name">
       <Comment>角色名称</Comment>
-      <DataType>varchar(30)|0s</DataType>
+      <DasType>varchar(30)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="1063" parent="342" name="role_key">
       <Comment>角色权限字符串</Comment>
-      <DataType>varchar(100)|0s</DataType>
+      <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="1064" parent="342" name="role_sort">
       <Comment>显示顺序</Comment>
-      <DataType>int|0s</DataType>
+      <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="1065" parent="342" name="data_scope">
       <Comment>数据范围（1：全部数据权限 2：自定数据权限 3：本部门数据权限 4：本部门及以下数据权限）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;1&apos;</DefaultExpression>
       <Position>5</Position>
     </column>
     <column id="1066" parent="342" name="menu_check_strictly">
       <Comment>菜单树选择项是否关联显示</Comment>
-      <DataType>tinyint(1)|0s</DataType>
+      <DasType>tinyint(1)|0s</DasType>
       <DefaultExpression>1</DefaultExpression>
       <Position>6</Position>
     </column>
     <column id="1067" parent="342" name="dept_check_strictly">
       <Comment>部门树选择项是否关联显示</Comment>
-      <DataType>tinyint(1)|0s</DataType>
+      <DasType>tinyint(1)|0s</DasType>
       <DefaultExpression>1</DefaultExpression>
       <Position>7</Position>
     </column>
     <column id="1068" parent="342" name="status">
       <Comment>角色状态（0正常 1停用）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
     <column id="1069" parent="342" name="del_flag">
       <Comment>删除标志（0代表存在 2代表删除）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>9</Position>
     </column>
     <column id="1070" parent="342" name="create_by">
       <Comment>创建者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>10</Position>
     </column>
     <column id="1071" parent="342" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>11</Position>
     </column>
     <column id="1072" parent="342" name="update_by">
       <Comment>更新者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>12</Position>
     </column>
     <column id="1073" parent="342" name="update_time">
       <Comment>更新时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>13</Position>
     </column>
     <column id="1074" parent="342" name="remark">
       <Comment>备注</Comment>
-      <DataType>varchar(500)|0s</DataType>
+      <DasType>varchar(500)|0s</DasType>
       <Position>14</Position>
     </column>
     <key id="1075" parent="342" name="PRIMARY">
-      <ColNames>role_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>role_id</UnderlyingIndexColNames>
     </key>
     <column id="1076" parent="343" name="role_id">
       <Comment>角色ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
     <column id="1077" parent="343" name="dept_id">
       <Comment>部门ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <key id="1078" parent="343" name="PRIMARY">
-      <ColNames>role_id
-dept_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>role_id
+dept_id</UnderlyingIndexColNames>
     </key>
     <column id="1079" parent="344" name="role_id">
       <Comment>角色ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
     <column id="1080" parent="344" name="menu_id">
       <Comment>菜单ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <key id="1081" parent="344" name="PRIMARY">
-      <ColNames>role_id
-menu_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>role_id
+menu_id</UnderlyingIndexColNames>
     </key>
     <column id="1082" parent="345" name="user_id">
+      <AutoIncrement>1</AutoIncrement>
       <Comment>用户ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="1083" parent="345" name="dept_id">
       <Comment>部门ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <Position>2</Position>
     </column>
     <column id="1084" parent="345" name="user_name">
       <Comment>用户账号</Comment>
-      <DataType>varchar(30)|0s</DataType>
+      <DasType>varchar(30)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="1085" parent="345" name="nick_name">
       <Comment>用户昵称</Comment>
-      <DataType>varchar(30)|0s</DataType>
+      <DasType>varchar(30)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="1086" parent="345" name="user_type">
       <Comment>用户类型（00系统用户）</Comment>
-      <DataType>varchar(2)|0s</DataType>
+      <DasType>varchar(2)|0s</DasType>
       <DefaultExpression>&apos;00&apos;</DefaultExpression>
       <Position>5</Position>
     </column>
     <column id="1087" parent="345" name="email">
       <Comment>用户邮箱</Comment>
-      <DataType>varchar(50)|0s</DataType>
+      <DasType>varchar(50)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>6</Position>
     </column>
     <column id="1088" parent="345" name="phonenumber">
       <Comment>手机号码</Comment>
-      <DataType>varchar(11)|0s</DataType>
+      <DasType>varchar(11)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>7</Position>
     </column>
     <column id="1089" parent="345" name="sex">
       <Comment>用户性别（0男 1女 2未知）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>8</Position>
     </column>
     <column id="1090" parent="345" name="avatar">
       <Comment>头像地址</Comment>
-      <DataType>varchar(100)|0s</DataType>
+      <DasType>varchar(100)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>9</Position>
     </column>
     <column id="1091" parent="345" name="password">
       <Comment>密码</Comment>
-      <DataType>varchar(100)|0s</DataType>
+      <DasType>varchar(100)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>10</Position>
     </column>
     <column id="1092" parent="345" name="status">
       <Comment>帐号状态（0正常 1停用）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>11</Position>
     </column>
     <column id="1093" parent="345" name="del_flag">
       <Comment>删除标志（0代表存在 2代表删除）</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DasType>char(1)|0s</DasType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <Position>12</Position>
     </column>
     <column id="1094" parent="345" name="login_ip">
       <Comment>最后登录IP</Comment>
-      <DataType>varchar(128)|0s</DataType>
+      <DasType>varchar(128)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>13</Position>
     </column>
     <column id="1095" parent="345" name="login_date">
       <Comment>最后登录时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>14</Position>
     </column>
     <column id="1096" parent="345" name="create_by">
       <Comment>创建者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>15</Position>
     </column>
     <column id="1097" parent="345" name="create_time">
       <Comment>创建时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>16</Position>
     </column>
     <column id="1098" parent="345" name="update_by">
       <Comment>更新者</Comment>
-      <DataType>varchar(64)|0s</DataType>
+      <DasType>varchar(64)|0s</DasType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>17</Position>
     </column>
     <column id="1099" parent="345" name="update_time">
       <Comment>更新时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DasType>datetime|0s</DasType>
       <Position>18</Position>
     </column>
     <column id="1100" parent="345" name="remark">
       <Comment>备注</Comment>
-      <DataType>varchar(500)|0s</DataType>
+      <DasType>varchar(500)|0s</DasType>
       <Position>19</Position>
     </column>
     <key id="1101" parent="345" name="PRIMARY">
-      <ColNames>user_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>user_id</UnderlyingIndexColNames>
     </key>
     <column id="1102" parent="346" name="user_id">
       <Comment>用户ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
     <column id="1103" parent="346" name="post_id">
       <Comment>岗位ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <key id="1104" parent="346" name="PRIMARY">
-      <ColNames>user_id
-post_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>user_id
+post_id</UnderlyingIndexColNames>
     </key>
     <column id="1105" parent="347" name="user_id">
       <Comment>用户ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
     <column id="1106" parent="347" name="role_id">
       <Comment>角色ID</Comment>
-      <DataType>bigint|0s</DataType>
+      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <key id="1107" parent="347" name="PRIMARY">
-      <ColNames>user_id
-role_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>user_id
+role_id</UnderlyingIndexColNames>
     </key>
   </database-model>
 </dataSource>

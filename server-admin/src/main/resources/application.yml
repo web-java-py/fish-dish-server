@@ -193,3 +193,5 @@ mqtt:
 fisco:
   enabled: ${fisco.enabled}
 
+codepath: ${codepath.path}
+
