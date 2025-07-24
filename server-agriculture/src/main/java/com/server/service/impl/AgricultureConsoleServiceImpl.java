@@ -2,15 +2,10 @@ package com.server.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.server.domain.AgricultureBatchTask;
-import com.server.domain.AgricultureClass;
-import com.server.domain.AgricultureCropBatch;
-import com.server.domain.AgriculturePasture;
+import com.server.domain.*;
 import com.server.domain.vo.AgricultureConsoleVO;
-import com.server.domain.vo.TraceTotalVO;
 import com.server.mapper.*;
 import com.server.service.AgricultureConsoleService;
-import com.server.utils.DateIntervalUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +15,8 @@ import java.time.LocalTime;
 import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 
 @Service
 public class AgricultureConsoleServiceImpl implements AgricultureConsoleService {
@@ -37,7 +34,10 @@ public class AgricultureConsoleServiceImpl implements AgricultureConsoleService 
     private AgricultureBatchTaskMapper agricultureBatchTaskMapper;
 
     @Autowired
-    private AgricultureConsoleMapper agricultureConsoleMapper;
+    private  AgricultureConsoleMapper agricultureConsoleMapper;
+
+    @Autowired
+    private AgricultureTraceabilityLogMapper agricultureTraceabilityLogMapper;
 
     /**
      * 获取农场数据
@@ -127,17 +127,58 @@ public class AgricultureConsoleServiceImpl implements AgricultureConsoleService 
         return result;
     }
 
+    @Override
+    /**
+     * 获取溯源统计数据，包括年、月、周的明细及增长率。
+     *
+     * @return 溯源统计数据Map，包含年、月、周明细及增长率
+     */
+    public Map<String, Object> listTraceTotal() {
+        Map<String, Object> result = new HashMap<>();
+        // 获取年、月、周的溯源明细数据
+        result.put("year", agricultureConsoleMapper.getTraceTotalByYear());
+        result.put("month", agricultureConsoleMapper.getTraceTotalByMonth());
+        result.put("week", agricultureConsoleMapper.getTraceTotalByWeek());
+
+        // 统计年增长率：对比本年与去年溯源数量
+        Long thisYear = agricultureConsoleMapper.getTraceCountThisYear();  //本年
+        Long lastYear = agricultureConsoleMapper.getTraceCountLastYear();  //去年
+        //将其* 1.0转换为double类型 保证后续除法是浮点运算，避免整型除法丢失小数
+        double yearGrowth = (lastYear != null && lastYear > 0) ? ((thisYear - lastYear) * 1.0 / lastYear) * 100 : 0.0;
+        Map<String, Object> yearGrowthMap = new HashMap<>();
+        yearGrowthMap.put("thisYear", thisYear);
+        yearGrowthMap.put("lastYear", lastYear);
+        yearGrowthMap.put("yearGrowth", String.format("%.2f%%", yearGrowth));
+        result.put("yearGrowth", yearGrowthMap);
+
+        // 统计月增长率：对比本月与上月溯源数量
+        Long thisMonth = agricultureConsoleMapper.getTraceCountThisMonth();  //本月
+        Long lastMonth = agricultureConsoleMapper.getTraceCountLastMonth();  //上个月
+        double monthGrowth = (lastMonth != null && lastMonth > 0) ? ((thisMonth - lastMonth) * 1.0 / lastMonth) * 100 : 0.0;
+        Map<String, Object> monthGrowthMap = new HashMap<>();
+        monthGrowthMap.put("thisMonth", thisMonth);
+        monthGrowthMap.put("lastMonth", lastMonth);
+        monthGrowthMap.put("monthGrowth", String.format("%.2f%%", monthGrowth));
+        result.put("monthGrowth", monthGrowthMap);
+
+        // 统计周增长率：对比本周与上周溯源数量
+        Long thisWeek = agricultureConsoleMapper.getTraceCountThisWeek();  //本周
+        Long lastWeek = agricultureConsoleMapper.getTraceCountLastWeek();  //上周
+        double weekGrowth = (lastWeek != null && lastWeek > 0) ? ((thisWeek - lastWeek) * 1.0 / lastWeek) * 100 : 0.0;
+        Map<String, Object> weekGrowthMap = new HashMap<>();
+        weekGrowthMap.put("thisWeek", thisWeek);
+        weekGrowthMap.put("lastWeek", lastWeek);
+        weekGrowthMap.put("weekGrowth", String.format("%.2f%%", weekGrowth));
+        result.put("weekGrowth", weekGrowthMap);
+
+        return result;
+    }
+
     /**
      * 溯源统计
      * @return
      */
-    @Override
-    public String listTraceTotal() {
-        List<TraceTotalVO> traceTotalVOS = agricultureConsoleMapper.listTraceTotal(DateIntervalUtils.getNearlyWeekDates());
-        List<TraceTotalVO> traceTotalVOSS = agricultureConsoleMapper.listTraceTotal(DateIntervalUtils.getNearlyMonthDates());
-        List<TraceTotalVO> traceTotalVOSSS = agricultureConsoleMapper.listTraceTotal(DateIntervalUtils.getNearlyYearDates());
-        return null;
-    }
+
 
     private LocalDateTime yesterday() {
         return LocalDateTime.now().minusDays(1)
@@ -176,4 +217,5 @@ public class AgricultureConsoleServiceImpl implements AgricultureConsoleService 
                 .classType(classType)
                 .build();
     }
+
 }

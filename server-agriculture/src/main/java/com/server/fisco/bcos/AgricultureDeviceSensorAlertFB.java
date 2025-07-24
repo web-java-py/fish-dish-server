@@ -86,17 +86,17 @@ public class AgricultureDeviceSensorAlertFB extends Contract {
         final Function function = new Function(
                 FUNC_SENSORALERTCREATE,
                 Arrays.<Type>asList(new Uint128(_id),
-                        new Utf8String(_alertType),
-                        new Utf8String(_alertMessage),
-                        new Utf8String(_paramName),
-                        new Utf8String(_paramValue),
-                        new Uint128(_thresholdMax),
-                        new Uint128(_thresholdMin),
-                        new Utf8String(_pastureId),
-                        new Utf8String(_batchId),
-                        new Uint128(_deviceId),
-                        new Utf8String(_alertTime),
-                        new Uint32(_alertLevel)),
+                new Utf8String(_alertType),
+                new Utf8String(_alertMessage),
+                new Utf8String(_paramName),
+                new Utf8String(_paramValue),
+                new Uint128(_thresholdMax),
+                new Uint128(_thresholdMin),
+                new Utf8String(_pastureId),
+                new Utf8String(_batchId),
+                new Uint128(_deviceId),
+                new Utf8String(_alertTime),
+                new Uint32(_alertLevel)),
                 Collections.<TypeReference<?>>emptyList());
         return executeTransaction(function);
     }
@@ -105,17 +105,17 @@ public class AgricultureDeviceSensorAlertFB extends Contract {
         final Function function = new Function(
                 FUNC_SENSORALERTCREATE,
                 Arrays.<Type>asList(new Uint128(_id),
-                        new Utf8String(_alertType),
-                        new Utf8String(_alertMessage),
-                        new Utf8String(_paramName),
-                        new Utf8String(_paramValue),
-                        new Uint128(_thresholdMax),
-                        new Uint128(_thresholdMin),
-                        new Utf8String(_pastureId),
-                        new Utf8String(_batchId),
-                        new Uint128(_deviceId),
-                        new Utf8String(_alertTime),
-                        new Uint32(_alertLevel)),
+                new Utf8String(_alertType),
+                new Utf8String(_alertMessage),
+                new Utf8String(_paramName),
+                new Utf8String(_paramValue),
+                new Uint128(_thresholdMax),
+                new Uint128(_thresholdMin),
+                new Utf8String(_pastureId),
+                new Utf8String(_batchId),
+                new Uint128(_deviceId),
+                new Utf8String(_alertTime),
+                new Uint32(_alertLevel)),
                 Collections.<TypeReference<?>>emptyList());
         return asyncExecuteTransaction(function, callback);
     }
@@ -124,17 +124,17 @@ public class AgricultureDeviceSensorAlertFB extends Contract {
         final Function function = new Function(
                 FUNC_SENSORALERTCREATE,
                 Arrays.<Type>asList(new Uint128(_id),
-                        new Utf8String(_alertType),
-                        new Utf8String(_alertMessage),
-                        new Utf8String(_paramName),
-                        new Utf8String(_paramValue),
-                        new Uint128(_thresholdMax),
-                        new Uint128(_thresholdMin),
-                        new Utf8String(_pastureId),
-                        new Utf8String(_batchId),
-                        new Uint128(_deviceId),
-                        new Utf8String(_alertTime),
-                        new Uint32(_alertLevel)),
+                new Utf8String(_alertType),
+                new Utf8String(_alertMessage),
+                new Utf8String(_paramName),
+                new Utf8String(_paramValue),
+                new Uint128(_thresholdMax),
+                new Uint128(_thresholdMin),
+                new Utf8String(_pastureId),
+                new Utf8String(_batchId),
+                new Uint128(_deviceId),
+                new Utf8String(_alertTime),
+                new Uint32(_alertLevel)),
                 Collections.<TypeReference<?>>emptyList());
         return createSignedTransaction(function);
     }
@@ -159,7 +159,7 @@ public class AgricultureDeviceSensorAlertFB extends Contract {
                 (BigInteger) results.get(9).getValue(),
                 (String) results.get(10).getValue(),
                 (BigInteger) results.get(11).getValue()
-        );
+                );
     }
 
     public Tuple12<BigInteger, String, String, String, String, BigInteger, BigInteger, String, String, BigInteger, String, BigInteger> currentAlert() throws ContractException {

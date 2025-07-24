@@ -7,7 +7,11 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/agriculture/console")
@@ -40,12 +44,11 @@ public class AgricultureConsoleController {
     }
 
     /**
-     * 溯源统计
-     * @return
+     * 获取溯源数据
      */
     @GetMapping("/traceTotal")
-    @ApiOperation("溯源统计")
-    public AjaxResult getTraceTotal(){
+    @ApiOperation("获取溯源数据")
+    public AjaxResult getTraceTotal() {
         return AjaxResult.success(agricultureConsoleService.listTraceTotal());
     }
 }

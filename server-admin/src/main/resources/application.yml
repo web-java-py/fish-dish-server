@@ -175,6 +175,7 @@ ai:
     model-name: ${ollama.model-name}
     temperature: ${ollama.temperature}
     timeout: ${ollama.timeout}
+    think: ${ollama.think}
   # 本地AI
   local:
     vl-url: ${local.vl-url}
