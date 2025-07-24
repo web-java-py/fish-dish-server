@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="更新溯源地址配置">
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgriculturePartitionFoodServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgriculturePartitionFoodServiceImpl.java" afterDir="false" />
+    <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="更新ai模板">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/resources/templates/ai/chat-role.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/resources/templates/ai/chat-role.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -462,7 +463,14 @@
       <option name="project" value="LOCAL" />
       <updated>1753327503726</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="更新溯源地址配置">
+      <created>1753327767463</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1753327767463</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -492,7 +500,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修复一堆bug" />
     <MESSAGE value="自动策略实现" />
     <MESSAGE value="水质图表数据接口实现" />
     <MESSAGE value="物联网设备bug修复" />
@@ -517,7 +524,8 @@
     <MESSAGE value="溯源日志新增区分字段" />
     <MESSAGE value="拿取app接口" />
     <MESSAGE value="更新溯源地址配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新溯源地址配置" />
+    <MESSAGE value="更新ai模板" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新ai模板" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
