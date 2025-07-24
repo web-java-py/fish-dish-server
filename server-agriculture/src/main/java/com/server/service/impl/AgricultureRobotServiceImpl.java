@@ -2,14 +2,18 @@ package com.server.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.server.domain.AgricultureRobot;
 import com.server.mapper.AgricultureRobotMapper;
 import com.server.service.AgricultureRobotService;
 import com.server.utils.StringUtils;
+import com.server.utils.SecurityUtils;
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -34,6 +38,7 @@ public class AgricultureRobotServiceImpl extends ServiceImpl<AgricultureRobotMap
     public List<AgricultureRobot> getRobotList(AgricultureRobot agricultureRobot) {
         LambdaQueryWrapper<AgricultureRobot> lambdaQueryWrapper = new QueryWrapper<AgricultureRobot>().lambda();
         lambdaQueryWrapper.like(StringUtils.isNotNull(agricultureRobot.getUserId()),AgricultureRobot::getUserId,agricultureRobot.getUserId());
+        lambdaQueryWrapper.orderByDesc(AgricultureRobot::getCreateTime); // 按create_time倒序
         return agricultureRobotMapper.selectList(lambdaQueryWrapper);
     }
 
@@ -44,6 +49,12 @@ public class AgricultureRobotServiceImpl extends ServiceImpl<AgricultureRobotMap
      */
     @Override
     public int addRobot(AgricultureRobot agricultureRobot) {
+        // 设置当前登录用户的userId
+        agricultureRobot.setUserId(SecurityUtils.getUserId());
+        // 如果timestamp为空，设置为当前系统时间的毫秒数
+        if (agricultureRobot.getTimestamp() == null) {
+            agricultureRobot.setTimestamp(System.currentTimeMillis());
+        }
         return agricultureRobotMapper.insert(agricultureRobot);
     }
 }

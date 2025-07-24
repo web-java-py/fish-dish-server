@@ -1,0 +1,369 @@
+11:02:52.632 [main] ERROR o.s.b.SpringApplication - [reportFailure,870] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'appAgricultureController' defined in file [D:\YCGSHou\fish-dish-server\server-admin\target\classes\com\server\controller\app\AppAgricultureController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.server.controller.app.AppAgricultureController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.server.service.AppAgricultureService cannot be resolved
+	AppAgricultureService cannot be resolved to a type
+	AppAgricultureService cannot be resolved to a type
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:209)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:591)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:453)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1359)
+	at com.server.ServerApplication.main(ServerApplication.java:17)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.server.controller.app.AppAgricultureController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.server.service.AppAgricultureService cannot be resolved
+	AppAgricultureService cannot be resolved to a type
+	AppAgricultureService cannot be resolved to a type
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:226)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326)
+	... 17 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The import com.server.service.AppAgricultureService cannot be resolved
+	AppAgricultureService cannot be resolved to a type
+	AppAgricultureService cannot be resolved to a type
+
+	at com.server.controller.app.AppAgricultureController.<init>(AppAgricultureController.java:6)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:213)
+	... 19 common frames omitted
+11:05:08.687 [main] ERROR o.s.b.SpringApplication - [reportFailure,870] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'appAgricultureController' defined in file [D:\YCGSHou\fish-dish-server\server-admin\target\classes\com\server\controller\app\AppAgricultureController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.server.controller.app.AppAgricultureController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.server.service.AppAgricultureService cannot be resolved
+	AppAgricultureService cannot be resolved to a type
+	AppAgricultureService cannot be resolved to a type
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:209)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:591)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:453)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1359)
+	at com.server.ServerApplication.main(ServerApplication.java:17)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.server.controller.app.AppAgricultureController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.server.service.AppAgricultureService cannot be resolved
+	AppAgricultureService cannot be resolved to a type
+	AppAgricultureService cannot be resolved to a type
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:226)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326)
+	... 17 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The import com.server.service.AppAgricultureService cannot be resolved
+	AppAgricultureService cannot be resolved to a type
+	AppAgricultureService cannot be resolved to a type
+
+	at com.server.controller.app.AppAgricultureController.<init>(AppAgricultureController.java:6)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:213)
+	... 19 common frames omitted
+11:07:07.993 [main] ERROR o.s.b.SpringApplication - [reportFailure,870] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'appAgricultureController' defined in file [D:\YCGSHou\fish-dish-server\server-admin\target\classes\com\server\controller\app\AppAgricultureController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.server.controller.app.AppAgricultureController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.server.service.AppAgricultureService cannot be resolved
+	AppAgricultureService cannot be resolved to a type
+	AppAgricultureService cannot be resolved to a type
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:209)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:591)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:453)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1359)
+	at com.server.ServerApplication.main(ServerApplication.java:17)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.server.controller.app.AppAgricultureController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.server.service.AppAgricultureService cannot be resolved
+	AppAgricultureService cannot be resolved to a type
+	AppAgricultureService cannot be resolved to a type
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:226)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326)
+	... 17 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The import com.server.service.AppAgricultureService cannot be resolved
+	AppAgricultureService cannot be resolved to a type
+	AppAgricultureService cannot be resolved to a type
+
+	at com.server.controller.app.AppAgricultureController.<init>(AppAgricultureController.java:6)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:213)
+	... 19 common frames omitted
+11:14:16.605 [main] ERROR o.s.b.SpringApplication - [reportFailure,870] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'appAgricultureController' defined in file [D:\YCGSHou\fish-dish-server\server-admin\target\classes\com\server\controller\app\AppAgricultureController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.server.controller.app.AppAgricultureController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.server.service.AppAgricultureService cannot be resolved
+	AppAgricultureService cannot be resolved to a type
+	AppAgricultureService cannot be resolved to a type
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:209)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:591)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:453)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1359)
+	at com.server.ServerApplication.main(ServerApplication.java:17)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.server.controller.app.AppAgricultureController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.server.service.AppAgricultureService cannot be resolved
+	AppAgricultureService cannot be resolved to a type
+	AppAgricultureService cannot be resolved to a type
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:226)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326)
+	... 17 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The import com.server.service.AppAgricultureService cannot be resolved
+	AppAgricultureService cannot be resolved to a type
+	AppAgricultureService cannot be resolved to a type
+
+	at com.server.controller.app.AppAgricultureController.<init>(AppAgricultureController.java:6)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:213)
+	... 19 common frames omitted
+11:15:08.386 [main] ERROR o.s.b.SpringApplication - [reportFailure,870] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'appAgricultureController' defined in file [D:\YCGSHou\fish-dish-server\server-admin\target\classes\com\server\controller\app\AppAgricultureController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.server.controller.app.AppAgricultureController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.server.service.AppAgricultureService cannot be resolved
+	AppAgricultureService cannot be resolved to a type
+	AppAgricultureService cannot be resolved to a type
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:209)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:591)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:453)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1359)
+	at com.server.ServerApplication.main(ServerApplication.java:17)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.server.controller.app.AppAgricultureController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.server.service.AppAgricultureService cannot be resolved
+	AppAgricultureService cannot be resolved to a type
+	AppAgricultureService cannot be resolved to a type
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:226)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326)
+	... 17 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The import com.server.service.AppAgricultureService cannot be resolved
+	AppAgricultureService cannot be resolved to a type
+	AppAgricultureService cannot be resolved to a type
+
+	at com.server.controller.app.AppAgricultureController.<init>(AppAgricultureController.java:6)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:213)
+	... 19 common frames omitted
+11:25:16.373 [main] ERROR o.s.b.SpringApplication - [reportFailure,870] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'appAgricultureController' defined in file [D:\YCGSHou\fish-dish-server\server-admin\target\classes\com\server\controller\app\AppAgricultureController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.server.controller.app.AppAgricultureController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.server.service.AppAgricultureService cannot be resolved
+	AppAgricultureService cannot be resolved to a type
+	AppAgricultureService cannot be resolved to a type
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:209)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:591)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:453)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1359)
+	at com.server.ServerApplication.main(ServerApplication.java:17)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.server.controller.app.AppAgricultureController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.server.service.AppAgricultureService cannot be resolved
+	AppAgricultureService cannot be resolved to a type
+	AppAgricultureService cannot be resolved to a type
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:226)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326)
+	... 17 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The import com.server.service.AppAgricultureService cannot be resolved
+	AppAgricultureService cannot be resolved to a type
+	AppAgricultureService cannot be resolved to a type
+
+	at com.server.controller.app.AppAgricultureController.<init>(AppAgricultureController.java:6)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:213)
+	... 19 common frames omitted
+11:28:01.588 [main] ERROR o.s.b.SpringApplication - [reportFailure,870] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'appAgricultureController' defined in file [D:\YCGSHou\fish-dish-server\server-admin\target\classes\com\server\controller\app\AppAgricultureController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.server.controller.app.AppAgricultureController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.server.service.AppAgricultureService cannot be resolved
+	AppAgricultureService cannot be resolved to a type
+	AppAgricultureService cannot be resolved to a type
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:209)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:591)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:453)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1359)
+	at com.server.ServerApplication.main(ServerApplication.java:17)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.server.controller.app.AppAgricultureController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.server.service.AppAgricultureService cannot be resolved
+	AppAgricultureService cannot be resolved to a type
+	AppAgricultureService cannot be resolved to a type
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:226)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326)
+	... 17 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The import com.server.service.AppAgricultureService cannot be resolved
+	AppAgricultureService cannot be resolved to a type
+	AppAgricultureService cannot be resolved to a type
+
+	at com.server.controller.app.AppAgricultureController.<init>(AppAgricultureController.java:6)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:213)
+	... 19 common frames omitted
+11:29:39.146 [main] ERROR o.s.b.SpringApplication - [reportFailure,870] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'appAgricultureController' defined in file [D:\YCGSHou\fish-dish-server\server-admin\target\classes\com\server\controller\app\AppAgricultureController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.server.controller.app.AppAgricultureController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.server.service.AppAgricultureService cannot be resolved
+	AppAgricultureService cannot be resolved to a type
+	AppAgricultureService cannot be resolved to a type
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:209)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:591)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:453)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1359)
+	at com.server.ServerApplication.main(ServerApplication.java:17)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.server.controller.app.AppAgricultureController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.server.service.AppAgricultureService cannot be resolved
+	AppAgricultureService cannot be resolved to a type
+	AppAgricultureService cannot be resolved to a type
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:226)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326)
+	... 17 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The import com.server.service.AppAgricultureService cannot be resolved
+	AppAgricultureService cannot be resolved to a type
+	AppAgricultureService cannot be resolved to a type
+
+	at com.server.controller.app.AppAgricultureController.<init>(AppAgricultureController.java:6)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:213)
+	... 19 common frames omitted
+17:14:37.890 [http-nio-8080-exec-16] ERROR c.s.w.e.GlobalExceptionHandler - [handleHttpRequestMethodNotSupported,52] - 请求地址'/agriculture/robot',不支持'GET'请求
