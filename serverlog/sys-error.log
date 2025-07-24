@@ -366,3 +366,22 @@ Caused by: java.lang.Error: Unresolved compilation problems:
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
 	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:213)
 	... 19 common frames omitted
+11:05:44.753 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - [report,40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'ai.ollama.think' to java.lang.Boolean:
+
+    Property: ai.ollama.think
+    Value: ${ollama.think}
+    Origin: class path resource [application.yml] - 178:12
+    Reason: failed to convert java.lang.String to java.lang.Boolean (caused by java.lang.IllegalArgumentException: Invalid boolean value [${ollama.think}])
+
+Action:
+
+Update your application's configuration
+
