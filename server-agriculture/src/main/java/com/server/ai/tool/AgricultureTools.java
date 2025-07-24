@@ -16,7 +16,6 @@ public class AgricultureTools {
 
     @Tool("关闭电动推杆")
     public String stopPushRod() {
-        System.out.println("88888888888888888888");
         return deviceControlClient.controlDevice(DeviceEnum.PUSH_ROD.buildRequest("off"));
     }
 

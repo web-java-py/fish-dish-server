@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="智能体开发完毕">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/tool/AgricultureTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/tool/AgricultureTools.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -476,7 +478,14 @@
       <option name="project" value="LOCAL" />
       <updated>1753346375636</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="智能体开发完毕">
+      <created>1753346617008</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1753346617008</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
