@@ -2,6 +2,7 @@ package com.server.ai;
 
 import com.alibaba.fastjson2.JSON;
 import com.server.ai.tool.AgricultureTools;
+import com.server.constant.AiConstants;
 import com.server.domain.dto.IdentifyDTO;
 import com.server.domain.vo.ChatStreamVO;
 import com.server.exception.ServiceException;
@@ -12,7 +13,7 @@ import com.server.utils.StringUtils;
 import dev.langchain4j.agent.tool.ToolSpecification;
 import dev.langchain4j.agent.tool.ToolSpecifications;
 import dev.langchain4j.data.document.parser.TextDocumentParser;
-import dev.langchain4j.data.message.ToolExecutionResultMessage;
+import dev.langchain4j.data.message.*;
 import dev.langchain4j.model.chat.StreamingChatLanguageModel;
 import dev.langchain4j.model.chat.request.ChatRequest;
 import dev.langchain4j.model.chat.request.ResponseFormat;
@@ -32,6 +33,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -137,16 +139,22 @@ public class AiService {
 
     public Flux<String> chatAgentsStream(String prompt) {
         List<ToolSpecification> toolSpecifications = ToolSpecifications.toolSpecificationsFrom(agricultureTools);
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("templates/ai/chat-role.txt");
-        String system = new TextDocumentParser().parse(inputStream).text();
+        InputStream inputStream = getClass().getClassLoader().getResourceAsStream(AiConstants.BOT);
+        SystemMessage systemMessage = systemMessage(new TextDocumentParser().parse(inputStream).text());
+        UserMessage userMessage = userMessage(prompt + this.think);
         ChatResponse chat = ollamaChatModel.chat(ChatRequest.builder()
-                .messages(systemMessage(system), userMessage(prompt + this.think))
+                .messages(systemMessage, userMessage)
                 .toolSpecifications(toolSpecifications)
                 .build());
-        List<ToolExecutionResultMessage> toolExecutionResultMessages = AiUtils.operateToolExecution(agricultureTools, chat.aiMessage().toolExecutionRequests());
+        AiMessage aiMessage = chat.aiMessage();
+        List<ChatMessage> chatMessages = new ArrayList<>();
+        chatMessages.add(systemMessage);
+        chatMessages.add(userMessage);
+        chatMessages.add(aiMessage);
+        List<ChatMessage> chatMessageList = AiUtils.operateToolExecution(agricultureTools, aiMessage.toolExecutionRequests(), chatMessages);
         return Flux.create(sink -> {
             streamingChatLanguageModel.chat(ChatRequest.builder()
-                    .messages(systemMessage(system), userMessage(prompt + this.think), chat.aiMessage(), toolExecutionResultMessages.get(0))
+                    .messages(chatMessageList)
                     .toolSpecifications(toolSpecifications)
                     .build(), new StreamingChatResponseHandler() {
                 @Override

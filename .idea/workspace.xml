@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="智能体开发中">
-      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/domain/vo/ChatStreamVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/constant/AiConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2025_7_23_16_14__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_23_16_15__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureAiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureAiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/resources/templates/test/index.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/tool/AgricultureTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/tool/AgricultureTools.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/properties/AiOllamaProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/properties/AiOllamaProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +74,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
@@ -154,6 +157,7 @@
       <workItem from="1752632079589" duration="5869000" />
       <workItem from="1752669852407" duration="4011000" />
       <workItem from="1752750625125" duration="4409000" />
+      <workItem from="1753321614399" duration="3438000" />
     </task>
     <task id="LOCAL-00002" summary="bug修复">
       <option name="closed" value="true" />

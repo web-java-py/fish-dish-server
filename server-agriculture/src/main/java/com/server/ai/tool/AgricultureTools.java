@@ -11,6 +11,6 @@ public class AgricultureTools {
     }
     @Tool("关闭推杆")
     void stopPushRod() {
-        System.out.println("666666666666666666666666");
+        System.out.println("8888888888888888888888888");
     }
 }
