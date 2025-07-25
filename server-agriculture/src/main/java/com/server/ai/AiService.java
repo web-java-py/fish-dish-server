@@ -7,7 +7,6 @@ import com.server.domain.dto.IdentifyDTO;
 import com.server.domain.vo.ChatStreamVO;
 import com.server.exception.ServiceException;
 import com.server.properties.AiLocalProperties;
-import com.server.properties.AiOllamaProperties;
 import com.server.utils.HttpUtils;
 import com.server.utils.StringUtils;
 import dev.langchain4j.agent.tool.ToolExecutionRequest;
@@ -21,7 +20,6 @@ import dev.langchain4j.model.chat.request.ResponseFormat;
 import dev.langchain4j.model.chat.response.ChatResponse;
 import dev.langchain4j.model.chat.response.StreamingChatResponseHandler;
 import dev.langchain4j.model.ollama.OllamaChatModel;
-import dev.langchain4j.model.ollama.OllamaStreamingChatModel;
 import lombok.extern.java.Log;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -35,7 +33,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -52,25 +49,12 @@ public class AiService {
     private AiLocalProperties aiLocalProperties;
     @Autowired
     private AgricultureTools agricultureTools;
-
+    @Autowired
     public OllamaChatModel ollamaChatModel;
+    @Autowired
     private StreamingChatLanguageModel streamingChatLanguageModel;
-    private String think;
-
-    public AiService(AiOllamaProperties aiOllamaProperties) {
-        ollamaChatModel = OllamaChatModel.builder()
-                .baseUrl(aiOllamaProperties.getBaseUrl())
-                .modelName(aiOllamaProperties.getModelName())
-                .temperature(aiOllamaProperties.getTemperature())
-                .timeout(Duration.ofSeconds(aiOllamaProperties.getTimeout()))
-                .build();
-        streamingChatLanguageModel = OllamaStreamingChatModel.builder()
-                .baseUrl(aiOllamaProperties.getBaseUrl())
-                .modelName(aiOllamaProperties.getModelName())
-                .temperature(aiOllamaProperties.getTemperature())
-                .build();
-        this.think = aiOllamaProperties.getThink() ? "/set think" : "/set nothink";
-    }
+    @Autowired
+    private Boolean AiThink;
 
     public String chat(String prompt) {
         return ollamaChatModel.chat(prompt);
@@ -144,9 +128,9 @@ public class AiService {
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream(AiConstants.BOT);
         List<ChatMessage> chatMessages = new ArrayList<>();
         chatMessages.add(systemMessage(new TextDocumentParser().parse(inputStream).text()));
-        chatMessages.add(userMessage(prompt + this.think));
+        chatMessages.add(userMessage(prompt + (this.AiThink ? "/set think" : "/set nothink")));
         return Flux.create(sink -> {
-            streamingChatLanguageModel.chat(getChatRequest(chatMessages), new StreamingChatResponseHandler() {
+            streamingChatLanguageModel.chat(getChatRequestTool(chatMessages), new StreamingChatResponseHandler() {
 
                 @Override
                 public void onPartialResponse(String partialResponse) {
@@ -159,7 +143,7 @@ public class AiService {
                     if (ObjectUtils.isNotEmpty(toolExecutionRequests)) {
                         chatMessages.add(completeResponse.aiMessage());
                         List<ChatMessage> chatMessageList = AiUtils.operateToolExecution(agricultureTools, toolExecutionRequests, chatMessages);
-                        streamingChatLanguageModel.chat(getChatRequest(chatMessageList), new StreamingChatResponseHandler() {
+                        streamingChatLanguageModel.chat(getChatRequestTool(chatMessageList), new StreamingChatResponseHandler() {
 
                             @Override
                             public void onPartialResponse(String partialResponse) {
@@ -190,14 +174,14 @@ public class AiService {
     }
 
     private void sinkNext(FluxSink<String> sink, String partialResponse) {
-        String response = !think.endsWith("nothink") ? partialResponse : partialResponse.replace("<think>", "").replace("</think>", "");
+        String response = AiThink ? partialResponse : partialResponse.replace("<think>", "").replace("</think>", "");
         if (StringUtils.isEmpty(response)) return;
         sink.next(JSON.toJSONString(ChatStreamVO.builder()
                 .response(response)
                 .build()));
     }
 
-    private ChatRequest getChatRequest(List<ChatMessage> messages) {
+    private ChatRequest getChatRequestTool(List<ChatMessage> messages) {
         List<ToolSpecification> toolSpecifications = ToolSpecifications.toolSpecificationsFrom(agricultureTools);
         return ChatRequest.builder()
                 .messages(messages)
