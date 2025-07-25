@@ -29,13 +29,12 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 
 /**
  * 气象数据Service业务层处理
- * 
+ *
  * @author server
  * @date 2025-06-08
  */
 @Service
-public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWeatherDataMapper, AgricultureWeatherData> implements AgricultureWeatherDataService
-{
+public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWeatherDataMapper, AgricultureWeatherData> implements AgricultureWeatherDataService {
     @Autowired
     private AgricultureWeatherDataMapper agricultureWeatherDataMapper;
 
@@ -47,73 +46,67 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
 
     /**
      * 查询气象数据
-     * 
+     *
      * @param id 气象数据主键
      * @return 气象数据
      */
     @Override
-    public AgricultureWeatherData selectAgricultureWeatherDataById(Long id)
-    {
+    public AgricultureWeatherData selectAgricultureWeatherDataById(Long id) {
         return getById(id);
     }
 
     /**
      * 查询气象数据列表
-     * 
+     *
      * @param agricultureWeatherData 气象数据
      * @return 气象数据
      */
     @Override
-    public List<AgricultureWeatherData> selectAgricultureWeatherDataList(AgricultureWeatherData agricultureWeatherData)
-    {
+    public List<AgricultureWeatherData> selectAgricultureWeatherDataList(AgricultureWeatherData agricultureWeatherData) {
         return list();
     }
 
     /**
      * 新增气象数据
-     * 
+     *
      * @param agricultureWeatherData 气象数据
      * @return 结果
      */
     @Override
-    public int insertAgricultureWeatherData(AgricultureWeatherData agricultureWeatherData)
-    {
+    public int insertAgricultureWeatherData(AgricultureWeatherData agricultureWeatherData) {
         return agricultureWeatherDataMapper.insert(agricultureWeatherData);
     }
 
     /**
      * 修改气象数据
-     * 
+     *
      * @param agricultureWeatherData 气象数据
      * @return 结果
      */
     @Override
-    public int updateAgricultureWeatherData(AgricultureWeatherData agricultureWeatherData)
-    {
-        return  updateById(agricultureWeatherData) ? 1 : 0;
+    public int updateAgricultureWeatherData(AgricultureWeatherData agricultureWeatherData) {
+        return updateById(agricultureWeatherData) ? 1 : 0;
     }
 
     /**
      * 批量删除气象数据
-     * 
+     *
      * @param ids 需要删除的气象数据主键
      * @return 结果
      */
     @Override
-    public int deleteAgricultureWeatherDataByIds(Long[] ids)
-    {
+    public int deleteAgricultureWeatherDataByIds(Long[] ids) {
         return removeByIds(Arrays.asList(ids)) ? ids.length : 0;
     }
 
     /**
      * 删除气象数据信息
-     * 
+     *
      * @param id 气象数据主键
      * @return 结果
      */
     @Override
-    public int deleteAgricultureWeatherDataById(Long id)
-    {
+    public int deleteAgricultureWeatherDataById(Long id) {
         return removeById(id) ? 1 : 0;
     }
 
@@ -133,10 +126,10 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
     private Map<String, Object> getHourlyTrendData(String pastureId, String batchId) {
         LocalDateTime now = LocalDateTime.now();
         LocalDateTime start = now.minusHours(23).withMinute(0).withSecond(0).withNano(0);
-        
+
         // 查询统计表数据（历史数据）
         List<AgricultureWeatherHourlyStats> stats = hourlyStatsService.getHourlyStats(pastureId, batchId, start, now);
-        
+
         // 查询当前小时的原始数据
         LocalDateTime currentHour = now.withMinute(0).withSecond(0).withNano(0);
         List<AgricultureWeatherData> currentHourData = this.lambdaQuery()
@@ -145,13 +138,13 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
                 .ge(AgricultureWeatherData::getCollectTime, currentHour)
                 .lt(AgricultureWeatherData::getCollectTime, currentHour.plusHours(1))
                 .list();
-        
+
         // 如果有当前小时的数据，计算平均值并添加到统计列表中
         if (!currentHourData.isEmpty()) {
             AgricultureWeatherHourlyStats currentHourStats = calculateHourlyStatsFromRawData(currentHourData, currentHour);
             stats.add(currentHourStats);
         }
-        
+
         return buildTrendDataFromHourlyStats(stats);
     }
 
@@ -162,7 +155,7 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
         LocalDateTime now = LocalDateTime.now();
         LocalDateTime start;
         int days;
-        
+
         if ("week".equals(range)) {
             start = now.minusDays(6).withHour(0).withMinute(0).withSecond(0).withNano(0);
             days = 7;
@@ -170,10 +163,10 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
             start = now.minusDays(29).withHour(0).withMinute(0).withSecond(0).withNano(0);
             days = 30;
         }
-        
+
         // 查询统计表数据（历史数据）
         List<AgricultureWeatherDailyStats> stats = dailyStatsService.getDailyStats(pastureId, batchId, start, now);
-        
+
         // 查询今天的原始数据
         LocalDate today = now.toLocalDate();
         List<AgricultureWeatherData> todayData = this.lambdaQuery()
@@ -182,13 +175,13 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
                 .ge(AgricultureWeatherData::getCollectTime, today.atStartOfDay())
                 .le(AgricultureWeatherData::getCollectTime, today.atTime(23, 59, 59, 999999999))
                 .list();
-        
+
         // 如果有今天的数据，计算平均值并添加到统计列表中
         if (!todayData.isEmpty()) {
             AgricultureWeatherDailyStats todayStats = calculateDailyStatsFromRawData(todayData, today);
             stats.add(todayStats);
         }
-        
+
         return buildTrendDataFromDailyStats(stats, range, start, days);
     }
 
@@ -203,7 +196,7 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
         List<Double> lightIntensity = new ArrayList<>();
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:00");
-        
+
         for (AgricultureWeatherHourlyStats stat : stats) {
             xAxis.add(stat.getStatHour().format(formatter));
             temperature.add(stat.getAvgTemperature() != null ? stat.getAvgTemperature().doubleValue() : 0.0);
@@ -378,10 +371,40 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
     }
 
     /**
+     * 合并同一采集时间的多设备数据为一条完整数据 带风向
+     */
+    private List<AgricultureWeatherData> mergeSameTimeDatatAndWindDirection(List<AgricultureWeatherData> dataList) {
+        // 按采集时间分组
+        Map<LocalDateTime, List<AgricultureWeatherData>> grouped = dataList.stream()
+                .collect(Collectors.groupingBy(AgricultureWeatherData::getCollectTime, LinkedHashMap::new, Collectors.toList()));
+
+        List<AgricultureWeatherData> mergedList = new ArrayList<>();
+        for (Map.Entry<LocalDateTime, List<AgricultureWeatherData>> entry : grouped.entrySet()) {
+            List<AgricultureWeatherData> group = entry.getValue();
+            AgricultureWeatherData merged = new AgricultureWeatherData();
+            merged.setCollectTime(entry.getKey());
+            merged.setPastureId(group.get(0).getPastureId());
+            merged.setBatchId(group.get(0).getBatchId());
+            // 合并各参数
+            for (AgricultureWeatherData d : group) {
+                if (merged.getTemperature() == null && d.getTemperature() != null && d.getTemperature() != 0) merged.setTemperature(d.getTemperature());
+                if (merged.getHumidity() == null && d.getHumidity() != null && d.getHumidity() != 0) merged.setHumidity(d.getHumidity());
+                if (merged.getWindSpeed() == null && d.getWindSpeed() != null) merged.setWindSpeed(d.getWindSpeed()); // 允许为0
+                if (merged.getLightIntensity() == null && d.getLightIntensity() != null && d.getLightIntensity() != 0) merged.setLightIntensity(d.getLightIntensity());
+                if (merged.getRainfall() == null && d.getRainfall() != null && d.getRainfall() != 0) merged.setRainfall(d.getRainfall());
+                if (merged.getWindDirection() == null && d.getWindDirection() != null && !d.getWindDirection().isEmpty()) merged.setWindDirection(d.getWindDirection());
+            }
+            mergedList.add(merged);
+        }
+        return mergedList;
+    }
+
+    /**
      * 计算平均值（忽略无效数据）
-     * @param dataList 数据列表
+     *
+     * @param dataList    数据列表
      * @param valueGetter 获取字段值的方法引用
-     * @param fieldName 字段名（用于特殊处理风速等）
+     * @param fieldName   字段名（用于特殊处理风速等）
      * @return 平均值，若无有效数据则返回 null
      */
     private Double calculateAverage(List<AgricultureWeatherData> dataList, Function<AgricultureWeatherData, Double> valueGetter, String fieldName) {
@@ -453,10 +476,10 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
         if (dataList.isEmpty()) {
             return null;
         }
-        
+
         // 合并同采集时间的数据
         List<AgricultureWeatherData> mergedData = mergeSameTimeData(dataList);
-        
+
         // 计算平均值
         BigDecimal avgTemperature = calculateAverage(mergedData, AgricultureWeatherData::getTemperature);
         BigDecimal avgHumidity = calculateAverage(mergedData, AgricultureWeatherData::getHumidity);
@@ -464,7 +487,7 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
         BigDecimal avgLightIntensity = calculateAverage(mergedData, AgricultureWeatherData::getLightIntensity);
         BigDecimal avgRainfall = calculateAverage(mergedData, AgricultureWeatherData::getRainfall);
         BigDecimal avgAirPressure = calculateAverage(mergedData, AgricultureWeatherData::getAirPressure);
-        
+
         return AgricultureWeatherHourlyStats.builder()
                 .pastureId(dataList.get(0).getPastureId())
                 .batchId(dataList.get(0).getBatchId())
@@ -487,10 +510,10 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
         if (dataList.isEmpty()) {
             return null;
         }
-        
+
         // 合并同采集时间的数据
         List<AgricultureWeatherData> mergedData = mergeSameTimeData(dataList);
-        
+
         // 计算平均值
         BigDecimal avgTemperature = calculateAverage(mergedData, AgricultureWeatherData::getTemperature);
         BigDecimal avgHumidity = calculateAverage(mergedData, AgricultureWeatherData::getHumidity);
@@ -498,7 +521,7 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
         BigDecimal avgLightIntensity = calculateAverage(mergedData, AgricultureWeatherData::getLightIntensity);
         BigDecimal avgRainfall = calculateAverage(mergedData, AgricultureWeatherData::getRainfall);
         BigDecimal avgAirPressure = calculateAverage(mergedData, AgricultureWeatherData::getAirPressure);
-        
+
         return AgricultureWeatherDailyStats.builder()
                 .pastureId(dataList.get(0).getPastureId())
                 .batchId(dataList.get(0).getBatchId())
@@ -522,11 +545,11 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
                 .map(getter)
                 .filter(value -> value != null && value != 0)
                 .collect(Collectors.toList());
-        
+
         if (validValues.isEmpty()) {
             return BigDecimal.ZERO;
         }
-        
+
         double avg = validValues.stream().mapToDouble(Double::doubleValue).average().orElse(0);
         return BigDecimal.valueOf(avg).setScale(2, RoundingMode.HALF_UP);
     }
@@ -536,5 +559,70 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
         return new BigDecimal(value).setScale(scale, RoundingMode.HALF_UP).doubleValue();
     }
 
-    private double round2(double v) { return Math.round(v * 100.0) / 100.0; }
+    private double round2(double v) {
+        return Math.round(v * 100.0) / 100.0;
+    }
+
+    @Override
+    public AgricultureWeatherData getLatestMergedWeatherData(String pastureId) {
+        int maxTries = 10; // 最多往前查10批，防止死循环
+        LocalDateTime lastTime = null;
+
+        for (int i = 0; i < maxTries; i++) {
+            // 1. 查最新一批采集时间
+            LambdaQueryWrapper<AgricultureWeatherData> wrapper = new LambdaQueryWrapper<AgricultureWeatherData>()
+                    .eq(AgricultureWeatherData::getPastureId, pastureId)
+                    .orderByDesc(AgricultureWeatherData::getCollectTime)
+                    .select(AgricultureWeatherData::getCollectTime);
+            if (lastTime != null) {
+                wrapper.lt(AgricultureWeatherData::getCollectTime, lastTime);
+            }
+            AgricultureWeatherData latest = this.getOne(wrapper.last("limit 1"));
+            if (latest == null || latest.getCollectTime() == null) {
+                return null;
+            }
+            lastTime = latest.getCollectTime();
+
+            // 2. 查该时间窗口内所有数据（6秒窗口）
+            LocalDateTime windowStart = lastTime.minusSeconds(6);
+            List<AgricultureWeatherData> recentList = this.lambdaQuery()
+                    .eq(AgricultureWeatherData::getPastureId, pastureId)
+                    .ge(AgricultureWeatherData::getCollectTime, windowStart)
+                    .le(AgricultureWeatherData::getCollectTime, lastTime)
+                    .list();
+
+            if (recentList == null || recentList.isEmpty()) {
+                continue;
+            }
+
+            // 3. 每个设备取最新一条
+            Map<Long, AgricultureWeatherData> deviceLatestMap = new HashMap<>();
+            for (AgricultureWeatherData d : recentList) {
+                Long deviceId = d.getDeviceId();
+                if (!deviceLatestMap.containsKey(deviceId) ||
+                        d.getCollectTime().isAfter(deviceLatestMap.get(deviceId).getCollectTime())) {
+                    deviceLatestMap.put(deviceId, d);
+                }
+            }
+            List<AgricultureWeatherData> toMerge = new ArrayList<>(deviceLatestMap.values());
+
+            // 4. 合并
+            List<AgricultureWeatherData> merged = mergeSameTimeDatatAndWindDirection(toMerge);
+            if (!merged.isEmpty()) {
+                AgricultureWeatherData data = merged.get(0);
+                // 5. 判断是否全为0或null（关键字段）
+                boolean allZeroOrNull =
+                        (data.getTemperature() == null || data.getTemperature() == 0) &&
+                                (data.getHumidity() == null || data.getHumidity() == 0) &&
+                                (data.getWindSpeed() == null || data.getWindSpeed() == 0) &&
+                                (data.getLightIntensity() == null || data.getLightIntensity() == 0);
+                if (!allZeroOrNull) {
+                    return data;
+                }
+            }
+            // 否则继续往前找
+        }
+        // 如果找了10批都没有有效数据，返回null或自定义提示
+        return null;
+    }
 }

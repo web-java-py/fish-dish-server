@@ -377,4 +377,13 @@ public class AgricultureWaterQualityDataServiceImpl extends ServiceImpl<Agricult
     {
         return removeById(id) ? 1 : 0;
     }
+
+    @Override
+    public AgricultureWaterQualityData getLatestWaterQualityData(String pastureId) {
+        return this.lambdaQuery()
+                .eq(AgricultureWaterQualityData::getPastureId, pastureId)
+                .orderByDesc(AgricultureWaterQualityData::getCollectTime)
+                .last("limit 1")
+                .one();
+    }
 }

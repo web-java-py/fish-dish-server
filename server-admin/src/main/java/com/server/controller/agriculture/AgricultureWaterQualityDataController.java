@@ -79,6 +79,16 @@ public class AgricultureWaterQualityDataController extends BaseController
     }
 
     /**
+     * 获取最新一条水质数据
+     */
+    @PreAuthorize("@ss.hasPermi('agriculture:data:query')")
+    @GetMapping("/latest")
+    public AjaxResult getLatestWaterQualityData(@RequestParam("pastureId") String pastureId) {
+        AgricultureWaterQualityData latest = agricultureWaterQualityDataService.getLatestWaterQualityData(pastureId);
+        return success(latest);
+    }
+
+    /**
      * 新增水质数据
      */
     @PreAuthorize("@ss.hasPermi('agriculture:data:add')")

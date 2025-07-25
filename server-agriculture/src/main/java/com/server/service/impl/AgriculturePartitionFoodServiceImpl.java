@@ -21,6 +21,7 @@ import com.server.mapper.*;
 import com.server.service.*;
 import com.server.utils.QRCodeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import com.server.service.AgriculturePartitionFoodService;
 import com.server.service.AgricultureTraceabilityLogService;
@@ -85,6 +86,9 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
     private AgricultureThresholdConfigService agricultureThresholdConfigService;
     @Autowired
     private AgricultureDeviceSensorAlertService sensorAlertService;
+
+    @Value("${codepath}")
+    private String codepath;
 
     /**
      * 根据溯源码查询溯源详情信息，包括分区、大棚、批次任务、环境数据等
@@ -714,8 +718,9 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
         //生成前端访问页面的条形二维码
         agriculturePartitionFoods.forEach(bean -> {
             try {
-                // 直接生成二维码的Base64字符串
-            String barcodeBase64 = QRCodeUtil.generateQRCode(bean.getId().toString());
+                // 生成二维码内容为溯源码跳转地址
+                String codeUrl = codepath + bean.getId();
+                String barcodeBase64 = QRCodeUtil.generateQRCode(codeUrl);
                 // 对应字段设置Base64字符串
                 bean.setBarcode(barcodeBase64);
             } catch (Exception e) {

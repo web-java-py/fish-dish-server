@@ -2,7 +2,9 @@ package com.server.ai;
 
 import com.alibaba.fastjson2.JSON;
 import com.server.ai.tool.AgricultureTools;
+import com.server.constant.AiConstants;
 import com.server.domain.dto.IdentifyDTO;
+import com.server.domain.vo.ChatStreamVO;
 import com.server.exception.ServiceException;
 import com.server.properties.AiLocalProperties;
 import com.server.properties.AiOllamaProperties;
@@ -10,6 +12,8 @@ import com.server.utils.HttpUtils;
 import com.server.utils.StringUtils;
 import dev.langchain4j.agent.tool.ToolSpecification;
 import dev.langchain4j.agent.tool.ToolSpecifications;
+import dev.langchain4j.data.document.parser.TextDocumentParser;
+import dev.langchain4j.data.message.*;
 import dev.langchain4j.model.chat.StreamingChatLanguageModel;
 import dev.langchain4j.model.chat.request.ChatRequest;
 import dev.langchain4j.model.chat.request.ResponseFormat;
@@ -29,6 +33,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -42,9 +47,12 @@ public class AiService {
 
     @Autowired
     private AiLocalProperties aiLocalProperties;
+    @Autowired
+    private AgricultureTools agricultureTools;
 
     public OllamaChatModel ollamaChatModel;
     private StreamingChatLanguageModel streamingChatLanguageModel;
+    private String think;
 
     public AiService(AiOllamaProperties aiOllamaProperties) {
         ollamaChatModel = OllamaChatModel.builder()
@@ -58,6 +66,7 @@ public class AiService {
                 .modelName(aiOllamaProperties.getModelName())
                 .temperature(aiOllamaProperties.getTemperature())
                 .build();
+        this.think = aiOllamaProperties.getThink() ? "/set think" : "/set nothink";
     }
 
     public String chat(String prompt) {
@@ -128,12 +137,45 @@ public class AiService {
         });
     }
 
-    public Flux<String> chatAgents(String prompt){
-        List<ToolSpecification> toolSpecifications = ToolSpecifications.toolSpecificationsFrom(AgricultureTools.class);
-        ChatResponse chatResponse = ollamaChatModel.chat(ChatRequest.builder()
-                .messages(systemMessage("ss"),userMessage(prompt))
+    public Flux<String> chatAgentsStream(String prompt) {
+        List<ToolSpecification> toolSpecifications = ToolSpecifications.toolSpecificationsFrom(agricultureTools);
+        InputStream inputStream = getClass().getClassLoader().getResourceAsStream(AiConstants.BOT);
+        SystemMessage systemMessage = systemMessage(new TextDocumentParser().parse(inputStream).text());
+        UserMessage userMessage = userMessage(prompt + this.think);
+        ChatResponse chat = ollamaChatModel.chat(ChatRequest.builder()
+                .messages(systemMessage, userMessage)
                 .toolSpecifications(toolSpecifications)
                 .build());
-        return null;
+        AiMessage aiMessage = chat.aiMessage();
+        List<ChatMessage> chatMessages = new ArrayList<>();
+        chatMessages.add(systemMessage);
+        chatMessages.add(userMessage);
+        chatMessages.add(aiMessage);
+        List<ChatMessage> chatMessageList = AiUtils.operateToolExecution(agricultureTools, aiMessage.toolExecutionRequests(), chatMessages);
+        return Flux.create(sink -> {
+            streamingChatLanguageModel.chat(ChatRequest.builder()
+                    .messages(chatMessageList)
+                    .toolSpecifications(toolSpecifications)
+                    .build(), new StreamingChatResponseHandler() {
+                @Override
+                public void onPartialResponse(String partialResponse) {
+                    String response = partialResponse.replace("<think>", "").replace("</think>", "");
+                    if (StringUtils.isEmpty(response)) return;
+                    sink.next(JSON.toJSONString(ChatStreamVO.builder()
+                            .response(response)
+                            .build()));
+                }
+
+                @Override
+                public void onCompleteResponse(ChatResponse completeResponse) {
+                    sink.complete();
+                }
+
+                @Override
+                public void onError(Throwable error) {
+                    sink.error(error);
+                }
+            });
+        });
     }
 }

@@ -75,4 +75,10 @@ public interface AgricultureWeatherDataService extends IService<AgricultureWeath
      */
     public int deleteAgricultureWeatherDataById(Long id);
 
+    /**
+     * 获取合并后的最新一条气象数据
+     * @param pastureId 大棚ID
+     * @return 最新气象数据
+     */
+    AgricultureWeatherData getLatestMergedWeatherData(String pastureId);
 }
