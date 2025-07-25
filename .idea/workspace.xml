@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="智能体开发完毕">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_24_11_18__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/tool/AgricultureTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/tool/AgricultureTools.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureDeviceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgricultureDeviceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/resources/fisco/conf/ca.crt" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/resources/fisco/conf/ca.crt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/resources/fisco/conf/sdk.crt" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/resources/fisco/conf/sdk.crt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/resources/fisco/conf/sdk.key" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/resources/fisco/conf/sdk.key" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-framework/src/main/java/com/server/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-framework/src/main/java/com/server/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-info.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-user.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-user.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +35,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;BuXianWanYin&quot;
+  }
+}</component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
       <filtered-out-file-type name="LOCAL_BRANCH" />
@@ -36,6 +49,12 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/web-java-py/fish-dish-server.git&quot;,
+    &quot;accountId&quot;: &quot;de79a800-e6f1-4294-8e51-75e1fbc82f5c&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/server-admin/src/main/resources/application-dev.yml" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -45,17 +64,19 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="customMavenHome" value="D:\maven\apache-maven-3.9.9" />
         <option name="localRepository" value="D:\maven\apache-maven-3.9.9\Repository" />
+        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
         <option name="userSettingsFile" value="D:\maven\apache-maven-3.9.9\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="PerforceDirect.Settings">
-    <option name="CHARSET" value="无" />
-  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2z4udUhg2iMJ66cZymyeur89p2B" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -64,13 +85,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.server [org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "Spring Boot.ServerApplication.executor": "Run",
+    "git-widget-placeholder": "bxwy",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "项目",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -81,17 +116,20 @@
       <recent name="D:\ZLXN\fish-dish-server\server-agriculture\src\main\java\com\server\mapper" />
       <recent name="D:\ZLXN\fish-dish-server\server-admin\src\main\java\com\server\controller\agriculture" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ZLXN\fish-dish-server\server-admin\src\main\resources\fisco\conf" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="server-admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.server.ServerApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.server.ServerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -120,7 +158,6 @@
       <updated>1751002580950</updated>
     </task>
     <task active="true" id="Default" summary="Default task">
-      <changelist id="53727483-35de-47d5-b564-ff8218381c39" name="Changes" comment="去掉.idea配置" />
       <created>1751002761300</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -136,6 +173,8 @@
       <workItem from="1752841645559" duration="1965000" />
       <workItem from="1752846328892" duration="2702000" />
       <workItem from="1753064929875" duration="38173000" />
+      <workItem from="1753408420440" duration="6719000" />
+      <workItem from="1753436621279" duration="1612000" />
     </task>
     <task id="LOCAL-00002" summary="bug修复">
       <option name="closed" value="true" />
@@ -515,7 +554,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="水质图表数据接口实现" />
     <MESSAGE value="物联网设备bug修复" />
     <MESSAGE value="摄像头参数配置接口实现" />
     <MESSAGE value="摄像头参数配置接口实现2" />
@@ -540,7 +578,8 @@
     <MESSAGE value="更新溯源地址配置" />
     <MESSAGE value="更新ai模板" />
     <MESSAGE value="智能体开发完毕" />
-    <option name="LAST_COMMIT_MESSAGE" value="智能体开发完毕" />
+    <MESSAGE value="我朱bb测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="我朱bb测试" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
