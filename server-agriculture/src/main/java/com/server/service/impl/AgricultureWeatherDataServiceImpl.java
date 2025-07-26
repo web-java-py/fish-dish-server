@@ -139,6 +139,9 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
                 .lt(AgricultureWeatherData::getCollectTime, currentHour.plusHours(1))
                 .list();
 
+        // 先移除已有的当前小时
+        stats.removeIf(stat -> stat.getStatHour().equals(currentHour));
+
         // 如果有当前小时的数据，计算平均值并添加到统计列表中
         if (!currentHourData.isEmpty()) {
             AgricultureWeatherHourlyStats currentHourStats = calculateHourlyStatsFromRawData(currentHourData, currentHour);

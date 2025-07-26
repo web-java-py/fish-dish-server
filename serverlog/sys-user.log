@@ -8,3 +8,9 @@
 18:04:56.310 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,32] - ====关闭后台任务任务线程池====
 18:07:45.741 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,32] - ====关闭后台任务任务线程池====
 18:08:17.241 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,32] - ====关闭后台任务任务线程池====
+13:49:22.054 [main] INFO  sys-user - [shutdownAsyncManager,32] - ====关闭后台任务任务线程池====
+13:54:04.559 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,32] - ====关闭后台任务任务线程池====
+16:02:10.347 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,32] - ====关闭后台任务任务线程池====
+16:02:40.512 [schedule-pool-1] INFO  sys-user - [run,56] - [127.0.0.1]内网IP[admin][Success][登录成功]
+16:52:46.633 [schedule-pool-11] INFO  sys-user - [run,56] - [127.0.0.1]内网IP[admin][Success][登录成功]
+17:01:01.176 [schedule-pool-6] INFO  sys-user - [run,56] - [127.0.0.1]内网IP[admin][Success][登录成功]
