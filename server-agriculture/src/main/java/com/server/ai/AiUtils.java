@@ -23,11 +23,7 @@ public class AiUtils {
                 try {
                     // 获取方法的参数类型
                     Method method = agricultureTools.getClass().getDeclaredMethod(methodName);
-                    // 如果方法存在且是非私有的，调用该方法
-                    if (method != null) {
-                        method.setAccessible(true); // 设置为可访问，如果是私有方法
-                        method.invoke(agricultureTools); // 调用方法
-                    }
+                    method.invoke(agricultureTools); // 调用方法
                     chatMessages.add(toolExecutionResultMessage(toolExecutionRequest, "true"));
                 } catch (NoSuchMethodException e) {
                     log.error("方法 " + methodName + " 不存在: " + e.getMessage());
