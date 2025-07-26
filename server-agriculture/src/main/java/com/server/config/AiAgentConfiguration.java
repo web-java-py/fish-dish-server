@@ -5,6 +5,7 @@ import dev.langchain4j.data.document.Document;
 import dev.langchain4j.data.document.DocumentSplitter;
 import dev.langchain4j.data.document.parser.TextDocumentParser;
 import dev.langchain4j.data.document.splitter.DocumentSplitters;
+import dev.langchain4j.data.message.ChatMessage;
 import dev.langchain4j.data.segment.TextSegment;
 import dev.langchain4j.model.chat.StreamingChatLanguageModel;
 import dev.langchain4j.model.embedding.EmbeddingModel;
@@ -14,11 +15,19 @@ import dev.langchain4j.model.ollama.OllamaEmbeddingModel;
 import dev.langchain4j.model.ollama.OllamaStreamingChatModel;
 import dev.langchain4j.rag.DefaultRetrievalAugmentor;
 import dev.langchain4j.rag.RetrievalAugmentor;
+import dev.langchain4j.rag.content.Content;
+import dev.langchain4j.rag.content.aggregator.ContentAggregator;
+import dev.langchain4j.rag.content.aggregator.DefaultContentAggregator;
+import dev.langchain4j.rag.content.injector.ContentInjector;
 import dev.langchain4j.rag.content.injector.DefaultContentInjector;
 import dev.langchain4j.rag.content.retriever.ContentRetriever;
 import dev.langchain4j.rag.content.retriever.EmbeddingStoreContentRetriever;
+import dev.langchain4j.rag.query.Query;
 import dev.langchain4j.rag.query.router.DefaultQueryRouter;
+import dev.langchain4j.rag.query.router.LanguageModelQueryRouter;
 import dev.langchain4j.rag.query.router.QueryRouter;
+import dev.langchain4j.rag.query.transformer.DefaultQueryTransformer;
+import dev.langchain4j.rag.query.transformer.QueryTransformer;
 import dev.langchain4j.store.embedding.EmbeddingStore;
 import dev.langchain4j.store.embedding.EmbeddingStoreIngestor;
 import dev.langchain4j.store.embedding.inmemory.InMemoryEmbeddingStore;
@@ -27,9 +36,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
+import org.springframework.scheduling.concurrent.CustomizableThreadFactory;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import static dev.langchain4j.data.document.loader.FileSystemDocumentLoader.loadDocument;
 
@@ -75,7 +88,7 @@ public class AiAgentConfiguration {
         Resource resource = resourceLoader.getResource("classpath:templates/ai/terms-of-use.txt");
         Document document = loadDocument(resource.getFile().toPath(), new TextDocumentParser());
 
-        DocumentSplitter documentSplitter = DocumentSplitters.recursive(100, 0);
+        DocumentSplitter documentSplitter = DocumentSplitters.recursive(500, 0);
         EmbeddingStoreIngestor embeddingStoreIngestor = EmbeddingStoreIngestor.builder()
                 .documentSplitter(documentSplitter)
                 .embeddingModel(embeddingModel)
@@ -88,14 +101,38 @@ public class AiAgentConfiguration {
 
     @Bean
     public ContentRetriever contentRetriever(EmbeddingStore<TextSegment> embeddingStore, EmbeddingModel embeddingModel) {
-        int maxResults = 3;
-        double minScore = 0.75;
-
         return EmbeddingStoreContentRetriever.builder()
                 .embeddingStore(embeddingStore)
                 .embeddingModel(embeddingModel)
-                .maxResults(maxResults)
-                .minScore(minScore)
+                .maxResults(5)
+                .minScore(0.75)
+                .build();
+    }
+
+    @Bean
+    public QueryRouter queryRouter(ContentRetriever contentRetriever) {
+        return new DefaultQueryRouter(contentRetriever);
+    }
+
+    @Bean
+    public ContentAggregator contentAggregator() {
+        return new DefaultContentAggregator();
+    }
+
+    @Bean
+    public ContentInjector contentInjector() {
+        return DefaultContentInjector.builder()
+                .promptTemplate(PromptTemplate.from("{{userMessage}}\n" + "使用以下信息回答：" + "\n{{contents}}\n" + (aiOllamaProperties.getThink() ? "/set think" : "/set nothink")))
+                .build();
+    }
+
+    @Bean
+    public RetrievalAugmentor retrievalAugmentor(QueryRouter queryRouter, ContentAggregator contentAggregator, ContentInjector contentInjector, ExecutorService AiRetrievalExecutorService) {
+        return DefaultRetrievalAugmentor.builder()
+                .queryRouter(queryRouter)
+                .contentAggregator(contentAggregator)
+                .contentInjector(contentInjector)
+                .executor(AiRetrievalExecutorService)
                 .build();
     }
 

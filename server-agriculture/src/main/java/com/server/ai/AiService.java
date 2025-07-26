@@ -20,10 +20,13 @@ import dev.langchain4j.model.chat.request.ResponseFormat;
 import dev.langchain4j.model.chat.response.ChatResponse;
 import dev.langchain4j.model.chat.response.StreamingChatResponseHandler;
 import dev.langchain4j.model.ollama.OllamaChatModel;
-import dev.langchain4j.rag.RetrievalAugmentor;
 import dev.langchain4j.rag.content.Content;
+import dev.langchain4j.rag.content.aggregator.ContentAggregator;
+import dev.langchain4j.rag.content.injector.ContentInjector;
 import dev.langchain4j.rag.content.retriever.ContentRetriever;
 import dev.langchain4j.rag.query.Query;
+import dev.langchain4j.rag.query.router.QueryRouter;
+import dev.langchain4j.rag.query.transformer.QueryTransformer;
 import lombok.extern.java.Log;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -37,10 +40,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static dev.langchain4j.data.message.SystemMessage.systemMessage;
 import static dev.langchain4j.data.message.UserMessage.userMessage;
@@ -57,6 +57,12 @@ public class AiService {
     public OllamaChatModel ollamaChatModel;
     @Autowired
     private StreamingChatLanguageModel streamingChatLanguageModel;
+    @Autowired
+    private QueryRouter queryRouter;
+    @Autowired
+    private ContentAggregator contentAggregator;
+    @Autowired
+    private ContentInjector contentInjector;
     @Autowired
     private Boolean AiThink;
 
@@ -132,7 +138,7 @@ public class AiService {
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream(AiConstants.BOT);
         List<ChatMessage> chatMessages = new ArrayList<>();
         chatMessages.add(systemMessage(new TextDocumentParser().parse(inputStream).text()));
-        chatMessages.add(userMessage(prompt + (this.AiThink ? "/set think" : "/set nothink")));
+        chatMessages.add(CreateRagChatMessage(prompt));
         return Flux.create(sink -> {
             streamingChatLanguageModel.chat(getChatRequestTool(chatMessages), new StreamingChatResponseHandler() {
 
@@ -175,6 +181,19 @@ public class AiService {
                 }
             });
         });
+    }
+
+    public ChatMessage CreateRagChatMessage(String prompt) {
+        Query query = Query.from(prompt);
+        Map<Query, Collection<List<Content>>> queryCollectionMap = new HashMap<>();
+        Collection<ContentRetriever> contentRetrievers = queryRouter.route(query);
+        List<List<Content>> contents = new ArrayList<>();
+        for (ContentRetriever contentRetriever : contentRetrievers) {
+            contents.add(contentRetriever.retrieve(query));
+        }
+        queryCollectionMap.put(query, contents);
+        List<Content> finalContents = contentAggregator.aggregate(queryCollectionMap);
+        return contentInjector.inject(finalContents, userMessage(prompt));
     }
 
     private void sinkNext(FluxSink<String> sink, String partialResponse) {
