@@ -26,7 +26,6 @@ import dev.langchain4j.rag.content.injector.ContentInjector;
 import dev.langchain4j.rag.content.retriever.ContentRetriever;
 import dev.langchain4j.rag.query.Query;
 import dev.langchain4j.rag.query.router.QueryRouter;
-import dev.langchain4j.rag.query.transformer.QueryTransformer;
 import lombok.extern.java.Log;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -193,7 +192,11 @@ public class AiService {
         }
         queryCollectionMap.put(query, contents);
         List<Content> finalContents = contentAggregator.aggregate(queryCollectionMap);
-        return contentInjector.inject(finalContents, userMessage(prompt));
+        String think = "";
+        if (finalContents.size() == 0){
+            think = AiThink  ? "/set think" : "/set nothink";
+        }
+        return contentInjector.inject(finalContents, userMessage(prompt + think));
     }
 
     private void sinkNext(FluxSink<String> sink, String partialResponse) {
