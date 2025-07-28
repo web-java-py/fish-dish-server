@@ -38,7 +38,7 @@ public class AgricultureDeviceSensorAlertController extends BaseController
     /**
      * 查询传感器预警信息列表
      */
-    @PreAuthorize("@ss.hasPermi('agriculture:alert:list')")
+//    @PreAuthorize("@ss.hasPermi('agriculture:alert:list')")
     @GetMapping("/list")
     public TableDataInfo list(AgricultureDeviceSensorAlert agricultureDeviceSensorAlert)
     {

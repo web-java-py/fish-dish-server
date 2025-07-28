@@ -114,9 +114,21 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
     public Map<String, Object> getTrendData(String pastureId, String batchId, String range) {
         // 优先查询统计表，如果没有数据再查询原始表
         if ("day".equals(range)) {
-            return getHourlyTrendData(pastureId, batchId);
+            Map<String, Object> result = getHourlyTrendData(pastureId, batchId);
+            // 检查是否有数据，如果没有则回退到原始数据
+            List<Double> temperature = (List<Double>) result.get("temperature");
+            if (temperature != null && temperature.stream().allMatch(v -> v == 0.0)) {
+                return getTrendDataFromRawData(pastureId, batchId, range);
+            }
+            return result;
         } else {
-            return getDailyTrendData(pastureId, batchId, range);
+            Map<String, Object> result = getDailyTrendData(pastureId, batchId, range);
+            // 检查是否有数据，如果没有则回退到原始数据
+            List<Double> temperature = (List<Double>) result.get("temperature");
+            if (temperature != null && temperature.stream().allMatch(v -> v == 0.0)) {
+                return getTrendDataFromRawData(pastureId, batchId, range);
+            }
+            return result;
         }
     }
 
@@ -138,6 +150,9 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
                 .ge(AgricultureWeatherData::getCollectTime, currentHour)
                 .lt(AgricultureWeatherData::getCollectTime, currentHour.plusHours(1))
                 .list();
+
+        // 先移除已有的当前小时
+        stats.removeIf(stat -> stat.getStatHour().equals(currentHour));
 
         // 如果有当前小时的数据，计算平均值并添加到统计列表中
         if (!currentHourData.isEmpty()) {
@@ -196,13 +211,38 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
         List<Double> lightIntensity = new ArrayList<>();
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:00");
-
+        
+        // 生成完整的24小时时间轴
+        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime start = now.minusHours(23).withMinute(0).withSecond(0).withNano(0);
+        
+        // 将统计数据转换为Map，方便查找
+        Map<String, AgricultureWeatherHourlyStats> statsMap = new HashMap<>();
         for (AgricultureWeatherHourlyStats stat : stats) {
-            xAxis.add(stat.getStatHour().format(formatter));
-            temperature.add(stat.getAvgTemperature() != null ? stat.getAvgTemperature().doubleValue() : 0.0);
-            humidity.add(stat.getAvgHumidity() != null ? stat.getAvgHumidity().doubleValue() : 0.0);
-            windSpeed.add(stat.getAvgWindSpeed() != null ? stat.getAvgWindSpeed().doubleValue() : 0.0);
-            lightIntensity.add(stat.getAvgLightIntensity() != null ? stat.getAvgLightIntensity().doubleValue() : 0.0);
+            String key = stat.getStatHour().format(formatter);
+            statsMap.put(key, stat);
+        }
+        
+        // 生成完整的24小时数据
+        for (int i = 0; i < 24; i++) {
+            LocalDateTime hourTime = start.plusHours(i);
+            String hourKey = hourTime.format(formatter);
+            xAxis.add(hourKey);
+            
+            // 查找该小时的统计数据
+            AgricultureWeatherHourlyStats stat = statsMap.get(hourKey);
+            if (stat != null) {
+                temperature.add(stat.getAvgTemperature() != null ? stat.getAvgTemperature().doubleValue() : 0.0);
+                humidity.add(stat.getAvgHumidity() != null ? stat.getAvgHumidity().doubleValue() : 0.0);
+                windSpeed.add(stat.getAvgWindSpeed() != null ? stat.getAvgWindSpeed().doubleValue() : 0.0);
+                lightIntensity.add(stat.getAvgLightIntensity() != null ? stat.getAvgLightIntensity().doubleValue() : 0.0);
+            } else {
+                // 没有数据的时段填充为0
+                temperature.add(0.0);
+                humidity.add(0.0);
+                windSpeed.add(0.0);
+                lightIntensity.add(0.0);
+            }
         }
 
         Map<String, Object> result = new HashMap<>();
@@ -296,6 +336,8 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
         // 4. 分桶聚合
         Map<String, List<AgricultureWeatherData>> bucketMap = new LinkedHashMap<>();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(timeFormat);
+        
+        // 生成完整的时间轴
         for (int i = 0; i < points; i++) {
             LocalDateTime bucketTime;
             if ("day".equals(range)) {
@@ -306,6 +348,8 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
             String key = bucketTime.format(formatter);
             bucketMap.put(key, new ArrayList<>());
         }
+        
+        // 将数据分配到对应的桶中
         for (AgricultureWeatherData d : mergedData) {
             LocalDateTime t = d.getCollectTime();
             String key;
@@ -319,14 +363,18 @@ public class AgricultureWeatherDataServiceImpl extends ServiceImpl<AgricultureWe
             }
         }
 
-        // 5. 计算每个桶的平均值
-        List<String> xAxis = new ArrayList<>(bucketMap.keySet());
+        // 5. 计算每个桶的平均值，确保返回完整的时间范围
+        List<String> xAxis = new ArrayList<>();
         List<Double> temperature = new ArrayList<>();
         List<Double> humidity = new ArrayList<>();
         List<Double> windSpeed = new ArrayList<>();
         List<Double> lightIntensity = new ArrayList<>();
 
-        for (List<AgricultureWeatherData> bucket : bucketMap.values()) {
+        for (Map.Entry<String, List<AgricultureWeatherData>> entry : bucketMap.entrySet()) {
+            String key = entry.getKey();
+            List<AgricultureWeatherData> bucket = entry.getValue();
+            
+            xAxis.add(key);
             temperature.add(calculateAverage(bucket, AgricultureWeatherData::getTemperature, "temperature"));
             humidity.add(calculateAverage(bucket, AgricultureWeatherData::getHumidity, "humidity"));
             windSpeed.add(calculateAverage(bucket, AgricultureWeatherData::getWindSpeed, "windSpeed"));

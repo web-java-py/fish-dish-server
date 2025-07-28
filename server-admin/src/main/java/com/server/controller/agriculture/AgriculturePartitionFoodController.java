@@ -31,6 +31,7 @@ import com.server.core.page.TableDataInfo;
  */
 @RestController
 @RequestMapping("/agriculture/partitionFood")
+@CrossOrigin(originPatterns = "*", allowCredentials = "true")
 public class AgriculturePartitionFoodController extends BaseController
 {
     @Autowired
@@ -51,9 +52,9 @@ public class AgriculturePartitionFoodController extends BaseController
      * 根据溯源码查询溯源详情信息（分区、大棚、批次任务、环境数据等）
      */
     @ApiOperation("根据溯源码查询溯源详情信息")
-    @PreAuthorize("@ss.hasPermi('agriculturePartitionFood:traceDetail')")
     @GetMapping("/traceDetail")
     @SeeRefreshData
+    @CrossOrigin(originPatterns = "*", allowCredentials = "false") // 溯源不需要凭证
     public AjaxResult getTraceabilityDetail(
         @RequestParam("traceId") String traceId,
         @RequestParam(value = "firstTraceTime", required = false) String firstTraceTimeStr,

@@ -32,7 +32,7 @@ public class AgricultureWeatherDataController extends BaseController
     /**
      * 气象趋势数据（24小时/7天/30天）
      */
-    @PreAuthorize("@ss.hasPermi('agriculture:weather:trend')")
+//    @PreAuthorize("@ss.hasPermi('agriculture:weather:trend')")
     @GetMapping("/trend")
     public AjaxResult trend(
             @RequestParam("pastureId") String pastureId,

@@ -42,7 +42,7 @@ public class AgricultureDeviceController extends BaseController
     /**
      * 查询设备信息列表
      */
-    @PreAuthorize("@ss.hasPermi('agriculture:device:list')")
+//    @PreAuthorize("@ss.hasPermi('agriculture:device:list')")
     @GetMapping("/list")
     public TableDataInfo list(AgricultureDevice agricultureDevice)
     {
