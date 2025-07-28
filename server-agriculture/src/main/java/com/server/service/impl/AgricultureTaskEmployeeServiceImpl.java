@@ -33,8 +33,14 @@ public class AgricultureTaskEmployeeServiceImpl extends ServiceImpl<AgricultureT
     @Override
     public List<AgricultureTaskEmployee> selectAgricultureTaskEmployeeList(AgricultureTaskEmployee agricultureTaskEmployee)
     {
-        LambdaQueryWrapper<AgricultureTaskEmployee> lambdaQueryWrapper = new QueryWrapper<AgricultureTaskEmployee>().lambda();
-        return agricultureTaskEmployeeMapper.selectGYID(lambdaQueryWrapper);
+        if (agricultureTaskEmployee != null && agricultureTaskEmployee.getTaskId() != null) {
+            // 如果传入了taskId，使用自定义的selectGYID方法
+            return agricultureTaskEmployeeMapper.selectGYID(agricultureTaskEmployee.getTaskId());
+        } else {
+            // 如果没有传入taskId，使用默认的查询方式
+            LambdaQueryWrapper<AgricultureTaskEmployee> lambdaQueryWrapper = new QueryWrapper<AgricultureTaskEmployee>().lambda();
+            return agricultureTaskEmployeeMapper.selectList(lambdaQueryWrapper);
+        }
     }
 
     /**

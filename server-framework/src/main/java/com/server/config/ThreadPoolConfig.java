@@ -4,11 +4,10 @@ import com.server.utils.Threads;
 import org.apache.commons.lang3.concurrent.BasicThreadFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.scheduling.concurrent.CustomizableThreadFactory;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.ScheduledThreadPoolExecutor;
-import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.*;
 
 /**
  * 线程池配置
@@ -29,6 +28,12 @@ public class ThreadPoolConfig
 
     // 线程池维护线程所允许的空闲时间
     private int keepAliveSeconds = 300;
+
+    @Bean(name = "AiRetrievalExecutorService")
+    public ExecutorService AiRetrievalExecutorService() {
+        final var threadFactory = new CustomizableThreadFactory("AiRetrieval-");
+        return Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors(), threadFactory);
+    }
 
     @Bean(name = "threadPoolTaskExecutor")
     public ThreadPoolTaskExecutor threadPoolTaskExecutor()
