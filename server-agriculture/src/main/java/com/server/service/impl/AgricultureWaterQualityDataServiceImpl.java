@@ -75,9 +75,21 @@ public class AgricultureWaterQualityDataServiceImpl extends ServiceImpl<Agricult
     public Map<String, Object> getTrendData(String pastureId, String batchId, String range) {
         // 优先查询统计表，如果没有数据再查询原始表
         if ("day".equals(range)) {
-            return getHourlyTrendData(pastureId, batchId);
+            Map<String, Object> result = getHourlyTrendData(pastureId, batchId);
+            // 检查是否有数据，如果没有则回退到原始数据
+            List<Double> dissolvedOxygen = (List<Double>) result.get("dissolved_oxygen");
+            if (dissolvedOxygen != null && dissolvedOxygen.stream().allMatch(v -> v == 0.0)) {
+                return getTrendDataFromRawData(pastureId, batchId, range);
+            }
+            return result;
         } else {
-            return getDailyTrendData(pastureId, batchId, range);
+            Map<String, Object> result = getDailyTrendData(pastureId, batchId, range);
+            // 检查是否有数据，如果没有则回退到原始数据
+            List<Double> dissolvedOxygen = (List<Double>) result.get("dissolved_oxygen");
+            if (dissolvedOxygen != null && dissolvedOxygen.stream().allMatch(v -> v == 0.0)) {
+                return getTrendDataFromRawData(pastureId, batchId, range);
+            }
+            return result;
         }
     }
 
@@ -179,13 +191,39 @@ public class AgricultureWaterQualityDataServiceImpl extends ServiceImpl<Agricult
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:00");
         
+        // 生成完整的24小时时间轴
+        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime start = now.minusHours(23).withMinute(0).withSecond(0).withNano(0);
+        
+        // 将统计数据转换为Map，方便查找
+        Map<String, AgricultureWaterQualityHourlyStats> statsMap = new HashMap<>();
         for (AgricultureWaterQualityHourlyStats stat : stats) {
-            xAxis.add(stat.getStatHour().format(formatter));
-            dissolvedOxygen.add(stat.getAvgDissolvedOxygen() != null ? stat.getAvgDissolvedOxygen().doubleValue() : null);
-            ammoniaNitrogen.add(stat.getAvgAmmoniaNitrogen() != null ? stat.getAvgAmmoniaNitrogen().doubleValue() : null);
-            waterTemperature.add(stat.getAvgWaterTemperature() != null ? stat.getAvgWaterTemperature().doubleValue() : null);
-            phValue.add(stat.getAvgPhValue() != null ? stat.getAvgPhValue().doubleValue() : null);
-            conductivity.add(stat.getAvgConductivity() != null ? stat.getAvgConductivity().doubleValue() : null);
+            String key = stat.getStatHour().format(formatter);
+            statsMap.put(key, stat);
+        }
+        
+        // 生成完整的24小时数据
+        for (int i = 0; i < 24; i++) {
+            LocalDateTime hourTime = start.plusHours(i);
+            String hourKey = hourTime.format(formatter);
+            xAxis.add(hourKey);
+            
+            // 查找该小时的统计数据
+            AgricultureWaterQualityHourlyStats stat = statsMap.get(hourKey);
+            if (stat != null) {
+                dissolvedOxygen.add(stat.getAvgDissolvedOxygen() != null ? stat.getAvgDissolvedOxygen().doubleValue() : 0.0);
+                ammoniaNitrogen.add(stat.getAvgAmmoniaNitrogen() != null ? stat.getAvgAmmoniaNitrogen().doubleValue() : 0.0);
+                waterTemperature.add(stat.getAvgWaterTemperature() != null ? stat.getAvgWaterTemperature().doubleValue() : 0.0);
+                phValue.add(stat.getAvgPhValue() != null ? stat.getAvgPhValue().doubleValue() : 0.0);
+                conductivity.add(stat.getAvgConductivity() != null ? stat.getAvgConductivity().doubleValue() : 0.0);
+            } else {
+                // 没有数据的时段填充为0
+                dissolvedOxygen.add(0.0);
+                ammoniaNitrogen.add(0.0);
+                waterTemperature.add(0.0);
+                phValue.add(0.0);
+                conductivity.add(0.0);
+            }
         }
 
         Map<String, Object> result = new HashMap<>();
@@ -385,5 +423,97 @@ public class AgricultureWaterQualityDataServiceImpl extends ServiceImpl<Agricult
                 .orderByDesc(AgricultureWaterQualityData::getCollectTime)
                 .last("limit 1")
                 .one();
+    }
+
+    /**
+     * 从原始数据获取趋势数据
+     */
+    private Map<String, Object> getTrendDataFromRawData(String pastureId, String batchId, String range) {
+        // 1. 计算时间范围
+        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime start;
+        int points;
+        String timeFormat;
+        if ("day".equals(range)) {
+            start = now.minusHours(23).withMinute(0).withSecond(0).withNano(0);
+            points = 24;
+            timeFormat = "HH:00";
+        } else if ("week".equals(range)) {
+            start = now.minusDays(6).withHour(0).withMinute(0).withSecond(0).withNano(0);
+            points = 7;
+            timeFormat = "MM-dd";
+        } else { // month
+            start = now.minusDays(29).withHour(0).withMinute(0).withSecond(0).withNano(0);
+            points = 30;
+            timeFormat = "MM-dd";
+        }
+
+        // 2. 查询数据
+        List<AgricultureWaterQualityData> allData = this.lambdaQuery()
+                .eq(AgricultureWaterQualityData::getPastureId, pastureId)
+                .eq(AgricultureWaterQualityData::getBatchId, batchId)
+                .ge(AgricultureWaterQualityData::getCollectTime, start)
+                .le(AgricultureWaterQualityData::getCollectTime, now)
+                .orderByAsc(AgricultureWaterQualityData::getCollectTime)
+                .list();
+
+        // 3. 分桶聚合
+        Map<String, List<AgricultureWaterQualityData>> bucketMap = new LinkedHashMap<>();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(timeFormat);
+        
+        // 生成完整的时间轴
+        for (int i = 0; i < points; i++) {
+            LocalDateTime bucketTime;
+            if ("day".equals(range)) {
+                bucketTime = start.plusHours(i);
+            } else {
+                bucketTime = start.plusDays(i);
+            }
+            String key = bucketTime.format(formatter);
+            bucketMap.put(key, new ArrayList<>());
+        }
+        
+        // 将数据分配到对应的桶中
+        for (AgricultureWaterQualityData d : allData) {
+            LocalDateTime t = d.getCollectTime();
+            String key;
+            if ("day".equals(range)) {
+                key = t.withMinute(0).withSecond(0).withNano(0).format(formatter);
+            } else {
+                key = t.withHour(0).withMinute(0).withSecond(0).withNano(0).format(formatter);
+            }
+            if (bucketMap.containsKey(key)) {
+                bucketMap.get(key).add(d);
+            }
+        }
+
+        // 4. 计算每个桶的平均值，确保返回完整的时间范围
+        List<String> xAxis = new ArrayList<>();
+        List<Double> dissolvedOxygen = new ArrayList<>();
+        List<Double> ammoniaNitrogen = new ArrayList<>();
+        List<Double> waterTemperature = new ArrayList<>();
+        List<Double> phValue = new ArrayList<>();
+        List<Double> conductivity = new ArrayList<>();
+
+        for (Map.Entry<String, List<AgricultureWaterQualityData>> entry : bucketMap.entrySet()) {
+            String key = entry.getKey();
+            List<AgricultureWaterQualityData> bucket = entry.getValue();
+            
+            xAxis.add(key);
+            dissolvedOxygen.add(calculateWaterQualityAverage(bucket, AgricultureWaterQualityData::getDissolvedOxygen).doubleValue());
+            ammoniaNitrogen.add(calculateWaterQualityAverage(bucket, AgricultureWaterQualityData::getAmmoniaNitrogen).doubleValue());
+            waterTemperature.add(calculateWaterQualityAverage(bucket, AgricultureWaterQualityData::getWaterTemperature).doubleValue());
+            phValue.add(calculateWaterQualityAverage(bucket, AgricultureWaterQualityData::getPhValue).doubleValue());
+            conductivity.add(calculateWaterQualityAverage(bucket, AgricultureWaterQualityData::getConductivity).doubleValue());
+        }
+
+        Map<String, Object> result = new HashMap<>();
+        result.put("xAxis", xAxis);
+        result.put("dissolved_oxygen", dissolvedOxygen);
+        result.put("ammonia_nitrogen", ammoniaNitrogen);
+        result.put("water_temperature", waterTemperature);
+        result.put("ph_value", phValue);
+        result.put("conductivity", conductivity);
+        return result;
     }
 }
