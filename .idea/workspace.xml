@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="溯源免token查询">
-      <change afterPath="$PROJECT_DIR$/serverlog/sys-error.2025-07-26.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serverlog/sys-error.2025-07-27.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serverlog/sys-info.2025-07-26.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serverlog/sys-info.2025-07-27.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serverlog/sys-user.2025-07-26.log" afterDir="false" />
+    <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="趋势数据bug修复">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgriculturePartitionFoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/java/com/server/controller/agriculture/AgriculturePartitionFoodController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureWaterQualityDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureWaterQualityDataServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureWeatherDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureWeatherDataServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-framework/src/main/java/com/server/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-framework/src/main/java/com/server/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-info.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-user.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-user.log" afterDir="false" />
@@ -538,7 +530,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753525921977</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="趋势数据bug修复">
+      <option name="closed" value="true" />
+      <created>1753668608666</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1753668608666</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -568,7 +568,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="摄像头参数配置接口实现2" />
     <MESSAGE value="摄像头实现" />
     <MESSAGE value="设备VO分页Bug修复" />
     <MESSAGE value="设备VO分页Bug修复2" />
@@ -593,7 +592,8 @@
     <MESSAGE value="我朱bb测试" />
     <MESSAGE value="bug修复" />
     <MESSAGE value="溯源免token查询" />
-    <option name="LAST_COMMIT_MESSAGE" value="溯源免token查询" />
+    <MESSAGE value="趋势数据bug修复" />
+    <option name="LAST_COMMIT_MESSAGE" value="趋势数据bug修复" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
