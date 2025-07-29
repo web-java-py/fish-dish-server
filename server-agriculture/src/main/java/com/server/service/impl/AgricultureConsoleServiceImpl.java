@@ -196,7 +196,7 @@ public class AgricultureConsoleServiceImpl implements AgricultureConsoleService 
             return "+0%";
         }
         double change = Math.abs((newValue.doubleValue() - oldValue.doubleValue()) / oldValue.doubleValue()) * 100;
-        return String.format("+%.1f%%", change);
+        return String.format("+%.0f%%", change);
     }
 
     private AgricultureConsoleVO fillAgricultureConsoleVO(String name, Integer currentCount, Integer lastCount, String icon) {

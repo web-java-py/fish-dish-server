@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="提交合并俊少">
-      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiOnlineDeviceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/sql/SqlDatabaseContentRetriever.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Merge_2025_7_24_11_03___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Merge_2025_7_24_11_03___Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_25_9_54__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_25_9_54__Changes_.xml" afterDir="false" />
+    <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="完成AI智能实时监控设备">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/resources/templates/ai/terms-of-use.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/resources/templates/ai/terms-of-use.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/tool/AgricultureTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/tool/AgricultureTools.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/config/AiAgentConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/config/AiAgentConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/constant/AiConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/constant/AiConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureConsoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureConsoleServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,13 +126,6 @@
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task id="LOCAL-00001" summary="去掉.idea配置">
-      <created>1751002580950</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1751002580950</updated>
-    </task>
     <task active="true" id="Default" summary="Default task">
       <changelist id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="智能体开发完毕" />
       <created>1751002761300</created>
@@ -162,15 +145,7 @@
       <workItem from="1753064929875" duration="38173000" />
       <workItem from="1753411068938" duration="23963000" />
       <workItem from="1753496133026" duration="16551000" />
-      <workItem from="1753759949972" duration="10290000" />
-    </task>
-    <task id="LOCAL-00002" summary="bug修复">
-      <option name="closed" value="true" />
-      <created>1751020840992</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1751020840992</updated>
+      <workItem from="1753759949972" duration="12318000" />
     </task>
     <task id="LOCAL-00003" summary="mqtt推送 数据解析拆分">
       <option name="closed" value="true" />
@@ -540,7 +515,21 @@
       <option name="project" value="LOCAL" />
       <updated>1753518413655</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="完成AI智能实时监控设备">
+      <created>1753772728188</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1753772728189</updated>
+    </task>
+    <task id="LOCAL-00051" summary="完成AI智能实时监控设备">
+      <created>1753772750020</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1753772750021</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -570,7 +559,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="物联网设备bug修复" />
     <MESSAGE value="摄像头参数配置接口实现" />
     <MESSAGE value="摄像头参数配置接口实现2" />
     <MESSAGE value="摄像头实现" />
@@ -595,7 +583,8 @@
     <MESSAGE value="更新ai模板" />
     <MESSAGE value="智能体开发完毕" />
     <MESSAGE value="智能体开发中" />
-    <option name="LAST_COMMIT_MESSAGE" value="智能体开发中" />
+    <MESSAGE value="完成AI智能实时监控设备" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成AI智能实时监控设备" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
