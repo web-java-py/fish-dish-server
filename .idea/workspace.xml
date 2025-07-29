@@ -4,11 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="智能体开发中">
+    <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="提交合并俊少">
+      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiOnlineDeviceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/sql/SqlDatabaseContentRetriever.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Merge_2025_7_24_11_03___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Merge_2025_7_24_11_03___Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_25_9_54__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_25_9_54__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-admin/src/main/resources/templates/ai/terms-of-use.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/resources/templates/ai/terms-of-use.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/tool/AgricultureTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/tool/AgricultureTools.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/config/AiAgentConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/config/AiAgentConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/constant/AiConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/constant/AiConstants.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,6 +162,7 @@
       <workItem from="1753064929875" duration="38173000" />
       <workItem from="1753411068938" duration="23963000" />
       <workItem from="1753496133026" duration="16551000" />
+      <workItem from="1753759949972" duration="10290000" />
     </task>
     <task id="LOCAL-00002" summary="bug修复">
       <option name="closed" value="true" />
@@ -601,9 +610,14 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiService.java</url>
-          <line>141</line>
-          <option name="timeStamp" value="43" />
+          <url>jar://$PROJECT_DIR$/../../../Java_Maven/apache-maven-3.5.4/repo/dev/langchain4j/langchain4j-experimental-sql/1.0.0-beta3/langchain4j-experimental-sql-1.0.0-beta3-sources.jar!/dev/langchain4j/experimental/rag/content/retriever/sql/SqlDatabaseContentRetriever.java</url>
+          <line>268</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../Java_Maven/apache-maven-3.5.4/repo/dev/langchain4j/langchain4j-experimental-sql/1.0.0-beta3/langchain4j-experimental-sql-1.0.0-beta3-sources.jar!/dev/langchain4j/experimental/rag/content/retriever/sql/SqlDatabaseContentRetriever.java</url>
+          <line>315</line>
+          <option name="timeStamp" value="98" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

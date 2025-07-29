@@ -1,6 +1,7 @@
 package com.server.ai;
 
 import com.alibaba.fastjson2.JSON;
+import com.server.ai.sql.SqlDatabaseContentRetriever;
 import com.server.ai.tool.AgricultureTools;
 import com.server.constant.AiConstants;
 import com.server.domain.dto.IdentifyDTO;
@@ -26,11 +27,11 @@ import dev.langchain4j.rag.content.injector.ContentInjector;
 import dev.langchain4j.rag.content.retriever.ContentRetriever;
 import dev.langchain4j.rag.query.Query;
 import dev.langchain4j.rag.query.router.QueryRouter;
-import lombok.extern.java.Log;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.FluxSink;
 
@@ -44,8 +45,8 @@ import java.util.*;
 import static dev.langchain4j.data.message.SystemMessage.systemMessage;
 import static dev.langchain4j.data.message.UserMessage.userMessage;
 
-@Log
-@Component
+@Slf4j
+@Service
 public class AiService {
 
     @Autowired
@@ -122,7 +123,7 @@ public class AiService {
                 sink.complete();
             } catch (Exception e) {
                 sink.error(e);
-                log.warning(e.getMessage());
+                log.error(e.getMessage());
             } finally {
                 try {
                     response.close();
@@ -188,19 +189,21 @@ public class AiService {
         Collection<ContentRetriever> contentRetrievers = queryRouter.route(query);
         List<List<Content>> contents = new ArrayList<>();
         for (ContentRetriever contentRetriever : contentRetrievers) {
+            if (contentRetriever instanceof SqlDatabaseContentRetriever) {
+                query = Query.from(AiUtils.setThink(prompt));
+            }
             contents.add(contentRetriever.retrieve(query));
         }
         queryCollectionMap.put(query, contents);
         List<Content> finalContents = contentAggregator.aggregate(queryCollectionMap);
-        String think = "";
-        if (finalContents.size() == 0){
-            think = AiThink  ? "/set think" : "/set nothink";
+        if (finalContents.size() == 0) {
+            prompt = AiUtils.setThink(AiThink, prompt);
         }
-        return contentInjector.inject(finalContents, userMessage(prompt + think));
+        return contentInjector.inject(finalContents, userMessage(prompt));
     }
 
     private void sinkNext(FluxSink<String> sink, String partialResponse) {
-        String response = AiThink ? partialResponse : partialResponse.replace("<think>", "").replace("</think>", "");
+        String response = AiUtils.cleanThink(AiThink, partialResponse);
         if (StringUtils.isEmpty(response)) return;
         sink.next(JSON.toJSONString(ChatStreamVO.builder()
                 .response(response)
