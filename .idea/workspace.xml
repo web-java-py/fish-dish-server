@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="优化控制台 比例数据去掉小数">
+    <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="更新预警上链">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/consumer/FbConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/consumer/FbConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/mapper/AgricultureDeviceSensorAlertMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/mapper/AgricultureDeviceSensorAlertMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureDeviceSensorAlertServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureDeviceSensorAlertServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,9 +79,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/fisco/bcos" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -87,6 +92,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\idea\project\Java\fish-dish-server\server-agriculture\src\main\java\com\server\fisco\bcos" />
       <recent name="D:\ZLXN\fish-dish-server\server-agriculture\src\main\java\com\server\service\impl" />
       <recent name="D:\ZLXN\fish-dish-server\server-agriculture\src\main\java\com\server\service" />
       <recent name="D:\ZLXN\fish-dish-server\server-agriculture\src\main\java\com\server\mapper" />
@@ -152,14 +158,6 @@
       <workItem from="1753411068938" duration="23963000" />
       <workItem from="1753496133026" duration="16551000" />
       <workItem from="1753759949972" duration="17452000" />
-    </task>
-    <task id="LOCAL-00004" summary="mqtt推送 数据解析拆分">
-      <option name="closed" value="true" />
-      <created>1751038844188</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1751038844188</updated>
     </task>
     <task id="LOCAL-00005" summary="参数类型字典实现">
       <option name="closed" value="true" />
@@ -534,7 +532,14 @@
       <option name="project" value="LOCAL" />
       <updated>1753776077322</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="更新预警上链">
+      <created>1753842581421</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1753842581421</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -564,7 +569,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="摄像头参数配置接口实现2" />
     <MESSAGE value="摄像头实现" />
     <MESSAGE value="设备VO分页Bug修复" />
     <MESSAGE value="设备VO分页Bug修复2" />
@@ -589,7 +593,8 @@
     <MESSAGE value="智能体开发中" />
     <MESSAGE value="完成AI智能实时监控设备" />
     <MESSAGE value="优化控制台 比例数据去掉小数" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化控制台 比例数据去掉小数" />
+    <MESSAGE value="更新预警上链" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新预警上链" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
