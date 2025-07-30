@@ -1,5 +1,7 @@
 package com.server.config;
 
+import com.server.ai.AiUtils;
+import com.server.ai.sql.SqlDatabaseContentRetriever;
 import com.server.properties.AiOllamaProperties;
 import dev.langchain4j.data.document.Document;
 import dev.langchain4j.data.document.DocumentSplitter;
@@ -31,6 +33,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 
+import javax.sql.DataSource;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.concurrent.ExecutorService;
@@ -91,6 +94,15 @@ public class AiAgentConfiguration {
     }
 
     @Bean
+    public ContentRetriever contentRetrieverDevice(OllamaChatModel ollamaChatModel, DataSource masterDataSource) {
+        return SqlDatabaseContentRetriever.builder()
+                .dataSource(masterDataSource)
+                .chatLanguageModel(ollamaChatModel)
+                .needTables(new String[]{"agriculture_device_type", "agriculture_device", "agriculture_threshold_config"})
+                .build();
+    }
+
+    @Bean
     public ContentRetriever contentRetriever(EmbeddingStore<TextSegment> embeddingStore, EmbeddingModel embeddingModel) {
         return EmbeddingStoreContentRetriever.builder()
                 .embeddingStore(embeddingStore)
@@ -101,8 +113,8 @@ public class AiAgentConfiguration {
     }
 
     @Bean
-    public QueryRouter queryRouter(ContentRetriever contentRetriever) {
-        return new DefaultQueryRouter(contentRetriever);
+    public QueryRouter queryRouter(ContentRetriever contentRetriever, ContentRetriever contentRetrieverDevice) {
+        return new DefaultQueryRouter(contentRetriever, contentRetrieverDevice);
     }
 
     @Bean
@@ -113,7 +125,7 @@ public class AiAgentConfiguration {
     @Bean
     public ContentInjector contentInjector() {
         return DefaultContentInjector.builder()
-                .promptTemplate(PromptTemplate.from("{{userMessage}}\n" + "使用以下信息回答：" + "\n{{contents}}\n" + (aiOllamaProperties.getThink() ? "/set think" : "/set nothink")))
+                .promptTemplate(PromptTemplate.from("{{userMessage}}\n" + "使用以下信息回答：" + "\n{{contents}}\n" + AiUtils.setThink(aiOllamaProperties.getThink())))
                 .build();
     }
 

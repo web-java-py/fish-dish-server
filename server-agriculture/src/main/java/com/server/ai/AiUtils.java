@@ -36,4 +36,24 @@ public class AiUtils {
         }
         return chatMessages;
     }
+
+    public static String setThink(String prompt) {
+        return prompt + "/set nothink";
+    }
+
+    public static String setThink(boolean AiThink, String prompt) {
+        return AiThink ? prompt + "/set think" : prompt + "/set nothink";
+    }
+
+    public static String setThink(boolean AiThink) {
+        return AiThink ? "/set think" : "/set nothink";
+    }
+
+    public static String cleanThink(boolean AiThink, String think) {
+        return AiThink ? think : think.replace("<think>", "").replace("</think>", "");
+    }
+
+    public static String cleanThink(String think) {
+        return think.replace("<think>", "").replace("</think>", "");
+    }
 }

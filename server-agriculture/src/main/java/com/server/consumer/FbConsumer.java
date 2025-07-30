@@ -2,13 +2,17 @@ package com.server.consumer;
 
 import com.server.domain.AgricultureCropBatch;
 import com.server.domain.AgricultureDevice;
+import com.server.domain.AgricultureDeviceSensorAlert;
 import com.server.domain.AgriculturePasture;
 import com.server.fisco.bcos.AgricultureDeviceFB;
+import com.server.fisco.bcos.AgricultureDeviceSensorAlertFB;
 import com.server.fisco.bcos.AgriculturePastureFB;
+import com.server.mapper.AgricultureDeviceSensorAlertMapper;
 import com.server.utils.StringUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.fisco.bcos.sdk.client.Client;
 import org.fisco.bcos.sdk.crypto.keypair.CryptoKeyPair;
+import org.fisco.bcos.sdk.transaction.model.exception.ContractException;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +36,9 @@ public class FbConsumer {
 
     @Autowired
     private CryptoKeyPair cryptoKeyPair;
+
+    @Autowired
+    private AgricultureDeviceSensorAlertMapper agricultureDeviceSensorAlertMapper;
 
     /**
      * 设备区块链操作
@@ -106,6 +113,29 @@ public class FbConsumer {
                     agricultureCropBatch.getCreateTime().toString(),
                     BigInteger.valueOf(agricultureCropBatch.getResponsiblePersonId())
             );
+        }
+    }
+
+    /**
+     * 分区区块链操作
+     *
+     * @param agricultureDeviceSensorAlert
+     */
+    @RabbitHandler
+    public void agricultureDeviceSensorAlertProcess(AgricultureDeviceSensorAlert agricultureDeviceSensorAlert) {
+        try {
+            AgricultureDeviceSensorAlertFB deploy = AgricultureDeviceSensorAlertFB.deploy(client, cryptoKeyPair);
+            deploy.SensorAlertCreate(
+                    BigInteger.valueOf(agricultureDeviceSensorAlert.getDeviceId()),
+                    agricultureDeviceSensorAlert.getDeviceName(),
+                    agricultureDeviceSensorAlert.getAlertType(),
+                    agricultureDeviceSensorAlert.getAlertMessage(),
+                    BigInteger.valueOf(agricultureDeviceSensorAlert.getAlertLevel())
+            );
+            agricultureDeviceSensorAlert.setBlockAddress(deploy.getContractAddress());
+            agricultureDeviceSensorAlertMapper.updateById(agricultureDeviceSensorAlert);
+        } catch (ContractException e) {
+            e.printStackTrace();
         }
     }
 }
