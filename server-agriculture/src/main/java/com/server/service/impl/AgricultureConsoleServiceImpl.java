@@ -143,32 +143,33 @@ public class AgricultureConsoleServiceImpl implements AgricultureConsoleService 
         // 统计年增长率：对比本年与去年溯源数量
         Long thisYear = agricultureConsoleMapper.getTraceCountThisYear();  //本年
         Long lastYear = agricultureConsoleMapper.getTraceCountLastYear();  //去年
-        //将其* 1.0转换为double类型 保证后续除法是浮点运算，避免整型除法丢失小数
-        double yearGrowth = (lastYear != null && lastYear > 0) ? ((thisYear - lastYear) * 1.0 / lastYear) * 100 : 0.0;
+        // 将其* 1.0转换为double类型 保证后续除法是浮点运算，避免整型除法丢失小数
+        // 使用 Math.round() 将结果四舍五入为最接近的整数，并存储为 long 类型
+        long yearGrowth = (lastYear != null && lastYear > 0) ? Math.round(((thisYear - lastYear) * 1.0 / lastYear) * 100) : 0L;
         Map<String, Object> yearGrowthMap = new HashMap<>();
         yearGrowthMap.put("thisYear", thisYear);
         yearGrowthMap.put("lastYear", lastYear);
-        yearGrowthMap.put("yearGrowth", String.format("%.2f%%", yearGrowth));
+        yearGrowthMap.put("yearGrowth", yearGrowth); // 结果为整数
         result.put("yearGrowth", yearGrowthMap);
 
         // 统计月增长率：对比本月与上月溯源数量
         Long thisMonth = agricultureConsoleMapper.getTraceCountThisMonth();  //本月
         Long lastMonth = agricultureConsoleMapper.getTraceCountLastMonth();  //上个月
-        double monthGrowth = (lastMonth != null && lastMonth > 0) ? ((thisMonth - lastMonth) * 1.0 / lastMonth) * 100 : 0.0;
+        long monthGrowth = (lastMonth != null && lastMonth > 0) ? Math.round(((thisMonth - lastMonth) * 1.0 / lastMonth) * 100) : 0L;
         Map<String, Object> monthGrowthMap = new HashMap<>();
         monthGrowthMap.put("thisMonth", thisMonth);
         monthGrowthMap.put("lastMonth", lastMonth);
-        monthGrowthMap.put("monthGrowth", String.format("%.2f%%", monthGrowth));
+        monthGrowthMap.put("monthGrowth", monthGrowth); // 结果为整数
         result.put("monthGrowth", monthGrowthMap);
 
         // 统计周增长率：对比本周与上周溯源数量
         Long thisWeek = agricultureConsoleMapper.getTraceCountThisWeek();  //本周
         Long lastWeek = agricultureConsoleMapper.getTraceCountLastWeek();  //上周
-        double weekGrowth = (lastWeek != null && lastWeek > 0) ? ((thisWeek - lastWeek) * 1.0 / lastWeek) * 100 : 0.0;
+        long weekGrowth = (lastWeek != null && lastWeek > 0) ? Math.round(((thisWeek - lastWeek) * 1.0 / lastWeek) * 100) : 0L;
         Map<String, Object> weekGrowthMap = new HashMap<>();
         weekGrowthMap.put("thisWeek", thisWeek);
         weekGrowthMap.put("lastWeek", lastWeek);
-        weekGrowthMap.put("weekGrowth", String.format("%.2f%%", weekGrowth));
+        weekGrowthMap.put("weekGrowth", weekGrowth); // 结果为整数
         result.put("weekGrowth", weekGrowthMap);
 
         return result;
