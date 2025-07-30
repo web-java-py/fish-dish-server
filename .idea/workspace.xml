@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="溯源环境数据bug修复">
+    <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="俊少瞎搞bug修复">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/constant/AgricultureConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/constant/AgricultureConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/consumer/FbConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/consumer/FbConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureDeviceSensorAlertServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureDeviceSensorAlertServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverlog/sys-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiOnlineDeviceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiOnlineDeviceService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-info.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverlog/sys-user.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-user.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,14 +171,6 @@
       <workItem from="1753436621279" duration="1612000" />
       <workItem from="1753859776221" duration="32000" />
       <workItem from="1753859975842" duration="1050000" />
-    </task>
-    <task id="LOCAL-00004" summary="mqtt推送 数据解析拆分">
-      <option name="closed" value="true" />
-      <created>1751038844188</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1751038844188</updated>
     </task>
     <task id="LOCAL-00005" summary="参数类型字典实现">
       <option name="closed" value="true" />
@@ -556,7 +544,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753864103004</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="俊少瞎搞bug修复">
+      <option name="closed" value="true" />
+      <created>1753865992258</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1753865992258</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,7 +582,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="溯源接口实现2" />
     <MESSAGE value="溯源接口实现 bug修复" />
     <MESSAGE value="sql调优 查询优化 气象查询效率提高500倍" />
     <MESSAGE value="气象书院sql调优 &#10;查询优化 &#10;溯源查询效率提高100倍" />
@@ -611,7 +606,8 @@
     <MESSAGE value="预合并" />
     <MESSAGE value="XXX" />
     <MESSAGE value="溯源环境数据bug修复" />
-    <option name="LAST_COMMIT_MESSAGE" value="溯源环境数据bug修复" />
+    <MESSAGE value="俊少瞎搞bug修复" />
+    <option name="LAST_COMMIT_MESSAGE" value="俊少瞎搞bug修复" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
