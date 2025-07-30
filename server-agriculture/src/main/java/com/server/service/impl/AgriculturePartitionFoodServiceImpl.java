@@ -184,6 +184,12 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
             if (batchTask.getActualStart() != null && batchTask.getActualFinish() != null) {
                 LocalDateTime start = toLocalDateTime(batchTask.getActualStart());
                 LocalDateTime end = toLocalDateTime(batchTask.getActualFinish());
+                
+                // 如果开始时间和结束时间在同一天，将结束时间调整为当天的23:59:59
+                if (start != null && end != null && start.toLocalDate().equals(end.toLocalDate())) {
+                    end = end.withHour(23).withMinute(59).withSecond(59).withNano(999999999);
+                }
+                
                 // 新建 final 局部变量
                 final LocalDateTime realStart, realEnd;
                 if (start != null && end != null && start.isAfter(end)) {
@@ -243,6 +249,11 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
         LocalDateTime start = startTime.toInstant().atZone(java.time.ZoneId.systemDefault()).toLocalDateTime();
         LocalDateTime end = endTime.toInstant().atZone(java.time.ZoneId.systemDefault()).toLocalDateTime();
         
+        // 如果开始时间和结束时间在同一天，将结束时间调整为当天的23:59:59
+        if (start.toLocalDate().equals(end.toLocalDate())) {
+            end = end.withHour(23).withMinute(59).withSecond(59).withNano(999999999);
+        }
+        
         // 计算时间跨度
         long hoursDiff = ChronoUnit.HOURS.between(start, end);
         
@@ -264,11 +275,15 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
         
         // 如果聚合表没有数据，则查询原始数据
         if (weatherAvg.isEmpty()) {
+            // 将调整后的LocalDateTime转换回Date用于查询
+            Date adjustedStartTime = Date.from(start.atZone(java.time.ZoneId.systemDefault()).toInstant());
+            Date adjustedEndTime = Date.from(end.atZone(java.time.ZoneId.systemDefault()).toInstant());
+            
             List<AgricultureWeatherData> weatherDataList = weatherDataMapper.selectList(
                     new QueryWrapper<AgricultureWeatherData>()
                             .eq("pasture_id", pastureId)
                             .eq("batch_id", batchId)
-                            .between("collect_time", startTime, endTime)
+                            .between("collect_time", adjustedStartTime, adjustedEndTime)
                             .orderByAsc("collect_time")
             );
             
@@ -288,6 +303,11 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
         // 转换Date为LocalDateTime
         LocalDateTime start = startTime.toInstant().atZone(java.time.ZoneId.systemDefault()).toLocalDateTime();
         LocalDateTime end = endTime.toInstant().atZone(java.time.ZoneId.systemDefault()).toLocalDateTime();
+        
+        // 如果开始时间和结束时间在同一天，将结束时间调整为当天的23:59:59
+        if (start.toLocalDate().equals(end.toLocalDate())) {
+            end = end.withHour(23).withMinute(59).withSecond(59).withNano(999999999);
+        }
         
         // 计算时间跨度
         long hoursDiff = ChronoUnit.HOURS.between(start, end);
@@ -310,11 +330,15 @@ public class AgriculturePartitionFoodServiceImpl extends ServiceImpl<Agriculture
         
         // 如果聚合表没有数据，则查询原始数据
         if (waterQualityAvg.isEmpty()) {
+            // 将调整后的LocalDateTime转换回Date用于查询
+            Date adjustedStartTime = Date.from(start.atZone(java.time.ZoneId.systemDefault()).toInstant());
+            Date adjustedEndTime = Date.from(end.atZone(java.time.ZoneId.systemDefault()).toInstant());
+            
             List<AgricultureWaterQualityData> waterQualityDataList = waterQualityDataMapper.selectList(
                     new QueryWrapper<AgricultureWaterQualityData>()
                             .eq("pasture_id", pastureId)
                             .eq("batch_id", batchId)
-                            .between("collect_time", startTime, endTime)
+                            .between("collect_time", adjustedStartTime, adjustedEndTime)
                             .orderByAsc("collect_time")
             );
             
