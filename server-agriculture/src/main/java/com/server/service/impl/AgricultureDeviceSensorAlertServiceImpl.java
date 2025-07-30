@@ -9,11 +9,6 @@ import java.util.List;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.server.core.text.Convert;
-import com.server.domain.AgricultureDevice;
-import com.server.fisco.bcos.AgricultureDeviceSensorAlertFB;
-import com.server.mapper.AgricultureDeviceMapper;
-import com.server.service.AgricultureDeviceService;
-import com.server.utils.DateUtils;
 import org.fisco.bcos.sdk.client.Client;
 import org.fisco.bcos.sdk.model.TransactionReceipt;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +22,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * 传感器预警信息Service业务层处理
- * 
+ *
  * @author server
  * @date 2025-05-26
  */
@@ -48,7 +43,7 @@ public class AgricultureDeviceSensorAlertServiceImpl extends ServiceImpl<Agricul
 
     /**
      * 查询传感器预警信息
-     * 
+     *
      * @param id 传感器预警信息主键
      * @return 传感器预警信息
      */
@@ -60,7 +55,7 @@ public class AgricultureDeviceSensorAlertServiceImpl extends ServiceImpl<Agricul
 
     /**
      * 查询传感器预警信息列表
-     * 
+     *
      * @param agricultureDeviceSensorAlert 传感器预警信息
      * @return 传感器预警信息
      */
@@ -87,7 +82,7 @@ public class AgricultureDeviceSensorAlertServiceImpl extends ServiceImpl<Agricul
 
     /**
      * 新增传感器预警信息
-     * 
+     *
      * @param agricultureDeviceSensorAlert 传感器预警信息
      * @return 结果
      */
@@ -129,7 +124,7 @@ public class AgricultureDeviceSensorAlertServiceImpl extends ServiceImpl<Agricul
 
     /**
      * 修改传感器预警信息
-     * 
+     *
      * @param agricultureDeviceSensorAlert 传感器预警信息
      * @return 结果
      */
@@ -142,7 +137,7 @@ public class AgricultureDeviceSensorAlertServiceImpl extends ServiceImpl<Agricul
 
     /**
      * 批量删除传感器预警信息
-     * 
+     *
      * @param ids 需要删除的传感器预警信息主键
      * @return 结果
      */
@@ -154,7 +149,7 @@ public class AgricultureDeviceSensorAlertServiceImpl extends ServiceImpl<Agricul
 
     /**
      * 删除传感器预警信息信息
-     * 
+     *
      * @param id 传感器预警信息主键
      * @return 结果
      */
