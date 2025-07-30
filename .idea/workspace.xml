@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="溯源接口免登录">
+    <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="预合并">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_25_9_54__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_25_9_54__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgriculturePartitionFoodServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgriculturePartitionFoodServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-info.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-user.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-user.log" afterDir="false" />
@@ -92,14 +95,15 @@
     "Spring Boot.ServerApplication.executor": "Run",
     "git-widget-placeholder": "bxwy",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/ZLXN/fish-dish-web",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "项目",
-    "project.structure.proportion": "0.0",
+    "project.structure.proportion": "0.15527344",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "settings.editor.selected.configurable": "MavenSettings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -545,7 +549,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753686132059</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="预合并">
+      <option name="closed" value="true" />
+      <created>1753692609369</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1753692609369</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -575,7 +587,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="设备VO分页Bug修复" />
     <MESSAGE value="设备VO分页Bug修复2" />
     <MESSAGE value="溯源接口实现" />
     <MESSAGE value="溯源接口实现2" />
@@ -600,7 +611,8 @@
     <MESSAGE value="溯源免token查询" />
     <MESSAGE value="趋势数据bug修复" />
     <MESSAGE value="溯源接口免登录" />
-    <option name="LAST_COMMIT_MESSAGE" value="溯源接口免登录" />
+    <MESSAGE value="预合并" />
+    <option name="LAST_COMMIT_MESSAGE" value="预合并" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
