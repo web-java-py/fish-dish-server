@@ -2,9 +2,9 @@ package com.server.ai.tool;
 
 //设备枚举
 public enum DeviceEnum {
-    PUSH_ROD(38L, "电动推杆", 1),
-    FAN(36L, "排气扇", 0),
-    ALARM_LIGHT(37L, "警报灯", 0);
+    PUSH_ROD(39L, "电动推杆", 1),
+    FAN(37L, "排气扇", 0),
+    ALARM_LIGHT(38L, "警报灯", 0);
 
 
     private final Long id;
@@ -28,4 +28,4 @@ public enum DeviceEnum {
         req.setIndex(this.index);
         return req;
     }
-} 
+}

@@ -196,10 +196,7 @@ public class AiService {
         }
         queryCollectionMap.put(query, contents);
         List<Content> finalContents = contentAggregator.aggregate(queryCollectionMap);
-        if (finalContents.size() == 0) {
-            prompt = AiUtils.setThink(AiThink, prompt);
-        }
-        return contentInjector.inject(finalContents, userMessage(prompt));
+        return contentInjector.inject(finalContents, userMessage(AiUtils.setThink(AiThink, prompt)));
     }
 
     private void sinkNext(FluxSink<String> sink, String partialResponse) {

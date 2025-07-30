@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="完成AI智能实时监控设备">
+    <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="优化控制台 比例数据去掉小数">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureConsoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureConsoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/tool/DeviceEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/tool/DeviceEnum.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,15 +146,7 @@
       <workItem from="1753064929875" duration="38173000" />
       <workItem from="1753411068938" duration="23963000" />
       <workItem from="1753496133026" duration="16551000" />
-      <workItem from="1753759949972" duration="12318000" />
-    </task>
-    <task id="LOCAL-00003" summary="mqtt推送 数据解析拆分">
-      <option name="closed" value="true" />
-      <created>1751037274215</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1751037274215</updated>
+      <workItem from="1753759949972" duration="17452000" />
     </task>
     <task id="LOCAL-00004" summary="mqtt推送 数据解析拆分">
       <option name="closed" value="true" />
@@ -529,7 +522,14 @@
       <option name="project" value="LOCAL" />
       <updated>1753772750021</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="优化控制台 比例数据去掉小数">
+      <created>1753776077322</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1753776077322</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -559,7 +559,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="摄像头参数配置接口实现" />
     <MESSAGE value="摄像头参数配置接口实现2" />
     <MESSAGE value="摄像头实现" />
     <MESSAGE value="设备VO分页Bug修复" />
@@ -584,7 +583,8 @@
     <MESSAGE value="智能体开发完毕" />
     <MESSAGE value="智能体开发中" />
     <MESSAGE value="完成AI智能实时监控设备" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成AI智能实时监控设备" />
+    <MESSAGE value="优化控制台 比例数据去掉小数" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化控制台 比例数据去掉小数" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
