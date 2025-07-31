@@ -201,7 +201,7 @@ public class AiService {
 
     private void sinkNext(FluxSink<String> sink, String partialResponse) {
         String response = AiUtils.cleanThink(AiThink, partialResponse);
-        if (StringUtils.isEmpty(response)) return;
+        if (!AiUtils.thinkOFF()) return;
         sink.next(JSON.toJSONString(ChatStreamVO.builder()
                 .response(response)
                 .build()));

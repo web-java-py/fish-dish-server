@@ -1,6 +1,7 @@
 package com.server.ai;
 
 import com.server.ai.tool.AgricultureTools;
+import com.server.utils.StringUtils;
 import dev.langchain4j.agent.tool.ToolExecutionRequest;
 import dev.langchain4j.data.message.ChatMessage;
 import org.slf4j.Logger;
@@ -15,6 +16,10 @@ import static dev.langchain4j.data.message.ToolExecutionResultMessage.toolExecut
 public class AiUtils {
 
     private static final Logger log = LoggerFactory.getLogger(AiUtils.class);
+
+    private static int thinkCount = 0;
+
+    private static boolean thinkOFF = false;
 
     public static List<ChatMessage> operateToolExecution(AgricultureTools agricultureTools, List<ToolExecutionRequest> toolExecutionRequests, List<ChatMessage> chatMessages) {
         if (toolExecutionRequests != null && toolExecutionRequests.size() > 0) {
@@ -50,10 +55,28 @@ public class AiUtils {
     }
 
     public static String cleanThink(boolean AiThink, String think) {
+        thinkHandle(think);
         return AiThink ? think : think.replace("<think>", "").replace("</think>", "");
+    }
+
+    public static String cleanThinkRe(boolean AiThink, String think) {
+        return AiThink ? think : think.replaceAll("<think>.*?</think>", "");
     }
 
     public static String cleanThink(String think) {
         return think.replace("<think>", "").replace("</think>", "");
+    }
+
+    public static void thinkHandle(String think) {
+        boolean t = think.equals("<think>") || think.equals("</think>");
+        if (t) {
+            thinkCount++;
+        } else if (!think.equals("") && !think.contains("\n") && thinkCount == 2) {
+            thinkOFF = true;
+        }
+    }
+
+    public static boolean thinkOFF() {
+        return thinkOFF;
     }
 }
