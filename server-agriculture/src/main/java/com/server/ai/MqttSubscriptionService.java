@@ -161,8 +161,8 @@ public class MqttSubscriptionService {
             String deviceName = topicToDeviceMap.get(topic);
             Long deviceId = topicToDeviceIdMap.get(topic);
             
-            log.info("收到MQTT消息 - 主题: {}, 设备: {}, 数据: {}", 
-                    topic, deviceName, payload);
+//            log.info("收到MQTT消息 - 主题: {}, 设备: {}, 数据: {}",
+//                    topic, deviceName, payload);
             
             // 解析JSON数据
             JSONObject jsonData = JSON.parseObject(payload);

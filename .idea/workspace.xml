@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="俊少瞎搞bug修复">
+    <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="mqtt数据接收">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiOnlineDeviceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiOnlineDeviceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/MqttSubscriptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/MqttSubscriptionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-info.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -171,14 +171,6 @@
       <workItem from="1753436621279" duration="1612000" />
       <workItem from="1753859776221" duration="32000" />
       <workItem from="1753859975842" duration="1050000" />
-    </task>
-    <task id="LOCAL-00005" summary="参数类型字典实现">
-      <option name="closed" value="true" />
-      <created>1751117377800</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1751117377800</updated>
     </task>
     <task id="LOCAL-00006" summary="新增类型实现">
       <option name="closed" value="true" />
@@ -552,7 +544,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753865992258</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="mqtt数据接收">
+      <option name="closed" value="true" />
+      <created>1753868841500</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1753868841500</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -582,7 +582,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="溯源接口实现 bug修复" />
     <MESSAGE value="sql调优 查询优化 气象查询效率提高500倍" />
     <MESSAGE value="气象书院sql调优 &#10;查询优化 &#10;溯源查询效率提高100倍" />
     <MESSAGE value="气象溯源sql调优 &#10;查询优化 &#10;溯源查询效率提高100倍" />
@@ -607,7 +606,8 @@
     <MESSAGE value="XXX" />
     <MESSAGE value="溯源环境数据bug修复" />
     <MESSAGE value="俊少瞎搞bug修复" />
-    <option name="LAST_COMMIT_MESSAGE" value="俊少瞎搞bug修复" />
+    <MESSAGE value="mqtt数据接收" />
+    <option name="LAST_COMMIT_MESSAGE" value="mqtt数据接收" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
