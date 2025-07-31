@@ -91,8 +91,7 @@ public class AgricultureDeviceSensorAlertServiceImpl extends ServiceImpl<Agricul
     public AgricultureDeviceSensorAlert insertAgricultureDeviceSensorAlert(AgricultureDeviceSensorAlert agricultureDeviceSensorAlert) {
         // 存数据库
         agricultureDeviceSensorAlert.setCreateTime(LocalDateTime.now());
-        agricultureDeviceSensorAlert.setCreateBy(SecurityUtils.getUsername());
-        agricultureDeviceSensorAlert.setUpdateBy(SecurityUtils.getUsername());
+
         agricultureDeviceSensorAlertMapper.insert(agricultureDeviceSensorAlert);
         rabbitTemplate.convertAndSend(RabbitMQConstant.FB_EXCHANGE, "*", agricultureDeviceSensorAlert);
         return agricultureDeviceSensorAlert; // 返回对象

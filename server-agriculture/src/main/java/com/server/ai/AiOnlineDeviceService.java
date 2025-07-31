@@ -36,6 +36,8 @@ public class AiOnlineDeviceService {
     );
 
     public void online(String prompt) {
+        log.info("AI开始处理prompt: {}", prompt);
+        
         List<ChatMessage> chatMessages = new ArrayList<>();
         chatMessages.add(DEFAULT_PROMPT.toSystemMessage());
         chatMessages.add(userMessage(prompt));

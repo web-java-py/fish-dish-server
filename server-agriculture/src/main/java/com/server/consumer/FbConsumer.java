@@ -1,5 +1,6 @@
 package com.server.consumer;
 
+import com.server.constant.AgricultureConstants;
 import com.server.domain.AgricultureCropBatch;
 import com.server.domain.AgricultureDevice;
 import com.server.domain.AgricultureDeviceSensorAlert;
@@ -8,6 +9,7 @@ import com.server.fisco.bcos.AgricultureDeviceFB;
 import com.server.fisco.bcos.AgricultureDeviceSensorAlertFB;
 import com.server.fisco.bcos.AgriculturePastureFB;
 import com.server.mapper.AgricultureDeviceSensorAlertMapper;
+import com.server.utils.SecurityUtils;
 import com.server.utils.StringUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.fisco.bcos.sdk.client.Client;
@@ -30,6 +32,8 @@ import static com.server.constant.RabbitMQConstant.*;
 @ConditionalOnProperty(name = "fisco.enabled", havingValue = "true")
 @RabbitListener(queues = FB_QUEUE)
 public class FbConsumer {
+
+
 
     @Autowired
     private Client client;
@@ -132,6 +136,8 @@ public class FbConsumer {
                     agricultureDeviceSensorAlert.getAlertMessage(),
                     BigInteger.valueOf(agricultureDeviceSensorAlert.getAlertLevel())
             );
+            agricultureDeviceSensorAlert.setCreateBy(AgricultureConstants.CREATE_BY);
+            agricultureDeviceSensorAlert.setUpdateBy(AgricultureConstants.UPDATE_BY);
             agricultureDeviceSensorAlert.setBlockAddress(deploy.getContractAddress());
             agricultureDeviceSensorAlertMapper.updateById(agricultureDeviceSensorAlert);
         } catch (ContractException e) {
