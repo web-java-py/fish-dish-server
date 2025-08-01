@@ -68,18 +68,18 @@ public class MqttSubscriptionService {
         try {
             // 获取所有设备
             List<AgricultureDevice> devices = agricultureDeviceService.list();
-            
+
             for (AgricultureDevice device : devices) {
                 // 获取设备的MQTT配置
                 AgricultureDeviceMqttConfig mqttConfig = deviceMqttConfigService.getByDeviceId(device.getId());
-                
+
                 if (mqttConfig != null && mqttConfig.getMqttTopic() != null) {
                     subscribeDevice(device, mqttConfig);
                 } else {
                     log.warn("设备 {} 没有MQTT配置", device.getDeviceName());
                 }
             }
-            
+
             log.info("成功订阅了 {} 个设备的MQTT主题", mqttClients.size());
         } catch (Exception e) {
             log.error("订阅设备MQTT主题失败", e);
@@ -93,31 +93,31 @@ public class MqttSubscriptionService {
         try {
             String brokerKey = mqttConfig.getMqttBroker();
             String topic = mqttConfig.getMqttTopic();
-            
+
             // 检查是否已经为这个broker创建了客户端
             MqttClient client = mqttClients.get(brokerKey);
-            
+
             if (client == null) {
                 // 创建新的MQTT客户端
                 String clientId = "ai_device_subscriber_" + System.currentTimeMillis();
                 client = new MqttClient(brokerKey, clientId, new MemoryPersistence());
-                
+
                 // 配置连接选项
                 MqttConnectOptions options = new MqttConnectOptions();
                 options.setCleanSession(true);
                 options.setConnectionTimeout(30);
                 options.setKeepAliveInterval(60);
                 options.setAutomaticReconnect(true);
-                
+
                 // 设置用户名和密码（如果有）
                 if (mqttConfig.getMqttUsername() != null && !mqttConfig.getMqttUsername().isEmpty()) {
                     options.setUserName(mqttConfig.getMqttUsername());
                     options.setPassword(mqttConfig.getMqttPassword().toCharArray());
                 }
-                
+
                 // 连接MQTT服务器
                 client.connect(options);
-                
+
                 // 设置回调
                 client.setCallback(new MqttCallback() {
                     @Override
@@ -127,7 +127,8 @@ public class MqttSubscriptionService {
 
                     @Override
                     public void messageArrived(String topic, MqttMessage message) {
-                        handleMqttMessage(topic, message);
+                        // TODO 大模型实时监控完成一半
+//                        handleMqttMessage(message);
                     }
 
                     @Override
@@ -135,18 +136,18 @@ public class MqttSubscriptionService {
                         // 发布完成回调，这里不需要处理
                     }
                 });
-                
+
                 mqttClients.put(brokerKey, client);
                 log.info("成功连接到MQTT服务器: {}", brokerKey);
             }
-            
+
             // 订阅主题
             client.subscribe(topic, mqttConfig.getMqttQos().intValue());
             topicToDeviceMap.put(topic, device.getDeviceName());
             topicToDeviceIdMap.put(topic, device.getId());
-            
+
             log.info("成功订阅设备 {} 的主题: {}", device.getDeviceName(), topic);
-            
+
         } catch (MqttException e) {
             log.error("订阅设备 {} 的MQTT主题失败: {}", device.getDeviceName(), e.getMessage(), e);
         }
@@ -155,27 +156,20 @@ public class MqttSubscriptionService {
     /**
      * 处理接收到的MQTT消息
      */
-    private void handleMqttMessage(String topic, MqttMessage message) {
+    private void handleMqttMessage(MqttMessage message) {
         try {
             String payload = new String(message.getPayload());
-            String deviceName = topicToDeviceMap.get(topic);
-            Long deviceId = topicToDeviceIdMap.get(topic);
-            
-//            log.info("收到MQTT消息 - 主题: {}, 设备: {}, 数据: {}",
-//                    topic, deviceName, payload);
-            
+
             // 解析JSON数据
-            JSONObject jsonData = JSON.parseObject(payload);
-            JSONObject data = jsonData.getJSONObject("data");
-            
+            JSONObject data = JSON.parseObject(payload);
+
             if (data != null) {
                 // 转换为DTO
                 MqttDeviceDataDTO deviceData = convertToDeviceData(data);
-                
+
                 // 处理设备数据并传递给AI
                 processDeviceDataForAI(deviceData);
             }
-            
         } catch (Exception e) {
             log.error("处理MQTT消息失败: {}", e.getMessage(), e);
         }
@@ -188,12 +182,12 @@ public class MqttSubscriptionService {
         try {
             // 构建包含设备数据的prompt
             String deviceDataPrompt = buildDeviceDataPrompt(deviceData);
-            
+
             log.info("收到设备数据，准备传递给AI处理: {}", deviceDataPrompt);
-            
+
             // 调用online方法处理设备数据
             aiOnlineDeviceService.online(deviceDataPrompt);
-            
+
         } catch (Exception e) {
             log.error("处理设备数据传递给AI失败: {}", e.getMessage(), e);
         }
@@ -204,14 +198,12 @@ public class MqttSubscriptionService {
      */
     private String buildDeviceDataPrompt(MqttDeviceDataDTO deviceData) {
         StringBuilder prompt = new StringBuilder();
-        prompt.append("收到新的设备数据，请分析并给出建议：\n\n");
-        
         // 基本信息
         prompt.append("设备ID: ").append(deviceData.getDeviceId()).append("\n");
         prompt.append("大棚ID: ").append(deviceData.getPastureId()).append("\n");
         prompt.append("分区ID: ").append(deviceData.getBatchId()).append("\n");
         prompt.append("采集时间: ").append(deviceData.getCollectTime()).append("\n\n");
-        
+
         // 气象数据
         if (deviceData.getTemperature() != null || deviceData.getHumidity() != null) {
             prompt.append("气象数据:\n");
@@ -238,7 +230,7 @@ public class MqttSubscriptionService {
             }
             prompt.append("\n");
         }
-        
+
         // 水质数据
         if (deviceData.getPhValue() != null || deviceData.getDissolvedOxygen() != null) {
             prompt.append("水质数据:\n");
@@ -259,9 +251,6 @@ public class MqttSubscriptionService {
             }
             prompt.append("\n");
         }
-        
-        prompt.append("请根据以上数据进行分析，并提供相应的建议和措施。");
-        
         return prompt.toString();
     }
 
@@ -270,26 +259,26 @@ public class MqttSubscriptionService {
      */
     private MqttDeviceDataDTO convertToDeviceData(JSONObject data) {
         MqttDeviceDataDTO deviceData = new MqttDeviceDataDTO();
-        
+
         deviceData.setId(data.getLong("id"));
         deviceData.setDeviceId(data.getLong("deviceId"));
         deviceData.setPastureId(data.getString("pastureId"));
         deviceData.setBatchId(data.getString("batchId"));
         deviceData.setRemark(data.getString("remark"));
-        
+
         // 解析时间
         String collectTimeStr = data.getString("collectTime");
         if (collectTimeStr != null) {
             try {
                 // 处理ISO 8601格式的时间
-                LocalDateTime collectTime = LocalDateTime.parse(collectTimeStr, 
+                LocalDateTime collectTime = LocalDateTime.parse(collectTimeStr,
                     DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSSSSS"));
                 deviceData.setCollectTime(collectTime);
             } catch (Exception e) {
                 log.warn("解析时间失败: {}", collectTimeStr);
             }
         }
-        
+
         // 气象数据字段
         deviceData.setWindSpeed(data.getDouble("windSpeed"));
         deviceData.setWindDirection(data.getString("windDirection"));
@@ -298,14 +287,14 @@ public class MqttSubscriptionService {
         deviceData.setLightIntensity(data.getDouble("lightIntensity"));
         deviceData.setRainfall(data.getDouble("rainfall"));
         deviceData.setAirPressure(data.getDouble("airPressure"));
-        
+
         // 水质数据字段
         deviceData.setWaterTemperature(data.getDouble("waterTemperature"));
         deviceData.setPhValue(data.getDouble("phValue"));
         deviceData.setDissolvedOxygen(data.getDouble("dissolvedOxygen"));
         deviceData.setConductivity(data.getDouble("conductivity"));
         deviceData.setAmmoniaNitrogen(data.getDouble("ammoniaNitrogen"));
-        
+
         return deviceData;
     }
 
@@ -314,7 +303,7 @@ public class MqttSubscriptionService {
      */
     public void resubscribeAllDevices() {
         log.info("重新订阅所有设备的MQTT主题...");
-        
+
         // 断开所有现有连接
         mqttClients.values().forEach(client -> {
             try {
@@ -325,12 +314,12 @@ public class MqttSubscriptionService {
                 log.error("断开MQTT连接失败", e);
             }
         });
-        
+
         mqttClients.clear();
         topicToDeviceMap.clear();
         topicToDeviceIdMap.clear();
-        
+
         // 重新订阅
         subscribeAllDevices();
     }
-} 
+}
