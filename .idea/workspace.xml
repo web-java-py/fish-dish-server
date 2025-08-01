@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="mqtt数据接收">
+    <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="mqtt推送数据ai">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Merge_2025_7_24_11_03___Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_25_9_54_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_25_9_54__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/在进行Merge之前于_2025_7_24_上午11_03_取消提交了更改_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/MqttSubscriptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/MqttSubscriptionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-info.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-user.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-user.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +68,9 @@
         <option name="userSettingsFile" value="D:\maven\apache-maven-3.9.9\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="PerforceDirect.Settings">
+    <option name="CHARSET" value="无" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -171,14 +179,6 @@
       <workItem from="1753436621279" duration="1612000" />
       <workItem from="1753859776221" duration="32000" />
       <workItem from="1753859975842" duration="1050000" />
-    </task>
-    <task id="LOCAL-00006" summary="新增类型实现">
-      <option name="closed" value="true" />
-      <created>1751119474187</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1751119474187</updated>
     </task>
     <task id="LOCAL-00007" summary="实体类字段修改">
       <option name="closed" value="true" />
@@ -552,7 +552,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753868841500</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="mqtt推送数据ai">
+      <option name="closed" value="true" />
+      <created>1753928261970</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1753928261970</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -582,7 +590,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="sql调优 查询优化 气象查询效率提高500倍" />
     <MESSAGE value="气象书院sql调优 &#10;查询优化 &#10;溯源查询效率提高100倍" />
     <MESSAGE value="气象溯源sql调优 &#10;查询优化 &#10;溯源查询效率提高100倍" />
     <MESSAGE value="水质溯源sql调优 &#10;查询优化 &#10;性能提升了 75.09%，查询时间减少了约3/4" />
@@ -607,7 +614,8 @@
     <MESSAGE value="溯源环境数据bug修复" />
     <MESSAGE value="俊少瞎搞bug修复" />
     <MESSAGE value="mqtt数据接收" />
-    <option name="LAST_COMMIT_MESSAGE" value="mqtt数据接收" />
+    <MESSAGE value="mqtt推送数据ai" />
+    <option name="LAST_COMMIT_MESSAGE" value="mqtt推送数据ai" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

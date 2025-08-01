@@ -1,0 +1,8 @@
+12:53:30.552 [http-nio-8080-exec-98] ERROR c.s.w.MqSocketServer - [onError,48] - RabbitMQ客户端异常
+17:35:22.615 [http-nio-8080-exec-88] ERROR c.s.w.MqSocketServer - [onError,48] - RabbitMQ客户端异常
+18:39:46.483 [http-nio-8080-exec-69] ERROR c.s.w.MqSocketServer - [onError,48] - RabbitMQ客户端异常
+18:39:46.483 [http-nio-8080-exec-68] ERROR c.s.w.MqSocketServer - [onError,48] - RabbitMQ客户端异常
+19:14:16.380 [http-nio-8080-exec-56] ERROR c.s.w.MqSocketServer - [onError,48] - RabbitMQ客户端异常
+19:14:16.380 [http-nio-8080-exec-53] ERROR c.s.w.MqSocketServer - [onError,48] - RabbitMQ客户端异常
+19:14:16.380 [http-nio-8080-exec-49] ERROR c.s.w.MqSocketServer - [onError,48] - RabbitMQ客户端异常
+19:14:16.380 [http-nio-8080-exec-54] ERROR c.s.w.MqSocketServer - [onError,48] - RabbitMQ客户端异常
