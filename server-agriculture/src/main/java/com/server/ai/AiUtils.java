@@ -71,8 +71,10 @@ public class AiUtils {
         boolean t = think.equals("<think>") || think.equals("</think>");
         if (t) {
             thinkCount++;
-        } else if (!think.equals("") && !think.contains("\n") && thinkCount == 2) {
+            thinkOFF = false;
+        } else if (!think.equals("") && !think.contains("\n") && (thinkCount == 2 || thinkCount == 4)) {
             thinkOFF = true;
+            thinkCount = 0;
         }
     }
 

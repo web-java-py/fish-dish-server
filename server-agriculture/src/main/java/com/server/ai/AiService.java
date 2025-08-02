@@ -20,6 +20,7 @@ import dev.langchain4j.model.chat.request.ChatRequest;
 import dev.langchain4j.model.chat.request.ResponseFormat;
 import dev.langchain4j.model.chat.response.ChatResponse;
 import dev.langchain4j.model.chat.response.StreamingChatResponseHandler;
+import dev.langchain4j.model.input.Prompt;
 import dev.langchain4j.model.ollama.OllamaChatModel;
 import dev.langchain4j.rag.content.Content;
 import dev.langchain4j.rag.content.aggregator.ContentAggregator;
@@ -49,6 +50,14 @@ import static dev.langchain4j.data.message.UserMessage.userMessage;
 @Service
 public class AiService {
 
+    private static final Prompt DEFAULT_PROMPT = Prompt.from(
+            "You are an expert in observing IoT devices, and your main responsibility is to comprehensively monitor and manage the operational status of various IoT devices. \n" +
+                    "By analyzing the monitoring data of the equipment in real-time, you can quickly identify and adjust the operating thresholds of the equipment to ensure that they are always in optimal working condition. \n" +
+                    "When the operating status of a device exceeds the preset range, you will immediately take corresponding measures and adjust the appropriate response device. \n" +
+                    "At the same time, after the device status returns to normal, you will promptly shut down the relevant adjustment devices to maintain the efficiency and security of the system. \n" +
+                    "You have solid technical knowledge and keen observation skills, which can effectively prevent and solve possible problems, ensuring the stable operation of IoT devices."
+    );
+
     @Autowired
     private AiLocalProperties aiLocalProperties;
     @Autowired
@@ -65,6 +74,8 @@ public class AiService {
     private ContentInjector contentInjector;
     @Autowired
     private Boolean AiThink;
+    @Autowired
+    public OllamaChatModel onlineModel;
 
     public String chat(String prompt) {
         return ollamaChatModel.chat(prompt);
@@ -181,6 +192,21 @@ public class AiService {
                 }
             });
         });
+    }
+
+    public void onlineAgents(String prompt) {
+        List<ChatMessage> chatMessages = new ArrayList<>();
+        chatMessages.add(DEFAULT_PROMPT.toSystemMessage());
+        chatMessages.add(CreateRagChatMessage(prompt));
+        ChatResponse chatResponse = onlineModel.chat(getChatRequestTool(chatMessages));
+        List<ToolExecutionRequest> toolExecutionRequests = chatResponse.aiMessage().toolExecutionRequests();
+        if (ObjectUtils.isNotEmpty(toolExecutionRequests)) {
+            chatMessages.add(chatResponse.aiMessage());
+            List<ChatMessage> chatMessageList = AiUtils.operateToolExecution(agricultureTools, toolExecutionRequests, chatMessages);
+            log.info("online模型实时监听心跳:" + onlineModel.chat(getChatRequestTool(chatMessageList)).aiMessage().text());
+        } else {
+            log.info("online模型实时监听心跳:" + chatResponse.aiMessage().text());
+        }
     }
 
     public ChatMessage CreateRagChatMessage(String prompt) {

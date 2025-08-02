@@ -33,7 +33,7 @@ public class MqttSubscriptionService {
     private AgricultureDeviceMqttConfigService deviceMqttConfigService;
 
     @Autowired
-    private AiOnlineDeviceService aiOnlineDeviceService;
+    private AiService aiService;
 
     private final Map<String, MqttClient> mqttClients = new ConcurrentHashMap<>();
     private final Map<String, String> topicToDeviceMap = new ConcurrentHashMap<>();
@@ -182,10 +182,8 @@ public class MqttSubscriptionService {
             // 构建包含设备数据的prompt
             String deviceDataPrompt = buildDeviceDataPrompt(deviceData);
 
-            log.info("收到设备数据，准备传递给AI处理: {}", deviceDataPrompt);
-
             // 调用online方法处理设备数据
-            aiOnlineDeviceService.online(deviceDataPrompt);
+            aiService.onlineAgents(deviceDataPrompt);
 
         } catch (Exception e) {
             log.error("处理设备数据传递给AI失败: {}", e.getMessage(), e);
@@ -201,7 +199,6 @@ public class MqttSubscriptionService {
         prompt.append("设备ID: ").append(deviceData.getDeviceId()).append("\n");
         prompt.append("大棚ID: ").append(deviceData.getPastureId()).append("\n");
         prompt.append("分区ID: ").append(deviceData.getBatchId()).append("\n");
-        prompt.append("采集时间: ").append(deviceData.getCollectTime()).append("\n\n");
 
         // 气象数据
         if (deviceData.getTemperature() != null || deviceData.getHumidity() != null) {
