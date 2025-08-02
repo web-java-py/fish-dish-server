@@ -13,4 +13,6 @@ public class AiOllamaProperties {
     private Double temperature;
     private Integer timeout;
     private Boolean think;
+    private String onlineUrl;
+    private String onlineModel;
 }

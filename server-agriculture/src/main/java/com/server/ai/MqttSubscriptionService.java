@@ -127,8 +127,7 @@ public class MqttSubscriptionService {
 
                     @Override
                     public void messageArrived(String topic, MqttMessage message) {
-                        // TODO 大模型实时监控完成一半
-//                        handleMqttMessage(message);
+                        handleMqttMessage(message);
                     }
 
                     @Override

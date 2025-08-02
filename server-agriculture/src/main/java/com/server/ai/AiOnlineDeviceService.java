@@ -1,5 +1,6 @@
 package com.server.ai;
 
+import com.server.ai.sql.SqlDatabaseContentRetriever;
 import com.server.ai.tool.AgricultureTools;
 import dev.langchain4j.agent.tool.ToolExecutionRequest;
 import dev.langchain4j.agent.tool.ToolSpecification;
@@ -9,6 +10,12 @@ import dev.langchain4j.model.chat.request.ChatRequest;
 import dev.langchain4j.model.chat.response.ChatResponse;
 import dev.langchain4j.model.input.Prompt;
 import dev.langchain4j.model.ollama.OllamaChatModel;
+import dev.langchain4j.rag.content.Content;
+import dev.langchain4j.rag.content.aggregator.ContentAggregator;
+import dev.langchain4j.rag.content.injector.ContentInjector;
+import dev.langchain4j.rag.content.retriever.ContentRetriever;
+import dev.langchain4j.rag.query.Query;
+import dev.langchain4j.rag.query.router.QueryRouter;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,9 +30,15 @@ import static dev.langchain4j.data.message.UserMessage.userMessage;
 public class AiOnlineDeviceService {
 
     @Autowired
-    public OllamaChatModel ollamaChatModel;
+    public OllamaChatModel onlineModel;
     @Autowired
     private AgricultureTools agricultureTools;
+    @Autowired
+    private QueryRouter queryRouter;
+    @Autowired
+    private ContentAggregator contentAggregator;
+    @Autowired
+    private ContentInjector contentInjector;
 
     private static final Prompt DEFAULT_PROMPT = Prompt.from(
             "You are an expert in observing IoT devices, and your main responsibility is to comprehensively monitor and manage the operational status of various IoT devices. \n" +
@@ -36,17 +49,15 @@ public class AiOnlineDeviceService {
     );
 
     public void online(String prompt) {
-        log.info("AI开始处理prompt: {}", prompt);
-        
         List<ChatMessage> chatMessages = new ArrayList<>();
         chatMessages.add(DEFAULT_PROMPT.toSystemMessage());
-        chatMessages.add(userMessage(prompt));
-        ChatResponse chatResponse = ollamaChatModel.chat(getChatRequestTool(chatMessages));
+        chatMessages.add(CreateRagChatMessage(prompt));
+        ChatResponse chatResponse = onlineModel.chat(getChatRequestTool(chatMessages));
         List<ToolExecutionRequest> toolExecutionRequests = chatResponse.aiMessage().toolExecutionRequests();
         if (ObjectUtils.isNotEmpty(toolExecutionRequests)) {
             chatMessages.add(chatResponse.aiMessage());
             List<ChatMessage> chatMessageList = AiUtils.operateToolExecution(agricultureTools, toolExecutionRequests, chatMessages);
-            log.info(ollamaChatModel.chat(getChatRequestTool(chatMessageList)).aiMessage().text());
+            log.info(onlineModel.chat(getChatRequestTool(chatMessageList)).aiMessage().text());
         } else {
             log.info(chatResponse.aiMessage().text());
         }
@@ -58,5 +69,18 @@ public class AiOnlineDeviceService {
                 .messages(messages)
                 .toolSpecifications(toolSpecifications)
                 .build();
+    }
+
+    public ChatMessage CreateRagChatMessage(String prompt) {
+        Query query = Query.from(prompt);
+        Map<Query, Collection<List<Content>>> queryCollectionMap = new HashMap<>();
+        Collection<ContentRetriever> contentRetrievers = queryRouter.route(query);
+        List<List<Content>> contents = new ArrayList<>();
+        for (ContentRetriever contentRetriever : contentRetrievers) {
+            contents.add(contentRetriever.retrieve(query));
+        }
+        queryCollectionMap.put(query, contents);
+        List<Content> finalContents = contentAggregator.aggregate(queryCollectionMap);
+        return contentInjector.inject(finalContents, userMessage(prompt));
     }
 }

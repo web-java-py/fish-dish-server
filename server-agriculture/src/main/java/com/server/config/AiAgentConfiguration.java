@@ -67,6 +67,16 @@ public class AiAgentConfiguration {
     }
 
     @Bean
+    public OllamaChatModel onlineModel(){
+        return OllamaChatModel.builder()
+                .baseUrl(aiOllamaProperties.getOnlineUrl())
+                .modelName(aiOllamaProperties.getOnlineModel())
+                .temperature(aiOllamaProperties.getTemperature())
+                .timeout(Duration.ofSeconds(aiOllamaProperties.getTimeout()))
+                .build();
+    }
+
+    @Bean
     public EmbeddingModel embeddingModel() {
         return OllamaEmbeddingModel.builder()
                 .baseUrl(aiOllamaProperties.getBaseUrl())
