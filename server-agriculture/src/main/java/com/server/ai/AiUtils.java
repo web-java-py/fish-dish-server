@@ -21,21 +21,21 @@ public class AiUtils {
 
     private static boolean thinkOFF = false;
 
-    public static List<ChatMessage> operateToolExecution(AgricultureTools agricultureTools, List<ToolExecutionRequest> toolExecutionRequests, List<ChatMessage> chatMessages) {
+    public static List<ChatMessage> operateToolExecution(AgricultureTools agricultureTools, List<ToolExecutionRequest> toolExecutionRequests, List<ChatMessage> chatMessages, String bot) {
         if (toolExecutionRequests != null && toolExecutionRequests.size() > 0) {
             toolExecutionRequests.forEach(toolExecutionRequest -> {
                 String methodName = toolExecutionRequest.name(); // 获取请求的工具名称
                 try {
                     // 获取方法的参数类型
-                    Method method = agricultureTools.getClass().getDeclaredMethod(methodName);
-                    method.invoke(agricultureTools); // 调用方法
+                    Method method = agricultureTools.getClass().getDeclaredMethod(methodName, String.class);
+                    method.invoke(agricultureTools, bot); // 调用方法
                     chatMessages.add(toolExecutionResultMessage(toolExecutionRequest, "true"));
                 } catch (NoSuchMethodException e) {
                     log.error("方法 " + methodName + " 不存在: " + e.getMessage());
                     chatMessages.add(toolExecutionResultMessage(toolExecutionRequest, "false - " + e.getMessage()));
                 } catch (IllegalAccessException | InvocationTargetException e) {
-                    log.error("调用方法 " + methodName + " 时出现错误: " + e.getMessage());
-                    chatMessages.add(toolExecutionResultMessage(toolExecutionRequest, "false - " + e.getMessage()));
+                    log.error("调用方法 " + methodName + " 时出现错误: " + e.getCause());
+                    chatMessages.add(toolExecutionResultMessage(toolExecutionRequest, "false - " + e.getCause()));
                 }
             });
         }

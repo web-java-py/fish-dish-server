@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="更新大模型实时监控功能">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f197720f-b50e-45ce-8c7c-6381843bae90.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f197720f-b50e-45ce-8c7c-6381843bae90.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiOnlineDeviceService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/resources/templates/ai/chat-role.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/resources/templates/ai/chat-role.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/MqttSubscriptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/MqttSubscriptionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/tool/DeviceControlClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/tool/DeviceControlClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/tool/AgricultureTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/tool/AgricultureTools.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/constant/AiConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/constant/AiConstants.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
