@@ -77,6 +77,17 @@ public class AgricultureDeviceSensorAlertServiceImpl extends ServiceImpl<Agricul
         if (agricultureDeviceSensorAlert.getDeviceType() != null && !agricultureDeviceSensorAlert.getDeviceType().isEmpty()) {
             queryWrapper.eq(AgricultureDeviceSensorAlert::getDeviceType, agricultureDeviceSensorAlert.getDeviceType());
         }
+        // 报警级别过滤（0-警告，1-严重）
+        if (agricultureDeviceSensorAlert.getAlertLevel() != null) {
+            queryWrapper.eq(AgricultureDeviceSensorAlert::getAlertLevel, agricultureDeviceSensorAlert.getAlertLevel());
+        }
+        // 处理状态过滤（0未处理，1已处理）
+        if (agricultureDeviceSensorAlert.getStatus() != null) {
+            queryWrapper.eq(AgricultureDeviceSensorAlert::getStatus, agricultureDeviceSensorAlert.getStatus());
+        }
+
+        // 按预警时间倒序排列，最新的数据在前面
+        queryWrapper.orderByDesc(AgricultureDeviceSensorAlert::getAlertTime);
 
         return list(queryWrapper);
     }

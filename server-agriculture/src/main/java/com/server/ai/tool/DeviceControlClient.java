@@ -16,7 +16,7 @@ public class DeviceControlClient {
     private static final Logger logger = LoggerFactory.getLogger(DeviceControlClient.class);
 
     //设备控制api地址
-    private static final String URL = "http://192.168.31.168:8081/deviceOperation/control";
+    private static final String URL = "http://192.168.31.120:8081/deviceOperation/control";
 
     @Autowired
     private RestTemplate restTemplate;
