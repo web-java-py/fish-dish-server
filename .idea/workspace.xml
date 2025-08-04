@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="更新小智大模型实时监控功能">
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/resources/application.yml" afterDir="false" />
+    <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="更新配置">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/MqttSubscriptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/MqttSubscriptionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/constant/AiConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/constant/AiConstants.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,14 +155,6 @@
       <workItem from="1753411068938" duration="23963000" />
       <workItem from="1753496133026" duration="16551000" />
       <workItem from="1753759949972" duration="17452000" />
-    </task>
-    <task id="LOCAL-00007" summary="实体类字段修改">
-      <option name="closed" value="true" />
-      <created>1751128784598</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1751128784598</updated>
     </task>
     <task id="LOCAL-00008" summary="图表趋势数据绑定实现">
       <option name="closed" value="true" />
@@ -532,7 +526,14 @@
       <option name="project" value="LOCAL" />
       <updated>1754292801573</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="更新配置">
+      <created>1754292898607</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1754292898607</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -562,7 +563,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="溯源接口实现" />
     <MESSAGE value="溯源接口实现2" />
     <MESSAGE value="溯源接口实现 bug修复" />
     <MESSAGE value="sql调优 查询优化 气象查询效率提高500倍" />
@@ -587,7 +587,8 @@
     <MESSAGE value="大模型实时监控完成一半" />
     <MESSAGE value="更新大模型实时监控功能" />
     <MESSAGE value="更新小智大模型实时监控功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新小智大模型实时监控功能" />
+    <MESSAGE value="更新配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新配置" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
