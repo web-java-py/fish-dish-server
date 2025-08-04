@@ -63,6 +63,10 @@ public class AiUtils {
         return AiThink ? think : think.replaceAll("<think>.*?</think>", "");
     }
 
+    public static String cleanThinkRe(String think) {
+        return think.replaceAll("<think>\n\n</think>\n\n", "");
+    }
+
     public static String cleanThink(String think) {
         return think.replace("<think>", "").replace("</think>", "");
     }

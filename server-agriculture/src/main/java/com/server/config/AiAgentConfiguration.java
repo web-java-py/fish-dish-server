@@ -108,7 +108,7 @@ public class AiAgentConfiguration {
         return SqlDatabaseContentRetriever.builder()
                 .dataSource(masterDataSource)
                 .chatLanguageModel(ollamaChatModel)
-                .needTables(new String[]{"agriculture_device_type", "agriculture_device", "agriculture_threshold_config"})
+                .needTables(new String[]{"agriculture_threshold_config"})
                 .build();
     }
 

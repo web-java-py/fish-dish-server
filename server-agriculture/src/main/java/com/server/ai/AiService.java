@@ -20,12 +20,12 @@ import dev.langchain4j.model.chat.request.ChatRequest;
 import dev.langchain4j.model.chat.request.ResponseFormat;
 import dev.langchain4j.model.chat.response.ChatResponse;
 import dev.langchain4j.model.chat.response.StreamingChatResponseHandler;
-import dev.langchain4j.model.input.Prompt;
 import dev.langchain4j.model.ollama.OllamaChatModel;
 import dev.langchain4j.rag.content.Content;
 import dev.langchain4j.rag.content.aggregator.ContentAggregator;
 import dev.langchain4j.rag.content.injector.ContentInjector;
 import dev.langchain4j.rag.content.retriever.ContentRetriever;
+import dev.langchain4j.rag.content.retriever.EmbeddingStoreContentRetriever;
 import dev.langchain4j.rag.query.Query;
 import dev.langchain4j.rag.query.router.QueryRouter;
 import lombok.extern.slf4j.Slf4j;
@@ -141,7 +141,7 @@ public class AiService {
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream(AiConstants.AGRICULTURE_BOT);
         List<ChatMessage> chatMessages = new ArrayList<>();
         chatMessages.add(systemMessage(new TextDocumentParser().parse(inputStream).text()));
-        chatMessages.add(CreateRagChatMessage(prompt));
+        chatMessages.add(CreateRagChatMessage(prompt, AiConstants.AGRICULTURE_BOT_NAME));
         return Flux.create(sink -> {
             streamingChatLanguageModel.chat(getChatRequestTool(chatMessages), new StreamingChatResponseHandler() {
 
@@ -189,32 +189,30 @@ public class AiService {
     public void onlineAgents(String prompt) {
         List<ChatMessage> chatMessages = new ArrayList<>();
         chatMessages.add(AiConstants.ASH_BOT.toSystemMessage());
-        chatMessages.add(CreateRagChatMessage(prompt));
+        chatMessages.add(CreateRagChatMessage(prompt, AiConstants.ASH_BOT_NAME));
         ChatResponse chatResponse = onlineModel.chat(getChatRequestTool(chatMessages));
         List<ToolExecutionRequest> toolExecutionRequests = chatResponse.aiMessage().toolExecutionRequests();
         if (ObjectUtils.isNotEmpty(toolExecutionRequests)) {
             chatMessages.add(chatResponse.aiMessage());
             List<ChatMessage> chatMessageList = AiUtils.operateToolExecution(agricultureTools, toolExecutionRequests, chatMessages, AiConstants.ASH_BOT_NAME);
-            log.info("online模型实时监听心跳:" + onlineModel.chat(getChatRequestTool(chatMessageList)).aiMessage().text());
+            log.info("{}实时监听心跳:" + AiUtils.cleanThinkRe(onlineModel.chat(getChatRequestTool(chatMessageList)).aiMessage().text()), AiConstants.ASH_BOT_NAME);
         } else {
-            log.info("online模型实时监听心跳:" + chatResponse.aiMessage().text());
+            log.info("{}实时监听心跳:" + AiUtils.cleanThinkRe(chatResponse.aiMessage().text()), AiConstants.ASH_BOT_NAME);
         }
     }
 
-    public ChatMessage CreateRagChatMessage(String prompt) {
-        Query query = Query.from(prompt);
+    public ChatMessage CreateRagChatMessage(String prompt, String bot) {
+        Query query = Query.from(AiUtils.setThink(prompt));
         Map<Query, Collection<List<Content>>> queryCollectionMap = new HashMap<>();
         Collection<ContentRetriever> contentRetrievers = queryRouter.route(query);
         List<List<Content>> contents = new ArrayList<>();
         for (ContentRetriever contentRetriever : contentRetrievers) {
-            if (contentRetriever instanceof SqlDatabaseContentRetriever) {
-                query = Query.from(AiUtils.setThink(prompt));
-            }
+            if (bot.equals(AiConstants.ASH_BOT_NAME) && contentRetriever instanceof EmbeddingStoreContentRetriever) continue;
             contents.add(contentRetriever.retrieve(query));
         }
         queryCollectionMap.put(query, contents);
         List<Content> finalContents = contentAggregator.aggregate(queryCollectionMap);
-        return contentInjector.inject(finalContents, userMessage(AiUtils.setThink(AiThink, prompt)));
+        return contentInjector.inject(finalContents, userMessage(query.text()));
     }
 
     private void sinkNext(FluxSink<String> sink, String partialResponse) {

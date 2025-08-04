@@ -6,11 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="更新大模型实时监控功能">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-admin/src/main/resources/templates/ai/chat-role.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/resources/templates/ai/chat-role.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-admin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server-admin/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/AiUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/tool/AgricultureTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/tool/AgricultureTools.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/constant/AiConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/constant/AiConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/MqttSubscriptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/MqttSubscriptionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/config/AiAgentConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/config/AiAgentConfiguration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,9 +43,6 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/server-admin/src/main/resources/application-dev.yml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -81,7 +78,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/fisco/bcos" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server-admin/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -94,11 +91,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\idea\project\Java\fish-dish-server\server-admin\src\main\resources" />
+      <recent name="E:\idea\project\Java\fish-dish-server\server-admin\src\main" />
       <recent name="E:\idea\project\Java\fish-dish-server\server-agriculture\src\main\java\com\server\fisco\bcos" />
       <recent name="D:\ZLXN\fish-dish-server\server-agriculture\src\main\java\com\server\service\impl" />
       <recent name="D:\ZLXN\fish-dish-server\server-agriculture\src\main\java\com\server\service" />
-      <recent name="D:\ZLXN\fish-dish-server\server-agriculture\src\main\java\com\server\mapper" />
-      <recent name="D:\ZLXN\fish-dish-server\server-admin\src\main\java\com\server\controller\agriculture" />
     </key>
   </component>
   <component name="RunManager">
@@ -161,14 +158,6 @@
       <workItem from="1753411068938" duration="23963000" />
       <workItem from="1753496133026" duration="16551000" />
       <workItem from="1753759949972" duration="17452000" />
-    </task>
-    <task id="LOCAL-00005" summary="参数类型字典实现">
-      <option name="closed" value="true" />
-      <created>1751117377800</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1751117377800</updated>
     </task>
     <task id="LOCAL-00006" summary="新增类型实现">
       <option name="closed" value="true" />
@@ -542,7 +531,14 @@
       <option name="project" value="LOCAL" />
       <updated>1753842581421</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="更新小智大模型实时监控功能">
+      <created>1754218990261</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1754218990262</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -559,7 +555,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="851543" />
                       </list>
                     </value>
                   </entry>
@@ -572,7 +568,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="设备VO分页Bug修复2" />
     <MESSAGE value="溯源接口实现" />
     <MESSAGE value="溯源接口实现2" />
     <MESSAGE value="溯源接口实现 bug修复" />
@@ -597,7 +592,8 @@
     <MESSAGE value="更新预警上链" />
     <MESSAGE value="大模型实时监控完成一半" />
     <MESSAGE value="更新大模型实时监控功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新大模型实时监控功能" />
+    <MESSAGE value="更新小智大模型实时监控功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新小智大模型实时监控功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

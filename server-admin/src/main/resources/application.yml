@@ -178,7 +178,6 @@ ai:
     think: ${ollama.think}
     online-url: ${ollama.online-url}
     online-model: ${ollama.online-model}
-
   # 本地AI
   local:
     vl-url: ${local.vl-url}
@@ -206,4 +205,8 @@ fisco:
 
 # 溯源地址
 codepath: ${codepath.path}
+
+# 实时模型单机控制
+online:
+  enabled:  ${online.enabled}
 
