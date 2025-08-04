@@ -33,4 +33,4 @@ public class DeviceControlClient {
             return "设备控制失败: " + e.getMessage();
         }
     }
-} 
+}

@@ -8,6 +8,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.eclipse.paho.client.mqttv3.*;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -17,26 +19,27 @@ import java.time.format.DateTimeFormatter;
 
 @Slf4j
 @Service
+@ConditionalOnProperty(name = "online.enabled", havingValue = "true")
 public class MqttSubscriptionService {
 
     @Autowired
     private MqttClientConfig mqttClientConfig;
 
     @Autowired
-    private AiOnlineDeviceService aiOnlineDeviceService;
+    private AiService aiService;
 
     private MqttClient mqttClient;
 
     @PostConstruct
     public void init() {
         log.info("初始化MQTT订阅服务...");
-        
+
         // 验证配置
-        log.info("MQTT配置 - Broker: {}, Topic: {}, Username: {}", 
-                mqttClientConfig.getMqttbroker(), 
-                mqttClientConfig.getLighttopic(), 
+        log.info("MQTT配置 - Broker: {}, Topic: {}, Username: {}",
+                mqttClientConfig.getMqttbroker(),
+                mqttClientConfig.getLighttopic(),
                 mqttClientConfig.getUsername());
-        
+
         subscribeLightTopic();
     }
 
@@ -65,29 +68,29 @@ public class MqttSubscriptionService {
             String lightTopic = mqttClientConfig.getLighttopic();
             String username = mqttClientConfig.getUsername();
             String password = mqttClientConfig.getPassword();
-            
+
             // 创建客户端ID
             String clientId = "ai_light_subscriber_" + System.currentTimeMillis();
-            
+
             // 创建MQTT客户端
             mqttClient = new MqttClient(broker, clientId, new MemoryPersistence());
-            
+
             // 配置连接选项
             MqttConnectOptions options = new MqttConnectOptions();
             options.setCleanSession(true);
             options.setConnectionTimeout(30);
             options.setKeepAliveInterval(60);
             options.setAutomaticReconnect(true);
-            
+
             // 设置用户名和密码
             if (username != null && !username.isEmpty()) {
                 options.setUserName(username);
                 options.setPassword(password.toCharArray());
             }
-            
+
             // 连接MQTT服务器
             mqttClient.connect(options);
-            
+
             // 设置回调
             mqttClient.setCallback(new MqttCallback() {
                 @Override
@@ -105,12 +108,12 @@ public class MqttSubscriptionService {
                     // 发布完成回调，这里不需要处理
                 }
             });
-            
+
             // 订阅光照主题
             mqttClient.subscribe(lightTopic, 1);
-            
+
             log.info("成功连接到MQTT服务器: {} 并订阅光照主题: {}", broker, lightTopic);
-            
+
         } catch (MqttException e) {
             log.error("订阅光照主题失败: {}", e.getMessage(), e);
         }
@@ -122,18 +125,16 @@ public class MqttSubscriptionService {
     private void handleLightMessage(String topic, MqttMessage message) {
         try {
             String payload = new String(message.getPayload());
-            
-            log.info("收到光照MQTT消息 - 主题: {}, 数据: {}", topic, payload);
-            
+
             // 解析JSON数据
             JSONObject lightData = JSON.parseObject(payload);
-            
+
             // 转换为DTO
             MqttDeviceDataDTO deviceData = convertToLightData(lightData);
-            
+
             // 处理光照数据并传递给AI
             processLightDataForAI(deviceData);
-            
+
         } catch (Exception e) {
             log.error("处理光照MQTT消息失败: {}", e.getMessage(), e);
         }
@@ -146,12 +147,10 @@ public class MqttSubscriptionService {
         try {
             // 构建包含光照数据的prompt
             String lightDataPrompt = buildLightDataPrompt(deviceData);
-            
-            log.info("收到光照数据，准备传递给AI处理: {}", lightDataPrompt);
-            
+
             // 调用online方法处理光照数据
-            aiOnlineDeviceService.online(lightDataPrompt);
-            
+            aiService.onlineAgents(lightDataPrompt);
+
         } catch (Exception e) {
             log.error("处理光照数据传递给AI失败: {}", e.getMessage(), e);
         }
@@ -162,29 +161,18 @@ public class MqttSubscriptionService {
      */
     private String buildLightDataPrompt(MqttDeviceDataDTO deviceData) {
         StringBuilder prompt = new StringBuilder();
-        prompt.append("收到新的光照数据，请分析并给出建议：\n\n");
-        
+
         // 基本信息
         prompt.append("设备ID: ").append(deviceData.getDeviceId()).append("\n");
-        prompt.append("大棚ID: ").append(deviceData.getPastureId()).append("\n");
-        prompt.append("分区ID: ").append(deviceData.getBatchId()).append("\n");
-        
-        // 格式化时间显示
-        String formattedTime = "";
-        if (deviceData.getCollectTime() != null) {
-            formattedTime = deviceData.getCollectTime().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-        }
-        prompt.append("采集时间: ").append(formattedTime).append("\n\n");
-        
+
         // 光照数据
         if (deviceData.getLightIntensity() != null) {
             prompt.append("光照数据:\n");
-            prompt.append("- 光照强度: ").append(deviceData.getLightIntensity()).append(" lux\n");
-            prompt.append("\n");
+            prompt.append("- 光照强度(light_intensity): ").append(deviceData.getLightIntensity()).append(" lux\n");
         }
-        
-        prompt.append("请根据以上光照数据进行分析，并提供相应的建议和措施。");
-        
+
+        // 增强提示词
+        prompt.append("当光照数据在阈值范围内，保持当前设备运行。当光照数据大于阈值范围，启动推杆（打开遮阳棚降低光照强度），当光照数据小于阈值范围，关闭推杆（关闭遮阳棚增强光照强度）。");
         return prompt.toString();
     }
 
@@ -193,42 +181,42 @@ public class MqttSubscriptionService {
      */
     private MqttDeviceDataDTO convertToLightData(JSONObject data) {
         MqttDeviceDataDTO deviceData = new MqttDeviceDataDTO();
-        
+
         deviceData.setId(data.getLong("id"));
         deviceData.setDeviceId(data.getLong("deviceId"));
         deviceData.setPastureId(data.getString("pastureId"));
         deviceData.setBatchId(data.getString("batchId"));
         deviceData.setRemark(data.getString("remark"));
-        
+
         // 解析时间
         String collectTimeStr = data.getString("collectTime");
         if (collectTimeStr != null && !collectTimeStr.isEmpty()) {
             try {
                 LocalDateTime collectTime = null;
-                
+
                 // 尝试多种时间格式
                 try {
                     // 格式1: yyyy-MM-dd'T'HH:mm:ss.SSSSSS (6位微秒)
-                    collectTime = LocalDateTime.parse(collectTimeStr, 
+                    collectTime = LocalDateTime.parse(collectTimeStr,
                         DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSSSS"));
                 } catch (Exception e1) {
                     try {
                         // 格式2: yyyy-MM-dd'T'HH:mm:ss.SSSSSSS (7位微秒)
-                        collectTime = LocalDateTime.parse(collectTimeStr, 
+                        collectTime = LocalDateTime.parse(collectTimeStr,
                             DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSSSSS"));
                     } catch (Exception e2) {
                         try {
                             // 格式3: yyyy-MM-dd'T'HH:mm:ss.SSS (3位毫秒)
-                            collectTime = LocalDateTime.parse(collectTimeStr, 
+                            collectTime = LocalDateTime.parse(collectTimeStr,
                                 DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS"));
                         } catch (Exception e3) {
                             // 格式4: yyyy-MM-dd'T'HH:mm:ss (无毫秒)
-                            collectTime = LocalDateTime.parse(collectTimeStr, 
+                            collectTime = LocalDateTime.parse(collectTimeStr,
                                 DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"));
                         }
                     }
                 }
-                
+
                 if (collectTime != null) {
                     deviceData.setCollectTime(collectTime);
                 }
@@ -236,10 +224,10 @@ public class MqttSubscriptionService {
                 log.warn("解析时间失败: {}, 错误: {}", collectTimeStr, e.getMessage());
             }
         }
-        
+
         // 只处理光照数据字段
         deviceData.setLightIntensity(data.getDouble("lightIntensity"));
-        
+
         return deviceData;
     }
 
@@ -248,7 +236,7 @@ public class MqttSubscriptionService {
      */
     public void resubscribeLightTopic() {
         log.info("重新订阅光照主题...");
-        
+
         // 断开现有连接
         if (mqttClient != null) {
             try {
@@ -259,8 +247,8 @@ public class MqttSubscriptionService {
                 log.error("断开MQTT连接失败", e);
             }
         }
-        
+
         // 重新订阅
         subscribeLightTopic();
     }
-} 
+}

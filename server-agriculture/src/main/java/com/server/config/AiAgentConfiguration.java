@@ -67,6 +67,16 @@ public class AiAgentConfiguration {
     }
 
     @Bean
+    public OllamaChatModel onlineModel(){
+        return OllamaChatModel.builder()
+                .baseUrl(aiOllamaProperties.getOnlineUrl())
+                .modelName(aiOllamaProperties.getOnlineModel())
+                .temperature(aiOllamaProperties.getTemperature())
+                .timeout(Duration.ofSeconds(aiOllamaProperties.getTimeout()))
+                .build();
+    }
+
+    @Bean
     public EmbeddingModel embeddingModel() {
         return OllamaEmbeddingModel.builder()
                 .baseUrl(aiOllamaProperties.getBaseUrl())
@@ -98,7 +108,7 @@ public class AiAgentConfiguration {
         return SqlDatabaseContentRetriever.builder()
                 .dataSource(masterDataSource)
                 .chatLanguageModel(ollamaChatModel)
-                .needTables(new String[]{"agriculture_device_type", "agriculture_device", "agriculture_threshold_config"})
+                .needTables(new String[]{"agriculture_threshold_config"})
                 .build();
     }
 

@@ -176,6 +176,8 @@ ai:
     temperature: ${ollama.temperature}
     timeout: ${ollama.timeout}
     think: ${ollama.think}
+    online-url: ${ollama.online-url}
+    online-model: ${ollama.online-model}
   # 本地AI
   local:
     vl-url: ${local.vl-url}
@@ -190,6 +192,7 @@ mqtt:
   default-topic: ${mqtt.default-topic}
   completion-timeout: ${mqtt.completion-timeout}
 
+# MQTT客户端 接收光照
 mqttclient:
   mqttbroker: ${mqttclient.mqttbroker}
   lighttopic: ${mqttclient.lighttopic}
@@ -203,4 +206,8 @@ fisco:
 
 # 溯源地址
 codepath: ${codepath.path}
+
+# 实时模型单机控制
+online:
+  enabled:  ${online.enabled}
 
