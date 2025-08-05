@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="只处理光照">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/tool/DeviceControlClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/ai/tool/DeviceControlClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureDeviceSensorAlertServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-agriculture/src/main/java/com/server/service/impl/AgricultureDeviceSensorAlertServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverlog/sys-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverlog/sys-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-info.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverlog/sys-user.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-user.log" afterDir="false" />
-    </list>
+    <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="只处理光照" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -568,6 +561,13 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="COLUMN_ID_WIDTH">
+                <map>
+                  <entry key="Table.Default.Author.ColumnIdWidth" value="67" />
+                  <entry key="Table.Default.Date.ColumnIdWidth" value="74" />
+                  <entry key="Table.GitHub.CommitStatus.ColumnIdWidth" value="41" />
+                </map>
+              </option>
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
