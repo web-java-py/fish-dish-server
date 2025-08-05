@@ -67,7 +67,7 @@ public class AiAgentConfiguration {
     }
 
     @Bean
-    public OllamaChatModel onlineModel(){
+    public OllamaChatModel onlineModel() {
         return OllamaChatModel.builder()
                 .baseUrl(aiOllamaProperties.getOnlineUrl())
                 .modelName(aiOllamaProperties.getOnlineModel())
