@@ -4,13 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="更新">
+    <list default="true" id="606f7f40-acfc-47d7-86ac-1b9f19ebe093" name="Changes" comment="更新头像">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_31_10_19_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_7_31_10_19__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_8_3_19_03_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2025_8_3_19_03__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f197720f-b50e-45ce-8c7c-6381843bae90.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f197720f-b50e-45ce-8c7c-6381843bae90.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-error.2025-06-22.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-error.2025-06-23.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-error.2025-06-24.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-error.2025-06-27.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-error.2025-06-28.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-error.2025-06-29.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-error.2025-06-30.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-error.2025-07-01.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-info.2025-06-22.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-info.2025-06-23.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-info.2025-06-24.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-info.2025-06-25.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-info.2025-06-27.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-info.2025-06-28.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-info.2025-06-29.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-info.2025-06-30.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-info.2025-07-01.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-info.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-user.2025-06-20.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-user.2025-06-21.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-user.2025-06-23.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-user.2025-06-24.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-user.2025-06-25.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-user.2025-06-27.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-user.2025-06-28.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-user.2025-06-29.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-user.2025-06-30.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-user.2025-07-01.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-user.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-user.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +63,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;BuXianWanYin&quot;
+  }
+}</component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
       <filtered-out-file-type name="LOCAL_BRANCH" />
@@ -44,24 +77,32 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/web-java-py/fish-dish-server.git&quot;,
+    &quot;accountId&quot;: &quot;36df391a-297a-4d0b-975c-8966c2038e28&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="customMavenHome" value="$PROJECT_DIR$/../../../Java_Maven/apache-maven-3.5.4" />
         <option name="localRepository" value="E:\idea\Java_Maven\apache-maven-3.5.4\repo" />
-        <option name="mavenHome" value="$PROJECT_DIR$/../../../Java_Maven/apache-maven-3.5.4" />
+        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
         <option name="userSettingsFile" value="E:\idea\Java_Maven\apache-maven-3.5.4\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="PerforceDirect.Settings">
-    <option name="CHARSET" value="无" />
-  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2z4udUhg2iMJ66cZymyeur89p2B" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -70,22 +111,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/server-admin/src/main/resources" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;bxwy&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -101,14 +143,14 @@
   <component name="RunManager">
     <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="server-admin" />
+      <option name="SHORTEN_COMMAND_LINE" value="ARGS_FILE" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.server.ServerApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.server.ServerApplication" />
-      <option name="SHORTEN_COMMAND_LINE" value="ARGS_FILE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -158,15 +200,8 @@
       <workItem from="1753411068938" duration="23963000" />
       <workItem from="1753496133026" duration="16551000" />
       <workItem from="1753759949972" duration="17452000" />
-      <workItem from="1756191953353" duration="884000" />
-    </task>
-    <task id="LOCAL-00008" summary="图表趋势数据绑定实现">
-      <option name="closed" value="true" />
-      <created>1751219816621</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1751219816621</updated>
+      <workItem from="1756435289309" duration="2168000" />
+      <workItem from="1756626389462" duration="3751000" />
     </task>
     <task id="LOCAL-00009" summary="图表趋势数据绑定实现">
       <option name="closed" value="true" />
@@ -537,7 +572,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754292898607</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="更新头像">
+      <option name="closed" value="true" />
+      <created>1756195003300</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1756195003300</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -567,7 +610,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="溯源接口实现2" />
     <MESSAGE value="溯源接口实现 bug修复" />
     <MESSAGE value="sql调优 查询优化 气象查询效率提高500倍" />
     <MESSAGE value="气象书院sql调优 &#10;查询优化 &#10;溯源查询效率提高100倍" />
@@ -592,7 +634,8 @@
     <MESSAGE value="更新大模型实时监控功能" />
     <MESSAGE value="更新小智大模型实时监控功能" />
     <MESSAGE value="更新配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新配置" />
+    <MESSAGE value="更新头像" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新头像" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
