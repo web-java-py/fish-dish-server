@@ -16,6 +16,11 @@
       <change beforePath="$PROJECT_DIR$/serverlog/sys-error.2025-06-29.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-error.2025-06-30.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-error.2025-07-01.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-error.2025-07-02.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-error.2025-07-04.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-error.2025-07-05.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-error.2025-07-06.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-error.2025-07-07.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-info.2025-06-22.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-info.2025-06-23.log" beforeDir="false" />
@@ -26,6 +31,11 @@
       <change beforePath="$PROJECT_DIR$/serverlog/sys-info.2025-06-29.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-info.2025-06-30.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-info.2025-07-01.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-info.2025-07-02.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-info.2025-07-04.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-info.2025-07-05.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-info.2025-07-06.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-info.2025-07-07.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-info.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-user.2025-06-20.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-user.2025-06-21.log" beforeDir="false" />
@@ -37,6 +47,11 @@
       <change beforePath="$PROJECT_DIR$/serverlog/sys-user.2025-06-29.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-user.2025-06-30.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-user.2025-07-01.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-user.2025-07-02.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-user.2025-07-04.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-user.2025-07-05.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-user.2025-07-06.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverlog/sys-user.2025-07-07.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/serverlog/sys-user.log" beforeDir="false" afterPath="$PROJECT_DIR$/serverlog/sys-user.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -202,6 +217,10 @@
       <workItem from="1753759949972" duration="17452000" />
       <workItem from="1756435289309" duration="2168000" />
       <workItem from="1756626389462" duration="3751000" />
+      <workItem from="1756694981437" duration="4144000" />
+      <workItem from="1756727514697" duration="2274000" />
+      <workItem from="1756781723781" duration="1887000" />
+      <workItem from="1757128219957" duration="2743000" />
     </task>
     <task id="LOCAL-00009" summary="图表趋势数据绑定实现">
       <option name="closed" value="true" />
