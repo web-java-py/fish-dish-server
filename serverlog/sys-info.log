@@ -13348,3 +13348,27 @@
 16:44:02.359 [pool-137-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
 16:44:04.294 [pool-12-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
 16:44:05.193 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+16:44:07.155 [pool-48-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+16:44:07.474 [pool-29-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+16:44:09.509 [pool-31-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+16:44:11.433 [pool-33-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+16:44:12.359 [pool-137-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+16:44:13.629 [http-nio-8080-exec-83] INFO  c.s.sse.SseServer - [createSse,59] - [AGRICULTURE]创建sse连接成功！
+16:44:14.295 [pool-12-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+16:44:15.193 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+16:44:17.155 [pool-48-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+16:44:17.474 [pool-29-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+16:44:19.510 [pool-31-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+16:44:21.433 [pool-33-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+16:44:22.359 [pool-137-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+16:44:24.295 [pool-12-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+16:44:25.193 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+16:44:27.155 [pool-48-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+16:44:27.474 [pool-29-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+16:44:29.510 [pool-31-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+16:44:31.433 [pool-33-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+16:44:32.359 [pool-137-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+16:44:34.295 [pool-12-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+16:44:35.193 [pool-27-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+16:44:37.155 [pool-48-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
+16:44:37.475 [pool-29-thread-1] INFO  o.f.b.s.e.EventSubscribeImp - [resendWaitingFilters,173] - Resend waiting filters, size: 0
